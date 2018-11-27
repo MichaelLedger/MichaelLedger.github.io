@@ -396,11 +396,20 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 #fh5co-aside .page-title img {
   margin-bottom: 30px;
-  width: 80px;
+  max-width: 80px;
+  _width:expression(this.width > 80 ? "80px" : this.width);/*兼容IE6*/
+  max-height: 80px;
+  _height:expression(this.height > 80 ? "80px" : this.height);/*兼容IE6*/
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
+  /*overflow:hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  background-size:cover;*/
 }
 #fh5co-aside nav {
   top: 0;

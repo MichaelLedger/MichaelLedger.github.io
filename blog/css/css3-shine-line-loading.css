@@ -20,8 +20,8 @@
     position: absolute;
     border-radius: 50%;
     border-style: solid;
-    animation: animate 1s linear infinite;/*infinite*/
-    -webkit-animation: animate 1s linear infinite; /* Safari 和 Chrome */
+    animation: animate 3s linear infinite;/*infinite*/
+    -webkit-animation: animate 3s linear infinite; /* Safari 和 Chrome */
     animation-fill-mode: forwards;/*默认是none 设为forwards 就可以在动画完成后定格在动画最后一帧*/
     -webkit-animation-fill-mode: forwards;
 }
