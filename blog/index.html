@@ -43,6 +43,26 @@
 	</head>
 	<body onload=hideLoading()>
 
+	<!-- css3-shine-line-loading -->
+	<div class="loading" id="loading">
+		<!-- <div class="load-2">
+			<div class="k-line k-line5-1" ></div>
+			<div class="k-line k-line5-2" ></div>
+			<div class="k-line k-line5-3" ></div>
+		</div> -->
+
+		<!-- <div class="wrapp"></div> -->
+
+		<div class="loader">
+			<div class="face" id="face1">
+				<div class="circle"></div>
+			</div>
+			<div class="face" id="face2">
+				<div class="circle"></div>
+			</div>
+		</div>
+	</div>
+
 	<!-- <div class="fh5co-loader"></div> -->
 	
 	<div id="page">
@@ -80,25 +100,7 @@
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 
-	<!-- css3-shine-line-loading -->
-	<div class="loading" id="css3-shine-line-loading">
-		<!-- <div class="load-2">
-			<div class="k-line k-line5-1" ></div>
-			<div class="k-line k-line5-2" ></div>
-			<div class="k-line k-line5-3" ></div>
-		</div> -->
 
-		<!-- <div class="wrapp"></div> -->
-
-		<div class="loader">
-			<div class="face" id="face1">
-				<div class="circle"></div>
-			</div>
-			<div class="face" id="face2">
-				<div class="circle"></div>
-			</div>
-		</div>
-	</div>
 	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
@@ -115,21 +117,18 @@
 
 	<script type="text/javascript">
 		function hideLoading() {
-			// document.all["css3-shine-line-loading"].style.display="none";
-			// document.all["css3-shine-line-loading"].style.display="inline";
-			// document.all["css3-shine-line-loading"].style.overflow="hidden";
-			
-			document.all["face1"].style.animation = "disappear 1s";
-			document.all["face2"].style.animation = "disappear 1s";
+			// document.all["face1"].style.animation = "disappear 1s";
+			// document.all["face2"].style.animation = "disappear 1s";
 
-			setTimeout(function(){
-				document.all["face1"].style.display = "none";
-				document.all["face2"].style.display = "none";
-			}, 1000);
+			// setTimeout(function(){
+				// document.all["face1"].style.display = "none";
+				// document.all["face2"].style.display = "none";
+				document.all["loading"].style.display="none";
+			// }, 1000);
 
 			//背景色还原为白色
 			// document.querySelector('body').setAttribute('style', 'background-color:#fff');
-			document.all["css3-shine-line-loading"].style.backgroundColor = "#fff";
+			// document.all["loading"].style.backgroundColor = "#fff";
 		}
 	</script>
 
