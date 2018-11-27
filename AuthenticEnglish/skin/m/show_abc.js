@@ -1,0 +1,1 @@
+document.writeln("<div class=\'abcimg\'></div>");
