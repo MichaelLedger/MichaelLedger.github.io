@@ -460,9 +460,11 @@ footer {
 }
 
 #fh5co-main-content {
+  /*margin-left: 38.1966%;*/
   margin-left: 38%;
   position: relative;
   z-index: 999;
+  /*background-color: orange;*/
 }
 .single #fh5co-main-content {
   margin-left: 0;
@@ -489,7 +491,7 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .padding {
-    padding: 30px;
+    padding: 25px;/*小屏幕内边距减少*/
   }
 }
 
@@ -497,9 +499,9 @@ footer {
   float: left;
   width: 100%;
   border-bottom: 1px solid #f2f2f2;
-  /*display: flex;*/
+  display: flex;/*大屏幕图片弹性布局：垂直居中*/
   /*text-align: center;*/
-  /*align-items: center;*/
+  align-items: center;
   /*justify-content: center;*/
   /*vertical-align: middle;*/
   /*display: inline-block;*/
@@ -510,13 +512,23 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .fh5co-post .fh5co-entry {
+    display: inline;/*小屏幕不进行弹性布局*/
     text-align: left;
   }
 }
 .fh5co-post .fh5co-entry > img {
-  float: right;
+  /*float: right;*/
   width: 18%;
-  height: 18%;
+  /*height: 18%;*/
+  /*float: right;*/
+  /*position: absolute;*/
+  /*margin-bottom: 100px;*/
+  right: 20px;
+  /*width: 140px;
+  height: 100px;*/
+  /*top: 50%;*/
+  /*margin-top: -60px;*/
+  /*height: 100%;*/
   /*margin-bottom: 30px;*/
   /*-webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -529,7 +541,10 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .fh5co-post .fh5co-entry > img {
-    float: none;
+    /*float: none;*/
+    /*position: none;*/
+    /*position: static;*/
+    margin-top: 10px;
     width: 50%;
   }
 }
