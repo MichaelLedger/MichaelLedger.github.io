@@ -329,7 +329,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 #fh5co-aside {
-  width: 38.2%;
+  width: 38%;
   top: 0;
   left: 0;
   bottom: 0;
@@ -339,6 +339,9 @@ h1, h2, h3, h4, h5, h6, figure {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  border-right-color: red;
+  border-right-style: solid;
+  border-right-width: 1px;
 }
 .single #fh5co-aside {
   position: relative;
@@ -460,7 +463,8 @@ footer {
 }
 
 #fh5co-main-content {
-  margin-left: 38.1966%;
+  /*margin-left: 38.1966%;*/
+  margin-left: 38%;
   position: relative;
   z-index: 999;
 }
@@ -497,6 +501,12 @@ footer {
   float: left;
   width: 100%;
   border-bottom: 1px solid #f2f2f2;
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  /*vertical-align: middle;*/
+  /*display: inline-block;*/
+  list-style: none;
 }
 .single .fh5co-post .fh5co-entry {
   border-bottom: none !important;
@@ -508,12 +518,17 @@ footer {
 }
 .fh5co-post .fh5co-entry > img {
   float: right;
-  width: 10%;
-  margin-bottom: 30px;
-  -webkit-border-radius: 50%;
+  width: 18%;
+  height: 18%;
+  /*margin-bottom: 30px;*/
+  /*-webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
-  border-radius: 50%;
+  border-radius: 50%;*/
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
 }
 @media screen and (max-width: 768px) {
   .fh5co-post .fh5co-entry > img {
@@ -539,9 +554,11 @@ footer {
 }
 .fh5co-post .fh5co-entry > div a {
   color: #000;
+  text-decoration: none;
 }
 .fh5co-post .fh5co-entry > div a:hover {
   color: #FC5185;
+  text-decoration: underline;
 }
 .fh5co-post .fh5co-entry > div h2 {
   margin-bottom: 10px;
