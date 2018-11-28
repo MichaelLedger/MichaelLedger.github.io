@@ -384,7 +384,12 @@ h1, h2, h3, h4, h5, h6, figure {
   font-weight: 300;
 }
 .single #fh5co-aside .featured h2, .single #fh5co-aside nav h2, .single #fh5co-aside .page-title h2 {
-  font-size: 72px;
+  font-size: 48px;
+}
+@media screen and (max-width: 768px) {
+  .single #fh5co-aside .featured h2, .single #fh5co-aside nav h2, .single #fh5co-aside .page-title h2 {
+    font-size: 24px;
+  }
 }
 #fh5co-aside .featured > span, #fh5co-aside nav > span, #fh5co-aside .page-title > span {
   display: block;
