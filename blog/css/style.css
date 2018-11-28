@@ -339,9 +339,6 @@ h1, h2, h3, h4, h5, h6, figure {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  border-right-color: red;
-  border-right-style: solid;
-  border-right-width: 1px;
 }
 .single #fh5co-aside {
   position: relative;
@@ -467,6 +464,7 @@ footer {
   margin-left: 38%;
   position: relative;
   z-index: 999;
+  /*background-color: orange;*/
 }
 .single #fh5co-main-content {
   margin-left: 0;
@@ -501,12 +499,13 @@ footer {
   float: left;
   width: 100%;
   border-bottom: 1px solid #f2f2f2;
-  /*display: flex;*/
-  /*align-items: center;*/
+  display: flex;
+  /*text-align: center;*/
+  align-items: center;
   /*justify-content: center;*/
   /*vertical-align: middle;*/
   /*display: inline-block;*/
-  list-style: none;
+  /*list-style: none;*/
 }
 .single .fh5co-post .fh5co-entry {
   border-bottom: none !important;
@@ -517,9 +516,18 @@ footer {
   }
 }
 .fh5co-post .fh5co-entry > img {
-  float: right;
+  /*float: right;*/
   width: 18%;
-  height: 18%;
+  /*height: 18%;*/
+  /*float: right;*/
+  position: absolute;
+  /*margin-bottom: 100px;*/
+  right: 20px;
+  /*width: 140px;
+  height: 100px;*/
+  /*top: 50%;*/
+  /*margin-top: -60px;*/
+  /*height: 100%;*/
   /*margin-bottom: 30px;*/
   /*-webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -532,15 +540,22 @@ footer {
 }
 @media screen and (max-width: 768px) {
   .fh5co-post .fh5co-entry > img {
-    float: none;
-    width: 50%;
+    /*float: none;*/
+    /*float: top;*/
+    /*float: left;*/
+    /*position: relative;*/
+    /*left: 50%;*/
+    /*width: 60%;*/
+    /*float: none;*/
   }
 }
 .fh5co-post .fh5co-entry > div {
-  width: 77%;
-  float: left;
+  /*width: 77%;*/
+  /*float: left;*/
+  padding-right: 140px;
   margin-right: 5%;
   margin-top: 0px;
+  display: block;
 }
 .single .fh5co-post .fh5co-entry > div {
   margin-right: 0 !important;
