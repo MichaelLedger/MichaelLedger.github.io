@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tool - Markdown实时预览</title><!-- &mdash; -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Markdown" />
+	<meta name="keywords" content="Markdown" />
+	<meta name="author" content="MichaelLedger" />
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+	<!-- Markdown JS -->
+	<!-- https://github.com/showdownjs/showdown -->
+	<script src="../public/showdown-1.9.0/dist/showdown.min.js"></script>
+
+	<!-- Markdown Editor -->
+	<!-- https://github.com/pandao/editor.md -->
+	<!-- https://pandao.github.io/editor.md/examples/index.html -->
+	<link rel="stylesheet" type="text/css" href="../public/markdown-editor/css/editormd.min.css" />
+
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	</head>
+
+	<style>
+	/*<--引用样式--!>*/
+	    blockquote {
+	        border-left:#eee solid 5px;
+	        padding-left:20px;
+	    }
+	/*<--列表样式--!>*/
+	    ul li {
+	        line-height: 20px;
+	    }
+
+	/*<--代码样式--!>*/
+	    code {
+	        color:#D34B62;
+	        background: #F6F6F6;
+	    }
+	 }
+	</style>
+
+	<body class="single" onload="initData()">
+
+	<div id="page">
+		<div id="fh5co-aside" style="background-image: url(images/markdown.jpg)" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+			<nav role="navigation">
+				<ul>
+					<li><a href="index.html"><i class="icon-home"></i></a></li>
+				</ul>
+			</nav>
+			<div class="page-title">
+				<!-- <img src="images/person_4.jpg" alt="portrait"> -->
+				<span>November 30, 2018</span>
+				<h2>Tool - Markdown实时预览</h2>
+			</div>
+		</div>
+	</div>
+
+	<div style="margin: 20px;">
+		<div>
+		   <p>Markdown 是一种简单的、轻量级的标记语法。用户可以使用诸如 * # 等简单的标记符号以最小的输入代价生成极富表现力的文档。</p>
+		   <p>Markdown具有很多优点：</p>
+		   <ul>
+		       <li>写作中添加简单符号即完成排版，所见即所得。让你专注于文字而不是排版。</li>
+		       <br />
+	           <li>格式转换方便，Markdown 的文本你可以轻松转换为 html、pdf等。</li>
+	           <br />
+	           <li>可以保存称纯文本</li>
+	       </ul>
+       </div>
+
+	    <!-- <h1 style="text-align: center;">Markdown实时预览工具</h1> -->
+	    <a style="text-decoration: none;" href="https://github.com/pandao/editor.md">🔧 Editor</a>
+
+		<div id="editormd">
+		    <textarea style="display:none;height: 400px;" id="ts">### Hello Editor.md !</textarea>
+		</div>
+
+		<a style="text-decoration: none;" href="https://github.com/showdownjs/showdown">🔧 Showdown</a>
+
+		<div style="padding: 20px;">
+		    <!-- 设置id为oriContent，如果想实现实时更新，使用onkeyup方法 -->
+		    <textarea id="oriContent" style="height:400px;width:96%;margin-left:2%;" onkeyup="convert()"></textarea>
+			<!-- 设置展示的div添加id -->
+		    <div style="width:96%;margin-left:2%;border:1px solid gray;margin-left:2%;" id="result"></div>
+	    </div>
+	</div>
+
+	<div class="fh5co-navigation">
+		<div class="fh5co-cover prev fh5co-cover-sm" style="background-image: url(images/fist-bumps.jpg)">
+			<div class="overlay"></div>
+
+			<a class="copy" href="english_4.html">
+				<div class="display-t">
+					<div class="display-tc">
+						<div>
+							<span>Previous Post</span>
+							<h2>Authentic English - I need an assistant</h2>
+						</div>
+					</div>
+				</div>
+			</a>
+
+		</div>
+		<div class="fh5co-cover next fh5co-cover-sm" style="background-image: url(images/markdown.jpg)">
+			<div class="overlay"></div>
+			<a class="copy" href="#">
+				<div class="display-t">
+					<div class="display-tc">
+						<div>
+							<span>Next Post</span>
+							<h2>Tool - Markdown实时预览</h2>
+						</div>
+					</div>
+				</div>
+			</a>
+
+		</div>
+	</div>
+
+	<footer>
+		<div>
+			Copyright &copy; 2018 MTX Software Technology Co.,Ltd. All rights reserved. Designed by <a href="index.html" target="_blank">MichaelLedger</a>.
+		</div>
+	</footer>
+	
+	</body>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="../public/markdown-editor/editormd.min.js"></script>
+	<script type="text/javascript">
+	    $(function() {
+	        var editor = editormd("editormd", {
+	        	width : "90%",
+	        	height : 640,
+	        	synScrolling : "single",
+	            path : "../public/markdown-editor/lib/" // Autoload modules mode, codemirror, marked... dependents libs path
+	        });
+
+	        /*
+	        // or
+	        var editor = editormd({
+	            id   : "editormd",
+	            width : "90%",
+	        	height : 640,
+	        	synScrolling : "single",
+	            path : "../lib/"
+	        });
+	        */
+	    });
+	</script>
+
+	<!-- 转化函数 -->
+	<script type="text/javascript">
+		function initData(){
+			document.getElementById("oriContent").value = "> Markdown\n```Code```";
+			convert();
+		}
+		function convert(){
+		    var text = document.getElementById("oriContent").value;
+		    var converter = new showdown.Converter();
+		    var html = converter.makeHtml(text);
+		    document.getElementById("result").innerHTML = html;
+		}
+	</script>
+</html>
+
