@@ -9,6 +9,17 @@
 	<meta name="keywords" content="Markdown" />
 	<meta name="author" content="MichaelLedger" />
 
+	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -72,42 +83,50 @@
 				<h2>Tool - Markdown实时预览</h2>
 			</div>
 		</div>
+
+		<div id="fh5co-main-content">
+			<div class="fh5co-post"> 
+				<div class="fh5co-entry padding">
+					<div>
+					   <p>Markdown 是一种简单的、轻量级的标记语法。用户可以使用诸如 * # 等简单的标记符号以最小的输入代价生成极富表现力的文档。</p>
+					   <p>Markdown具有很多优点：</p>
+					   <ul>
+					       <li>写作中添加简单符号即完成排版，所见即所得。让你专注于文字而不是排版。</li>
+					       <br />
+				           <li>格式转换方便，Markdown 的文本你可以轻松转换为 html、pdf等。</li>
+				           <br />
+				           <li>可以保存称纯文本</li>
+				       </ul>
+			       </div>
+				</div>
+			</div>
+		</div>
 	</div>
 
-	<div style="margin: 20px;">
-		<div>
-		   <p>Markdown 是一种简单的、轻量级的标记语法。用户可以使用诸如 * # 等简单的标记符号以最小的输入代价生成极富表现力的文档。</p>
-		   <p>Markdown具有很多优点：</p>
-		   <ul>
-		       <li>写作中添加简单符号即完成排版，所见即所得。让你专注于文字而不是排版。</li>
-		       <br />
-	           <li>格式转换方便，Markdown 的文本你可以轻松转换为 html、pdf等。</li>
-	           <br />
-	           <li>可以保存称纯文本</li>
-	       </ul>
-       </div>
-
+	<div>
 	    <!-- <h1 style="text-align: center;">Markdown实时预览工具</h1> -->
-	    <a style="text-decoration: none;" href="https://github.com/pandao/editor.md">🔧 Editor</a>
-
+	    <div style="margin-left: 4%;margin-right: 4%;margin-bottom: 20px;">
+		    <a style="text-decoration: none; margin-bottom:20px;" href="https://github.com/pandao/editor.md">🔧 Editor</a>
+	    </div>
 		<div id="editormd">
-		    <textarea style="display:none;height: 400px;" id="ts">### Hello Editor.md !</textarea>
+		    <textarea style="display:none;" id="ts">### Hello Editor.md !</textarea>
 		</div>
 
-		<a style="text-decoration: none;" href="https://github.com/showdownjs/showdown">🔧 Showdown</a>
+		<div style="margin-left: 4%;margin-right: 4%;margin-bottom: 20px;">
+			<a style="text-decoration: none;" href="https://github.com/showdownjs/showdown">🔧 Showdown</a>
+		</div>
 
-		<div style="padding: 20px;">
+		<div style="padding-left: 4%;padding-right: 4%;padding-bottom: 20px;">
 		    <!-- 设置id为oriContent，如果想实现实时更新，使用onkeyup方法 -->
-		    <textarea id="oriContent" style="height:400px;width:96%;margin-left:2%;" onkeyup="convert()"></textarea>
+		    <textarea id="oriContent" style="height:400px;width:98%;margin-left:1%;" onkeyup="convert()"></textarea>
 			<!-- 设置展示的div添加id -->
-		    <div style="width:96%;margin-left:2%;border:1px solid gray;margin-left:2%;" id="result"></div>
+		    <div style="width:98%;margin-left:1%;border:1px solid gray;margin-left:1%;" id="result"></div>
 	    </div>
 	</div>
 
 	<div class="fh5co-navigation">
 		<div class="fh5co-cover prev fh5co-cover-sm" style="background-image: url(images/fist-bumps.jpg)">
 			<div class="overlay"></div>
-
 			<a class="copy" href="english_4.html">
 				<div class="display-t">
 					<div class="display-tc">
@@ -141,10 +160,24 @@
 			Copyright &copy; 2018 MTX Software Technology Co.,Ltd. All rights reserved. Designed by <a href="index.html" target="_blank">MichaelLedger</a>.
 		</div>
 	</footer>
-	
-	</body>
 
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
 	<script src="../public/markdown-editor/editormd.min.js"></script>
 	<script type="text/javascript">
 	    $(function() {
@@ -181,5 +214,6 @@
 		    document.getElementById("result").innerHTML = html;
 		}
 	</script>
+	</body>	
 </html>
 
