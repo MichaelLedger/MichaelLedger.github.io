@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tool - Markdown实时预览</title><!-- &mdash; -->
+	<title>Tool - Markdown实时预览及Html互转</title><!-- &mdash; -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Markdown" />
 	<meta name="keywords" content="Markdown" />
@@ -80,7 +80,7 @@
 			<div class="page-title">
 				<!-- <img src="images/person_4.jpg" alt="portrait"> -->
 				<span>November 30, 2018</span>
-				<h2>Tool - Markdown实时预览</h2>
+				<h2>Tool - Markdown实时预览及Html互转</h2>
 			</div>
 		</div>
 
@@ -104,7 +104,7 @@
 				           <br />
 				           <li>可读、直观、学习成本低。</li>
 				       </ul>
-				       <a href="https://daringfireball.net/projects/markdown/syntax"><strong>Markdown官网</strong></a>
+				       <a href="https://daringfireball.net/projects/markdown/syntax">Markdown语法</a>
 			       </div>
 				</div>
 			</div>
@@ -132,6 +132,82 @@
 	    </div>
 	</div>
 
+<!--内容块开始-->
+	<div style="padding-left: 4%;padding-right: 4%;padding-bottom: 20px;">
+	    <div>
+		    <a style="text-decoration: none; margin-bottom:20px;" href="http://www.bejson.com/convert/html2markdown/">🔧 Html/Markdown互转</a>
+	    </div>
+	    <div class="panel-body">
+	        <!-- <div>
+	            <p style="text-align: center;">
+	            </p>
+	            <div style="clear: both;">
+	            </div>
+	        </div> -->
+	        <div>
+	            <div class="linedwrap"><textarea id="text_input" name="json_input" onkeyup="" class="json_input" style="height: 200px; font-size: 11px !important; resize: both; width:100%;" rows="32" spellcheck="false" placeholder="请输入要处理的字符串"></textarea></div>
+	        </div>
+	        <div class="validateButtons clear">
+	            <div class="left" style="float: left">
+	                <div class="btn-group" role="group" aria-label="...">
+	                   <button type="button" class="btn btn-primary" onclick="md_2_html();">
+	                        Markdown转Html</button>
+	                    <button type="button" class="btn btn-primary" onclick="html_2_md();">
+	                        Html转Markdown</button>
+	                     <button type="button" class="btn btn-primary" onclick="markdemo();">
+	                        来个Markdown</button>
+	                    <button type="button" class="btn btn-danger" onclick="empty()">
+	                        清空结果</button>
+	                </div>
+	            </div>
+	        </div>
+	        <div style="clear: both;">
+	        </div>
+	        <div class="top10">
+	            <div class="linedwrap"><textarea id="result_input" name="json_input" class="json_input" style="height: 200px; font-size: 11px !important; resize: both; width: 100%;" rows="32" placeholder="这里显示处理后的字符串"></textarea></div>
+	        </div>
+	        <input type="hidden" id="encode" value="1">
+	        <pre id="results" class="top10" style="display: none;"></pre>
+	    </div>
+	</div>
+	<script src="../public/static/bejson/convert/markdown.min.js"></script>
+	<script src="../public/static/bejson/convert/to-markdown.js"></script>
+	<script type="text/javascript">
+	    var demo = "# MarkDown示例"
+	               +"\n"
+	               + "### Header 3"
+	               + "\n"
+	                + "> This is a blockquote.\n"
+	                + ">\n "
+	                + "> This is the second paragraph in the blockquote.\n"
+	                + ">\n"
+	                + "> ## This is an H2 in a blockquote";
+
+	    function markdemo(){
+	    
+	     $("#text_input").val(demo);
+	    }
+	    function html_2_md() {
+	        $('#result_input').val(toMarkdown($('#text_input').val()));
+	        $("#show_panel").hide();
+	    }
+	    function md_2_html() {
+	        var result = markdown.toHTML($('#text_input').val());
+	        $('#result_input').val(result);
+	        $("#show_panel").show();
+	        $("#show").html(result);
+	    }
+	    function empty() {
+	        $("#show_panel").hide();
+	        document.getElementById('text_input').value = '';
+	        document.getElementById('result_input').value = '';
+	        document.getElementById('text_input').focus();
+	       
+	    }
+	</script>
+
+	<!--内容块结束-->
+
 	<div class="fh5co-navigation">
 		<div class="fh5co-cover prev fh5co-cover-sm" style="background-image: url(images/fist-bumps.jpg)">
 			<div class="overlay"></div>
@@ -154,7 +230,7 @@
 					<div class="display-tc">
 						<div>
 							<span>Next Post</span>
-							<h2>Tool - Markdown实时预览</h2>
+							<h2>Tool - Markdown实时预览及Html互转</h2>
 						</div>
 					</div>
 				</div>
