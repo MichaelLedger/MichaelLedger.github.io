@@ -40,6 +40,9 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<!-- pagination -->
+	<link rel="stylesheet" href="../public/pagination/pagination.css">
+
 	</head>
 	<body onload=hideLoading()>
 
@@ -71,69 +74,12 @@
 			</div>
 		</div>
 		<div id="fh5co-main-content">
-			<div class="fh5co-post">
+			<div class="fh5co-post" id="blog-content">
+			</div>
 
-				<div class="fh5co-entry padding" onclick="window.location.href='english_6.html'">
-					<div>
-						<span class="fh5co-post-date">December 2, 2018</span>
-						<h2><a href="english_6.html">Authentic English - Road Trip</a></h2>
-						<p>A: So, are we all ready to go? B: Yup, I think so. The car&rsquo;s packed; we have munchies and music, and the map&rsquo;s in the car.</p>
-					</div>
-					<img src="images/roadtrip.jpg" alt="portrait">
-				</div>
-
-				<div class="fh5co-entry padding" onclick="window.location.href='english_5.html'">
-					<div>
-						<span class="fh5co-post-date">December 1, 2018</span>
-						<h2><a href="english_5.html">Authentic English - Cut In Line</a></h2>
-						<p>A: I can&rsquo;t believe it took us two hours to get here. The traffic in New York is unbelievable.</p>
-					</div>
-					<img src="images/queue.jpg" alt="portrait">
-				</div>
-
-			 	<div class="fh5co-entry padding" onclick="window.location.href='markdown_tools.html'">
-					<div>
-						<span class="fh5co-post-date">November 30, 2018</span>
-						<h2><a href="markdown_tools.html">Tool - Markdown实时预览及Html互转</a></h2>
-						<p>Markdown 是一种简单的、轻量级的标记语法。用户可以使用诸如 * # 等简单的标记符号以最小的输入代价生成极富表现力的文档。</p>
-					</div>
-					<img src="images/markdown.jpg" alt="portrait">
-				</div>
-
-				<div class="fh5co-entry padding" onclick="window.location.href='english_4.html'">
-					<div>
-						<span class="fh5co-post-date">November 30, 2018</span>
-						<h2><a href="english_4.html">Authentic English - I need an assistant</a></h2>
-						<p>A: ...like I told you before, we just don&rsquo;t have the resources to hire you an assistant.</p>
-					</div>
-					<img src="images/fist-bumps.jpg" alt="portrait">
-				</div>
-
-			 	<div class="fh5co-entry padding" onclick="window.location.href='english_3.html'">
-					<div>
-						<span class="fh5co-post-date">November 29, 2018</span>
-						<h2><a href="english_3.html">Authentic English - Hotel Upgrade</a></h2>
-						<p>A: Good afternoon. What can I do for you?</p>
-					</div>
-					<img src="images/hotel.jpg" alt="portrait">
-				</div>
-
-				<div class="fh5co-entry padding" onclick="window.location.href='english_2.html'">
-					<div>
-						<span class="fh5co-post-date">November 28, 2018</span>
-						<h2><a href="english_2.html">Authentic English - Calling In Sick</a></h2>
-						<p>A: Hello, Daniel speaking, how may I help you? B: Hi, Daniel, Julie here.</p>
-					</div>
-					<img src="images/calling.jpg" alt="portrait">
-				</div>
-
-				<div class="fh5co-entry padding" onclick="window.location.href='english_1.html'">
-					<div>
-						<span class="fh5co-post-date">November 27, 2018</span>
-						<h2><a href="english_1.html">Authentic English - Difficult Customer</a></h2>
-						<p>A: Good evening. My name is Fabio, I’ll be your waiter for tonight. May I take your order? B: No, I’m still working on it. This menu is not even in English. What’s good here?</p>
-					</div>
-					<img src="images/waitress.jpg" alt="portrait">
+			<!-- pagination -->
+				<div style="margin: 0px 20px 0px 20px;">
+					<div id="pagination" class="pagination"></div>
 				</div>
 
 				<footer>
@@ -141,7 +87,6 @@
 						Copyright &copy; 2018 MTX Software Technology Co.,Ltd. All rights reserved. Designed by <a href="index.html" target="_blank">MichaelLedger</a>.
 					</div>
 				</footer>
-			</div>
 		</div>
 	</div>
 
@@ -163,6 +108,105 @@
 	<script src="js/jquery.stellar.min.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+
+	<script type="text/javascript" src="../public/pagination/pagination.js"></script>
+	<script type="text/javascript">
+		var dataList = [{
+				"location" : "english.html?id=1",
+				"date" : "November 27, 2018",
+				"title" : "Authentic English - Difficult Customer",
+				"description" : "A: Good evening. My name is Fabio, I’ll be your waiter for tonight. May I take your order? B: No, I’m still working on it. This menu is not even in English. What’s good here?",
+				"cover" : "images/waitress.jpg"
+				},
+				{
+				"location" : "english.html?id=2",
+				"date" : "November 28, 2018",
+				"title" : "Authentic English - Calling In Sick",
+				"description" : "A: Hello, Daniel speaking, how may I help you? B: Hi, Daniel, Julie here.",
+				"cover" : "images/calling.jpg"
+				},
+				{
+				"location" : "english.html?id=3",
+				"date" : "November 29, 2018",
+				"title" : "Authentic English - Hotel Upgrade",
+				"description" : "A: Good afternoon. What can I do for you?",
+				"cover" : "images/hotel.jpg"
+				},
+				{
+				"location" : "english.html?id=4",
+				"date" : "November 30, 2018",
+				"title" : "Authentic English - I need an assistant",
+				"description" : "A: So, are we all ready to go? B: Yup, I think so. The car&rsquo;s packed; we have munchies and music, and the map&rsquo;s in the car.",
+				"cover" : "images/fist-bumps.jpg"
+				},
+				{
+				"location" : "markdown_tools.html",
+				"date" : "November 30, 2018",
+				"title" : "Tool - Markdown实时预览及Html互转",
+				"description" : "Markdown 是一种简单的、轻量级的标记语法。用户可以使用诸如 * # 等简单的标记符号以最小的输入代价生成极富表现力的文档。",
+				"cover" : "images/markdown.jpg"
+				},
+				{
+				"location" : "english.html?id=5",
+				"date" : "December 1, 2018",
+				"title" : "Authentic English - Cut In Line",
+				"description" : "A: I can&rsquo;t believe it took us two hours to get here. The traffic in New York is unbelievable.",
+				"cover" : "images/queue.jpg"
+				},
+				{
+				"location" : "english.html?id=6",
+				"date" : "December 2, 2018",
+				"title" : "Authentic English - Road Trip",
+				"description" : "A: So, are we all ready to go? B: Yup, I think so. The car&rsquo;s packed; we have munchies and music, and the map&rsquo;s in the car.",
+				"cover" : "images/roadtrip.jpg"
+				},
+				];
+
+		window.onload = function() {
+			var curPage = 1;
+			var pageSize = 6;
+			var dataTotal = dataList.length;
+			var pageTotal = Math.ceil(dataTotal / pageSize);
+
+			new Page({
+				id: 'pagination',
+				pageTotal: pageTotal, //必填，总页数
+				pageAmount: pageSize, //每页多少条
+				dataTotal: dataTotal, // 总共多少条数据
+				curPage: curPage, // 初始页码，不填默认为1
+				pageSize: pageTotal > 5 ? 5 : pageTotal, // 控件分页个数,不填默认为5
+				showPageTotalFlag: false, // 是否显示数据统计,不填默认不显示
+				showSkipInputFlag: true, // 是否支持跳转,不填默认不显示
+				getPage: function (page) {
+					//获取当前页数
+					fetchPageData("blog-content", page, pageSize);
+				}
+			});
+			fetchPageData("blog-content", curPage, pageSize);
+		}
+	</script>
+	<script type="text/javascript">
+		function fetchPageData(divIdentifier, currentPage, pageSize) {
+			if (!divIdentifier) return;
+			
+			if (dataList.count < currentPage * pageSize) return;
+			var currentPageData = new Array();
+			for (var i = (currentPage - 1) * pageSize; i < dataList.length && i < currentPage * pageSize; i++) {
+				var data = dataList[i];
+				currentPageData.push(data);
+			}
+
+			var content = "";
+			for (var i = 0; i < currentPageData.length; i++) {
+				var data = currentPageData[i];
+				var htmlStr = "<div class=\"fh5co-entry padding\" onclick=\"window.location.href='" + data.location +"'\"><div><span class=\"fh5co-post-date\">" + data.date + "</span><h2><a href=\"" + data.location + "\">" + data.title + "</a></h2><p>" + data.description + "</p></div><img src=\"" + data.cover + "\" alt=\"Picture\"></div>";
+				content = content + htmlStr;
+			}
+			// document.all[divIdentifier].innerHTML = content;
+			// document.getElementById(divIdentifier).innerHTML = content;
+			$("#" + divIdentifier).html(content);// 使用jQuery
+		}
+	</script>
 
 	<script type="text/javascript">
 		function hideLoading() {
