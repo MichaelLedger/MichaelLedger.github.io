@@ -186,6 +186,15 @@
 				"audio" : "../authentic-english/sound/kouyu/englishpod/200911/C0006pb.mp3",
 				"content" : "**The Weekend - Road Trip**<br/>A: So, are we all ready to go?<br/>B: Yup, I think so. The car&rsquo;s packed; we have munchies and music, and the map&rsquo;s in the car.<br/>A: Did you get the camera?<br/>B: Got it! Did you fill up the tank?<br/>A: Yup, it&rsquo;s all set.<br/>B: You&rsquo;re sure we&rsquo;re not forgetting anything?<br/>A: I&rsquo;m sure... we&rsquo;ve got all our bases covered.<br/>B: Well&amp; let&rsquo;s get going then! I love road trips!<br/>B: Um... do you think we can make a pit stop?<br/>A: But we&rsquo;ve only been on the road for ten minutes.<br/>B: I know, but I forgot to go to the bathroom before we left.<br/>**Key Vocabulary**<br/>**all ready to go**:prepared, ready to leave<br/>**packed**:full, everything is inside<br/>**fill up the tank**:put gas in the car<br/>**all set**:ready",
 				},
+				{
+				"id" : "7",
+				"date" : "December 3, 2018",
+				"title" : "Authentic English - Computer Virus",
+				"description" : "A: So, are we all ready to go? B: Yup, I think so. The car&rsquo;s packed; we have munchies and music, and the map&rsquo;s in the car.",
+				"cover" : "images/computer-stethoscope.jpg",
+				"audio" : "../authentic-english/sound/kouyu/englishpod/200911/C0007pb.mp3",
+				"content" : "**The Office - Computer Virus! **<br/>A: Oh great! This stupid computer froze again!That's the third time today! Hey Samuel, can you come take a look at my PC? It's acting upagain. It must have a virus or something.<br/>B: Just give me a second; I'll be right up.<br/>B: I ran a virus scan on your computer, and it turns out that you have a lot of infected files!<br/>A: But I'm quite careful when I'm browsing the internet, I have no idea how I could have picked up a virus.<br/>B: Well, you have to make sure that your anti-virus software is updated regularly; yours wasn't up to date, that&rsquo;s probably what was causing your problems.<br/>A: Ok. Anything else?<br/>B: Yeah, try not to kick or hit the computer!<br/>A: Um yeah; Sorry about that.",
+				},
 				];
 
 			window.onload = function() {
@@ -199,7 +208,7 @@
 					var data = dataList[i];
 					if (data.id === englishId) {
 						currentIndex = i;
-						var audioHtmlStr = "<audio preload=\"auto\" controls><source src=\""+ data.audio + "\" id='mp3_fileurl'></audio>";
+						var audioHtmlStr = "<audio style=\"margin-bottom:20px\" preload=\"auto\" controls><source src=\""+ data.audio + "\" id='mp3_fileurl'></audio>";
 						var textHtmlStr = convertMarkdownToHtml(data.content);
 						// document.all[divIdentifier].innerHTML = content;
 						// document.getElementById(divIdentifier).innerHTML = content;
@@ -260,6 +269,7 @@
 			    // bejson
 			    var html = markdown.toHTML(markdownStr);
 			    html = html.replace(/&lt;br\/&gt;/g, '<br/>');// html转码，换行符正确解析
+			    html = html.replace(/<br\/>/g, '<br\/><br\/>');// 添加一个换行，美化排版
 			    html = html.replace(/&amp;rsquo;/g, '\'');// &rsquo;正常解析为'
 			    return html;
 			}
