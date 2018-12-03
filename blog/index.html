@@ -112,62 +112,65 @@
 	<script type="text/javascript" src="../public/pagination/pagination.js"></script>
 	<script type="text/javascript">
 		var dataList = [{
-				"location" : "english.html?id=1",
-				"date" : "November 27, 2018",
-				"title" : "Authentic English - Difficult Customer",
-				"description" : "A: Good evening. My name is Fabio, I’ll be your waiter for tonight. May I take your order? B: No, I’m still working on it. This menu is not even in English. What’s good here?",
-				"cover" : "images/waitress.jpg"
-				},
-				{
-				"location" : "english.html?id=2",
-				"date" : "November 28, 2018",
-				"title" : "Authentic English - Calling In Sick",
-				"description" : "A: Hello, Daniel speaking, how may I help you? B: Hi, Daniel, Julie here.",
-				"cover" : "images/calling.jpg"
-				},
-				{
-				"location" : "english.html?id=3",
-				"date" : "November 29, 2018",
-				"title" : "Authentic English - Hotel Upgrade",
-				"description" : "A: Good afternoon. What can I do for you?",
-				"cover" : "images/hotel.jpg"
-				},
-				{
-				"location" : "english.html?id=4",
-				"date" : "November 30, 2018",
-				"title" : "Authentic English - I need an assistant",
-				"description" : "A: So, are we all ready to go? B: Yup, I think so. The car&rsquo;s packed; we have munchies and music, and the map&rsquo;s in the car.",
-				"cover" : "images/fist-bumps.jpg"
-				},
-				{
-				"location" : "markdown_tools.html",
-				"date" : "November 30, 2018",
-				"title" : "Tool - Markdown实时预览及Html互转",
-				"description" : "Markdown 是一种简单的、轻量级的标记语法。用户可以使用诸如 * # 等简单的标记符号以最小的输入代价生成极富表现力的文档。",
-				"cover" : "images/markdown.jpg"
-				},
-				{
-				"location" : "english.html?id=5",
-				"date" : "December 1, 2018",
-				"title" : "Authentic English - Cut In Line",
-				"description" : "A: I can&rsquo;t believe it took us two hours to get here. The traffic in New York is unbelievable.",
-				"cover" : "images/queue.jpg"
-				},
-				{
-				"location" : "english.html?id=6",
-				"date" : "December 2, 2018",
-				"title" : "Authentic English - Road Trip",
-				"description" : "A: So, are we all ready to go? B: Yup, I think so. The car&rsquo;s packed; we have munchies and music, and the map&rsquo;s in the car.",
-				"cover" : "images/roadtrip.jpg"
-				},
-				{
-				"location" : "english.html?id=7",
-				"date" : "December 3, 2018",
-				"title" : "Authentic English - Computer Virus",
-				"description" : "A: Oh great! This stupid computer froze again!That's the third time today! Hey Samuel, can you come take a look at my PC? It's acting upagain. It must have a virus or something.",
-				"cover" : "images/computer-stethoscope.jpg"
-				},
-				];
+			"location" : "english.html?id=1",
+			"date" : "November 27, 2018",
+			"title" : "Authentic English - Difficult Customer",
+			"description" : "A: Good evening. My name is Fabio, I’ll be your waiter for tonight. May I take your order? B: No, I’m still working on it. This menu is not even in English. What’s good here?",
+			"cover" : "images/waitress.jpg"
+			},
+			{
+			"location" : "english.html?id=2",
+			"date" : "November 28, 2018",
+			"title" : "Authentic English - Calling In Sick",
+			"description" : "A: Hello, Daniel speaking, how may I help you? B: Hi, Daniel, Julie here.",
+			"cover" : "images/calling.jpg"
+			},
+			{
+			"location" : "english.html?id=3",
+			"date" : "November 29, 2018",
+			"title" : "Authentic English - Hotel Upgrade",
+			"description" : "A: Good afternoon. What can I do for you?",
+			"cover" : "images/hotel.jpg"
+			},
+			{
+			"location" : "english.html?id=4",
+			"date" : "November 30, 2018",
+			"title" : "Authentic English - I need an assistant",
+			"description" : "A: So, are we all ready to go? B: Yup, I think so. The car&rsquo;s packed; we have munchies and music, and the map&rsquo;s in the car.",
+			"cover" : "images/fist-bumps.jpg"
+			},
+			{
+			"location" : "markdown_tools.html",
+			"date" : "November 30, 2018",
+			"title" : "Tool - Markdown实时预览及Html互转",
+			"description" : "Markdown 是一种简单的、轻量级的标记语法。用户可以使用诸如 * # 等简单的标记符号以最小的输入代价生成极富表现力的文档。",
+			"cover" : "images/markdown.jpg"
+			},
+			{
+			"location" : "english.html?id=5",
+			"date" : "December 1, 2018",
+			"title" : "Authentic English - Cut In Line",
+			"description" : "A: I can&rsquo;t believe it took us two hours to get here. The traffic in New York is unbelievable.",
+			"cover" : "images/queue.jpg"
+			},
+			{
+			"location" : "english.html?id=6",
+			"date" : "December 2, 2018",
+			"title" : "Authentic English - Road Trip",
+			"description" : "A: So, are we all ready to go? B: Yup, I think so. The car&rsquo;s packed; we have munchies and music, and the map&rsquo;s in the car.",
+			"cover" : "images/roadtrip.jpg"
+			},
+			{
+			"location" : "english.html?id=7",
+			"date" : "December 3, 2018",
+			"title" : "Authentic English - Computer Virus",
+			"description" : "A: Oh great! This stupid computer froze again!That's the third time today! Hey Samuel, can you come take a look at my PC? It's acting upagain. It must have a virus or something.",
+			"cover" : "images/computer-stethoscope.jpg"
+			},
+		];
+
+				//倒序排列
+		dataList.reverse();
 
 		window.onload = function() {
 			var curPage = 1;
