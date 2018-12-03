@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--以下特殊字符不可使用：-->
+<!--&rsquo;全局替换为'-->
+<!--<br/>换行符全局替换为\n-->
+<blogs>
+    <blog location="english.html">
+        <id>1</id>
+        <date>November 27, 2018</date>
+        <title>Authentic English - Difficult Customer</title>
+        <description>
+            A: Good evening. My name is Fabio, I’ll be your waiter for tonight. May I take your order? B: No, I’m still working on it. This menu is not even in English. What’s good here?
+        </description>
+        <cover>images/waitress.jpg</cover>
+        <audio>../authentic-english/sound/kouyu/englishpod/200911/B0001pb.mp3</audio>
+        <markdown-content>**Elementary - Difficult Customer **\nA: Good evening. My name is Fabio, I'll be your waiter for tonight. May I take your order?\nB: No, I'm still working on it. This menu is not even in English. What's good here?\nA: For you sir, I would recommend spaghetti and meatballs.\nB: Does it come with coke and fries?\nA: It comes with either soup or salad and a complimentary glass of wine, Sir.\nB: I'll go with the spaghetti and meatballs, salad and the wine.\nA: Excellent choice, your order will be ready soon.\nB: How soon is soon?\nA: Twenty minutes?\nB: You know what? I'll just go grab a burger across the street.\n**Key Vocabulary**\n**still working on** : not yet completed, need more time\n**would recommend** : suggest\n**complimentary**: free\n**go with**: to choose, pick</markdown-content>
+    </blog>
+    <blog location="english.html">
+        <id>2</id>
+        <date>November 28, 2018</date>
+        <title>Authentic English - Calling In Sick</title>
+        <description>
+            A: Hello, Daniel speaking, how may I help you? B: Hi, Daniel, Julie here.
+        </description>
+        <cover>images/calling.jpg</cover>
+        <audio>../authentic-english/sound/kouyu/englishpod/200911/B0002pb.mp3</audio>
+        <markdown-content>**Elementary - Calling In Sick**\nA: Hello, Daniel speaking, how may I help you?\nB: Hi, Daniel, Julie here.\nA: Hi, Julie, how are you?\nB: Actually, I'm feeling quite ill today.\nA: I'm sorry to hear that. What's wrong?\nB: I think I'm coming down with the flu. I have a headache, a sore throat a runny nose and I'm feeling slightly feverish.\nA: I see... so you're calling in sick?\nB: Yes, I was hoping to take the day off to recover.\nA: OK, then. Try and get some rest.\n**Key Vocabulary**\n**was hoping** :to kindly expect\n**calling in sick**: report that you will not go to work because you are sick\n**coming down:**getting, acquiring\n**quite ill**: very sick</markdown-content>
+    </blog>
+    <blog location="english.html">
+        <id>3</id>
+        <date>November 29, 2018</date>
+        <title>Authentic English - Hotel Upgrade</title>
+        <description>
+            A: Good afternoon. What can I do for you?
+        </description>
+        <cover>images/hotel.jpg</cover>
+        <audio>../authentic-english/sound/kouyu/englishpod/200911/C0003pb.mp3</audio>
+        <markdown-content>**Daily Life - Hotel Upgrade **\nA: Good afternoon. What can I do for you?\nB: I'd like to check in please. I have a reservation under the name Anthony Roberts.\nA: All right R.O.B.E.R.T.S... Oh, Mr. Roberts we'vebeen expecting you&amp; and here is your keycard to the presidential suite.\nB: But there must be some mistake; my reservationwas for a standard room.\nA: Are you sure? Let me double check .\nB: Yeah&amp;Here, this is my confirmation number.\nA: You're right Mr. Roberts, there seems to be a mixup,unfortunately we're overbooked at the moment.\nB: So..\nA: Not to worry. We're pleased to offer you a complimentaryupgrade.\nB: Presidential suite baby!\n**Key Vocabulary**\n**check in** :register at a hotel or airport\n**under the name:** name used for the reservation</markdown-content>
+    </blog>
+    <blog location="english.html">
+        <id>4</id>
+        <date>November 30, 2018</date>
+        <title>Authentic English - I need an assistant</title>
+        <description>
+            A: ...like I told you before, we just don't have the resources to hire you an assistant.
+        </description>
+        <cover>images/fist-bumps.jpg</cover>
+        <audio>../authentic-english/sound/kouyu/englishpod/200911/C0004pb.mp3</audio>
+        <markdown-content>**The Office - I need an assistant!**\nA: ...like I told you before, we just don't have the resources to hire you an assistant.\nB: I understand that, but the fact is we're understaffed.\nA: The timing is just not right. The economy is bad,and it's too risky to take on new staff.\nB: Yeah, I guess you're right.... here's an idea, what if we hire an intern? She would take some of the weight off my shoulders.\nA: She?\nB: Yeah, you know, a recent graduate. She could give me a hand with some of these projects and we could keep our costs down.\nA: That sounds reasonable... let me see what I can do.\nA: Tony, I'd like to introduce you to your new assistant.\nB: OK, great! Let's meet her!\nC: Hi, I'm Adam.\nB: Oh... hi... I'm Tony...\n**Key Vocabulary**\n**resources** : money\n**understaffed** : not enough people to do the job\n**the timing is just not right** : it is not a good time now\n**weight off my shoulders** : remove pressure or stress</markdown-content>
+    </blog>
+    <blog location="markdown_tools.html">
+        <id>5</id>
+        <date>November 30, 2018</date>
+        <title>Tool - Markdown实时预览及Html互转</title>
+        <description>
+            Markdown 是一种简单的、轻量级的标记语法。用户可以使用诸如 * # 等简单的标记符号以最小的输入代价生成极富表现力的文档。
+        </description>
+        <cover>images/markdown.jpg</cover>
+    </blog>
+    <blog location="english.html">
+        <id>6</id>
+        <date>December 1, 2018</date>
+        <title>Authentic English - Cut In Line</title>
+        <description>
+            A: I can't believe it took us two hours to get here. The traffic in New York is unbelievable.
+        </description>
+        <cover>images/queue.jpg</cover>
+        <audio>../authentic-english/sound/kouyu/englishpod/200911/C0005pb.mp3</audio>
+        <markdown-content>**Daily Life - Cut In Line**\nA: I can't believe it took us two hours to get here. The traffic in New York is unbelievable.\nB: Yeah, but just relax honey, we're here and we're going on vacation. In a few hours we'll be in Hawaii, and you'll be on the golf course.\nA: Oh no! Look at that line! It must be a mile long!There's no way I'm waiting for another two hours.\nB: Honey... don't...\nC: Hey man, the end of the line is over there.\nA: Yeah...\nC: No seriously, I was here first, and you can't cut in line like this.\nA: Says who?\nC: I do!\nA: So sue me!\nC: Alright...that's it....\n**Key Vocabulary**\n**There's no way** : impossible\n**cut in line** : jump the queue (in British English)</markdown-content>
+    </blog>
+    <blog location="english.html">
+        <id>7</id>
+        <date>December 2, 2018</date>
+        <title>Authentic English - Road Trip</title>
+        <description>
+            A: So, are we all ready to go? B: Yup, I think so. The car's packed; we have munchies and music, and the map's in the car.
+        </description>
+        <cover>images/roadtrip.jpg</cover>
+        <audio>../authentic-english/sound/kouyu/englishpod/200911/C0006pb.mp3</audio>
+        <markdown-content>**The Weekend - Road Trip**\nA: So, are we all ready to go?\nB: Yup, I think so. The car's packed; we have munchies and music, and the map's in the car.\nA: Did you get the camera?\nB: Got it! Did you fill up the tank?\nA: Yup, it's all set.\nB: You're sure we're not forgetting anything?\nA: I'm sure... we've got all our bases covered.\nB: Well&amp; let's get going then! I love road trips!\nB: Um... do you think we can make a pit stop?\nA: But we've only been on the road for ten minutes.\nB: I know, but I forgot to go to the bathroom before we left.\n**Key Vocabulary**\n**all ready to go**:prepared, ready to leave\n**packed**:full, everything is inside\n**fill up the tank**:put gas in the car\n**all set**:ready</markdown-content>
+    </blog>
+    <blog location="english.html">
+        <id>8</id>
+        <date>December 3, 2018</date>
+        <title>Authentic English - Computer Virus</title>
+        <description>
+            A: Oh great! This stupid computer froze again!That's the third time today! Hey Samuel, can you come take a look at my PC? It's acting upagain. It must have a virus or something.
+        </description>
+        <cover>images/computer-stethoscope.jpg</cover>
+        <audio>../authentic-english/sound/kouyu/englishpod/200911/C0007pb.mp3</audio>
+        <markdown-content>"**The Office - Computer Virus! **\nA: Oh great! This stupid computer froze again!That's the third time today! Hey Samuel, can you come take a look at my PC? It's acting upagain. It must have a virus or something.\nB: Just give me a second; I'll be right up.\nB: I ran a virus scan on your computer, and it turns out that you have a lot of infected files!\nA: But I'm quite careful when I'm browsing the internet, I have no idea how I could have picked up a virus.\nB: Well, you have to make sure that your anti-virus software is updated regularly; yours wasn't up to date, that's probably what was causing your problems.\nA: Ok. Anything else?\nB: Yeah, try not to kick or hit the computer!\nA: Um yeah; Sorry about that."</markdown-content>
+    </blog>
+</blogs>
