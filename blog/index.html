@@ -77,8 +77,6 @@
 			<div class="fh5co-post" id="blog-content">
 			</div>
 
-			<div class="fh5co-post" id="load"></div>
-
 			<!-- pagination -->
 			<div style="margin: 0px 20px 0px 20px;">
 				<div id="pagination" class="pagination"></div>
@@ -147,6 +145,8 @@
                         blog["cover"] = cover;
                         dataList.push(blog);
                     });
+
+                    //倒序排列
                     dataList.reverse();
 
                     var curPage = 1;
