@@ -441,11 +441,11 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 14px;
   text-transform: uppercase;
   position: relative;
-  height: 30px;
-  width: 30px;
+  height: 50px;
+  width: 50px;
   display: block;
   text-align: center;
-  line-height: 30px;
+  line-height: 50px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -456,7 +456,27 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #000;
   background: white;
 }
-
+@media screen and (max-width: 768px) {
+  #fh5co-aside nav ul li a {
+    font-size: 14px;
+    text-transform: uppercase;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  #fh5co-aside nav ul li a:hover {
+    color: #000;
+    background: white;
+  }
+}
 footer {
   background: #fafafa;
   clear: both;
@@ -569,7 +589,7 @@ footer {
   margin-right: 0 !important;
   width: 100%;
 }
-.single .fh5co-post .fh5co-entry > div img {
+.single .fh5co-post .fh5co-entry .post-content img {
   width: 100%;
 }
 @media screen and (max-width: 768px) {
