@@ -342,7 +342,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .single #fh5co-aside {
   position: relative;
-  height: 500px;
+  height: 600px;
   width: 100%;
 }
 #fh5co-aside a {
@@ -567,6 +567,9 @@ footer {
 }
 .single .fh5co-post .fh5co-entry > div {
   margin-right: 0 !important;
+  width: 100%;
+}
+.single .fh5co-post .fh5co-entry > div img {
   width: 100%;
 }
 @media screen and (max-width: 768px) {
