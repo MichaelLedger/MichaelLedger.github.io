@@ -1,0 +1,584 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery音乐播放器</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<link rel="stylesheet" type="text/css" href="css/css.css">
+<link rel="stylesheet" type="text/css" href="css/lrc.css">
+<!-- <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>  -->
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/TweenMax.min.js"></script>
+</head>
+
+<body>
+<!-- <div class="player">
+  <div class="player__bar">
+    <div class="player__album">
+        <div class="player__albumImg active-song" 
+             data-author="Jay Chou"
+             data-song="告白气球"
+             data data-src="resources/china/gaobaiqiqiu/gaobaiqiqiu.mp3" style="background-image: url(resources/china/gaobaiqiqiu/cover.jpg)"> </div>
+        <div class="player__albumImg" 
+             data-author="Don Mclean"
+             data-song="Vincent"
+             data data-src="resources/america/vincent/Don Mclean - Vincent.mp3" style="background-image: url(resources/america/vincent/cover.jpg)"> </div>
+        <div class="player__albumImg" 
+             data-author="Lyn"
+             data-song="My Destiny"
+             data data-src="resources/korea/mydestiny/My_Destiny-Lyn.mp3" style="background-image: url(resources/korea/mydestiny/cover.jpg)"> </div>
+        <div class="player__albumImg" 
+             data-author="伊藤サチコ"
+             data-song="いつも何度でも"
+             data data-src="resources/japan/千と千尋の神隠し/伊藤サチコ - いつも何度でも.mp3" style="background-image: url(resources/japan/千と千尋の神隠し/cover.jpg)"> </div>
+    </div>
+    <div class="player__controls">
+      <div class="player__prev">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <path d="M26.695 34.434v31.132L54.5 49.998z"/>
+          <path d="M24.07 34.434v31.132c0 2.018 2.222 3.234 3.95 2.267l27.804-15.568c1.706-.955 1.707-3.578 0-4.533L28.02 32.168c-2.957-1.655-5.604 2.88-2.649 4.533l27.805 15.564v-4.533L25.371 63.3l3.95 2.267V34.435c-.001-3.387-5.251-3.387-5.251-.001z"/>
+          <g>
+            <path d="M55.5 34.434v31.132l27.805-15.568z"/>
+            <path d="M52.875 34.434v31.132c0 2.018 2.222 3.234 3.949 2.267 9.27-5.189 18.537-10.379 27.805-15.568 1.705-.955 1.705-3.578 0-4.533L56.824 32.168c-2.957-1.655-5.604 2.88-2.648 4.533l27.803 15.564v-4.533L54.176 63.3l3.949 2.267V34.435c0-3.387-5.25-3.387-5.25-.001z"/>
+          </g>
+        </svg>
+      </div>
+      <div class="player__play">
+        <svg class="icon play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+          <path d="M51.109 30.335l-36-24A2 2 0 0 0 12 8v48a2.003 2.003 0 0 0 2 2c.388 0 .775-.113 1.109-.336l36-24a2 2 0 0 0 0-3.329z"/>
+        </svg>
+        <svg class="icon pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <path d="M22.537 8.046h17.791c1.104 0 2.003.898 2.003 1.993v79.912a2.005 2.005 0 0 1-2.003 2.003h-17.79a2.005 2.005 0 0 1-2.003-2.003V10.04c0-1.095.898-1.993 2.002-1.993zM59.672 8.046h17.8c1.095 0 1.993.898 1.993 1.993v79.912a2.003 2.003 0 0 1-1.993 2.003h-17.8a1.997 1.997 0 0 1-1.993-2.003V10.04c0-1.095.889-1.993 1.993-1.993z"/>
+        </svg>
+      </div>
+      <div class="player__next">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+          <path d="M26.695 34.434v31.132L54.5 49.998z"/>
+          <path d="M24.07 34.434v31.132c0 2.018 2.222 3.234 3.95 2.267l27.804-15.568c1.706-.955 1.707-3.578 0-4.533L28.02 32.168c-2.957-1.655-5.604 2.88-2.649 4.533l27.805 15.564v-4.533L25.371 63.3l3.95 2.267V34.435c-.001-3.387-5.251-3.387-5.251-.001z"/>
+          <g>
+            <path d="M55.5 34.434v31.132l27.805-15.568z"/>
+            <path d="M52.875 34.434v31.132c0 2.018 2.222 3.234 3.949 2.267 9.27-5.189 18.537-10.379 27.805-15.568 1.705-.955 1.705-3.578 0-4.533L56.824 32.168c-2.957-1.655-5.604 2.88-2.648 4.533l27.803 15.564v-4.533L54.176 63.3l3.949 2.267V34.435c0-3.387-5.25-3.387-5.25-.001z"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="player__timeline">
+    <p class="player__song"></p>
+    <p class="player__author"></p>
+    <div class="player__timelineBar">
+      <div id="playhead"></div>
+    </div>
+  </div>
+</div> -->
+
+<div class="container" id="container">
+        <div class="music">
+            <div class="photo">
+                <div class="photo_pic" id="photo_pic"><img src="" width="100%" ><div class="cd"></div></div>
+            </div>
+            <div class="progress">
+                <div class="progress_obj clear">
+
+                    <div class="progress_bar" id="progress_bar"><div class="progress_cube" id="progress_cube"></div></div>
+                    <time>00:00</time><time style="float:right">00:00</time>
+                </div>
+                <div class="progress_obj clear">
+                    <div class="ctrl_btn">
+                        <div id="prev_btn" class="prev_btn btn iconfont">&#xe60d;</div>
+                        <div id="play_btn" class="play_btn btn">&#xe60e;</div>
+                        <div id="next_btn" class="next_btn btn">&#xe60b;</div>
+                    </div>
+                    <div class="ctrl_info">
+                        <div class="vol">&#xe979;<div class="vol_bar" id="vol_bar"><div class="vol_cube" id="vol_cube"></div></div></div>
+                        <div class="list" id="list">&#xe908;<div id="list_con"><p>fffffffff</p><p>fffffffff</p><p>fffffffff</p></div></div>
+                    </div>
+                    <audio id="audio_src" src="music/yangcong.mp3"></audio>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="lyric">
+            <div class="lyric_tit" id="lyric_tit"></div>
+            <div class="lyric_con" id="lyric_con"><div id="lyric_txt"></div></div>
+        </div>
+    </div>
+
+    <div class="choose" style="display: none">
+        <div class="choose_obj choose_like" >
+            <div class="icon" id="icon1">
+                &#xe607;
+            </div>
+            <span>喜欢</span>
+        </div>
+        <div class="choose_obj choose_share">
+            <div class="icon" id="icon2">
+                &#xe675;
+            </div>
+            <span>收藏</span>
+        </div>
+    </div>
+    <textarea id="lrc_content" name="textfield" cols="70" rows="10" style="display:none;">
+（[ti:告白气球1]
+[ar:周杰伦]
+[al:周杰伦的床边故事]
+[by:Love]
+[00:00.00]告白气球
+[00:04.55]词：方文山 曲：周杰伦
+[00:09.23]演唱：周杰伦
+[00:22.92]塞纳河畔 左岸的咖啡
+[00:26.04]我手一杯 品尝你的美
+[00:28.95]留下唇印的嘴
+[00:31.98]
+[00:33.67]花店玫瑰 名字写错谁
+[00:36.76]告白气球 风吹到对街
+[00:39.61]微笑在天上飞
+[00:42.67]
+[00:43.07]你说你有点难追 想让我知难而退
+[00:48.98]礼物不需挑最贵 只要香榭的落叶
+[00:54.38]营造浪漫的约会 不害怕搞砸一切
+[00:59.69]拥有你就拥有 全世界
+[01:04.26]
+[01:04.54]亲爱的 爱上你 从那天起
+[01:10.98]甜蜜的很轻易
+[01:14.96]亲爱的 别任性 你的眼睛
+[01:21.76]在说我愿意
+[01:25.68]
+[01:44.12]
+[01:48.18]塞纳河畔 左岸的咖啡
+[01:51.36]我手一杯 品尝你的美
+[01:54.31]留下唇印的嘴
+[01:57.44]
+[01:59.09]花店玫瑰 名字写错谁
+[02:01.71]告白气球 风吹到对街
+[02:04.78]微笑在天上飞
+[02:07.97]
+[02:08.31]你说你有点难追 想让我知难而退
+[02:14.33]礼物不需挑最贵 只要香榭的落叶
+[02:19.62]营造浪漫的约会 不害怕搞砸一切
+[02:25.01]拥有你就拥有 全世界
+[02:29.60]
+[02:29.90]亲爱的 爱上你 从那天起
+[02:36.48]甜蜜的很轻易
+[02:40.44]亲爱的 别任性 你的眼睛
+[02:47.09]在说我愿意
+[02:50.80]
+[02:51.29]亲爱的 爱上你 恋爱日记
+[02:57.70]飘香水的回忆
+[03:01.53]一整瓶 的梦境 全都有你
+[03:08.39]搅拌在一起
+[03:12.34]亲爱的别任性 你的眼睛
+[03:20.33]在说我愿意
+[03:27.47]
+</textarea>
+</body>
+
+<!-- <script>
+  $(document).ready(function () {
+    var audioElement = document.createElement('audio');
+    audioElement.setAttribute('src', $('.active-song').attr('data-src'));
+
+    var tl = new TimelineMax();
+    tl.to('.player__albumImg', 3, {
+        rotation: '360deg',
+        repeat: -1,
+        ease: Power0.easeNone
+    }, '-=0.2');
+    tl.pause();
+
+    $('.player__play').click(function () {
+
+        if ($('.player').hasClass('play')) {
+            $('.player').removeClass('play');
+            audioElement.pause();
+            TweenMax.to('.player__albumImg', 0.2, {
+                scale: 1,
+                ease: Power0.easeNone
+            })
+            tl.pause();
+        } else {
+            $('.player').addClass('play');
+            audioElement.play();
+            TweenMax.to('.player__albumImg', 0.2, {
+                scale: 1.1,
+                ease: Power0.easeNone
+            })
+            tl.resume();
+        }
+
+    });
+
+
+    var playhead = document.getElementById("playhead");
+    audioElement.addEventListener("timeupdate", function () {
+        var duration = this.duration;
+        var currentTime = this.currentTime;
+        var percentage = (currentTime / duration) * 100;
+        playhead.style.width = percentage * 4 + 'px';
+    });
+
+    function updateInfo() {
+        $('.player__author').text($('.active-song').attr('data-author'));
+        $('.player__song').text($('.active-song').attr('data-song'));
+    }
+    updateInfo();
+
+    $('.player__next').click(function () {
+        if ($('.player .player__albumImg.active-song').is(':last-child')) {
+            $('.player__albumImg.active-song').removeClass('active-song');
+            $('.player .player__albumImg:first-child').addClass('active-song');
+            audioElement.addEventListener("timeupdate", function () {
+                var duration = this.duration;
+                var currentTime = this.currentTime;
+                var percentage = (currentTime / duration) * 100;
+                playhead.style.width = percentage * 4 + 'px';
+            });
+        } else {
+            $('.player__albumImg.active-song').removeClass('active-song').next().addClass('active-song');
+            audioElement.addEventListener("timeupdate", function () {
+                var duration = this.duration;
+                var currentTime = this.currentTime;
+                var percentage = (currentTime / duration) * 100;
+                playhead.style.width = percentage + '%';
+            });
+        }
+        updateInfo();
+        audioElement.setAttribute('src', $('.active-song').attr('data-src'));
+        audioElement.play();
+    });
+
+    $('.player__prev').click(function () {
+        if ($('.player .player__albumImg.active-song').is(':first-child')) {
+            $('.player__albumImg.active-song').removeClass('active-song');
+            $('.player .player__albumImg:last-child').addClass('active-song');
+            audioElement.addEventListener("timeupdate", function () {
+                var duration = this.duration;
+                var currentTime = this.currentTime;
+                var percentage = (currentTime / duration) * 100;
+                playhead.style.width = percentage * 4 + 'px';
+            });
+        } else {
+            $('.player__albumImg.active-song').removeClass('active-song').prev().addClass('active-song');
+            audioElement.addEventListener("timeupdate", function () {
+                var duration = this.duration;
+                var currentTime = this.currentTime;
+                var percentage = (currentTime / duration) * 100;
+                playhead.style.width = percentage + 'px';
+            });
+        }
+        updateInfo();
+        audioElement.setAttribute('src', $('.active-song').attr('data-src'));
+        audioElement.play();
+    });
+
+});
+  </script> -->
+
+  <script type="text/javascript">
+
+    var lrc_content=$("#lrc_content").val();
+    //data
+    var lyric=[{
+        'name':"告白气球-周杰伦",
+        'img':'resources/china/gaobaiqiqiu/cover.jpg',
+        'audio_src':'resources/china/gaobaiqiqiu/gaobaiqiqiu.mp3',
+        'content':lrc_content
+    }]
+
+    window.onload=function()
+    {
+        var play_btn=document.getElementById("play_btn");
+        var prev_btn=document.getElementById("prev_btn");
+        var next_btn=document.getElementById("next_btn");
+        var audio=document.getElementsByTagName("audio")[0];
+        var initTime=document.getElementsByTagName("time")[0];
+        var time=document.getElementsByTagName("time")[1];
+        var progress_bar=document.getElementById("progress_bar");
+        var progress_cube=document.getElementById("progress_cube");
+        var vol_bar=document.getElementById("vol_bar");
+        var vol_cube=document.getElementById("vol_cube");
+        var lyric_con=document.getElementById("lyric_con");
+        var lyric_txt=document.getElementById("lyric_txt");
+        var icon1=document.getElementById("icon1");
+        var icon2=document.getElementById("icon2");
+        var lyric_tit=document.getElementById("lyric_tit");
+        var list_con=document.getElementById("list_con");
+        var list_item=list_con.getElementsByTagName("p");
+        var songIndex=0;
+        var container=document.getElementById("container");
+        var obj;
+        function config()
+        {
+            this.play_mark=true;
+            this.duration=audio.duration;
+            this.play_btn="&#xe60e;";
+            this.vol=audio.volume;
+            this.timer=null;
+            this.rotateSum=0;
+            this.icon1=icon1.innerHTML;
+            this.icon2=icon2.innerHTML;
+            this.icon1_co=icon1.style.color;
+            this.endplay_btn="&#xe60c;";
+            this.endicon1=icon1.innerHTML;
+            this.endicon2="&#xe674;";
+        }
+        obj= new config();
+        //列表控制
+        var allSong="";
+        for(var song=0;song<lyric.length;song++)
+        {
+            allSong+="<p>"+lyric[song].name+"</p>"
+        }
+        list_con.innerHTML=allSong;
+        list_con.style.height=lyric.length*30+"px";
+        for(var listIndex=0;listIndex<list_item.length;listIndex++)
+        {
+            list_item[listIndex].index=listIndex;
+            list_item[listIndex].onclick=function(ev)
+            {
+                var ev=ev||window.event;
+                ev.stopPropagation();
+                songIndex=this.index;
+                change_music();
+            }
+        }
+        list_con.style.display="none";
+        list.onclick=function()
+        {
+            if(list_con.style.display=="none")
+            {
+                list_con.style.display="block";
+            }
+            else{
+                list_con.style.display="none";
+            }
+        }
+        //下一首
+        next_btn.onclick=function(){
+            songIndex++;
+            change_music();
+        }
+        prev_btn.onclick=function(){
+            songIndex--;
+            change_music();
+        }
+        function change_music()
+        {
+            clearInterval(obj.timer);
+            if(songIndex>=lyric.length)
+            {songIndex=0}
+            else if(songIndex<0)
+            {songIndex=lyric.length}
+            obj= new config();
+            iconinit();
+            audioInit();
+            playedTime();
+            lyric_ctrl();
+        }
+        //初始化总时长、音量等
+        function audioInit()
+        {
+            time.innerHTML=format(audio.duration);
+            audio.volume=0.5;
+            play_btn.innerHTML=obj.play_btn;
+            vol_cube.style.left=audio.volume*vol_bar.offsetWidth+"px";
+            lyric_tit.innerText=lyric[songIndex].name;
+            if(lyric[songIndex].img==''){
+                $("#photo_pic img").attr("src","img/img_no.jpg");
+            }else{
+                $("#photo_pic img").attr("src",lyric[songIndex].img);
+            }
+            audio.src=lyric[songIndex].audio_src;
+            progress_cube.style.left=0;
+        }
+        audioInit();
+        //播放时间
+        audio.addEventListener("timeupdate",function()
+        {
+            playedTime();
+        })
+        function playedTime(){
+            if(audio.currentTime==audio.duration)
+            {
+                next_btn.onclick();
+                play_btn.onclick();
+            }
+            var n=audio.currentTime/audio.duration;
+            progress_cube.style.left=n*progress_bar.offsetWidth+"px";
+            initTime.innerHTML=format(audio.currentTime);
+            var id_num=parseInt(audio.currentTime);
+            var lyric_p=document.getElementsByTagName("p");
+            for(var i=0;i<lyric_p.length;i++)
+            {
+                lyric_p[i].index=i;
+            }
+            if(document.getElementById("lyric"+id_num))
+            {
+                var obj=document.getElementById("lyric"+id_num);
+                for(var i=0;i<obj.index;i++)
+                {
+                    lyric_p[i].className="played";
+                }
+                for(var j=obj.index;j<lyric_p.length;j++)
+                {
+                    lyric_p[j].className="";
+                }
+                obj.className="yellow active";
+                lyric_txt.style.top=lyric_con.offsetHeight/2-obj.offsetTop+"px";
+            }
+        }
+        function format(time)
+        {
+            var time=parseInt(time);
+            var m=parseInt(time/60);
+            var s=parseInt(time%60);
+            m=zero(m);
+            s=zero(s);
+            function zero(num)
+            {
+                if(num<10)
+                {
+                    num="0"+num;
+                }
+                return num;
+            }
+            return m+":"+s;
+        }
+        //拖拽进度条
+        progress_cube.onmousedown=function(ev)
+        {
+            var ev=ev||window.event;
+            var initX=ev.clientX-this.offsetLeft;
+            this.onmousemove=function(ev)
+            {
+                var ev=ev||window.event;
+                var x=ev.clientX-initX;
+                if(x<0){x=0}
+                if(x>progress_bar.offsetWidth-14){x=progress_bar.offsetWidth-14}
+                play_ctrl(x);
+            }
+            document.onmouseup=function()
+            {
+                document.onmousemove=null;
+                progress_cube.onmousemove=null;
+            }
+        }
+        function play_ctrl(x){
+            var timego=x/progress_bar.offsetWidth*audio.duration;
+            progress_cube.style.left=x+"px";
+            audio.currentTime=timego;
+            playedTime();
+        }
+        //点击进度条位置
+        progress_bar.onclick=function(ev)
+        {
+            var ev=ev||window.event;
+            var dis=ev.clientX-(container.offsetLeft+progress_bar.offsetLeft)-7;
+            progress_cube.style.left=dis+"px";
+            play_ctrl(dis);
+        }/**/
+        //拖动音量键
+        vol_cube.onmousedown=function(ev)
+        {
+            var ev=ev||window.event;
+            var initX=ev.clientX-vol_cube.offsetLeft;
+            this.onmousemove=function(ev)
+            {
+                var ev=ev||window.event;
+                var x=ev.clientX-initX;
+                if(x<0){x=0}
+                if(x>vol_bar.offsetWidth-11){x=vol_bar.offsetWidth-11}
+                var volresult=x/vol_bar.offsetWidth;
+                this.style.left=x+"px";
+                audio.volume=volresult;
+            }
+            document.onmouseup=function()
+            {
+                document.onmousemove=null;
+                vol_cube.onmousemove=null;
+            }
+        }
+        //点击播放
+        play_btn.onclick=function()
+        {
+            clearInterval(obj.timer);
+            if(obj.play_mark)
+            {
+                this.innerHTML=obj.endplay_btn;
+                audio.play();
+                obj.timer=setInterval(function()
+                {   obj.rotateSum=obj.rotateSum+1;
+                    photo_pic.style.transform="rotate("+obj.rotateSum+"deg)";
+                },30)
+            }
+            else{
+                this.innerHTML=obj.play_btn;
+                audio.pause();
+            }
+            obj.play_mark=!obj.play_mark;
+        }
+        //歌词处理
+        function lyric_ctrl()
+        {
+            var lyricObj=lyric[songIndex].content;
+            var temp=lyricObj.split("[");
+            var html="";
+            for(var i=0;i<temp.length;i++)
+            {
+                var arr=temp[i].split("]");
+                var text=(arr[1]);
+                var time=arr[0].split(",");
+                var temp2=time[0].split(".");
+                var ms=temp2[1];//毫秒
+                var temp3=temp2[0].split(":");
+                var s=temp3[1];//秒
+                var m=temp3[0];//分
+                var s_sum=parseInt(m*60)+parseInt(s);
+                if(text)
+                {
+                    html+="<p id='lyric"+s_sum+"'>"+text+"</p>";
+                }
+            }
+            lyric_txt.innerHTML=html;
+        }
+        lyric_ctrl();
+        function iconinit(){
+            icon1.className="icon";
+            icon1.innerHTML=obj.icon1;
+            icon1.style.color="#fff";
+            icon2.className="icon";
+            icon2.style.color="#fff";
+        }
+        //喜欢 收藏
+        icon2.onclick=function()
+        {
+            if(this.innerHTML==obj.icon2)
+            {
+                this.innerHTML=obj.endicon2;
+                this.style.color="yellow";
+                this.className="icon yellow";
+            }
+            else{
+                this.innerHTML=obj.icon2;
+                this.style.color="#fff";
+                this.className="icon";
+            }
+        }
+        icon1.onclick=function()
+        {
+            if(this.style.color==obj.icon1_co)
+            {
+                this.innerHTML=obj.endicon1;
+                this.style.color="#f7759f";
+                this.className="icon pink";
+            }
+            else{
+                this.innerHTML=obj.icon1;
+                this.style.color=obj.icon1_co;
+                this.className="icon";
+            }
+        }
+    }
+</script>
+
+</html>
