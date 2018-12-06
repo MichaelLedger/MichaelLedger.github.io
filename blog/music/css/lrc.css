@@ -113,7 +113,7 @@ time{  font-size: 12px;  width: 49px;  text-align: center;  color: #888;  height
 }
 .ctrl_info{  width:55%;  float: left; display: flex; vertical-align: center; }
 .vol{  width:76%;height: 100%;  float: left;margin-left: 4%;}
-.vol_bar{  position: relative;  width: 70px;  float: right;  height: 2px;  background-color: #3faed9;  margin-top: 13px;margin-right:10%; }
+.vol_bar{  position: relative; width:70%;  float: right;  height: 2px;  background-color: #3faed9;  margin-top: 13px;margin-right:10%; }
 .vol_cube{
   position: absolute;
   left: 0;
