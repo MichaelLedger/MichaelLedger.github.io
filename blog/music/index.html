@@ -75,12 +75,21 @@
 <div class="container" id="container">
         <div class="music">
             <div class="photo">
-                <div class="photo_pic" id="photo_pic"><img src="" width="100%" ><div class="cd"></div></div>
+                <!-- <img src="image/placeholder_disk_play_program.png" id="disk_play_program" class="disk_play_program" /> -->
+                <!-- <div class="photo_pic" id="photo_pic"> -->
+                <!-- <img src="image/placeholder_disk_play_program.png" class="disk_play_program"> -->
+                <!-- <img class="disk_play_program" src="image/placeholder_disk_play_program.png" /> -->
+                <div class="photo_pic" id="photo_pic">
+                    <img class="photo_pic_shadow" src="" id="album_pic" />
+                    <div class="play_needle" id="play_needle"><img src="image/play_needle.png" style="width: 100%;height: 100%;" /></div><!-- needle_animation -->
+                    <div class="cd"></div>
+                </div>
+                
             </div>
             <div class="progress">
                 <div class="progress_obj clear">
 
-                    <div class="progress_bar" id="progress_bar"><div class="progress_cube" id="progress_cube"></div></div>
+                    <div class="progress_bar" id="progress_bar"><div class="progress_bar_line"></div><div class="progress_cube" id="progress_cube"></div></div>
                     <time>00:00</time><time style="float:right">00:00</time>
                 </div>
                 <div class="progress_obj clear">
@@ -118,7 +127,7 @@
             <span>收藏</span>
         </div>
     </div>
-    <textarea id="lrc_content" name="textfield" cols="70" rows="10" style="display:none;">
+    <textarea id="lrc_content" name="textfield" cols="70" rows="8" style="display:none;">
 （[ti:告白气球1]
 [ar:周杰伦]
 [al:周杰伦的床边故事]
@@ -306,6 +315,7 @@
         var list_item=list_con.getElementsByTagName("p");
         var songIndex=0;
         var container=document.getElementById("container");
+        var needle = document.getElementById("play_needle");
         var obj;
         function config()
         {
@@ -378,15 +388,24 @@
         //初始化总时长、音量等
         function audioInit()
         {
-            time.innerHTML=format(audio.duration);
-            audio.volume=0.5;
+            needle.style.transformOrigin="top left";
+            needle.style.transform = "rotate(-30deg)";
+
+            // document.getElementById("play_needle").style.animationPlayState = "paused";
+            // document.getElementById("play_needle").style.WebkitAnimationPlayState = "paused";
+
+            // $("#play_needle").attr("transform-origin","top left");
+            // $("#play_needle").attr("transform","rotate(-30deg)");
+
+            // time.innerHTML=format(audio.duration);
+            audio.volume=0.1;
             play_btn.innerHTML=obj.play_btn;
             vol_cube.style.left=audio.volume*vol_bar.offsetWidth+"px";
             lyric_tit.innerText=lyric[songIndex].name;
             if(lyric[songIndex].img==''){
-                $("#photo_pic img").attr("src","img/img_no.jpg");
+                $("#album_pic").attr("src","img/img_no.jpg");//$("#photo_pic img")
             }else{
-                $("#photo_pic img").attr("src",lyric[songIndex].img);
+                $("#album_pic").attr("src",lyric[songIndex].img);//$("#photo_pic img")
             }
             audio.src=lyric[songIndex].audio_src;
             progress_cube.style.left=0;
@@ -396,6 +415,7 @@
         audio.addEventListener("timeupdate",function()
         {
             playedTime();
+            time.innerHTML=format(audio.duration);
         })
         function playedTime(){
             if(audio.currentTime==audio.duration)
@@ -504,14 +524,54 @@
             clearInterval(obj.timer);
             if(obj.play_mark)
             {
+                // $("#play_needle").attr("animation","needle_animation 1s ease-in-out infinite");
+                // $("#play_needle").attr("-webkit-animation","needle_animation 1s ease-in-out infinite");
+                // needle.style.animation = "needle_rotate 1s ease-in-out infinite";
+                // needle.style.webkitAnimation = "1s needle_rotate ease-in-out infinite";
+                // needle.addClass("needle_animation");
+
+                // $('#play_needle').addClass(" needle_animation");//无动画效果
+                // document.getElementById("play_needle").style.animationPlayState = "running";
+                // document.getElementById("play_needle").style.WebkitAnimationPlayState = "running"; // 针对 Chrome 和 Safari 的代码
+
+                // setInterval(function(){
+                //     // needle.style.transformOrigin="top left";
+                //     // needle.style.transform = "rotate(0deg)";
+                //     document.getElementById("play_needle").style.animationPlayState = "paused";
+                //     document.getElementById("play_needle").style.WebkitAnimationPlayState = "paused";
+                // },1000)
+
+                needle.style.transformOrigin="top left";
+                needle.style.transform = "rotate(0deg)";
+
                 this.innerHTML=obj.endplay_btn;
                 audio.play();
                 obj.timer=setInterval(function()
                 {   obj.rotateSum=obj.rotateSum+1;
-                    photo_pic.style.transform="rotate("+obj.rotateSum+"deg)";
+                    album_pic.style.transform="rotate("+obj.rotateSum+"deg)";//photo_pic
                 },30)
             }
             else{
+                // needle.style.transformOrigin="top left";
+                // needle.style.transform = "rotate(-30deg)";
+
+                // $('#play_needle').removeClass(" needle_animation");//无动画效果
+                // document.getElementById("play_needle").style.animationPlayState = "paused";
+                // document.getElementById("play_needle").style.WebkitAnimationPlayState = "paused"; // 针对 Chrome 和 Safari 的代码
+
+                needle.style.transformOrigin="top left";
+                needle.style.transform = "rotate(-30deg)";
+
+                // document.getElementById("play_needle").style.animationPlayState = "running";
+                // document.getElementById("play_needle").style.WebkitAnimationPlayState = "running"; // 针对 Chrome 和 Safari 的代码
+
+                // setInterval(function(){
+                //     // needle.style.transformOrigin="top left";
+                //     // needle.style.transform = "rotate(-30deg)";
+                //     document.getElementById("play_needle").style.animationPlayState = "paused";
+                //     document.getElementById("play_needle").style.WebkitAnimationPlayState = "paused";
+                // },1000)
+
                 this.innerHTML=obj.play_btn;
                 audio.pause();
             }
