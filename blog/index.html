@@ -169,7 +169,6 @@
 							//获取当前页数
 							fetchPageData("blog-content", page, pageSize);
 							var offsetY = document.body.clientWidth > 768 ? 0 : 500;//适配不同的屏幕布局(网页可见区域宽)，跳转到第一篇博客
-							alert(document.body.clientWidth);
 							$('body').animate( {scrollTop: offsetY}, 500);// 在500毫秒内平滑滚动到页面顶部
 						}
 					});
