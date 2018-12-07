@@ -168,6 +168,7 @@
 						getPage: function (page) {
 							//获取当前页数
 							fetchPageData("blog-content", page, pageSize);
+							$('body').animate( {scrollTop: 0}, 500);// 在500毫秒内平滑滚动到页面顶部
 						}
 					});
 					fetchPageData("blog-content", curPage, pageSize);
