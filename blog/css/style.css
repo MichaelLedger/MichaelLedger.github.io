@@ -73,8 +73,17 @@ p, ul, ol {
 h1, h2, h3, h4, h5, h6, figure {
   color: #000;
   font-family: "Work Sans", Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   margin: 0 0 30px 0;
+}
+
+@media screen and (max-width: 768px) {
+  h1, h2, h3, h4, h5, h6, figure {
+    color: #000;
+    font-family: "Work Sans", Arial, sans-serif;
+    font-weight: 300;
+    margin: 0 0 20px 0;
+  }
 }
 
 ::-webkit-selection {
@@ -325,9 +334,17 @@ h1, h2, h3, h4, h5, h6, figure {
 .fh5co-navigation .fh5co-cover .copy .display-tc div h2 {
   margin-bottom: 0;
   color: #fff;
-  font-weight: 300;
+  font-weight: 100;
+  font-size: 30px;
 }
-
+@media screen and (max-width: 768px) {
+  .fh5co-navigation .fh5co-cover .copy .display-tc div h2 {
+    margin-bottom: 0;
+    color: #fff;
+    font-weight: 100;
+    font-size: 20px;
+  }
+}
 #fh5co-aside {
   width: 38%;
   top: 0;
@@ -378,6 +395,14 @@ h1, h2, h3, h4, h5, h6, figure {
   position: absolute;
   bottom: 0;
   padding: 30px;
+}
+@media screen and (max-width: 768px) {
+  #fh5co-aside .featured, #fh5co-aside nav, #fh5co-aside .page-title {
+    z-index: 12;
+    position: absolute;
+    bottom: 0;
+    padding: 30px 30px 0px 30px;
+  }
 }
 .single #fh5co-aside .featured, .single #fh5co-aside nav, .single #fh5co-aside .page-title {
   width: 100%;
