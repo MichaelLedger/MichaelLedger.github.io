@@ -137,11 +137,12 @@
 		var dataList = new Array();
 		$(document).ready(function() {
 			$.ajax({
+				async: true, //是否异步
                 type:"get",
                 url:"blog.xml",//这里通过设置url属性来获取xml
                 dataType:"xml",
                 timeout:1000,      //设定超时
-                cache:false,       //是否设置缓存
+                cache:true,       //是否设置缓存
                 success:function(xml){//这里是解析xml
                     $(xml).find("blog").each(function(i){
                     	var location = $(this).attr("location");     // 跳转页面地址
@@ -241,7 +242,7 @@
 			    // var converter = new showdown.Converter();
 			    // var html = converter.makeHtml(markdown);
 
-			    console.log('before:\n'+ markdownStr);
+			    // console.log('before:\n'+ markdownStr);
 
 			    // 将XML中的/n解析为<br/>
 			    markdownStr = markdownStr.replace(/\\n/g, '<br/>');
@@ -252,7 +253,7 @@
 			    html = html.replace(/<br\/>/g, '<br\/><br\/>');// 添加一个换行，美化排版
 			    html = html.replace(/&amp;rsquo;/g, '\'');// &rsquo;正常解析为'
 
-			    console.log('after:\n' + html);
+			    // console.log('after:\n' + html);
 			    
 			    return html;
 			}
