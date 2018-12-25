@@ -163,7 +163,7 @@
 						pageAmount: pageSize, //每页多少条
 						dataTotal: dataTotal, // 总共多少条数据
 						curPage: curPage, // 初始页码，不填默认为1
-						pageSize: pageTotal > 5 ? 5 : pageTotal, // 控件分页个数,不填默认为5
+						pageSize: pageTotal > (document.body.clientWidth > 768 ? 8 : 5) ? (document.body.clientWidth > 768 ? 8 : 5) : pageTotal, // 控件分页个数,不填默认为5
 						showPageTotalFlag: false, // 是否显示数据统计,不填默认不显示
 						showSkipInputFlag: true, // 是否支持跳转,不填默认不显示
 						getPage: function (page) {
