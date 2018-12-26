@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--以下特殊字符不可使用：-->
+<!--&rsquo;全局替换为'-->
+<!--<br/>换行符全局替换为\n-->
+<blogs>
+    <blog location="markdown_tools.html">
+        <id>1</id>
+        <date>November 30, 2018</date>
+        <title>Tool - Markdown实时预览及Html互转</title>
+        <description>
+            Markdown 是一种简单的、轻量级的标记语法。用户可以使用诸如 * # 等简单的标记符号以最小的输入代价生成极富表现力的文档。
+        </description>
+        <cover>images/markdown.jpg</cover>
+    </blog>
+    <blog location="music/index.html">
+        <id>2</id>
+        <date>December 6, 2018</date>
+        <title>Music - 告白气球（周杰伦）</title>
+        <description>
+            Music - 告白气球（周杰伦）
+        </description>
+        <cover>images/balloon.jpg</cover>
+    </blog>
+    <blog location="developer-single.html">
+        <id>3</id>
+        <date>December 17, 2018</date>
+        <title>iOS - Refactoring Code</title>
+        <description>
+            iOS代码重构 : Refactoring - 改善既有代码的设计
+        </description>
+        <cover>../refactoring/1.png</cover>
+        <markdown-content>![](../refactoring/2.png)![](../refactoring/3.png)![](../refactoring/4.png)![](../refactoring/5.png)![](../refactoring/6.png)![](../refactoring/7.png)![](../refactoring/8.png)![](../refactoring/9.png)![](../refactoring/10.png)![](../refactoring/11.png)![](../refactoring/12.png)![](../refactoring/13.png)![](../refactoring/14.png)![](../refactoring/15.png)![](../refactoring/16.png)![](../refactoring/17.png)![](../refactoring/18.png)![](../refactoring/19.png)![](../refactoring/20.png)![](../refactoring/21.png)![](../refactoring/22.png)![](../refactoring/23.png)![](../refactoring/24.png)![](../refactoring/25.png)![](../refactoring/26.png)![](../refactoring/27.png)![](../refactoring/28.png)![](../refactoring/29.png)![](../refactoring/30.png)![](../refactoring/31.png)![](../refactoring/32.png)![](../refactoring/33.png)![](../refactoring/34.png)
+        </markdown-content>
+    </blog>
+</blogs>
