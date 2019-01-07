@@ -19,15 +19,21 @@
     // Override point for customization after application launch.
     
     NSMutableArray *urlArray = [NSMutableArray array];
+    
     for(int i=0;i<19;i++)//一共26个字母
     {
         //        printf ("%c",'a'+i);//因为ASCII连续，这里‘a'先转化成ASCII和i相加，再用%c转化为字符输出
         for(int j=1;j<22;j++)
         {
+            //音频
             //    https://res.hjfile.cn/pt/m/zt/kr/zt_fayinbiao/audio/b15.mp3
-            NSString *link = [NSString stringWithFormat:@"https://res.hjfile.cn/pt/m/zt/kr/zt_fayinbiao/audio/%c%d.mp3", 'a'+i, j];
-//            NSLog(@"%@", link);
-            [urlArray addObject:[NSURL URLWithString:link]];
+            NSString *audioLink = [NSString stringWithFormat:@"https://res.hjfile.cn/pt/m/zt/kr/zt_fayinbiao/audio/%c%d.mp3", 'a'+i, j];
+            [urlArray addObject:[NSURL URLWithString:audioLink]];
+            
+            //图片
+            //  https://res.hjfile.cn/pt/m/zt/kr/zt_fayinbiao/img/pindu/a1.png
+            NSString *imgLink = [NSString stringWithFormat:@"https://res.hjfile.cn/pt/m/zt/kr/zt_fayinbiao/img/pindu/%c%d.png", 'a'+i, j];
+            [urlArray addObject:[NSURL URLWithString:imgLink]];
         }
     }
     
@@ -47,9 +53,19 @@
     {
         NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
             NSData *data = [NSData dataWithContentsOfURL:url];
-            NSString *filename = [cachesPath stringByAppendingPathComponent:[url lastPathComponent]];
-            BOOL success = [data writeToFile:filename atomically:YES];
-            NSLog(@"%@ download %@!", filename, success ? @"success" : @"fail");
+            NSString *filePath = [cachesPath stringByAppendingPathComponent:[[url pathExtension] stringByAppendingPathComponent:[url lastPathComponent]]];
+            NSString *fileDir = [cachesPath stringByAppendingPathComponent:[url pathExtension]];
+            NSString *fileName = [url lastPathComponent];
+            BOOL isDir;
+            if (![[NSFileManager defaultManager] fileExistsAtPath:fileDir isDirectory:&isDir])
+            {
+                NSError *createError;
+                [[NSFileManager defaultManager] createDirectoryAtPath:fileDir withIntermediateDirectories:YES attributes:nil error:&createError];
+                if (createError) NSLog(@"%@ create error:%@", fileDir, createError.localizedDescription);
+            }
+            NSLog(@"%@", isDir ? @"isDir" : @"isNotDir");
+            BOOL success = [data writeToFile:[fileDir stringByAppendingPathComponent:fileName] atomically:YES];
+            NSLog(@"%@ download %@: %@", fileName, success ? @"success" : @"fail", filePath);
         }];
         [completionOperation addDependency:operation];
     }
