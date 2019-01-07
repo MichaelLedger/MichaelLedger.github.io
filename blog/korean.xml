@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--以下特殊字符不可使用：-->
+<!--&rsquo;全局替换为'-->
+<!--<br/>换行符全局替换为\n-->
+<blogs>
+    <blog location="../korean/alphabet/index.html">
+        <id>1</id>
+        <date>January 7, 2019</date>
+        <title>韩语字母发音表</title>
+        <description>
+            韩语发音表针对韩语初学者和自学者开发，点击每个字母，你可以听到标准的字母发音，还可以看到相应的笔顺，帮你在入门阶段快速掌握韩语字母的发音及写法。
+        </description>
+        <cover>../korean/images/alphabet.png</cover>
+    </blog>
+    <blog location="../korean/alphabet-upgrade/index.html">
+        <id>2</id>
+        <date>January 7, 2019</date>
+        <title>韩语字母发音表（升级版）</title>
+        <description>
+            升级版韩语字母发音表，使用手机打开效果更佳~
+        </description>
+        <cover>../korean/images/alphabet-upgrade.png</cover>
+    </blog>
+</blogs>

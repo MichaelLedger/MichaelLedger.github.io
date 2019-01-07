@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>MichaelLedger's Blog - Korean</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="MichaelLedger's Blog" />
+	<meta name="keywords" content="MichaelLedger, Blog" />
+	<meta name="author" content="MichaelLedger" />
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- CSS3 Loading style -->
+	<link rel="stylesheet" href="css/css3-shine-line-loading.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- pagination -->
+	<link rel="stylesheet" href="../public/pagination/pagination.css">
+
+	</head>
+	<body onload=hideLoading()>
+
+	<!-- css3-shine-line-loading -->
+	<!-- <div class="loading" id="loading">
+		<div class="loader">
+			<div class="face" id="face1">
+				<div class="circle"></div>
+			</div>
+			<div class="face" id="face2">
+				<div class="circle"></div>
+			</div>
+		</div>
+	</div> -->
+
+	<div class="fh5co-loader"></div>
+	
+	<div id="page">
+		<div id="fh5co-aside" style="background-image: url(images/mountain.jpg)">
+			<div class="overlay"></div>
+			<div class="featured">
+				<span>Korean</span>
+				<h2>Michael Ledger</a></h2>
+			</div>
+			<nav role="navigation">
+				<ul>
+					<li><a href="korean.html"><i class="icon-home"></i></a></li>
+				</ul>
+			</nav>
+		</div>
+		<div id="fh5co-main-content">
+			<div class="fh5co-post" id="blog-content">
+			</div>
+
+			<!-- pagination -->
+			<div style="margin: 0px 20px 0px 20px;">
+				<div id="pagination" class="pagination"></div>
+			</div>
+
+			<footer>
+				<div>
+					Copyright &copy; 2018 MTX Software Technology Co.,Ltd. All rights reserved. Designed by <a href="korean.html" target="_blank">MichaelLedger</a>.
+					<br/>
+					For personal study only, please do not reprint, not for any commercial use.</p>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+	
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+
+	
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="js/jquery.stellar.min.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	<script type="text/javascript" src="../public/pagination/pagination.js"></script>
+
+	<script type="text/javascript">
+		var dataList = new Array();
+		$(document).ready(function() {
+			$.ajax({
+				async: true, //是否异步
+                type:"get",
+                url:"korean.xml",//这里通过设置url属性来获取xml
+                dataType:"xml",
+                timeout:10000,      //设定超时，单位毫秒
+                cache:true,       //是否设置缓存
+                success:function(xml){//这里是解析xml
+                    $(xml).find("blog").each(function(i){
+                    	var location = $(this).attr("location");     // 跳转页面地址
+                        var id_value = $(this).children("id").text();   // 唯一标识
+                        var date = $(this).children("date").text();  // 日期
+                        var title = $(this).children("title").text();  // 标题
+                        var description = $(this).children("description").text();  // 描述
+                        var cover = $(this).children("cover").text();  // 封面图片
+
+                        var blog = {};
+                        // if (location.indexOf("english.html") != -1) {
+                        	blog["location"] = location + "?id=" + id_value;
+                        // } else {
+                        // 	blog["location"] = location;
+                        // }
+                        
+                        blog["id"] = id_value;
+                        blog["date"] = date;
+                        blog["title"] = title;
+                        blog["description"] = description;
+                        blog["cover"] = cover;
+                        dataList.push(blog);
+                    });
+
+                    //倒序排列
+                    dataList.reverse();
+
+                    var curPage = 1;
+					var pageSize = 6;
+					var dataTotal = dataList.length;
+					var pageTotal = Math.ceil(dataTotal / pageSize);
+
+					new Page({
+						id: 'pagination',
+						pageTotal: pageTotal, //必填，总页数
+						pageAmount: pageSize, //每页多少条
+						dataTotal: dataTotal, // 总共多少条数据
+						curPage: curPage, // 初始页码，不填默认为1
+						pageSize: pageTotal > (document.body.clientWidth > 768 ? 8 : 5) ? (document.body.clientWidth > 768 ? 8 : 5) : pageTotal, // 控件分页个数,不填默认为5
+						showPageTotalFlag: false, // 是否显示数据统计,不填默认不显示
+						showSkipInputFlag: true, // 是否支持跳转,不填默认不显示
+						getPage: function (page) {
+							//获取当前页数
+							fetchPageData("blog-content", page, pageSize);
+							var offsetY = document.body.clientWidth > 768 ? 0 : 500;//适配不同的屏幕布局(网页可见区域宽)，跳转到第一篇博客
+							$('body').animate( {scrollTop: offsetY}, 500);// 在500毫秒内平滑滚动到页面顶部
+						}
+					});
+					fetchPageData("blog-content", curPage, pageSize);
+                }
+            });
+		})
+	</script>
+	<script type="text/javascript">
+		function fetchPageData(divIdentifier, currentPage, pageSize) {
+			if (!divIdentifier) return;
+			
+			if (dataList.count < currentPage * pageSize) return;
+			var currentPageData = new Array();
+			for (var i = (currentPage - 1) * pageSize; i < dataList.length && i < currentPage * pageSize; i++) {
+				var data = dataList[i];
+				currentPageData.push(data);
+			}
+
+			var content = "";
+			for (var i = 0; i < currentPageData.length; i++) {
+				var data = currentPageData[i];
+				var htmlStr = "<div class=\"fh5co-entry padding\" onclick=\"window.location.href='" + data.location +"'\"><div><span class=\"fh5co-post-date\">" + data.date + "</span><h2><a href=\"" + data.location + "\">" + data.title + "</a></h2><p>" + data.description + "</p></div><img src=\"" + data.cover + "\" alt=\"Picture\"></div>";
+				content = content + htmlStr;
+			}
+			// document.all[divIdentifier].innerHTML = content;
+			// document.getElementById(divIdentifier).innerHTML = content;
+
+			$("#" + divIdentifier).html(content);// 使用jQuery
+		}
+	</script>
+
+	<script type="text/javascript">
+		function hideLoading() {
+			// document.all["face1"].style.animation = "disappear 1s";
+			// document.all["face2"].style.animation = "disappear 1s";
+
+			// setTimeout(function(){
+				// document.all["face1"].style.display = "none";
+				// document.all["face2"].style.display = "none";
+				// document.all["loading"].style.display="none";
+			// }, 1000);
+
+			//背景色还原为白色
+			// document.querySelector('body').setAttribute('style', 'background-color:#fff');
+			// document.all["loading"].style.backgroundColor = "#fff";
+		}
+	</script>
+
+	</body>
+</html>
+
