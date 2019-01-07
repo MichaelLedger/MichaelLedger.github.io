@@ -76,7 +76,8 @@ html {
   z-index: 2
 }
 .common_nav ul {
-  width: 3.75rem;
+  /*width: 3.75rem;*/
+  width: 2.96rem;
   overflow: hidden;
 }
 .common_nav li {
