@@ -1,0 +1,3 @@
+## Swift
+
+本以为 Swift 3 之后 Swift 就会稳定了，听闻 Swift 4 还会有 breaking change，本文档 Swift 部分暂时先搁置吧...
