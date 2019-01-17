@@ -32,4 +32,15 @@
         <markdown-content>![](../refactoring/2.png)![](../refactoring/3.png)![](../refactoring/4.png)![](../refactoring/5.png)![](../refactoring/6.png)![](../refactoring/7.png)![](../refactoring/8.png)![](../refactoring/9.png)![](../refactoring/10.png)![](../refactoring/11.png)![](../refactoring/12.png)![](../refactoring/13.png)![](../refactoring/14.png)![](../refactoring/15.png)![](../refactoring/16.png)![](../refactoring/17.png)![](../refactoring/18.png)![](../refactoring/19.png)![](../refactoring/20.png)![](../refactoring/21.png)![](../refactoring/22.png)![](../refactoring/23.png)![](../refactoring/24.png)![](../refactoring/25.png)![](../refactoring/26.png)![](../refactoring/27.png)![](../refactoring/28.png)![](../refactoring/29.png)![](../refactoring/30.png)![](../refactoring/31.png)![](../refactoring/32.png)![](../refactoring/33.png)![](../refactoring/34.png)
         </markdown-content>
     </blog>
+    <blog location="developer-single.html">
+        <id>4</id>
+        <date>January 17, 2019</date>
+        <title>HTML - 文件名和网址大小写敏感问题</title>
+        <description>
+            网址中协议和域名部分不分大小写。路径部分是否区分大小写则不一定，尽量统一使用小写。
+        </description>
+        <cover>developer-images/html-java-book.jpg</cover>
+        <markdown-content>文件名和网址中尽量不用中文或者其他特殊符号；\n文件名尽量统一使用小写，单词之间连接使用“-”；\nurl路径名尽量统一使用小写，单词之间连接使用“_”。\n网址的基本结构是`[协议]://[域名]/[路径]`，其中协议和域名部分不分大小写。路径部分是否区分大小写则不一定。\nuri一般是直接映射到磁盘路径上，windows的磁盘路径不区分大小写，而unix区分。所以架在windows上的网站就不区分大小写，而架在unix上的就区分大小写。\n如果服务器是直接将路径映射到文件系统中去找，则不同平台上有不同实现：\nMac OS X 默认的文件系统（HFS case-insensitive) 是不分大小写的；\nWindows 上的 NTFS 也不区分大小写；\n Linux 系统常用的则是需要区分大小写的。
+        </markdown-content>
+    </blog>
 </blogs>
