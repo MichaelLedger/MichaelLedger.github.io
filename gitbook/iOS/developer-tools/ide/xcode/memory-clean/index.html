@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>ARC · iOS知识树</title>
+        <title>清理存储空间 · iOS知识树</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -2925,9 +2925,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.3.2.2" data-path="./">
+        <li class="chapter " data-level="1.5.3.2.2" data-path="../../../../ios-system/version-feature/ios5/arc/">
             
-                <a href="./">
+                <a href="../../../../ios-system/version-feature/ios5/arc/">
             
                     
                     ARC
@@ -4921,9 +4921,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.2.1.1" data-path="../../../../developer-tools/ide/xcode/memory-clean/">
+        <li class="chapter active" data-level="1.8.2.1.1" data-path="./">
             
-                <a href="../../../../developer-tools/ide/xcode/memory-clean/">
+                <a href="./">
             
                     
                     清理存储空间
@@ -8393,7 +8393,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../../../.." >ARC</a>
+        <a href="../../../.." >清理存储空间</a>
     </h1>
 </div>
 
@@ -8408,401 +8408,107 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="arc">ARC</h1>
-<h3 id="arc&#x7684;&#x672C;&#x8D28;">ARC&#x7684;&#x672C;&#x8D28;</h3>
-<p>&#x81EA;&#x52A8;&#x7684;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#xFF08;Automatic Reference Count &#x7B80;&#x79F0; ARC&#xFF09;&#xFF0C;&#x662F;&#x82F9;&#x679C;&#x5728; WWDC 2011 &#x5E74;&#x5927;&#x4F1A;&#x4E0A;&#x63D0;&#x51FA;&#x7684;&#x7528;&#x4E8E;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x7684;&#x6280;&#x672F;&#x3002;</p>
-<p>&#x5F15;&#x7528;&#x8BA1;&#x6570;&#xFF08;Reference Count&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x800C;&#x6709;&#x6548;&#x7684;&#x7BA1;&#x7406;&#x5BF9;&#x8C61;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x5F53;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5B83;&#x7684;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x4E3A; 1&#xFF0C;&#x5F53;&#x6709;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6307;&#x9488;&#x6307;&#x5411;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5176;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x52A0; 1&#xFF0C;&#x5F53;&#x67D0;&#x4E2A;&#x6307;&#x9488;&#x4E0D;&#x518D;&#x6307;&#x5411;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5176;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x51CF; 1&#xFF0C;&#x5F53;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x53D8;&#x4E3A; 0 &#x65F6;&#xFF0C;&#x8BF4;&#x660E;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x4E0D;&#x518D;&#x88AB;&#x4EFB;&#x4F55;&#x6307;&#x9488;&#x6307;&#x5411;&#x4E86;&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;&#x5BF9;&#x8C61;&#x9500;&#x6BC1;&#xFF0C;&#x56DE;&#x6536;&#x5185;&#x5B58;&#x3002;&#x7531;&#x4E8E;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x7B80;&#x5355;&#x6709;&#x6548;&#xFF0C;&#x9664;&#x4E86; Objective-C &#x8BED;&#x8A00;&#x5916;&#xFF0C;&#x5FAE;&#x8F6F;&#x7684; COM&#xFF08;Component Object Model &#xFF09;&#x3001;C++11&#xFF08;C++11 &#x63D0;&#x4F9B;&#x4E86;&#x57FA;&#x4E8E;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x7684;&#x667A;&#x80FD;&#x6307;&#x9488; share_prt&#xFF09; &#x7B49;&#x8BED;&#x8A00;&#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x57FA;&#x4E8E;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x7684;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x65B9;&#x5F0F;&#x3002;</p>
-<p>&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x8FD9;&#x79CD;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x65B9;&#x5F0F;&#x867D;&#x7136;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x662F;&#x624B;&#x5DE5;&#x5199;&#x5927;&#x91CF;&#x7684;&#x64CD;&#x4F5C;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x7684;&#x4EE3;&#x7801;&#x4E0D;&#x4F46;&#x7E41;&#x7410;&#xFF0C;&#x800C;&#x4E14;&#x5BB9;&#x6613;&#x88AB;&#x9057;&#x6F0F;&#x3002;&#x4E8E;&#x662F;&#x82F9;&#x679C;&#x5728; 2011 &#x5E74;&#x5F15;&#x5165;&#x4E86; ARC&#x3002;ARC &#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;&#x662F;&#x81EA;&#x52A8;&#x5E2E;&#x6211;&#x4EEC;&#x586B;&#x5199;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x4EE3;&#x7801;&#x7684;&#x4E00;&#x9879;&#x529F;&#x80FD;&#x3002;</p>
-<p>ARC &#x7684;&#x60F3;&#x6CD5;&#x6765;&#x6E90;&#x4E8E;&#x82F9;&#x679C;&#x5728;&#x65E9;&#x671F;&#x8BBE;&#x8BA1; Xcode &#x7684; Analyzer &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53D1;&#x73B0;&#x7F16;&#x8BD1;&#x5668;&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x5927;&#x5BB6;&#x53D1;&#x73B0;&#x5F88;&#x591A;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x4E2D;&#x7684;&#x95EE;&#x9898;&#x3002;&#x540E;&#x6765;&#x82F9;&#x679C;&#x5C31;&#x60F3;&#xFF0C;&#x80FD;&#x4E0D;&#x80FD;&#x5E72;&#x8106;&#x7F16;&#x8BD1;&#x5668;&#x5728;&#x7F16;&#x8BD1;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x628A;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x7684;&#x4EE3;&#x7801;&#x90FD;&#x81EA;&#x52A8;&#x8865;&#x4E0A;&#xFF0C;&#x5E26;&#x7740;&#x8FD9;&#x79CD;&#x60F3;&#x6CD5;&#xFF0C;&#x82F9;&#x679C;&#x4FEE;&#x6539;&#x4E86;&#x4E00;&#x4E9B;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x4EE3;&#x7801;&#x7684;&#x4E66;&#x5199;&#x65B9;&#x5F0F;&#xFF08;&#x4F8B;&#x5982;&#x5F15;&#x5165;&#x4E86; @autoreleasepool &#x5173;&#x952E;&#x5B57;&#xFF09;&#x540E;&#xFF0C;&#x5728; Xcode &#x4E2D;&#x5B9E;&#x73B0;&#x4E86;&#x8FD9;&#x4E2A;&#x60F3;&#x6CD5;&#x3002;</p>
-<p>ARC&#x662F;&#x7F16;&#x8BD1;&#x5668;&#xFF08;&#x65F6;&#xFF09;&#x7279;&#x6027;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x8FD0;&#x884C;&#x65F6;&#x7279;&#x6027;&#xFF0C;&#x66F4;&#x4E0D;&#x662F;&#x5783;&#x573E;&#x56DE;&#x6536;&#x5668;(GC)&#x3002;</p>
-<blockquote>
-<p>Automatic Reference Counting (ARC) is a compiler-level feature that simplifies the process of managing object lifetimes (memory management) in Cocoa applications.</p>
-</blockquote>
-<p>ARC&#x53EA;&#x662F;&#x76F8;&#x5BF9;&#x4E8E;MRC&#xFF08;Manual Reference Counting&#x6216;&#x79F0;&#x4E3A;&#x975E;ARC&#xFF0C;&#x4E0B;&#x6587;&#x4E2D;&#x6211;&#x4EEC;&#x4F1A;&#x4E00;&#x76F4;&#x4F7F;&#x7528;MRC&#x6765;&#x6307;&#x4EE3;&#x975E;ARC&#x7684;&#x7BA1;&#x7406;&#x65B9;&#x5F0F;&#xFF09;&#x7684;&#x4E00;&#x6B21;&#x6539;&#x8FDB;&#xFF0C;&#x4F46;&#x5B83;&#x548C;&#x4E4B;&#x524D;&#x7684;&#x6280;&#x672F;&#x672C;&#x8D28;&#x4E0A;&#x6CA1;&#x6709;&#x533A;&#x522B;&#x3002;&#x5177;&#x4F53;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<strong><a href="http://clang.llvm.org/docs/AutomaticReferenceCounting.html" target="_blank">Objective-C Automatic Reference Counting (ARC)</a></strong></p>
-<h3 id="arc&#x7684;&#x5F00;&#x542F;&#x4E0E;&#x5173;&#x95ED;">ARC&#x7684;&#x5F00;&#x542F;&#x4E0E;&#x5173;&#x95ED;</h3>
-<p>&#x4E0D;&#x540C;&#x4E8E;XCode4&#x53EF;&#x4EE5;&#x5728;&#x521B;&#x5EFA;&#x5DE5;&#x7A0B;&#x65F6;&#x9009;&#x62E9;&#x5173;&#x95ED;ARC&#xFF0C;XCode5&#x5728;&#x521B;&#x5EFA;&#x7684;&#x5DE5;&#x7A0B;&#x662F;&#x9ED8;&#x8BA4;&#x5F00;&#x542F;ARC&#xFF0C;&#x6CA1;&#x6709;&#x53EF;&#x4EE5;&#x5173;&#x95ED;ARC&#x7684;&#x9009;&#x9879;&#x3002;</p>
-<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x5BF9;&#x7279;&#x5B9A;&#x6587;&#x4EF6;&#x5F00;&#x542F;&#x6216;&#x5173;&#x95ED;ARC&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x5DE5;&#x7A0B;&#x9009;&#x9879;&#x4E2D;&#x9009;&#x62E9;Targets -&gt; Compile Phases -&gt; Compile Sources&#xFF0C;&#x5728;&#x91CC;&#x9762;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x6587;&#x4EF6;&#xFF0C;&#x6DFB;&#x52A0;flag:</p>
-<ul>
-<li>&#x6253;&#x5F00;ARC&#xFF1A;<code>-fobjc-arc</code></li>
-<li>&#x5173;&#x95ED;ARC&#xFF1A;<code>-fno-objc-arc</code></li>
-</ul>
-<p>&#x5982;&#x56FE;&#xFF1A;
-<img src="arc-compiler-flags.png" alt="arc-compiler-flags.png"></p>
-<h3 id="arc&#x7684;&#x4FEE;&#x9970;&#x7B26;">ARC&#x7684;&#x4FEE;&#x9970;&#x7B26;</h3>
-<p>ARC&#x4E3B;&#x8981;&#x63D0;&#x4F9B;&#x4E86;4&#x79CD;&#x4FEE;&#x9970;&#x7B26;&#xFF0C;&#x4ED6;&#x4EEC;&#x5206;&#x522B;&#x662F;:<code>__strong</code>,<code>__weak</code>,<code>__autoreleasing</code>,<code>__unsafe_unretained</code>&#x3002;</p>
-<h4 id="strong"><code>__strong</code></h4>
-<p>&#x8868;&#x793A;&#x5F15;&#x7528;&#x4E3A;&#x5F3A;&#x5F15;&#x7528;&#x3002;&#x5BF9;&#x5E94;&#x5728;&#x5B9A;&#x4E49;property&#x65F6;&#x7684;&quot;strong&quot;&#x3002;&#x6240;&#x6709;&#x5BF9;&#x8C61;&#x53EA;&#x6709;&#x5F53;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x5F3A;&#x5F15;&#x7528;&#x6307;&#x5411;&#x65F6;&#xFF0C;&#x624D;&#x4F1A;&#x88AB;&#x91CA;&#x653E;&#x3002;</p>
-<p><strong>&#x6CE8;&#x610F;&#xFF1A;&#x5982;&#x679C;&#x5728;&#x58F0;&#x660E;&#x5F15;&#x7528;&#x65F6;&#x4E0D;&#x52A0;&#x4FEE;&#x9970;&#x7B26;&#xFF0C;&#x90A3;&#x4E48;&#x5F15;&#x7528;&#x5C06;&#x9ED8;&#x8BA4;&#x662F;&#x5F3A;&#x5F15;&#x7528;&#x3002;&#x5F53;&#x9700;&#x8981;&#x91CA;&#x653E;&#x5F3A;&#x5F15;&#x7528;&#x6307;&#x5411;&#x7684;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x5F3A;&#x5F15;&#x7528;&#x7F6E;nil&#x3002;</strong></p>
-<h4 id="weak"><code>__weak</code></h4>
-<p>&#x8868;&#x793A;&#x5F15;&#x7528;&#x4E3A;&#x5F31;&#x5F15;&#x7528;&#x3002;&#x5BF9;&#x5E94;&#x5728;&#x5B9A;&#x4E49;property&#x65F6;&#x7528;&#x7684;&quot;weak&quot;&#x3002;&#x5F31;&#x5F15;&#x7528;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5BF9;&#x8C61;&#x7684;&#x91CA;&#x653E;&#xFF0C;&#x5373;&#x53EA;&#x8981;&#x5BF9;&#x8C61;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x5F3A;&#x5F15;&#x7528;&#x6307;&#x5411;&#xFF0C;&#x5373;&#x4F7F;&#x6709;100&#x4E2A;&#x5F31;&#x5F15;&#x7528;&#x5BF9;&#x8C61;&#x6307;&#x5411;&#x4E5F;&#x6CA1;&#x7528;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#x4F9D;&#x7136;&#x4F1A;&#x88AB;&#x91CA;&#x653E;&#x3002;</p>
-<p><strong><code>__weak</code> &#x4E0E; <code>weak</code> &#x7684;&#x533A;&#x522B;&#x53EA;&#x5728;&#x4E8E;&#xFF0C;&#x524D;&#x8005;&#x7528;&#x4E8E;&#x53D8;&#x91CF;&#x7684;&#x58F0;&#x660E;&#xFF0C;&#x800C;&#x540E;&#x8005;&#x7528;&#x4E8E;&#x5C5E;&#x6027;&#x7684;&#x58F0;&#x660E;&#x3002;</strong></p>
-<p>&#x4E0D;&#x8FC7;&#x597D;&#x5728;&#xFF0C;&#x5BF9;&#x8C61;&#x5728;&#x88AB;&#x91CA;&#x653E;&#x7684;&#x540C;&#x65F6;&#xFF0C;&#x6307;&#x5411;&#x5B83;&#x7684;&#x5F31;&#x5F15;&#x7528;&#x4F1A;&#x81EA;&#x52A8;&#x88AB;&#x7F6E;nil&#xFF0C;&#x8FD9;&#x4E2A;&#x6280;&#x672F;&#x53EB;<strong>zeroing weak pointer</strong>&#x3002;&#x8FD9;&#x6837;&#x6709;&#x6548;&#x5F97;&#x9632;&#x6B62;&#x65E0;&#x6548;&#x6307;&#x9488;&#x3001;&#x91CE;&#x6307;&#x9488;&#x7684;&#x4EA7;&#x751F;&#x3002;</p>
-<p><code>__weak</code>&#x4E00;&#x822C;&#x7528;&#x5728;delegate&#x5173;&#x7CFB;&#x4E2D;&#x9632;&#x6B62;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x6216;&#x8005;&#x7528;&#x6765;&#x4FEE;&#x9970;&#x6307;&#x5411;&#x7531;Interface Builder&#x7F16;&#x8F91;&#x4E0E;&#x751F;&#x6210;&#x7684;UI&#x63A7;&#x4EF6;&#x3002;</p>
-<h4 id="autoreleasing"><code>__autoreleasing</code></h4>
-<p>&#x8868;&#x793A;&#x5728;autorelease pool&#x4E2D;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x5BF9;&#x8C61;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x548C;MRC&#x65F6;&#x4EE3;autorelease&#x7684;&#x7528;&#x6CD5;&#x76F8;&#x540C;&#x3002;&#x5B9A;&#x4E49;property&#x65F6;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x4FEE;&#x9970;&#x7B26;&#xFF0C;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;property&#x90FD;&#x4E0D;&#x5E94;&#x8BE5;&#x662F;autorelease&#x578B;&#x7684;&#x3002;</p>
-<p>&#x4E00;&#x4E2A;&#x5E38;&#x89C1;&#x7684;&#x8BEF;&#x89E3;&#x662F;&#xFF0C;&#x5728;ARC&#x4E2D;&#x6CA1;&#x6709;autorelease&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x201C;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x201D;&#x770B;&#x8D77;&#x6765;&#x597D;&#x50CF;&#x6709;&#x70B9;&#x591A;&#x4F59;&#x3002;&#x8FD9;&#x4E2A;&#x8BEF;&#x89E3;&#x53EF;&#x80FD;&#x6E90;&#x81EA;&#x4E8E;&#x5C06;ARC&#x7684;&#x201C;&#x81EA;&#x52A8;&#x201D;&#x548C;autorelease&#x201C;&#x81EA;&#x52A8;&#x201D;&#x7684;&#x6DF7;&#x6DC6;&#x3002;&#x5176;&#x5B9E;&#x4F60;&#x53EA;&#x8981;&#x770B;&#x4E00;&#x4E0B;&#x6BCF;&#x4E2A;iOS App&#x7684;main.m&#x6587;&#x4EF6;&#x5C31;&#x80FD;&#x77E5;&#x9053;&#xFF0C;autorelease&#x4E0D;&#x4EC5;&#x597D;&#x597D;&#x7684;&#x5B58;&#x5728;&#x7740;&#xFF0C;&#x5E76;&#x4E14;&#x53D8;&#x5F97;&#x66F4;fashion&#x4E86;&#xFF1A;&#x4E0D;&#x9700;&#x8981;&#x518D;&#x624B;&#x5DE5;&#x88AB;&#x521B;&#x5EFA;&#xFF0C;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x518D;&#x663E;&#x5F0F;&#x5F97;&#x8C03;&#x7528;[drain]&#x65B9;&#x6CD5;&#x91CA;&#x653E;&#x5185;&#x5B58;&#x6C60;&#x3002;</p>
-<pre><code>#import &lt;UIKit/UIKit.h&gt;
-#import &quot;AppDelegate.h&quot;
+                                <h1 id="xcode-&#x6E05;&#x7406;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;">Xcode &#x6E05;&#x7406;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;</h1>
+<h3 id="&#x624B;&#x52A8;&#x6E05;&#x7406;">&#x624B;&#x52A8;&#x6E05;&#x7406;</h3>
+<p>Xcode &#x6E05;&#x7406;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;
+Xcode&#x7248;&#x672C;&#xFF1A;8.3.3</p>
+<p>iOS&#x7248;&#x672C;&#xFF1A;10.3.2</p>
+<p><strong>&#x79FB;&#x9664; Xcode &#x8FD0;&#x884C;&#x5B89;&#x88C5; APP &#x4EA7;&#x751F;&#x7684;&#x7F13;&#x5B58;&#x6587;&#x4EF6;(DerivedData)</strong></p>
+<p>&#x53EA;&#x8981;&#x91CD;&#x65B0;&#x8FD0;&#x884C;Xcode&#x5C31;&#x4E00;&#x5B9A;&#x4F1A;&#x91CD;&#x65B0;&#x751F;&#x6210;&#xFF0C;&#x800C;&#x4E14;&#x4F1A;&#x968F;&#x7740;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;&#x7684;&#x589E;&#x591A;&#xFF0C;&#x5360;&#x7528;&#x7A7A;&#x95F4;&#x4F1A;&#x8D8A;&#x6765;&#x8D8A;&#x5927;&#x3002;&#x5220;&#x9664;&#x540E;&#x5728;&#x91CD;&#x65B0;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;&#x53EF;&#x80FD;&#x4F1A;&#x7A0D;&#x5FAE;&#x6162;&#x4E00;&#x70B9;&#xFF0C;&#x5EFA;&#x8BAE;&#x5B9A;&#x671F;&#x6E05;&#x7406;&#x3002;</p>
+<p>&#x8DEF;&#x5F84;&#xFF1A;</p>
+<p><code>~/Library/Developer/Xcode/DerivedData</code></p>
+<p>&#x91CA;&#x653E;&#x7A7A;&#x95F4;&#xFF1A;0~xx GB</p>
+<p><strong>&#x79FB;&#x9664; APP &#x6253;&#x5305;&#x7684;ipa&#x5386;&#x53F2;&#x7248;&#x672C;(Archives)</strong></p>
+<p>&#x5220;&#x9664;&#x540E;&#x4E0D;&#x53EF;&#x6062;&#x590D;&#xFF0C;&#x6587;&#x4EF6;&#x5939;&#x662F;&#x6309;&#x7167;&#x65E5;&#x671F;&#x6392;&#x5217;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x60F3;&#x5168;&#x90E8;&#x5220;&#x9664;&#xFF0C;&#x5C31;&#x53EA;&#x4FDD;&#x7559;&#x6700;&#x65B0;&#x7684;&#x51E0;&#x4E2A;&#x7248;&#x672C;&#x5C31;&#x597D;&#x4E86;&#xFF0C;&#x4E2A;&#x4EBA;&#x5EFA;&#x8BAE;&#x5168;&#x90E8;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x8DEF;&#x5F84;&#xFF1A;</p>
+<p><code>~/Library/Developer/Xcode/Archives</code></p>
+<p>&#x91CA;&#x653E;&#x7A7A;&#x95F4;&#xFF1A;0~xx GB</p>
+<p><strong>&#x79FB;&#x9664; APP &#x6253;&#x5305;&#x7684;app icon&#x5386;&#x53F2;&#x7248;&#x672C;(Archives)</strong></p>
+<p>&#x5220;&#x9664;&#x540E;&#x4E0D;&#x53EF;&#x6062;&#x590D;&#xFF0C;&#x6587;&#x4EF6;&#x5939;&#x662F;Bundle Idenifier&#x6392;&#x5217;&#x7684;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x6309;&#x7167;archive&#x7684;&#x7248;&#x672C;&#x53F7;&#x6392;&#x5217;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x770B;&#x6BCF;&#x4E2A;&#x7248;&#x672C;&#x5185;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4F60;&#x7684;app icon&#xFF0C;&#x4E2A;&#x4EBA;&#x5EFA;&#x8BAE;&#x5168;&#x90E8;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x8DEF;&#x5F84;&#xFF1A;</p>
+<p><code>~/Library/Developer/Xcode/Products/</code></p>
+<p>&#x91CA;&#x653E;&#x7A7A;&#x95F4;&#xFF1A;30M</p>
+<p><strong>&#x79FB;&#x9664;&#x6A21;&#x62DF;&#x5668;&#x7684;&#x7F13;&#x5B58;&#x6570;&#x636E;(Devices)</strong></p>
+<p>&#x6A21;&#x62DF;&#x5668;&#x7684;&#x76F8;&#x5173;&#x6570;&#x636E;&#x3002;&#x6BCF;&#x4E2A;&#x7248;&#x672C;&#x7684;&#x6A21;&#x62DF;&#x5668;&#x5360;&#x7528;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x5927;&#x7EA6;&#x4E3A;10M&#x5DE6;&#x53F3;&#x3002;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x91CC;&#x5305;&#x542B;&#x7684;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7CFB;&#x7EDF;&#x7248;&#x672C;&#x7684;&#x8BBE;&#x5907;&#x7684;&#x6570;&#x636E;&#x3002;&#x6BCF;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x5BF9;&#x5E94;&#x54EA;&#x4E2A;&#x8BBE;&#x5907;&#x53EF;&#x4EE5;&#x5728;&#x5176;&#x4E0B;device.plist&#x4E2D;&#x67E5;&#x770B;&#x3002;&#x5220;&#x9664;&#x4E4B;&#x540E;&#xFF0C;&#x5982;&#x679C;&#x7ACB;&#x5373;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x5148;&#x5173;&#x95ED;Xcode&#xFF0C;&#x518D;&#x91CD;&#x65B0;&#x6253;&#x5F00;&#x7A0B;&#x5E8F;&#xFF0C;&#x8FD0;&#x884C;&#x5373;&#x53EF;&#x3002;&#x8FD0;&#x884C;&#x8BE5;&#x8DEF;&#x5F84;&#x4E0B;&#x4F1A;&#x7ACB;&#x9A6C;&#x751F;&#x6210;&#x6A21;&#x62DF;&#x5668;&#x5BF9;&#x5E94;&#x7248;&#x672C;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+<p>&#x8DEF;&#x5F84;&#xFF1A;</p>
+<p><code>~/Library/Developer/CoreSimulator/Devices/</code></p>
+<p>&#x91CA;&#x653E;&#x7A7A;&#x95F4; &#x2248; 12GB&#xFF0C;&#x4E2A;&#x4EBA;&#x5EFA;&#x8BAE;&#x5168;&#x90E8;&#x5220;&#x9664;</p>
+<p><strong>&#x79FB;&#x9664;&#x5BF9;&#x65E7;&#x8BBE;&#x5907;&#x7684;&#x652F;&#x6301;(iOS DeviceSupport)</strong></p>
+<p>&#x4E00;&#x822C;&#x662F;&#x5360;&#x7528;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x6700;&#x5927;&#x7684;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5373;&#x4F7F;&#x5168;&#x90E8;&#x5220;&#xFF0C;&#x518D;&#x8FDE;&#x63A5;&#x8BBE;&#x5907;&#x8C03;&#x8BD5;&#x65F6;&#xFF0C;&#x4F1A;&#x91CD;&#x65B0;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x3002;&#x4E00;&#x822C;iOS&#x53EA;&#x5411;&#x4E0B;&#x517C;&#x5BB9;&#x4E24;&#x4E2A;&#x7248;&#x672C;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x79FB;&#x9664;&#x4E86;9.0&#x4EE5;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x7248;&#x672C;&#x3002;</p>
+<p>&#x8DEF;&#x5F84;&#xFF1A;</p>
+<p><code>~/Library/Developer/Xcode/iOS DeviceSupport</code></p>
+<p>&#x91CA;&#x653E;&#x7A7A;&#x95F4; &#x2248; 3GB/&#x7248;&#x672C;</p>
+<p><strong>&#x79FB;&#x9664; Xcode &#x4E2D;&#x7684;&#x65E0;&#x6548;&#x7684;&#x63D2;&#x4EF6;(Plug-ins)</strong></p>
+<p>&#x56E0;&#x4E3A;&#x4E4B;&#x524D;&#x4F60;&#x53EF;&#x80FD;&#x5B89;&#x88C5;&#x4E86;&#x4E00;&#x4E9B; Xcode &#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982;HighlightSelectedString&#x3001;VVDocumenter-Xcode&#x7B49;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x597D;&#x7528;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x63D2;&#x4EF6;&#xFF0C;&#x5728;Xcode&#x5347;&#x7EA7;&#x5230;version 8.0&#x4EE5;&#x540E;&#xFF0C;&#x5C31;&#x5931;&#x6548;&#x4E86;&#xFF0C;Xcode&#x5728;&#x5185;&#x90E8;&#x5DF2;&#x7ECF;&#x96C6;&#x6210;&#x4E86;&#x7C7B;&#x4F3C;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#x4E4B;&#x524D;&#x5B89;&#x88C5;&#x7684;&#x4E5F;&#x90FD;&#x6CA1;&#x6709;&#x7528;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x5728;&#x539F;&#x6765;&#x7684;&#x4F4D;&#x7F6E;&#x5360;&#x7528;&#x7740;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x5EFA;&#x8BAE;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x8DEF;&#x5F84;&#xFF1A;</p>
+<p><code>~/Library/Application Support/Developer/Shared/Xcode/Plug-ins</code></p>
+<p>&#x5982;&#x679C;&#x4F60;&#x66FE;&#x7ECF;&#x6CA1;&#x6709;&#x5B89;&#x88C5;&#x8FC7;&#x63D2;&#x4EF6;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x80FD;&#x4E0D;&#x5B58;&#x5728;&#x6B64;&#x8DEF;&#x5F84;&#x3002;</p>
+<p><strong>&#x79FB;&#x9664;&#x65E7;&#x7248;&#x672C;&#x7684;&#x6A21;&#x62DF;&#x5668;&#x652F;&#x6301;</strong></p>
+<p>&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x5C0F;&#x5FC3;&#x5B89;&#x88C5;&#x4E86;&#x5F88;&#x591A;&#x4E2A;&#x7248;&#x672C;&#x7684;&#x6A21;&#x62DF;&#x5668;&#xFF0C;&#x90A3;&#x4E48;&#x4F60;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#x4E00;&#x4E9B;&#x65E7;&#x7248;&#x672C;&#x7684;&#x3002;&#x4F46;&#x662F;&#x5F53;&#x4F60;&#x9700;&#x8981;&#x65E7;&#x7248;&#x672C;&#x7684;&#x6A21;&#x62DF;&#x5668;&#x65F6;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x4E0B;&#x8F7D;&#x4E86;&#x3002;&#x5EFA;&#x8BAE;&#x7559;&#x4E0B;1~2&#x4E2A;&#x7248;&#x672C;&#x5C31;&#x597D;&#x4E86;&#xFF0C;&#x5176;&#x4F59;&#x7684;&#x90FD;&#x5220;&#x4E86;&#x5427;&#x3002;</p>
+<p>&#x8DEF;&#x5F84;&#xFF1A;</p>
+<p><code>~/Library/Developer/CoreSimulator/Profiles/Runtimes/</code></p>
+<p>&#x91CA;&#x653E;&#x7A7A;&#x95F4; &#x2248; 2.5GB/&#x7248;&#x672C;</p>
+<p><strong>&#x79FB;&#x9664; playground &#x7684;&#x9879;&#x76EE;&#x7F13;&#x5B58;(XCPGDevices)</strong></p>
+<p>&#x5220;&#x9664;&#x540E;&#x53EF;&#x91CD;&#x65B0;&#x751F;&#x6210;&#xFF0C;&#x53EF;&#x4EE5;&#x5168;&#x90E8;&#x5220;&#x9664;&#x3002;&#x518D;&#x6B21;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;&#x4F1A;&#x7F13;&#x5B58;&#x3002;</p>
+<p>&#x8DEF;&#x5F84;&#xFF1A;</p>
+<p><code>~/Library/Developer/XCPGDevices/</code></p>
+<p>&#x6211;&#x4ECE;&#x4F7F;&#x7528;Xcode&#x51E0;&#x5E74;&#x6CA1;&#x5220;&#x9664;&#x8FC7;&#x6B64;&#x6587;&#x4EF6;&#x5939;&#x4E5F;&#x5C31;&#x5360;&#x7528;&#x7EA6;300M&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x53EF;&#x4F9D;&#x636E;&#x4E2A;&#x4EBA;&#x559C;&#x597D;&#x64CD;&#x4F5C;&#x3002;</p>
+<p><strong>&#x79FB;&#x9664;&#x65E7;&#x7684;&#x6587;&#x6863;(Docsets)</strong></p>
+<p>&#x5220;&#x9664;&#x540E;&#x4E0D;&#x53EF;&#x6062;&#x590D;&#xFF0C;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;&#x5B58;&#x50A8;&#x7684;&#x4E3A;&#x5F00;&#x53D1;&#x6587;&#x6863;&#xFF0C;&#x4E00;&#x822C;&#x6709;&#x4E09;&#x4E2A;&#x6587;&#x4EF6;com.apple.adc.documentation.iOS.docset(1.68GB)&#x3001;com.apple.adc.documentation.OSX.docset(2.62GB)&#x548C;com.apple.adc.documentation.Xcode.docset(256.4M)&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x53EA;&#x505A;iOS&#x5F00;&#x53D1;&#xFF0C;&#x5176;&#x5B9E;&#x4F60;&#x53EF;&#x4EE5;&#x628A;OSX.docset&#x5220;&#x9664;&#x6389;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x5360;&#x7528;&#x4E86;2.62GB&#x7684;&#x5185;&#x5B58;&#x3002;</p>
+<p>&#x8DEF;&#x5F84;&#xFF1A;</p>
+<p><code>~/Library/Developer/Shared/Documentation/DocSets</code></p>
+<p>&#x6574;&#x4F53;&#x6240;&#x5360;&#x7A7A;&#x95F4;&#x7EA6;4.56GB</p>
+<p><strong>&#x79FB;&#x9664;&#x6A21;&#x62DF;&#x5668;&#x4E2D;&#x7684;SDK&#x7248;&#x672C;(iPhoneSimulator.sdk)</strong></p>
+<p>&#x4E0D;&#x53EF;&#x6062;&#x590D;&#xFF0C;&#x64CD;&#x4F5C;&#x8BF7;&#x614E;&#x91CD;&#x3002;&#x6211;&#x4E2A;&#x4EBA;&#x7684;&#x6B64;&#x8DEF;&#x5F84;&#x4E0B;&#x7684;&#x53EA;&#x6709;&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684;sdk&#xFF0C;&#x9664;&#x975E;&#x5F53;&#x4F60;&#x6709;&#x591A;&#x4E2A;&#x7248;&#x672C;&#x7684;sdk&#x518D;&#x914C;&#x60C5;&#x5220;&#x9664;&#x3002;</p>
+<p>&#x8DEF;&#x5F84;:</p>
+<p><code>~/application/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/</code></p>
+<p>&#x5360;&#x7528;&#x7A7A;&#x95F4;&#x7EA6;4GB&#xFF0C;&#x5220;&#x9664;&#x65F6;&#x8BF7;&#x614E;&#x91CD;</p>
+<p><em>Tips&#xFF1A;</em></p>
+<p>&#x7ECF;&#x8FC7;&#x4EE5;&#x4E0A;&#x6B65;&#x9AA4;&#x5927;&#x7EA6;&#x53EF;&#x4EE5;&#x91CA;&#x653E;&#x51FA;&#x4E86;20GB&#x4EE5;&#x4E0A;&#x7684;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#xFF0C;&#x8FD9;&#x5BF9;&#x5185;&#x5B58;&#x5403;&#x7D27;&#x7684;Mac Book&#x6765;&#x8BF4;&#x5DF2;&#x7ECF;&#x5F88;&#x662F;&#x6709;&#x5E2E;&#x52A9;&#x4E86;&#x3002;&#x6B22;&#x8FCE;&#x5927;&#x5BB6;&#x63D0;&#x4F9B;&#x66F4;&#x591A;&#x6211;&#x4E0D;&#x77E5;&#x9053;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="&#x811A;&#x672C;&#x6E05;&#x7406;">&#x811A;&#x672C;&#x6E05;&#x7406;</h3>
+<p>&#x7EC8;&#x7AEF;(Terminal)&#x5207;&#x6362;cd&#x5230;&#x811A;&#x672C;(<code>Xcode_clean.sh</code>)&#x6240;&#x5728;&#x8DEF;&#x5F84;&#x540E;&#x6267;&#x884C;&#x811A;&#x672C;&#x5373;&#x53EF;&#xFF1A;</p>
+<p><code>sh Xcode_clean.sh</code></p>
+<p>&#x5176;&#x4E2D;&#x811A;&#x672C;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>#!/bin/sh
+# Xcode&#x6E05;&#x7406;&#x811A;&#x672C;
 
-int main(int argc, char * argv[]) {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
-}
-</code></pre><p>&#x4EE5;&#x4E0B;&#x4E24;&#x884C;&#x4EE3;&#x7801;&#x7684;&#x610F;&#x4E49;&#x662F;&#x76F8;&#x540C;&#x7684;&#x3002;</p>
-<pre><code>NSString *str = [[[NSString alloc] initWithFormat:@&quot;hehe&quot;] autorelease]; // MRC
-NSString *__autoreleasing str = [[NSString alloc] initWithFormat:@&quot;hehe&quot;]; // ARC
-</code></pre><p><code>__autoreleasing</code>&#x5728;ARC&#x4E2D;&#x4E3B;&#x8981;&#x7528;&#x5728;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x8FD4;&#x56DE;&#x503C;&#xFF08;out-parameters&#xFF09;&#x548C;&#x5F15;&#x7528;&#x4F20;&#x9012;&#x53C2;&#x6570;&#xFF08;pass-by-reference&#xFF09;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x3002;</p>
-<blockquote>
-<p>__autoreleasing is used to denote arguments that are passed by reference (id *) and are autoreleased on return.</p>
-</blockquote>
-<p>&#x6BD4;&#x5982;&#x5E38;&#x7528;&#x7684;NSError&#x7684;&#x4F7F;&#x7528;&#xFF1A;</p>
-<pre><code>NSError *__autoreleasing error; 
-&#xFFFC;if (![data writeToFile:filename options:NSDataWritingAtomic error:&amp;error]) 
-&#xFFFC;{ 
-&#x3000;&#x3000;NSLog(@&quot;Error: %@&quot;, error); 
-}
-</code></pre><p>&#x6CE8;&#x610F;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x7684;error&#x5B9A;&#x4E49;&#x4E3A;&#x4E86;strong&#x578B;&#xFF0C;&#x90A3;&#x4E48;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x5E2E;&#x4F60;&#x9690;&#x5F0F;&#x5730;&#x505A;&#x5982;&#x4E0B;&#x4E8B;&#x60C5;&#xFF0C;&#x4FDD;&#x8BC1;&#x6700;&#x7EC8;&#x4F20;&#x5165;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x4F9D;&#x7136;&#x662F;&#x4E2A;<code>__autoreleasing</code>&#x7C7B;&#x578B;&#x7684;&#x5F15;&#x7528;&#x3002;</p>
-<pre><code>NSError *error; 
-NSError *__autoreleasing tempError = error; // &#x7F16;&#x8BD1;&#x5668;&#x6DFB;&#x52A0; 
-if (![data writeToFile:filename options:NSDataWritingAtomic error:&amp;tempError]) 
-&#xFFFC;{ 
-&#x3000;&#x3000;error = tempError; // &#x7F16;&#x8BD1;&#x5668;&#x6DFB;&#x52A0; 
-&#x3000;&#x3000;NSLog(@&quot;Error: %@&quot;, error); 
-}
-</code></pre><p>&#x6240;&#x4EE5;&#x4E3A;&#x4E86;&#x63D0;&#x9AD8;&#x6548;&#x7387;&#xFF0C;&#x907F;&#x514D;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x5728;&#x5B9A;&#x4E49;error&#x7684;&#x65F6;&#x5019;&#x5C06;&#x5176;&#xFF08;&#x8001;&#x8001;&#x5B9E;&#x5B9E;&#x5730;=&#x3002;=&#xFF09;&#x58F0;&#x660E;&#x4E3A;<code>__autoreleasing</code>&#x7C7B;&#x578B;&#x7684;&#xFF1A;<code>NSError *__autoreleasing error;</code></p>
-<p>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x52A0;&#x4E0A;<code>__autoreleasing</code>&#x4E4B;&#x540E;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x5728;MRC&#x4E2D;&#x5BF9;&#x8FD4;&#x56DE;&#x503C;error&#x505A;&#x4E86;&#x5982;&#x4E0B;&#x4E8B;&#x60C5;&#xFF1A;</p>
-<p><code>NSError *error = [[[NSError alloc] init] autorelease];</code></p>
-<p><em>error&#x6307;&#x5411;&#x7684;&#x5BF9;&#x8C61;&#x5728;&#x521B;&#x5EFA;&#x51FA;&#x6765;&#x540E;&#xFF0C;&#x88AB;&#x653E;&#x5165;&#x5230;&#x4E86;autoreleasing pool&#x4E2D;&#xFF0C;&#x7B49;&#x5F85;&#x4F7F;&#x7528;&#x7ED3;&#x675F;&#x540E;&#x7684;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#xFF0C;&#x51FD;&#x6570;&#x5916;error&#x7684;&#x4F7F;&#x7528;&#x8005;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x5173;&#x5FC3;</em>error&#x6307;&#x5411;&#x5BF9;&#x8C61;&#x7684;&#x91CA;&#x653E;&#x3002;</p>
-<p><strong>&#x53E6;&#x5916;&#x4E00;&#x70B9;&#xFF0C;&#x5728;ARC&#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x8FD9;&#x79CD;&#x6307;&#x9488;&#x7684;&#x6307;&#x9488;(NSError)&#x7684;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x5982;&#x679C;&#x4E0D;&#x52A0;&#x4FEE;&#x9970;&#x7B26;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x9ED8;&#x8BA4;&#x5C06;&#x4ED6;&#x4EEC;&#x8BA4;&#x5B9A;&#x4E3A;<code>__autoreleasing</code>&#x7C7B;&#x578B;&#x3002;</strong></p>
-<p>&#x6BD4;&#x5982;&#x4E0B;&#x9762;&#x7684;&#x4E24;&#x6BB5;&#x4EE3;&#x7801;&#x662F;&#x7B49;&#x540C;&#x7684;&#xFF1A;</p>
-<pre><code>- (NSString *)doSomething:(NSNumber **)value
-{
-    // do something  
-}
-</code></pre><pre><code>- (NSString *)doSomething:(NSNumber * __autoreleasing *)value
-{
-    // do something  
-}
-</code></pre><p>&#x9664;&#x975E;&#x4F60;&#x663E;&#x5F0F;&#x5F97;&#x7ED9;value&#x58F0;&#x660E;&#x4E86;<code>__strong</code>&#xFF0C;&#x5426;&#x5219;value&#x9ED8;&#x8BA4;&#x5C31;&#x662F;<code>__autoreleasing</code>&#x7684;&#x3002;</p>
-<p>&#x6700;&#x540E;&#x4E00;&#x70B9;&#xFF0C;&#x67D0;&#x4E9B;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#x4F1A;&#x9690;&#x5F0F;&#x5730;&#x4F7F;&#x7528;&#x81EA;&#x5DF1;&#x7684;autorelease pool&#xFF0C;&#x5728;&#x8FD9;&#x79CD;&#x65F6;&#x5019;&#x4F7F;&#x7528;<code>__autoreleasing</code>&#x7C7B;&#x578B;&#x8981;&#x7279;&#x522B;&#x5C0F;&#x5FC3;&#x3002;</p>
-<p>&#x6BD4;&#x5982;NSDictionary&#x7684;[enumerateKeysAndObjectsUsingBlock]&#x65B9;&#x6CD5;&#xFF1A;</p>
-<pre><code>- (void)loopThroughDictionary:(NSDictionary *)dict error:(NSError **)error
-{
-    [dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop){
-        // do stuff  
-        if (there is some error)
-        {
-            *error = [NSError errorWithDomain:@&quot;MyError&quot; &#xFFFC;code:1 userInfo:nil];
-            *stop = YES;
-        }
-    }];
-&#xFFFC;}
-</code></pre><p>&#x4F1A;&#x9690;&#x5F0F;&#x5730;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;autorelease pool&#xFF0C;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x5B9E;&#x9645;&#x7C7B;&#x4F3C;&#x4E8E;&#xFF1A;</p>
-<pre><code>- (void)loopThroughDictionary:(NSDictionary *)dict error:(NSError **)error
-{
-    [dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop){
+# Mac OS&#x5220;&#x9664;&#x6587;&#x4EF6;&#x5939;&#x548C;&#x6587;&#x4EF6;&#x7684;&#x547D;&#x4EE4;
+# rmdir&#x5220;&#x9664;&#x7A7A;&#x76EE;&#x5F55;&#xFF0C;&#x4E0D;&#x8FC7;&#x4E00;&#x65E6;&#x76EE;&#x5F55;&#x975E;&#x7A7A;&#x4F1A;&#x63D0;&#x793A;: Directiry not empty
+# &#x4F7F;&#x7528;rm&#x65E2;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#x6587;&#x4EF6;&#x53C8;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#x6587;&#x4EF6;&#x5939;
+# -r &#x5C31;&#x662F;&#x5411;&#x4E0B;&#x9012;&#x5F52;&#xFF0C;&#x4E0D;&#x7BA1;&#x6709;&#x591A;&#x5C11;&#x7EA7;&#x76EE;&#x5F55;&#xFF0C;&#x4E00;&#x5E76;&#x5220;&#x9664;
+# -f &#x5C31;&#x662F;&#x76F4;&#x63A5;&#x5F3A;&#x884C;&#x5220;&#x9664;&#xFF0C;&#x4E0D;&#x4F5C;&#x4EFB;&#x4F55;&#x63D0;&#x793A;&#x7684;&#x610F;&#x601D;
+# &#x4F7F;&#x7528;&#x8FD9;&#x4E2A;-rm -rf&#x7684;&#x65F6;&#x5019;&#x4E00;&#x5B9A;&#x8981;&#x683C;&#x5916;&#x5C0F;&#x5FC3;&#xFF0C;linux&#x6CA1;&#x6709;&#x56DE;&#x6536;&#x7AD9;&#x7684;&#xFF0C;&#x5220;&#x9664;&#x4E4B;&#x540E;&#x518D;&#x60F3;&#x627E;&#x56DE;&#x5C31;&#x5F88;&#x96BE;&#x4E86;
 
-        @autoreleasepool  // &#x88AB;&#x9690;&#x5F0F;&#x521B;&#x5EFA;
-        {
-    &#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;if (there is some error)
-    &#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;{
-        &#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;*error = [NSError errorWithDomain:@&quot;MyError&quot; &#xFFFC;code:1 userInfo:nil];
-        &#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;*stop = YES;
-    &#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;}
-&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;}
-    }];
-&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;
-    // *error &#x5728;&#x8FD9;&#x91CC;&#x5DF2;&#x7ECF;&#x88AB;dict&#x7684;&#x505A;&#x679A;&#x4E3E;&#x904D;&#x5386;&#x65F6;&#x521B;&#x5EFA;&#x7684;autorelease pool&#x91CA;&#x653E;&#x6389;&#x4E86; &#xFF1A;(  
-}
-</code></pre><p>&#x4E3A;&#x4E86;&#x80FD;&#x591F;&#x6B63;&#x5E38;&#x7684;&#x4F7F;&#x7528;*error&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E00;&#x4E2A;strong&#x578B;&#x7684;&#x4E34;&#x65F6;&#x5F15;&#x7528;&#xFF0C;&#x5728;dict&#x7684;&#x679A;&#x4E3E;Block&#x4E2D;&#x662F;&#x7528;&#x8FD9;&#x4E2A;&#x4E34;&#x65F6;&#x5F15;&#x7528;&#xFF0C;&#x4FDD;&#x8BC1;&#x5F15;&#x7528;&#x6307;&#x5411;&#x7684;&#x5BF9;&#x8C61;&#x4E0D;&#x4F1A;&#x5728;&#x51FA;&#x4E86;dict&#x7684;&#x679A;&#x4E3E;Block&#x540E;&#x88AB;&#x91CA;&#x653E;&#xFF0C;&#x6B63;&#x786E;&#x7684;&#x65B9;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
-<pre><code>- (void)loopThroughDictionary:(NSDictionary *)dict error:(NSError **)error
-{
-&#x3000;&#x3000;__block NSError* tempError; // &#x52A0;__block&#x4FDD;&#x8BC1;&#x53EF;&#x4EE5;&#x5728;Block&#x5185;&#x88AB;&#x4FEE;&#x6539;  
-&#x3000;&#x3000;[dict enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop)
-&#x3000;&#x3000;&#x3000;&#x3000;{ 
-&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;if (there is some error) { 
-                *tempError = [NSError errorWithDomain:@&quot;MyError&quot; &#xFFFC;code:1 userInfo:nil];
-                *stop = YES;&#x3000;
-            } &#xFFFC; 
-&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;
-    }] 
-&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;
-    if (error != nil) 
-    { 
-        *error = tempError; 
-    } &#xFFFC;
-}
-</code></pre><h4 id="unsafeunretained"><code>__unsafe_unretained</code></h4>
-<p>ARC&#x662F;&#x5728;iOS 5&#x5F15;&#x5165;&#x7684;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;&#x4FEE;&#x9970;&#x7B26;&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x5728;ARC&#x521A;&#x53D1;&#x5E03;&#x65F6;&#x517C;&#x5BB9;iOS 4&#x4EE5;&#x53CA;&#x7248;&#x672C;&#x66F4;&#x4F4E;&#x7684;&#x8BBE;&#x5907;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x4E9B;&#x7248;&#x672C;&#x7684;&#x8BBE;&#x5907;&#x6CA1;&#x6709;weak pointer system&#xFF0C;&#x7B80;&#x5355;&#x7684;&#x7406;&#x89E3;&#x8FD9;&#x4E2A;&#x7CFB;&#x7EDF;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x4E0A;&#x9762;&#x8BB2;weak&#x65F6;&#x63D0;&#x5230;&#x7684;&#xFF0C;&#x80FD;&#x591F;&#x5728;weak&#x5F15;&#x7528;&#x6307;&#x5411;&#x5BF9;&#x8C61;&#x88AB;&#x91CA;&#x653E;&#x540E;&#xFF0C;&#x628A;&#x5F15;&#x7528;&#x503C;&#x81EA;&#x52A8;&#x8BBE;&#x4E3A;nil&#x7684;&#x7CFB;&#x7EDF;&#x3002;&#x8FD9;&#x4E2A;&#x4FEE;&#x9970;&#x7B26;&#x5728;&#x5B9A;&#x4E49;property&#x65F6;&#x5BF9;&#x5E94;&#x7684;&#x662F;&quot;unsafe_unretained&quot;&#xFF0C;&#x5B9E;&#x9645;&#x53EF;&#x4EE5;&#x5C06;&#x5B83;&#x7406;&#x89E3;&#x4E3A;MRC&#x65F6;&#x4EE3;&#x7684;assign&#xFF1A;&#x7EAF;&#x7CB9;&#x53EA;&#x662F;&#x5C06;&#x5F15;&#x7528;&#x6307;&#x5411;&#x5BF9;&#x8C61;&#xFF0C;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x989D;&#x5916;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5728;&#x6307;&#x5411;&#x5BF9;&#x8C61;&#x88AB;&#x91CA;&#x653E;&#x65F6;&#x4F9D;&#x7136;&#x539F;&#x539F;&#x672C;&#x672C;&#x5730;&#x6307;&#x5411;&#x539F;&#x6765;&#x88AB;&#x91CA;&#x653E;&#x7684;&#x5BF9;&#x8C61;&#xFF08;&#x6240;&#x5728;&#x7684;&#x5185;&#x5B58;&#x533A;&#x57DF;&#xFF09;&#x3002;&#x6240;&#x4EE5;&#x975E;&#x5E38;&#x4E0D;&#x5B89;&#x5168;&#x3002;</p>
-<p>&#x73B0;&#x5728;&#x53EF;&#x4EE5;&#x5B8C;&#x5168;&#x5FFD;&#x7565;&#x6389;&#x8FD9;&#x4E2A;&#x4FEE;&#x9970;&#x7B26;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;iOS 4&#x65E9;&#x5DF2;&#x9000;&#x51FA;&#x5386;&#x53F2;&#x821E;&#x53F0;&#x5F88;&#x591A;&#x5E74;&#x3002;</p>
-<h4 id="&#x4F7F;&#x7528;&#x4FEE;&#x9970;&#x7B26;&#x7684;&#x6B63;&#x786E;&#x59FF;&#x52BF;&#xFF08;&#x65B9;&#x5F0F;&#x3002;&#xFF09;">&#x4F7F;&#x7528;&#x4FEE;&#x9970;&#x7B26;&#x7684;&#x6B63;&#x786E;&#x59FF;&#x52BF;&#xFF08;&#x65B9;&#x5F0F;=&#x3002;=&#xFF09;</h4>
-<blockquote>
-<p>You should decorate variables correctly. When using qualifiers in an object variable declaration,the correct format is:</p>
-<pre><code>ClassName * qualifier variableName;
-</code></pre></blockquote>
-<p>&#x6309;&#x7167;&#x8FD9;&#x4E2A;&#x8BF4;&#x660E;&#xFF0C;&#x8981;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;weak&#x578B;&#x7684;NSString&#x5F15;&#x7528;&#xFF0C;&#x5B83;&#x7684;&#x5199;&#x6CD5;&#x5E94;&#x8BE5;&#x662F;&#xFF1A;</p>
-<pre><code>NSString * __weak str = @&quot;hehe&quot;; // &#x6B63;&#x786E;&#xFF01;
-</code></pre><p>&#x800C;&#x4E0D;&#x5E94;&#x8BE5;&#x662F;&#xFF1A;</p>
-<pre><code>__weak NSString *str = @&quot;hehe&quot;;  // &#x9519;&#x8BEF;&#xFF01;
-</code></pre><p>&#x90A3;&#x8FD9;&#x91CC;&#x5C31;&#x6709;&#x7591;&#x95EE;&#x4E86;&#xFF0C;&#x65E2;&#x7136;&#x6587;&#x6863;&#x8BF4;&#x662F;&#x9519;&#x8BEF;&#x7684;&#xFF0C;&#x4E3A;&#x5565;&#x7F16;&#x8BD1;&#x5668;&#x4E0D;&#x62A5;&#x9519;&#x5462;&#xFF1F;&#x6587;&#x6863;&#x53C8;&#x89E3;&#x91CA;&#x9053;&#xFF1A;</p>
-<blockquote>
-<p>Other variants are technically incorrect but are &#x201C;forgiven&#x201D; by the compiler. To understand the issue, see<a href="http://cdecl.org/" target="_blank">http://cdecl.org/</a>.</p>
-</blockquote>
-<p>&#x597D;&#x5427;&#xFF0C;&#x770B;&#x6765;&#x662F;&#x82F9;&#x679C;&#x7238;&#x7238;&#xFF08;=&#x3002;=&#xFF09;&#x8003;&#x8651;&#x5230;&#x5F88;&#x591A;&#x4EBA;&#x4F1A;&#x7528;&#x9519;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x7F16;&#x8BD1;&#x5668;&#x8FD9;&#x8FB9;&#x8D34;&#x5FC3;&#x5730;&#x5E2E;&#x6211;&#x4EEC;&#x5FFD;&#x7565;&#x5E76;&#x5904;&#x7406;&#x6389;&#x4E86;&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;&#xFF1A;&#xFF09;&#x867D;&#x7136;&#x4E0D;&#x62A5;&#x9519;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x5E94;&#x8BE5;&#x6309;&#x7167;&#x6B63;&#x786E;&#x7684;&#x65B9;&#x5F0F;&#x53BB;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x4FEE;&#x9970;&#x7B26;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4EE5;&#x524D;&#x4E5F;&#x5E38;&#x5E38;&#x7528;&#x9519;&#x8BEF;&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x90A3;&#x770B;&#x5230;&#x8FD9;&#x91CC;&#x8BB0;&#x5F97;&#x4EE5;&#x540E;&#x4E0D;&#x8981;&#x8FD9;&#x4E48;&#x5199;&#x4E86;&#xFF0C;&#x54EA;&#x5929;&#x7F16;&#x8BD1;&#x5668;&#x6012;&#x4E86;&#xFF0C;&#x518D;&#x4E0D;&#x652F;&#x6301;&#x9519;&#x8BEF;&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x5C31;&#x8981;&#x90C1;&#x95F7;&#x4E86;&#x3002;</p>
-<h4 id="&#x6808;&#x4E2D;&#x6307;&#x9488;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;nil">&#x6808;&#x4E2D;&#x6307;&#x9488;&#x9ED8;&#x8BA4;&#x503C;&#x4E3A;nil</h4>
-<p>&#x65E0;&#x8BBA;&#x662F;&#x88AB;strong&#xFF0C;weak&#x8FD8;&#x662F;autoreleasing&#x4FEE;&#x9970;&#xFF0C;&#x58F0;&#x660E;&#x5728;&#x6808;&#x4E2D;&#x7684;&#x6307;&#x9488;&#x9ED8;&#x8BA4;&#x503C;&#x90FD;&#x4F1A;&#x662F;nil&#x3002;&#x6240;&#x6709;&#x8FD9;&#x7C7B;&#x578B;&#x7684;&#x6307;&#x9488;&#x4E0D;&#x7528;&#x518D;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#x7F6E;nil&#x4E86;&#x3002;&#x867D;&#x7136;&#x597D;&#x4E60;&#x60EF;&#x662F;&#x6700;&#x91CD;&#x8981;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x66F4;&#x52A0;&#x964D;&#x4F4E;&#x4E86;&#x201C;&#x91CE;&#x6307;&#x9488;&#x201D;&#x51FA;&#x73B0;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x3002;</p>
-<p>&#x5728;ARC&#x4E2D;&#xFF0C;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x4F1A;&#x8F93;&#x51FA;null&#x800C;&#x4E0D;&#x662F;crash:)</p>
-<pre><code>- (void)myMethod 
-{
-    NSString *name;
-    NSLog(@&quot;name: %@&quot;, name);
-}
-</code></pre><h3 id="arc&#x4E0E;block">ARC&#x4E0E;Block</h3>
-<p>&#x5728;MRC&#x65F6;&#x4EE3;&#xFF0C;Block&#x4F1A;&#x9690;&#x5F0F;&#x5730;&#x5BF9;&#x8FDB;&#x5165;&#x5176;&#x4F5C;&#x7528;&#x57DF;&#x5185;&#x7684;&#x5BF9;&#x8C61;&#xFF08;&#x6216;&#x8005;&#x8BF4;&#x88AB;Block&#x6355;&#x83B7;&#x7684;&#x6307;&#x9488;&#x6307;&#x5411;&#x7684;&#x5BF9;&#x8C61;&#xFF09;&#x52A0;retain&#xFF0C;&#x6765;&#x786E;&#x4FDD;Block&#x4F7F;&#x7528;&#x5230;&#x8BE5;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x80FD;&#x591F;&#x6B63;&#x786E;&#x7684;&#x8BBF;&#x95EE;&#x3002;</p>
-<p>&#x8FD9;&#x4EF6;&#x4E8B;&#x60C5;&#x5728;&#x4E0B;&#x9762;&#x4EE3;&#x7801;&#x5C55;&#x793A;&#x7684;&#x60C5;&#x51B5;&#x4E2D;&#x8981;&#x66F4;&#x52A0;&#x989D;&#x5916;&#x5C0F;&#x5FC3;&#x3002;</p>
-<pre><code>MyViewController *myController = [[MyViewController alloc] init&#x2026;];
+# &#x7279;&#x522B;&#x63D0;&#x9192;&#xFF1A;&#x4F7F;&#x7528;sh&#x547D;&#x4EE4;&#x6267;&#x884C;&#x524D;&#x9000;&#x51FA;Xcode&#x548C;&#x6240;&#x6709;&#x6A21;&#x62DF;&#x5668;&#xFF0C;&#x907F;&#x514D;&#x7CFB;&#x7EDF;&#x5B58;&#x5728;&#x4F7F;&#x7528;&#x6216;&#x8005;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x53EF;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x5BFC;&#x81F4;&#x5220;&#x9664;&#x5931;&#x8D25;&#xFF1A;Directory not empty
 
-// &#x9690;&#x5F0F;&#x5730;&#x8C03;&#x7528;[myController retain];&#x9020;&#x6210;&#x5FAA;&#x73AF;&#x5F15;&#x7528;
-myController.completionHandler =  ^(NSInteger result) {
-    [myController dismissViewControllerAnimated:YES completion:nil];
-};
+# Finder&#x6253;&#x5F00;Xcode&#x5F00;&#x53D1;&#x8005;&#x6587;&#x4EF6;&#x5939;&#x7684;&#x7A97;&#x53E3;
+echo &quot;Opening ~/Library/Developer...&quot;
+open ~/Library/Developer
+echo &quot;Open Success: ~/Library/Developer&quot;
 
-[self presentViewController:myController animated:YES completion:^{
-    [myController release]; // &#x6CE8;&#x610F;&#xFF0C;&#x8FD9;&#x91CC;&#x8C03;&#x7528;[myController release];&#x662F;&#x5728;MRC&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5E38;&#x89C4;&#x5199;&#x6CD5;&#xFF0C;&#x5E76;&#x4E0D;&#x80FD;&#x89E3;&#x51B3;&#x4E0A;&#x9762;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x7684;&#x95EE;&#x9898;
-}];
-</code></pre><p>&#x5728;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;myController&#x7684;completionHandler&#x8C03;&#x7528;&#x4E86;myController&#x7684;&#x65B9;&#x6CD5;[dismissViewController...]&#xFF0C;&#x8FD9;&#x65F6;completionHandler&#x4F1A;&#x5BF9;myController&#x505A;retain&#x64CD;&#x4F5C;&#x3002;&#x800C;&#x6211;&#x4EEC;&#x77E5;&#x9053;&#xFF0C;myController&#x5BF9;completionHandler&#x4E5F;&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x4E2A;retain&#xFF08;&#x4E00;&#x822C;&#x51C6;&#x786E;&#x8BB2;&#x662F;copy&#xFF09;&#xFF0C;&#x8FD9;&#x65F6;&#x5C31;&#x51FA;&#x73B0;&#x4E86;&#x5728;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x4E2D;&#x6700;&#x7CDF;&#x7CD5;&#x7684;&#x60C5;&#x51B5;&#xFF1A;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#xFF01;&#x7B80;&#x5355;&#x70B9;&#x8BF4;&#x5C31;&#x662F;&#xFF1A;myController retain&#x4E86;completionHandler&#xFF0C;&#x800C;completionHandler&#x4E5F;retain&#x4E86;myController&#x3002;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x5BFC;&#x81F4;&#x4E86;myController&#x548C;completionHandler&#x6700;&#x7EC8;&#x90FD;&#x4E0D;&#x80FD;&#x88AB;&#x91CA;&#x653E;&#x3002;&#x6211;&#x4EEC;&#x5728;delegate&#x5173;&#x7CFB;&#x4E2D;&#xFF0C;&#x5BF9;delegate&#x6307;&#x9488;&#x7528;weak&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x8FD9;&#x79CD;&#x95EE;&#x9898;&#x3002;</p>
-<p>&#x4E0D;&#x8FC7;&#x597D;&#x5728;&#xFF0C;&#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x53CA;&#x65F6;&#x5730;&#x7ED9;&#x6211;&#x4EEC;&#x4E00;&#x4E2A;&#x8B66;&#x544A;&#xFF0C;&#x63D0;&#x9192;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x751F;&#x8FD9;&#x7C7B;&#x578B;&#x7684;&#x95EE;&#x9898;
-<code>#warning Capturing &apos;myController&apos; strongly in this block is likely to lead to a retain cycle</code></p>
-<p>&#x5BF9;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x7528;&#x5982;&#x4E0B;&#x65B9;&#x6CD5;&#x89E3;&#x51B3;&#xFF1A;&#x7ED9;&#x8981;&#x8FDB;&#x5165;Block&#x7684;&#x6307;&#x9488;&#x52A0;&#x4E00;&#x4E2A;__block&#x4FEE;&#x9970;&#x7B26;&#x3002;</p>
-<p><strong>&#x5728;ARC&#x4E0B;Block&#x9ED8;&#x8BA4;&#x5728;&#x5806;&#x4E0A;&#xFF0C;Block&#x4E0D;&#x5141;&#x8BB8;&#x4FEE;&#x6539;&#x5916;&#x90E8;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF0C;&#x8FD9;&#x91CC;&#x6240;&#x8BF4;&#x7684;&#x5916;&#x90E8;&#x53D8;&#x91CF;&#x7684;&#x503C;&#xFF0C;&#x6307;&#x7684;&#x662F;&#x6808;&#x4E2D;&#x6307;&#x9488;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#x3002;__block&#x6240;&#x8D77;&#x5230;&#x7684;&#x4F5C;&#x7528;&#x5C31;&#x662F;&#x53EA;&#x8981;&#x89C2;&#x5BDF;&#x5230;&#x8BE5;&#x53D8;&#x91CF;&#x88AB; block &#x6240;&#x6301;&#x6709;&#xFF0C;&#x5C31;&#x5C06;&#x201C;&#x5916;&#x90E8;&#x53D8;&#x91CF;&#x201D;&#x5728;&#x6808;&#x4E2D;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#x653E;&#x5230;&#x4E86;&#x5806;&#x4E2D;&#x3002;&#x8FDB;&#x800C;&#x5728;block&#x5185;&#x90E8;&#x4E5F;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x5916;&#x90E8;&#x53D8;&#x91CF;&#x7684;&#x503C;&#x3002;</strong></p>
-<p>&#x8FD9;&#x4E2A;__block&#x5728;MRC&#x65F6;&#x4EE3;&#x6709;&#x4E24;&#x4E2A;&#x4F5C;&#x7528;&#xFF1A;</p>
-<ul>
-<li>&#x8BF4;&#x660E;&#x53D8;&#x91CF;&#x53EF;&#x6539;</li>
-<li>&#x8BF4;&#x660E;&#x6307;&#x9488;&#x6307;&#x5411;&#x7684;&#x5BF9;&#x8C61;&#x4E0D;&#x505A;&#x8FD9;&#x4E2A;&#x9690;&#x5F0F;&#x7684;retain&#x64CD;&#x4F5C;</li>
-</ul>
-<p>&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x5982;&#x679C;&#x4E0D;&#x52A0;<code>__block</code>&#xFF0C;&#x662F;&#x4E0D;&#x80FD;&#x5728;Block&#x91CC;&#x9762;&#x4FEE;&#x6539;&#x7684;&#xFF0C;&#x4E0D;&#x8FC7;&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x4F8B;&#x5916;&#xFF1A;static&#x7684;&#x53D8;&#x91CF;&#x548C;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#x4E0D;&#x9700;&#x8981;&#x52A0;<code>__block</code>&#x5C31;&#x53EF;&#x4EE5;&#x5728;Block&#x4E2D;&#x4FEE;&#x6539;&#x3002;</p>
-<p>&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x4EEC;&#x5BF9;&#x4EE3;&#x7801;&#x505A;&#x51FA;&#x4FEE;&#x6539;&#xFF0C;&#x89E3;&#x51B3;&#x4E86;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x7684;&#x95EE;&#x9898;&#xFF1A;</p>
-<pre><code>MyViewController * __block myController = [[MyViewController alloc] init&#x2026;];
-// ...
-myController.completionHandler =  ^(NSInteger result) {
-    [myController dismissViewControllerAnimated:YES completion:nil];
-};
-//&#x4E4B;&#x540E;&#x6B63;&#x5E38;&#x7684;release&#x6216;&#x8005;retain
-</code></pre><p>&#x5728;ARC&#x5F15;&#x5165;&#x540E;&#xFF0C;&#x6CA1;&#x6709;&#x4E86;retain&#x548C;release&#x7B49;&#x64CD;&#x4F5C;&#xFF0C;&#x60C5;&#x51B5;&#x4E5F;&#x53D1;&#x751F;&#x4E86;&#x6539;&#x53D8;&#xFF1A;&#x5728;&#x4EFB;&#x4F55;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;<code>__block</code>&#x4FEE;&#x9970;&#x7B26;&#x7684;&#x4F5C;&#x7528;&#x53EA;&#x6709;&#x4E0A;&#x9762;&#x7684;&#x7B2C;&#x4E00;&#x6761;&#xFF1A;&#x8BF4;&#x660E;&#x53D8;&#x91CF;&#x53EF;&#x6539;&#x3002;&#x5373;&#x4F7F;&#x52A0;&#x4E0A;&#x4E86;<code>__block</code>&#x4FEE;&#x9970;&#x7B26;&#xFF0C;&#x4E00;&#x4E2A;&#x88AB;block&#x6355;&#x83B7;&#x7684;&#x5F3A;&#x5F15;&#x7528;&#x4E5F;&#x4F9D;&#x7136;&#x662F;&#x4E00;&#x4E2A;&#x5F3A;&#x5F15;&#x7528;&#x3002;</p>
-<p>&#x8FD9;&#x6837;&#x5728;ARC&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x8FD8;&#x6309;&#x7167;MRC&#x4E0B;&#x7684;&#x5199;&#x6CD5;&#xFF0C;completionHandler&#x5BF9;myController&#x6709;&#x4E00;&#x4E2A;&#x5F3A;&#x5F15;&#x7528;&#xFF0C;&#x800C;myController&#x5BF9;completionHandler&#x6709;&#x4E00;&#x4E2A;&#x5F3A;&#x5F15;&#x7528;&#xFF0C;&#x8FD9;&#x4F9D;&#x7136;&#x662F;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#xFF0C;&#x6CA1;&#x6709;&#x89E3;&#x51B3;&#x95EE;&#x9898; : &#xFF08;</p>
-<p>&#x4E8E;&#x662F;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x5BF9;&#x539F;&#x4EE3;&#x7801;&#x505A;&#x4FEE;&#x6539;&#x3002;&#x7B80;&#x5355;&#x7684;&#x60C5;&#x51B5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5199;&#xFF1A;</p>
-<pre><code>__block MyViewController * myController = [[MyViewController alloc] init&#x2026;];
-// ...
-myController.completionHandler =  ^(NSInteger result) {
-    [myController dismissViewControllerAnimated:YES completion:nil];
-    myController = nil;  // &#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#xFF0C;&#x4FDD;&#x8BC1;&#x4E86;block&#x7ED3;&#x675F;myController&#x5F3A;&#x5F15;&#x7528;&#x7684;&#x89E3;&#x9664;
-};
-</code></pre><p>&#x5728;completionHandler&#x4E4B;&#x540E;&#x5C06;myController&#x6307;&#x9488;&#x7F6E;nil&#xFF0C;&#x4FDD;&#x8BC1;&#x4E86;completionHandler&#x5BF9;myController&#x5F3A;&#x5F15;&#x7528;&#x7684;&#x89E3;&#x9664;&#xFF0C;&#x4E0D;&#x8FC7;&#x4E5F;&#x540C;&#x65F6;&#x89E3;&#x9664;&#x4E86;myController&#x5BF9;myController&#x5BF9;&#x8C61;&#x7684;&#x5F3A;&#x5F15;&#x7528;&#x3002;&#x8FD9;&#x79CD;&#x65B9;&#x6CD5;&#x8FC7;&#x4E8E;&#x7B80;&#x5355;&#x7C97;&#x66B4;&#x4E86;&#xFF0C;&#x5728;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#x66F4;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
-<p>&#x8FD9;&#x4E2A;&#x66F4;&#x597D;&#x7684;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x4F7F;&#x7528;weak&#x3002;&#xFF08;&#x6216;&#x8005;&#x4E3A;&#x4E86;&#x8003;&#x8651;iOS4&#x7684;&#x517C;&#x5BB9;&#x6027;&#x7528;unsafe_unretained&#xFF0C;&#x5177;&#x4F53;&#x7528;&#x6CD5;&#x548C;weak&#x76F8;&#x540C;&#xFF0C;&#x8003;&#x8651;&#x5230;&#x73B0;&#x5728;iOS4&#x8BBE;&#x5907;&#x53EF;&#x80FD;&#x5DF2;&#x7ECF;&#x7EDD;&#x8FF9;&#x4E86;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x8BB2;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E86;&#xFF09;</p>
-<p>&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;completionHandler&#x8FD9;&#x4E2A;Block&#x5BF9;myController&#x6CA1;&#x6709;&#x5F3A;&#x5F15;&#x7528;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x4E34;&#x65F6;&#x7684;&#x5F31;&#x5F15;&#x7528;weakMyViewController&#x6765;&#x6307;&#x5411;&#x539F;myController&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x628A;&#x8FD9;&#x4E2A;&#x5F31;&#x5F15;&#x7528;&#x4F20;&#x5165;&#x5230;Block&#x5185;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x4FDD;&#x8BC1;&#x4E86;Block&#x5BF9;myController&#x6301;&#x6709;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5F31;&#x5F15;&#x7528;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x5F3A;&#x5F15;&#x7528;&#x3002;&#x5982;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x7EE7;&#x7EED;&#x4FEE;&#x6539;&#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code>MyViewController *myController = [[MyViewController alloc] init&#x2026;];
-// ...
-MyViewController * __weak weakMyViewController = myController;
-myController.completionHandler =  ^(NSInteger result) {
-    [weakMyViewController dismissViewControllerAnimated:YES completion:nil];
-};
-</code></pre><p>&#x8FD9;&#x6837;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x7684;&#x95EE;&#x9898;&#x5C31;&#x89E3;&#x51B3;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x5374;&#x4E0D;&#x5E78;&#x5730;&#x5F15;&#x5165;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x95EE;&#x9898;&#xFF1A;&#x7531;&#x4E8E;&#x4F20;&#x5165;completionHandler&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5F31;&#x5F15;&#x7528;&#xFF0C;&#x90A3;&#x4E48;&#x5F53;myController&#x6307;&#x5411;&#x7684;&#x5BF9;&#x8C61;&#x5728;completionHandler&#x88AB;&#x8C03;&#x7528;&#x524D;&#x91CA;&#x653E;&#xFF0C;&#x90A3;&#x4E48;completionHandler&#x5C31;&#x4E0D;&#x80FD;&#x6B63;&#x5E38;&#x7684;&#x8FD0;&#x4F5C;&#x4E86;&#x3002;&#x5728;&#x4E00;&#x822C;&#x7684;&#x5355;&#x7EBF;&#x7A0B;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x8FD9;&#x79CD;&#x95EE;&#x9898;&#x51FA;&#x73B0;&#x7684;&#x53EF;&#x80FD;&#x6027;&#x4E0D;&#x5927;&#xFF0C;&#x4F46;&#x662F;&#x5230;&#x4E86;&#x591A;&#x7EBF;&#x7A0B;&#x73AF;&#x5883;&#xFF0C;&#x5C31;&#x5F88;&#x4E0D;&#x597D;&#x8BF4;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7EE7;&#x7EED;&#x5B8C;&#x5584;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x3002;</p>
-<p>&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x5728;Block&#x5185;&#x80FD;&#x591F;&#x8BBF;&#x95EE;&#x5230;&#x6B63;&#x786E;&#x7684;myController&#xFF0C;&#x6211;&#x4EEC;&#x5728;block&#x5185;&#x65B0;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5F3A;&#x5F15;&#x7528;strongMyController&#x6765;&#x6307;&#x5411;weakMyController&#x6307;&#x5411;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x6837;&#x591A;&#x4E86;&#x4E00;&#x4E2A;&#x5F3A;&#x5F15;&#x7528;&#xFF0C;&#x5C31;&#x80FD;&#x4FDD;&#x8BC1;&#x8FD9;&#x4E2A;myController&#x5BF9;&#x8C61;&#x4E0D;&#x4F1A;&#x5728;completionHandler&#x88AB;&#x8C03;&#x7528;&#x524D;&#x91CA;&#x653E;&#x6389;&#x4E86;&#x3002;&#x4E8E;&#x662F;&#xFF0C;&#x6211;&#x4EEC;&#x5BF9;&#x4EE3;&#x7801;&#x518D;&#x6B21;&#x505A;&#x51FA;&#x4FEE;&#x6539;&#xFF1A;</p>
-<pre><code>MyViewController *myController = [[MyViewController alloc] init&#x2026;];
-// ...
-MyViewController * __weak weakMyController = myController;
-myController.completionHandler =  ^(NSInteger result) {
-    MyViewController *strongMyController = weakMyController;
+# &#x79FB;&#x9664;&#x6A21;&#x62DF;&#x5668;&#x8FD0;&#x884C;&#x6BCF;&#x4E2A;APP&#x751F;&#x6210;&#x7684;&#x7F13;&#x5B58;&#x6587;&#x4EF6; (&#x5EFA;&#x8BAE;&#x5B9A;&#x671F;&#x6E05;&#x7406;&#xFF0C;&#x4F1A;&#x91CD;&#x65B0;&#x751F;&#x6210;&#xFF0C;&#x4E0E;App&#x6570;&#x91CF;&#x5927;&#x5C0F;&#x6709;&#x5173; Mine:13.72GB&#xFF09;
+echo &quot;Deleting Xcode/DerivedData...&quot;
+rm -rf ~/Library/Developer/Xcode/DerivedData
+echo &quot;Delete Success: ~/Library/Developer/Xcode/DerivedData&quot;
 
-&#x3000;&#x3000;if (strongMyController) {
-&#x3000;&#x3000;// ...
-&#x3000;&#x3000;[strongMyController dismissViewControllerAnimated:YES completion:nil];
-&#x3000;&#x3000;// ...
-&#x3000;&#x3000;}
-&#x3000;&#x3000;else {
-&#x3000;&#x3000;// Probably nothing...
-&#x3000;&#x3000;}
-};
-</code></pre><p>&#x5230;&#x6B64;&#xFF0C;&#x4E00;&#x4E2A;&#x5B8C;&#x5584;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x5C31;&#x5B8C;&#x6210;&#x4E86;&#xFF1A;&#xFF09;</p>
-<p><strong>Block&#x6355;&#x83B7;&#x7684;&#x5F15;&#x7528;&#x548C;&#x5185;&#x90E8;&#x5B9A;&#x4E49;&#x7684;&#x5F15;&#x7528;&#x533A;&#x522B;</strong></p>
-<p>&#x5B98;&#x65B9;&#x6587;&#x6863;&#x5BF9;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x7684;&#x8BF4;&#x660E;&#x5230;&#x8FD9;&#x91CC;&#x5C31;&#x7ED3;&#x675F;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x53EF;&#x80FD;&#x5F88;&#x591A;&#x670B;&#x53CB;&#x4F1A;&#x6709;&#x7591;&#x95EE;&#xFF0C;&#x4E0D;&#x662F;&#x8BF4;&#x4E0D;&#x5E0C;&#x671B;Block&#x5BF9;&#x539F;myController&#x5BF9;&#x8C61;&#x589E;&#x52A0;&#x5F3A;&#x5F15;&#x7528;&#x4E48;&#xFF0C;&#x8FD9;&#x91CC;&#x4E3A;&#x5565;&#x5802;&#x800C;&#x7687;&#x4E4B;&#x5730;&#x5728;Block&#x5185;&#x65B0;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x5F3A;&#x5F15;&#x7528;&#xFF0C;&#x8FD9;&#x4E2A;&#x5F3A;&#x5F15;&#x7528;&#x4E0D;&#x4F1A;&#x9020;&#x6210;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x4E48;&#xFF1F;&#x7406;&#x89E3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x7684;&#x5173;&#x952E;&#x5728;&#x4E8E;&#x7406;&#x89E3;&#x88AB;Block&#x6355;&#x83B7;&#x7684;&#x5F15;&#x7528;&#x548C;&#x5728;Block&#x5185;&#x5B9A;&#x4E49;&#x7684;&#x5F15;&#x7528;&#x7684;&#x533A;&#x522B;&#x3002;&#x4E3A;&#x4E86;&#x641E;&#x5F97;&#x660E;&#x767D;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x4E00;&#x4E9B;Block&#x7684;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#xFF0C;&#x4F46;&#x7531;&#x4E8E;&#x7BC7;&#x5E45;&#x7684;&#x7F18;&#x6545;&#xFF0C;&#x672C;&#x6587;&#x5728;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x5C55;&#x5F00;&#x4E86;&#xFF0C;&#x8BE6;&#x7EC6;&#x7684;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x6587;&#x672B;&#x8D44;&#x6599;&#x3002;</p>
-<p>&#x8FD9;&#x91CC;&#x5047;&#x8BBE;&#x5927;&#x5BB6;&#x5DF2;&#x7ECF;&#x5BF9;Block&#x7684;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#x6709;&#x6240;&#x4E86;&#x89E3;&#x4E86;&#x3002;&#x6211;&#x4EEC;&#x5C31;&#x76F4;&#x5165;&#x4E3B;&#x9898;&#x4E86;&#xFF01;&#x6CE8;&#x610F;&#x524D;&#x65B9;&#x9AD8;&#x80FD;&#xFF08;=&#x3002;=&#xFF09;</p>
-<p>&#x4E3A;&#x4E86;&#x66F4;&#x6E05;&#x695A;&#x5730;&#x8BF4;&#x660E;&#x95EE;&#x9898;&#xFF0C;&#x8FD9;&#x91CC;&#x7528;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x7A0B;&#x5E8F;&#x4E3E;&#x4F8B;&#x3002;&#x6BD4;&#x5982;&#x6211;&#x4EEC;&#x6709;&#x5982;&#x4E0B;&#x7A0B;&#x5E8F;&#xFF1A;</p>
-<pre><code>#include &lt;stdio.h&gt;
+# &#x79FB;&#x9664;Xcode&#x6253;&#x5305;&#x65F6;&#x751F;&#x6210;&#x7684;xcarchive&#xFF0C;(&#x6839;&#x636E;&#x662F;&#x5426;&#x6709;&#x7528;&#x9009;&#x62E9;&#x6027;&#x5220;&#x9664;&#xFF0C;Jenkins&#x6253;&#x5305;&#x6240;&#x4EE5;&#x6BD4;&#x8F83;&#x5C0F; Mine:994.9MB)
+echo &quot;Deleting Xcode/Archives...&quot;
+rm -rf ~/Library/Developer/Xcode/Archives
+echo &quot;Delete Success: ~/Library/Developer/Xcode/Archives&quot;
 
-int main()
-{
-    int b = 10;
-    int *a = &amp;b;
-    void (^blockFunc)() = ^(){
-        int *c = a;
-    };
-    blockFunc();
-    return 1;
-}
-</code></pre><p>&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x540C;&#x4E3A;int&#x578B;&#x7684;&#x6307;&#x9488;&#xFF0C;a&#x662F;&#x88AB;Block&#x6355;&#x83B7;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x800C;c&#x662F;&#x5728;Block&#x5185;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#x3002;&#x6211;&#x4EEC;&#x7528;<code>clang -rewrite-objc</code>&#x5904;&#x7406;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5982;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
-<pre><code>int main()
-{
-    int b = 10;
-    int *a = &amp;b;
-    void (*blockFunc)() = (void (*)())&amp;__main_block_impl_0((void *)__main_block_func_0, &amp;__main_block_desc_0_DATA, a);
-    ((void (*)(__block_impl *))((__block_impl *)blockFunc)-&gt;FuncPtr)((__block_impl *)blockFunc);
-    return 1;
-}
-</code></pre><p>Block&#x7684;&#x7ED3;&#x6784;&#xFF1A;</p>
-<pre><code>struct __main_block_impl_0 {
-    struct __block_impl impl;
-    struct __main_block_desc_0* Desc;
+# &#x79FB;&#x9664;&#x6A21;&#x62DF;&#x5668;&#x652F;&#x6301;&#x7248;&#x672C;&#xFF0C;&#x5EFA;&#x8BAE;&#x4FDD;&#x7559;&#x5E38;&#x7528;&#x7684;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x7684;&#x6A21;&#x62DF;&#x5668;&#x7248;&#x672C;&#x5373;&#x53EF;&#xFF0C;(&#x5EFA;&#x8BAE;&#x624B;&#x52A8;&#x5220;&#x9664;&#xFF0C;&#x652F;&#x6301;iOS&#x7248;&#x672C;&#x8D8A;&#x591A;&#x8D8A;&#x5927; Mine:55.85GB)
+echo &quot;Deleting Xcode/iOS\ DeviceSupport...&quot;
+rm -rf ~/Library/Developer/Xcode/iOS\ DeviceSupport
+echo &quot;Delete Success: ~/Library/Developer/Xcode/iOS\ DeviceSupport&quot;
 
-    int *a; // &#x88AB;&#x6355;&#x83B7;&#x7684;&#x5F15;&#x7528; a &#x51FA;&#x73B0;&#x5728;&#x4E86;block&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x91CC;&#x9762;
-
-    __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int *_a, int flags=0) : a(_a) {
-        impl.isa = &amp;_NSConcreteStackBlock;
-        impl.Flags = flags;
-        impl.FuncPtr = fp;
-        Desc = desc;
-    }
-};
-</code></pre><p>&#x5B9E;&#x9645;&#x6267;&#x884C;&#x7684;&#x51FD;&#x6570;&#xFF1A;</p>
-<pre><code>static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
-    int *a = __cself-&gt;a; // bound by copy
-    int *c = a; // &#x5728;block&#x4E2D;&#x58F0;&#x660E;&#x7684;&#x5F15;&#x7528; c &#x5728;&#x51FD;&#x6570;&#x4E2D;&#x58F0;&#x660E;&#xFF0C;&#x5B58;&#x5728;&#x4E8E;&#x51FD;&#x6570;&#x6808;&#x4E0A;
-}
-</code></pre><p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6E05;&#x695A;&#x5F97;&#x770B;&#x5230;&#xFF0C;a&#x548C;c&#x5B58;&#x5728;&#x7684;&#x4F4D;&#x7F6E;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#xFF0C;&#x5982;&#x679C;Block&#x5B58;&#x5728;&#x4E8E;&#x5806;&#x4E0A;&#xFF08;&#x5728;ARC&#x4E0B;Block&#x9ED8;&#x8BA4;&#x5728;&#x5806;&#x4E0A;&#xFF09;&#xFF0C;&#x90A3;&#x4E48;a&#x4F5C;&#x4E3A;Block&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x4E00;&#x4E2A;&#x6210;&#x5458;&#xFF0C;&#x4E5F;&#x81EA;&#x7136;&#x4F1A;&#x5B58;&#x5728;&#x4E8E;&#x5806;&#x4E0A;&#xFF0C;&#x800C;c&#x65E0;&#x8BBA;&#x5982;&#x4F55;&#xFF0C;&#x6C38;&#x8FDC;&#x4F4D;&#x4E8E;Block&#x5185;&#x5B9E;&#x9645;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x7684;&#x51FD;&#x6570;&#x6808;&#x5185;&#x3002;&#x8FD9;&#x4E5F;&#x5BFC;&#x81F4;&#x4E86;&#x4E24;&#x4E2A;&#x53D8;&#x91CF;&#x751F;&#x547D;&#x5468;&#x671F;&#x7684;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#xFF1A;c&#x5728;Block&#x7684;&#x51FD;&#x6570;&#x8FD0;&#x884C;&#x5B8C;&#x6BD5;&#xFF0C;&#x5373;&#x4F1A;&#x88AB;&#x91CA;&#x653E;&#xFF0C;&#x800C;a&#x5462;&#xFF0C;&#x53EA;&#x6709;&#x5728;Block&#x88AB;&#x4ECE;&#x5806;&#x4E0A;&#x91CA;&#x653E;&#x7684;&#x65F6;&#x5019;&#x624D;&#x4F1A;&#x91CA;&#x653E;&#x3002;</p>
-<p>&#x56DE;&#x5230;&#x6211;&#x4EEC;&#x7684;MyViewController&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x540C;&#x4E0A;&#x7406;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x8BA9;Block&#x6355;&#x83B7;&#x6211;&#x4EEC;&#x7684;myController&#x5F15;&#x7528;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x4E2A;&#x5F15;&#x7528;&#x4F1A;&#x88AB;&#x590D;&#x5236;&#x540E;&#xFF08;&#x5F15;&#x7528;&#x7C7B;&#x578B;&#x4E5F;&#x4F1A;&#x88AB;&#x590D;&#x5236;&#xFF09;&#x4F5C;&#x4E3A;Block&#x7684;&#x6210;&#x5458;&#x53D8;&#x91CF;&#x5B58;&#x5728;&#x4E8E;&#x5176;&#x6240;&#x5728;&#x7684;&#x5806;&#x7A7A;&#x95F4;&#x4E2D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E3A;Block&#x589E;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;&#x6307;&#x5411;myController&#x5BF9;&#x8C61;&#x7684;&#x5F3A;&#x5F15;&#x7528;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x9020;&#x6210;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x7684;&#x672C;&#x8D28;&#x539F;&#x56E0;&#x3002;&#x5BF9;&#x4E8E;MyViewController&#x7684;&#x4F8B;&#x5B50;&#xFF0C;Block&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x662F;&#x8FD9;&#x4E2A;&#x6837;&#x5B50;&#xFF1A;&#xFF08;&#x51C6;&#x786E;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x80AF;&#x5B9A;&#x548C;&#x4EE5;&#x4E0B;&#x8FD9;&#x4E2A;&#x6709;&#x533A;&#x522B;&#xFF0C;&#x4F46;&#x4E5F;&#x80AF;&#x5B9A;&#x662F;&#x5982;&#x4E0B;&#x8FD9;&#x79CD;&#x5F62;&#x5F0F;&#xFF1A;&#xFF09;</p>
-<pre><code>struct __main_block_impl_0 {
-    struct __block_impl impl;
-    struct __main_block_desc_0* Desc;
-
-    MyViewController * __strong myController;  // &#x88AB;&#x6355;&#x83B7;&#x7684;&#x5F3A;&#x5F15;&#x7528;myController
-
-    __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int *_a, int flags=0) : a(_a) {
-        impl.isa = &amp;_NSConcreteStackBlock;
-        impl.Flags = flags;
-        impl.FuncPtr = fp;
-        Desc = desc;
-    }
-};
-</code></pre><p>&#x800C;&#x53CD;&#x89C2;&#x6211;&#x4EEC;&#x7ED9;Block&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x5F31;&#x5F15;&#x7528;weakMyController&#xFF0C;&#x8FD9;&#x65F6;&#x6211;&#x4EEC;Block&#x7684;&#x7ED3;&#x6784;&#xFF1A;</p>
-<pre><code>struct __main_block_impl_0 {
-    struct __block_impl impl;
-    struct __main_block_desc_0* Desc;
-
-    MyViewController * __weak weakMyController;  // &#x88AB;&#x6355;&#x83B7;&#x7684;&#x5F31;&#x5F15;&#x7528;weakMyController
-
-    __main_block_impl_0(void *fp, struct __main_block_desc_0 *desc, int *_a, int flags=0) : a(_a) {
-        impl.isa = &amp;_NSConcreteStackBlock;
-        impl.Flags = flags;
-        impl.FuncPtr = fp;
-        Desc = desc;
-    }
-};
-</code></pre><p>&#x518D;&#x770B;&#x5728;Block&#x5185;&#x58F0;&#x660E;&#x7684;&#x5F3A;&#x5F15;&#x7528;strongMyController&#xFF0C;&#x5B83;&#x867D;&#x7136;&#x662F;&#x5F3A;&#x5F15;&#x7528;&#xFF0C;&#x4F46;&#x5B58;&#x5728;&#x4E8E;&#x51FD;&#x6570;&#x6808;&#x4E2D;&#xFF0C;&#x5728;&#x51FD;&#x6570;&#x6267;&#x884C;&#x671F;&#x95F4;&#xFF0C;&#x5B83;&#x4E00;&#x76F4;&#x5B58;&#x5728;&#xFF0C;&#x6240;&#x4EE5;myController&#x5BF9;&#x8C61;&#x4E5F;&#x4E00;&#x76F4;&#x5B58;&#x5728;&#xFF0C;&#x4F46;&#x662F;&#x5F53;&#x51FD;&#x6570;&#x6267;&#x884C;&#x5B8C;&#x6BD5;&#xFF0C;strongMyController&#x5373;&#x88AB;&#x9500;&#x6BC1;&#xFF0C;&#x4E8E;&#x662F;&#x5B83;&#x5BF9;myController&#x5BF9;&#x8C61;&#x7684;&#x5F3A;&#x5F15;&#x7528;&#x4E5F;&#x88AB;&#x89E3;&#x9664;&#xFF0C;&#x8FD9;&#x65F6;Block&#x5BF9;myController&#x5BF9;&#x8C61;&#x5C31;&#x4E0D;&#x5B58;&#x5728;&#x5F3A;&#x5F15;&#x7528;&#x5173;&#x7CFB;&#x4E86;&#xFF01;&#x52A0;&#x5165;&#x4E86;strongMyController&#x7684;&#x51FD;&#x6570;&#x5927;&#x4F53;&#x4F1A;&#x662F;&#x8FD9;&#x4E2A;&#x6837;&#x5B50;&#xFF1A;</p>
-<pre><code>static void __main_block_func_0(struct __main_block_impl_0 *__cself) {
-
-MyViewController * __strong strongMyController = __cself-&gt;weakMyController; 
-
-// ....
-
-}
-</code></pre><p>&#x7EFC;&#x4E0A;&#x6240;&#x8FF0;&#xFF0C;&#x5728;ARC&#x4E0B;&#xFF08;&#x5728;MRC&#x4E0B;&#x4F1A;&#x7565;&#x6709;&#x4E0D;&#x540C;&#xFF09;&#xFF0C;Block&#x6355;&#x83B7;&#x7684;&#x5F15;&#x7528;&#x548C;Block&#x5185;&#x58F0;&#x660E;&#x7684;&#x5F15;&#x7528;&#x65E0;&#x8BBA;&#x662F;&#x5B58;&#x5728;&#x7A7A;&#x95F4;&#x4E0E;&#x751F;&#x547D;&#x5468;&#x671F;&#x90FD;&#x662F;&#x622A;&#x7136;&#x4E0D;&#x540C;&#x7684;&#xFF0C;&#x4E5F;&#x6B63;&#x662F;&#x8FD9;&#x79CD;&#x4E0D;&#x540C;&#xFF0C;&#x9020;&#x6210;&#x4E86;&#x6211;&#x4EEC;&#x5BF9;&#x4ED6;&#x4EEC;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x7684;&#x533A;&#x522B;&#x3002;</p>
-<p>&#x4EE5;&#x4E0A;&#x5C31;&#x89E3;&#x91CA;&#x4E86;&#x4E4B;&#x524D;&#x63D0;&#x5230;&#x7684;&#x6240;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x5E0C;&#x671B;&#x5927;&#x5BB6;&#x80FD;&#x770B;&#x660E;&#x767D;&#xFF1A;&#xFF09;</p>
-<p>&#x597D;&#x7684;&#xFF0C;&#x6700;&#x540E;&#x518D;&#x63D0;&#x4E00;&#x70B9;&#xFF0C;&#x5728;ARC&#x4E2D;&#xFF0C;&#x5BF9;Block&#x6355;&#x83B7;&#x5BF9;&#x8C61;&#x7684;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x5DF2;&#x7ECF;&#x7B80;&#x5316;&#x4E86;&#x5F88;&#x591A;&#xFF0C;&#x7531;&#x4E8E;&#x6CA1;&#x6709;&#x4E86;retain&#x548C;release&#x7B49;&#x64CD;&#x4F5C;&#xFF0C;&#x5B9E;&#x9645;&#x53EA;&#x9700;&#x8981;&#x8003;&#x8651;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x7684;&#x95EE;&#x9898;&#x5C31;&#x884C;&#x4E86;&#x3002;&#x6BD4;&#x5982;&#x4E0B;&#x9762;&#x8FD9;&#x79CD;&#xFF0C;&#x662F;&#x6CA1;&#x6709;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x7684;&#x95EE;&#x9898;&#x7684;&#xFF1A;</p>
-<pre><code>TestObject *aObject = [[TestObject alloc] init];
-
-aObject.name = @&quot;hehe&quot;;
-
-self.aBlock = ^(){
-
-    NSLog(@&quot;aObject&apos;s name = %@&quot;,aObject.name);
-
-};
-</code></pre><p>&#x6211;&#x4EEC;&#x4E0A;&#x9762;&#x63D0;&#x5230;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#xFF0C;&#x53EA;&#x662F;&#x9488;&#x5BF9;Block&#x4EA7;&#x751F;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x8BF4;&#x6240;&#x6709;&#x7684;Block&#x6355;&#x83B7;&#x5F15;&#x7528;&#x90FD;&#x8981;&#x8FD9;&#x4E48;&#x5904;&#x7406;&#xFF0C;&#x4E00;&#x5B9A;&#x8981;&#x6CE8;&#x610F;&#xFF01;</p>
-<h3 id="arc&#x4E0E;toll-free-bridging">ARC&#x4E0E;Toll-Free Bridging</h3>
-<blockquote>
-<p>There are a number of data types in the Core Foundation framework and the Foundation framework that can be used interchangeably. This capability, called toll-free bridging, means that you can use the same data type as the parameter to a Core Foundation function call or as the receiver of an Objective-C message. </p>
-</blockquote>
-<p>Toll-Free Briding&#x4FDD;&#x8BC1;&#x4E86;&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x548C;&#x8C10;&#x7684;&#x4F7F;&#x7528;Core Foundation&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#x548C;Objective-C&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#x3002;&#x8BE6;&#x7EC6;&#x7684;&#x5185;&#x5BB9;&#x53EF;&#x53C2;&#x8003;<a href="https://developer.apple.com/library/archive/documentation/General/Conceptual/CocoaEncyclopedia/Toll-FreeBridgin/Toll-FreeBridgin.html" target="_blank">&#x5B98;&#x65B9;&#x6587;&#x6863;</a>&#x3002;&#x4EE5;&#x4E0B;&#x662F;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x4E2D;&#x7ED9;&#x51FA;&#x7684;&#x4E00;&#x4E9B;&#x4F8B;&#x5B50;&#xFF1A;</p>
-<pre><code>NSLocale *gbNSLocale = [[NSLocale alloc] initWithLocaleIdentifier:@&quot;en_GB&quot;];
-CFLocaleRef gbCFLocale = (CFLocaleRef) gbNSLocale;
-CFStringRef cfIdentifier = CFLocaleGetIdentifier (gbCFLocale);
-NSLog(@&quot;cfIdentifier: %@&quot;, (NSString *)cfIdentifier);
-// logs: &quot;cfIdentifier: en_GB&quot;
-CFRelease((CFLocaleRef) gbNSLocale);
-
-CFLocaleRef myCFLocale = CFLocaleCopyCurrent();
-NSLocale * myNSLocale = (NSLocale *) myCFLocale;
-[myNSLocale autorelease];
-NSString *nsIdentifier = [myNSLocale localeIdentifier];
-CFShow((CFStringRef) [@&quot;nsIdentifier: &quot; stringByAppendingString:nsIdentifier]);
-// logs identifier for current locale
-</code></pre><p>&#x5728;MRC&#x65F6;&#x4EE3;&#xFF0C;&#x7531;&#x4E8E;Objective-C&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#x548C;Core Foundation&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#x90FD;&#x662F;&#x76F8;&#x540C;&#x7684;release&#x548C;retain&#x64CD;&#x4F5C;&#x89C4;&#x5219;&#xFF0C;&#x6240;&#x4EE5;Toll-Free Bridging&#x7684;&#x4F7F;&#x7528;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x662F;&#x81EA;&#x4ECE;ARC&#x52A0;&#x5165;&#x540E;&#xFF0C;Objective-C&#x7C7B;&#x578B;&#x7684;&#x5BF9;&#x8C61;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x89C4;&#x5219;&#x6539;&#x53D8;&#x4E86;&#xFF0C;&#x800C;Core Foundation&#x4F9D;&#x7136;&#x662F;&#x4E4B;&#x524D;&#x7684;&#x673A;&#x5236;&#xFF0C;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;Core Foundation&#x4E0D;&#x652F;&#x6301;ARC&#x3002;</p>
-<p>&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5C31;&#x5FC5;&#x987B;&#x8981;&#x8981;&#x8003;&#x8651;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x4E86;&#xFF0C;&#x5728;&#x505A;Core Foundation&#x4E0E;Objective-C&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7528;&#x54EA;&#x4E00;&#x79CD;&#x89C4;&#x5219;&#x6765;&#x7BA1;&#x7406;&#x5BF9;&#x8C61;&#x7684;&#x5185;&#x5B58;&#x3002;&#x663E;&#x7136;&#xFF0C;&#x5BF9;&#x4E8E;&#x540C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x80FD;&#x591F;&#x540C;&#x65F6;&#x7528;&#x4E24;&#x79CD;&#x89C4;&#x5219;&#x6765;&#x7BA1;&#x7406;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x5C31;&#x5FC5;&#x987B;&#x8981;&#x786E;&#x5B9A;&#x4E00;&#x4EF6;&#x4E8B;&#x60C5;&#xFF1A;&#x54EA;&#x4E9B;&#x5BF9;&#x8C61;&#x7528;Objective-C&#xFF08;&#x4E5F;&#x5C31;&#x662F;ARC&#xFF09;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x54EA;&#x4E9B;&#x5BF9;&#x8C61;&#x7528;Core Foundation&#x7684;&#x89C4;&#x5219;&#xFF08;&#x4E5F;&#x5C31;&#x662F;MRC&#xFF09;&#x7684;&#x89C4;&#x5219;&#x3002;&#x6216;&#x8005;&#x8BF4;&#x8981;&#x786E;&#x5B9A;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#x4E86;&#x4E4B;&#x540E;&#xFF0C;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x7684;ownership&#x7684;&#x6539;&#x53D8;&#x3002;</p>
-<blockquote>
-<p>If you cast between Objective-C and Core Foundation-style objects, you need to tell the compiler about the ownership semantics of the object using either a cast (defined in objc/runtime.h) or a Core Foundation-style macro (defined inNSObject.h)</p>
-</blockquote>
-<p>&#x4E8E;&#x662F;&#x82F9;&#x679C;&#x5728;&#x5F15;&#x5165;ARC&#x4E4B;&#x540E;&#x5BF9;Toll-Free Bridging&#x7684;&#x64CD;&#x4F5C;&#x4E5F;&#x52A0;&#x5165;&#x4E86;&#x5BF9;&#x5E94;&#x7684;&#x65B9;&#x6CD5;&#x4E0E;&#x4FEE;&#x9970;&#x7B26;&#xFF0C;&#x7528;&#x6765;&#x6307;&#x660E;&#x7528;&#x54EA;&#x79CD;&#x89C4;&#x5219;&#x7BA1;&#x7406;&#x5185;&#x5B58;&#xFF0C;&#x6216;&#x8005;&#x8BF4;&#x662F;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x6743;&#x7684;&#x5F52;&#x5C5E;&#x3002;</p>
-<p>&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x548C;&#x4FEE;&#x9970;&#x7B26;&#x5206;&#x522B;&#x662F;&#xFF1A;</p>
-<p><strong><code>__bridge</code>&#xFF08;&#x4FEE;&#x9970;&#x7B26;&#xFF09;</strong></p>
-<p>&#x53EA;&#x662F;&#x58F0;&#x660E;&#x7C7B;&#x578B;&#x8F6C;&#x53D8;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x505A;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x89C4;&#x5219;&#x7684;&#x8F6C;&#x53D8;&#x3002;
-&#x6BD4;&#x5982;&#xFF1A;
-<code>CFStringRef s1 = (__bridge CFStringRef) [[NSString alloc] initWithFormat:@&quot;Hello, %@!&quot;, name];</code>
-&#x53EA;&#x662F;&#x505A;&#x4E86;NSString&#x5230;CFStringRef&#x7684;&#x8F6C;&#x5316;&#xFF0C;&#x4F46;&#x7BA1;&#x7406;&#x89C4;&#x5219;&#x672A;&#x53D8;&#xFF0C;&#x4F9D;&#x7136;&#x8981;&#x7528;Objective-C&#x7C7B;&#x578B;&#x7684;ARC&#x6765;&#x7BA1;&#x7406;s1&#xFF0C;&#x4F60;&#x4E0D;&#x80FD;&#x7528;CFRelease()&#x53BB;&#x91CA;&#x653E;s1&#x3002;</p>
-<p><strong><code>__bridge_retained</code>&#xFF08;&#x4FEE;&#x9970;&#x7B26;&#xFF09; or <code>CFBridgingRetain</code>&#xFF08;&#x51FD;&#x6570;&#xFF09;</strong></p>
-<p>&#x8868;&#x793A;&#x5C06;&#x6307;&#x9488;&#x7C7B;&#x578B;&#x8F6C;&#x53D8;&#x7684;&#x540C;&#x65F6;&#xFF0C;&#x5C06;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x7684;&#x8D23;&#x4EFB;&#x7531;&#x539F;&#x6765;&#x7684;Objective-C&#x4EA4;&#x7ED9;Core Foundation&#x6765;&#x5904;&#x7406;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#xFF0C;&#x5C06;ARC&#x8F6C;&#x53D8;&#x4E3A;MRC&#x3002;
-&#x6BD4;&#x5982;&#xFF0C;&#x8FD8;&#x662F;&#x4E0A;&#x9762;&#x90A3;&#x4E2A;&#x4F8B;&#x5B50;</p>
-<pre><code>NSString *s1 = [[NSString alloc] initWithFormat:@&quot;Hello, %@!&quot;, name];
-&#xFFFC;CFStringRef s2 = (__bridge_retained CFStringRef)s1;
-&#xFFFC;// do something with s2
-//...
-&#xFFFC;CFRelease(s2); // &#x6CE8;&#x610F;&#x8981;&#x5728;&#x4F7F;&#x7528;&#x7ED3;&#x675F;&#x540E;&#x52A0;&#x8FD9;&#x4E2A;
-</code></pre><p>&#x6211;&#x4EEC;&#x5728;&#x7B2C;&#x4E8C;&#x884C;&#x505A;&#x4E86;&#x8F6C;&#x5316;&#xFF0C;&#x8FD9;&#x65F6;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x89C4;&#x5219;&#x7531;ARC&#x53D8;&#x4E3A;&#x4E86;MRC&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x624B;&#x52A8;&#x7684;&#x6765;&#x7BA1;&#x7406;s2&#x7684;&#x5185;&#x5B58;&#xFF0C;&#x800C;&#x5BF9;&#x4E8E;s1&#xFF0C;&#x6211;&#x4EEC;&#x5373;&#x4F7F;&#x5C06;&#x5176;&#x7F6E;&#x4E3A;nil&#xFF0C;&#x4E5F;&#x4E0D;&#x80FD;&#x91CA;&#x653E;&#x5185;&#x5B58;&#x3002;</p>
-<p>&#x7B49;&#x540C;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x7A0B;&#x5E8F;&#x4E5F;&#x53EF;&#x4EE5;&#x5199;&#x6210;&#xFF1A;</p>
-<pre><code>NSString *s1 = [[NSString alloc] initWithFormat:@&quot;Hello, %@!&quot;, name];
-&#xFFFC;CFStringRef s2 = (CFStringRef)CFBridgingRetain(s1);
-&#xFFFC;// do something with s2
-//...
-&#xFFFC;CFRelease(s2); // &#x6CE8;&#x610F;&#x8981;&#x5728;&#x4F7F;&#x7528;&#x7ED3;&#x675F;&#x540E;&#x52A0;&#x8FD9;&#x4E2A;
-</code></pre><p><strong><code>__bridge_transfer</code>&#xFF08;&#x4FEE;&#x9970;&#x7B26;&#xFF09; or <code>CFBridgingRelease</code>&#xFF08;&#x51FD;&#x6570;&#xFF09;</strong></p>
-<p>&#x8FD9;&#x4E2A;&#x4FEE;&#x9970;&#x7B26;&#x548C;&#x51FD;&#x6570;&#x7684;&#x529F;&#x80FD;&#x548C;&#x4E0A;&#x9762;&#x90A3;&#x4E2A;<code>__bridge_retained</code>&#x76F8;&#x53CD;&#xFF0C;&#x5B83;&#x8868;&#x793A;&#x5C06;&#x7BA1;&#x7406;&#x7684;&#x8D23;&#x4EFB;&#x7531;Core Foundation&#x8F6C;&#x4EA4;&#x7ED9;Objective-C&#xFF0C;&#x5373;&#x5C06;&#x7BA1;&#x7406;&#x65B9;&#x5F0F;&#x7531;MRC&#x8F6C;&#x53D8;&#x4E3A;ARC&#x3002;</p>
-<p>&#x6BD4;&#x5982;&#xFF1A;</p>
-<pre><code>CFStringRef result = CFURLCreateStringByAddingPercentEscapes(. . .);
-&#xFFFC;NSString *s = (__bridge_transfer NSString *)result;
-//or NSString *s = (NSString *)CFBridgingRelease(result);
-&#xFFFC;return s;
-</code></pre><p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5C06;result&#x7684;&#x7BA1;&#x7406;&#x8D23;&#x4EFB;&#x4EA4;&#x7ED9;&#x4E86;ARC&#x6765;&#x5904;&#x7406;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x518D;&#x663E;&#x5F0F;&#x5730;&#x5C06;CFRelease()&#x4E86;&#x3002;</p>
-<p>&#x5BF9;&#x4E86;&#xFF0C;&#x8FD9;&#x91CC;&#x4F60;&#x53EF;&#x80FD;&#x4F1A;&#x6CE8;&#x610F;&#x5230;&#x4E00;&#x4E2A;&#x7EC6;&#x8282;&#xFF0C;&#x548C;ARC&#x4E2D;&#x90A3;&#x4E2A;4&#x4E2A;&#x4E3B;&#x8981;&#x7684;&#x4FEE;&#x9970;&#x7B26;&#xFF08;<code>__strong</code>,<code>__weak</code>,...&#xFF09;&#x4E0D;&#x540C;&#xFF0C;&#x8FD9;&#x91CC;&#x4FEE;&#x9970;&#x7B26;&#x7684;&#x4F4D;&#x7F6E;&#x662F;&#x653E;&#x5728;&#x7C7B;&#x578B;&#x524D;&#x9762;&#x7684;&#xFF0C;&#x867D;&#x7136;&#x5B98;&#x65B9;&#x6587;&#x6863;&#x4E2D;&#x6CA1;&#x6709;&#x8BF4;&#x660E;&#xFF0C;&#x4F46;&#x770B;&#x5B98;&#x65B9;&#x7684;&#x5934;&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x77E5;&#x9053;&#x3002;&#x5C0F;&#x4F19;&#x4F34;&#x4EEC;&#xFF0C;&#x8BB0;&#x5F97;&#x522B;&#x628A;&#x4F4D;&#x7F6E;&#x5199;&#x9519;&#x54E6;&#xFF1A;&#xFF09;</p>
-<pre><code>#if __has_feature(objc_arc)
-
-// After using a CFBridgingRetain on an NSObject, the caller must take responsibility for calling CFRelease at an appropriate time.
-NS_INLINE CF_RETURNS_RETAINED CFTypeRef _Nullable CFBridgingRetain(id _Nullable X) {
-return (__bridge_retained CFTypeRef)X;
-}
-
-NS_INLINE id _Nullable CFBridgingRelease(CFTypeRef CF_CONSUMED _Nullable X) {
-return (__bridge_transfer id)X;
-}
-
-#else
-
-// This function is intended for use while converting to ARC mode only.
-NS_INLINE CF_RETURNS_RETAINED CFTypeRef _Nullable CFBridgingRetain(id _Nullable X) {
-return X ? CFRetain((CFTypeRef)X) : NULL;
-}
-
-// This function is intended for use while converting to ARC mode only.
-NS_INLINE id _Nullable CFBridgingRelease(CFTypeRef CF_CONSUMED _Nullable X) {
-return [(id)CFMakeCollectable(X) autorelease];
-}
-
-#endif
+# &#x79FB;&#x9664;&#x6A21;&#x62DF;&#x5668;&#x6587;&#x4EF6; (&#x53EF;&#x4EE5;&#x6E05;&#x7406;&#xFF0C;&#x8FD0;&#x884C;&#x6A21;&#x62DF;&#x5668;&#x4F1A;&#x91CD;&#x65B0;&#x751F;&#x6210; Mine:3.85GB)
+# &#x8BE5;&#x6587;&#x4EF6;&#x5939;&#x5168;&#x90FD;&#x662F;&#x4EE5;&#x6A21;&#x62DF;&#x5668;&#x7684;UDID&#x547D;&#x540D;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;device_set.plist&#x6587;&#x4EF6;&#xFF0C;&#x6839;&#x636E;&#x6587;&#x4EF6;&#x5939;&#x547D;&#x540D;&#x548C;plist&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x5224;&#x65AD;&#x5404;&#x4E2A;&#x6587;&#x4EF6;&#x5939;&#x662F;&#x67D0;&#x7248;&#x672C;&#x4E0B;&#x67D0;&#x8BBE;&#x5907;&#x7C7B;&#x578B;&#x7684;&#x6A21;&#x62DF;&#x5668;
+echo &quot;Deleting CoreSimulator/Devices...&quot;
+rm -rf ~/Library/Developer/CoreSimulator/Devices
+echo &quot;Delete Success: ~/Library/Developer/CoreSimulator/Devices&quot;
 </code></pre><h3 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h3>
 <ul>
-<li><a href="https://www.cnblogs.com/flyFreeZn/p/4264220.html" target="_blank">iOS&#x5F00;&#x53D1;ARC&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x6280;&#x672F;&#x8981;&#x70B9;</a></li>
-<li><a href="http://blog.devtang.com/2013/07/28/a-look-inside-blocks/" target="_blank">&#x8C08;Objective-C block&#x7684;&#x5B9E;&#x73B0;</a></li>
-<li><a href="https://blog.csdn.net/column/details/block.html" target="_blank">OC block&#x4E13;&#x680F;</a></li>
-<li><a href="http://tanqisen.github.io/blog/2013/04/19/gcd-block-cycle-retain/" target="_blank">&#x6B63;&#x786E;&#x4F7F;&#x7528;Block&#x907F;&#x514D;Cycle Retain&#x548C;Crash</a></li>
+<li><a href="http://www.cocoachina.com/ios/20170711/19814.html" target="_blank">Xcode &#x6E05;&#x7406;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;</a></li>
 </ul>
 
                                 
@@ -8831,12 +8537,12 @@ return [(id)CFMakeCollectable(X) autorelease];
 
             
                 
-                <a href="../../../../" class="navigation navigation-prev " aria-label="Previous page: iCloud">
+                <a href="../../../../" class="navigation navigation-prev " aria-label="Previous page: Xcode">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../../../../" class="navigation navigation-next " aria-label="Next page: Storyboard">
+                <a href="../../../../" class="navigation navigation-next " aria-label="Next page: 版本控制">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -8847,7 +8553,7 @@ return [(id)CFMakeCollectable(X) autorelease];
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ARC","level":"1.5.3.2.2","depth":4,"next":{"title":"Storyboard","level":"1.5.3.2.3","depth":4,"path":"README.md","ref":"README.md","articles":[]},"previous":{"title":"iCloud","level":"1.5.3.2.1","depth":4,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iOS知识树","gitbook":"*","description":"iOS知识树，收集整理最核心和最实用的知识，希望对大家有所帮助"},"file":{"path":"ios-system/version-feature/ios5/arc/README.md","mtime":"2019-01-18T03:18:17.806Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-18T07:13:15.110Z"},"basePath":"../../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"清理存储空间","level":"1.8.2.1.1","depth":4,"next":{"title":"版本控制","level":"1.8.3","depth":2,"path":"README.md","ref":"README.md","articles":[]},"previous":{"title":"Xcode","level":"1.8.2.1","depth":3,"path":"README.md","ref":"README.md","articles":[{"title":"清理存储空间","level":"1.8.2.1.1","depth":4,"path":"developer-tools/ide/xcode/memory-clean/README.md","ref":"developer-tools/ide/xcode/memory-clean/README.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iOS知识树","gitbook":"*","description":"iOS知识树，收集整理最核心和最实用的知识，希望对大家有所帮助"},"file":{"path":"developer-tools/ide/xcode/memory-clean/README.md","mtime":"2019-01-18T07:09:41.807Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-18T07:13:15.110Z"},"basePath":"../../../..","book":{"language":""}});
         });
     </script>
 </div>
