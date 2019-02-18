@@ -43,4 +43,15 @@
         <markdown-content>文件名和网址中尽量不用中文或者其他特殊符号；\n文件名尽量统一使用小写，单词之间连接使用“-”；\nurl路径名尽量统一使用小写，单词之间连接使用“_”。\n网址的基本结构是`[协议]://[域名]/[路径]`，其中协议和域名部分不分大小写。路径部分是否区分大小写则不一定。\nuri一般是直接映射到磁盘路径上，windows的磁盘路径不区分大小写，而unix区分。所以架在windows上的网站就不区分大小写，而架在unix上的就区分大小写。\n如果服务器是直接将路径映射到文件系统中去找，则不同平台上有不同实现：\nMac OS X 默认的文件系统（HFS case-insensitive) 是不分大小写的；\nWindows 上的 NTFS 也不区分大小写；\n Linux 系统常用的则是需要区分大小写的。
         </markdown-content>
     </blog>
+    <blog location="developer-single.html">
+        <id>5</id>
+        <date>February 18, 2019</date>
+        <title>Git - 统计研发人员的代码行数</title>
+        <description>
+            使用脚本快速根据日期统计研发人员的代码行数并导出为csv文件
+        </description>
+        <cover>developer-images/code_lines.png</cover>
+        <markdown-content>git_lines.sh脚本如下：\n```#!/bin/bash\ncsv=./$1年$2月$3日至今开发行数统计_temp.csv\ncsv2=./$1年$2月$3日至今开发行数统计.csv\necho "开始统计$1年$2月$3日至今每个人的代码行数..."\n# 移除同名文件\nrm -rf $csv $csv2\n# 防止csv乱码\n# printf "\xEF\xBB\xBF" > $csv\necho "$1年$2月$3日至今的开发行数,,," >> $csv\necho "开发人员,增加行数,删除行数,合计" >> $csv\n# 第一项($1)为增加的代码行数 第二项($2)为删除的代码行数 ($3)第三项为代码所在路径\ngit log --author=liulongdev --pretty=tformat: --numstat --since=$1-$2-$3 | awk '{add+=$1;del+=$2;total+=$1+$2;}END{print "刘X,"add,",",del,",",total}' >> $csv\ngit log --author=dashan.xiang --pretty=tformat: --numstat --since=$1-$2-$3 | awk '{add+=$1;del+=$2;total+=$1+$2}END{print "项XX,"add,",",del,",",total}' >> $csv\ngit log --author=minjing.lin --pretty=tformat: --numstat --since=$1-$2-$3 | awk '{add+=$1;del+=$2;total+=$1+$2}END{print "林XX,"add,",",del,",",total}' >> $csv\ngit log --author=feng.kong --pretty=tformat: --numstat --since=$1-$2-$3 | awk '{add+=$1;del+=$2;total+=$1+$2}END{print "孔X,"add,",",del,",",total}' >> $csv\n# iconv文件字符转码为GB18030以支持Excel,避免中文乱码\niconv -f UTF8 -t GB18030 $csv >$csv2\n# 移除UTF8编码的csv文件\nrm -rf $csv\necho "结束统计:)"\necho "旧版本的Excel不支持逗号分割符"\necho "推荐使用Mac自带的Numbers打开《$1年$2月$3日至今开发行数统计.csv》"\n# 使用Mac自带的Numbers打开csv文件\nopen $csv2 -a Numbers```\n终端实例：\n```$ sh git_lines.sh 2018 6 1\n开始统计2018年6月1日至今每个人的代码行数...\n结束统计:)\n旧版本的Excel不支持逗号分割符\n推荐使用Mac自带的Numbers打开《2018年6月1日至今开发行数统计.csv》```
+        </markdown-content>
+    </blog>
 </blogs>
