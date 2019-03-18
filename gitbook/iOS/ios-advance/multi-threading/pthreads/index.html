@@ -60,7 +60,7 @@
     <link rel="next" href="../../../" />
     
     
-    <link rel="prev" href="../../../" />
+    <link rel="prev" href="../" />
     
 
     </head>
@@ -5492,9 +5492,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.6" data-path="../../../">
+        <li class="chapter " data-level="1.10.6" data-path="../">
             
-                <a href="../../../">
+                <a href="../">
             
                     
                     多线程
@@ -7748,7 +7748,7 @@
 <p>POSIX &#x7EBF;&#x7A0B;&#xFF08;&#x82F1;&#x8BED;&#xFF1A;POSIX Threads&#xFF0C;&#x5E38;&#x88AB;&#x7F29;&#x5199; &#x4E3A; Pthreads&#xFF09;&#x662F; POSIX &#x7684;&#x7EBF;&#x7A0B;&#x6807;&#x51C6;&#xFF0C;&#x5B9A;&#x4E49;&#x4E86;&#x521B;&#x5EFA;&#x548C;&#x64CD;&#x7EB5;&#x7EBF;&#x7A0B;&#x7684;&#x4E00;&#x5957; API&#x3002;
 &#x5B9E;&#x73B0; POSIX &#x7EBF;&#x7A0B;&#x6807;&#x51C6;&#x7684;&#x5E93;&#x5E38;&#x88AB;&#x79F0;&#x4F5C; Pthreads&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x4E8E; Unix-like POSIX &#x7CFB;&#x7EDF;&#xFF0C;&#x5982; Linux&#x3001;Solaris&#x3002;&#x4F46;&#x662F; Microsoft Windows &#x4E0A;&#x7684;&#x5B9E;&#x73B0;&#x4E5F;&#x5B58;&#x5728;&#xFF0C;&#x4F8B;&#x5982;&#x76F4;&#x63A5;&#x4F7F;&#x7528; Windows API &#x5B9E;&#x73B0;&#x7684;&#x7B2C;&#x4E09;&#x65B9;&#x5E93; pthreads-w32&#xFF1B;&#x800C;&#x5229;&#x7528; Windows &#x7684; SFU/SUA &#x5B50;&#x7CFB;&#x7EDF;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5FAE;&#x8F6F;&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x539F;&#x751F; POSIX API&#x3002;</p>
 <h4 id="playground&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF08;playground&#x76EE;&#x524D;&#x53EA;&#x652F;&#x6301;swift&#xFF09;">Playground&#x4EE3;&#x7801;&#x793A;&#x4F8B;&#xFF08;Playground&#x76EE;&#x524D;&#x53EA;&#x652F;&#x6301;Swift&#xFF09;</h4>
-<pre><code>import UIKit
+<pre><code>import Foundation
 
 print(&quot;\(Thread.current)&quot;)
 
@@ -7790,7 +7790,10 @@ pthread_detach(thread!)
 // 4. &#x7EC8;&#x6B62;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;
 pthread_exit(thread)
 </code></pre><h4 id="objective-c&#x4EE3;&#x7801;&#x793A;&#x4F8B;">Objective-C&#x4EE3;&#x7801;&#x793A;&#x4F8B;</h4>
-<pre><code>// &#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x7EBF;&#x7A0B;&#x4E2D;&#x6267;&#x884C; demo &#x51FD;&#x6570;
+<pre><code>// OC&#x9700;&#x8981;&#x5BFC;&#x5165;&#x5934;&#x6587;&#x4EF6;
+#import &lt;pthread.h&gt;
+
+// &#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x7EBF;&#x7A0B;&#x4E2D;&#x6267;&#x884C; demo &#x51FD;&#x6570;
 - (void)pthreadDemo {
 /**
 &#x53C2;&#x6570;&#xFF1A;
@@ -7845,6 +7848,7 @@ pthread_mutex_destroy(&amp;_lock); //&#x6700;&#x540E;&#x9500;&#x6BC1;&#x4E92;&#x
 <li><a href="https://www.jianshu.com/p/cbaeea5368b1" target="_blank">iOS &#x591A;&#x7EBF;&#x7A0B;&#xFF1A;&#x300E;pthread&#x3001;NSThread&#x300F;&#x8BE6;&#x5C3D;&#x603B;&#x7ED3;</a></li>
 <li><a href="https://www.cnblogs.com/graveliang/p/5693835.html" target="_blank">iOS&#x56DB;&#x79CD;&#x591A;&#x7EBF;&#x7A0B;&#xFF08;swift&#x548C;oc&#xFF09;</a></li>
 <li><a href="https://www.jianshu.com/p/cfc6e7d2316a" target="_blank">iOS&#x591A;&#x7EBF;&#x7A0B;&#x4E2D;&#x7684;&#x5B9E;&#x9645;&#x65B9;&#x6848;&#x4E4B;&#x4E00;pthread</a></li>
+<li><a href="https://blog.csdn.net/smile_to_the_world/article/details/79841513" target="_blank">Swift&#x516C;&#x6709;&#x201C;@&#x201D;&#x6CE8;&#x89E3;&#x5C5E;&#x6027;&#x7684;&#x5168;&#x9762;&#x4ECB;&#x7ECD;</a></li>
 </ol>
 
                                 
@@ -7873,7 +7877,7 @@ pthread_mutex_destroy(&amp;_lock); //&#x6700;&#x540E;&#x9500;&#x6BC1;&#x4E92;&#x
 
             
                 
-                <a href="../../../" class="navigation navigation-prev " aria-label="Previous page: 多线程">
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 多线程">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -7889,7 +7893,7 @@ pthread_mutex_destroy(&amp;_lock); //&#x6700;&#x540E;&#x9500;&#x6BC1;&#x4E92;&#x
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Pthreads","level":"1.10.6.1","depth":3,"next":{"title":"NSThread","level":"1.10.6.2","depth":3,"path":"README.md","ref":"README.md","articles":[]},"previous":{"title":"多线程","level":"1.10.6","depth":2,"path":"README.md","ref":"README.md","articles":[{"title":"Pthreads","level":"1.10.6.1","depth":3,"path":"ios-advance/multi-threading/pthreads/README.md","ref":"ios-advance/multi-threading/pthreads/README.md","articles":[]},{"title":"NSThread","level":"1.10.6.2","depth":3,"path":"README.md","ref":"README.md","articles":[]},{"title":"NSOperation","level":"1.10.6.3","depth":3,"path":"README.md","ref":"README.md","articles":[]},{"title":"GCD","level":"1.10.6.4","depth":3,"path":"README.md","ref":"README.md","articles":[]},{"title":"Lock","level":"1.10.6.5","depth":3,"path":"README.md","ref":"README.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iOS知识树","gitbook":"*","description":"iOS知识树，收集整理最核心和最实用的知识，希望对大家有所帮助"},"file":{"path":"ios-advance/multi-threading/pthreads/README.md","mtime":"2019-03-13T08:43:55.186Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-13T08:37:38.305Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Pthreads","level":"1.10.6.1","depth":3,"next":{"title":"NSThread","level":"1.10.6.2","depth":3,"path":"README.md","ref":"README.md","articles":[]},"previous":{"title":"多线程","level":"1.10.6","depth":2,"path":"ios-advance/multi-threading/README.md","ref":"ios-advance/multi-threading/README.md","articles":[{"title":"Pthreads","level":"1.10.6.1","depth":3,"path":"ios-advance/multi-threading/pthreads/README.md","ref":"ios-advance/multi-threading/pthreads/README.md","articles":[]},{"title":"NSThread","level":"1.10.6.2","depth":3,"path":"README.md","ref":"README.md","articles":[]},{"title":"NSOperation","level":"1.10.6.3","depth":3,"path":"README.md","ref":"README.md","articles":[]},{"title":"GCD","level":"1.10.6.4","depth":3,"path":"README.md","ref":"README.md","articles":[]},{"title":"Lock","level":"1.10.6.5","depth":3,"path":"README.md","ref":"README.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"iOS知识树","gitbook":"*","description":"iOS知识树，收集整理最核心和最实用的知识，希望对大家有所帮助"},"file":{"path":"ios-advance/multi-threading/pthreads/README.md","mtime":"2019-03-13T09:37:33.670Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-18T06:39:15.960Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
