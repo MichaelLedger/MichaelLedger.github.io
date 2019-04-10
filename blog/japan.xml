@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--以下特殊字符不可使用：-->
+<!--&不可使用-->
+<!--&rsquo;全局替换为'-->
+<!--<br/>换行符全局替换为\n-->
+<blogs>
+    <blog location="../japan/kana-syllabary/pronounce.html">
+        <id>1</id>
+        <date>April 10, 2019</date>
+        <title>日语五十音图 - 发音表及笔顺表</title>
+        <description>
+            日语初学者必学的五十音图及日语发音基础知识。日语五十音图，又称日语五十音，是将日语的假名（平假名、片假名）以元音、子音为分类依据所排列出来的一个图表；日语五十音图提供五十音图笔顺、日语五十音图笔画信息。
+        </description>
+        <cover>../japan/images/kana-syllabary.jpeg</cover>
+        <markdown-content>
+        </markdown-content>
+    </blog>
+</blogs>
