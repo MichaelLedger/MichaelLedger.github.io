@@ -1,0 +1,2120 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>对象持有的强指针 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="retain_cycle.html" />
+    
+    
+    <link rel="prev" href="Obj-Associated.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    iOS 开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../../ObjC-Basic/">
+            
+                <a href="../../ObjC-Basic/">
+            
+                    
+                    Objective-C 语言基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../../ObjC-Basic/Class.html">
+            
+                <a href="../../ObjC-Basic/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2" data-path="../../ObjC-Basic/Block.html">
+            
+                <a href="../../ObjC-Basic/Block.html">
+            
+                    
+                    Block 编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.3" data-path="../../ObjC-Basic/Runtime.html">
+            
+                <a href="../../ObjC-Basic/Runtime.html">
+            
+                    
+                    Objective-C Runtime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.4" data-path="../../ObjC-Basic/MM.html">
+            
+                <a href="../../ObjC-Basic/MM.html">
+            
+                    
+                    Objective-C 内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.5" data-path="../../ObjC-Basic/Runloop.html">
+            
+                <a href="../../ObjC-Basic/Runloop.html">
+            
+                    
+                    Runloop
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../../Cocoa-Touch/">
+            
+                <a href="../../Cocoa-Touch/">
+            
+                    
+                    Cocoa Touch
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="../../Cocoa-Touch/Event-Handling.html">
+            
+                <a href="../../Cocoa-Touch/Event-Handling.html">
+            
+                    
+                    事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2" data-path="../../Cocoa-Touch/UIApplication.html">
+            
+                <a href="../../Cocoa-Touch/UIApplication.html">
+            
+                    
+                    UIApplication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.3" data-path="../../Cocoa-Touch/UIView-Basic.html">
+            
+                <a href="../../Cocoa-Touch/UIView-Basic.html">
+            
+                    
+                    UIView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.4" data-path="../../Cocoa-Touch/UIViewController.html">
+            
+                <a href="../../Cocoa-Touch/UIViewController.html">
+            
+                    
+                    UIViewController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.5" data-path="../../Cocoa-Touch/Animation.html">
+            
+                <a href="../../Cocoa-Touch/Animation.html">
+            
+                    
+                    动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.6" data-path="../../Cocoa-Touch/Network.html">
+            
+                <a href="../../Cocoa-Touch/Network.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.7" data-path="../../Cocoa-Touch/Multithreading.html">
+            
+                <a href="../../Cocoa-Touch/Multithreading.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../../Cocoa-Touch/File-System.html">
+            
+                <a href="../../Cocoa-Touch/File-System.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.9" data-path="../../Cocoa-Touch/Design.html">
+            
+                <a href="../../Cocoa-Touch/Design.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.10" data-path="../../Cocoa-Touch/Performance.html">
+            
+                <a href="../../Cocoa-Touch/Performance.html">
+            
+                    
+                    性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../../Swift/">
+            
+                <a href="../../Swift/">
+            
+                    
+                    Swift
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="../../Swift/Class.html">
+            
+                <a href="../../Swift/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="../../Swift/Struct-And-Enum.html">
+            
+                <a href="../../Swift/Struct-And-Enum.html">
+            
+                    
+                    结构体与枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3" data-path="../../Swift/Function-And-Closure.html">
+            
+                <a href="../../Swift/Function-And-Closure.html">
+            
+                    
+                    函数与闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../../Interview/">
+            
+                <a href="../../Interview/">
+            
+                    
+                    面试问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1" data-path="../../Interview/iOSInterviewQuestions/">
+            
+                <a href="../../Interview/iOSInterviewQuestions/">
+            
+                    
+                    《招聘一个靠谱的iOS》
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1.1" data-path="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.1.2" data-path="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.2" data-path="../../interview/ZhiHu-QA/">
+            
+                <a href="../../interview/ZhiHu-QA/">
+            
+                    
+                    关于一些 iOS 面试问题的解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.3" data-path="../../interview/iOSDeveloperQA/">
+            
+                <a href="../../interview/iOSDeveloperQA/">
+            
+                    
+                    iOS 开发面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.4" data-path="../../interview/MXR-QA/">
+            
+                <a href="../../interview/MXR-QA/">
+            
+                    
+                    MXR 面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    源码分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1" data-path="../AFNetworking/AFNetworking_1.html">
+            
+                <a href="../AFNetworking/AFNetworking_1.html">
+            
+                    
+                    AFNetworking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1.1" data-path="../AFNetworking/AFNetworking_2.html">
+            
+                <a href="../AFNetworking/AFNetworking_2.html">
+            
+                    
+                    AFURLSessionManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.2" data-path="../AFNetworking/AFNetworking_3.html">
+            
+                <a href="../AFNetworking/AFNetworking_3.html">
+            
+                    
+                    AFURLSerialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.3" data-path="../AFNetworking/AFNetworking_4.html">
+            
+                <a href="../AFNetworking/AFNetworking_4.html">
+            
+                    
+                    AFNetworkReachabilityManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.4" data-path="../AFNetworking/AFNetworking_5.html">
+            
+                <a href="../AFNetworking/AFNetworking_5.html">
+            
+                    
+                    HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.2" data-path="../Alamofire/">
+            
+                <a href="../Alamofire/">
+            
+                    
+                    Alamofire
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3" data-path="../architecture/mvx.html">
+            
+                <a href="../architecture/mvx.html">
+            
+                    
+                    architecture
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.3.1" data-path="../architecture/mvx-model.html">
+            
+                <a href="../architecture/mvx-model.html">
+            
+                    
+                    MVX-Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.2" data-path="../architecture/mvx-view.html">
+            
+                <a href="../architecture/mvx-view.html">
+            
+                    
+                    MVX-View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.3" data-path="../architecture/mvx-controller.html">
+            
+                <a href="../architecture/mvx-controller.html">
+            
+                    
+                    MVX-Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4" >
+            
+                <span>
+            
+                    
+                    AsyncDisplayKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.4.1" data-path="../AsyncDisplayKit/ASDK_1.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_1.html">
+            
+                    
+                    提升界面的渲染性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4.2" data-path="../AsyncDisplayKit/ASDK_2.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_2.html">
+            
+                    
+                    布局算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4.3" data-path="../AsyncDisplayKit/ASDK_3.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_3.html">
+            
+                    
+                    预加载与智能预加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5" >
+            
+                <span>
+            
+                    
+                    BlocksKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.5.1" data-path="../BlocksKit/BlocksKit_1.html">
+            
+                <a href="../BlocksKit/BlocksKit_1.html">
+            
+                    
+                    神奇的 BlocksKit (一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5.2" data-path="../BlocksKit/BlocksKit_2.html">
+            
+                <a href="../BlocksKit/BlocksKit_2.html">
+            
+                    
+                    神奇的 BlocksKit (二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.6" data-path="../Blog/initialize-comments.html">
+            
+                <a href="../Blog/initialize-comments.html">
+            
+                    
+                    Gitalk/Gitment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7" >
+            
+                <span>
+            
+                    
+                    CocoaPods
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.7.1" data-path="../CocoaPods/CocoaPods.html">
+            
+                <a href="../CocoaPods/CocoaPods.html">
+            
+                    
+                    CocoaPods 都做了什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7.2" data-path="../CocoaPods/DSL.html">
+            
+                <a href="../CocoaPods/DSL.html">
+            
+                    
+                    DSL 以及 DSL 的应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8" >
+            
+                <span>
+            
+                    
+                    Database
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.8.1" data-path="../Database/concurrency-control.html">
+            
+                <a href="../Database/concurrency-control.html">
+            
+                    
+                    数据库并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.2" data-path="../Database/dynamo.html">
+            
+                <a href="../Database/dynamo.html">
+            
+                    
+                    分布式键值存储 Dynamo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.3" data-path="../Database/leveldb-bigtable.html">
+            
+                <a href="../Database/leveldb-bigtable.html">
+            
+                    
+                    Bigtable 和 LevelDB 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.4" data-path="../Database/mongodb-to-mysql.html">
+            
+                <a href="../Database/mongodb-to-mysql.html">
+            
+                    
+                    MongoDB 迁移到 MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.5" data-path="../Database/mongodb-wiredtiger.html">
+            
+                <a href="../Database/mongodb-wiredtiger.html">
+            
+                    
+                    MongoDB 和 WiredTiger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.6" data-path="../Database/mysql.html">
+            
+                <a href="../Database/mysql.html">
+            
+                    
+                    MySQL 和 InnoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.7" data-path="../Database/sql-index-intro.html">
+            
+                <a href="../Database/sql-index-intro.html">
+            
+                    
+                    MySQL 索引设计概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.8" data-path="../Database/sql-index-performance.html">
+            
+                <a href="../Database/sql-index-performance.html">
+            
+                    
+                    MySQL 索引性能分析概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.9" data-path="../Database/transaction.html">
+            
+                <a href="../Database/transaction.html">
+            
+                    
+                    MySQL 中事务的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.9" data-path="../DKNightVersion/DKNightVersion.html">
+            
+                <a href="../DKNightVersion/DKNightVersion.html">
+            
+                    
+                    DKNightVersion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10" >
+            
+                <span>
+            
+                    
+                    FBRetainCycleDetector
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.10.1" data-path="block.html">
+            
+                <a href="block.html">
+            
+                    
+                    block 如何持有对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.2" data-path="Obj-Associated.html">
+            
+                <a href="Obj-Associated.html">
+            
+                    
+                    Associated Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.5.10.3" data-path="Obj-Strong.html">
+            
+                <a href="Obj-Strong.html">
+            
+                    
+                    对象持有的强指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.4" data-path="retain_cycle.html">
+            
+                <a href="retain_cycle.html">
+            
+                    
+                    解决循环引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.11" data-path="../fishhook/fishhook.html">
+            
+                <a href="../fishhook/fishhook.html">
+            
+                    
+                    fishhook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.12" data-path="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                <a href="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                    
+                    IQKeyboardManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.13" data-path="../KVOController/KVOController.html">
+            
+                <a href="../KVOController/KVOController.html">
+            
+                    
+                    KVOController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.14" data-path="../libextobjc/libextobjc.html">
+            
+                <a href="../libextobjc/libextobjc.html">
+            
+                    
+                    libextobjc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.15" data-path="../Masonry/Masonry.html">
+            
+                <a href="../Masonry/Masonry.html">
+            
+                    
+                    Masonry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.16" data-path="../MBProgressHUD/">
+            
+                <a href="../MBProgressHUD/">
+            
+                    
+                    MBProgressHUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17" data-path="../objc/">
+            
+                <a href="../objc/">
+            
+                    
+                    objc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.17.1" data-path="../objc/associated-obj.html">
+            
+                <a href="../objc/associated-obj.html">
+            
+                    
+                    关联对象 AssociatedObject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.2" data-path="../objc/autoreleasepool.html">
+            
+                <a href="../objc/autoreleasepool.html">
+            
+                    
+                    自动释放池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.3" data-path="../objc/black-box-retain-release.html">
+            
+                <a href="../objc/black-box-retain-release.html">
+            
+                    
+                    黑箱中的 retain 和 release
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.4" data-path="../objc/func-structure.html">
+            
+                <a href="../objc/func-structure.html">
+            
+                    
+                    ObjC 中方法的结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.5" data-path="../objc/hash.html">
+            
+                <a href="../objc/hash.html">
+            
+                    
+                    哈希表的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.6" data-path="../objc/initialization.html">
+            
+                <a href="../objc/initialization.html">
+            
+                    
+                    初始化对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.7" data-path="../objc/isa.html">
+            
+                <a href="../objc/isa.html">
+            
+                    
+                    isa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.8" data-path="../objc/lazy-initialize.html">
+            
+                <a href="../objc/lazy-initialize.html">
+            
+                    
+                    懒惰的 initialize 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.9" data-path="../objc/load.html">
+            
+                <a href="../objc/load.html">
+            
+                    
+                    load 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.10" data-path="../objc/msgSend.html">
+            
+                <a href="../objc/msgSend.html">
+            
+                    
+                    消息传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18" >
+            
+                <span>
+            
+                    
+                    OHHTTPStubs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.18.1" data-path="../OHHTTPStubs/intercept.html">
+            
+                <a href="../OHHTTPStubs/intercept.html">
+            
+                    
+                    HTTP Intercept
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18.2" data-path="../OHHTTPStubs/mock.html">
+            
+                <a href="../OHHTTPStubs/mock.html">
+            
+                    
+                    HTTP Mock
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.19" data-path="../ProtocolKit/ProtocolKit.html">
+            
+                <a href="../ProtocolKit/ProtocolKit.html">
+            
+                    
+                    ProtocolKit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20" data-path="../rack/rack.html">
+            
+                <a href="../rack/rack.html">
+            
+                    
+                    rack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.20.1" data-path="../rack/rack-thin.html">
+            
+                <a href="../rack/rack-thin.html">
+            
+                    
+                    Thin 的事件驱动模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20.2" data-path="../rack/rack-unicorn.html">
+            
+                <a href="../rack/rack-unicorn.html">
+            
+                    
+                    Unicorn 的多进程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20.3" data-path="../rack/rack-webrik.html">
+            
+                <a href="../rack/rack-webrik.html">
+            
+                    
+                    WEBrick 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.21" data-path="../Rails/activerecord.html">
+            
+                <a href="../Rails/activerecord.html">
+            
+                    
+                    Rails
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22" >
+            
+                <span>
+            
+                    
+                    ReactiveObjC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.22.1" data-path="../ReactiveObjC/RACChannel.html">
+            
+                <a href="../ReactiveObjC/RACChannel.html">
+            
+                    
+                    RACChannel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.2" data-path="../ReactiveObjC/RACCommand.html">
+            
+                <a href="../ReactiveObjC/RACCommand.html">
+            
+                    
+                    RACCommand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.3" data-path="../ReactiveObjC/RACDelegateProxy.html">
+            
+                <a href="../ReactiveObjC/RACDelegateProxy.html">
+            
+                    
+                    RACDelegateProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.4" data-path="../ReactiveObjC/RACMulticastConnection.html">
+            
+                <a href="../ReactiveObjC/RACMulticastConnection.html">
+            
+                    
+                    RACMulticastConnection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.5" data-path="../ReactiveObjC/RACScheduler.html">
+            
+                <a href="../ReactiveObjC/RACScheduler.html">
+            
+                    
+                    RACScheduler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.6" data-path="../ReactiveObjC/RACSequence.html">
+            
+                <a href="../ReactiveObjC/RACSequence.html">
+            
+                    
+                    RACSequence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.7" data-path="../ReactiveObjC/RACSignal.html">
+            
+                <a href="../ReactiveObjC/RACSignal.html">
+            
+                    
+                    RACSignal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.8" data-path="../ReactiveObjC/RACSubject.html">
+            
+                <a href="../ReactiveObjC/RACSubject.html">
+            
+                    
+                    RACSubject
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23" >
+            
+                <span>
+            
+                    
+                    Redis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.23.1" data-path="../Redis/redis-cli.html">
+            
+                <a href="../Redis/redis-cli.html">
+            
+                    
+                    命令处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.2" data-path="../Redis/redis-eventloop.html">
+            
+                <a href="../Redis/redis-eventloop.html">
+            
+                    
+                    事件循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.3" data-path="../Redis/redis-io-multiplexing.html">
+            
+                <a href="../Redis/redis-io-multiplexing.html">
+            
+                    
+                    I/O 多路复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.24" data-path="../Ruby/Ruby.html">
+            
+                <a href="../Ruby/Ruby.html">
+            
+                    
+                    Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.25" data-path="../SDWebImage/">
+            
+                <a href="../SDWebImage/">
+            
+                    
+                    SDWebImage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="../../More.html">
+            
+                <a href="../../More.html">
+            
+                    
+                    更多资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >对象持有的强指针</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x68C0;&#x6D4B;-nsobject-&#x5BF9;&#x8C61;&#x6301;&#x6709;&#x7684;&#x5F3A;&#x6307;&#x9488;">&#x68C0;&#x6D4B; NSObject &#x5BF9;&#x8C61;&#x6301;&#x6709;&#x7684;&#x5F3A;&#x6307;&#x9488;</h1>
+<p>&#x5728;&#x4E0A;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#x4ECB;&#x7ECD;&#x4E86; <code>FBRetainCycleDetector</code> &#x7684;&#x57FA;&#x672C;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#xFF0C;&#x8FD9;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x5206;&#x6790;&#x5B83;&#x662F;&#x5982;&#x4F55;&#x4ECE;&#x6BCF;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4E2D;&#x83B7;&#x5F97;&#x5B83;&#x6301;&#x6709;&#x7684;&#x5F3A;&#x6307;&#x9488;&#x7684;&#x3002;</p>
+<blockquote>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x770B;&#x7B2C;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x8FD9;&#x91CC;&#x8FD8;&#x662F;&#x6700;&#x597D;&#x770B;&#x4E00;&#x4E0B;&#xFF0C;&#x4E86;&#x89E3;&#x4E00;&#x4E0B; <code>FBRetainCycleDetector</code> &#x7684;&#x5DE5;&#x4F5C;&#x539F;&#x7406;&#xFF0C;<a href="https://github.com/Draveness/iOS-Source-Code-Analyze/blob/master/contents/FBRetainCycleDetector/&#x5982;&#x4F55;&#x5728;%20iOS%20&#x4E2D;&#x89E3;&#x51B3;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x7684;&#x95EE;&#x9898;.md" target="_blank">&#x5982;&#x4F55;&#x5728; iOS &#x4E2D;&#x89E3;&#x51B3;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x7684;&#x95EE;&#x9898;</a>&#x3002;</p>
+</blockquote>
+<p><code>FBRetainCycleDetector</code> &#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x5F3A;&#x6307;&#x9488;&#x662F;&#x901A;&#x8FC7; <code>FBObjectiveCObject</code> &#x7C7B;&#x7684; <code>- allRetainedObjects</code> &#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x4E00;&#x65B9;&#x6CD5;&#x662F;&#x901A;&#x8FC7;&#x5176;&#x7236;&#x7C7B; <code>FBObjectiveCGraphElement</code> &#x7EE7;&#x627F;&#x8FC7;&#x6765;&#x7684;&#xFF0C;&#x53EA;&#x662F;&#x5185;&#x90E8;&#x6709;&#x7740;&#x4E0D;&#x540C;&#x7684;&#x5B9E;&#x73B0;&#x3002;</p>
+<h2 id="allretainedobjects-&#x65B9;&#x6CD5;">allRetainedObjects &#x65B9;&#x6CD5;</h2>
+<p>&#x6211;&#x4EEC;&#x4F1A;&#x4EE5; <code>XXObject</code> &#x4E3A;&#x4F8B;&#x6F14;&#x793A; <code>- allRetainedObjects</code> &#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x8FC7;&#x7A0B;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-meta">#import <span class="hljs-meta-string">&lt;Foundation/Foundation.h&gt;</span></span>
+
+<span class="hljs-class"><span class="hljs-keyword">@interface</span> <span class="hljs-title">XXObject</span> : <span class="hljs-title">NSObject</span></span>
+
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">strong</span>) <span class="hljs-keyword">id</span> first;
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">weak</span>)   <span class="hljs-keyword">id</span> second;
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">strong</span>) <span class="hljs-keyword">id</span> third;
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">strong</span>) <span class="hljs-keyword">id</span> forth;
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">weak</span>)   <span class="hljs-keyword">id</span> fifth;
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">strong</span>) <span class="hljs-keyword">id</span> sixth;
+
+<span class="hljs-keyword">@end</span>
+</code></pre>
+<p>&#x4F7F;&#x7528; <code>FBRetainCycleDetector</code> &#x7684;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-objectivec">XXObject *object = [[XXObject alloc] init];
+
+FBRetainCycleDetector *detector = [FBRetainCycleDetector new];
+[detector addCandidate:object];
+__unused <span class="hljs-built_in">NSSet</span> *cycles = [detector findRetainCycles];
+</code></pre>
+<p>&#x5728; <code>FBObjectiveCObject</code> &#x4E2D;&#xFF0C;<code>- allRetainedObjects</code> &#x65B9;&#x6CD5;&#x53EA;&#x662F;&#x8C03;&#x7528;&#x4E86; <code>- _unfilteredRetainedObjects</code>&#xFF0C;&#x7136;&#x540E;&#x8FDB;&#x884C;&#x4E86;&#x8FC7;&#x6EE4;&#xFF0C;&#x6587;&#x7AE0;&#x4E3B;&#x8981;&#x4F1A;&#x5BF9; <code>- _unfilteredRetainedObjects</code> &#x7684;&#x5B9E;&#x73B0;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF1A;</p>
+<pre><code class="lang-objectivec">- (<span class="hljs-built_in">NSSet</span> *)allRetainedObjects {
+    <span class="hljs-built_in">NSArray</span> *unfiltered = [<span class="hljs-keyword">self</span> _unfilteredRetainedObjects];
+    <span class="hljs-keyword">return</span> [<span class="hljs-keyword">self</span> filterObjects:unfiltered];
+}
+</code></pre>
+<p>&#x65B9;&#x6CD5; <code>- _unfilteredRetainedObjects</code> &#x7684;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x591A;&#x7684;&#xFF0C;&#x8FD9;&#x91CC;&#x4F1A;&#x5C06;&#x4EE3;&#x7801;&#x5206;&#x6210;&#x51E0;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x9996;&#x5148;&#x662F;&#x6700;&#x91CD;&#x8981;&#x7684;&#x90E8;&#x5206;&#xFF1A;&#x5982;&#x4F55;&#x5F97;&#x5230;&#x5BF9;&#x8C61;&#x6301;&#x6709;&#x7684;&#x5F3A;&#x5F15;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-objectivec">- (<span class="hljs-built_in">NSArray</span> *)_unfilteredRetainedObjects
+    <span class="hljs-built_in">NSArray</span> *strongIvars = FBGetObjectStrongReferences(<span class="hljs-keyword">self</span>.object, <span class="hljs-keyword">self</span>.configuration.layoutCache);
+
+    <span class="hljs-built_in">NSMutableArray</span> *retainedObjects = [[[<span class="hljs-keyword">super</span> allRetainedObjects] allObjects] mutableCopy];
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">id</span>&lt;FBObjectReference&gt; ref <span class="hljs-keyword">in</span> strongIvars) {
+        <span class="hljs-keyword">id</span> referencedObject = [ref objectReferenceFromObject:<span class="hljs-keyword">self</span>.object];
+
+        <span class="hljs-keyword">if</span> (referencedObject) {
+            <span class="hljs-built_in">NSArray</span>&lt;<span class="hljs-built_in">NSString</span> *&gt; *namePath = [ref namePath];
+            FBObjective<span class="hljs-built_in">CGraphElement</span> *element = FBWrapObjectGraphElementWithContext(<span class="hljs-keyword">self</span>,
+                                                                                    referencedObject,
+                                                                                    <span class="hljs-keyword">self</span>.configuration,
+                                                                                    namePath);
+            <span class="hljs-keyword">if</span> (element) {
+                [retainedObjects addObject:element];
+            }
+        }
+    }
+
+    ...
+}
+</code></pre>
+<p>&#x83B7;&#x53D6;&#x5F3A;&#x5F15;&#x7528;&#x662F;&#x901A;&#x8FC7; <code>FBGetObjectStrongReferences</code> &#x8FD9;&#x4E00;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-built_in">NSArray</span>&lt;<span class="hljs-keyword">id</span>&lt;FBObjectReference&gt;&gt; *FBGetObjectStrongReferences(<span class="hljs-keyword">id</span> obj,
+                                                            <span class="hljs-built_in">NSMutableDictionary</span>&lt;Class, <span class="hljs-built_in">NSArray</span>&lt;<span class="hljs-keyword">id</span>&lt;FBObjectReference&gt;&gt; *&gt; *layoutCache) {
+    <span class="hljs-built_in">NSMutableArray</span>&lt;<span class="hljs-keyword">id</span>&lt;FBObjectReference&gt;&gt; *array = [<span class="hljs-built_in">NSMutableArray</span> new];
+
+    __unsafe_unretained Class previousClass = <span class="hljs-literal">nil</span>;
+    __unsafe_unretained Class currentClass = object_getClass(obj);
+
+    <span class="hljs-keyword">while</span> (previousClass != currentClass) {
+        <span class="hljs-built_in">NSArray</span>&lt;<span class="hljs-keyword">id</span>&lt;FBObjectReference&gt;&gt; *ivars;
+
+        <span class="hljs-keyword">if</span> (layoutCache &amp;&amp; currentClass) {
+            ivars = layoutCache[currentClass];
+        }
+
+        <span class="hljs-keyword">if</span> (!ivars) {
+            ivars = FBGetStrongReferencesForClass(currentClass);
+            <span class="hljs-keyword">if</span> (layoutCache &amp;&amp; currentClass) {
+                layoutCache[(<span class="hljs-keyword">id</span>&lt;<span class="hljs-built_in">NSCopying</span>&gt;)currentClass] = ivars;
+            }
+        }
+        [array addObjectsFromArray:ivars];
+
+        previousClass = currentClass;
+        currentClass = class_getSuperclass(currentClass);
+    }
+
+    <span class="hljs-keyword">return</span> [array <span class="hljs-keyword">copy</span>];
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x7684;&#x6838;&#x5FC3;&#x90E8;&#x5206;&#x662F;&#x6267;&#x884C; <code>FBGetStrongReferencesForClass</code> &#x8FD4;&#x56DE; <code>currentClass</code> &#x4E2D;&#x7684;&#x5F3A;&#x5F15;&#x7528;&#xFF0C;&#x53EA;&#x662F;&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x9012;&#x5F52;&#x5730;&#x67E5;&#x627E;&#x4E86;&#x6240;&#x6709;&#x7236;&#x7C7B;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x5E76;&#x4E14;&#x52A0;&#x5165;&#x4E86;&#x7F13;&#x5B58;&#x4EE5;&#x52A0;&#x901F;&#x67E5;&#x627E;&#x5F3A;&#x5F15;&#x7528;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5C31;&#x662F;&#x4ECE;&#x5BF9;&#x8C61;&#x7684;&#x7ED3;&#x6784;&#x4E2D;&#x83B7;&#x53D6;&#x5F3A;&#x5F15;&#x7528;&#x7684;&#x8FC7;&#x7A0B;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">static</span> <span class="hljs-built_in">NSArray</span>&lt;<span class="hljs-keyword">id</span>&lt;FBObjectReference&gt;&gt; *FBGetStrongReferencesForClass(Class aCls) {
+    <span class="hljs-built_in">NSArray</span>&lt;<span class="hljs-keyword">id</span>&lt;FBObjectReference&gt;&gt; *ivars = [FBGetClassReferences(aCls) filteredArrayUsingPredicate:[<span class="hljs-built_in">NSPredicate</span> predicateWithBlock:^<span class="hljs-built_in">BOOL</span>(<span class="hljs-keyword">id</span> evaluatedObject, <span class="hljs-built_in">NSDictionary</span> *bindings) {
+        <span class="hljs-keyword">if</span> ([evaluatedObject isKindOfClass:[FBIvarReference class]]) {
+            FBIvarReference *wrapper = evaluatedObject;
+            <span class="hljs-keyword">return</span> wrapper.type != FBUnknownType;
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">YES</span>;
+    }]];
+
+    <span class="hljs-keyword">const</span> uint8_t *fullLayout = class_getIvarLayout(aCls);
+
+    <span class="hljs-keyword">if</span> (!fullLayout) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>;
+    }
+
+    <span class="hljs-built_in">NSUInteger</span> minimumIndex = FBGetMinimumIvarIndex(aCls);
+    <span class="hljs-built_in">NSIndexSet</span> *parsedLayout = FBGetLayoutAsIndexesForDescription(minimumIndex, fullLayout);
+
+    <span class="hljs-built_in">NSArray</span>&lt;<span class="hljs-keyword">id</span>&lt;FBObjectReference&gt;&gt; *filteredIvars =
+    [ivars filteredArrayUsingPredicate:[<span class="hljs-built_in">NSPredicate</span> predicateWithBlock:^<span class="hljs-built_in">BOOL</span>(<span class="hljs-keyword">id</span>&lt;FBObjectReference&gt; evaluatedObject,
+                                                                             <span class="hljs-built_in">NSDictionary</span> *bindings) {
+        <span class="hljs-keyword">return</span> [parsedLayout containsIndex:[evaluatedObject indexInIvarLayout]];
+    }]];
+
+    <span class="hljs-keyword">return</span> filteredIvars;
+}
+</code></pre>
+<p>&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x5927;&#x7EA6;&#x6709;&#x4E09;&#x4E2A;&#x90E8;&#x5206;&#xFF1A;</p>
+<ol>
+<li>&#x8C03;&#x7528; <code>FBGetClassReferences</code> &#x4ECE;&#x7C7B;&#x4E2D;&#x83B7;&#x53D6;&#x5B83;&#x6307;&#x5411;&#x7684;&#x6240;&#x6709;&#x5F15;&#x7528;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x5F3A;&#x5F15;&#x7528;&#x6216;&#x8005;&#x662F;&#x5F31;&#x5F15;&#x7528;</li>
+<li>&#x8C03;&#x7528; <code>FBGetLayoutAsIndexesForDescription</code> &#x4ECE;&#x7C7B;&#x7684;&#x53D8;&#x91CF;&#x5E03;&#x5C40;&#x4E2D;&#x83B7;&#x53D6;&#x5F3A;&#x5F15;&#x7528;&#x7684;&#x4F4D;&#x7F6E;&#x4FE1;&#x606F;</li>
+<li>&#x4F7F;&#x7528; <code>NSPredicate</code> &#x8FC7;&#x6EE4;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5F31;&#x5F15;&#x7528;</li>
+</ol>
+<h3 id="&#x83B7;&#x53D6;&#x7C7B;&#x7684;-ivar-&#x6570;&#x7EC4;">&#x83B7;&#x53D6;&#x7C7B;&#x7684; Ivar &#x6570;&#x7EC4;</h3>
+<p><code>FBGetClassReferences</code> &#x65B9;&#x6CD5;&#x4E3B;&#x8981;&#x8C03;&#x7528; runtime &#x4E2D;&#x7684; <code>class_copyIvarList</code> &#x5F97;&#x5230;&#x7C7B;&#x7684;&#x6240;&#x6709; <code>ivar</code>&#xFF1A;</p>
+<blockquote>
+<p>&#x8FD9;&#x91CC;&#x7701;&#x7565;&#x5BF9;&#x7ED3;&#x6784;&#x4F53;&#x5C5E;&#x6027;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x56E0;&#x4E3A;&#x592A;&#x8FC7;&#x590D;&#x6742;&#xFF0C;&#x5E76;&#x4E14;&#x6D89;&#x53CA;&#x5927;&#x91CF;&#x7684;C++ &#x4EE3;&#x7801;&#xFF0C;&#x6709;&#x5174;&#x8DA3;&#x7684;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x67E5;&#x770B; <code>FBGetReferencesForObjectsInStructEncoding</code> &#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-objectivec"><span class="hljs-built_in">NSArray</span>&lt;<span class="hljs-keyword">id</span>&lt;FBObjectReference&gt;&gt; *FBGetClassReferences(Class aCls) {
+    <span class="hljs-built_in">NSMutableArray</span>&lt;<span class="hljs-keyword">id</span>&lt;FBObjectReference&gt;&gt; *result = [<span class="hljs-built_in">NSMutableArray</span> new];
+
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> count;
+    Ivar *ivars = class_copyIvarList(aCls, &amp;count);
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; count; ++i) {
+        Ivar ivar = ivars[i];
+        FBIvarReference *wrapper = [[FBIvarReference alloc] initWithIvar:ivar];
+        [result addObject:wrapper];
+    }
+    free(ivars);
+
+    <span class="hljs-keyword">return</span> [result <span class="hljs-keyword">copy</span>];
+}
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x5B9E;&#x73B0;&#x8FD8;&#x662F;&#x975E;&#x5E38;&#x76F4;&#x63A5;&#x7684;&#xFF0C;&#x904D;&#x5386; <code>ivars</code> &#x6570;&#x7EC4;&#xFF0C;&#x4F7F;&#x7528; <code>FBIvarReference</code> &#x5C06;&#x5176;&#x5305;&#x88C5;&#x8D77;&#x6765;&#x7136;&#x540E;&#x52A0;&#x5165; <code>result</code> &#x4E2D;&#xFF0C;&#x5176;&#x4E2D;&#x7684;&#x7C7B; <code>FBIvarReference</code> &#x4EC5;&#x4EC5;&#x8D77;&#x5230;&#x4E86;&#x4E00;&#x4E2A;&#x5305;&#x88C5;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x5C06; Ivar &#x4E2D;&#x4FDD;&#x5B58;&#x7684;&#x5404;&#x79CD;&#x5C5E;&#x6027;&#x5168;&#x90E8;&#x4FDD;&#x5B58;&#x8D77;&#x6765;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">typedef</span> <span class="hljs-built_in">NS_ENUM</span>(<span class="hljs-built_in">NSUInteger</span>, FBType) {
+  FBObjectType,
+  FBBlockType,
+  FBStructType,
+  FBUnknownType,
+};
+
+<span class="hljs-class"><span class="hljs-keyword">@interface</span> <span class="hljs-title">FBIvarReference</span> : <span class="hljs-title">NSObject</span> &lt;<span class="hljs-title">FBObjectReference</span>&gt;</span>
+
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">copy</span>, <span class="hljs-keyword">readonly</span>, nullable) <span class="hljs-built_in">NSString</span> *name;
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">readonly</span>) FBType type;
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">readonly</span>) ptrdiff_t offset;
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">readonly</span>) <span class="hljs-built_in">NSUInteger</span> index;
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">readonly</span>, nonnull) Ivar ivar;
+
+- (nonnull instancetype)initWithIvar:(nonnull Ivar)ivar;
+
+<span class="hljs-keyword">@end</span>
+</code></pre>
+<p>&#x5305;&#x62EC;&#x5C5E;&#x6027;&#x7684;&#x540D;&#x79F0;&#x3001;&#x7C7B;&#x578B;&#x3001;&#x504F;&#x79FB;&#x91CF;&#x4EE5;&#x53CA;&#x7D22;&#x5F15;&#xFF0C;&#x7C7B;&#x578B;&#x662F;&#x901A;&#x8FC7;<a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html" target="_blank">&#x7C7B;&#x578B;&#x7F16;&#x7801;</a>&#x6765;&#x83B7;&#x53D6;&#x7684;&#xFF0C;&#x5728; <code>FBIvarReference</code> &#x7684;&#x5B9E;&#x4F8B;&#x521D;&#x59CB;&#x5316;&#x65F6;&#xFF0C;&#x4F1A;&#x901A;&#x8FC7;&#x79C1;&#x6709;&#x65B9;&#x6CD5; <code>- _convertEncodingToType:</code> &#x5C06;&#x7C7B;&#x578B;&#x7F16;&#x7801;&#x8F6C;&#x6362;&#x4E3A;&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#xFF1A;</p>
+<pre><code class="lang-objectivec">- (FBType)_convertEncodingToType:(<span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *)typeEncoding {
+    <span class="hljs-keyword">if</span> (typeEncoding[<span class="hljs-number">0</span>] == <span class="hljs-string">&apos;{&apos;</span>) <span class="hljs-keyword">return</span> FBStructType;
+
+    <span class="hljs-keyword">if</span> (typeEncoding[<span class="hljs-number">0</span>] == <span class="hljs-string">&apos;@&apos;</span>) {
+        <span class="hljs-keyword">if</span> (strncmp(typeEncoding, <span class="hljs-string">&quot;@?&quot;</span>, <span class="hljs-number">2</span>) == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> FBBlockType;
+        <span class="hljs-keyword">return</span> FBObjectType;
+    }
+
+    <span class="hljs-keyword">return</span> FBUnknownType;
+}
+</code></pre>
+<p>&#x5F53;&#x4EE3;&#x7801;&#x5373;&#x5C06;&#x4ECE; <code>FBGetClassReferences</code> &#x65B9;&#x6CD5;&#x4E2D;&#x8FD4;&#x56DE;&#x65F6;&#xFF0C;&#x4F7F;&#x7528; lldb &#x6253;&#x5370; <code>result</code> &#x4E2D;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#xFF1A;</p>
+<p><img src="images/get-ivars.png" alt="get-ivars"></p>
+<p>&#x4E0A;&#x8FF0;&#x65B9;&#x6CD5;&#x6210;&#x529F;&#x5730;&#x4ECE; <code>XXObject</code> &#x7C7B;&#x4E2D;&#x83B7;&#x5F97;&#x4E86;&#x6B63;&#x786E;&#x7684;&#x5C5E;&#x6027;&#x6570;&#x7EC4;&#xFF0C;&#x4E0D;&#x8FC7;&#x8FD9;&#x4E9B;&#x6570;&#x7EC4;&#x4E2D;&#x4E0D;&#x6B62;&#x5305;&#x542B;&#x4E86;&#x5F3A;&#x5F15;&#x7528;&#xFF0C;&#x8FD8;&#x6709;&#x88AB; <code>weak</code> &#x6807;&#x8BB0;&#x7684;&#x5F31;&#x5F15;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-objectivec">&lt;__<span class="hljs-built_in">NSArrayM</span> <span class="hljs-number">0x7fdac0f31860</span>&gt;(
+    [_first,  index: <span class="hljs-number">1</span>],
+    [_second, index: <span class="hljs-number">2</span>],
+    [_third,  index: <span class="hljs-number">3</span>],
+    [_forth,  index: <span class="hljs-number">4</span>],
+    [_fifth,  index: <span class="hljs-number">5</span>],
+    [_sixth,  index: <span class="hljs-number">6</span>]
+)
+</code></pre>
+<h3 id="&#x83B7;&#x53D6;-ivar-layout">&#x83B7;&#x53D6; Ivar Layout</h3>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x53D6;&#x51FA;&#x4E86; <code>XXObject</code> &#x4E2D;&#x6240;&#x6709;&#x7684;&#x5C5E;&#x6027;&#x4E4B;&#x540E;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x5BF9;&#x5176;&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#xFF1B;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5982;&#x4F55;&#x5224;&#x65AD;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x662F;&#x5F3A;&#x5F15;&#x7528;&#x8FD8;&#x662F;&#x5F31;&#x5F15;&#x7528;&#x5462;&#xFF1F;Objective-C &#x4E2D;&#x5F15;&#x5165;&#x4E86; Ivar Layout &#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5BF9;&#x7C7B;&#x4E2D;&#x7684;&#x5404;&#x79CD;&#x5C5E;&#x6027;&#x7684;&#x5F3A;&#x5F31;&#x8FDB;&#x884C;&#x63CF;&#x8FF0;&#x3002;</p>
+<p>&#x5B83;&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;&#x5462;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x7EE7;&#x7EED;&#x6267;&#x884C; <code>FBGetStrongReferencesForClass</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<p><img src="images/get-ivar-layout.png" alt="get-ivar-layout"></p>
+<p>&#x5728; ObjC &#x8FD0;&#x884C;&#x65F6;&#x4E2D;&#x7684; <code>class_getIvarLayout</code> &#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x67D0;&#x4E00;&#x4E2A;&#x7C7B;&#x7684; Ivar Layout&#xFF0C;&#x800C; <code>XXObject</code> &#x7684; Ivar Layout &#x662F;&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x5462;&#xFF1F;</p>
+<pre><code class="lang-c">(lldb) po fullLayout
+<span class="hljs-string">&quot;\x01\x12\x11&quot;</span>
+</code></pre>
+<p>Ivar Layout &#x5C31;&#x662F;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x6BCF;&#x4E24;&#x4E2A;&#x4E00;&#x7EC4;&#xFF0C;&#x6BD4;&#x5982; <code>\xmn</code>&#xFF0C;&#x6BCF;&#x4E00;&#x7EC4; Ivar Layout &#x4E2D;&#x7B2C;&#x4E00;&#x4F4D;&#x8868;&#x793A;&#x6709; <code>m</code> &#x4E2A;&#x975E;&#x5F3A;&#x5C5E;&#x6027;&#xFF0C;&#x7B2C;&#x4E8C;&#x4F4D;&#x8868;&#x793A;&#x63A5;&#x4E0B;&#x6765;&#x6709; <code>n</code> &#x4E2A;&#x5F3A;&#x5C5E;&#x6027;&#xFF1B;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x660E;&#x767D;&#xFF0C;&#x6211;&#x4EEC;&#x4EE5; <code>XXObject</code> &#x4E3A;&#x4F8B;&#x6F14;&#x793A;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-class"><span class="hljs-keyword">@interface</span> <span class="hljs-title">XXObject</span> : <span class="hljs-title">NSObject</span></span>
+
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">strong</span>) <span class="hljs-keyword">id</span> first;
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">weak</span>)   <span class="hljs-keyword">id</span> second;
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">strong</span>) <span class="hljs-keyword">id</span> third;
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">strong</span>) <span class="hljs-keyword">id</span> forth;
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">weak</span>)   <span class="hljs-keyword">id</span> fifth;
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">strong</span>) <span class="hljs-keyword">id</span> sixth;
+
+<span class="hljs-keyword">@end</span>
+</code></pre>
+<ul>
+<li>&#x7B2C;&#x4E00;&#x7EC4;&#x7684; <code>\x01</code> &#x8868;&#x793A;&#x6709; 0 &#x4E2A;&#x975E;&#x5F3A;&#x5C5E;&#x6027;&#xFF0C;&#x7136;&#x540E;&#x6709; 1 &#x4E2A;&#x5F3A;&#x5C5E;&#x6027; <code>first</code></li>
+<li>&#x7B2C;&#x4E8C;&#x7EC4;&#x7684; <code>\x12</code> &#x8868;&#x793A;&#x6709; 1 &#x4E2A;&#x975E;&#x5F3A;&#x5C5E;&#x6027; <code>second</code>&#xFF0C;&#x7136;&#x540E;&#x6709; 2 &#x4E2A;&#x5F3A;&#x5C5E;&#x6027; <code>third</code> <code>forth</code></li>
+<li>&#x7B2C;&#x4E09;&#x7EC4;&#x7684; <code>\x11</code> &#x8868;&#x793A;&#x6709; 1 &#x4E2A;&#x975E;&#x5F3A;&#x5C5E;&#x6027; <code>fifth</code>, &#x7136;&#x540E;&#x6709; 1 &#x4E2A;&#x5F3A;&#x5C5E;&#x6027; <code>sixth</code></li>
+</ul>
+<p>&#x5728;&#x5BF9; Ivar Layout &#x6709;&#x4E00;&#x5B9A;&#x4E86;&#x89E3;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x5BF9; <code>FBGetStrongReferencesForClass</code> &#x5206;&#x6790;&#x4E86;&#xFF0C;&#x4E0B;&#x9762;&#x8981;&#x505A;&#x7684;&#x5C31;&#x662F;&#x4F7F;&#x7528; Ivar Layout &#x63D0;&#x4F9B;&#x7684;&#x4FE1;&#x606F;&#x8FC7;&#x6EE4;&#x5176;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x975E;&#x5F3A;&#x5F15;&#x7528;&#xFF0C;&#x800C;&#x8FD9;&#x5C31;&#x9700;&#x8981;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x5E2E;&#x52A9;&#xFF0C;&#x9996;&#x5148;&#x9700;&#x8981; <code>FBGetMinimumIvarIndex</code> &#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x53D8;&#x91CF;&#x7D22;&#x5F15;&#x7684;&#x6700;&#x5C0F;&#x503C;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">static</span> <span class="hljs-built_in">NSUInteger</span> FBGetMinimumIvarIndex(__unsafe_unretained Class aCls) {
+    <span class="hljs-built_in">NSUInteger</span> minimumIndex = <span class="hljs-number">1</span>;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> count;
+    Ivar *ivars = class_copyIvarList(aCls, &amp;count);
+
+    <span class="hljs-keyword">if</span> (count &gt; <span class="hljs-number">0</span>) {
+        Ivar ivar = ivars[<span class="hljs-number">0</span>];
+        ptrdiff_t offset = ivar_getOffset(ivar);
+        minimumIndex = offset / (<span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">void</span> *));
+    }
+
+    free(ivars);
+
+    <span class="hljs-keyword">return</span> minimumIndex;
+}
+</code></pre>
+<p>&#x7136;&#x540E;&#x6267;&#x884C; <code>FBGetLayoutAsIndexesForDescription(minimumIndex, fullLayout)</code> &#x83B7;&#x53D6;&#x6240;&#x6709;&#x5F3A;&#x5F15;&#x7528;&#x7684; <code>NSRange</code>&#xFF1A;</p>
+<pre><code class="lang-objectivec">static NSIndexSet *FBGetLayoutAsIndexesForDescription(NSUInteger minimumIndex, const uint8_t *layoutDescription) {
+    NSMutableIndexSet *interestingIndexes = [NSMutableIndexSet new];
+    NSUInteger currentIndex = minimumIndex;
+
+    while (*layoutDescription != &apos;\x00&apos;) {
+        int upperNibble = (*layoutDescription &amp; 0xf0) &gt;&gt; 4;
+        int lowerNibble = *layoutDescription &amp; 0xf;
+
+        currentIndex += upperNibble;
+        [interestingIndexes addIndexesInRange:NSMakeRange(currentIndex, lowerNibble)];
+        currentIndex += lowerNibble;
+
+        ++layoutDescription;
+    }
+
+    return interestingIndexes;
+}
+</code></pre>
+<p>&#x56E0;&#x4E3A;&#x9AD8;&#x4F4D;&#x8868;&#x793A;&#x975E;&#x5F3A;&#x5F15;&#x7528;&#x7684;&#x6570;&#x91CF;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x8981;&#x52A0;&#x4E0A; <code>upperNibble</code>&#xFF0C;&#x7136;&#x540E; <code>NSMakeRange(currentIndex, lowerNibble)</code> &#x5C31;&#x662F;&#x5F3A;&#x5F15;&#x7528;&#x7684;&#x8303;&#x56F4;&#xFF1B;&#x7565;&#x8FC7; <code>lowerNibble</code> &#x957F;&#x5EA6;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x79FB;&#x52A8; <code>layoutDescription</code> &#x6307;&#x9488;&#xFF0C;&#x76F4;&#x5230;&#x6240;&#x6709;&#x7684; <code>NSRange</code> &#x90FD;&#x52A0;&#x5165;&#x5230;&#x4E86; <code>interestingIndexes</code> &#x8FD9;&#x4E00;&#x96C6;&#x5408;&#x4E2D;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x4E86;&#x3002;</p>
+<h3 id="&#x8FC7;&#x6EE4;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5F31;&#x5F15;&#x7528;">&#x8FC7;&#x6EE4;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5F31;&#x5F15;&#x7528;</h3>
+<p>&#x5728;&#x4E0A;&#x4E00;&#x9636;&#x6BB5;&#x7531;&#x4E8E;&#x5DF2;&#x7ECF;&#x83B7;&#x53D6;&#x4E86;&#x5F3A;&#x5F15;&#x7528;&#x7684;&#x8303;&#x56F4;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x76F4;&#x63A5;&#x4F7F;&#x7528; <code>NSPredicate</code> &#x8C13;&#x8BCD;&#x6765;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-built_in">NSArray</span>&lt;<span class="hljs-keyword">id</span>&lt;FBObjectReference&gt;&gt; *filteredIvars =
+[ivars filteredArrayUsingPredicate:[<span class="hljs-built_in">NSPredicate</span> predicateWithBlock:^<span class="hljs-built_in">BOOL</span>(<span class="hljs-keyword">id</span>&lt;FBObjectReference&gt; evaluatedObject,
+                                                                         <span class="hljs-built_in">NSDictionary</span> *bindings) {
+    <span class="hljs-keyword">return</span> [parsedLayout containsIndex:[evaluatedObject indexInIvarLayout]];
+}]];
+</code></pre>
+<p><img src="images/filtered-ivars.png" alt="filtered-ivars"></p>
+<p>====</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x56DE;&#x5230;&#x6587;&#x7AE0;&#x5F00;&#x59CB;&#x7684; <code>- _unfilteredRetainedObjects</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-objectivec">- (<span class="hljs-built_in">NSSet</span> *)allRetainedObjects {
+    <span class="hljs-built_in">NSArray</span> *strongIvars = FBGetObjectStrongReferences(<span class="hljs-keyword">self</span>.object, <span class="hljs-keyword">self</span>.configuration.layoutCache);
+
+    <span class="hljs-built_in">NSMutableArray</span> *retainedObjects = [[[<span class="hljs-keyword">super</span> allRetainedObjects] allObjects] mutableCopy];
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">id</span>&lt;FBObjectReference&gt; ref <span class="hljs-keyword">in</span> strongIvars) {
+        <span class="hljs-keyword">id</span> referencedObject = [ref objectReferenceFromObject:<span class="hljs-keyword">self</span>.object];
+
+        <span class="hljs-keyword">if</span> (referencedObject) {
+            <span class="hljs-built_in">NSArray</span>&lt;<span class="hljs-built_in">NSString</span> *&gt; *namePath = [ref namePath];
+            FBObjective<span class="hljs-built_in">CGraphElement</span> *element = FBWrapObjectGraphElementWithContext(<span class="hljs-keyword">self</span>,
+                                                                                    referencedObject,
+                                                                                    <span class="hljs-keyword">self</span>.configuration,
+                                                                                    namePath);
+            <span class="hljs-keyword">if</span> (element) {
+                [retainedObjects addObject:element];
+            }
+        }
+    }
+
+    ...
+}
+</code></pre>
+<p><code>FBGetObjectStrongReferences</code> &#x53EA;&#x662F;&#x8FD4;&#x56DE; <code>id&lt;FBObjectReference&gt;</code> &#x5BF9;&#x8C61;&#xFF0C;&#x8FD8;&#x9700;&#x8981; <code>FBWrapObjectGraphElementWithContext</code> &#x628A;&#x5B83;&#x8FDB;&#x884C;&#x5305;&#x88C5;&#x6210; <code>FBObjectiveCGraphElement</code>&#xFF1A;</p>
+<pre><code class="lang-objectivec">FBObjective<span class="hljs-built_in">CGraphElement</span> *FBWrapObjectGraphElementWithContext(<span class="hljs-keyword">id</span> object,
+                                                              FBObjectGraphConfiguration *configuration,
+                                                              <span class="hljs-built_in">NSArray</span>&lt;<span class="hljs-built_in">NSString</span> *&gt; *namePath) {
+    <span class="hljs-keyword">if</span> (FBObjectIsBlock((__bridge <span class="hljs-keyword">void</span> *)object)) {
+        <span class="hljs-keyword">return</span> [[FBObjectiveCBlock alloc] initWithObject:object
+                                           configuration:configuration
+                                                namePath:namePath];
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">if</span> ([object_getClass(object) isSubclassOfClass:[<span class="hljs-built_in">NSTimer</span> class]] &amp;&amp;
+            configuration.shouldInspectTimers) {
+            <span class="hljs-keyword">return</span> [[FBObjectiveC<span class="hljs-built_in">NSCFTimer</span> alloc] initWithObject:object
+                                                   configuration:configuration
+                                                        namePath:namePath];
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">return</span> [[FBObjectiveCObject alloc] initWithObject:object
+                                                configuration:configuration
+                                                     namePath:namePath];
+        }
+    }
+}
+</code></pre>
+<p>&#x6700;&#x540E;&#x4F1A;&#x628A;&#x5C01;&#x88C5;&#x597D;&#x7684;&#x5B9E;&#x4F8B;&#x6DFB;&#x52A0;&#x5230; <code>retainedObjects</code> &#x6570;&#x7EC4;&#x4E2D;&#x3002;</p>
+<p><code>- _unfilteredRetainedObjects</code> &#x540C;&#x65F6;&#x4E5F;&#x8981;&#x5904;&#x7406;&#x96C6;&#x5408;&#x7C7B;&#xFF0C;&#x6BD4;&#x5982;&#x6570;&#x7EC4;&#x6216;&#x8005;&#x5B57;&#x5178;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x662F;&#x65E0;&#x7F1D;&#x6865;&#x63A5;&#x7684; CF &#x96C6;&#x5408;&#xFF0C;&#x6216;&#x8005;&#x662F;&#x5143;&#x7C7B;&#xFF0C;&#x867D;&#x7136;&#x5B83;&#x4EEC;&#x53EF;&#x80FD;&#x9075;&#x5FAA; <code>NSFastEnumeration</code> &#x534F;&#x8BAE;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x8FD9;&#x91CC;&#x5E76;&#x4E0D;&#x4F1A;&#x5BF9;&#x5B83;&#x4EEC;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF1A;</p>
+<pre><code class="lang-objectivec">- (<span class="hljs-built_in">NSArray</span> *)_unfilteredRetainedObjects {
+    ...
+
+    <span class="hljs-keyword">if</span> ([<span class="hljs-built_in">NSStringFromClass</span>(aCls) hasPrefix:<span class="hljs-string">@&quot;__NSCF&quot;</span>]) {
+        <span class="hljs-keyword">return</span> retainedObjects;
+    }
+
+    <span class="hljs-keyword">if</span> (class_isMetaClass(aCls)) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>;
+    }
+
+    ...
+}
+</code></pre>
+<p>&#x5728;&#x904D;&#x5386;&#x5185;&#x5BB9;&#x65F6;&#xFF0C;Mutable &#x7684;&#x96C6;&#x5408;&#x7C7B;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x53EF;&#x80FD;&#x4F1A;&#x6539;&#x53D8;&#xFF0C;&#x6240;&#x4EE5;&#x4F1A;&#x91CD;&#x8BD5;&#x591A;&#x6B21;&#x4EE5;&#x786E;&#x4FDD;&#x96C6;&#x5408;&#x7C7B;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#x90FD;&#x88AB;&#x83B7;&#x53D6;&#x5230;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-objectivec">- (<span class="hljs-built_in">NSArray</span> *)_unfilteredRetainedObjects {
+    ...
+
+    <span class="hljs-keyword">if</span> ([aCls conformsToProtocol:<span class="hljs-class"><span class="hljs-keyword">@protocol</span>(<span class="hljs-title">NSFastEnumeration</span>)]) </span>{
+
+        <span class="hljs-built_in">NSInteger</span> tries = <span class="hljs-number">10</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">NSInteger</span> i = <span class="hljs-number">0</span>; i &lt; tries; ++i) {
+            <span class="hljs-built_in">NSMutableSet</span> *temporaryRetainedObjects = [<span class="hljs-built_in">NSMutableSet</span> new];
+            <span class="hljs-keyword">@try</span> {
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">id</span> subobject <span class="hljs-keyword">in</span> <span class="hljs-keyword">self</span>.object) {
+                    [temporaryRetainedObjects addObject:FBWrapObjectGraphElement(subobject, <span class="hljs-keyword">self</span>.configuration)];
+                    [temporaryRetainedObjects addObject:FBWrapObjectGraphElement([<span class="hljs-keyword">self</span>.object objectForKey:subobject], <span class="hljs-keyword">self</span>.configuration)];
+                }
+            }
+            <span class="hljs-keyword">@catch</span> (<span class="hljs-built_in">NSException</span> *exception) {
+                <span class="hljs-keyword">continue</span>;
+            }
+
+            [retainedObjects addObjectsFromArray:[temporaryRetainedObjects allObjects]];
+            <span class="hljs-keyword">break</span>;
+        }
+    }
+
+    <span class="hljs-keyword">return</span> retainedObjects;
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x5C06;&#x904D;&#x5386;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x7684;&#x4EE3;&#x7801;&#x653E;&#x5165;&#x4E86; <code>@try</code> &#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x904D;&#x5386;&#x65F6;&#x63D2;&#x5165;&#x4E86;&#x5176;&#x5B83;&#x5143;&#x7D20;&#xFF0C;&#x5C31;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x7136;&#x540E; <code>continue</code> &#x91CD;&#x65B0;&#x904D;&#x5386;&#x96C6;&#x5408;&#xFF0C;&#x6700;&#x540E;&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x6301;&#x6709;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x6700;&#x540E;&#x7684;&#x8FC7;&#x6EE4;&#x90E8;&#x5206;&#x4F1A;&#x4F7F;&#x7528; <code>FBObjectGraphConfiguration</code> &#x4E2D;&#x7684; <code>filterBlocks</code> &#x5C06;&#x4E0D;&#x9700;&#x8981;&#x52A0;&#x5165;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x8FC7;&#x6EE4;&#x6389;&#xFF1A;</p>
+<pre><code class="lang-objectivec">- (<span class="hljs-built_in">NSSet</span> *)filterObjects:(<span class="hljs-built_in">NSArray</span> *)objects {
+    <span class="hljs-built_in">NSMutableSet</span> *filtered = [<span class="hljs-built_in">NSMutableSet</span> new];
+
+    <span class="hljs-keyword">for</span> (FBObjective<span class="hljs-built_in">CGraphElement</span> *reference <span class="hljs-keyword">in</span> objects) {
+        <span class="hljs-keyword">if</span> (![<span class="hljs-keyword">self</span> _shouldBreakGraphEdgeFromObject:<span class="hljs-keyword">self</span> toObject:reference]) {
+            [filtered addObject:reference];
+        }
+    }
+
+    <span class="hljs-keyword">return</span> filtered;
+}
+
+- (<span class="hljs-built_in">BOOL</span>)_shouldBreakGraphEdgeFromObject:(FBObjective<span class="hljs-built_in">CGraphElement</span> *)fromObject
+                               toObject:(FBObjective<span class="hljs-built_in">CGraphElement</span> *)toObject {
+    <span class="hljs-keyword">for</span> (FBGraphEdgeFilterBlock filterBlock <span class="hljs-keyword">in</span> _configuration.filterBlocks) {
+        <span class="hljs-keyword">if</span> (filterBlock(fromObject, toObject) == FBGraphEdgeInvalid) <span class="hljs-keyword">return</span> <span class="hljs-literal">YES</span>;
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">NO</span>;
+}
+</code></pre>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<p><code>FBRetainCycleDetector</code> &#x5728;&#x5BF9;&#x8C61;&#x4E2D;&#x67E5;&#x627E;&#x5F3A;&#x5F15;&#x7528;&#x53D6;&#x51B3;&#x4E8E;&#x7C7B;&#x7684; Ivar Layout&#xFF0C;&#x5B83;&#x4E3A;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x4E0E;&#x5C5E;&#x6027;&#x5F15;&#x7528;&#x5F3A;&#x5F31;&#x6709;&#x5173;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5E2E;&#x52A9;&#x7B5B;&#x9009;&#x5F3A;&#x5F15;&#x7528;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Obj-Associated.html" class="navigation navigation-prev " aria-label="Previous page: Associated Object">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="retain_cycle.html" class="navigation navigation-next " aria-label="Next page: 解决循环引用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"对象持有的强指针","level":"1.1.5.10.3","depth":4,"next":{"title":"解决循环引用","level":"1.1.5.10.4","depth":4,"path":"Source-Code-Analysis/FBRetainCycleDetector/retain_cycle.md","ref":"Source-Code-Analysis/FBRetainCycleDetector/retain_cycle.md","articles":[]},"previous":{"title":"Associated Object","level":"1.1.5.10.2","depth":4,"path":"Source-Code-Analysis/FBRetainCycleDetector/Obj-Associated.md","ref":"Source-Code-Analysis/FBRetainCycleDetector/Obj-Associated.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Source-Code-Analysis/FBRetainCycleDetector/Obj-Strong.md","mtime":"2018-05-22T14:51:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-23T11:29:51.711Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

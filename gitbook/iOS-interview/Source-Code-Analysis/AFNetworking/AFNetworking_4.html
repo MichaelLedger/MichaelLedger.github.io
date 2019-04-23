@@ -1,0 +1,2019 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>AFNetworkReachabilityManager · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="AFNetworking_5.html" />
+    
+    
+    <link rel="prev" href="AFNetworking_3.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    iOS 开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../../ObjC-Basic/">
+            
+                <a href="../../ObjC-Basic/">
+            
+                    
+                    Objective-C 语言基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../../ObjC-Basic/Class.html">
+            
+                <a href="../../ObjC-Basic/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2" data-path="../../ObjC-Basic/Block.html">
+            
+                <a href="../../ObjC-Basic/Block.html">
+            
+                    
+                    Block 编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.3" data-path="../../ObjC-Basic/Runtime.html">
+            
+                <a href="../../ObjC-Basic/Runtime.html">
+            
+                    
+                    Objective-C Runtime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.4" data-path="../../ObjC-Basic/MM.html">
+            
+                <a href="../../ObjC-Basic/MM.html">
+            
+                    
+                    Objective-C 内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.5" data-path="../../ObjC-Basic/Runloop.html">
+            
+                <a href="../../ObjC-Basic/Runloop.html">
+            
+                    
+                    Runloop
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../../Cocoa-Touch/">
+            
+                <a href="../../Cocoa-Touch/">
+            
+                    
+                    Cocoa Touch
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="../../Cocoa-Touch/Event-Handling.html">
+            
+                <a href="../../Cocoa-Touch/Event-Handling.html">
+            
+                    
+                    事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2" data-path="../../Cocoa-Touch/UIApplication.html">
+            
+                <a href="../../Cocoa-Touch/UIApplication.html">
+            
+                    
+                    UIApplication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.3" data-path="../../Cocoa-Touch/UIView-Basic.html">
+            
+                <a href="../../Cocoa-Touch/UIView-Basic.html">
+            
+                    
+                    UIView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.4" data-path="../../Cocoa-Touch/UIViewController.html">
+            
+                <a href="../../Cocoa-Touch/UIViewController.html">
+            
+                    
+                    UIViewController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.5" data-path="../../Cocoa-Touch/Animation.html">
+            
+                <a href="../../Cocoa-Touch/Animation.html">
+            
+                    
+                    动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.6" data-path="../../Cocoa-Touch/Network.html">
+            
+                <a href="../../Cocoa-Touch/Network.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.7" data-path="../../Cocoa-Touch/Multithreading.html">
+            
+                <a href="../../Cocoa-Touch/Multithreading.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../../Cocoa-Touch/File-System.html">
+            
+                <a href="../../Cocoa-Touch/File-System.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.9" data-path="../../Cocoa-Touch/Design.html">
+            
+                <a href="../../Cocoa-Touch/Design.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.10" data-path="../../Cocoa-Touch/Performance.html">
+            
+                <a href="../../Cocoa-Touch/Performance.html">
+            
+                    
+                    性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../../Swift/">
+            
+                <a href="../../Swift/">
+            
+                    
+                    Swift
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="../../Swift/Class.html">
+            
+                <a href="../../Swift/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="../../Swift/Struct-And-Enum.html">
+            
+                <a href="../../Swift/Struct-And-Enum.html">
+            
+                    
+                    结构体与枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3" data-path="../../Swift/Function-And-Closure.html">
+            
+                <a href="../../Swift/Function-And-Closure.html">
+            
+                    
+                    函数与闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../../Interview/">
+            
+                <a href="../../Interview/">
+            
+                    
+                    面试问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1" data-path="../../Interview/iOSInterviewQuestions/">
+            
+                <a href="../../Interview/iOSInterviewQuestions/">
+            
+                    
+                    《招聘一个靠谱的iOS》
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1.1" data-path="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.1.2" data-path="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.2" data-path="../../interview/ZhiHu-QA/">
+            
+                <a href="../../interview/ZhiHu-QA/">
+            
+                    
+                    关于一些 iOS 面试问题的解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.3" data-path="../../interview/iOSDeveloperQA/">
+            
+                <a href="../../interview/iOSDeveloperQA/">
+            
+                    
+                    iOS 开发面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.4" data-path="../../interview/MXR-QA/">
+            
+                <a href="../../interview/MXR-QA/">
+            
+                    
+                    MXR 面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    源码分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1" data-path="AFNetworking_1.html">
+            
+                <a href="AFNetworking_1.html">
+            
+                    
+                    AFNetworking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1.1" data-path="AFNetworking_2.html">
+            
+                <a href="AFNetworking_2.html">
+            
+                    
+                    AFURLSessionManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.2" data-path="AFNetworking_3.html">
+            
+                <a href="AFNetworking_3.html">
+            
+                    
+                    AFURLSerialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.5.1.3" data-path="AFNetworking_4.html">
+            
+                <a href="AFNetworking_4.html">
+            
+                    
+                    AFNetworkReachabilityManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.4" data-path="AFNetworking_5.html">
+            
+                <a href="AFNetworking_5.html">
+            
+                    
+                    HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.2" data-path="../Alamofire/">
+            
+                <a href="../Alamofire/">
+            
+                    
+                    Alamofire
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3" data-path="../architecture/mvx.html">
+            
+                <a href="../architecture/mvx.html">
+            
+                    
+                    architecture
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.3.1" data-path="../architecture/mvx-model.html">
+            
+                <a href="../architecture/mvx-model.html">
+            
+                    
+                    MVX-Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.2" data-path="../architecture/mvx-view.html">
+            
+                <a href="../architecture/mvx-view.html">
+            
+                    
+                    MVX-View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.3" data-path="../architecture/mvx-controller.html">
+            
+                <a href="../architecture/mvx-controller.html">
+            
+                    
+                    MVX-Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4" >
+            
+                <span>
+            
+                    
+                    AsyncDisplayKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.4.1" data-path="../AsyncDisplayKit/ASDK_1.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_1.html">
+            
+                    
+                    提升界面的渲染性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4.2" data-path="../AsyncDisplayKit/ASDK_2.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_2.html">
+            
+                    
+                    布局算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4.3" data-path="../AsyncDisplayKit/ASDK_3.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_3.html">
+            
+                    
+                    预加载与智能预加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5" >
+            
+                <span>
+            
+                    
+                    BlocksKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.5.1" data-path="../BlocksKit/BlocksKit_1.html">
+            
+                <a href="../BlocksKit/BlocksKit_1.html">
+            
+                    
+                    神奇的 BlocksKit (一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5.2" data-path="../BlocksKit/BlocksKit_2.html">
+            
+                <a href="../BlocksKit/BlocksKit_2.html">
+            
+                    
+                    神奇的 BlocksKit (二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.6" data-path="../Blog/initialize-comments.html">
+            
+                <a href="../Blog/initialize-comments.html">
+            
+                    
+                    Gitalk/Gitment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7" >
+            
+                <span>
+            
+                    
+                    CocoaPods
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.7.1" data-path="../CocoaPods/CocoaPods.html">
+            
+                <a href="../CocoaPods/CocoaPods.html">
+            
+                    
+                    CocoaPods 都做了什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7.2" data-path="../CocoaPods/DSL.html">
+            
+                <a href="../CocoaPods/DSL.html">
+            
+                    
+                    DSL 以及 DSL 的应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8" >
+            
+                <span>
+            
+                    
+                    Database
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.8.1" data-path="../Database/concurrency-control.html">
+            
+                <a href="../Database/concurrency-control.html">
+            
+                    
+                    数据库并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.2" data-path="../Database/dynamo.html">
+            
+                <a href="../Database/dynamo.html">
+            
+                    
+                    分布式键值存储 Dynamo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.3" data-path="../Database/leveldb-bigtable.html">
+            
+                <a href="../Database/leveldb-bigtable.html">
+            
+                    
+                    Bigtable 和 LevelDB 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.4" data-path="../Database/mongodb-to-mysql.html">
+            
+                <a href="../Database/mongodb-to-mysql.html">
+            
+                    
+                    MongoDB 迁移到 MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.5" data-path="../Database/mongodb-wiredtiger.html">
+            
+                <a href="../Database/mongodb-wiredtiger.html">
+            
+                    
+                    MongoDB 和 WiredTiger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.6" data-path="../Database/mysql.html">
+            
+                <a href="../Database/mysql.html">
+            
+                    
+                    MySQL 和 InnoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.7" data-path="../Database/sql-index-intro.html">
+            
+                <a href="../Database/sql-index-intro.html">
+            
+                    
+                    MySQL 索引设计概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.8" data-path="../Database/sql-index-performance.html">
+            
+                <a href="../Database/sql-index-performance.html">
+            
+                    
+                    MySQL 索引性能分析概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.9" data-path="../Database/transaction.html">
+            
+                <a href="../Database/transaction.html">
+            
+                    
+                    MySQL 中事务的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.9" data-path="../DKNightVersion/DKNightVersion.html">
+            
+                <a href="../DKNightVersion/DKNightVersion.html">
+            
+                    
+                    DKNightVersion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10" >
+            
+                <span>
+            
+                    
+                    FBRetainCycleDetector
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.10.1" data-path="../FBRetainCycleDetector/block.html">
+            
+                <a href="../FBRetainCycleDetector/block.html">
+            
+                    
+                    block 如何持有对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.2" data-path="../FBRetainCycleDetector/Obj-Associated.html">
+            
+                <a href="../FBRetainCycleDetector/Obj-Associated.html">
+            
+                    
+                    Associated Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.3" data-path="../FBRetainCycleDetector/Obj-Strong.html">
+            
+                <a href="../FBRetainCycleDetector/Obj-Strong.html">
+            
+                    
+                    对象持有的强指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.4" data-path="../FBRetainCycleDetector/retain_cycle.html">
+            
+                <a href="../FBRetainCycleDetector/retain_cycle.html">
+            
+                    
+                    解决循环引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.11" data-path="../fishhook/fishhook.html">
+            
+                <a href="../fishhook/fishhook.html">
+            
+                    
+                    fishhook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.12" data-path="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                <a href="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                    
+                    IQKeyboardManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.13" data-path="../KVOController/KVOController.html">
+            
+                <a href="../KVOController/KVOController.html">
+            
+                    
+                    KVOController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.14" data-path="../libextobjc/libextobjc.html">
+            
+                <a href="../libextobjc/libextobjc.html">
+            
+                    
+                    libextobjc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.15" data-path="../Masonry/Masonry.html">
+            
+                <a href="../Masonry/Masonry.html">
+            
+                    
+                    Masonry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.16" data-path="../MBProgressHUD/">
+            
+                <a href="../MBProgressHUD/">
+            
+                    
+                    MBProgressHUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17" data-path="../objc/">
+            
+                <a href="../objc/">
+            
+                    
+                    objc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.17.1" data-path="../objc/associated-obj.html">
+            
+                <a href="../objc/associated-obj.html">
+            
+                    
+                    关联对象 AssociatedObject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.2" data-path="../objc/autoreleasepool.html">
+            
+                <a href="../objc/autoreleasepool.html">
+            
+                    
+                    自动释放池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.3" data-path="../objc/black-box-retain-release.html">
+            
+                <a href="../objc/black-box-retain-release.html">
+            
+                    
+                    黑箱中的 retain 和 release
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.4" data-path="../objc/func-structure.html">
+            
+                <a href="../objc/func-structure.html">
+            
+                    
+                    ObjC 中方法的结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.5" data-path="../objc/hash.html">
+            
+                <a href="../objc/hash.html">
+            
+                    
+                    哈希表的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.6" data-path="../objc/initialization.html">
+            
+                <a href="../objc/initialization.html">
+            
+                    
+                    初始化对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.7" data-path="../objc/isa.html">
+            
+                <a href="../objc/isa.html">
+            
+                    
+                    isa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.8" data-path="../objc/lazy-initialize.html">
+            
+                <a href="../objc/lazy-initialize.html">
+            
+                    
+                    懒惰的 initialize 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.9" data-path="../objc/load.html">
+            
+                <a href="../objc/load.html">
+            
+                    
+                    load 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.10" data-path="../objc/msgSend.html">
+            
+                <a href="../objc/msgSend.html">
+            
+                    
+                    消息传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18" >
+            
+                <span>
+            
+                    
+                    OHHTTPStubs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.18.1" data-path="../OHHTTPStubs/intercept.html">
+            
+                <a href="../OHHTTPStubs/intercept.html">
+            
+                    
+                    HTTP Intercept
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18.2" data-path="../OHHTTPStubs/mock.html">
+            
+                <a href="../OHHTTPStubs/mock.html">
+            
+                    
+                    HTTP Mock
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.19" data-path="../ProtocolKit/ProtocolKit.html">
+            
+                <a href="../ProtocolKit/ProtocolKit.html">
+            
+                    
+                    ProtocolKit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20" data-path="../rack/rack.html">
+            
+                <a href="../rack/rack.html">
+            
+                    
+                    rack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.20.1" data-path="../rack/rack-thin.html">
+            
+                <a href="../rack/rack-thin.html">
+            
+                    
+                    Thin 的事件驱动模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20.2" data-path="../rack/rack-unicorn.html">
+            
+                <a href="../rack/rack-unicorn.html">
+            
+                    
+                    Unicorn 的多进程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20.3" data-path="../rack/rack-webrik.html">
+            
+                <a href="../rack/rack-webrik.html">
+            
+                    
+                    WEBrick 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.21" data-path="../Rails/activerecord.html">
+            
+                <a href="../Rails/activerecord.html">
+            
+                    
+                    Rails
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22" >
+            
+                <span>
+            
+                    
+                    ReactiveObjC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.22.1" data-path="../ReactiveObjC/RACChannel.html">
+            
+                <a href="../ReactiveObjC/RACChannel.html">
+            
+                    
+                    RACChannel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.2" data-path="../ReactiveObjC/RACCommand.html">
+            
+                <a href="../ReactiveObjC/RACCommand.html">
+            
+                    
+                    RACCommand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.3" data-path="../ReactiveObjC/RACDelegateProxy.html">
+            
+                <a href="../ReactiveObjC/RACDelegateProxy.html">
+            
+                    
+                    RACDelegateProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.4" data-path="../ReactiveObjC/RACMulticastConnection.html">
+            
+                <a href="../ReactiveObjC/RACMulticastConnection.html">
+            
+                    
+                    RACMulticastConnection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.5" data-path="../ReactiveObjC/RACScheduler.html">
+            
+                <a href="../ReactiveObjC/RACScheduler.html">
+            
+                    
+                    RACScheduler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.6" data-path="../ReactiveObjC/RACSequence.html">
+            
+                <a href="../ReactiveObjC/RACSequence.html">
+            
+                    
+                    RACSequence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.7" data-path="../ReactiveObjC/RACSignal.html">
+            
+                <a href="../ReactiveObjC/RACSignal.html">
+            
+                    
+                    RACSignal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.8" data-path="../ReactiveObjC/RACSubject.html">
+            
+                <a href="../ReactiveObjC/RACSubject.html">
+            
+                    
+                    RACSubject
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23" >
+            
+                <span>
+            
+                    
+                    Redis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.23.1" data-path="../Redis/redis-cli.html">
+            
+                <a href="../Redis/redis-cli.html">
+            
+                    
+                    命令处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.2" data-path="../Redis/redis-eventloop.html">
+            
+                <a href="../Redis/redis-eventloop.html">
+            
+                    
+                    事件循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.3" data-path="../Redis/redis-io-multiplexing.html">
+            
+                <a href="../Redis/redis-io-multiplexing.html">
+            
+                    
+                    I/O 多路复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.24" data-path="../Ruby/Ruby.html">
+            
+                <a href="../Ruby/Ruby.html">
+            
+                    
+                    Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.25" data-path="../SDWebImage/">
+            
+                <a href="../SDWebImage/">
+            
+                    
+                    SDWebImage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="../../More.html">
+            
+                <a href="../../More.html">
+            
+                    
+                    更多资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >AFNetworkReachabilityManager</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="afnetworkreachabilitymanager-&#x76D1;&#x63A7;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#xFF08;&#x56DB;&#xFF09;">AFNetworkReachabilityManager &#x76D1;&#x63A7;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#xFF08;&#x56DB;&#xFF09;</h1>
+<p>Blog: <a href="http://draveness.me" target="_blank">Draveness</a></p>
+<iframe src="http://ghbtns.com/github-btn.html?user=draveness&amp;type=follow&amp;size=large" height="30" width="240" frameborder="0" scrolling="0" style="width:240px; height: 30px;" allowtransparency="true"></iframe>
+
+<p><code>AFNetworkReachabilityManager</code> &#x662F;&#x5BF9; <code>SystemConfiguration</code> &#x6A21;&#x5757;&#x7684;&#x5C01;&#x88C5;&#xFF0C;&#x82F9;&#x679C;&#x7684;&#x6587;&#x6863;&#x4E2D;&#x4E5F;&#x6709;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x7684;&#x9879;&#x76EE; <a href="https://developer.apple.com/library/ios/samplecode/reachability/" target="_blank">Reachability</a> &#x8FD9;&#x91CC;&#x5BF9;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x7684;&#x76D1;&#x63A7;&#x8DDF;&#x82F9;&#x679C;&#x5B98;&#x65B9;&#x7684;&#x5B9E;&#x73B0;&#x51E0;&#x4E4E;&#x662F;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x7684;&#x3002;</p>
+<p>&#x540C;&#x6837;&#x5728; github &#x4E0A;&#x6709;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x7684;&#x9879;&#x76EE;&#x53EB;&#x505A; <a href="https://github.com/tonymillion/Reachability" target="_blank">Reachability</a> &#x4E0D;&#x8FC7;&#x8FD9;&#x4E2A;&#x9879;&#x76EE;<strong>&#x7531;&#x4E8E;&#x547D;&#x540D;&#x7684;&#x539F;&#x56E0;&#x53EF;&#x80FD;&#x4F1A;&#x5728;&#x5BA1;&#x6838;&#x65F6;&#x88AB;&#x62D2;&#x7EDD;</strong>&#x3002;</p>
+<p>&#x65E0;&#x8BBA;&#x662F; <code>AFNetworkReachabilityManager</code>&#xFF0C;&#x82F9;&#x679C;&#x5B98;&#x65B9;&#x7684;&#x9879;&#x76EE;&#x6216;&#x8005;&#x8BF4; github &#x4E0A;&#x7684; Reachability&#xFF0C;&#x5B83;&#x4EEC;&#x7684;&#x5B9E;&#x73B0;&#x90FD;&#x662F;&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x800C;&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4F1A;&#x4EE5; <code>AFNetworking</code> &#x4E2D;&#x7684; <code>AFNetworkReachabilityManager</code> &#x4E3A;&#x4F8B;&#x6765;&#x8BF4;&#x660E;&#x5728; iOS &#x5F00;&#x53D1;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x662F;&#x600E;&#x6837;&#x76D1;&#x63A7;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x7684;&#x3002;</p>
+<h2 id="afnetworkreachabilitymanager-&#x7684;&#x4F7F;&#x7528;&#x548C;&#x5B9E;&#x73B0;">AFNetworkReachabilityManager &#x7684;&#x4F7F;&#x7528;&#x548C;&#x5B9E;&#x73B0;</h2>
+<p><code>AFNetworkReachabilityManager</code> &#x7684;&#x4F7F;&#x7528;&#x8FD8;&#x662F;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x7684;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4E09;&#x4E2A;&#x6B65;&#x9AA4;&#xFF0C;&#x5C31;&#x57FA;&#x672C;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x5BF9;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x7684;&#x76D1;&#x63A7;&#x3002;</p>
+<ol>
+<li><a href="#init">&#x521D;&#x59CB;&#x5316; <code>AFNetworkReachabilityManager</code></a></li>
+<li><a href="#monitor">&#x8C03;&#x7528; <code>startMonitoring</code> &#x65B9;&#x6CD5;&#x5F00;&#x59CB;&#x5BF9;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x8FDB;&#x884C;&#x76D1;&#x63A7;</a></li>
+<li><a href="#block">&#x8BBE;&#x7F6E; <code>networkReachabilityStatusBlock</code> &#x5728;&#x6BCF;&#x6B21;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x6539;&#x53D8;&#x65F6;, &#x8C03;&#x7528;&#x8FD9;&#x4E2A; block</a></li>
+</ol>
+<h3 id="&#x521D;&#x59CB;&#x5316;-afnetworkreachabilitymanager"><a id="init"></a>&#x521D;&#x59CB;&#x5316; AFNetworkReachabilityManager</h3>
+<p>&#x5728;&#x521D;&#x59CB;&#x5316;&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528; <code>SCNetworkReachabilityCreateWithAddress</code> &#x6216;&#x8005; <code>SCNetworkReachabilityCreateWithName</code> &#x751F;&#x6210;&#x4E00;&#x4E2A; <code>SCNetworkReachabilityRef</code> &#x7684;&#x5F15;&#x7528;&#x3002;</p>
+<pre><code class="lang-objectivec">+ (instancetype)managerForDomain:(<span class="hljs-built_in">NSString</span> *)domain {
+    SCNetworkReachabilityRef reachability = SCNetworkReachabilityCreateWithName(k<span class="hljs-built_in">CFAllocatorDefault</span>, [domain UTF8String]);
+
+    AFNetworkReachabilityManager *manager = [[<span class="hljs-keyword">self</span> alloc] initWithReachability:reachability];
+
+    <span class="hljs-keyword">return</span> manager;
+}
+
++ (instancetype)managerForAddress:(<span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *)address {
+    SCNetworkReachabilityRef reachability = SCNetworkReachabilityCreateWithAddress(k<span class="hljs-built_in">CFAllocatorDefault</span>, (<span class="hljs-keyword">const</span> <span class="hljs-keyword">struct</span> sockaddr *)address);
+    AFNetworkReachabilityManager *manager = [[<span class="hljs-keyword">self</span> alloc] initWithReachability:reachability];
+
+    <span class="hljs-keyword">return</span> manager;
+}
+</code></pre>
+<ol>
+<li>&#x8FD9;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x4F1A;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;<strong>&#x57DF;&#x540D;</strong>&#x6216;&#x8005;&#x4E00;&#x4E2A; <code>sockaddr_in</code> &#x7684;&#x6307;&#x9488;&#x751F;&#x6210;&#x4E00;&#x4E2A; <code>SCNetworkReachabilityRef</code></li>
+<li>&#x8C03;&#x7528; <code>- [AFNetworkReachabilityManager initWithReachability:]</code> &#x5C06;&#x751F;&#x6210;&#x7684; <code>SCNetworkReachabilityRef</code> &#x5F15;&#x7528;&#x4F20;&#x7ED9; <code>networkReachability</code></li>
+<li>&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x7684; <code>networkReachabilityStatus</code></li>
+</ol>
+<pre><code class="lang-objectivec">- (instancetype)initWithReachability:(SCNetworkReachabilityRef)reachability {
+    <span class="hljs-keyword">self</span> = [<span class="hljs-keyword">super</span> init];
+    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">self</span>) {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>;
+    }
+
+    <span class="hljs-keyword">self</span>.networkReachability = <span class="hljs-built_in">CFBridgingRelease</span>(reachability);
+    <span class="hljs-keyword">self</span>.networkReachabilityStatus = AFNetworkReachabilityStatusUnknown;
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">self</span>;
+}
+</code></pre>
+<blockquote>
+<p>&#x5F53;&#x8C03;&#x7528; <code>CFBridgingRelease(reachability)</code> &#x540E;&#xFF0C;&#x4F1A;&#x628A; <code>reachability</code> &#x6865;&#x63A5;&#x6210;&#x4E00;&#x4E2A; NSObject &#x5BF9;&#x8C61;&#x8D4B;&#x503C;&#x7ED9; <code>self.networkReachability</code>&#xFF0C;&#x7136;&#x540E;&#x91CA;&#x653E;&#x539F;&#x6765;&#x7684; CoreFoundation &#x5BF9;&#x8C61;&#x3002;</p>
+</blockquote>
+<h3 id="&#x76D1;&#x63A7;&#x7F51;&#x7EDC;&#x72B6;&#x6001;"><a id="monitor"></a>&#x76D1;&#x63A7;&#x7F51;&#x7EDC;&#x72B6;&#x6001;</h3>
+<p>&#x5728;&#x521D;&#x59CB;&#x5316; <code>AFNetworkReachabilityManager</code> &#x540E;&#xFF0C;&#x4F1A;&#x8C03;&#x7528; <code>startMonitoring</code> &#x65B9;&#x6CD5;&#x5F00;&#x59CB;&#x76D1;&#x63A7;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x3002;</p>
+<pre><code class="lang-objectivec">- (<span class="hljs-keyword">void</span>)startMonitoring {
+    [<span class="hljs-keyword">self</span> stopMonitoring];
+
+    <span class="hljs-keyword">if</span> (!<span class="hljs-keyword">self</span>.networkReachability) {
+        <span class="hljs-keyword">return</span>;
+    }
+
+    __<span class="hljs-keyword">weak</span> __<span class="hljs-keyword">typeof</span>(<span class="hljs-keyword">self</span>)weakSelf = <span class="hljs-keyword">self</span>;
+    AFNetworkReachabilityStatusBlock callback = ^(AFNetworkReachabilityStatus status) {
+        __<span class="hljs-keyword">strong</span> __<span class="hljs-keyword">typeof</span>(weakSelf)strongSelf = weakSelf;
+
+        strongSelf.networkReachabilityStatus = status;
+        <span class="hljs-keyword">if</span> (strongSelf.networkReachabilityStatusBlock) {
+            strongSelf.networkReachabilityStatusBlock(status);
+        }
+
+    };
+
+    <span class="hljs-keyword">id</span> networkReachability = <span class="hljs-keyword">self</span>.networkReachability;
+    SCNetworkReachabilityContext context = {<span class="hljs-number">0</span>, (__bridge <span class="hljs-keyword">void</span> *)callback, AFNetworkReachabilityRetainCallback, AFNetworkReachabilityReleaseCallback, <span class="hljs-literal">NULL</span>};
+    SCNetworkReachabilitySetCallback((__bridge SCNetworkReachabilityRef)networkReachability, AFNetworkReachabilityCallback, &amp;context);
+    SCNetworkReachabilityScheduleWithRunLoop((__bridge SCNetworkReachabilityRef)networkReachability, <span class="hljs-built_in">CFRunLoopGetMain</span>(), k<span class="hljs-built_in">CFRunLoopCommonModes</span>);
+
+    <span class="hljs-built_in">dispatch_async</span>(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, <span class="hljs-number">0</span>),^{
+        SCNetworkReachabilityFlags flags;
+        <span class="hljs-keyword">if</span> (SCNetworkReachabilityGetFlags((__bridge SCNetworkReachabilityRef)networkReachability, &amp;flags)) {
+            AFPostReachabilityStatusChange(flags, callback);
+        }
+    });
+}
+</code></pre>
+<ol>
+<li><p>&#x5148;&#x8C03;&#x7528; <code>- stopMonitoring</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x4E4B;&#x524D;&#x8BBE;&#x7F6E;&#x8FC7;&#x5BF9;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x7684;&#x76D1;&#x542C;&#xFF0C;&#x4F7F;&#x7528; <code>SCNetworkReachabilityUnscheduleFromRunLoop</code> &#x65B9;&#x6CD5;&#x53D6;&#x6D88;&#x4E4B;&#x524D;&#x5728; Main Runloop &#x4E2D;&#x7684;&#x76D1;&#x542C;</p>
+<pre><code> - (void)stopMonitoring {
+     if (!self.networkReachability) {
+         return;
+     }
+
+     SCNetworkReachabilityUnscheduleFromRunLoop((__bridge SCNetworkReachabilityRef)self.networkReachability, CFRunLoopGetMain(), kCFRunLoopCommonModes);
+ }
+</code></pre></li>
+<li><p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5728;&#x6BCF;&#x6B21;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x6539;&#x53D8;&#x65F6;&#x7684;&#x56DE;&#x8C03;</p>
+<pre><code> __weak __typeof(self)weakSelf = self;
+ AFNetworkReachabilityStatusBlock callback = ^(AFNetworkReachabilityStatus status) {
+     __strong __typeof(weakSelf)strongSelf = weakSelf;
+
+     strongSelf.networkReachabilityStatus = status;
+     if (strongSelf.networkReachabilityStatusBlock) {
+         strongSelf.networkReachabilityStatusBlock(status);
+     }
+
+ };
+</code></pre><ul>
+<li>&#x6BCF;&#x6B21;&#x56DE;&#x8C03;&#x88AB;&#x8C03;&#x7528;&#x65F6;<ul>
+<li>&#x91CD;&#x65B0;&#x8BBE;&#x7F6E; <code>networkReachabilityStatus</code> &#x5C5E;&#x6027;</li>
+<li>&#x8C03;&#x7528; <code>networkReachabilityStatusBlock</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <code>SCNetworkReachabilityContext</code></p>
+<pre><code> typedef struct {
+     CFIndex        version;
+     void *        __nullable info;
+     const void    * __nonnull (* __nullable retain)(const void *info);
+     void        (* __nullable release)(const void *info);
+     CFStringRef    __nonnull (* __nullable copyDescription)(const void *info);
+ } SCNetworkReachabilityContext;
+
+ SCNetworkReachabilityContext context = {
+     0,
+     (__bridge void *)callback,
+     AFNetworkReachabilityRetainCallback, 
+     AFNetworkReachabilityReleaseCallback, 
+     NULL
+ };
+</code></pre><ul>
+<li>&#x5176;&#x4E2D;&#x7684; <code>callback</code> &#x5C31;&#x662F;&#x4E0A;&#x4E00;&#x6B65;&#x4E2D;&#x7684;&#x521B;&#x5EFA;&#x7684; block &#x5BF9;&#x8C61;</li>
+<li>&#x8FD9;&#x91CC;&#x7684; <code>AFNetworkReachabilityRetainCallback</code> &#x548C; <code>AFNetworkReachabilityReleaseCallback</code> &#x90FD;&#x662F;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x7684; block&#xFF0C;&#x5728;&#x56DE;&#x8C03;&#x88AB;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x53EA;&#x662F;&#x4F7F;&#x7528; <code>Block_copy</code> &#x548C; <code>Block_release</code> &#x8FD9;&#x6837;&#x7684;&#x5B8F;</li>
+<li><p>&#x4F20;&#x5165;&#x7684; <code>info</code> &#x4F1A;&#x4EE5;&#x53C2;&#x6570;&#x7684;&#x5F62;&#x5F0F;&#x5728; <code>AFNetworkReachabilityCallback</code> &#x6267;&#x884C;&#x65F6;&#x4F20;&#x5165;</p>
+<p>  static const void <em> AFNetworkReachabilityRetainCallback(const void </em>info) {</p>
+<pre><code>  return Block_copy(info);
+</code></pre><p>  }</p>
+<p>  static void AFNetworkReachabilityReleaseCallback(const void *info) {</p>
+<pre><code>  if (info) {
+      Block_release(info);
+  }
+</code></pre><p>  }</p>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>&#x5F53;&#x76EE;&#x6807;&#x7684;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x6539;&#x53D8;&#x65F6;&#xFF0C;&#x4F1A;&#x8C03;&#x7528;&#x4F20;&#x5165;&#x7684;&#x56DE;&#x8C03;</p>
+<pre><code> SCNetworkReachabilitySetCallback(
+     (__bridge SCNetworkReachabilityRef)networkReachability,
+     AFNetworkReachabilityCallback, 
+     &amp;context
+ );
+</code></pre></li>
+</ol>
+<ol>
+<li><p>&#x5728; Main Runloop &#x4E2D;&#x5BF9;&#x5E94;&#x7684;&#x6A21;&#x5F0F;&#x5F00;&#x59CB;&#x76D1;&#x63A7;&#x7F51;&#x7EDC;&#x72B6;&#x6001;</p>
+<pre><code> SCNetworkReachabilityScheduleWithRunLoop(
+     (__bridge SCNetworkReachabilityRef)networkReachability, 
+     CFRunLoopGetMain(), 
+     kCFRunLoopCommonModes
+ );
+</code></pre></li>
+</ol>
+<ol>
+<li><p>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7684;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#xFF0C;&#x8C03;&#x7528; callback</p>
+<pre><code> dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0),^{
+     SCNetworkReachabilityFlags flags;
+     if (SCNetworkReachabilityGetFlags((__bridge SCNetworkReachabilityRef)networkReachability, &amp;flags)) {
+         AFPostReachabilityStatusChange(flags, callback);
+     }
+ });
+</code></pre></li>
+</ol>
+<p>&#x5728;&#x4E0B;&#x4E00;&#x8282;&#x4E2D;&#x4F1A;&#x4ECB;&#x7ECD;&#x4E0A;&#x9762;&#x6240;&#x63D0;&#x5230;&#x7684;&#x4E00;&#x4E9B; C &#x51FD;&#x6570;&#x4EE5;&#x53CA;&#x5404;&#x79CD;&#x56DE;&#x8C03;&#x3002;</p>
+<h3 id="&#x8BBE;&#x7F6E;-networkreachabilitystatusblock-&#x4EE5;&#x53CA;&#x56DE;&#x8C03;"><a id="block"></a>&#x8BBE;&#x7F6E; networkReachabilityStatusBlock &#x4EE5;&#x53CA;&#x56DE;&#x8C03;</h3>
+<p>&#x5728; Main Runloop &#x4E2D;&#x5BF9;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x8FDB;&#x884C;&#x76D1;&#x63A7;&#x4E4B;&#x540E;&#xFF0C;&#x5728;&#x6BCF;&#x6B21;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x6539;&#x53D8;&#xFF0C;&#x5C31;&#x4F1A;&#x8C03;&#x7528; <code>AFNetworkReachabilityCallback</code> &#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> AFNetworkReachabilityCallback(SCNetworkReachabilityRef __unused target, SCNetworkReachabilityFlags flags, <span class="hljs-keyword">void</span> *info) {
+    AFPostReachabilityStatusChange(flags, (__bridge AFNetworkReachabilityStatusBlock)info);
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x4F1A;&#x4ECE; <code>info</code> &#x4E2D;&#x53D6;&#x51FA;&#x4E4B;&#x524D;&#x5B58;&#x5728; <code>context</code> &#x4E2D;&#x7684; <code>AFNetworkReachabilityStatusBlock</code>&#x3002;</p>
+<pre><code class="lang-objectivec">__<span class="hljs-keyword">weak</span> __<span class="hljs-keyword">typeof</span>(<span class="hljs-keyword">self</span>)weakSelf = <span class="hljs-keyword">self</span>;
+AFNetworkReachabilityStatusBlock callback = ^(AFNetworkReachabilityStatus status) {
+    __<span class="hljs-keyword">strong</span> __<span class="hljs-keyword">typeof</span>(weakSelf)strongSelf = weakSelf;
+
+    strongSelf.networkReachabilityStatus = status;
+    <span class="hljs-keyword">if</span> (strongSelf.networkReachabilityStatusBlock) {
+        strongSelf.networkReachabilityStatusBlock(status);
+    }
+
+};
+</code></pre>
+<p>&#x53D6;&#x51FA;&#x8FD9;&#x4E2A; block &#x4E4B;&#x540E;&#xFF0C;&#x4F20;&#x5165; <code>AFPostReachabilityStatusChange</code> &#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> AFPostReachabilityStatusChange(SCNetworkReachabilityFlags flags, AFNetworkReachabilityStatusBlock block) {
+    AFNetworkReachabilityStatus status = AFNetworkReachabilityStatusForFlags(flags);
+    <span class="hljs-built_in">dispatch_async</span>(dispatch_get_main_queue(), ^{
+        <span class="hljs-keyword">if</span> (block) {
+            block(status);
+        }
+        <span class="hljs-built_in">NSNotificationCenter</span> *notificationCenter = [<span class="hljs-built_in">NSNotificationCenter</span> defaultCenter];
+        <span class="hljs-built_in">NSDictionary</span> *userInfo = @{ AFNetworkingReachabilityNotificationStatusItem: @(status) };
+        [notificationCenter postNotificationName:AFNetworkingReachabilityDidChangeNotification object:<span class="hljs-literal">nil</span> userInfo:userInfo];
+    });
+}
+</code></pre>
+<ol>
+<li>&#x8C03;&#x7528; <code>AFNetworkReachabilityStatusForFlags</code> &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7684;&#x7F51;&#x7EDC;&#x53EF;&#x8FBE;&#x6027;&#x72B6;&#x6001;</li>
+<li><strong>&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x4E2D;&#x5F02;&#x6B65;&#x6267;&#x884C;</strong>&#x4E0A;&#x9762;&#x4F20;&#x5165;&#x7684; <code>callback</code> block&#xFF08;&#x8BBE;&#x7F6E; <code>self</code> &#x7684;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#xFF0C;&#x8C03;&#x7528; <code>networkReachabilityStatusBlock</code>&#xFF09;</li>
+<li>&#x53D1;&#x9001; <code>AFNetworkingReachabilityDidChangeNotification</code> &#x901A;&#x77E5;.</li>
+</ol>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">static</span> AFNetworkReachabilityStatus AFNetworkReachabilityStatusForFlags(SCNetworkReachabilityFlags flags) {
+    <span class="hljs-built_in">BOOL</span> isReachable = ((flags &amp; kSCNetworkReachabilityFlagsReachable) != <span class="hljs-number">0</span>);
+    <span class="hljs-built_in">BOOL</span> needsConnection = ((flags &amp; kSCNetworkReachabilityFlagsConnectionRequired) != <span class="hljs-number">0</span>);
+    <span class="hljs-built_in">BOOL</span> canConnectionAutomatically = (((flags &amp; kSCNetworkReachabilityFlagsConnectionOnDemand ) != <span class="hljs-number">0</span>) || ((flags &amp; kSCNetworkReachabilityFlagsConnectionOnTraffic) != <span class="hljs-number">0</span>));
+    <span class="hljs-built_in">BOOL</span> canConnectWithoutUserInteraction = (canConnectionAutomatically &amp;&amp; (flags &amp; kSCNetworkReachabilityFlagsInterventionRequired) == <span class="hljs-number">0</span>);
+    <span class="hljs-built_in">BOOL</span> isNetworkReachable = (isReachable &amp;&amp; (!needsConnection || canConnectWithoutUserInteraction));
+
+    AFNetworkReachabilityStatus status = AFNetworkReachabilityStatusUnknown;
+    <span class="hljs-keyword">if</span> (isNetworkReachable == <span class="hljs-literal">NO</span>) {
+        status = AFNetworkReachabilityStatusNotReachable;
+    }
+<span class="hljs-meta">#if    TARGET_OS_IPHONE</span>
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((flags &amp; kSCNetworkReachabilityFlagsIsWWAN) != <span class="hljs-number">0</span>) {
+        status = AFNetworkReachabilityStatusReachableViaWWAN;
+    }
+<span class="hljs-meta">#endif</span>
+    <span class="hljs-keyword">else</span> {
+        status = AFNetworkReachabilityStatusReachableViaWiFi;
+    }
+
+    <span class="hljs-keyword">return</span> status;
+}
+</code></pre>
+<p>&#x56E0;&#x4E3A; <code>flags</code> &#x662F;&#x4E00;&#x4E2A; <code>SCNetworkReachabilityFlags</code>&#xFF0C;&#x5B83;&#x7684;&#x4E0D;&#x540C;&#x4F4D;&#x4EE3;&#x8868;&#x4E86;&#x4E0D;&#x540C;&#x7684;&#x7F51;&#x7EDC;&#x53EF;&#x8FBE;&#x6027;&#x72B6;&#x6001;&#xFF0C;&#x901A;&#x8FC7; <code>flags</code> &#x7684;&#x4F4D;&#x64CD;&#x4F5C;&#xFF0C;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7684;&#x72B6;&#x6001;&#x4FE1;&#x606F; <code>AFNetworkReachabilityStatus</code>&#x3002;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">typedef</span> <span class="hljs-built_in">CF_OPTIONS</span>(uint32_t, SCNetworkReachabilityFlags) {
+    kSCNetworkReachabilityFlagsTransientConnection    = <span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">0</span>,
+    kSCNetworkReachabilityFlagsReachable        = <span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">1</span>,
+    kSCNetworkReachabilityFlagsConnectionRequired    = <span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">2</span>,
+    kSCNetworkReachabilityFlagsConnectionOnTraffic    = <span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">3</span>,
+    kSCNetworkReachabilityFlagsInterventionRequired    = <span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">4</span>,
+    kSCNetworkReachabilityFlagsConnectionOnDemand    = <span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">5</span>,    <span class="hljs-comment">// __OSX_AVAILABLE_STARTING(__MAC_10_6,__IPHONE_3_0)</span>
+    kSCNetworkReachabilityFlagsIsLocalAddress    = <span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">16</span>,
+    kSCNetworkReachabilityFlagsIsDirect        = <span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">17</span>,
+<span class="hljs-meta">#if    TARGET_OS_IPHONE</span>
+    kSCNetworkReachabilityFlagsIsWWAN        = <span class="hljs-number">1</span>&lt;&lt;<span class="hljs-number">18</span>,
+<span class="hljs-meta">#endif    // TARGET_OS_IPHONE</span>
+
+    kSCNetworkReachabilityFlagsConnectionAutomatic    = kSCNetworkReachabilityFlagsConnectionOnTraffic
+};
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x5C31;&#x662F;&#x5728; <code>SystemConfiguration</code> &#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x5168;&#x90E8;&#x7684;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x7684;&#x6807;&#x5FD7;&#x4F4D;&#x3002;</p>
+<h2 id="&#x4E0E;-afnetworking-&#x534F;&#x4F5C;">&#x4E0E; AFNetworking &#x534F;&#x4F5C;</h2>
+<p>&#x5176;&#x5B9E;&#x8FD9;&#x4E2A;&#x7C7B;&#x4E0E; <code>AFNetworking</code> &#x6574;&#x4E2A;&#x6846;&#x67B6;&#x5E76;&#x6CA1;&#x6709;&#x592A;&#x591A;&#x7684;&#x8026;&#x5408;&#x3002;&#x6B63;&#x76F8;&#x53CD;&#xFF0C;&#x5B83;&#x5728;&#x6574;&#x4E2A;&#x6846;&#x67B6;&#x4E2D;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;<strong>&#x5373;&#x63D2;&#x5373;&#x7528;</strong>&#x7684;&#x7C7B;&#x4F7F;&#x7528;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A; <code>AFURLSessionManager</code> &#x90FD;&#x4F1A;&#x6301;&#x6709;&#x4E00;&#x4E2A; <code>AFNetworkReachabilityManager</code> &#x7684;&#x5B9E;&#x4F8B;&#x3002;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">self</span>.reachabilityManager = [AFNetworkReachabilityManager sharedManager];
+</code></pre>
+<p>&#x8FD9;&#x662F;&#x6574;&#x4E2A;&#x6846;&#x67B6;&#x4E2D;&#x9664;&#x4E86; <code>AFNetworkReachabilityManager.h/m</code> &#x6587;&#x4EF6;&#xFF0C;<strong>&#x552F;&#x4E00;&#x4E00;&#x4E2A;</strong>&#x5F15;&#x7528;&#x5230;&#x8FD9;&#x4E2A;&#x7C7B;&#x7684;&#x5730;&#x65B9;&#x3002;</p>
+<p>&#x5728;&#x5B9E;&#x9645;&#x7684;&#x4F7F;&#x7528;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x64CD;&#x4F5C; <code>AFURLSessionManager</code> &#x7684; <code>reachabilityManager</code> &#x6765;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7684;&#x7F51;&#x7EDC;&#x53EF;&#x8FBE;&#x6027;&#x72B6;&#x6001;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x81EA;&#x5DF1;&#x624B;&#x52A8;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x5B9E;&#x4F8B;&#xFF0C;&#x5F53;&#x7136;&#x8FD9;&#x4E48;&#x505A;&#x4E5F;&#x662F;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x95EE;&#x9898;&#x7684;&#x3002;</p>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<ol>
+<li><code>AFNetworkReachabilityManager</code> &#x5B9E;&#x9645;&#x4E0A;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x5E95;&#x5C42; <code>SystemConfiguration</code> &#x5E93;&#x4E2D;&#x7684; C &#x51FD;&#x6570;&#x5C01;&#x88C5;&#x7684;&#x7C7B;&#xFF0C;&#x5B83;&#x4E3A;&#x6211;&#x4EEC;&#x9690;&#x85CF;&#x4E86; C &#x8BED;&#x8A00;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x7EDF;&#x4E00;&#x7684; Objective-C &#x8BED;&#x8A00;&#x63A5;&#x53E3;</li>
+<li>&#x5B83;&#x662F; <code>AFNetworking</code> &#x4E2D;&#x4E00;&#x4E2A;&#x5373;&#x63D2;&#x5373;&#x7528;&#x7684;&#x6A21;&#x5757;</li>
+</ol>
+<h2 id="&#x76F8;&#x5173;&#x6587;&#x7AE0;">&#x76F8;&#x5173;&#x6587;&#x7AE0;</h2>
+<p>&#x5173;&#x4E8E;&#x5176;&#x4ED6; AFNetworking &#x6E90;&#x4EE3;&#x7801;&#x5206;&#x6790;&#x7684;&#x5176;&#x4ED6;&#x6587;&#x7AE0;&#xFF1A;</p>
+<ul>
+<li><a href="https://github.com/Draveness/iOS-Source-Code-Analyze/blob/master/contents/AFNetworking/AFNetworking%20&#x6982;&#x8FF0;&#xFF08;&#x4E00;&#xFF09;.md" target="_blank">AFNetworking &#x6982;&#x8FF0;&#xFF08;&#x4E00;&#xFF09;</a></li>
+<li><a href="https://github.com/Draveness/iOS-Source-Code-Analyze/blob/master/contents/AFNetworking/AFNetworking%20&#x7684;&#x6838;&#x5FC3;%20AFURLSessionManager&#xFF08;&#x4E8C;&#xFF09;.md" target="_blank">AFNetworking &#x7684;&#x6838;&#x5FC3; AFURLSessionManager&#xFF08;&#x4E8C;&#xFF09;</a></li>
+<li><a href="https://github.com/Draveness/iOS-Source-Code-Analyze/blob/master/contents/AFNetworking/&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x548C;&#x54CD;&#x5E94;%20AFURLSerialization&#xFF08;&#x4E09;&#xFF09;.md" target="_blank">&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x548C;&#x54CD;&#x5E94; AFURLSerialization&#xFF08;&#x4E09;&#xFF09;</a></li>
+<li><a href="https://github.com/Draveness/iOS-Source-Code-Analyze/blob/master/contents/AFNetworking/AFNetworkReachabilityManager%20&#x76D1;&#x63A7;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#xFF08;&#x56DB;&#xFF09;.md" target="_blank">AFNetworkReachabilityManager &#x76D1;&#x63A7;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#xFF08;&#x56DB;&#xFF09;</a></li>
+<li><a href="https://github.com/Draveness/iOS-Source-Code-Analyze/blob/master/contents/AFNetworking/&#x9A8C;&#x8BC1;%20HTTPS%20&#x8BF7;&#x6C42;&#x7684;&#x8BC1;&#x4E66;&#xFF08;&#x4E94;&#xFF09;.md" target="_blank">&#x9A8C;&#x8BC1; HTTPS &#x8BF7;&#x6C42;&#x7684;&#x8BC1;&#x4E66;&#xFF08;&#x4E94;&#xFF09;</a></li>
+</ul>
+<p>Follow: <a href="https://github.com/Draveness" target="_blank">@Draveness</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="AFNetworking_3.html" class="navigation navigation-prev " aria-label="Previous page: AFURLSerialization">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="AFNetworking_5.html" class="navigation navigation-next " aria-label="Next page: HTTPS">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"AFNetworkReachabilityManager","level":"1.1.5.1.3","depth":4,"next":{"title":"HTTPS","level":"1.1.5.1.4","depth":4,"path":"Source-Code-Analysis/AFNetworking/AFNetworking_5.md","ref":"Source-Code-Analysis/AFNetworking/AFNetworking_5.md","articles":[]},"previous":{"title":"AFURLSerialization","level":"1.1.5.1.2","depth":4,"path":"Source-Code-Analysis/AFNetworking/AFNetworking_3.md","ref":"Source-Code-Analysis/AFNetworking/AFNetworking_3.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Source-Code-Analysis/AFNetworking/AFNetworking_4.md","mtime":"2018-05-22T14:51:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-23T11:29:51.711Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

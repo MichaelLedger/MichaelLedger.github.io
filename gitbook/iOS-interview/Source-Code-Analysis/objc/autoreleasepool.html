@@ -1,0 +1,2172 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>自动释放池 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="black-box-retain-release.html" />
+    
+    
+    <link rel="prev" href="associated-obj.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    iOS 开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../../ObjC-Basic/">
+            
+                <a href="../../ObjC-Basic/">
+            
+                    
+                    Objective-C 语言基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../../ObjC-Basic/Class.html">
+            
+                <a href="../../ObjC-Basic/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2" data-path="../../ObjC-Basic/Block.html">
+            
+                <a href="../../ObjC-Basic/Block.html">
+            
+                    
+                    Block 编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.3" data-path="../../ObjC-Basic/Runtime.html">
+            
+                <a href="../../ObjC-Basic/Runtime.html">
+            
+                    
+                    Objective-C Runtime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.4" data-path="../../ObjC-Basic/MM.html">
+            
+                <a href="../../ObjC-Basic/MM.html">
+            
+                    
+                    Objective-C 内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.5" data-path="../../ObjC-Basic/Runloop.html">
+            
+                <a href="../../ObjC-Basic/Runloop.html">
+            
+                    
+                    Runloop
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../../Cocoa-Touch/">
+            
+                <a href="../../Cocoa-Touch/">
+            
+                    
+                    Cocoa Touch
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="../../Cocoa-Touch/Event-Handling.html">
+            
+                <a href="../../Cocoa-Touch/Event-Handling.html">
+            
+                    
+                    事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2" data-path="../../Cocoa-Touch/UIApplication.html">
+            
+                <a href="../../Cocoa-Touch/UIApplication.html">
+            
+                    
+                    UIApplication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.3" data-path="../../Cocoa-Touch/UIView-Basic.html">
+            
+                <a href="../../Cocoa-Touch/UIView-Basic.html">
+            
+                    
+                    UIView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.4" data-path="../../Cocoa-Touch/UIViewController.html">
+            
+                <a href="../../Cocoa-Touch/UIViewController.html">
+            
+                    
+                    UIViewController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.5" data-path="../../Cocoa-Touch/Animation.html">
+            
+                <a href="../../Cocoa-Touch/Animation.html">
+            
+                    
+                    动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.6" data-path="../../Cocoa-Touch/Network.html">
+            
+                <a href="../../Cocoa-Touch/Network.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.7" data-path="../../Cocoa-Touch/Multithreading.html">
+            
+                <a href="../../Cocoa-Touch/Multithreading.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../../Cocoa-Touch/File-System.html">
+            
+                <a href="../../Cocoa-Touch/File-System.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.9" data-path="../../Cocoa-Touch/Design.html">
+            
+                <a href="../../Cocoa-Touch/Design.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.10" data-path="../../Cocoa-Touch/Performance.html">
+            
+                <a href="../../Cocoa-Touch/Performance.html">
+            
+                    
+                    性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../../Swift/">
+            
+                <a href="../../Swift/">
+            
+                    
+                    Swift
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="../../Swift/Class.html">
+            
+                <a href="../../Swift/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="../../Swift/Struct-And-Enum.html">
+            
+                <a href="../../Swift/Struct-And-Enum.html">
+            
+                    
+                    结构体与枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3" data-path="../../Swift/Function-And-Closure.html">
+            
+                <a href="../../Swift/Function-And-Closure.html">
+            
+                    
+                    函数与闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../../Interview/">
+            
+                <a href="../../Interview/">
+            
+                    
+                    面试问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1" data-path="../../Interview/iOSInterviewQuestions/">
+            
+                <a href="../../Interview/iOSInterviewQuestions/">
+            
+                    
+                    《招聘一个靠谱的iOS》
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1.1" data-path="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.1.2" data-path="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.2" data-path="../../interview/ZhiHu-QA/">
+            
+                <a href="../../interview/ZhiHu-QA/">
+            
+                    
+                    关于一些 iOS 面试问题的解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.3" data-path="../../interview/iOSDeveloperQA/">
+            
+                <a href="../../interview/iOSDeveloperQA/">
+            
+                    
+                    iOS 开发面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.4" data-path="../../interview/MXR-QA/">
+            
+                <a href="../../interview/MXR-QA/">
+            
+                    
+                    MXR 面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    源码分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1" data-path="../AFNetworking/AFNetworking_1.html">
+            
+                <a href="../AFNetworking/AFNetworking_1.html">
+            
+                    
+                    AFNetworking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1.1" data-path="../AFNetworking/AFNetworking_2.html">
+            
+                <a href="../AFNetworking/AFNetworking_2.html">
+            
+                    
+                    AFURLSessionManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.2" data-path="../AFNetworking/AFNetworking_3.html">
+            
+                <a href="../AFNetworking/AFNetworking_3.html">
+            
+                    
+                    AFURLSerialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.3" data-path="../AFNetworking/AFNetworking_4.html">
+            
+                <a href="../AFNetworking/AFNetworking_4.html">
+            
+                    
+                    AFNetworkReachabilityManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.4" data-path="../AFNetworking/AFNetworking_5.html">
+            
+                <a href="../AFNetworking/AFNetworking_5.html">
+            
+                    
+                    HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.2" data-path="../Alamofire/">
+            
+                <a href="../Alamofire/">
+            
+                    
+                    Alamofire
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3" data-path="../architecture/mvx.html">
+            
+                <a href="../architecture/mvx.html">
+            
+                    
+                    architecture
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.3.1" data-path="../architecture/mvx-model.html">
+            
+                <a href="../architecture/mvx-model.html">
+            
+                    
+                    MVX-Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.2" data-path="../architecture/mvx-view.html">
+            
+                <a href="../architecture/mvx-view.html">
+            
+                    
+                    MVX-View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.3" data-path="../architecture/mvx-controller.html">
+            
+                <a href="../architecture/mvx-controller.html">
+            
+                    
+                    MVX-Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4" >
+            
+                <span>
+            
+                    
+                    AsyncDisplayKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.4.1" data-path="../AsyncDisplayKit/ASDK_1.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_1.html">
+            
+                    
+                    提升界面的渲染性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4.2" data-path="../AsyncDisplayKit/ASDK_2.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_2.html">
+            
+                    
+                    布局算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4.3" data-path="../AsyncDisplayKit/ASDK_3.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_3.html">
+            
+                    
+                    预加载与智能预加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5" >
+            
+                <span>
+            
+                    
+                    BlocksKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.5.1" data-path="../BlocksKit/BlocksKit_1.html">
+            
+                <a href="../BlocksKit/BlocksKit_1.html">
+            
+                    
+                    神奇的 BlocksKit (一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5.2" data-path="../BlocksKit/BlocksKit_2.html">
+            
+                <a href="../BlocksKit/BlocksKit_2.html">
+            
+                    
+                    神奇的 BlocksKit (二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.6" data-path="../Blog/initialize-comments.html">
+            
+                <a href="../Blog/initialize-comments.html">
+            
+                    
+                    Gitalk/Gitment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7" >
+            
+                <span>
+            
+                    
+                    CocoaPods
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.7.1" data-path="../CocoaPods/CocoaPods.html">
+            
+                <a href="../CocoaPods/CocoaPods.html">
+            
+                    
+                    CocoaPods 都做了什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7.2" data-path="../CocoaPods/DSL.html">
+            
+                <a href="../CocoaPods/DSL.html">
+            
+                    
+                    DSL 以及 DSL 的应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8" >
+            
+                <span>
+            
+                    
+                    Database
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.8.1" data-path="../Database/concurrency-control.html">
+            
+                <a href="../Database/concurrency-control.html">
+            
+                    
+                    数据库并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.2" data-path="../Database/dynamo.html">
+            
+                <a href="../Database/dynamo.html">
+            
+                    
+                    分布式键值存储 Dynamo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.3" data-path="../Database/leveldb-bigtable.html">
+            
+                <a href="../Database/leveldb-bigtable.html">
+            
+                    
+                    Bigtable 和 LevelDB 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.4" data-path="../Database/mongodb-to-mysql.html">
+            
+                <a href="../Database/mongodb-to-mysql.html">
+            
+                    
+                    MongoDB 迁移到 MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.5" data-path="../Database/mongodb-wiredtiger.html">
+            
+                <a href="../Database/mongodb-wiredtiger.html">
+            
+                    
+                    MongoDB 和 WiredTiger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.6" data-path="../Database/mysql.html">
+            
+                <a href="../Database/mysql.html">
+            
+                    
+                    MySQL 和 InnoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.7" data-path="../Database/sql-index-intro.html">
+            
+                <a href="../Database/sql-index-intro.html">
+            
+                    
+                    MySQL 索引设计概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.8" data-path="../Database/sql-index-performance.html">
+            
+                <a href="../Database/sql-index-performance.html">
+            
+                    
+                    MySQL 索引性能分析概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.9" data-path="../Database/transaction.html">
+            
+                <a href="../Database/transaction.html">
+            
+                    
+                    MySQL 中事务的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.9" data-path="../DKNightVersion/DKNightVersion.html">
+            
+                <a href="../DKNightVersion/DKNightVersion.html">
+            
+                    
+                    DKNightVersion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10" >
+            
+                <span>
+            
+                    
+                    FBRetainCycleDetector
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.10.1" data-path="../FBRetainCycleDetector/block.html">
+            
+                <a href="../FBRetainCycleDetector/block.html">
+            
+                    
+                    block 如何持有对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.2" data-path="../FBRetainCycleDetector/Obj-Associated.html">
+            
+                <a href="../FBRetainCycleDetector/Obj-Associated.html">
+            
+                    
+                    Associated Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.3" data-path="../FBRetainCycleDetector/Obj-Strong.html">
+            
+                <a href="../FBRetainCycleDetector/Obj-Strong.html">
+            
+                    
+                    对象持有的强指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.4" data-path="../FBRetainCycleDetector/retain_cycle.html">
+            
+                <a href="../FBRetainCycleDetector/retain_cycle.html">
+            
+                    
+                    解决循环引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.11" data-path="../fishhook/fishhook.html">
+            
+                <a href="../fishhook/fishhook.html">
+            
+                    
+                    fishhook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.12" data-path="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                <a href="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                    
+                    IQKeyboardManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.13" data-path="../KVOController/KVOController.html">
+            
+                <a href="../KVOController/KVOController.html">
+            
+                    
+                    KVOController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.14" data-path="../libextobjc/libextobjc.html">
+            
+                <a href="../libextobjc/libextobjc.html">
+            
+                    
+                    libextobjc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.15" data-path="../Masonry/Masonry.html">
+            
+                <a href="../Masonry/Masonry.html">
+            
+                    
+                    Masonry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.16" data-path="../MBProgressHUD/">
+            
+                <a href="../MBProgressHUD/">
+            
+                    
+                    MBProgressHUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    objc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.17.1" data-path="associated-obj.html">
+            
+                <a href="associated-obj.html">
+            
+                    
+                    关联对象 AssociatedObject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.5.17.2" data-path="autoreleasepool.html">
+            
+                <a href="autoreleasepool.html">
+            
+                    
+                    自动释放池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.3" data-path="black-box-retain-release.html">
+            
+                <a href="black-box-retain-release.html">
+            
+                    
+                    黑箱中的 retain 和 release
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.4" data-path="func-structure.html">
+            
+                <a href="func-structure.html">
+            
+                    
+                    ObjC 中方法的结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.5" data-path="hash.html">
+            
+                <a href="hash.html">
+            
+                    
+                    哈希表的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.6" data-path="initialization.html">
+            
+                <a href="initialization.html">
+            
+                    
+                    初始化对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.7" data-path="isa.html">
+            
+                <a href="isa.html">
+            
+                    
+                    isa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.8" data-path="lazy-initialize.html">
+            
+                <a href="lazy-initialize.html">
+            
+                    
+                    懒惰的 initialize 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.9" data-path="load.html">
+            
+                <a href="load.html">
+            
+                    
+                    load 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.10" data-path="msgSend.html">
+            
+                <a href="msgSend.html">
+            
+                    
+                    消息传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18" >
+            
+                <span>
+            
+                    
+                    OHHTTPStubs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.18.1" data-path="../OHHTTPStubs/intercept.html">
+            
+                <a href="../OHHTTPStubs/intercept.html">
+            
+                    
+                    HTTP Intercept
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18.2" data-path="../OHHTTPStubs/mock.html">
+            
+                <a href="../OHHTTPStubs/mock.html">
+            
+                    
+                    HTTP Mock
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.19" data-path="../ProtocolKit/ProtocolKit.html">
+            
+                <a href="../ProtocolKit/ProtocolKit.html">
+            
+                    
+                    ProtocolKit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20" data-path="../rack/rack.html">
+            
+                <a href="../rack/rack.html">
+            
+                    
+                    rack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.20.1" data-path="../rack/rack-thin.html">
+            
+                <a href="../rack/rack-thin.html">
+            
+                    
+                    Thin 的事件驱动模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20.2" data-path="../rack/rack-unicorn.html">
+            
+                <a href="../rack/rack-unicorn.html">
+            
+                    
+                    Unicorn 的多进程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20.3" data-path="../rack/rack-webrik.html">
+            
+                <a href="../rack/rack-webrik.html">
+            
+                    
+                    WEBrick 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.21" data-path="../Rails/activerecord.html">
+            
+                <a href="../Rails/activerecord.html">
+            
+                    
+                    Rails
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22" >
+            
+                <span>
+            
+                    
+                    ReactiveObjC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.22.1" data-path="../ReactiveObjC/RACChannel.html">
+            
+                <a href="../ReactiveObjC/RACChannel.html">
+            
+                    
+                    RACChannel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.2" data-path="../ReactiveObjC/RACCommand.html">
+            
+                <a href="../ReactiveObjC/RACCommand.html">
+            
+                    
+                    RACCommand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.3" data-path="../ReactiveObjC/RACDelegateProxy.html">
+            
+                <a href="../ReactiveObjC/RACDelegateProxy.html">
+            
+                    
+                    RACDelegateProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.4" data-path="../ReactiveObjC/RACMulticastConnection.html">
+            
+                <a href="../ReactiveObjC/RACMulticastConnection.html">
+            
+                    
+                    RACMulticastConnection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.5" data-path="../ReactiveObjC/RACScheduler.html">
+            
+                <a href="../ReactiveObjC/RACScheduler.html">
+            
+                    
+                    RACScheduler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.6" data-path="../ReactiveObjC/RACSequence.html">
+            
+                <a href="../ReactiveObjC/RACSequence.html">
+            
+                    
+                    RACSequence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.7" data-path="../ReactiveObjC/RACSignal.html">
+            
+                <a href="../ReactiveObjC/RACSignal.html">
+            
+                    
+                    RACSignal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.8" data-path="../ReactiveObjC/RACSubject.html">
+            
+                <a href="../ReactiveObjC/RACSubject.html">
+            
+                    
+                    RACSubject
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23" >
+            
+                <span>
+            
+                    
+                    Redis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.23.1" data-path="../Redis/redis-cli.html">
+            
+                <a href="../Redis/redis-cli.html">
+            
+                    
+                    命令处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.2" data-path="../Redis/redis-eventloop.html">
+            
+                <a href="../Redis/redis-eventloop.html">
+            
+                    
+                    事件循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.3" data-path="../Redis/redis-io-multiplexing.html">
+            
+                <a href="../Redis/redis-io-multiplexing.html">
+            
+                    
+                    I/O 多路复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.24" data-path="../Ruby/Ruby.html">
+            
+                <a href="../Ruby/Ruby.html">
+            
+                    
+                    Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.25" data-path="../SDWebImage/">
+            
+                <a href="../SDWebImage/">
+            
+                    
+                    SDWebImage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="../../More.html">
+            
+                <a href="../../More.html">
+            
+                    
+                    更多资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >自动释放池</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x7684;&#x524D;&#x4E16;&#x4ECA;&#x751F;">&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x7684;&#x524D;&#x4E16;&#x4ECA;&#x751F;</h1>
+<blockquote>
+<p>&#x7531;&#x4E8E; Objective-C &#x4E2D;&#x7684;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x662F;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x5927;&#x7684;&#x8BDD;&#x9898;&#xFF0C;&#x6240;&#x4EE5;&#x4F1A;&#x5206;&#x4E3A;&#x4E24;&#x7BC7;&#x6587;&#x7AE0;&#x6765;&#x5BF9;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x673A;&#x5236;&#x8FDB;&#x884C;&#x5256;&#x6790;&#xFF0C;&#x4E00;&#x90E8;&#x5206;&#x5206;&#x6790;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x4EE5;&#x53CA; <code>autorelease</code> &#x65B9;&#x6CD5;&#xFF0C;&#x53E6;&#x4E00;&#x90E8;&#x5206;&#x5206;&#x6790; <code>retain</code>&#x3001;<code>release</code> &#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x4EE5;&#x53CA;&#x81EA;&#x52A8;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x3002;</p>
+</blockquote>
+<ul>
+<li><a href="https://github.com/Draveness/iOS-Source-Code-Analyze/blob/master/contents/objc/&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x7684;&#x524D;&#x4E16;&#x4ECA;&#x751F;.md" target="_blank">&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x7684;&#x524D;&#x4E16;&#x4ECA;&#x751F;</a></li>
+<li><a href="https://github.com/Draveness/iOS-Source-Code-Analyze/blob/master/contents/objc/&#x9ED1;&#x7BB1;&#x4E2D;&#x7684;%20retain%20&#x548C;%20release.md" target="_blank">&#x9ED1;&#x7BB1;&#x4E2D;&#x7684; retain &#x548C; release</a></li>
+</ul>
+<h2 id="&#x5199;&#x5728;&#x524D;&#x9762;">&#x5199;&#x5728;&#x524D;&#x9762;</h2>
+<p>&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x4F1A;&#x5728;&#x6E90;&#x4EE3;&#x7801;&#x5C42;&#x9762;&#x4ECB;&#x7ECD; Objective-C &#x4E2D;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#xFF0C;&#x4EE5;&#x53CA;&#x65B9;&#x6CD5;&#x7684; <code>autorelease</code> &#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x3002;</p>
+<h2 id="&#x4ECE;-main-&#x51FD;&#x6570;&#x5F00;&#x59CB;">&#x4ECE; main &#x51FD;&#x6570;&#x5F00;&#x59CB;</h2>
+<p><code>main</code> &#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x5728;&#x6574;&#x4E2A; iOS &#x5F00;&#x53D1;&#x4E2D;&#x975E;&#x5E38;&#x4E0D;&#x8D77;&#x773C;&#x7684;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x5F88;&#x597D;&#x5730;&#x9690;&#x85CF;&#x5728; <code>Supporting Files</code> &#x6587;&#x4EF6;&#x5939;&#x4E2D;&#xFF0C;&#x5374;&#x662F;&#x6574;&#x4E2A; iOS &#x5E94;&#x7528;&#x7684;&#x5165;&#x53E3;&#x3002;
+<img src="../images/objc-autorelease-main.png" alt="objc-autorelease-main"></p>
+<p><code>main.m</code> &#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">int</span> main(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span> * argv[]) {
+    <span class="hljs-keyword">@autoreleasepool</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">UIApplicationMain</span>(argc, argv, <span class="hljs-literal">nil</span>, <span class="hljs-built_in">NSStringFromClass</span>([AppDelegate class]));
+    }
+}
+</code></pre>
+<p>&#x5728;&#x8FD9;&#x4E2A; <code>@autoreleasepool</code> block &#x4E2D;&#x53EA;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#xFF0C;&#x8FD9;&#x884C;&#x4EE3;&#x7801;&#x5C06;&#x6240;&#x6709;&#x7684;&#x4E8B;&#x4EF6;&#x3001;&#x6D88;&#x606F;&#x5168;&#x90E8;&#x4EA4;&#x7ED9;&#x4E86; <code>UIApplication</code> &#x6765;&#x5904;&#x7406;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E0D;&#x662F;&#x672C;&#x6587;&#x5173;&#x6CE8;&#x7684;&#x91CD;&#x70B9;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;<strong>&#x6574;&#x4E2A; iOS &#x7684;&#x5E94;&#x7528;&#x90FD;&#x662F;&#x5305;&#x542B;&#x5728;&#x4E00;&#x4E2A;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60; block &#x4E2D;&#x7684;</strong>&#x3002;</p>
+<h2 id="autoreleasepool">@autoreleasepool</h2>
+<p><code>@autoreleasepool</code> &#x5230;&#x5E95;&#x662F;&#x4EC0;&#x4E48;&#xFF1F;&#x6211;&#x4EEC;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x4F7F;&#x7528; <code>clang -rewrite-objc main.m</code> &#x8BA9;&#x7F16;&#x8BD1;&#x5668;&#x91CD;&#x65B0;&#x6539;&#x5199;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-shell">$ clang -rewrite-objc main.m
+</code></pre>
+<p>&#x5728;&#x751F;&#x6210;&#x4E86;&#x4E00;&#x5927;&#x5806;&#x8B66;&#x544A;&#x4E4B;&#x540E;&#xFF0C;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x591A;&#x4E86;&#x4E00;&#x4E2A; <code>main.cpp</code> &#x6587;&#x4EF6;</p>
+<p><img src="../images/objc-autorelease-main-cpp.png" alt="objc-autorelease-main-cpp"></p>
+<blockquote>
+<p>&#x8FD9;&#x91CC;&#x5220;&#x9664;&#x4E86; <code>main</code> &#x51FD;&#x6570;&#x4E2D;&#x5176;&#x4ED6;&#x65E0;&#x7528;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x5947;&#x602A;&#x7684; <code>__AtAutoreleasePool</code> &#x7684;&#x7ED3;&#x6784;&#x4F53;&#xFF0C;&#x524D;&#x9762;&#x7684;&#x6CE8;&#x91CA;&#x5199;&#x5230; <code>/* @autoreleasepool */</code>&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4; <code>@autoreleasepool {}</code> &#x88AB;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A; <code>__AtAutoreleasePool</code> &#x7ED3;&#x6784;&#x4F53;&#xFF1A;</p>
+<pre><code class="lang-objectivec">{
+    __AtAutoreleasePool __autoreleasepool;
+}
+</code></pre>
+<p>&#x60F3;&#x8981;&#x5F04;&#x6E05;&#x695A;&#x8FD9;&#x884C;&#x4EE3;&#x7801;&#x7684;&#x610F;&#x4E49;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x5728; <code>main.cpp</code> &#x4E2D;&#x67E5;&#x627E;&#x540D;&#x4E3A; <code>__AtAutoreleasePool</code> &#x7684;&#x7ED3;&#x6784;&#x4F53;&#xFF1A;</p>
+<p><img src="../images/objc-autorelease-main-cpp-struct.png" alt="objc-autorelease-main-cpp-struct"></p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">struct</span> __AtAutoreleasePool {
+  __AtAutoreleasePool() {atautoreleasepoolobj = objc_autoreleasePoolPush();}
+  ~__AtAutoreleasePool() {objc_autoreleasePoolPop(atautoreleasepoolobj);}
+  <span class="hljs-keyword">void</span> * atautoreleasepoolobj;
+};
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#x4F53;&#x4F1A;&#x5728;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x8C03;&#x7528; <code>objc_autoreleasePoolPush()</code> &#x65B9;&#x6CD5;&#xFF0C;&#x4F1A;&#x5728;&#x6790;&#x6784;&#x65F6;&#x8C03;&#x7528; <code>objc_autoreleasePoolPop</code> &#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x8FD9;&#x8868;&#x660E;&#xFF0C;&#x6211;&#x4EEC;&#x7684; <code>main</code> &#x51FD;&#x6570;&#x5728;&#x5B9E;&#x9645;&#x5DE5;&#x4F5C;&#x65F6;&#x5176;&#x5B9E;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">int</span> main(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> * argv[]) {
+    {
+        <span class="hljs-keyword">void</span> * atautoreleasepoolobj = objc_autoreleasePoolPush();
+
+        <span class="hljs-comment">// do whatever you want</span>
+
+        objc_autoreleasePoolPop(atautoreleasepoolobj);
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p><code>@autoreleasepool</code> &#x53EA;&#x662F;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x5C11;&#x5199;&#x4E86;&#x8FD9;&#x4E24;&#x884C;&#x4EE3;&#x7801;&#x800C;&#x5DF2;&#xFF0C;&#x8BA9;&#x4EE3;&#x7801;&#x770B;&#x8D77;&#x6765;&#x66F4;&#x7F8E;&#x89C2;&#xFF0C;&#x7136;&#x540E;&#x8981;&#x6839;&#x636E;&#x4E0A;&#x8FF0;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#x6765;&#x5206;&#x6790;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x7684;&#x5B9E;&#x73B0;&#x3002;</p>
+<h2 id="autoreleasepool-&#x662F;&#x4EC0;&#x4E48;">AutoreleasePool &#x662F;&#x4EC0;&#x4E48;</h2>
+<p>&#x8FD9;&#x4E00;&#x8282;&#x5F00;&#x59CB;&#x5206;&#x6790;&#x65B9;&#x6CD5; <code>objc_autoreleasePoolPush</code> &#x548C; <code>objc_autoreleasePoolPop</code> &#x7684;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">void</span> *objc_autoreleasePoolPush(<span class="hljs-keyword">void</span>) {
+    <span class="hljs-keyword">return</span> AutoreleasePoolPage::push();
+}
+
+<span class="hljs-keyword">void</span> objc_autoreleasePoolPop(<span class="hljs-keyword">void</span> *ctxt) {
+    AutoreleasePoolPage::pop(ctxt);
+}
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x65B9;&#x6CD5;&#x770B;&#x4E0A;&#x53BB;&#x662F;&#x5BF9; <code>AutoreleasePoolPage</code> &#x5BF9;&#x5E94;<strong>&#x9759;&#x6001;&#x65B9;&#x6CD5;</strong> <code>push</code> &#x548C; <code>pop</code> &#x7684;&#x5C01;&#x88C5;&#x3002;</p>
+<p>&#x8FD9;&#x4E00;&#x5C0F;&#x8282;&#x4F1A;&#x6309;&#x7167;&#x4E0B;&#x9762;&#x7684;&#x987A;&#x5E8F;&#x9010;&#x6B65;&#x89E3;&#x6790;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF1A;</p>
+<ul>
+<li><a href="#AutoreleasePoolPage">AutoreleasePoolPage &#x7684;&#x7ED3;&#x6784;</a></li>
+<li><a href="#objc_autoreleasePoolPush">objc_autoreleasePoolPush &#x65B9;&#x6CD5;</a></li>
+<li><a href="#objc_autoreleasePoolPop">objc_autoreleasePoolPop &#x65B9;&#x6CD5;</a></li>
+</ul>
+<h3 id="autoreleasepoolpage-&#x7684;&#x7ED3;&#x6784;">AutoreleasePoolPage &#x7684;&#x7ED3;&#x6784;</h3>
+<p><code>AutoreleasePoolPage</code> &#x662F;&#x4E00;&#x4E2A; C++ &#x4E2D;&#x7684;&#x7C7B;&#xFF1A;</p>
+<p><img src="../images/objc-autorelease-AutoreleasePoolPage.png" alt="objc-autorelease-AutoreleasePoolPage"></p>
+<p>&#x5B83;&#x5728; <code>NSObject.mm</code> &#x4E2D;&#x7684;&#x5B9A;&#x4E49;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-objectivec">class AutoreleasePoolPage {
+    magic_t <span class="hljs-keyword">const</span> magic;
+    <span class="hljs-keyword">id</span> *next;
+    pthread_t <span class="hljs-keyword">const</span> thread;
+    AutoreleasePoolPage * <span class="hljs-keyword">const</span> parent;
+    AutoreleasePoolPage *child;
+    uint32_t <span class="hljs-keyword">const</span> depth;
+    uint32_t hiwat;
+};
+</code></pre>
+<ul>
+<li><code>magic</code> &#x7528;&#x4E8E;&#x5BF9;&#x5F53;&#x524D; <code>AutoreleasePoolPage</code> <strong>&#x5B8C;&#x6574;&#x6027;</strong>&#x7684;&#x6821;&#x9A8C;</li>
+<li><code>thread</code> &#x4FDD;&#x5B58;&#x4E86;&#x5F53;&#x524D;&#x9875;&#x6240;&#x5728;&#x7684;&#x7EBF;&#x7A0B;</li>
+</ul>
+<p><strong>&#x6BCF;&#x4E00;&#x4E2A;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x90FD;&#x662F;&#x7531;&#x4E00;&#x7CFB;&#x5217;&#x7684; <code>AutoreleasePoolPage</code> &#x7EC4;&#x6210;&#x7684;&#xFF0C;&#x5E76;&#x4E14;&#x6BCF;&#x4E00;&#x4E2A; <code>AutoreleasePoolPage</code> &#x7684;&#x5927;&#x5C0F;&#x90FD;&#x662F; <code>4096</code> &#x5B57;&#x8282;&#xFF08;16 &#x8FDB;&#x5236; 0x1000&#xFF09;</strong></p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> I386_PGBYTES 4096</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> PAGE_SIZE I386_PGBYTES</span>
+</code></pre>
+<h4 id="&#x53CC;&#x5411;&#x94FE;&#x8868;">&#x53CC;&#x5411;&#x94FE;&#x8868;</h4>
+<p>&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x4E2D;&#x7684; <code>AutoreleasePoolPage</code> &#x662F;&#x4EE5;<strong>&#x53CC;&#x5411;&#x94FE;&#x8868;</strong>&#x7684;&#x5F62;&#x5F0F;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x7684;&#xFF1A;</p>
+<p><img src="../images/objc-autorelease-AutoreleasePoolPage-linked-list.png" alt="objc-autorelease-AutoreleasePoolPage-linked-list"></p>
+<blockquote>
+<p><code>parent</code> &#x548C; <code>child</code> &#x5C31;&#x662F;&#x7528;&#x6765;&#x6784;&#x9020;&#x53CC;&#x5411;&#x94FE;&#x8868;&#x7684;&#x6307;&#x9488;&#x3002;</p>
+</blockquote>
+<h4 id="&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x4E2D;&#x7684;&#x6808;">&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x4E2D;&#x7684;&#x6808;</h4>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x7684;&#x4E00;&#x4E2A; <code>AutoreleasePoolPage</code> &#x88AB;&#x521D;&#x59CB;&#x5316;&#x5728;&#x5185;&#x5B58;&#x7684; <code>0x100816000 ~ 0x100817000</code> &#x4E2D;&#xFF0C;&#x5B83;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="../images/objc-autorelease-page-in-memory.png" alt="objc-autorelease-page-in-memory"></p>
+<p>&#x5176;&#x4E2D;&#x6709; 56 bit &#x7528;&#x4E8E;&#x5B58;&#x50A8; <code>AutoreleasePoolPage</code> &#x7684;&#x6210;&#x5458;&#x53D8;&#x91CF;&#xFF0C;&#x5269;&#x4E0B;&#x7684; <code>0x100816038 ~ 0x100817000</code> &#x90FD;&#x662F;&#x7528;&#x6765;&#x5B58;&#x50A8;<strong>&#x52A0;&#x5165;&#x5230;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;</strong>&#x3002;</p>
+<blockquote>
+<p><code>begin()</code> &#x548C; <code>end()</code> &#x8FD9;&#x4E24;&#x4E2A;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x5FEB;&#x901F;&#x83B7;&#x53D6; <code>0x100816038 ~ 0x100817000</code> &#x8FD9;&#x4E00;&#x8303;&#x56F4;&#x7684;&#x8FB9;&#x754C;&#x5730;&#x5740;&#x3002;</p>
+</blockquote>
+<p><code>next</code> &#x6307;&#x5411;&#x4E86;&#x4E0B;&#x4E00;&#x4E2A;&#x4E3A;&#x7A7A;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x5982;&#x679C; <code>next</code> &#x6307;&#x5411;&#x7684;&#x5730;&#x5740;&#x52A0;&#x5165;&#x4E00;&#x4E2A; <code>object</code>&#xFF0C;&#x5B83;&#x5C31;&#x4F1A;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;<strong>&#x79FB;&#x52A8;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x4E3A;&#x7A7A;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#x4E2D;</strong>&#xFF1A;</p>
+<p><img src="../images/objc-autorelease-after-insert-to-page.png" alt="objc-autorelease-after-insert-to-page"></p>
+<blockquote>
+<p>&#x5173;&#x4E8E; <code>hiwat</code> &#x548C; <code>depth</code> &#x5728;&#x6587;&#x7AE0;&#x4E2D;&#x5E76;&#x4E0D;&#x4F1A;&#x8FDB;&#x884C;&#x4ECB;&#x7ECD;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x5E76;&#x4E0D;&#x5F71;&#x54CD;&#x6574;&#x4E2A;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x4E5F;&#x4E0D;&#x5728;&#x5173;&#x952E;&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x6808;&#x4E2D;&#x3002;</p>
+</blockquote>
+<h4 id="poolsentinel&#xFF08;&#x54E8;&#x5175;&#x5BF9;&#x8C61;&#xFF09;">POOL_SENTINEL&#xFF08;&#x54E8;&#x5175;&#x5BF9;&#x8C61;&#xFF09;</h4>
+<p>&#x5230;&#x4E86;&#x8FD9;&#x91CC;&#xFF0C;&#x4F60;&#x53EF;&#x80FD;&#x60F3;&#x8981;&#x77E5;&#x9053; <code>POOL_SENTINEL</code> &#x5230;&#x5E95;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x8FD8;&#x6709;&#x5B83;&#x4E3A;&#x4EC0;&#x4E48;&#x5728;&#x6808;&#x4E2D;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x56DE;&#x7B54;&#x7B2C;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF1A; <code>POOL_SENTINEL</code> &#x53EA;&#x662F; <code>nil</code> &#x7684;&#x522B;&#x540D;&#x3002;</p>
+<pre><code class="lang-objectivec"><span class="hljs-meta">#define POOL_SENTINEL nil</span>
+</code></pre>
+<p>&#x5728;&#x6BCF;&#x4E2A;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x521D;&#x59CB;&#x5316;&#x8C03;&#x7528; <code>objc_autoreleasePoolPush</code> &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x90FD;&#x4F1A;&#x628A;&#x4E00;&#x4E2A; <code>POOL_SENTINEL</code> push &#x5230;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x7684;&#x6808;&#x9876;&#xFF0C;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A; <code>POOL_SENTINEL</code> &#x54E8;&#x5175;&#x5BF9;&#x8C61;&#x3002;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">int</span> main(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> * argv[]) {
+    {
+        <span class="hljs-keyword">void</span> * atautoreleasepoolobj = objc_autoreleasePoolPush();
+
+        <span class="hljs-comment">// do whatever you want</span>
+
+        objc_autoreleasePoolPop(atautoreleasepoolobj);
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<blockquote>
+<p>&#x4E0A;&#x9762;&#x7684; <code>atautoreleasepoolobj</code> &#x5C31;&#x662F;&#x4E00;&#x4E2A; <code>POOL_SENTINEL</code>&#x3002;</p>
+</blockquote>
+<p>&#x800C;&#x5F53;&#x65B9;&#x6CD5; <code>objc_autoreleasePoolPop</code> &#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x5411;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x53D1;&#x9001; <code>release</code> &#x6D88;&#x606F;&#xFF0C;&#x76F4;&#x5230;&#x7B2C;&#x4E00;&#x4E2A; <code>POOL_SENTINEL</code>&#xFF1A;</p>
+<p><img src="../images/objc-autorelease-pop-stack.png" alt="objc-autorelease-pop-stack"></p>
+<h3 id="objcautoreleasepoolpush-&#x65B9;&#x6CD5;"><a id="objc_autoreleasePoolPush"></a>objc_autoreleasePoolPush &#x65B9;&#x6CD5;</h3>
+<p>&#x4E86;&#x89E3;&#x4E86; <code>POOL_SENTINEL</code>&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x91CD;&#x65B0;&#x56DE;&#x987E;&#x4E00;&#x4E0B; <code>objc_autoreleasePoolPush</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">void</span> *objc_autoreleasePoolPush(<span class="hljs-keyword">void</span>) {
+    <span class="hljs-keyword">return</span> AutoreleasePoolPage::push();
+}
+</code></pre>
+<p>&#x5B83;&#x8C03;&#x7528; <code>AutoreleasePoolPage</code> &#x7684;&#x7C7B;&#x65B9;&#x6CD5; <code>push</code>&#xFF0C;&#x4E5F;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> *push() {
+   <span class="hljs-keyword">return</span> autoreleaseFast(POOL_SENTINEL);
+}
+</code></pre>
+<p><a id="autoreleaseFast"></a>&#x5728;&#x8FD9;&#x91CC;&#x4F1A;&#x8FDB;&#x5165;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x5173;&#x952E;&#x7684;&#x65B9;&#x6CD5; <code>autoreleaseFast</code>&#xFF0C;&#x5E76;&#x4F20;&#x5165;&#x54E8;&#x5175;&#x5BF9;&#x8C61; <code>POOL_SENTINEL</code>&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">id</span> *autoreleaseFast(<span class="hljs-keyword">id</span> obj)
+{
+   AutoreleasePoolPage *page = hotPage();
+   <span class="hljs-keyword">if</span> (page &amp;&amp; !page-&gt;full()) {
+       <span class="hljs-keyword">return</span> page-&gt;add(obj);
+   } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (page) {
+       <span class="hljs-keyword">return</span> autoreleaseFullPage(obj, page);
+   } <span class="hljs-keyword">else</span> {
+       <span class="hljs-keyword">return</span> autoreleaseNoPage(obj);
+   }
+}
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x65B9;&#x6CD5;&#x5206;&#x4E09;&#x79CD;&#x60C5;&#x51B5;&#x9009;&#x62E9;&#x4E0D;&#x540C;&#x7684;&#x4EE3;&#x7801;&#x6267;&#x884C;&#xFF1A;</p>
+<ul>
+<li>&#x6709; <code>hotPage</code> &#x5E76;&#x4E14;&#x5F53;&#x524D; <code>page</code> &#x4E0D;&#x6EE1;<ul>
+<li>&#x8C03;&#x7528; <code>page-&gt;add(obj)</code> &#x65B9;&#x6CD5;&#x5C06;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x81F3; <code>AutoreleasePoolPage</code> &#x7684;&#x6808;&#x4E2D;</li>
+</ul>
+</li>
+<li>&#x6709; <code>hotPage</code> &#x5E76;&#x4E14;&#x5F53;&#x524D; <code>page</code> &#x5DF2;&#x6EE1;<ul>
+<li>&#x8C03;&#x7528; <code>autoreleaseFullPage</code> &#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x9875;</li>
+<li>&#x8C03;&#x7528; <code>page-&gt;add(obj)</code> &#x65B9;&#x6CD5;&#x5C06;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x81F3; <code>AutoreleasePoolPage</code> &#x7684;&#x6808;&#x4E2D;</li>
+</ul>
+</li>
+<li>&#x65E0; <code>hotPage</code><ul>
+<li>&#x8C03;&#x7528; <code>autoreleaseNoPage</code> &#x521B;&#x5EFA;&#x4E00;&#x4E2A; <code>hotPage</code></li>
+<li>&#x8C03;&#x7528; <code>page-&gt;add(obj)</code> &#x65B9;&#x6CD5;&#x5C06;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x81F3; <code>AutoreleasePoolPage</code> &#x7684;&#x6808;&#x4E2D;</li>
+</ul>
+</li>
+</ul>
+<p>&#x6700;&#x540E;&#x7684;&#x90FD;&#x4F1A;&#x8C03;&#x7528; <code>page-&gt;add(obj)</code> &#x5C06;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x5230;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x4E2D;&#x3002;</p>
+<blockquote>
+<p><code>hotPage</code> &#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x5F53;&#x524D;&#x6B63;&#x5728;&#x4F7F;&#x7528;&#x7684; <code>AutoreleasePoolPage</code>&#x3002;</p>
+</blockquote>
+<h4 id="page-add-&#x6DFB;&#x52A0;&#x5BF9;&#x8C61;">page-&gt;add &#x6DFB;&#x52A0;&#x5BF9;&#x8C61;</h4>
+<p><code>id *add(id obj)</code> &#x5C06;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x5230;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x9875;&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">id</span> *add(<span class="hljs-keyword">id</span> obj) {
+    <span class="hljs-keyword">id</span> *ret = next;
+    *next = obj;
+    next++;
+    <span class="hljs-keyword">return</span> ret;
+}
+</code></pre>
+<blockquote>
+<p>&#x7B14;&#x8005;&#x5BF9;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x4E86;&#x5904;&#x7406;&#xFF0C;&#x66F4;&#x65B9;&#x4FBF;&#x7406;&#x89E3;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x538B;&#x6808;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5C06;&#x5BF9;&#x8C61;&#x52A0;&#x5165; <code>AutoreleasePoolPage</code> &#x7136;&#x540E;&#x79FB;&#x52A8;&#x6808;&#x9876;&#x7684;&#x6307;&#x9488;&#x3002;</p>
+<h4 id="autoreleasefullpage&#xFF08;&#x5F53;&#x524D;-hotpage-&#x5DF2;&#x6EE1;&#xFF09;">autoreleaseFullPage&#xFF08;&#x5F53;&#x524D; hotPage &#x5DF2;&#x6EE1;&#xFF09;</h4>
+<p><code>autoreleaseFullPage</code> &#x4F1A;&#x5728;&#x5F53;&#x524D;&#x7684; <code>hotPage</code> &#x5DF2;&#x6EE1;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">static</span> <span class="hljs-keyword">id</span> *autoreleaseFullPage(<span class="hljs-keyword">id</span> obj, AutoreleasePoolPage *page) {
+    <span class="hljs-keyword">do</span> {
+        <span class="hljs-keyword">if</span> (page-&gt;child) page = page-&gt;child;
+        <span class="hljs-keyword">else</span> page = new AutoreleasePoolPage(page);
+    } <span class="hljs-keyword">while</span> (page-&gt;full());
+
+    setHotPage(page);
+    <span class="hljs-keyword">return</span> page-&gt;add(obj);
+}
+</code></pre>
+<p>&#x5B83;&#x4F1A;&#x4ECE;&#x4F20;&#x5165;&#x7684; <code>page</code> &#x5F00;&#x59CB;&#x904D;&#x5386;&#x6574;&#x4E2A;&#x53CC;&#x5411;&#x94FE;&#x8868;&#xFF0C;&#x76F4;&#x5230;&#xFF1A;</p>
+<ol>
+<li>&#x67E5;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x672A;&#x6EE1;&#x7684; <code>AutoreleasePoolPage</code></li>
+<li>&#x4F7F;&#x7528;&#x6784;&#x9020;&#x5668;&#x4F20;&#x5165; <code>parent</code> &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; <code>AutoreleasePoolPage</code></li>
+</ol>
+<p>&#x5728;&#x67E5;&#x627E;&#x5230;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7684; <code>AutoreleasePoolPage</code> &#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x5C06;&#x8BE5;&#x9875;&#x9762;&#x6807;&#x8BB0;&#x6210; <code>hotPage</code>&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x52A8;&#x4E0A;&#x9762;&#x5206;&#x6790;&#x8FC7;&#x7684; <code>page-&gt;add</code> &#x65B9;&#x6CD5;&#x6DFB;&#x52A0;&#x5BF9;&#x8C61;&#x3002;</p>
+<h4 id="autoreleasenopage&#xFF08;&#x6CA1;&#x6709;-hotpage">autoreleaseNoPage&#xFF08;&#x6CA1;&#x6709; hotPage)</h4>
+<p>&#x5982;&#x679C;&#x5F53;&#x524D;&#x5185;&#x5B58;&#x4E2D;&#x4E0D;&#x5B58;&#x5728; <code>hotPage</code>&#xFF0C;&#x5C31;&#x4F1A;&#x8C03;&#x7528; <code>autoreleaseNoPage</code> &#x65B9;&#x6CD5;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A; <code>AutoreleasePoolPage</code>&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">static</span> <span class="hljs-keyword">id</span> *autoreleaseNoPage(<span class="hljs-keyword">id</span> obj) {
+    AutoreleasePoolPage *page = new AutoreleasePoolPage(<span class="hljs-literal">nil</span>);
+    setHotPage(page);
+
+    <span class="hljs-keyword">if</span> (obj != POOL_SENTINEL) {
+        page-&gt;add(POOL_SENTINEL);
+    }
+
+    <span class="hljs-keyword">return</span> page-&gt;add(obj);
+}
+</code></pre>
+<p>&#x65E2;&#x7136;&#x5F53;&#x524D;&#x5185;&#x5B58;&#x4E2D;&#x4E0D;&#x5B58;&#x5728; <code>AutoreleasePoolPage</code>&#xFF0C;&#x5C31;&#x8981;<strong>&#x4ECE;&#x5934;&#x5F00;&#x59CB;&#x6784;&#x5EFA;&#x8FD9;&#x4E2A;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x7684;&#x53CC;&#x5411;&#x94FE;&#x8868;</strong>&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x65B0;&#x7684; <code>AutoreleasePoolPage</code> &#x662F;&#x6CA1;&#x6709; <code>parent</code> &#x6307;&#x9488;&#x7684;&#x3002;</p>
+<p>&#x521D;&#x59CB;&#x5316;&#x4E4B;&#x540E;&#xFF0C;&#x5C06;&#x5F53;&#x524D;&#x9875;&#x6807;&#x8BB0;&#x4E3A; <code>hotPage</code>&#xFF0C;&#x7136;&#x540E;&#x4F1A;&#x5148;&#x5411;&#x8FD9;&#x4E2A; <code>page</code> &#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; <code>POOL_SENTINEL</code> &#x5BF9;&#x8C61;&#xFF0C;&#x6765;&#x786E;&#x4FDD;&#x5728; <code>pop</code> &#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x5F02;&#x5E38;&#x3002;</p>
+<p>&#x6700;&#x540E;&#xFF0C;&#x5C06; <code>obj</code> &#x6DFB;&#x52A0;&#x5230;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x4E2D;&#x3002;</p>
+<h3 id="objcautoreleasepoolpop-&#x65B9;&#x6CD5;"><a id="objc_autoreleasePoolPop"></a>objc_autoreleasePoolPop &#x65B9;&#x6CD5;</h3>
+<p>&#x540C;&#x6837;&#xFF0C;&#x56DE;&#x987E;&#x4E00;&#x4E0B;&#x4E0A;&#x9762;&#x63D0;&#x5230;&#x7684; <code>objc_autoreleasePoolPop</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">void</span> objc_autoreleasePoolPop(<span class="hljs-keyword">void</span> *ctxt) {
+    AutoreleasePoolPage::pop(ctxt);
+}
+</code></pre>
+<blockquote>
+<p>&#x770B;&#x8D77;&#x6765;&#x4F20;&#x5165;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x6574;&#x4E2A;&#x5DE5;&#x7A0B;&#x5E76;&#x6CA1;&#x6709;&#x53D1;&#x73B0;&#x4F20;&#x5165;&#x5176;&#x4ED6;&#x5BF9;&#x8C61;&#x7684;&#x4F8B;&#x5B50;&#x3002;&#x4E0D;&#x8FC7;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E2D;<strong>&#x4F20;&#x5165;&#x5176;&#x5B83;&#x7684;&#x6307;&#x9488;&#x4E5F;&#x662F;&#x53EF;&#x884C;&#x7684;</strong>&#xFF0C;&#x4F1A;&#x5C06;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x91CA;&#x653E;&#x5230;&#x76F8;&#x5E94;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+</blockquote>
+<p>&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x90FD;&#x4F1A;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E2D;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x54E8;&#x5175;&#x5BF9;&#x8C61; <code>POOL_SENTINEL</code>&#xFF0C;&#x5982;&#x4E0B;&#x56FE;&#x4E00;&#x6837;&#x91CA;&#x653E;&#x5BF9;&#x8C61;&#xFF1A;</p>
+<p><img src="../images/objc-autorelease-pop-stack.png" alt="objc-autorelease-pop-stack"></p>
+<h4 id="&#x5BF9;-objcautoreleasepoolpop-&#x884C;&#x4E3A;&#x7684;&#x6D4B;&#x8BD5;">&#x5BF9; objc_autoreleasePoolPop &#x884C;&#x4E3A;&#x7684;&#x6D4B;&#x8BD5;</h4>
+<p>&#x5728;&#x7EE7;&#x7EED;&#x5206;&#x6790;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E4B;&#x524D;&#x505A;&#x4E00;&#x4E2A;&#x5C0F;&#x6D4B;&#x8BD5;&#xFF0C;&#x5728; <code>objc_autoreleasePoolPop</code> &#x4F20;&#x5165;&#x975E;&#x54E8;&#x5175;&#x5BF9;&#x8C61;&#xFF0C;&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x884C;&#x4E3A;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F; <code>main.m</code> &#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-meta">#import <span class="hljs-meta-string">&lt;Foundation/Foundation.h&gt;</span></span>
+
+<span class="hljs-keyword">int</span> main(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> * argv[]) {
+    <span class="hljs-keyword">@autoreleasepool</span> {
+
+        <span class="hljs-built_in">NSString</span> *s = <span class="hljs-string">@&quot;Draveness&quot;</span>;
+        [s stringByAppendingString:<span class="hljs-string">@&quot;-Suffix&quot;</span>];
+
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x5728;&#x4EE3;&#x7801;&#x7684;&#x8FD9;&#x4E00;&#x884C;&#x6253;&#x4E00;&#x4E2A;&#x65AD;&#x70B9;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x91CC;&#x4F1A;&#x8C03;&#x7528; <code>autorelease</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x52A0;&#x5165;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#xFF1A;</p>
+<p><img src="../images/objc-autorelease-breakpoint-main.png" alt="objc-autorelease-breakpoint-main"></p>
+<p>&#x5F53;&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#x5230;&#x8FD9;&#x91CC;&#x65F6;&#xFF0C;&#x901A;&#x8FC7; lldb &#x6253;&#x5370;&#x51FA;&#x5F53;&#x524D; <code>hotPage</code> &#x4E2D;&#x7684;&#x6808;&#x5185;&#x5BB9;&#xFF1A;</p>
+<p><img src="../images/objc-autorelease-print-pool-content.png" alt="objc-autorelease-print-pool-content"></p>
+<ol>
+<li>&#x901A;&#x8FC7; <code>static</code> &#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x5F53;&#x524D; <code>hotPage</code></li>
+<li>&#x6253;&#x5370; <code>AutoreleasePoolPage</code> &#x4E2D;&#x7684;&#x5185;&#x5BB9;</li>
+<li>&#x6253;&#x5370;&#x5F53;&#x524D; <code>next</code> &#x6307;&#x9488;&#x6307;&#x5411;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4EE5;&#x53CA;&#x4E4B;&#x524D;&#x7684;&#x5185;&#x5BB9;&#xFF0C;<code>-2</code>&#x65F6;&#x5DF2;&#x7ECF;&#x5230;&#x4E86; <code>begin()</code> &#x4F4D;&#x7F6E;</li>
+<li>&#x4F7F;&#x7528; <code>print()</code>&#x548C; <code>printAll()</code>&#x6253;&#x5370;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x4E2D;&#x5185;&#x5BB9;</li>
+</ol>
+<p>&#x7136;&#x540E;&#x5C06;&#x5B57;&#x7B26;&#x4E32; <code>@&quot;Draveness-Suffix&quot;</code> &#x7684;&#x6307;&#x9488;&#x4F20;&#x5165; <code>pop</code> &#x65B9;&#x6CD5;&#xFF0C;&#x6D4B;&#x8BD5; <code>pop</code> &#x65B9;&#x6CD5;&#x80FD;&#x5426;&#x4F20;&#x5165;&#x975E;&#x54E8;&#x5175;&#x53C2;&#x6570;&#x3002;</p>
+<p><img src="../images/objc-autorelease-pop-string.png" alt="objc-autorelease-pop-string"></p>
+<p>&#x518D;&#x6B21;&#x6253;&#x5370;&#x5F53;&#x524D; <code>AutoreleasePoolPage</code> &#x7684;&#x5185;&#x5BB9;&#x65F6;&#xFF0C;&#x5B57;&#x7B26;&#x4E32;&#x5DF2;&#x7ECF;&#x4E0D;&#x5B58;&#x5728;&#x4E86;&#xFF0C;&#x8FD9;&#x8BF4;&#x660E;<strong>&#x5411; <code>pop</code> &#x65B9;&#x6CD5;&#x4F20;&#x5165;&#x975E;&#x54E8;&#x5175;&#x53C2;&#x6570;&#x662F;&#x53EF;&#x884C;&#x7684;</strong>&#xFF0C;&#x53EA;&#x662F;&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x4E0D;&#x4F1A;&#x4F20;&#x5165;&#x975E;&#x54E8;&#x5175;&#x5BF9;&#x8C61;&#x3002;</p>
+<hr>
+<p>&#x8BA9;&#x6211;&#x4EEC;&#x91CD;&#x65B0;&#x56DE;&#x5230;&#x5BF9; <code>objc_autoreleasePoolPop</code> &#x65B9;&#x6CD5;&#x7684;&#x5206;&#x6790;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; <code>AutoreleasePoolPage::pop</code> &#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">void</span> pop(<span class="hljs-keyword">void</span> *token) {
+    AutoreleasePoolPage *page = pageForPointer(token);
+    <span class="hljs-keyword">id</span> *stop = (<span class="hljs-keyword">id</span> *)token;
+
+    page-&gt;releaseUntil(stop);
+
+    <span class="hljs-keyword">if</span> (page-&gt;child) {
+        <span class="hljs-keyword">if</span> (page-&gt;lessThanHalfFull()) {
+            page-&gt;child-&gt;kill();
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (page-&gt;child-&gt;child) {
+            page-&gt;child-&gt;child-&gt;kill();
+        }
+    }
+}
+</code></pre>
+<blockquote>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E2D;&#x5220;&#x9664;&#x4E86;&#x5927;&#x91CF;&#x65E0;&#x5173;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x4EE5;&#x53CA;&#x5BF9;&#x683C;&#x5F0F;&#x8FDB;&#x884C;&#x4E86;&#x8C03;&#x6574;&#x3002;</p>
+</blockquote>
+<p>&#x8BE5;&#x9759;&#x6001;&#x65B9;&#x6CD5;&#x603B;&#x5171;&#x505A;&#x4E86;&#x4E09;&#x4EF6;&#x4E8B;&#x60C5;&#xFF1A;</p>
+<ol>
+<li>&#x4F7F;&#x7528; <code>pageForPointer</code> &#x83B7;&#x53D6;&#x5F53;&#x524D; <code>token</code> &#x6240;&#x5728;&#x7684; <code>AutoreleasePoolPage</code></li>
+<li>&#x8C03;&#x7528; <code>releaseUntil</code> &#x65B9;&#x6CD5;&#x91CA;&#x653E;<strong>&#x6808;&#x4E2D;&#x7684;</strong>&#x5BF9;&#x8C61;&#xFF0C;&#x76F4;&#x5230; <code>stop</code></li>
+<li>&#x8C03;&#x7528; <code>child</code> &#x7684; <code>kill</code> &#x65B9;&#x6CD5;</li>
+</ol>
+<blockquote>
+<p>&#x6211;&#x5230;&#x73B0;&#x5728;&#x4E5F;&#x4E0D;&#x662F;&#x5F88;&#x6E05;&#x695A;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x6839;&#x636E;&#x5F53;&#x524D;&#x9875;&#x7684;&#x4E0D;&#x540C;&#x72B6;&#x6001; <code>kill</code> &#x6389;&#x4E0D;&#x540C; <code>child</code> &#x7684;&#x9875;&#x9762;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">if</span> (page-&gt;lessThanHalfFull()) {
+    page-&gt;child-&gt;kill();
+} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (page-&gt;child-&gt;child) {
+    page-&gt;child-&gt;child-&gt;kill();
+}
+</code></pre>
+<h4 id="pageforpointer-&#x83B7;&#x53D6;-autoreleasepoolpage">pageForPointer &#x83B7;&#x53D6; AutoreleasePoolPage</h4>
+<p><code>pageForPointer</code> &#x65B9;&#x6CD5;&#x4E3B;&#x8981;&#x662F;&#x901A;&#x8FC7;&#x5185;&#x5B58;&#x5730;&#x5740;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x6307;&#x9488;&#x6240;&#x5728;&#x9875;&#x7684;&#x9996;&#x5730;&#x5740;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">static</span> AutoreleasePoolPage *pageForPointer(<span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *p) {
+    <span class="hljs-keyword">return</span> pageForPointer((uintptr_t)p);
+}
+
+<span class="hljs-keyword">static</span> AutoreleasePoolPage *pageForPointer(uintptr_t p) {
+    AutoreleasePoolPage *result;
+    uintptr_t offset = p % SIZE;
+
+    assert(offset &gt;= <span class="hljs-keyword">sizeof</span>(AutoreleasePoolPage));
+
+    result = (AutoreleasePoolPage *)(p - offset);
+    result-&gt;fastcheck();
+
+    <span class="hljs-keyword">return</span> result;
+}
+</code></pre>
+<p>&#x5C06;&#x6307;&#x9488;&#x4E0E;&#x9875;&#x9762;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; 4096 &#x53D6;&#x6A21;&#xFF0C;&#x5F97;&#x5230;&#x5F53;&#x524D;&#x6307;&#x9488;&#x7684;&#x504F;&#x79FB;&#x91CF;&#xFF0C;&#x56E0;&#x4E3A;&#x6240;&#x6709;&#x7684; <code>AutoreleasePoolPage</code> &#x5728;&#x5185;&#x5B58;&#x4E2D;&#x90FD;&#x662F;&#x5BF9;&#x9F50;&#x7684;&#xFF1A;</p>
+<pre><code>p = 0x100816048
+p % SIZE = 0x48
+result = 0x100816000
+</code></pre><p>&#x800C;&#x6700;&#x540E;&#x8C03;&#x7528;&#x7684;&#x65B9;&#x6CD5; <code>fastCheck()</code> &#x7528;&#x6765;&#x68C0;&#x67E5;&#x5F53;&#x524D;&#x7684; <code>result</code> &#x662F;&#x4E0D;&#x662F;&#x4E00;&#x4E2A; <code>AutoreleasePoolPage</code>&#x3002;</p>
+<blockquote>
+<p>&#x901A;&#x8FC7;&#x68C0;&#x67E5; <code>magic_t</code> &#x7ED3;&#x6784;&#x4F53;&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x6210;&#x5458;&#x662F;&#x5426;&#x4E3A; <code>0xA1A1A1A1</code>&#x3002;</p>
+</blockquote>
+<h4 id="releaseuntil-&#x91CA;&#x653E;&#x5BF9;&#x8C61;">releaseUntil &#x91CA;&#x653E;&#x5BF9;&#x8C61;</h4>
+<p><code>releaseUntil</code> &#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">void</span> releaseUntil(<span class="hljs-keyword">id</span> *stop) {
+    <span class="hljs-keyword">while</span> (<span class="hljs-keyword">this</span>-&gt;next != stop) {
+        AutoreleasePoolPage *page = hotPage();
+
+        <span class="hljs-keyword">while</span> (page-&gt;empty()) {
+            page = page-&gt;parent;
+            setHotPage(page);
+        }
+
+        page-&gt;unprotect();
+        <span class="hljs-keyword">id</span> obj = *--page-&gt;next;
+        memset((<span class="hljs-keyword">void</span>*)page-&gt;next, SCRIBBLE, <span class="hljs-keyword">sizeof</span>(*page-&gt;next));
+        page-&gt;protect();
+
+        <span class="hljs-keyword">if</span> (obj != POOL_SENTINEL) {
+            objc_release(obj);
+        }
+    }
+
+    setHotPage(<span class="hljs-keyword">this</span>);
+}
+</code></pre>
+<p>&#x5B83;&#x7684;&#x5B9E;&#x73B0;&#x8FD8;&#x662F;&#x5F88;&#x5BB9;&#x6613;&#x7684;&#xFF0C;&#x7528;&#x4E00;&#x4E2A; <code>while</code> &#x5FAA;&#x73AF;&#x6301;&#x7EED;&#x91CA;&#x653E; <code>AutoreleasePoolPage</code> &#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x76F4;&#x5230; <code>next</code> &#x6307;&#x5411;&#x4E86; <code>stop</code> &#x3002;</p>
+<p>&#x4F7F;&#x7528; <code>memset</code> &#x5C06;&#x5185;&#x5B58;&#x7684;&#x5185;&#x5BB9;&#x8BBE;&#x7F6E;&#x6210; <code>SCRIBBLE</code>&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528; <code>objc_release</code> &#x91CA;&#x653E;&#x5BF9;&#x8C61;&#x3002;</p>
+<h4 id="kill-&#x65B9;&#x6CD5;">kill() &#x65B9;&#x6CD5;</h4>
+<p>&#x5230;&#x8FD9;&#x91CC;&#xFF0C;&#x6CA1;&#x6709;&#x5206;&#x6790;&#x7684;&#x65B9;&#x6CD5;&#x5C31;&#x53EA;&#x5269;&#x4E0B; <code>kill</code> &#x4E86;&#xFF0C;&#x800C;&#x5B83;&#x4F1A;&#x5C06;&#x5F53;&#x524D;&#x9875;&#x9762;&#x4EE5;&#x53CA;&#x5B50;&#x9875;&#x9762;&#x5168;&#x90E8;&#x5220;&#x9664;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">void</span> kill() {
+    AutoreleasePoolPage *page = <span class="hljs-keyword">this</span>;
+    <span class="hljs-keyword">while</span> (page-&gt;child) page = page-&gt;child;
+
+    AutoreleasePoolPage *deathptr;
+    <span class="hljs-keyword">do</span> {
+        deathptr = page;
+        page = page-&gt;parent;
+        <span class="hljs-keyword">if</span> (page) {
+            page-&gt;unprotect();
+            page-&gt;child = <span class="hljs-literal">nil</span>;
+            page-&gt;protect();
+        }
+        delete deathptr;
+    } <span class="hljs-keyword">while</span> (deathptr != <span class="hljs-keyword">this</span>);
+}
+</code></pre>
+<h3 id="autorelease-&#x65B9;&#x6CD5;">autorelease &#x65B9;&#x6CD5;</h3>
+<p>&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x5BF9;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x751F;&#x547D;&#x5468;&#x671F;&#x6709;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x4E86;&#x89E3;&#xFF0C;&#x6700;&#x540E;&#x9700;&#x8981;&#x4E86;&#x89E3;&#x7684;&#x8BDD;&#x9898;&#x5C31;&#x662F; <code>autorelease</code> &#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x6808;&#xFF1A;</p>
+<pre><code class="lang-objectivec">- [<span class="hljs-built_in">NSObject</span> autorelease]
+&#x2514;&#x2500;&#x2500; <span class="hljs-keyword">id</span> objc_object::rootAutorelease()
+    &#x2514;&#x2500;&#x2500; <span class="hljs-keyword">id</span> objc_object::rootAutorelease2()
+        &#x2514;&#x2500;&#x2500; <span class="hljs-keyword">static</span> <span class="hljs-keyword">id</span> AutoreleasePoolPage::autorelease(<span class="hljs-keyword">id</span> obj)
+            &#x2514;&#x2500;&#x2500; <span class="hljs-keyword">static</span> <span class="hljs-keyword">id</span> AutoreleasePoolPage::autoreleaseFast(<span class="hljs-keyword">id</span> obj)
+                &#x251C;&#x2500;&#x2500; <span class="hljs-keyword">id</span> *add(<span class="hljs-keyword">id</span> obj)
+                &#x251C;&#x2500;&#x2500; <span class="hljs-keyword">static</span> <span class="hljs-keyword">id</span> *autoreleaseFullPage(<span class="hljs-keyword">id</span> obj, AutoreleasePoolPage *page)
+                &#x2502;   &#x251C;&#x2500;&#x2500; AutoreleasePoolPage(AutoreleasePoolPage *newParent)
+                &#x2502;   &#x2514;&#x2500;&#x2500; <span class="hljs-keyword">id</span> *add(<span class="hljs-keyword">id</span> obj)
+                &#x2514;&#x2500;&#x2500; <span class="hljs-keyword">static</span> <span class="hljs-keyword">id</span> *autoreleaseNoPage(<span class="hljs-keyword">id</span> obj)
+                    &#x251C;&#x2500;&#x2500; AutoreleasePoolPage(AutoreleasePoolPage *newParent)
+                    &#x2514;&#x2500;&#x2500; <span class="hljs-keyword">id</span> *add(<span class="hljs-keyword">id</span> obj)
+</code></pre>
+<p>&#x5728; <code>autorelease</code> &#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x6808;&#x4E2D;&#xFF0C;&#x6700;&#x7EC8;&#x90FD;&#x4F1A;&#x8C03;&#x7528;&#x4E0A;&#x9762;&#x63D0;&#x5230;&#x7684; <a href="#autoreleaseFast">autoreleaseFast</a> &#x65B9;&#x6CD5;&#xFF0C;&#x5C06;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x52A0;&#x5230; <code>AutoreleasePoolPage</code> &#x4E2D;&#x3002;</p>
+<p>&#x8FD9;&#x4E00;&#x5C0F;&#x8282;&#x4E2D;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x90FD;&#x975E;&#x5E38;&#x5BB9;&#x6613;&#xFF0C;&#x53EA;&#x662F;&#x8FDB;&#x884C;&#x4E86;&#x4E00;&#x4E9B;&#x53C2;&#x6570;&#x4E0A;&#x7684;&#x68C0;&#x67E5;&#xFF0C;&#x6700;&#x7EC8;&#x8FD8;&#x8981;&#x8C03;&#x7528; <a href="#autoreleaseFast">autoreleaseFast</a> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">inline</span> <span class="hljs-keyword">id</span> objc_object::rootAutorelease() {
+    <span class="hljs-keyword">if</span> (isTaggedPointer()) <span class="hljs-keyword">return</span> (<span class="hljs-keyword">id</span>)<span class="hljs-keyword">this</span>;
+    <span class="hljs-keyword">if</span> (prepareOptimizedReturn(ReturnAtPlus1)) <span class="hljs-keyword">return</span> (<span class="hljs-keyword">id</span>)<span class="hljs-keyword">this</span>;
+
+    <span class="hljs-keyword">return</span> rootAutorelease2();
+}
+
+__attribute__((noinline,used)) <span class="hljs-keyword">id</span> objc_object::rootAutorelease2() {
+    <span class="hljs-keyword">return</span> AutoreleasePoolPage::autorelease((<span class="hljs-keyword">id</span>)<span class="hljs-keyword">this</span>);
+}
+
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">inline</span> <span class="hljs-keyword">id</span> autorelease(<span class="hljs-keyword">id</span> obj) {
+   <span class="hljs-keyword">id</span> *dest __unused = autoreleaseFast(obj);
+   <span class="hljs-keyword">return</span> obj;
+}
+</code></pre>
+<p>&#x7531;&#x4E8E;&#x5728;&#x4E0A;&#x9762;&#x5DF2;&#x7ECF;&#x5206;&#x6790;&#x8FC7; <code>autoreleaseFast</code> &#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x4F1A;&#x591A;&#x8BF4;&#x4E86;&#x3002;</p>
+<h2 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h2>
+<p>&#x6574;&#x4E2A;&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60; <code>AutoreleasePool</code> &#x7684;&#x5B9E;&#x73B0;&#x4EE5;&#x53CA; <code>autorelease</code> &#x65B9;&#x6CD5;&#x90FD;&#x5DF2;&#x7ECF;&#x5206;&#x6790;&#x5B8C;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x518D;&#x6765;&#x56DE;&#x987E;&#x4E00;&#x4E0B;&#x6587;&#x7AE0;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x5185;&#x5BB9;&#xFF1A;</p>
+<ul>
+<li>&#x81EA;&#x52A8;&#x91CA;&#x653E;&#x6C60;&#x662F;&#x7531; <code>AutoreleasePoolPage</code> &#x4EE5;&#x53CC;&#x5411;&#x94FE;&#x8868;&#x7684;&#x65B9;&#x5F0F;&#x5B9E;&#x73B0;&#x7684;</li>
+<li>&#x5F53;&#x5BF9;&#x8C61;&#x8C03;&#x7528; <code>autorelease</code> &#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x4F1A;&#x5C06;&#x5BF9;&#x8C61;&#x52A0;&#x5165; <code>AutoreleasePoolPage</code> &#x7684;&#x6808;&#x4E2D;</li>
+<li>&#x8C03;&#x7528; <code>AutoreleasePoolPage::pop</code> &#x65B9;&#x6CD5;&#x4F1A;&#x5411;&#x6808;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x53D1;&#x9001; <code>release</code> &#x6D88;&#x606F;</li>
+</ul>
+<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h2>
+<ul>
+<li><a href="http://stackoverflow.com/questions/14677049/what-is-autoreleasepool-objective-c" target="_blank">What is autoreleasepool? - Objective-C</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/MemoryMgmt/Articles/mmAutoreleasePools.html" target="_blank">Using Autorelease Pool Blocks</a></li>
+<li><a href="https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSAutoreleasePool_Class/index.html#//apple_ref/occ/cl/NSAutoreleasePool" target="_blank">NSAutoreleasePool</a></li>
+<li><a href="http://blog.sunnyxx.com/2014/10/15/behind-autorelease/" target="_blank">&#x9ED1;&#x5E55;&#x80CC;&#x540E;&#x7684; Autorelease</a></li>
+</ul>
+<blockquote>
+<p>Follow: <a href="https://github.com/Draveness" target="_blank">Draveness &#xB7; Github</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="associated-obj.html" class="navigation navigation-prev " aria-label="Previous page: 关联对象 AssociatedObject">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="black-box-retain-release.html" class="navigation navigation-next " aria-label="Next page: 黑箱中的 retain 和 release">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"自动释放池","level":"1.1.5.17.2","depth":4,"next":{"title":"黑箱中的 retain 和 release","level":"1.1.5.17.3","depth":4,"path":"Source-Code-Analysis/objc/black-box-retain-release.md","ref":"Source-Code-Analysis/objc/black-box-retain-release.md","articles":[]},"previous":{"title":"关联对象 AssociatedObject","level":"1.1.5.17.1","depth":4,"path":"Source-Code-Analysis/objc/associated-obj.md","ref":"Source-Code-Analysis/objc/associated-obj.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Source-Code-Analysis/objc/autoreleasepool.md","mtime":"2018-05-22T14:51:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-23T11:29:51.711Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

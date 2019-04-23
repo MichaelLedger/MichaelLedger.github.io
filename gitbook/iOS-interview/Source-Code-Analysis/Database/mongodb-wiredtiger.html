@@ -1,0 +1,1882 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>MongoDB 和 WiredTiger · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mysql.html" />
+    
+    
+    <link rel="prev" href="mongodb-to-mysql.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    iOS 开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../../ObjC-Basic/">
+            
+                <a href="../../ObjC-Basic/">
+            
+                    
+                    Objective-C 语言基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../../ObjC-Basic/Class.html">
+            
+                <a href="../../ObjC-Basic/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2" data-path="../../ObjC-Basic/Block.html">
+            
+                <a href="../../ObjC-Basic/Block.html">
+            
+                    
+                    Block 编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.3" data-path="../../ObjC-Basic/Runtime.html">
+            
+                <a href="../../ObjC-Basic/Runtime.html">
+            
+                    
+                    Objective-C Runtime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.4" data-path="../../ObjC-Basic/MM.html">
+            
+                <a href="../../ObjC-Basic/MM.html">
+            
+                    
+                    Objective-C 内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.5" data-path="../../ObjC-Basic/Runloop.html">
+            
+                <a href="../../ObjC-Basic/Runloop.html">
+            
+                    
+                    Runloop
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../../Cocoa-Touch/">
+            
+                <a href="../../Cocoa-Touch/">
+            
+                    
+                    Cocoa Touch
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="../../Cocoa-Touch/Event-Handling.html">
+            
+                <a href="../../Cocoa-Touch/Event-Handling.html">
+            
+                    
+                    事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2" data-path="../../Cocoa-Touch/UIApplication.html">
+            
+                <a href="../../Cocoa-Touch/UIApplication.html">
+            
+                    
+                    UIApplication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.3" data-path="../../Cocoa-Touch/UIView-Basic.html">
+            
+                <a href="../../Cocoa-Touch/UIView-Basic.html">
+            
+                    
+                    UIView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.4" data-path="../../Cocoa-Touch/UIViewController.html">
+            
+                <a href="../../Cocoa-Touch/UIViewController.html">
+            
+                    
+                    UIViewController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.5" data-path="../../Cocoa-Touch/Animation.html">
+            
+                <a href="../../Cocoa-Touch/Animation.html">
+            
+                    
+                    动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.6" data-path="../../Cocoa-Touch/Network.html">
+            
+                <a href="../../Cocoa-Touch/Network.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.7" data-path="../../Cocoa-Touch/Multithreading.html">
+            
+                <a href="../../Cocoa-Touch/Multithreading.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../../Cocoa-Touch/File-System.html">
+            
+                <a href="../../Cocoa-Touch/File-System.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.9" data-path="../../Cocoa-Touch/Design.html">
+            
+                <a href="../../Cocoa-Touch/Design.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.10" data-path="../../Cocoa-Touch/Performance.html">
+            
+                <a href="../../Cocoa-Touch/Performance.html">
+            
+                    
+                    性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../../Swift/">
+            
+                <a href="../../Swift/">
+            
+                    
+                    Swift
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="../../Swift/Class.html">
+            
+                <a href="../../Swift/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="../../Swift/Struct-And-Enum.html">
+            
+                <a href="../../Swift/Struct-And-Enum.html">
+            
+                    
+                    结构体与枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3" data-path="../../Swift/Function-And-Closure.html">
+            
+                <a href="../../Swift/Function-And-Closure.html">
+            
+                    
+                    函数与闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../../Interview/">
+            
+                <a href="../../Interview/">
+            
+                    
+                    面试问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1" data-path="../../Interview/iOSInterviewQuestions/">
+            
+                <a href="../../Interview/iOSInterviewQuestions/">
+            
+                    
+                    《招聘一个靠谱的iOS》
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1.1" data-path="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.1.2" data-path="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.2" data-path="../../interview/ZhiHu-QA/">
+            
+                <a href="../../interview/ZhiHu-QA/">
+            
+                    
+                    关于一些 iOS 面试问题的解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.3" data-path="../../interview/iOSDeveloperQA/">
+            
+                <a href="../../interview/iOSDeveloperQA/">
+            
+                    
+                    iOS 开发面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.4" data-path="../../interview/MXR-QA/">
+            
+                <a href="../../interview/MXR-QA/">
+            
+                    
+                    MXR 面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    源码分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1" data-path="../AFNetworking/AFNetworking_1.html">
+            
+                <a href="../AFNetworking/AFNetworking_1.html">
+            
+                    
+                    AFNetworking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1.1" data-path="../AFNetworking/AFNetworking_2.html">
+            
+                <a href="../AFNetworking/AFNetworking_2.html">
+            
+                    
+                    AFURLSessionManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.2" data-path="../AFNetworking/AFNetworking_3.html">
+            
+                <a href="../AFNetworking/AFNetworking_3.html">
+            
+                    
+                    AFURLSerialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.3" data-path="../AFNetworking/AFNetworking_4.html">
+            
+                <a href="../AFNetworking/AFNetworking_4.html">
+            
+                    
+                    AFNetworkReachabilityManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.4" data-path="../AFNetworking/AFNetworking_5.html">
+            
+                <a href="../AFNetworking/AFNetworking_5.html">
+            
+                    
+                    HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.2" data-path="../Alamofire/">
+            
+                <a href="../Alamofire/">
+            
+                    
+                    Alamofire
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3" data-path="../architecture/mvx.html">
+            
+                <a href="../architecture/mvx.html">
+            
+                    
+                    architecture
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.3.1" data-path="../architecture/mvx-model.html">
+            
+                <a href="../architecture/mvx-model.html">
+            
+                    
+                    MVX-Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.2" data-path="../architecture/mvx-view.html">
+            
+                <a href="../architecture/mvx-view.html">
+            
+                    
+                    MVX-View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.3" data-path="../architecture/mvx-controller.html">
+            
+                <a href="../architecture/mvx-controller.html">
+            
+                    
+                    MVX-Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4" >
+            
+                <span>
+            
+                    
+                    AsyncDisplayKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.4.1" data-path="../AsyncDisplayKit/ASDK_1.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_1.html">
+            
+                    
+                    提升界面的渲染性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4.2" data-path="../AsyncDisplayKit/ASDK_2.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_2.html">
+            
+                    
+                    布局算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4.3" data-path="../AsyncDisplayKit/ASDK_3.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_3.html">
+            
+                    
+                    预加载与智能预加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5" >
+            
+                <span>
+            
+                    
+                    BlocksKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.5.1" data-path="../BlocksKit/BlocksKit_1.html">
+            
+                <a href="../BlocksKit/BlocksKit_1.html">
+            
+                    
+                    神奇的 BlocksKit (一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5.2" data-path="../BlocksKit/BlocksKit_2.html">
+            
+                <a href="../BlocksKit/BlocksKit_2.html">
+            
+                    
+                    神奇的 BlocksKit (二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.6" data-path="../Blog/initialize-comments.html">
+            
+                <a href="../Blog/initialize-comments.html">
+            
+                    
+                    Gitalk/Gitment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7" >
+            
+                <span>
+            
+                    
+                    CocoaPods
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.7.1" data-path="../CocoaPods/CocoaPods.html">
+            
+                <a href="../CocoaPods/CocoaPods.html">
+            
+                    
+                    CocoaPods 都做了什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7.2" data-path="../CocoaPods/DSL.html">
+            
+                <a href="../CocoaPods/DSL.html">
+            
+                    
+                    DSL 以及 DSL 的应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8" >
+            
+                <span>
+            
+                    
+                    Database
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.8.1" data-path="concurrency-control.html">
+            
+                <a href="concurrency-control.html">
+            
+                    
+                    数据库并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.2" data-path="dynamo.html">
+            
+                <a href="dynamo.html">
+            
+                    
+                    分布式键值存储 Dynamo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.3" data-path="leveldb-bigtable.html">
+            
+                <a href="leveldb-bigtable.html">
+            
+                    
+                    Bigtable 和 LevelDB 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.4" data-path="mongodb-to-mysql.html">
+            
+                <a href="mongodb-to-mysql.html">
+            
+                    
+                    MongoDB 迁移到 MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.5.8.5" data-path="mongodb-wiredtiger.html">
+            
+                <a href="mongodb-wiredtiger.html">
+            
+                    
+                    MongoDB 和 WiredTiger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.6" data-path="mysql.html">
+            
+                <a href="mysql.html">
+            
+                    
+                    MySQL 和 InnoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.7" data-path="sql-index-intro.html">
+            
+                <a href="sql-index-intro.html">
+            
+                    
+                    MySQL 索引设计概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.8" data-path="sql-index-performance.html">
+            
+                <a href="sql-index-performance.html">
+            
+                    
+                    MySQL 索引性能分析概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.9" data-path="transaction.html">
+            
+                <a href="transaction.html">
+            
+                    
+                    MySQL 中事务的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.9" data-path="../DKNightVersion/DKNightVersion.html">
+            
+                <a href="../DKNightVersion/DKNightVersion.html">
+            
+                    
+                    DKNightVersion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10" >
+            
+                <span>
+            
+                    
+                    FBRetainCycleDetector
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.10.1" data-path="../FBRetainCycleDetector/block.html">
+            
+                <a href="../FBRetainCycleDetector/block.html">
+            
+                    
+                    block 如何持有对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.2" data-path="../FBRetainCycleDetector/Obj-Associated.html">
+            
+                <a href="../FBRetainCycleDetector/Obj-Associated.html">
+            
+                    
+                    Associated Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.3" data-path="../FBRetainCycleDetector/Obj-Strong.html">
+            
+                <a href="../FBRetainCycleDetector/Obj-Strong.html">
+            
+                    
+                    对象持有的强指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.4" data-path="../FBRetainCycleDetector/retain_cycle.html">
+            
+                <a href="../FBRetainCycleDetector/retain_cycle.html">
+            
+                    
+                    解决循环引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.11" data-path="../fishhook/fishhook.html">
+            
+                <a href="../fishhook/fishhook.html">
+            
+                    
+                    fishhook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.12" data-path="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                <a href="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                    
+                    IQKeyboardManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.13" data-path="../KVOController/KVOController.html">
+            
+                <a href="../KVOController/KVOController.html">
+            
+                    
+                    KVOController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.14" data-path="../libextobjc/libextobjc.html">
+            
+                <a href="../libextobjc/libextobjc.html">
+            
+                    
+                    libextobjc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.15" data-path="../Masonry/Masonry.html">
+            
+                <a href="../Masonry/Masonry.html">
+            
+                    
+                    Masonry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.16" data-path="../MBProgressHUD/">
+            
+                <a href="../MBProgressHUD/">
+            
+                    
+                    MBProgressHUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17" data-path="../objc/">
+            
+                <a href="../objc/">
+            
+                    
+                    objc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.17.1" data-path="../objc/associated-obj.html">
+            
+                <a href="../objc/associated-obj.html">
+            
+                    
+                    关联对象 AssociatedObject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.2" data-path="../objc/autoreleasepool.html">
+            
+                <a href="../objc/autoreleasepool.html">
+            
+                    
+                    自动释放池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.3" data-path="../objc/black-box-retain-release.html">
+            
+                <a href="../objc/black-box-retain-release.html">
+            
+                    
+                    黑箱中的 retain 和 release
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.4" data-path="../objc/func-structure.html">
+            
+                <a href="../objc/func-structure.html">
+            
+                    
+                    ObjC 中方法的结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.5" data-path="../objc/hash.html">
+            
+                <a href="../objc/hash.html">
+            
+                    
+                    哈希表的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.6" data-path="../objc/initialization.html">
+            
+                <a href="../objc/initialization.html">
+            
+                    
+                    初始化对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.7" data-path="../objc/isa.html">
+            
+                <a href="../objc/isa.html">
+            
+                    
+                    isa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.8" data-path="../objc/lazy-initialize.html">
+            
+                <a href="../objc/lazy-initialize.html">
+            
+                    
+                    懒惰的 initialize 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.9" data-path="../objc/load.html">
+            
+                <a href="../objc/load.html">
+            
+                    
+                    load 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.10" data-path="../objc/msgSend.html">
+            
+                <a href="../objc/msgSend.html">
+            
+                    
+                    消息传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18" >
+            
+                <span>
+            
+                    
+                    OHHTTPStubs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.18.1" data-path="../OHHTTPStubs/intercept.html">
+            
+                <a href="../OHHTTPStubs/intercept.html">
+            
+                    
+                    HTTP Intercept
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18.2" data-path="../OHHTTPStubs/mock.html">
+            
+                <a href="../OHHTTPStubs/mock.html">
+            
+                    
+                    HTTP Mock
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.19" data-path="../ProtocolKit/ProtocolKit.html">
+            
+                <a href="../ProtocolKit/ProtocolKit.html">
+            
+                    
+                    ProtocolKit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20" data-path="../rack/rack.html">
+            
+                <a href="../rack/rack.html">
+            
+                    
+                    rack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.20.1" data-path="../rack/rack-thin.html">
+            
+                <a href="../rack/rack-thin.html">
+            
+                    
+                    Thin 的事件驱动模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20.2" data-path="../rack/rack-unicorn.html">
+            
+                <a href="../rack/rack-unicorn.html">
+            
+                    
+                    Unicorn 的多进程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20.3" data-path="../rack/rack-webrik.html">
+            
+                <a href="../rack/rack-webrik.html">
+            
+                    
+                    WEBrick 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.21" data-path="../Rails/activerecord.html">
+            
+                <a href="../Rails/activerecord.html">
+            
+                    
+                    Rails
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22" >
+            
+                <span>
+            
+                    
+                    ReactiveObjC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.22.1" data-path="../ReactiveObjC/RACChannel.html">
+            
+                <a href="../ReactiveObjC/RACChannel.html">
+            
+                    
+                    RACChannel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.2" data-path="../ReactiveObjC/RACCommand.html">
+            
+                <a href="../ReactiveObjC/RACCommand.html">
+            
+                    
+                    RACCommand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.3" data-path="../ReactiveObjC/RACDelegateProxy.html">
+            
+                <a href="../ReactiveObjC/RACDelegateProxy.html">
+            
+                    
+                    RACDelegateProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.4" data-path="../ReactiveObjC/RACMulticastConnection.html">
+            
+                <a href="../ReactiveObjC/RACMulticastConnection.html">
+            
+                    
+                    RACMulticastConnection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.5" data-path="../ReactiveObjC/RACScheduler.html">
+            
+                <a href="../ReactiveObjC/RACScheduler.html">
+            
+                    
+                    RACScheduler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.6" data-path="../ReactiveObjC/RACSequence.html">
+            
+                <a href="../ReactiveObjC/RACSequence.html">
+            
+                    
+                    RACSequence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.7" data-path="../ReactiveObjC/RACSignal.html">
+            
+                <a href="../ReactiveObjC/RACSignal.html">
+            
+                    
+                    RACSignal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.8" data-path="../ReactiveObjC/RACSubject.html">
+            
+                <a href="../ReactiveObjC/RACSubject.html">
+            
+                    
+                    RACSubject
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23" >
+            
+                <span>
+            
+                    
+                    Redis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.23.1" data-path="../Redis/redis-cli.html">
+            
+                <a href="../Redis/redis-cli.html">
+            
+                    
+                    命令处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.2" data-path="../Redis/redis-eventloop.html">
+            
+                <a href="../Redis/redis-eventloop.html">
+            
+                    
+                    事件循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.3" data-path="../Redis/redis-io-multiplexing.html">
+            
+                <a href="../Redis/redis-io-multiplexing.html">
+            
+                    
+                    I/O 多路复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.24" data-path="../Ruby/Ruby.html">
+            
+                <a href="../Ruby/Ruby.html">
+            
+                    
+                    Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.25" data-path="../SDWebImage/">
+            
+                <a href="../SDWebImage/">
+            
+                    
+                    SDWebImage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="../../More.html">
+            
+                <a href="../../More.html">
+            
+                    
+                    更多资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >MongoDB 和 WiredTiger</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x300E;&#x6D45;&#x5165;&#x6D45;&#x51FA;&#x300F;mongodb-&#x548C;-wiredtiger">&#x300E;&#x6D45;&#x5165;&#x6D45;&#x51FA;&#x300F;MongoDB &#x548C; WiredTiger</h1>
+<p><img src="images/mongodb-wiredtiger/MongoDB-Covers.jpg" alt="MongoDB-Covers"></p>
+<p>MongoDB &#x662F;&#x76EE;&#x524D;&#x4E3B;&#x6D41;&#x7684; NoSQL &#x6570;&#x636E;&#x5E93;&#x4E4B;&#x4E00;&#xFF0C;&#x4E0E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x548C;&#x5176;&#x5B83;&#x7684; NoSQL &#x4E0D;&#x540C;&#xFF0C;MongoDB &#x4F7F;&#x7528;&#x4E86;&#x9762;&#x5411;&#x6587;&#x6863;&#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;&#xFF0C;&#x5C06;&#x6570;&#x636E;&#x4EE5;&#x7C7B;&#x4F3C; JSON &#x7684;&#x65B9;&#x5F0F;&#x5B58;&#x50A8;&#x5728;&#x78C1;&#x76D8;&#x4E0A;&#xFF0C;&#x56E0;&#x4E3A;&#x9879;&#x76EE;&#x4E0A;&#x7684;&#x4E00;&#x4E9B;&#x5386;&#x53F2;&#x9057;&#x7559;&#x95EE;&#x9898;&#xFF0C;&#x4F5C;&#x8005;&#x5728;&#x6700;&#x8FD1;&#x7684;&#x5DE5;&#x4F5C;&#x4E2D;&#x4E5F;&#x4E0D;&#x5F97;&#x4E0D;&#x7ECF;&#x5E38;&#x4E0E; MongoDB &#x6253;&#x4EA4;&#x9053;&#xFF0C;&#x8FD9;&#x4E5F;&#x662F;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x51FA;&#x73B0;&#x7684;&#x539F;&#x56E0;&#x3002;</p>
+<p><img src="images/mongodb-wiredtiger/logo.png" alt="logo"></p>
+<p>&#x867D;&#x7136;&#x5728;&#x4E4B;&#x524D;&#x4E5F;&#x5BF9; MongoDB &#x6709;&#x6240;&#x4E86;&#x89E3;&#xFF0C;&#x4F46;&#x662F;&#x771F;&#x6B63;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x5927;&#x89C4;&#x6A21;&#x4F7F;&#x7528;&#x8FD8;&#x662F;&#x7B2C;&#x4E00;&#x6B21;&#xFF0C;&#x4F7F;&#x7528;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E5F;&#x66B4;&#x9732;&#x4E86;&#x5927;&#x91CF;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4E0D;&#x8FC7;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x4E3B;&#x8981;&#x5BF9; MongoDB &#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x91CD;&#x8981;&#x6982;&#x5FF5;&#x7684;&#x539F;&#x7406;&#x8FDB;&#x884C;&#x4ECB;&#x7ECD;&#xFF0C;&#x4E5F;&#x4F1A;&#x4E0E; MySQL &#x8FD9;&#x79CD;&#x4F20;&#x7EDF;&#x7684;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x505A;&#x4E00;&#x4E2A;&#x5BF9;&#x6BD4;&#xFF0C;&#x8BA9;&#x8BFB;&#x8005;&#x81EA;&#x884C;&#x5224;&#x65AD;&#x5B83;&#x4EEC;&#x4E4B;&#x95F4;&#x7684;&#x4F18;&#x52BF;&#x548C;&#x52A3;&#x52BF;&#x3002;</p>
+<h2 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h2>
+<p>MongoDB &#x867D;&#x7136;&#x4E5F;&#x662F;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x4E0E;&#x4F20;&#x7EDF;&#x7684; RDBMS &#x76F8;&#x6BD4;&#x6709;&#x7740;&#x5DE8;&#x5927;&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x5F88;&#x591A;&#x5F00;&#x53D1;&#x8005;&#x90FD;&#x8BA4;&#x4E3A;&#x6216;&#x8005;&#x88AB;&#x704C;&#x8F93;&#x4E86;&#x4E00;&#x79CD;&#x601D;&#x60F3;&#xFF0C;MongoDB &#x8FD9;&#x79CD;&#x65E0; Scheme &#x7684;&#x6570;&#x636E;&#x5E93;&#x76F8;&#x6BD4; RDBMS &#x6709;&#x7740;&#x5DE8;&#x5927;&#x7684;&#x6027;&#x80FD;&#x63D0;&#x5347;&#xFF0C;&#x8FD9;&#x4E2A;&#x5224;&#x65AD;&#x5176;&#x5B9E;&#x662F;&#x4E00;&#x79CD;&#x8BEF;&#x89E3;&#xFF1B;&#x56E0;&#x4E3A;&#x6570;&#x636E;&#x5E93;&#x7684;&#x6027;&#x80FD;&#x4E0D;&#x6B62;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x672C;&#x8EAB;&#x7684;&#x8BBE;&#x8BA1;&#x6709;&#x5173;&#x7CFB;&#xFF0C;&#x8FD8;&#x4E0E;&#x5F00;&#x53D1;&#x8005;&#x5BF9;&#x8868;&#x7ED3;&#x6784;&#x548C;&#x7D22;&#x5F15;&#x7684;&#x8BBE;&#x8BA1;&#x3001;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x7684;&#x9009;&#x62E9;&#x548C;&#x4E1A;&#x52A1;&#x6709;&#x7740;&#x5DE8;&#x5927;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x5982;&#x679C;&#x8BA4;&#x4E3A;<strong>&#x4EC5;&#x8FDB;&#x884C;&#x4E86;&#x6570;&#x636E;&#x5E93;&#x7684;&#x66FF;&#x6362;&#x5C31;&#x80FD;&#x5F97;&#x5230;&#x6570;&#x91CF;&#x7EA7;&#x7684;&#x6027;&#x80FD;&#x63D0;&#x5347;</strong>&#xFF0C;&#x90A3;&#x8FD8;&#x662F;&#x592A;&#x5E74;&#x8F7B;&#x4E86;&#x3002;</p>
+<p><img src="images/mongodb-wiredtiger/its-not-always-simple-banner.jpg" alt="its-not-always-simple-banner"></p>
+<h3 id="&#x67B6;&#x6784;">&#x67B6;&#x6784;</h3>
+<p>&#x73B0;&#x6709;&#x6D41;&#x884C;&#x7684;&#x6570;&#x636E;&#x5E93;&#x5176;&#x5B9E;&#x90FD;&#x6709;&#x7740;&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#x7684;&#x67B6;&#x6784;&#xFF0C;MongoDB &#x5176;&#x5B9E;&#x5C31;&#x4E0E; MySQL &#x4E2D;&#x7684;&#x67B6;&#x6784;&#x76F8;&#x5DEE;&#x4E0D;&#x591A;&#xFF0C;&#x5E95;&#x5C42;&#x90FD;&#x4F7F;&#x7528;&#x4E86;&#x300E;&#x53EF;&#x63D2;&#x62D4;&#x300F;&#x7684;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x4EE5;&#x6EE1;&#x8DB3;&#x7528;&#x6237;&#x7684;&#x4E0D;&#x540C;&#x9700;&#x8981;&#x3002;</p>
+<p><img src="images/mongodb-wiredtiger/MongoDB-Architecture.jpg" alt="MongoDB-Architecture"></p>
+<p>&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x8868;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7279;&#x5F81;&#x9009;&#x62E9;&#x4E0D;&#x540C;&#x7684;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#xFF0C;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x540C;&#x4E00;&#x4E2A; MongoDB &#x7684;&#x5B9E;&#x4F8B;&#x4E2D;&#x4F7F;&#x7528;&#xFF1B;&#x5728;&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684; MongoDB &#x4E2D;&#x4F7F;&#x7528;&#x4E86; WiredTiger &#x4F5C;&#x4E3A;&#x9ED8;&#x8BA4;&#x7684;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#xFF0C;WiredTiger &#x63D0;&#x4F9B;&#x4E86;&#x4E0D;&#x540C;&#x7C92;&#x5EA6;&#x7684;&#x5E76;&#x53D1;&#x63A7;&#x5236;&#x548C;&#x538B;&#x7F29;&#x673A;&#x5236;&#xFF0C;&#x80FD;&#x591F;&#x4E3A;&#x4E0D;&#x540C;&#x79CD;&#x7C7B;&#x7684;&#x5E94;&#x7528;&#x63D0;&#x4F9B;&#x4E86;&#x6700;&#x597D;&#x7684;&#x6027;&#x80FD;&#x548C;&#x5B58;&#x50A8;&#x6548;&#x7387;&#x3002;</p>
+<p>&#x5728;&#x4E0D;&#x540C;&#x7684;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x4E0A;&#x5C42;&#x7684;&#x5C31;&#x662F; MongoDB &#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#x548C;&#x67E5;&#x8BE2;&#x8BED;&#x8A00;&#x4E86;&#xFF0C;&#x4E0E;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x4E0D;&#x540C;&#xFF0C;&#x7531;&#x4E8E; MongoDB &#x5BF9;&#x6570;&#x636E;&#x7684;&#x5B58;&#x50A8;&#x4E0E; RDBMS &#x6709;&#x8F83;&#x5927;&#x7684;&#x5DEE;&#x5F02;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x5957;&#x4E0D;&#x540C;&#x7684;&#x67E5;&#x8BE2;&#x8BED;&#x8A00;&#xFF1B;&#x867D;&#x7136; MongoDB &#x67E5;&#x8BE2;&#x8BED;&#x8A00;&#x975E;&#x5E38;&#x5F3A;&#x5927;&#xFF0C;&#x652F;&#x6301;&#x7684;&#x529F;&#x80FD;&#x4E5F;&#x5F88;&#x591A;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x662F;&#x53EF;&#x7F16;&#x7A0B;&#x7684;&#xFF0C;&#x4E0D;&#x8FC7;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x7684;&#x5185;&#x5BB9;&#x975E;&#x5E38;&#x7E41;&#x6742;&#x3001;API &#x8BBE;&#x8BA1;&#x4E5F;&#x4E0D;&#x662F;&#x975E;&#x5E38;&#x4F18;&#x96C5;&#xFF0C;&#x6240;&#x4EE5;&#x8FD8;&#x662F;&#x9700;&#x8981;&#x4E00;&#x4E9B;&#x5B66;&#x4E60;&#x6210;&#x672C;&#x7684;&#xFF0C;&#x5BF9;&#x4E8E;&#x957F;&#x65F6;&#x95F4;&#x4F7F;&#x7528; MySQL &#x7684;&#x5F00;&#x53D1;&#x8005;&#x80AF;&#x5B9A;&#x4F1A;&#x6709;&#x4E9B;&#x4E0D;&#x4E60;&#x60EF;&#x3002;</p>
+<pre><code class="lang-js">db.collection.updateMany(
+   &lt;filter&gt;,
+   &lt;update&gt;,
+   {
+     upsert: &lt;boolean&gt;,
+     writeConcern: &lt;document&gt;,
+     collation: &lt;document&gt;
+   }
+)
+</code></pre>
+<p>&#x67E5;&#x8BE2;&#x8BED;&#x8A00;&#x7684;&#x590D;&#x6742;&#x662F;&#x56E0;&#x4E3A; MongoDB &#x652F;&#x6301;&#x4E86;&#x5F88;&#x591A;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x540C;&#x65F6;&#x6BCF;&#x4E00;&#x6761;&#x6570;&#x636E;&#x8BB0;&#x5F55;&#x4E5F;&#x5C31;&#x662F;&#x6587;&#x6863;&#x6709;&#x7740;&#x975E;&#x5E38;&#x590D;&#x6742;&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x8FD9;&#x70B9;&#x662F;&#x4ECE;&#x8BBE;&#x8BA1;&#x4E0A;&#x5C31;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x907F;&#x514D;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x8FD8;&#x9700;&#x8981;&#x4F7F;&#x7528; MongoDB &#x7684;&#x5F00;&#x53D1;&#x8005;&#x82B1;&#x4E00;&#x4E9B;&#x65F6;&#x95F4;&#x53BB;&#x5B66;&#x4E60;&#x5404;&#x79CD;&#x5404;&#x6837;&#x7684; API&#x3002;</p>
+<h3 id="rdbms-&#x4E0E;-mongodb">RDBMS &#x4E0E; MongoDB</h3>
+<p>MongoDB &#x4F7F;&#x7528;&#x9762;&#x5411;&#x6587;&#x6863;&#x7684;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#xFF0C;&#x5BFC;&#x81F4;&#x5F88;&#x591A;&#x6982;&#x5FF5;&#x90FD;&#x4E0E; RDBMS &#x6709;&#x4E00;&#x4E9B;&#x5DEE;&#x522B;&#xFF0C;&#x867D;&#x7136;&#x4ECE;&#x603B;&#x4F53;&#x4E0A;&#x6765;&#x770B;&#x4E24;&#x8005;&#x90FD;&#x6709;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x4E0D;&#x8FC7;&#x6982;&#x5FF5;&#x4E4B;&#x95F4;&#x7EC6;&#x5FAE;&#x7684;&#x5DEE;&#x522B;&#x5176;&#x5B9E;&#x4E5F;&#x4F1A;&#x5F71;&#x54CD;&#x6211;&#x4EEC;&#x5BF9; MongoDB &#x7684;&#x7406;&#x89E3;&#xFF1A;</p>
+<p><img src="images/mongodb-wiredtiger/Translating-Between-RDBMS-and-MongoDB.jpg" alt="Translating-Between-RDBMS-and-MongoDB"></p>
+<p>&#x4F20;&#x7EDF;&#x7684; RDBMS &#x5176;&#x5B9E;&#x4F7F;&#x7528; <code>Table</code> &#x7684;&#x683C;&#x5F0F;&#x5C06;&#x6570;&#x636E;&#x903B;&#x8F91;&#x5730;&#x5B58;&#x50A8;&#x5728;&#x4E00;&#x5F20;&#x4E8C;&#x7EF4;&#x7684;&#x8868;&#x4E2D;&#xFF0C;&#x5176;&#x4E2D;&#x4E0D;&#x5305;&#x62EC;&#x4EFB;&#x4F55;&#x590D;&#x6742;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x4F46;&#x662F;&#x7531;&#x4E8E; MongoDB &#x652F;&#x6301;&#x5D4C;&#x5165;&#x6587;&#x6863;&#x3001;&#x6570;&#x7EC4;&#x548C;&#x54C8;&#x5E0C;&#x7B49;&#x591A;&#x79CD;&#x590D;&#x6742;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x6700;&#x7EC8;&#x5C06;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x4EE5; <a href="http://bsonspec.org" target="_blank">BSON</a> &#x7684;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x5B58;&#x50A8;&#x8D77;&#x6765;&#x3002;</p>
+<p>RDBMS &#x548C; MongoDB &#x4E2D;&#x7684;&#x6982;&#x5FF5;&#x90FD;&#x6709;&#x7740;&#x76F8;&#x4E92;&#x5BF9;&#x5E94;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x3001;&#x8868;&#x3001;&#x884C;&#x548C;&#x7D22;&#x5F15;&#x7684;&#x6982;&#x5FF5;&#x5728;&#x4E24;&#x4E2D;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x90FD;&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#xFF0C;&#x552F;&#x72EC;&#x6700;&#x540E;&#x7684; <code>JOIN</code> &#x548C; <code>Embedded Document</code> &#x6216;&#x8005; <code>Reference</code> &#x6709;&#x7740;&#x5DE8;&#x5927;&#x7684;&#x5DEE;&#x522B;&#x3002;&#x8FD9;&#x4E00;&#x70B9;&#x5DEE;&#x522B;&#x5176;&#x5B9E;&#x4E5F;&#x5F71;&#x54CD;&#x4E86;&#x5728;&#x4F7F;&#x7528; MongoDB &#x65F6;&#x5BF9;&#x96C6;&#x5408;&#xFF08;Collection&#xFF09;Schema &#x7684;&#x8BBE;&#x8BA1;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5728; MongoDB &#x4E2D;&#x9075;&#x5FAA;&#x4E86;&#x4E0E; RDBMS &#x4E2D;&#x76F8;&#x540C;&#x7684;&#x601D;&#x60F3;&#x5BF9; Collection &#x8FDB;&#x884C;&#x8BBE;&#x8BA1;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4E0D;&#x53EF;&#x907F;&#x514D;&#x7684;&#x4F7F;&#x7528;&#x5F88;&#x591A;&#x7684; &quot;JOIN&quot; &#x8BED;&#x53E5;&#xFF0C;&#x800C; MongoDB &#x662F;&#x4E0D;&#x652F;&#x6301; &quot;JOIN&quot; &#x7684;&#xFF0C;&#x5728;&#x5E94;&#x7528;&#x5185;&#x505A;&#x8FD9;&#x79CD;&#x67E5;&#x8BE2;&#x7684;&#x6027;&#x80FD;&#x975E;&#x5E38;&#x975E;&#x5E38;&#x5DEE;&#xFF0C;&#x5728;&#x8FD9;&#x65F6;&#x4F7F;&#x7528;&#x5D4C;&#x5165;&#x5F0F;&#x7684;&#x6587;&#x6863;&#x5176;&#x5B9E;&#x5C31;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x8FD9;&#x79CD;&#x95EE;&#x9898;&#x4E86;&#xFF0C;&#x5D4C;&#x5165;&#x5F0F;&#x7684;&#x6587;&#x6863;&#x867D;&#x7136;&#x53EF;&#x80FD;&#x4F1A;&#x9020;&#x6210;&#x5F88;&#x591A;&#x7684;&#x6570;&#x636E;&#x5197;&#x4F59;&#x5BFC;&#x81F4;&#x6211;&#x4EEC;&#x5728;&#x66F4;&#x65B0;&#x65F6;&#x4F1A;&#x5F88;&#x75DB;&#x82E6;&#xFF0C;&#x4F46;&#x662F;&#x67E5;&#x8BE2;&#x65F6;&#x786E;&#x5B9E;&#x975E;&#x5E38;&#x8FC5;&#x901F;&#x3002;</p>
+<pre><code class="lang-js">{
+  _id: &lt;ObjectId1&gt;,
+  name: &quot;draveness&quot;,
+  books: [
+    {
+      _id: &lt;ObjectId2&gt;,
+      name: &quot;MongoDB: The Definitive Guide&quot;
+    },
+    {
+      _id: &lt;ObjectId3&gt;,
+      name: &quot;High Performance MySQL&quot;
+    }
+  ]
+}
+</code></pre>
+<p>&#x5728; MongoDB &#x7684;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x4E00;&#x5B9A;&#x8981;&#x5FD8;&#x8BB0;&#x5F88;&#x591A; RDBMS &#x4E2D;&#x5BF9;&#x4E8E;&#x8868;&#x8BBE;&#x8BA1;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x540C;&#x65F6;&#x60F3;&#x6E05;&#x695A; MongoDB &#x7684;&#x4F18;&#x52BF;&#xFF0C;&#x4ED4;&#x7EC6;&#x601D;&#x8003;&#x5982;&#x4F55;&#x5BF9;&#x8868;&#x8FDB;&#x884C;&#x8BBE;&#x8BA1;&#x624D;&#x80FD;&#x5229;&#x7528; MongoDB &#x63D0;&#x4F9B;&#x7684;&#x8BF8;&#x591A;&#x7279;&#x6027;&#x63D0;&#x5347;&#x67E5;&#x8BE2;&#x7684;&#x6548;&#x7387;&#x3002;</p>
+<h2 id="&#x6570;&#x636E;&#x6A21;&#x578B;">&#x6570;&#x636E;&#x6A21;&#x578B;</h2>
+<p>MongoDB &#x4E0E; RDBMS &#x4E4B;&#x95F4;&#x6700;&#x5927;&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x5C31;&#x662F;&#x6570;&#x636E;&#x6A21;&#x578B;&#x7684;&#x8BBE;&#x8BA1;&#x6709;&#x7740;&#x975E;&#x5E38;&#x660E;&#x663E;&#x7684;&#x5DEE;&#x5F02;&#xFF0C;&#x6570;&#x636E;&#x6A21;&#x578B;&#x7684;&#x4E0D;&#x540C;&#x51B3;&#x5B9A;&#x4E86;&#x5B83;&#x6709;&#x7740;&#x975E;&#x5E38;&#x4E0D;&#x540C;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x5B58;&#x50A8;&#x5728; MongoDB &#x4E2D;&#x7684;&#x6570;&#x636E;&#x6709;&#x7740;&#x975E;&#x5E38;&#x7075;&#x6D3B;&#x7684; Schema&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x9700;&#x8981;&#x50CF; RDBMS &#x4E00;&#x6837;&#xFF0C;&#x5728;&#x63D2;&#x5165;&#x6570;&#x636E;&#x4E4B;&#x524D;&#x5C31;&#x51B3;&#x5B9A;&#x5E76;&#x4E14;&#x5B9A;&#x4E49;&#x8868;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;MongoDB &#x7684;&#x7ED3;&#x5408;&#x4E0D;&#x5BF9; Collection &#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x8FDB;&#x884C;&#x4EFB;&#x4F55;&#x9650;&#x5236;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x5B9E;&#x9645;&#x4F7F;&#x7528;&#x4E2D;&#xFF0C;&#x540C;&#x4E00;&#x4E2A; Collection &#x4E2D;&#x7684;&#x5927;&#x591A;&#x6570;&#x6587;&#x6863;&#x90FD;&#x5177;&#x6709;&#x7C7B;&#x4F3C;&#x7684;&#x7ED3;&#x6784;&#x3002;</p>
+<p><img src="images/mongodb-wiredtiger/Different-Data-Structure.jpg" alt="Different-Data-Structure"></p>
+<p>&#x5728;&#x4E3A; MongoDB &#x5E94;&#x7528;&#x8BBE;&#x8BA1;&#x6570;&#x636E;&#x6A21;&#x578B;&#x65F6;&#xFF0C;&#x5982;&#x4F55;&#x8868;&#x793A;&#x6570;&#x636E;&#x6A21;&#x578B;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x5176;&#x5B9E;&#x662F;&#x9700;&#x8981;&#x5F00;&#x53D1;&#x8005;&#x9700;&#x8981;&#x4ED4;&#x7EC6;&#x8003;&#x8651;&#x7684;&#xFF0C;MongoDB &#x4E3A;&#x8868;&#x793A;&#x6587;&#x6863;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;&#x5F15;&#x7528;&#x548C;&#x5D4C;&#x5165;&#x3002;</p>
+<h3 id="&#x6807;&#x51C6;&#x5316;&#x6570;&#x636E;&#x6A21;&#x578B;">&#x6807;&#x51C6;&#x5316;&#x6570;&#x636E;&#x6A21;&#x578B;</h3>
+<p>&#x5F15;&#x7528;&#xFF08;Reference&#xFF09;&#x5728; MongoDB &#x4E2D;&#x88AB;&#x79F0;&#x4E3A;&#x6807;&#x51C6;&#x5316;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#xFF0C;&#x5B83;&#x4E0E; MySQL &#x7684;&#x5916;&#x952E;&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#x90FD;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A; <code>xx_id</code> &#x7684;&#x5B57;&#x6BB5;&#x300E;&#x94FE;&#x63A5;&#x300F;&#x5230;&#x5176;&#x4ED6;&#x7684;&#x6587;&#x6863;&#xFF1A;</p>
+<p><img src="images/mongodb-wiredtiger/Reference-MongoDB.jpg" alt="Reference-MongoDB"></p>
+<p>&#x4F46;&#x662F; MongoDB &#x4E2D;&#x7684;&#x8FD9;&#x79CD;&#x5F15;&#x7528;&#x4E0D;&#x50CF; MySQL &#x4E2D;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7; JOIN &#x8FDB;&#x884C;&#x67E5;&#x627E;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x989D;&#x5916;&#x7684;&#x67E5;&#x8BE2;&#x627E;&#x5230;&#x8BE5;&#x5F15;&#x7528;&#x5BF9;&#x5E94;&#x7684;&#x6A21;&#x578B;&#xFF0C;&#x8FD9;&#x867D;&#x7136;&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x591A;&#x7684;&#x7075;&#x6D3B;&#x6027;&#xFF0C;&#x4E0D;&#x8FC7;&#x7531;&#x4E8E;&#x589E;&#x52A0;&#x4E86;&#x5BA2;&#x6237;&#x7AEF;&#x548C; MongoDB &#x4E4B;&#x95F4;&#x7684;&#x4EA4;&#x4E92;&#x6B21;&#x6570;&#xFF08;Round-Trip&#xFF09;&#x4E5F;&#x4F1A;&#x5BFC;&#x81F4;&#x67E5;&#x8BE2;&#x53D8;&#x6162;&#xFF0C;&#x751A;&#x81F3;&#x975E;&#x5E38;&#x4E25;&#x91CD;&#x7684;&#x6027;&#x80FD;&#x95EE;&#x9898;&#x3002;</p>
+<p>MongoDB &#x4E2D;&#x7684;&#x5F15;&#x7528;&#x5E76;&#x4E0D;&#x4F1A;&#x5BF9;&#x5F15;&#x7528;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#x662F;&#x5426;&#x771F;&#x6B63;&#x5B58;&#x5728;&#x505A;&#x51FA;&#x4EFB;&#x4F55;&#x7684;&#x7EA6;&#x675F;&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x5728;&#x5E94;&#x7528;&#x5C42;&#x7EA7;&#x6CA1;&#x6709;&#x5BF9;&#x6587;&#x6863;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x6709;&#x6240;&#x7EA6;&#x675F;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x73B0;&#x5F15;&#x7528;&#x4E86;&#x6307;&#x5411;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x6587;&#x6863;&#x7684;&#x95EE;&#x9898;&#xFF1A;</p>
+<p><img src="images/mongodb-wiredtiger/Not-Found-Document.jpg" alt="Not-Found-Document"></p>
+<p>&#x867D;&#x7136;&#x5F15;&#x7528;&#x6709;&#x7740;&#x6BD4;&#x8F83;&#x4E25;&#x91CD;&#x7684;&#x6027;&#x80FD;&#x95EE;&#x9898;&#x5E76;&#x4E14;&#x5728;&#x6570;&#x636E;&#x5E93;&#x5C42;&#x9762;&#x6CA1;&#x6709;&#x5BF9;&#x6A21;&#x578B;&#x662F;&#x5426;&#x88AB;&#x5220;&#x9664;&#x52A0;&#x4E0A;&#x9650;&#x5236;&#xFF0C;&#x4E0D;&#x8FC7;&#x5B83;&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x4E9B;&#x7279;&#x70B9;&#x662F;&#x5D4C;&#x5165;&#x5F0F;&#x7684;&#x6587;&#x6863;&#x65E0;&#x6CD5;&#x7ED9;&#x4E88;&#x4E86;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8868;&#x793A;&#x591A;&#x5BF9;&#x591A;&#x5173;&#x7CFB;&#x6216;&#x8005;&#x66F4;&#x52A0;&#x5E9E;&#x5927;&#x7684;&#x6570;&#x636E;&#x96C6;&#x65F6;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528;&#x6807;&#x51C6;&#x5316;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B; &#x2014; &#x5F15;&#x7528;&#x4E86;&#x3002;</p>
+<h3 id="&#x5D4C;&#x5165;&#x5F0F;&#x6570;&#x636E;&#x6A21;&#x578B;">&#x5D4C;&#x5165;&#x5F0F;&#x6570;&#x636E;&#x6A21;&#x578B;</h3>
+<p>&#x9664;&#x4E86;&#x4E0E; MySQL &#x4E2D;&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#x7684;&#x5F15;&#x7528;&#xFF0C;MongoDB &#x7531;&#x4E8E;&#x5176;&#x72EC;&#x7279;&#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;&#xFF0C;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x5D4C;&#x5165;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#xFF0C;&#x5D4C;&#x5165;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#x4E5F;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x4E0D;&#x6807;&#x51C6;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#xFF1A;</p>
+<p><img src="images/mongodb-wiredtiger/Embedded-Data-Models-MongoDB.jpg" alt="Embedded-Data-Models-MongoDB"></p>
+<p>&#x56E0;&#x4E3A; MongoDB &#x4F7F;&#x7528; BSON &#x7684;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#xFF0C;&#x800C;&#x5D4C;&#x5165;&#x5F0F;&#x6570;&#x636E;&#x6A21;&#x578B;&#x4E2D;&#x7684;&#x5B50;&#x6587;&#x6863;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x7236;&#x6587;&#x6863;&#x4E2D;&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x53EA;&#x662F;&#x5176;&#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF1A;</p>
+<pre><code class="lang-javascript">{
+  _id: &lt;ObjectId1&gt;,
+  username: &quot;draveness&quot;,
+  age: 20,
+  contact: [
+    {
+      _id: &lt;ObjectId2&gt;,
+      email: &quot;i@draveness.me&quot;
+    }
+  ]
+}
+</code></pre>
+<p>&#x5D4C;&#x5165;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x5C06;&#x6709;&#x76F8;&#x540C;&#x7684;&#x5173;&#x7CFB;&#x7684;&#x4FE1;&#x606F;&#x5B58;&#x50A8;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x8BB0;&#x5F55;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x5E94;&#x7528;&#x5C31;&#x53EF;&#x4EE5;&#x66F4;&#x5FEB;&#x5730;&#x5BF9;&#x76F8;&#x5173;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x67E5;&#x8BE2;&#x548C;&#x66F4;&#x65B0;&#x4E86;&#xFF1B;&#x5F53;&#x6211;&#x4EEC;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#x4E2D;&#x6709;&#x300E;&#x5305;&#x542B;&#x300F;&#x8FD9;&#x6837;&#x7684;&#x5173;&#x7CFB;&#x6216;&#x8005;&#x6A21;&#x578B;&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x4E0E;&#x5176;&#x4ED6;&#x6A21;&#x578B;&#x4E00;&#x8D77;&#x51FA;&#x73B0;&#xFF08;&#x67E5;&#x8BE2;&#xFF09;&#x65F6;&#xFF0C;&#x6BD4;&#x5982;&#x6587;&#x7AE0;&#x548C;&#x8BC4;&#x8BBA;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528;&#x5D4C;&#x5165;&#x5F0F;&#x7684;&#x5173;&#x7CFB;&#x5BF9;&#x6570;&#x636E;&#x6A21;&#x578B;&#x8FDB;&#x884C;&#x8BBE;&#x8BA1;&#x3002;</p>
+<p>&#x603B;&#x800C;&#x8A00;&#x4E4B;&#xFF0C;&#x5D4C;&#x5165;&#x7684;&#x4F7F;&#x7528;&#x8BA9;&#x6211;&#x4EEC;&#x5728;&#x66F4;&#x5C11;&#x7684;&#x8BF7;&#x6C42;&#x4E2D;&#x83B7;&#x5F97;&#x66F4;&#x591A;&#x7684;&#x76F8;&#x5173;&#x6570;&#x636E;&#xFF0C;&#x80FD;&#x591F;&#x4E3A;&#x8BFB;&#x64CD;&#x4F5C;&#x63D0;&#x4F9B;&#x66F4;&#x9AD8;&#x7684;&#x6027;&#x80FD;&#xFF0C;&#x4E5F;&#x4E3A;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x5199;&#x8BF7;&#x6C42;&#x4E2D;&#x540C;&#x65F6;&#x66F4;&#x65B0;&#x76F8;&#x5173;&#x6570;&#x636E;&#x63D0;&#x4F9B;&#x4E86;&#x652F;&#x6301;&#x3002;</p>
+<blockquote>
+<p>MongoDB &#x5E95;&#x5C42;&#x7684; WiredTiger &#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x80FD;&#x591F;&#x4FDD;&#x8BC1;&#x5BF9;&#x4E8E;&#x540C;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#x7684;&#x64CD;&#x4F5C;&#x90FD;&#x662F;&#x539F;&#x5B50;&#x7684;&#xFF0C;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x5199;&#x64CD;&#x4F5C;&#x90FD;&#x4E0D;&#x80FD;&#x539F;&#x5B50;&#x6027;&#x5730;&#x5F71;&#x54CD;&#x591A;&#x4E2A;&#x6587;&#x6863;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x96C6;&#x5408;&#x3002;</p>
+</blockquote>
+<h2 id="&#x4E3B;&#x952E;&#x548C;&#x7D22;&#x5F15;">&#x4E3B;&#x952E;&#x548C;&#x7D22;&#x5F15;</h2>
+<p>&#x5728;&#x8FD9;&#x4E00;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD; MongoDB &#x4E2D;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x5F53;&#x7136;&#x4E5F;&#x5305;&#x62EC;&#x6BCF;&#x4E2A;&#x6587;&#x6863;&#x4E2D;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#x5B57;&#x6BB5; <code>_id</code>&#xFF0C;&#x53EF;&#x4EE5;<strong>&#x7406;&#x89E3;</strong>&#x4E3A; MongoDB &#x7684;&#x300E;&#x4E3B;&#x952E;&#x300F;&#xFF0C;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#x8FD8;&#x4F1A;&#x4ECB;&#x7ECD;&#x5355;&#x5B57;&#x6BB5;&#x7D22;&#x5F15;&#x3001;&#x590D;&#x5408;&#x7D22;&#x5F15;&#x4EE5;&#x53CA;&#x591A;&#x952E;&#x7D22;&#x5F15;&#x7B49;&#x7C7B;&#x578B;&#x7684;&#x7D22;&#x5F15;&#x3002;</p>
+<p>MongoDB &#x4E2D;&#x7D22;&#x5F15;&#x7684;&#x6982;&#x5FF5;&#x5176;&#x5B9E;&#x4E0E; MySQL &#x4E2D;&#x7684;&#x7D22;&#x5F15;&#x76F8;&#x5DEE;&#x4E0D;&#x591A;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x5E95;&#x5C42;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x8FD8;&#x662F;&#x57FA;&#x672C;&#x7684;&#x7D22;&#x5F15;&#x7C7B;&#x578B;&#x90FD;&#x51E0;&#x4E4E;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#xFF0C;&#x4E24;&#x8005;&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;&#x5C31;&#x5728;&#x4E8E;&#x56E0;&#x4E3A; MongoDB &#x652F;&#x6301;&#x4E86;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x6240;&#x4EE5;&#x4E5F;&#x7406;&#x6240;&#x5E94;&#x5F53;&#x5730;&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x591A;&#x7684;&#x7D22;&#x5F15;&#x79CD;&#x7C7B;&#x3002;</p>
+<p><img src="images/mongodb-wiredtiger/MongoDB-Indexes.jpg" alt="MongoDB-Indexes"></p>
+<h3 id="&#x9ED8;&#x8BA4;&#x7D22;&#x5F15;">&#x9ED8;&#x8BA4;&#x7D22;&#x5F15;</h3>
+<p>MySQL &#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x884C;&#x90FD;&#x5177;&#x6709;&#x4E00;&#x4E2A;&#x4E3B;&#x952E;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x90FD;&#x662F;&#x6309;&#x7167;&#x4EE5;&#x4E3B;&#x952E;&#x4F5C;&#x4E3A;&#x952E;&#x7269;&#x7406;&#x5730;&#x5B58;&#x50A8;&#x5728;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#xFF1B;&#x9664;&#x4E86;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x7684;&#x5B58;&#x50A8;&#xFF0C;&#x4E3B;&#x952E;&#x7531;&#x4E8E;&#x5176;&#x7279;&#x6027;&#x4E5F;&#x80FD;&#x591F;&#x52A0;&#x901F;&#x6570;&#x636E;&#x5E93;&#x7684;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x3002;</p>
+<p>&#x800C; MongoDB &#x4E2D;&#x6240;&#x6709;&#x7684;&#x6587;&#x6863;&#x4E5F;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x7684; <code>_id</code> &#x5B57;&#x6BB5;&#xFF0C;&#x5728;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x6240;&#x6709;&#x7684;&#x6587;&#x6863;&#x90FD;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x957F; 12 &#x5B57;&#x8282;&#x7684; <code>ObjectId</code> &#x4F5C;&#x4E3A;&#x9ED8;&#x8BA4;&#x7D22;&#x5F15;&#xFF1A;</p>
+<p><img src="images/mongodb-wiredtiger/MongoDB-ObjectId.jpg" alt="MongoDB-ObjectId"></p>
+<p>&#x524D;&#x56DB;&#x4F4D;&#x4EE3;&#x8868;&#x5F53;&#x524D; <code>_id</code> &#x751F;&#x6210;&#x65F6;&#x7684; Unix &#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x5728;&#x8FD9;&#x4E4B;&#x540E;&#x662F;&#x4E09;&#x4F4D;&#x7684;&#x673A;&#x5668;&#x6807;&#x8BC6;&#x7B26;&#x548C;&#x4E24;&#x4F4D;&#x7684;&#x5904;&#x7406;&#x5668;&#x6807;&#x8BC6;&#x7B26;&#xFF0C;&#x6700;&#x540E;&#x662F;&#x4E00;&#x4E2A;&#x4E09;&#x4F4D;&#x7684;&#x8BA1;&#x6570;&#x5668;&#xFF0C;&#x521D;&#x59CB;&#x503C;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x6570;&#xFF1B;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x4EE3;&#x66FF;&#x9012;&#x589E;&#x7684; <code>id</code> &#x80FD;&#x591F;&#x89E3;&#x51B3;&#x5206;&#x5E03;&#x5F0F;&#x7684; MongoDB &#x751F;&#x6210;&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x7B26;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x540C;&#x65F6;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x4E0A;&#x4FDD;&#x8BC1; <code>id</code> &#x7684;&#x7684;&#x589E;&#x957F;&#x662F;&#x9012;&#x589E;&#x7684;&#x3002;</p>
+<h3 id="&#x5355;&#x5B57;&#x6BB5;&#x7D22;&#x5F15;&#xFF08;single-field&#xFF09;">&#x5355;&#x5B57;&#x6BB5;&#x7D22;&#x5F15;&#xFF08;Single Field&#xFF09;</h3>
+<p>&#x9664;&#x4E86; MongoDB &#x63D0;&#x4F9B;&#x7684;&#x9ED8;&#x8BA4; <code>_id</code> &#x5B57;&#x6BB5;&#x4E4B;&#x5916;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x53EF;&#x4EE5;&#x5EFA;&#x7ACB;&#x5176;&#x5B83;&#x7684;&#x5355;&#x952E;&#x7D22;&#x5F15;&#xFF0C;&#x800C;&#x4E14;&#x5176;&#x4E2D;&#x4E0D;&#x6B62;&#x652F;&#x6301;&#x987A;&#x5E8F;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x8FD8;&#x652F;&#x6301;&#x5BF9;&#x7D22;&#x5F15;&#x5012;&#x6392;&#xFF1A;</p>
+<pre><code class="lang-javasciprt">db.users.createIndex( { age: -1 } )
+</code></pre>
+<p>MySQL8.0 &#x4E4B;&#x524D;&#x7684;&#x7D22;&#x5F15;&#x90FD;&#x53EA;&#x80FD;&#x662F;&#x6B63;&#x5E8F;&#x6392;&#x5217;&#x7684;&#xFF0C;&#x5728; 8.0 &#x4E4B;&#x540E;&#x624D;&#x5F15;&#x5165;&#x4E86;&#x9006;&#x5E8F;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x5355;&#x4E00;&#x5B57;&#x6BB5;&#x7D22;&#x5F15;&#x53EF;&#x4EE5;&#x8BF4;&#x662F; MySQL &#x4E2D;&#x7684;&#x8F85;&#x52A9;&#xFF08;Secondary&#xFF09;&#x7D22;&#x5F15;&#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x96C6;&#xFF0C;&#x5B83;&#x53EA;&#x662F;&#x5BF9;&#x9664;&#x4E86; <code>_id</code> &#x5916;&#x7684;&#x4EFB;&#x610F;&#x5355;&#x4E00;&#x5B57;&#x6BB5;&#x5EFA;&#x7ACB;&#x8D77;&#x6B63;&#x5E8F;&#x6216;&#x8005;&#x9006;&#x5E8F;&#x7684;&#x7D22;&#x5F15;&#x6811;&#x3002;</p>
+<p><img src="images/mongodb-wiredtiger/Single-Field-Index.jpg" alt="Single-Field-Index"></p>
+<h3 id="&#x590D;&#x5408;&#x7D22;&#x5F15;&#xFF08;compound&#xFF09;">&#x590D;&#x5408;&#x7D22;&#x5F15;&#xFF08;Compound&#xFF09;</h3>
+<p>&#x9664;&#x4E86;&#x5355;&#x4E00;&#x5B57;&#x6BB5;&#x7D22;&#x5F15;&#x8FD9;&#x79CD;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x7684;&#x7D22;&#x5F15;&#x7C7B;&#x578B;&#x4E4B;&#x5916;&#xFF0C;MongoDB &#x8FD8;&#x652F;&#x6301;&#x591A;&#x4E2A;&#x4E0D;&#x540C;&#x5B57;&#x6BB5;&#x7EC4;&#x6210;&#x7684;&#x590D;&#x5408;&#x7D22;&#x5F15;&#xFF08;Compound Index&#xFF09;&#xFF0C;&#x7531;&#x4E8E; MongoDB &#x4E2D;&#x652F;&#x6301;&#x5BF9;&#x540C;&#x4E00;&#x5B57;&#x6BB5;&#x7684;&#x6B63;&#x9006;&#x5E8F;&#x6392;&#x5217;&#xFF0C;&#x6240;&#x4EE5;&#x76F8;&#x6BD4;&#x4E8E; MySQL &#x4E2D;&#x7684;&#x8F85;&#x52A9;&#x7D22;&#x5F15;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x66F4;&#x591A;&#x7684;&#x60C5;&#x51B5;&#xFF1A;</p>
+<pre><code class="lang-javascript">db.users.createIndex( { username: <span class="hljs-number">1</span>, age: <span class="hljs-number">-1</span> } )
+db.users.createIndex( { username: <span class="hljs-number">1</span>, age: <span class="hljs-number">1</span> } )
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4E24;&#x4E2A;&#x7D22;&#x5F15;&#x662F;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#x7684;&#xFF0C;&#x5728;&#x78C1;&#x76D8;&#x4E0A;&#x7684; B+ &#x6811;&#x5176;&#x5B9E;&#x4E5F;&#x6309;&#x7167;&#x4E86;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#x7684;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#xFF0C;&#x867D;&#x7136; <code>username</code> &#x5B57;&#x6BB5;&#x90FD;&#x662F;&#x5347;&#x5E8F;&#x6392;&#x5217;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x4E8E; <code>age</code> &#x6765;&#x8BF4;&#xFF0C;&#x4E24;&#x4E2A;&#x7D22;&#x5F15;&#x7684;&#x5904;&#x7406;&#x662F;&#x5B8C;&#x5168;&#x76F8;&#x53CD;&#x7684;&#xFF1A;</p>
+<p><img src="images/mongodb-wiredtiger/Compound-Index.jpg" alt="Compound-Index"></p>
+<p>&#x8FD9;&#x4E5F;&#x5C31;&#x9020;&#x6210;&#x4E86;&#x5728;&#x4F7F;&#x7528;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x5BF9;&#x96C6;&#x5408;&#x4E2D;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x67E5;&#x627E;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x7EA6;&#x5B9A;&#x4E86;&#x6B63;&#x9006;&#x5E8F;&#xFF0C;&#x90A3;&#x4E48;&#x5176;&#x5B9E;&#x662F;&#x4F1A;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x7D22;&#x5F15;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x7D22;&#x5F15;&#x521B;&#x5EFA;&#x65F6;&#x4E00;&#x5B9A;&#x8981;&#x8003;&#x8651;&#x597D;&#x4F7F;&#x7528;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x907F;&#x514D;&#x521B;&#x5EFA;&#x65E0;&#x7528;&#x7684;&#x7D22;&#x5F15;&#x3002;</p>
+<h3 id="&#x591A;&#x952E;&#x7D22;&#x5F15;&#xFF08;multikey&#xFF09;">&#x591A;&#x952E;&#x7D22;&#x5F15;&#xFF08;Multikey&#xFF09;</h3>
+<p>&#x7531;&#x4E8E; MongoDB &#x652F;&#x6301;&#x4E86;&#x7C7B;&#x4F3C;&#x6570;&#x7EC4;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x6240;&#x4EE5;&#x4E5F;&#x63D0;&#x4F9B;&#x4E86;&#x540D;&#x4E3A;&#x591A;&#x952E;&#x7D22;&#x5F15;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x8FDB;&#x884C;&#x7D22;&#x5F15;&#xFF0C;&#x7D22;&#x5F15;&#x7684;&#x521B;&#x5EFA;&#x5176;&#x5B9E;&#x4E0E;&#x5355;&#x5B57;&#x6BB5;&#x7D22;&#x5F15;&#x6CA1;&#x6709;&#x592A;&#x591A;&#x7684;&#x533A;&#x522B;&#xFF1A;</p>
+<pre><code class="lang-javascript">db.collection.createIndex( { address: <span class="hljs-number">1</span> } )
+</code></pre>
+<p>&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;&#x662F;&#x503C;&#x662F;&#x6570;&#x7EC4;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x4F7F;&#x7528;&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x65F6;&#x4F1A;&#x81EA;&#x52A8;&#x4E3A;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x591A;&#x952E;&#x7D22;&#x5F15;&#xFF0C;&#x80FD;&#x591F;&#x52A0;&#x901F;&#x5BF9;&#x6570;&#x7EC4;&#x4E2D;&#x5143;&#x7D20;&#x7684;&#x67E5;&#x627E;&#x3002;</p>
+<h3 id="&#x6587;&#x672C;&#x7D22;&#x5F15;&#xFF08;text&#xFF09;">&#x6587;&#x672C;&#x7D22;&#x5F15;&#xFF08;Text&#xFF09;</h3>
+<p>&#x6587;&#x672C;&#x7D22;&#x5F15;&#x662F; MongoDB &#x4E3A;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x5B9E;&#x7528;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x4E0D;&#x8FC7;&#x5728;&#x8FD9;&#x91CC;&#x4E5F;&#x53EA;&#x662F;&#x5BF9;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x7D22;&#x5F15;&#x63D0;&#x4E00;&#x4E0B;&#xFF0C;&#x4E5F;&#x4E0D;&#x6253;&#x7B97;&#x6DF1;&#x5165;&#x53BB;&#x8C08;&#x8C08;&#x8FD9;&#x4E1C;&#x897F;&#x7684;&#x6027;&#x80FD;&#x5982;&#x4F55;&#xFF0C;&#x5982;&#x679C;&#x771F;&#x7684;&#x8981;&#x505A;&#x5168;&#x6587;&#x7D22;&#x5F15;&#x7684;&#x8BDD;&#xFF0C;&#x8FD8;&#x662F;&#x63A8;&#x8350;&#x4F7F;&#x7528; Elasticsearch &#x8FD9;&#x79CD;&#x66F4;&#x4E13;&#x4E1A;&#x7684;&#x4E1C;&#x897F;&#x6765;&#x505A;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4F7F;&#x7528; MongoDB &#x63D0;&#x4F9B;&#x7684;&#x8FD9;&#x9879;&#x529F;&#x80FD;&#x3002;</p>
+<h2 id="&#x5B58;&#x50A8;">&#x5B58;&#x50A8;</h2>
+<p>&#x5982;&#x4F55;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5728;&#x524D;&#x9762;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x63D0;&#x5230;&#x4E86; MongoDB &#x4E0E; MySQL &#x4E00;&#x6837;&#x90FD;&#x63D0;&#x4F9B;&#x4E86;&#x63D2;&#x4EF6;&#x5316;&#x7684;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x652F;&#x6301;&#xFF0C;&#x4F5C;&#x4E3A; MongoDB &#x7684;&#x4E3B;&#x8981;&#x7EC4;&#x4EF6;&#x4E4B;&#x4E00;&#xFF0C;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x5168;&#x6743;&#x8D1F;&#x8D23;&#x4E86; MongoDB &#x5BF9;&#x6570;&#x636E;&#x7684;&#x7BA1;&#x7406;&#x3002;</p>
+<p><img src="images/mongodb-wiredtiger/Multiple-Storage-Engines.jpg" alt="Multiple-Storage-Engines"></p>
+<h3 id="wiredtiger">WiredTiger</h3>
+<p>MongoDB3.2 &#x4E4B;&#x540E; WiredTiger &#x5C31;&#x662F;&#x9ED8;&#x8BA4;&#x7684;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x4E86;&#xFF0C;&#x5982;&#x679C;&#x5BF9;&#x5404;&#x4E2A;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x5E76;&#x4E0D;&#x4E86;&#x89E3;&#xFF0C;&#x90A3;&#x4E48;&#x8FD8;&#x662F;&#x4E0D;&#x8981;&#x6539;&#x53D8; MongoDB &#x7684;&#x9ED8;&#x8BA4;&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#xFF1B;&#x5B83;&#x6709;&#x7740;&#x975E;&#x5E38;&#x591A;&#x7684;&#x4F18;&#x70B9;&#xFF0C;&#x6BD4;&#x5982;&#x62E5;&#x6709;&#x6548;&#x7387;&#x975E;&#x5E38;&#x9AD8;&#x7684;&#x7F13;&#x5B58;&#x673A;&#x5236;&#xFF1A;</p>
+<p><img src="images/mongodb-wiredtiger/WiredTiger-Cache.jpg" alt="WiredTiger-Cache"></p>
+<p>WiredTiger &#x8FD8;&#x652F;&#x6301;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x548C;&#x78C1;&#x76D8;&#x4E0A;&#x5BF9;&#x7D22;&#x5F15;&#x8FDB;&#x884C;&#x538B;&#x7F29;&#xFF0C;&#x5728;&#x538B;&#x7F29;&#x65F6;&#x4E5F;&#x4F7F;&#x7528;&#x4E86;&#x524D;&#x7F00;&#x538B;&#x7F29;&#x7684;&#x65B9;&#x5F0F;&#x4EE5;&#x51CF;&#x5C11; RAM &#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x5728;&#x540E;&#x9762;&#x7684;&#x6587;&#x7AE0;&#x4E2D;&#x6211;&#x4EEC;&#x4F1A;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x548C;&#x5206;&#x6790; WiredTiger &#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x662F;&#x5982;&#x4F55;&#x5BF9;&#x5404;&#x79CD;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#x7684;&#x3002;</p>
+<h3 id="journaling">Journaling</h3>
+<p>&#x4E3A;&#x4E86;&#x5728;&#x6570;&#x636E;&#x5E93;&#x5B95;&#x673A;&#x4FDD;&#x8BC1; MongoDB &#x4E2D;&#x6570;&#x636E;&#x7684;&#x6301;&#x4E45;&#x6027;&#xFF0C;MongoDB &#x4F7F;&#x7528;&#x4E86; Write Ahead Logging &#x5411;&#x78C1;&#x76D8;&#x4E0A;&#x7684; journal &#x6587;&#x4EF6;&#x9884;&#x5148;&#x8FDB;&#x884C;&#x5199;&#x5165;&#xFF1B;&#x9664;&#x4E86; journal &#x65E5;&#x5FD7;&#xFF0C;MongoDB &#x8FD8;&#x4F7F;&#x7528;&#x68C0;&#x67E5;&#x70B9;&#xFF08;Checkpoint&#xFF09;&#x6765;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x7684;&#x4E00;&#x81F4;&#x6027;&#xFF0C;&#x5F53;&#x6570;&#x636E;&#x5E93;&#x53D1;&#x751F;&#x5B95;&#x673A;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x9700;&#x8981; Checkpoint &#x548C; journal &#x6587;&#x4EF6;&#x534F;&#x4F5C;&#x5B8C;&#x6210;&#x6570;&#x636E;&#x7684;&#x6062;&#x590D;&#x5DE5;&#x4F5C;&#xFF1A;</p>
+<ol>
+<li>&#x5728;&#x6570;&#x636E;&#x6587;&#x4EF6;&#x4E2D;&#x67E5;&#x627E;&#x4E0A;&#x4E00;&#x4E2A;&#x68C0;&#x67E5;&#x70B9;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#xFF1B;</li>
+<li>&#x5728; journal &#x6587;&#x4EF6;&#x4E2D;&#x67E5;&#x627E;&#x6807;&#x8BC6;&#x7B26;&#x5BF9;&#x5E94;&#x7684;&#x8BB0;&#x5F55;&#xFF1B;</li>
+<li>&#x91CD;&#x505A;&#x5BF9;&#x5E94;&#x8BB0;&#x5F55;&#x4E4B;&#x540E;&#x7684;&#x5168;&#x90E8;&#x64CD;&#x4F5C;&#xFF1B;</li>
+</ol>
+<p>MongoDB &#x4F1A;&#x6BCF;&#x9694; 60s &#x6216;&#x8005;&#x5728; journal &#x6570;&#x636E;&#x7684;&#x5199;&#x5165;&#x8FBE;&#x5230; 2GB &#x65F6;&#x8BBE;&#x7F6E;&#x4E00;&#x6B21;&#x68C0;&#x67E5;&#x70B9;&#xFF0C;&#x5F53;&#x7136;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;&#x5199;&#x5165;&#x65F6;&#x4F20;&#x5165; <code>j: true</code> &#x7684;&#x53C2;&#x6570;&#x5F3A;&#x5236; journal &#x6587;&#x4EF6;&#x7684;&#x540C;&#x6B65;&#x3002;</p>
+<p><img src="images/mongodb-wiredtiger/Checkpoints-Conditions.jpg" alt="Checkpoints-Conditions"></p>
+<p>&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x5E76;&#x4E0D;&#x4F1A;&#x4ECB;&#x7ECD; Journal &#x6587;&#x4EF6;&#x7684;&#x683C;&#x5F0F;&#x4EE5;&#x53CA;&#x76F8;&#x5173;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4F5C;&#x8005;&#x53EF;&#x80FD;&#x4F1A;&#x5728;&#x4E4B;&#x540E;&#x4ECB;&#x7ECD;&#x5206;&#x6790; WiredTiger &#x7684;&#x6587;&#x7AE0;&#x4E2D;&#x7B80;&#x5355;&#x5206;&#x6790;&#x5176;&#x5B58;&#x50A8;&#x683C;&#x5F0F;&#x4EE5;&#x53CA;&#x4E00;&#x4E9B;&#x5176;&#x5B83;&#x7279;&#x6027;&#x3002;</p>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<p>&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#x53EA;&#x662F;&#x5BF9; MongoDB &#x7684;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x7279;&#x6027;&#x4EE5;&#x53CA;&#x6570;&#x636E;&#x6A21;&#x578B;&#x505A;&#x4E86;&#x7B80;&#x5355;&#x7684;&#x4ECB;&#x7ECD;&#xFF0C;&#x867D;&#x7136;&#x300E;&#x65E0;&#x9650;&#x300F;&#x6269;&#x5C55;&#x662F; MongoDB &#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#x7279;&#x6027;&#xFF0C;&#x4F46;&#x662F;&#x7531;&#x4E8E;&#x7BC7;&#x5E45;&#x6240;&#x9650;&#xFF0C;&#x6211;&#x4EEC;&#x5E76;&#x6CA1;&#x6709;&#x4ECB;&#x7ECD;&#x4EFB;&#x4F55;&#x8DDF; MongoDB &#x96C6;&#x7FA4;&#x76F8;&#x5173;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x4E0D;&#x8FC7;&#x4F1A;&#x5728;&#x4E4B;&#x540E;&#x7684;&#x6587;&#x7AE0;&#x4E2D;&#x4E13;&#x95E8;&#x4ECB;&#x7ECD;&#x591A;&#x5B9E;&#x4F8B;&#x7684; MongoDB &#x662F;&#x5982;&#x4F55;&#x534F;&#x540C;&#x5DE5;&#x4F5C;&#x7684;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x60F3;&#x8BF4;&#x7684;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x5404;&#x4F4D;&#x8BFB;&#x8005;&#x63A5;&#x6536;&#x5230;&#x4E86;&#x7C7B;&#x4F3C; MongoDB &#x6BD4; MySQL &#x6027;&#x80FD;&#x597D;&#x5F88;&#x591A;&#x7684;&#x65AD;&#x8A00;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x4F7F;&#x7528; MongoDB &#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x4ECD;&#x7136;&#x9075;&#x5FAA;&#x4EE5;&#x5F80; RDBMS &#x5BF9;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8BBE;&#x8BA1;&#x65B9;&#x5F0F;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x76F8;&#x4FE1;&#x6027;&#x80FD;&#x5728;&#x6700;&#x7EC8;&#x4E5F;&#x4E0D;&#x4F1A;&#x6709;&#x592A;&#x5927;&#x7684;&#x63D0;&#x5347;&#xFF0C;&#x53CD;&#x800C;&#x53EF;&#x80FD;&#x4F1A;&#x4E0D;&#x5347;&#x53CD;&#x964D;&#xFF1B;&#x53EA;&#x6709;&#x771F;&#x6B63;&#x7406;&#x89E3; MongoDB &#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#xFF0C;&#x5E76;&#x4E14;&#x6839;&#x636E;&#x4E1A;&#x52A1;&#x7684;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x8BBE;&#x8BA1;&#x624D;&#x80FD;&#x5F88;&#x597D;&#x5730;&#x5229;&#x7528;&#x7C7B;&#x4F3C;&#x5D4C;&#x5165;&#x5F0F;&#x6587;&#x6863;&#x7B49;&#x7279;&#x6027;&#x5E76;&#x63D0;&#x5347; MongoDB &#x7684;&#x6027;&#x80FD;&#x3002;</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.mongodb.com/mongodb-architecture" target="_blank">MongoDB Architecture</a></li>
+<li><a href="https://www.mongodb.com/blog/post/thinking-documents-part-1?jmp=docs" target="_blank">Thinking in Documents: Part 1</a></li>
+<li><a href="https://db-engines.com/en/ranking" target="_blank">DB-Engines Ranking</a></li>
+<li><a href="https://docs.mongodb.com/manual/core/data-modeling-introduction/" target="_blank">Data Modeling Introduction</a></li>
+<li><a href="https://www.mongodb.com/blog/post/building-applications-with-mongodbs-pluggable-storage-engines-part-1?jmp=docs" target="_blank">Building Applications with MongoDB&apos;s Pluggable Storage Engines: Part 1</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="mongodb-to-mysql.html" class="navigation navigation-prev " aria-label="Previous page: MongoDB 迁移到 MySQL">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mysql.html" class="navigation navigation-next " aria-label="Next page: MySQL 和 InnoDB">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"MongoDB 和 WiredTiger","level":"1.1.5.8.5","depth":4,"next":{"title":"MySQL 和 InnoDB","level":"1.1.5.8.6","depth":4,"path":"Source-Code-Analysis/Database/mysql.md","ref":"Source-Code-Analysis/Database/mysql.md","articles":[]},"previous":{"title":"MongoDB 迁移到 MySQL","level":"1.1.5.8.4","depth":4,"path":"Source-Code-Analysis/Database/mongodb-to-mysql.md","ref":"Source-Code-Analysis/Database/mongodb-to-mysql.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Source-Code-Analysis/Database/mongodb-wiredtiger.md","mtime":"2018-05-22T14:51:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-23T11:29:51.711Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

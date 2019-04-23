@@ -1,0 +1,2228 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>load 方法 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="msgSend.html" />
+    
+    
+    <link rel="prev" href="lazy-initialize.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    iOS 开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../../ObjC-Basic/">
+            
+                <a href="../../ObjC-Basic/">
+            
+                    
+                    Objective-C 语言基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../../ObjC-Basic/Class.html">
+            
+                <a href="../../ObjC-Basic/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2" data-path="../../ObjC-Basic/Block.html">
+            
+                <a href="../../ObjC-Basic/Block.html">
+            
+                    
+                    Block 编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.3" data-path="../../ObjC-Basic/Runtime.html">
+            
+                <a href="../../ObjC-Basic/Runtime.html">
+            
+                    
+                    Objective-C Runtime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.4" data-path="../../ObjC-Basic/MM.html">
+            
+                <a href="../../ObjC-Basic/MM.html">
+            
+                    
+                    Objective-C 内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.5" data-path="../../ObjC-Basic/Runloop.html">
+            
+                <a href="../../ObjC-Basic/Runloop.html">
+            
+                    
+                    Runloop
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../../Cocoa-Touch/">
+            
+                <a href="../../Cocoa-Touch/">
+            
+                    
+                    Cocoa Touch
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="../../Cocoa-Touch/Event-Handling.html">
+            
+                <a href="../../Cocoa-Touch/Event-Handling.html">
+            
+                    
+                    事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2" data-path="../../Cocoa-Touch/UIApplication.html">
+            
+                <a href="../../Cocoa-Touch/UIApplication.html">
+            
+                    
+                    UIApplication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.3" data-path="../../Cocoa-Touch/UIView-Basic.html">
+            
+                <a href="../../Cocoa-Touch/UIView-Basic.html">
+            
+                    
+                    UIView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.4" data-path="../../Cocoa-Touch/UIViewController.html">
+            
+                <a href="../../Cocoa-Touch/UIViewController.html">
+            
+                    
+                    UIViewController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.5" data-path="../../Cocoa-Touch/Animation.html">
+            
+                <a href="../../Cocoa-Touch/Animation.html">
+            
+                    
+                    动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.6" data-path="../../Cocoa-Touch/Network.html">
+            
+                <a href="../../Cocoa-Touch/Network.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.7" data-path="../../Cocoa-Touch/Multithreading.html">
+            
+                <a href="../../Cocoa-Touch/Multithreading.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../../Cocoa-Touch/File-System.html">
+            
+                <a href="../../Cocoa-Touch/File-System.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.9" data-path="../../Cocoa-Touch/Design.html">
+            
+                <a href="../../Cocoa-Touch/Design.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.10" data-path="../../Cocoa-Touch/Performance.html">
+            
+                <a href="../../Cocoa-Touch/Performance.html">
+            
+                    
+                    性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../../Swift/">
+            
+                <a href="../../Swift/">
+            
+                    
+                    Swift
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="../../Swift/Class.html">
+            
+                <a href="../../Swift/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="../../Swift/Struct-And-Enum.html">
+            
+                <a href="../../Swift/Struct-And-Enum.html">
+            
+                    
+                    结构体与枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3" data-path="../../Swift/Function-And-Closure.html">
+            
+                <a href="../../Swift/Function-And-Closure.html">
+            
+                    
+                    函数与闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../../Interview/">
+            
+                <a href="../../Interview/">
+            
+                    
+                    面试问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1" data-path="../../Interview/iOSInterviewQuestions/">
+            
+                <a href="../../Interview/iOSInterviewQuestions/">
+            
+                    
+                    《招聘一个靠谱的iOS》
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1.1" data-path="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.1.2" data-path="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.2" data-path="../../interview/ZhiHu-QA/">
+            
+                <a href="../../interview/ZhiHu-QA/">
+            
+                    
+                    关于一些 iOS 面试问题的解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.3" data-path="../../interview/iOSDeveloperQA/">
+            
+                <a href="../../interview/iOSDeveloperQA/">
+            
+                    
+                    iOS 开发面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.4" data-path="../../interview/MXR-QA/">
+            
+                <a href="../../interview/MXR-QA/">
+            
+                    
+                    MXR 面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    源码分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1" data-path="../AFNetworking/AFNetworking_1.html">
+            
+                <a href="../AFNetworking/AFNetworking_1.html">
+            
+                    
+                    AFNetworking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1.1" data-path="../AFNetworking/AFNetworking_2.html">
+            
+                <a href="../AFNetworking/AFNetworking_2.html">
+            
+                    
+                    AFURLSessionManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.2" data-path="../AFNetworking/AFNetworking_3.html">
+            
+                <a href="../AFNetworking/AFNetworking_3.html">
+            
+                    
+                    AFURLSerialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.3" data-path="../AFNetworking/AFNetworking_4.html">
+            
+                <a href="../AFNetworking/AFNetworking_4.html">
+            
+                    
+                    AFNetworkReachabilityManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.4" data-path="../AFNetworking/AFNetworking_5.html">
+            
+                <a href="../AFNetworking/AFNetworking_5.html">
+            
+                    
+                    HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.2" data-path="../Alamofire/">
+            
+                <a href="../Alamofire/">
+            
+                    
+                    Alamofire
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3" data-path="../architecture/mvx.html">
+            
+                <a href="../architecture/mvx.html">
+            
+                    
+                    architecture
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.3.1" data-path="../architecture/mvx-model.html">
+            
+                <a href="../architecture/mvx-model.html">
+            
+                    
+                    MVX-Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.2" data-path="../architecture/mvx-view.html">
+            
+                <a href="../architecture/mvx-view.html">
+            
+                    
+                    MVX-View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.3" data-path="../architecture/mvx-controller.html">
+            
+                <a href="../architecture/mvx-controller.html">
+            
+                    
+                    MVX-Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4" >
+            
+                <span>
+            
+                    
+                    AsyncDisplayKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.4.1" data-path="../AsyncDisplayKit/ASDK_1.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_1.html">
+            
+                    
+                    提升界面的渲染性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4.2" data-path="../AsyncDisplayKit/ASDK_2.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_2.html">
+            
+                    
+                    布局算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4.3" data-path="../AsyncDisplayKit/ASDK_3.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_3.html">
+            
+                    
+                    预加载与智能预加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5" >
+            
+                <span>
+            
+                    
+                    BlocksKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.5.1" data-path="../BlocksKit/BlocksKit_1.html">
+            
+                <a href="../BlocksKit/BlocksKit_1.html">
+            
+                    
+                    神奇的 BlocksKit (一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5.2" data-path="../BlocksKit/BlocksKit_2.html">
+            
+                <a href="../BlocksKit/BlocksKit_2.html">
+            
+                    
+                    神奇的 BlocksKit (二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.6" data-path="../Blog/initialize-comments.html">
+            
+                <a href="../Blog/initialize-comments.html">
+            
+                    
+                    Gitalk/Gitment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7" >
+            
+                <span>
+            
+                    
+                    CocoaPods
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.7.1" data-path="../CocoaPods/CocoaPods.html">
+            
+                <a href="../CocoaPods/CocoaPods.html">
+            
+                    
+                    CocoaPods 都做了什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7.2" data-path="../CocoaPods/DSL.html">
+            
+                <a href="../CocoaPods/DSL.html">
+            
+                    
+                    DSL 以及 DSL 的应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8" >
+            
+                <span>
+            
+                    
+                    Database
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.8.1" data-path="../Database/concurrency-control.html">
+            
+                <a href="../Database/concurrency-control.html">
+            
+                    
+                    数据库并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.2" data-path="../Database/dynamo.html">
+            
+                <a href="../Database/dynamo.html">
+            
+                    
+                    分布式键值存储 Dynamo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.3" data-path="../Database/leveldb-bigtable.html">
+            
+                <a href="../Database/leveldb-bigtable.html">
+            
+                    
+                    Bigtable 和 LevelDB 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.4" data-path="../Database/mongodb-to-mysql.html">
+            
+                <a href="../Database/mongodb-to-mysql.html">
+            
+                    
+                    MongoDB 迁移到 MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.5" data-path="../Database/mongodb-wiredtiger.html">
+            
+                <a href="../Database/mongodb-wiredtiger.html">
+            
+                    
+                    MongoDB 和 WiredTiger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.6" data-path="../Database/mysql.html">
+            
+                <a href="../Database/mysql.html">
+            
+                    
+                    MySQL 和 InnoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.7" data-path="../Database/sql-index-intro.html">
+            
+                <a href="../Database/sql-index-intro.html">
+            
+                    
+                    MySQL 索引设计概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.8" data-path="../Database/sql-index-performance.html">
+            
+                <a href="../Database/sql-index-performance.html">
+            
+                    
+                    MySQL 索引性能分析概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.9" data-path="../Database/transaction.html">
+            
+                <a href="../Database/transaction.html">
+            
+                    
+                    MySQL 中事务的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.9" data-path="../DKNightVersion/DKNightVersion.html">
+            
+                <a href="../DKNightVersion/DKNightVersion.html">
+            
+                    
+                    DKNightVersion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10" >
+            
+                <span>
+            
+                    
+                    FBRetainCycleDetector
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.10.1" data-path="../FBRetainCycleDetector/block.html">
+            
+                <a href="../FBRetainCycleDetector/block.html">
+            
+                    
+                    block 如何持有对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.2" data-path="../FBRetainCycleDetector/Obj-Associated.html">
+            
+                <a href="../FBRetainCycleDetector/Obj-Associated.html">
+            
+                    
+                    Associated Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.3" data-path="../FBRetainCycleDetector/Obj-Strong.html">
+            
+                <a href="../FBRetainCycleDetector/Obj-Strong.html">
+            
+                    
+                    对象持有的强指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.4" data-path="../FBRetainCycleDetector/retain_cycle.html">
+            
+                <a href="../FBRetainCycleDetector/retain_cycle.html">
+            
+                    
+                    解决循环引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.11" data-path="../fishhook/fishhook.html">
+            
+                <a href="../fishhook/fishhook.html">
+            
+                    
+                    fishhook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.12" data-path="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                <a href="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                    
+                    IQKeyboardManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.13" data-path="../KVOController/KVOController.html">
+            
+                <a href="../KVOController/KVOController.html">
+            
+                    
+                    KVOController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.14" data-path="../libextobjc/libextobjc.html">
+            
+                <a href="../libextobjc/libextobjc.html">
+            
+                    
+                    libextobjc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.15" data-path="../Masonry/Masonry.html">
+            
+                <a href="../Masonry/Masonry.html">
+            
+                    
+                    Masonry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.16" data-path="../MBProgressHUD/">
+            
+                <a href="../MBProgressHUD/">
+            
+                    
+                    MBProgressHUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    objc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.17.1" data-path="associated-obj.html">
+            
+                <a href="associated-obj.html">
+            
+                    
+                    关联对象 AssociatedObject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.2" data-path="autoreleasepool.html">
+            
+                <a href="autoreleasepool.html">
+            
+                    
+                    自动释放池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.3" data-path="black-box-retain-release.html">
+            
+                <a href="black-box-retain-release.html">
+            
+                    
+                    黑箱中的 retain 和 release
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.4" data-path="func-structure.html">
+            
+                <a href="func-structure.html">
+            
+                    
+                    ObjC 中方法的结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.5" data-path="hash.html">
+            
+                <a href="hash.html">
+            
+                    
+                    哈希表的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.6" data-path="initialization.html">
+            
+                <a href="initialization.html">
+            
+                    
+                    初始化对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.7" data-path="isa.html">
+            
+                <a href="isa.html">
+            
+                    
+                    isa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.8" data-path="lazy-initialize.html">
+            
+                <a href="lazy-initialize.html">
+            
+                    
+                    懒惰的 initialize 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.5.17.9" data-path="load.html">
+            
+                <a href="load.html">
+            
+                    
+                    load 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.10" data-path="msgSend.html">
+            
+                <a href="msgSend.html">
+            
+                    
+                    消息传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18" >
+            
+                <span>
+            
+                    
+                    OHHTTPStubs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.18.1" data-path="../OHHTTPStubs/intercept.html">
+            
+                <a href="../OHHTTPStubs/intercept.html">
+            
+                    
+                    HTTP Intercept
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18.2" data-path="../OHHTTPStubs/mock.html">
+            
+                <a href="../OHHTTPStubs/mock.html">
+            
+                    
+                    HTTP Mock
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.19" data-path="../ProtocolKit/ProtocolKit.html">
+            
+                <a href="../ProtocolKit/ProtocolKit.html">
+            
+                    
+                    ProtocolKit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20" data-path="../rack/rack.html">
+            
+                <a href="../rack/rack.html">
+            
+                    
+                    rack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.20.1" data-path="../rack/rack-thin.html">
+            
+                <a href="../rack/rack-thin.html">
+            
+                    
+                    Thin 的事件驱动模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20.2" data-path="../rack/rack-unicorn.html">
+            
+                <a href="../rack/rack-unicorn.html">
+            
+                    
+                    Unicorn 的多进程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20.3" data-path="../rack/rack-webrik.html">
+            
+                <a href="../rack/rack-webrik.html">
+            
+                    
+                    WEBrick 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.21" data-path="../Rails/activerecord.html">
+            
+                <a href="../Rails/activerecord.html">
+            
+                    
+                    Rails
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22" >
+            
+                <span>
+            
+                    
+                    ReactiveObjC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.22.1" data-path="../ReactiveObjC/RACChannel.html">
+            
+                <a href="../ReactiveObjC/RACChannel.html">
+            
+                    
+                    RACChannel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.2" data-path="../ReactiveObjC/RACCommand.html">
+            
+                <a href="../ReactiveObjC/RACCommand.html">
+            
+                    
+                    RACCommand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.3" data-path="../ReactiveObjC/RACDelegateProxy.html">
+            
+                <a href="../ReactiveObjC/RACDelegateProxy.html">
+            
+                    
+                    RACDelegateProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.4" data-path="../ReactiveObjC/RACMulticastConnection.html">
+            
+                <a href="../ReactiveObjC/RACMulticastConnection.html">
+            
+                    
+                    RACMulticastConnection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.5" data-path="../ReactiveObjC/RACScheduler.html">
+            
+                <a href="../ReactiveObjC/RACScheduler.html">
+            
+                    
+                    RACScheduler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.6" data-path="../ReactiveObjC/RACSequence.html">
+            
+                <a href="../ReactiveObjC/RACSequence.html">
+            
+                    
+                    RACSequence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.7" data-path="../ReactiveObjC/RACSignal.html">
+            
+                <a href="../ReactiveObjC/RACSignal.html">
+            
+                    
+                    RACSignal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.8" data-path="../ReactiveObjC/RACSubject.html">
+            
+                <a href="../ReactiveObjC/RACSubject.html">
+            
+                    
+                    RACSubject
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23" >
+            
+                <span>
+            
+                    
+                    Redis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.23.1" data-path="../Redis/redis-cli.html">
+            
+                <a href="../Redis/redis-cli.html">
+            
+                    
+                    命令处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.2" data-path="../Redis/redis-eventloop.html">
+            
+                <a href="../Redis/redis-eventloop.html">
+            
+                    
+                    事件循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.3" data-path="../Redis/redis-io-multiplexing.html">
+            
+                <a href="../Redis/redis-io-multiplexing.html">
+            
+                    
+                    I/O 多路复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.24" data-path="../Ruby/Ruby.html">
+            
+                <a href="../Ruby/Ruby.html">
+            
+                    
+                    Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.25" data-path="../SDWebImage/">
+            
+                <a href="../SDWebImage/">
+            
+                    
+                    SDWebImage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="../../More.html">
+            
+                <a href="../../More.html">
+            
+                    
+                    更多资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >load 方法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4F60;&#x771F;&#x7684;&#x4E86;&#x89E3;-load-&#x65B9;&#x6CD5;&#x4E48;&#xFF1F;">&#x4F60;&#x771F;&#x7684;&#x4E86;&#x89E3; load &#x65B9;&#x6CD5;&#x4E48;&#xFF1F;</h1>
+<blockquote>
+<p>&#x56E0;&#x4E3A; ObjC &#x7684; runtime &#x53EA;&#x80FD;&#x5728; Mac OS &#x4E0B;&#x624D;&#x80FD;&#x7F16;&#x8BD1;&#xFF0C;&#x6240;&#x4EE5;&#x6587;&#x7AE0;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x90FD;&#x662F;&#x5728; Mac OS&#xFF0C;&#x4E5F;&#x5C31;&#x662F; <code>x86_64</code> &#x67B6;&#x6784;&#x4E0B;&#x8FD0;&#x884C;&#x7684;&#xFF0C;&#x5BF9;&#x4E8E;&#x5728; arm64 &#x4E2D;&#x8FD0;&#x884C;&#x7684;&#x4EE3;&#x7801;&#x4F1A;&#x7279;&#x522B;&#x8BF4;&#x660E;&#x3002;</p>
+</blockquote>
+<h2 id="&#x5199;&#x5728;&#x524D;&#x9762;">&#x5199;&#x5728;&#x524D;&#x9762;</h2>
+<blockquote>
+<p>&#x6587;&#x7AE0;&#x7684;&#x6807;&#x9898;&#x4E0E;&#x5176;&#x8BF4;&#x662F;&#x95EE;&#x5404;&#x4F4D;&#x8BFB;&#x8005;&#xFF0C;&#x4E0D;&#x5982;&#x8BF4;&#x662F;&#x95EE;&#x7B14;&#x8005;&#x81EA;&#x5DF1;&#xFF1A;<strong>&#x6211;</strong>&#x771F;&#x7684;&#x4E86;&#x89E3; <code>+ load</code> &#x65B9;&#x6CD5;&#x4E48;&#xFF1F;</p>
+</blockquote>
+<p><code>+ load</code> &#x4F5C;&#x4E3A; Objective-C &#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x4E0E;&#x5176;&#x5B83;&#x65B9;&#x6CD5;&#x6709;&#x5F88;&#x5927;&#x7684;&#x4E0D;&#x540C;&#x3002;&#x5B83;&#x53EA;&#x662F;&#x4E00;&#x4E2A;<strong>&#x5728;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x88AB;&#x52A0;&#x8F7D;&#x5230;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;&#x5728; <code>main</code> &#x51FD;&#x6570;&#x8C03;&#x7528;&#x4E4B;&#x524D;&#x88AB; ObjC &#x8FD0;&#x884C;&#x65F6;&#x8C03;&#x7528;&#x7684;&#x94A9;&#x5B50;&#x65B9;&#x6CD5;</strong>&#x3002;&#x5176;&#x4E2D;&#x5173;&#x952E;&#x5B57;&#x6709;&#x8FD9;&#x4E48;&#x51E0;&#x4E2A;&#xFF1A;</p>
+<ul>
+<li>&#x6587;&#x4EF6;&#x521A;&#x52A0;&#x8F7D;</li>
+<li><code>main</code> &#x51FD;&#x6570;&#x4E4B;&#x524D;</li>
+<li>&#x94A9;&#x5B50;&#x65B9;&#x6CD5;</li>
+</ul>
+<p>&#x6211;&#x5728;&#x9605;&#x8BFB; ObjC &#x6E90;&#x4EE3;&#x7801;&#x4E4B;&#x524D;&#xFF0C;&#x66FE;&#x7ECF;&#x4E00;&#x5EA6;&#x611F;&#x89C9;&#x81EA;&#x5DF1;&#x5BF9; <code>+ load</code> &#x65B9;&#x6CD5;&#x7684;&#x4F5C;&#x7528;&#x975E;&#x5E38;&#x4E86;&#x89E3;&#xFF0C;&#x76F4;&#x5230;&#x770B;&#x4E86;&#x6E90;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x624D;&#x77E5;&#x9053;&#x4EE5;&#x524D;&#x7684;&#x4EE5;&#x4E3A;&#xFF0C;&#x53EA;&#x662F;&#x81EA;&#x5DF1;&#x7684;&#x4EE5;&#x4E3A;&#x7F62;&#x4E86;&#x3002;</p>
+<p>&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x4F1A;&#x5047;&#x8BBE;&#x4F60;&#x77E5;&#x9053;&#xFF1A;</p>
+<ul>
+<li>&#x4F7F;&#x7528;&#x8FC7; <code>+ load</code> &#x65B9;&#x6CD5;</li>
+<li>&#x77E5;&#x9053; <code>+ load</code> &#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x987A;&#x5E8F;&#xFF08;&#x6587;&#x7AE0;&#x4E2D;&#x4F1A;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;&#xFF09;</li>
+</ul>
+<p>&#x5728;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#x5E76;&#x4E0D;&#x4F1A;&#x7528;&#x5927;&#x7BC7;&#x5E45;&#x4ECB;&#x7ECD; <code>+ load</code> &#x65B9;&#x6CD5;&#x7684;&#x4F5C;&#x7528;<del>&#x5176;&#x5B9E;&#x4E5F;&#x6CA1;&#x51E0;&#x4E2A;&#x4F5C;&#x7528;</del>&#xFF0C;&#x5173;&#x6CE8;&#x70B9;&#x4E3B;&#x8981;&#x5728;&#x4EE5;&#x4E0B;&#x4E24;&#x4E2A;&#x95EE;&#x9898;&#x4E0A;&#xFF1A;</p>
+<ul>
+<li><code>+ load</code> &#x65B9;&#x6CD5;&#x662F;&#x5982;&#x4F55;&#x88AB;&#x8C03;&#x7528;&#x7684;</li>
+<li><code>+ load</code> &#x65B9;&#x6CD5;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x6709;&#x8FD9;&#x79CD;&#x8C03;&#x7528;&#x987A;&#x5E8F;</li>
+</ul>
+<h2 id="load-&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x6808;">load &#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x6808;</h2>
+<p>&#x9996;&#x5148;&#x6765;&#x901A;&#x8FC7; <code>load</code> &#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x6808;&#xFF0C;&#x5206;&#x6790;&#x4E00;&#x4E0B;&#x5B83;&#x5230;&#x5E95;&#x662F;&#x5982;&#x4F55;&#x88AB;&#x8C03;&#x7528;&#x7684;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x662F;&#x7A0B;&#x5E8F;&#x7684;&#x5168;&#x90E8;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-comment">// main.m</span>
+<span class="hljs-meta">#import <span class="hljs-meta-string">&lt;Foundation/Foundation.h&gt;</span></span>
+
+<span class="hljs-class"><span class="hljs-keyword">@interface</span> <span class="hljs-title">XXObject</span> : <span class="hljs-title">NSObject</span> @<span class="hljs-title">end</span></span>
+
+<span class="hljs-class"><span class="hljs-keyword">@implementation</span> <span class="hljs-title">XXObject</span></span>
+
++ (<span class="hljs-keyword">void</span>)load {
+    <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@&quot;XXObject load&quot;</span>);
+}
+
+<span class="hljs-keyword">@end</span>
+
+<span class="hljs-keyword">int</span> main(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> * argv[]) {
+    <span class="hljs-keyword">@autoreleasepool</span> { }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x4EE3;&#x7801;&#x603B;&#x5171;&#x53EA;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x4E2A; <code>XXObject</code> &#x7684; <code>+ load</code> &#x65B9;&#x6CD5;&#xFF0C;&#x4E3B;&#x51FD;&#x6570;&#x4E2D;&#x4E5F;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x7684;&#x4E1C;&#x897F;&#xFF1A;</p>
+<p><img src="../images/objc-load-print-load.png" alt="objc-load-print-load"></p>
+<p>&#x867D;&#x7136;&#x5728;&#x4E3B;&#x51FD;&#x6570;&#x4E2D;&#x4EC0;&#x4E48;&#x65B9;&#x6CD5;&#x90FD;&#x6CA1;&#x6709;&#x8C03;&#x7528;&#xFF0C;&#x4F46;&#x662F;&#x8FD0;&#x884C;&#x4E4B;&#x540E;&#xFF0C;&#x4F9D;&#x7136;&#x6253;&#x5370;&#x4E86; <code>XXObject load</code> &#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x8C03;&#x7528;&#x4E86; <code>+ load</code> &#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="&#x4F7F;&#x7528;&#x7B26;&#x53F7;&#x65AD;&#x70B9;">&#x4F7F;&#x7528;&#x7B26;&#x53F7;&#x65AD;&#x70B9;</h3>
+<p>&#x4F7F;&#x7528; Xcode &#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x7B26;&#x53F7;&#x65AD;&#x70B9; <code>+[XXObject load]</code>&#xFF1A;</p>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#x8FD9;&#x91CC; <code>+</code> &#x548C; <code>[</code> &#x4E4B;&#x95F4;&#x6CA1;&#x6709;&#x7A7A;&#x683C;</p>
+</blockquote>
+<p><img src="../images/objc-load-symbolic-breakpoint.png" alt="objc-load-symbolic-breakpoint"></p>
+<blockquote>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x52A0;&#x4E00;&#x4E2A;&#x7B26;&#x53F7;&#x65AD;&#x70B9;&#x5462;&#xFF1F;&#x56E0;&#x4E3A;&#x8FD9;&#x6837;&#x770B;&#x8D77;&#x6765;&#x6BD4;&#x8F83;&#x9AD8;&#x7EA7;&#x3002;</p>
+</blockquote>
+<p>&#x91CD;&#x65B0;&#x8FD0;&#x884C;&#x7A0B;&#x5E8F;&#x3002;&#x8FD9;&#x65F6;&#xFF0C;&#x4EE3;&#x7801;&#x4F1A;&#x505C;&#x5728; <code>NSLog(@&quot;XXObject load&quot;);</code> &#x8FD9;&#x4E00;&#x884C;&#x7684;&#x5B9E;&#x73B0;&#x4E0A;&#xFF1A;</p>
+<p><img src="../images/objc-load-break-after-add-breakpoint.png" alt="objc-load-break-after-add-breakpoint"></p>
+<p>&#x5DE6;&#x4FA7;&#x7684;&#x8C03;&#x7528;&#x6808;&#x5F88;&#x6E05;&#x695A;&#x7684;&#x544A;&#x8BC9;&#x6211;&#x4EEC;&#xFF0C;&#x54EA;&#x4E9B;&#x65B9;&#x6CD5;&#x88AB;&#x8C03;&#x7528;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-number">0</span>  +[XXObject load]
+<span class="hljs-number">1</span>  call_class_loads()
+<span class="hljs-number">2</span>  call_load_methods
+<span class="hljs-number">3</span>  load_images
+<span class="hljs-number">4</span>  dyld::notifySingle(dyld_image_states, ImageLoader <span class="hljs-keyword">const</span>*)
+<span class="hljs-number">11</span> _dyld_start
+</code></pre>
+<blockquote>
+<p><a href="https://developer.apple.com/library/ios/documentation/System/Conceptual/ManPages_iPhoneOS/man3/dyld.3.html" target="_blank">dyld</a> &#x662F; the dynamic link editor &#x7684;&#x7F29;&#x5199;&#xFF0C;&#x5B83;&#x662F;&#x82F9;&#x679C;&#x7684;<em>&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5668;</em>&#x3002;</p>
+<p>&#x5728;&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x505A;&#x597D;&#x7A0B;&#x5E8F;&#x51C6;&#x5907;&#x5DE5;&#x4F5C;&#x4E4B;&#x540E;&#xFF0C;&#x4EA4;&#x7531; dyld &#x8D1F;&#x8D23;&#x4F59;&#x4E0B;&#x7684;&#x5DE5;&#x4F5C;&#x3002;&#x672C;&#x6587;&#x4E0D;&#x4F1A;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x89E3;&#x91CA;</p>
+</blockquote>
+<p>&#x6BCF;&#x5F53;&#x6709;&#x65B0;&#x7684;&#x955C;&#x50CF;&#x52A0;&#x8F7D;&#x4E4B;&#x540E;&#xFF0C;&#x90FD;&#x4F1A;&#x6267;&#x884C; <code>3 load_images</code> &#x65B9;&#x6CD5;&#x8FDB;&#x884C;&#x56DE;&#x8C03;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x56DE;&#x8C03;&#x662F;&#x5728;&#x6574;&#x4E2A;&#x8FD0;&#x884C;&#x65F6;&#x521D;&#x59CB;&#x5316;&#x65F6; <code>_objc_init</code> &#x6CE8;&#x518C;&#x7684;&#xFF08;&#x4F1A;&#x5728;&#x4E4B;&#x540E;&#x7684;&#x6587;&#x7AE0;&#x4E2D;&#x5177;&#x4F53;&#x4ECB;&#x7ECD;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-objectivec">dyld_register_image_state_change_handler(dyld_image_state_dependents_initialized, <span class="hljs-number">0</span><span class="hljs-comment">/*not batch*/</span>, &amp;load_images);
+</code></pre>
+<p>&#x6709;&#x65B0;&#x7684;&#x955C;&#x50CF;&#x88AB;&#x52A0;&#x8F7D;&#x5230; runtime &#x65F6;&#xFF0C;&#x8C03;&#x7528; <code>load_images</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5E76;&#x4F20;&#x5165;&#x6700;&#x65B0;&#x955C;&#x50CF;&#x7684;&#x4FE1;&#x606F;&#x5217;&#x8868; <code>infoList</code>&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">const</span> <span class="hljs-keyword">char</span> *
+load_images(<span class="hljs-keyword">enum</span> dyld_image_states state, uint32_t infoCount,
+            <span class="hljs-keyword">const</span> <span class="hljs-keyword">struct</span> dyld_image_info infoList[])
+{
+    <span class="hljs-keyword">bool</span> found;
+
+    found = <span class="hljs-literal">false</span>;
+    <span class="hljs-keyword">for</span> (uint32_t i = <span class="hljs-number">0</span>; i &lt; infoCount; i++) {
+        <span class="hljs-keyword">if</span> (hasLoadMethods((<span class="hljs-keyword">const</span> headerType *)infoList[i].imageLoadAddress)) {
+            found = <span class="hljs-literal">true</span>;
+            <span class="hljs-keyword">break</span>;
+        }
+    }
+    <span class="hljs-keyword">if</span> (!found) <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>;
+
+    recursive_mutex_locker_t lock(loadMethodLock);
+
+    {
+        rwlock_writer_t lock2(runtimeLock);
+        found = load_images_nolock(state, infoCount, infoList);
+    }
+
+    <span class="hljs-keyword">if</span> (found) {
+        call_load_methods();
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>;
+}
+</code></pre>
+<h3 id="&#x4EC0;&#x4E48;&#x662F;&#x955C;&#x50CF;">&#x4EC0;&#x4E48;&#x662F;&#x955C;&#x50CF;</h3>
+<p>&#x8FD9;&#x91CC;&#x5C31;&#x4F1A;&#x9047;&#x5230;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF1A;&#x955C;&#x50CF;&#x5230;&#x5E95;&#x662F;&#x4EC0;&#x4E48;&#xFF0C;&#x6211;&#x4EEC;&#x7528;&#x4E00;&#x4E2A;&#x65AD;&#x70B9;&#x6253;&#x5370;&#x51FA;&#x6240;&#x6709;&#x52A0;&#x8F7D;&#x7684;&#x955C;&#x50CF;&#xFF1A;</p>
+<p><img src="../images/objc-load-print-image-info.png" alt="objc-load-print-image-info"></p>
+<p>&#x4ECE;&#x63A7;&#x5236;&#x53F0;&#x8F93;&#x51FA;&#x7684;&#x7ED3;&#x679C;&#x5927;&#x6982;&#x5C31;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x955C;&#x50CF;&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x4E2A; Objective-C &#x7684;&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#xFF0C;&#x5B83;&#x5E94;&#x8BE5;&#x662F;&#x4E00;&#x4E2A; target &#x7684;&#x7F16;&#x8BD1;&#x4EA7;&#x7269;&#x3002;</p>
+<pre><code class="lang-objectivec">...
+(<span class="hljs-keyword">const</span> dyld_image_info) $<span class="hljs-number">52</span> = {
+  imageLoadAddress = <span class="hljs-number">0x00007fff8a144000</span>
+  imageFilePath = <span class="hljs-number">0x00007fff8a144168</span> <span class="hljs-string">&quot;/System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices&quot;</span>
+  imageFileModDate = <span class="hljs-number">1452737802</span>
+}
+(<span class="hljs-keyword">const</span> dyld_image_info) $<span class="hljs-number">53</span> = {
+  imageLoadAddress = <span class="hljs-number">0x00007fff946d9000</span>
+  imageFilePath = <span class="hljs-number">0x00007fff946d9480</span> <span class="hljs-string">&quot;/usr/lib/liblangid.dylib&quot;</span>
+  imageFileModDate = <span class="hljs-number">1452737618</span>
+}
+(<span class="hljs-keyword">const</span> dyld_image_info) $<span class="hljs-number">54</span> = {
+  imageLoadAddress = <span class="hljs-number">0x00007fff88016000</span>
+  imageFilePath = <span class="hljs-number">0x00007fff88016d40</span> <span class="hljs-string">&quot;/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation&quot;</span>
+  imageFileModDate = <span class="hljs-number">1452737917</span>
+}
+(<span class="hljs-keyword">const</span> dyld_image_info) $<span class="hljs-number">55</span> = {
+  imageLoadAddress = <span class="hljs-number">0x0000000100000000</span>
+  imageFilePath = <span class="hljs-number">0x00007fff5fbff8f0</span> <span class="hljs-string">&quot;/Users/apple/Library/Developer/Xcode/DerivedData/objc-dibgivkseuawonexgbqssmdszazo/Build/Products/Debug/debug-objc&quot;</span>
+  imageFileModDate = <span class="hljs-number">0</span>
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x9762;&#x6709;&#x5F88;&#x591A;&#x7684;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x82F9;&#x679C;&#x4E3A;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x7684;&#x6846;&#x67B6;&#xFF0C;&#x6BD4;&#x5982; Foundation&#x3001; CoreServices &#x7B49;&#x7B49;&#xFF0C;&#x90FD;&#x662F;&#x5728;&#x8FD9;&#x4E2A; <code>load_images</code> &#x4E2D;&#x52A0;&#x8F7D;&#x8FDB;&#x6765;&#x7684;&#xFF0C;&#x800C;&#x8FD9;&#x4E9B; <code>imageFilePath</code> &#x90FD;&#x662F;&#x5BF9;&#x5E94;&#x7684;<strong>&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;</strong>&#x7684;&#x5730;&#x5740;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x5982;&#x679C;&#x8FDB;&#x5165;&#x6700;&#x4E0B;&#x9762;&#x7684;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#xFF0C;&#x4F1A;&#x53D1;&#x73B0;&#x5B83;&#x662F;&#x4E00;&#x4E2A;<strong>&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;</strong>&#xFF0C;&#x5B83;&#x7684;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x4E0E; Xcode &#x4E2D;&#x7684;&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#x76F8;&#x540C;&#xFF1A;</p>
+<p><img src="../images/objc-load-image-binary.png" alt="objc-load-image-binary"></p>
+<h3 id="&#x51C6;&#x5907;--load-&#x65B9;&#x6CD5;">&#x51C6;&#x5907; + load &#x65B9;&#x6CD5;</h3>
+<p>&#x6211;&#x4EEC;&#x91CD;&#x65B0;&#x56DE;&#x5230; <code>load_images</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x626B;&#x63CF;&#x955C;&#x50CF;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x53D1;&#x73B0;&#x4E86; <code>+ load</code> &#x7B26;&#x53F7;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">for</span> (uint32_t i = <span class="hljs-number">0</span>; i &lt; infoCount; i++) {
+    <span class="hljs-keyword">if</span> (hasLoadMethods((<span class="hljs-keyword">const</span> headerType *)infoList[i].imageLoadAddress)) {
+        found = <span class="hljs-literal">true</span>;
+        <span class="hljs-keyword">break</span>;
+    }
+}
+</code></pre>
+<p>&#x5C31;&#x4F1A;&#x8FDB;&#x5165; <code>load_images_nolock</code> &#x6765;&#x67E5;&#x627E; <code>load</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">bool</span> load_images_nolock(<span class="hljs-keyword">enum</span> dyld_image_states state,uint32_t infoCount,
+                   <span class="hljs-keyword">const</span> <span class="hljs-keyword">struct</span> dyld_image_info infoList[])
+{
+    <span class="hljs-keyword">bool</span> found = <span class="hljs-literal">NO</span>;
+    uint32_t i;
+
+    i = infoCount;
+    <span class="hljs-keyword">while</span> (i--) {
+        <span class="hljs-keyword">const</span> headerType *mhdr = (headerType*)infoList[i].imageLoadAddress;
+        <span class="hljs-keyword">if</span> (!hasLoadMethods(mhdr)) <span class="hljs-keyword">continue</span>;
+
+        prepare_load_methods(mhdr);
+        found = <span class="hljs-literal">YES</span>;
+    }
+
+    <span class="hljs-keyword">return</span> found;
+}
+</code></pre>
+<p>&#x8C03;&#x7528; <code>prepare_load_methods</code> &#x5BF9; <code>load</code> &#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x8FDB;&#x884C;&#x51C6;&#x5907;&#xFF08;&#x5C06;&#x9700;&#x8981;&#x8C03;&#x7528; <code>load</code> &#x65B9;&#x6CD5;&#x7684;&#x7C7B;&#x6DFB;&#x52A0;&#x5230;&#x4E00;&#x4E2A;&#x5217;&#x8868;&#x4E2D;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x5C0F;&#x8282;&#x4E2D;&#x4F1A;&#x4ECB;&#x7ECD;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">void</span> prepare_load_methods(<span class="hljs-keyword">const</span> headerType *mhdr)
+{
+    size_t count, i;
+
+    runtimeLock.assertWriting();
+
+    classref_t *classlist = 
+        _getObjc2NonlazyClassList(mhdr, &amp;count);
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; count; i++) {
+        schedule_class_load(remapClass(classlist[i]));
+    }
+
+    category_t **categorylist = _getObjc2NonlazyCategoryList(mhdr, &amp;count);
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; count; i++) {
+        category_t *cat = categorylist[i];
+        Class cls = remapClass(cat-&gt;cls);
+        <span class="hljs-keyword">if</span> (!cls) <span class="hljs-keyword">continue</span>;  <span class="hljs-comment">// category for ignored weak-linked class</span>
+        realizeClass(cls);
+        assert(cls-&gt;ISA()-&gt;isRealized());
+        add_category_to_loadable_list(cat);
+    }
+}
+</code></pre>
+<p>&#x901A;&#x8FC7; <code>_getObjc2NonlazyClassList</code> &#x83B7;&#x53D6;&#x6240;&#x6709;&#x7684;&#x7C7B;&#x7684;&#x5217;&#x8868;&#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x901A;&#x8FC7; <code>remapClass</code> &#x83B7;&#x53D6;&#x7C7B;&#x5BF9;&#x5E94;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528; <code>schedule_class_load</code> <strong>&#x9012;&#x5F52;&#x5730;&#x5B89;&#x6392;&#x5F53;&#x524D;&#x7C7B;&#x548C;&#x6CA1;&#x6709;&#x8C03;&#x7528; <code>+ load</code> &#x7236;&#x7C7B;</strong>&#x8FDB;&#x5165;&#x5217;&#x8868;&#x3002;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> schedule_class_load(Class cls)
+{
+    <span class="hljs-keyword">if</span> (!cls) <span class="hljs-keyword">return</span>;
+    assert(cls-&gt;isRealized());
+
+    <span class="hljs-keyword">if</span> (cls-&gt;data()-&gt;flags &amp; RW_LOADED) <span class="hljs-keyword">return</span>;
+
+    schedule_class_load(cls-&gt;superclass);
+
+    add_class_to_loadable_list(cls);
+    cls-&gt;setInfo(RW_LOADED); 
+}
+</code></pre>
+<p>&#x5728;&#x6267;&#x884C; <code>add_class_to_loadable_list(cls)</code> &#x5C06;&#x5F53;&#x524D;&#x7C7B;&#x52A0;&#x5165;&#x52A0;&#x8F7D;&#x5217;&#x8868;&#x4E4B;&#x524D;&#xFF0C;&#x4F1A;<strong>&#x5148;&#x628A;&#x7236;&#x7C7B;&#x52A0;&#x5165;&#x5F85;&#x52A0;&#x8F7D;&#x7684;&#x5217;&#x8868;</strong>&#xFF0C;&#x4FDD;&#x8BC1;&#x7236;&#x7C7B;&#x5728;&#x5B50;&#x7C7B;&#x524D;&#x8C03;&#x7528; <code>load</code> &#x65B9;&#x6CD5;&#x3002;</p>
+<h3 id="&#x8C03;&#x7528;--load-&#x65B9;&#x6CD5;">&#x8C03;&#x7528; + load &#x65B9;&#x6CD5;</h3>
+<p>&#x5728;&#x5C06;&#x955C;&#x50CF;&#x52A0;&#x8F7D;&#x5230;&#x8FD0;&#x884C;&#x65F6;&#x3001;&#x5BF9; <code>load</code> &#x65B9;&#x6CD5;&#x7684;&#x51C6;&#x5907;&#x5C31;&#x7EEA;&#x4E4B;&#x540E;&#xFF0C;&#x6267;&#x884C; <code>call_load_methods</code>&#xFF0C;&#x5F00;&#x59CB;&#x8C03;&#x7528; <code>load</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">void</span> call_load_methods(<span class="hljs-keyword">void</span>)
+{
+    ...
+
+    <span class="hljs-keyword">do</span> {
+        <span class="hljs-keyword">while</span> (loadable_classes_used &gt; <span class="hljs-number">0</span>) {
+            call_class_loads();
+        }
+
+        more_categories = call_category_loads();
+
+    } <span class="hljs-keyword">while</span> (loadable_classes_used &gt; <span class="hljs-number">0</span>  ||  more_categories);
+
+    ...
+}
+</code></pre>
+<p>&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x6D41;&#x7A0B;&#x5927;&#x6982;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<p><img src="../images/objc-load-diagram.png" alt="objc-load-diagra"></p>
+<p>&#x5176;&#x4E2D; <code>call_class_loads</code> &#x4F1A;&#x4ECE;&#x4E00;&#x4E2A;&#x5F85;&#x52A0;&#x8F7D;&#x7684;&#x7C7B;&#x5217;&#x8868; <code>loadable_classes</code> &#x4E2D;&#x5BFB;&#x627E;&#x5BF9;&#x5E94;&#x7684;&#x7C7B;&#xFF0C;&#x7136;&#x540E;&#x627E;&#x5230; <code>@selector(load)</code> &#x7684;&#x5B9E;&#x73B0;&#x5E76;&#x6267;&#x884C;&#x3002;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> call_class_loads(<span class="hljs-keyword">void</span>)
+{
+    <span class="hljs-keyword">int</span> i;
+
+    <span class="hljs-keyword">struct</span> loadable_class *classes = loadable_classes;
+    <span class="hljs-keyword">int</span> used = loadable_classes_used;
+    loadable_classes = <span class="hljs-literal">nil</span>;
+    loadable_classes_allocated = <span class="hljs-number">0</span>;
+    loadable_classes_used = <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; used; i++) {
+        Class cls = classes[i].cls;
+        load_method_t load_method = (load_method_t)classes[i].method;
+        <span class="hljs-keyword">if</span> (!cls) <span class="hljs-keyword">continue</span>;
+
+        (*load_method)(cls, SEL_load);
+    }
+
+    <span class="hljs-keyword">if</span> (classes) free(classes);
+}
+</code></pre>
+<p>&#x8FD9;&#x884C; <code>(*load_method)(cls, SEL_load)</code> &#x4EE3;&#x7801;&#x5C31;&#x4F1A;&#x8C03;&#x7528; <code>+[XXObject load]</code> &#x65B9;&#x6CD5;&#x3002;</p>
+<blockquote>
+<p>&#x6211;&#x4EEC;&#x4F1A;&#x5728;&#x4E0B;&#x9762;&#x4ECB;&#x7ECD; <code>loadable_classes</code> &#x5217;&#x8868;&#x662F;&#x5982;&#x4F55;&#x7BA1;&#x7406;&#x7684;&#x3002;</p>
+</blockquote>
+<p>&#x5230;&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x56DE;&#x7B54;&#x4E86;&#x7B2C;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF1A;</p>
+<p>Q&#xFF1A;<strong><code>load</code> &#x65B9;&#x6CD5;&#x662F;&#x5982;&#x4F55;&#x88AB;&#x8C03;&#x7528;&#x7684;&#xFF1F;</strong></p>
+<p>A&#xFF1A;&#x5F53; Objective-C &#x8FD0;&#x884C;&#x65F6;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x901A;&#x8FC7; <code>dyld_register_image_state_change_handler</code> &#x5728;&#x6BCF;&#x6B21;&#x6709;&#x65B0;&#x7684;&#x955C;&#x50CF;&#x52A0;&#x5165;<em>&#x8FD0;&#x884C;&#x65F6;</em>&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8FDB;&#x884C;&#x56DE;&#x8C03;&#x3002;&#x6267;&#x884C; <code>load_images</code> &#x5C06;&#x6240;&#x6709;&#x5305;&#x542B; <code>load</code> &#x65B9;&#x6CD5;&#x7684;&#x6587;&#x4EF6;&#x52A0;&#x5165;&#x5217;&#x8868; <code>loadable_classes</code> &#xFF0C;&#x7136;&#x540E;&#x4ECE;&#x8FD9;&#x4E2A;&#x5217;&#x8868;&#x4E2D;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684; <code>load</code> &#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x8C03;&#x7528; <code>load</code> &#x65B9;&#x6CD5;&#x3002;</p>
+<h2 id="&#x52A0;&#x8F7D;&#x7684;&#x7BA1;&#x7406;">&#x52A0;&#x8F7D;&#x7684;&#x7BA1;&#x7406;</h2>
+<p>ObjC &#x5BF9;&#x4E8E;&#x52A0;&#x8F7D;&#x7684;&#x7BA1;&#x7406;&#xFF0C;&#x4E3B;&#x8981;&#x4F7F;&#x7528;&#x4E86;&#x4E24;&#x4E2A;&#x5217;&#x8868;&#xFF0C;&#x5206;&#x522B;&#x662F; <code>loadable_classes</code> &#x548C; <code>loadable_categories</code>&#x3002;</p>
+<p>&#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x8FC7;&#x7A0B;&#x4E5F;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x51C6;&#x5907; <code>load</code> &#x65B9;&#x6CD5;&#x548C;&#x8C03;&#x7528; <code>load</code> &#x65B9;&#x6CD5;&#xFF0C;&#x6211;&#x66F4;&#x89C9;&#x5F97;&#x8FD9;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#x6BD4;&#x8F83;&#x50CF;&#x751F;&#x4EA7;&#x8005;&#x4E0E;&#x6D88;&#x8D39;&#x8005;&#xFF1A;</p>
+<p><img src="../images/objc-load-producer-consumer-diagram.png" alt="objc-load-producer-consumer-diagra"></p>
+<p><code>add_class_to_loadable_list</code> &#x65B9;&#x6CD5;&#x8D1F;&#x8D23;&#x5C06;&#x7C7B;&#x52A0;&#x5165; <code>loadable_classes</code> &#x96C6;&#x5408;&#xFF0C;&#x800C; <code>call_class_loads</code> &#x8D1F;&#x8D23;&#x6D88;&#x8D39;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
+<p>&#x800C;&#x5BF9;&#x4E8E;&#x5206;&#x7C7B;&#x6765;&#x8BF4;&#xFF0C;&#x5176;&#x6A21;&#x578B;&#x4E5F;&#x662F;&#x7C7B;&#x4F3C;&#x7684;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x4F7F;&#x7528;&#x4E86;&#x53E6;&#x4E00;&#x4E2A;&#x5217;&#x8868; <code>loadable_categories</code>&#x3002;</p>
+<h3 id="&#x751F;&#x4EA7;-loadableclass">&#x201C;&#x751F;&#x4EA7;&#x201D; loadable_class</h3>
+<p>&#x5728;&#x8C03;&#x7528; <code>load_images -&gt; load_images_nolock -&gt; prepare_load_methods -&gt; schedule_class_load -&gt; add_class_to_loadable_list</code> &#x7684;&#x65F6;&#x5019;&#x4F1A;&#x5C06;&#x672A;&#x52A0;&#x8F7D;&#x7684;&#x7C7B;&#x6DFB;&#x52A0;&#x5230; <code>loadable_classes</code> &#x6570;&#x7EC4;&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">void</span> add_class_to_loadable_list(Class cls)
+{
+    IMP method;
+
+    loadMethodLock.assertLocked();
+
+    method = cls-&gt;getLoadMethod();
+    <span class="hljs-keyword">if</span> (!method) <span class="hljs-keyword">return</span>;
+
+    <span class="hljs-keyword">if</span> (loadable_classes_used == loadable_classes_allocated) {
+        loadable_classes_allocated = loadable_classes_allocated*<span class="hljs-number">2</span> + <span class="hljs-number">16</span>;
+        loadable_classes = (<span class="hljs-keyword">struct</span> loadable_class *)
+            realloc(loadable_classes,
+                              loadable_classes_allocated *
+                              <span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">struct</span> loadable_class));
+    }
+
+    loadable_classes[loadable_classes_used].cls = cls;
+    loadable_classes[loadable_classes_used].method = method;
+    loadable_classes_used++;
+}
+</code></pre>
+<p>&#x65B9;&#x6CD5;&#x521A;&#x88AB;&#x8C03;&#x7528;&#x65F6;&#xFF1A;</p>
+<ol>
+<li>&#x4F1A;&#x4ECE; <code>class</code> &#x4E2D;&#x83B7;&#x53D6; <code>load</code> &#x65B9;&#x6CD5;&#xFF1A; <code>method = cls-&gt;getLoadMethod();</code></li>
+<li>&#x5224;&#x65AD;&#x5F53;&#x524D; <code>loadable_classes</code> &#x8FD9;&#x4E2A;&#x6570;&#x7EC4;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x88AB;&#x5168;&#x90E8;&#x5360;&#x7528;&#x4E86;&#xFF1A;<code>loadable_classes_used == loadable_classes_allocated</code></li>
+<li>&#x5728;&#x5F53;&#x524D;&#x6570;&#x7EC4;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x6269;&#x5927;&#x6570;&#x7EC4;&#x7684;&#x5927;&#x5C0F;&#xFF1A;<code>realloc</code></li>
+<li>&#x628A;&#x4F20;&#x5165;&#x7684; <code>class</code> &#x4EE5;&#x53CA;&#x5BF9;&#x5E94;&#x7684;&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x52A0;&#x5230;&#x5217;&#x8868;&#x4E2D;</li>
+</ol>
+<p>&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x4FDD;&#x5B58;&#x5206;&#x7C7B;&#x7684;&#x5217;&#x8868; <code>loadable_categories</code> &#x4E5F;&#x6709;&#x4E00;&#x4E2A;&#x7C7B;&#x4F3C;&#x7684;&#x65B9;&#x6CD5; <code>add_category_to_loadable_list</code>&#x3002;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">void</span> add_category_to_loadable_list(Category cat)
+{
+    IMP method;
+
+    loadMethodLock.assertLocked();
+
+    method = _category_getLoadMethod(cat);
+
+    <span class="hljs-keyword">if</span> (!method) <span class="hljs-keyword">return</span>;
+
+    <span class="hljs-keyword">if</span> (loadable_categories_used == loadable_categories_allocated) {
+        loadable_categories_allocated = loadable_categories_allocated*<span class="hljs-number">2</span> + <span class="hljs-number">16</span>;
+        loadable_categories = (<span class="hljs-keyword">struct</span> loadable_category *)
+            realloc(loadable_categories,
+                              loadable_categories_allocated *
+                              <span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">struct</span> loadable_category));
+    }
+
+    loadable_categories[loadable_categories_used].cat = cat;
+    loadable_categories[loadable_categories_used].method = method;
+    loadable_categories_used++;
+}
+</code></pre>
+<p>&#x5B9E;&#x73B0;&#x51E0;&#x4E4E;&#x4E0E; <code>add_class_to_loadable_list</code> &#x5B8C;&#x5168;&#x76F8;&#x540C;&#x3002;</p>
+<p>&#x5230;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5B8C;&#x6210;&#x4E86;&#x5BF9; <code>loadable_classes</code> &#x4EE5;&#x53CA; <code>loadable_categories</code> &#x7684;&#x63D0;&#x4F9B;&#xFF0C;&#x4E0B;&#x9762;&#x4F1A;&#x5F00;&#x59CB;&#x6D88;&#x8017;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x3002;</p>
+<h3 id="&#x6D88;&#x8D39;-loadableclass">&#x201C;&#x6D88;&#x8D39;&#x201D; loadable_class</h3>
+<p>&#x8C03;&#x7528; <code>load</code> &#x65B9;&#x6CD5;&#x7684;&#x8FC7;&#x7A0B;&#x5C31;&#x662F;&#x201C;&#x6D88;&#x8D39;&#x201D; <code>loadable_classes</code> &#x7684;&#x8FC7;&#x7A0B;&#xFF0C;<code>load_images -&gt; call_load_methods -&gt; call_class_loads</code> &#x4F1A;&#x4ECE; <code>loadable_classes</code> &#x4E2D;&#x53D6;&#x51FA;&#x5BF9;&#x5E94;&#x7C7B;&#x548C;&#x65B9;&#x6CD5;&#xFF0C;&#x6267;&#x884C; <code>load</code>&#x3002;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">void</span> call_load_methods(<span class="hljs-keyword">void</span>)
+{
+    <span class="hljs-keyword">static</span> <span class="hljs-keyword">bool</span> loading = <span class="hljs-literal">NO</span>;
+    <span class="hljs-keyword">bool</span> more_categories;
+
+    loadMethodLock.assertLocked();
+
+    <span class="hljs-keyword">if</span> (loading) <span class="hljs-keyword">return</span>;
+    loading = <span class="hljs-literal">YES</span>;
+
+    <span class="hljs-keyword">void</span> *pool = objc_autoreleasePoolPush();
+
+    <span class="hljs-keyword">do</span> {
+        <span class="hljs-keyword">while</span> (loadable_classes_used &gt; <span class="hljs-number">0</span>) {
+            call_class_loads();
+        }
+
+        more_categories = call_category_loads();
+
+    } <span class="hljs-keyword">while</span> (loadable_classes_used &gt; <span class="hljs-number">0</span>  ||  more_categories);
+
+    objc_autoreleasePoolPop(pool);
+
+    loading = <span class="hljs-literal">NO</span>;
+}
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x65B9;&#x6CD5;&#x5BF9;&#x6240;&#x6709;&#x5728; <code>loadable_classes</code> &#x4EE5;&#x53CA; <code>loadable_categories</code> &#x4E2D;&#x7684;&#x7C7B;&#x4EE5;&#x53CA;&#x5206;&#x7C7B;&#x6267;&#x884C; <code>load</code> &#x65B9;&#x6CD5;&#x3002;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">do</span> {
+    <span class="hljs-keyword">while</span> (loadable_classes_used &gt; <span class="hljs-number">0</span>) {
+        call_class_loads();
+    }
+
+    more_categories = call_category_loads();
+
+} <span class="hljs-keyword">while</span> (loadable_classes_used &gt; <span class="hljs-number">0</span>  ||  more_categories);
+</code></pre>
+<p>&#x8C03;&#x7528;&#x987A;&#x5E8F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li>&#x4E0D;&#x505C;&#x8C03;&#x7528;&#x7C7B;&#x7684; <code>+ load</code> &#x65B9;&#x6CD5;&#xFF0C;&#x76F4;&#x5230; <code>loadable_classes</code> &#x4E3A;&#x7A7A;</li>
+<li>&#x8C03;&#x7528;<strong>&#x4E00;&#x6B21;</strong> <code>call_category_loads</code> &#x52A0;&#x8F7D;&#x5206;&#x7C7B;</li>
+<li>&#x5982;&#x679C;&#x6709; <code>loadable_classes</code> &#x6216;&#x8005;&#x66F4;&#x591A;&#x7684;&#x5206;&#x7C7B;&#xFF0C;&#x7EE7;&#x7EED;&#x8C03;&#x7528; <code>load</code> &#x65B9;&#x6CD5;</li>
+</ol>
+<p>&#x76F8;&#x6BD4;&#x4E8E;&#x7C7B; <code>load</code> &#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#xFF0C;&#x5206;&#x7C7B;&#x4E2D; <code>load</code> &#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x5C31;&#x6709;&#x4E9B;&#x590D;&#x6742;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">static</span> <span class="hljs-keyword">bool</span> call_category_loads(<span class="hljs-keyword">void</span>)
+{
+    <span class="hljs-keyword">int</span> i, shift;
+    <span class="hljs-keyword">bool</span> new_categories_added = <span class="hljs-literal">NO</span>;
+    <span class="hljs-comment">// 1. &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x53EF;&#x4EE5;&#x52A0;&#x8F7D;&#x7684;&#x5206;&#x7C7B;&#x5217;&#x8868;</span>
+    <span class="hljs-keyword">struct</span> loadable_category *cats = loadable_categories;
+    <span class="hljs-keyword">int</span> used = loadable_categories_used;
+    <span class="hljs-keyword">int</span> allocated = loadable_categories_allocated;
+    loadable_categories = <span class="hljs-literal">nil</span>;
+    loadable_categories_allocated = <span class="hljs-number">0</span>;
+    loadable_categories_used = <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; used; i++) {
+        Category cat = cats[i].cat;
+        load_method_t load_method = (load_method_t)cats[i].method;
+        Class cls;
+        <span class="hljs-keyword">if</span> (!cat) <span class="hljs-keyword">continue</span>;
+
+        cls = _category_getClass(cat);
+        <span class="hljs-keyword">if</span> (cls  &amp;&amp;  cls-&gt;isLoadable()) {
+            <span class="hljs-comment">// 2. &#x5982;&#x679C;&#x5F53;&#x524D;&#x7C7B;&#x662F;&#x53EF;&#x52A0;&#x8F7D;&#x7684; `cls  &amp;&amp;  cls-&gt;isLoadable()` &#x5C31;&#x4F1A;&#x8C03;&#x7528;&#x5206;&#x7C7B;&#x7684; load &#x65B9;&#x6CD5;</span>
+            (*load_method)(cls, SEL_load);
+            cats[i].cat = <span class="hljs-literal">nil</span>;
+        }
+    }
+
+    <span class="hljs-comment">// 3. &#x5C06;&#x6240;&#x6709;&#x52A0;&#x8F7D;&#x8FC7;&#x7684;&#x5206;&#x7C7B;&#x79FB;&#x9664; `loadable_categories` &#x5217;&#x8868;</span>
+    shift = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; used; i++) {
+        <span class="hljs-keyword">if</span> (cats[i].cat) {
+            cats[i-shift] = cats[i];
+        } <span class="hljs-keyword">else</span> {
+            shift++;
+        }
+    }
+    used -= shift;
+
+    <span class="hljs-comment">// 4. &#x4E3A; `loadable_categories` &#x91CD;&#x65B0;&#x5206;&#x914D;&#x5185;&#x5B58;&#xFF0C;&#x5E76;&#x91CD;&#x65B0;&#x8BBE;&#x7F6E;&#x5B83;&#x7684;&#x503C;</span>
+    new_categories_added = (loadable_categories_used &gt; <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; loadable_categories_used; i++) {
+        <span class="hljs-keyword">if</span> (used == allocated) {
+            allocated = allocated*<span class="hljs-number">2</span> + <span class="hljs-number">16</span>;
+            cats = (<span class="hljs-keyword">struct</span> loadable_category *)
+                realloc(cats, allocated *
+                                  <span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">struct</span> loadable_category));
+        }
+        cats[used++] = loadable_categories[i];
+    }
+
+    <span class="hljs-keyword">if</span> (loadable_categories) free(loadable_categories);
+
+    <span class="hljs-keyword">if</span> (used) {
+        loadable_categories = cats;
+        loadable_categories_used = used;
+        loadable_categories_allocated = allocated;
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-keyword">if</span> (cats) free(cats);
+        loadable_categories = <span class="hljs-literal">nil</span>;
+        loadable_categories_used = <span class="hljs-number">0</span>;
+        loadable_categories_allocated = <span class="hljs-number">0</span>;
+    }
+
+    <span class="hljs-keyword">return</span> new_categories_added;
+}
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x6709;&#x4E9B;&#x957F;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x5206;&#x6B65;&#x89E3;&#x91CA;&#x65B9;&#x6CD5;&#x7684;&#x4F5C;&#x7528;&#xFF1A;</p>
+<ol>
+<li>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x53EF;&#x4EE5;&#x52A0;&#x8F7D;&#x7684;&#x5206;&#x7C7B;&#x5217;&#x8868;</li>
+<li>&#x5982;&#x679C;&#x5F53;&#x524D;&#x7C7B;&#x662F;&#x53EF;&#x52A0;&#x8F7D;&#x7684; <code>cls  &amp;&amp;  cls-&gt;isLoadable()</code> &#x5C31;&#x4F1A;&#x8C03;&#x7528;&#x5206;&#x7C7B;&#x7684; <code>load</code> &#x65B9;&#x6CD5;</li>
+<li>&#x5C06;&#x6240;&#x6709;&#x52A0;&#x8F7D;&#x8FC7;&#x7684;&#x5206;&#x7C7B;&#x79FB;&#x9664; <code>loadable_categories</code> &#x5217;&#x8868;</li>
+<li>&#x4E3A; <code>loadable_categories</code> &#x91CD;&#x65B0;&#x5206;&#x914D;&#x5185;&#x5B58;&#xFF0C;&#x5E76;&#x91CD;&#x65B0;&#x8BBE;&#x7F6E;&#x5B83;&#x7684;&#x503C;</li>
+</ol>
+<h2 id="&#x8C03;&#x7528;&#x7684;&#x987A;&#x5E8F;">&#x8C03;&#x7528;&#x7684;&#x987A;&#x5E8F;</h2>
+<p>&#x4F60;&#x8FC7;&#x53BB;&#x53EF;&#x80FD;&#x4F1A;&#x542C;&#x8BF4;&#x8FC7;&#xFF0C;&#x5BF9;&#x4E8E; <code>load</code> &#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x987A;&#x5E8F;&#x6709;&#x4E24;&#x6761;&#x89C4;&#x5219;&#xFF1A;</p>
+<ol>
+<li>&#x7236;&#x7C7B;&#x5148;&#x4E8E;&#x5B50;&#x7C7B;&#x8C03;&#x7528;</li>
+<li>&#x7C7B;&#x5148;&#x4E8E;&#x5206;&#x7C7B;&#x8C03;&#x7528;</li>
+</ol>
+<p>&#x8FD9;&#x79CD;&#x73B0;&#x8C61;&#x662F;&#x975E;&#x5E38;&#x7B26;&#x5408;&#x6211;&#x4EEC;&#x7684;&#x76F4;&#x89C9;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x6765;&#x5206;&#x6790;&#x4E00;&#x4E0B;&#x8FD9;&#x79CD;&#x73B0;&#x8C61;&#x51FA;&#x73B0;&#x7684;&#x539F;&#x56E0;&#x3002;</p>
+<p>&#x7B2C;&#x4E00;&#x6761;&#x89C4;&#x5219;&#x662F;&#x7531;&#x4E8E; <code>schedule_class_load</code> &#x6709;&#x5982;&#x4E0B;&#x7684;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> schedule_class_load(Class cls)
+{
+    <span class="hljs-keyword">if</span> (!cls) <span class="hljs-keyword">return</span>;
+    assert(cls-&gt;isRealized());
+
+    <span class="hljs-keyword">if</span> (cls-&gt;data()-&gt;flags &amp; RW_LOADED) <span class="hljs-keyword">return</span>;
+
+    schedule_class_load(cls-&gt;superclass);
+
+    add_class_to_loadable_list(cls);
+    cls-&gt;setInfo(RW_LOADED); 
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x901A;&#x8FC7;&#x8FD9;&#x884C;&#x4EE3;&#x7801; <code>schedule_class_load(cls-&gt;superclass)</code> &#x603B;&#x662F;&#x80FD;&#x591F;&#x4FDD;&#x8BC1;&#x6CA1;&#x6709;&#x8C03;&#x7528; <code>load</code> &#x65B9;&#x6CD5;&#x7684;&#x7236;&#x7C7B;&#x5148;&#x4E8E;&#x5B50;&#x7C7B;&#x52A0;&#x5165; <code>loadable_classes</code> &#x6570;&#x7EC4;&#xFF0C;&#x4ECE;&#x800C;&#x786E;&#x4FDD;&#x5176;&#x8C03;&#x7528;&#x987A;&#x5E8F;&#x7684;&#x6B63;&#x786E;&#x6027;&#x3002;</p>
+<p>&#x7C7B;&#x4E0E;&#x5206;&#x7C7B;&#x4E2D; <code>load</code> &#x65B9;&#x6CD5;&#x7684;&#x8C03;&#x7528;&#x987A;&#x5E8F;&#x4E3B;&#x8981;&#x5728; <code>call_load_methods</code> &#x4E2D;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">do</span> {
+    <span class="hljs-keyword">while</span> (loadable_classes_used &gt; <span class="hljs-number">0</span>) {
+        call_class_loads();
+    }
+
+    more_categories = call_category_loads();
+
+} <span class="hljs-keyword">while</span> (loadable_classes_used &gt; <span class="hljs-number">0</span>  ||  more_categories);
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684; <code>do while</code> &#x8BED;&#x53E5;&#x80FD;&#x591F;&#x5728;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x4E0A;&#x786E;&#x4FDD;&#xFF0C;&#x7C7B;&#x7684; <code>load</code> &#x65B9;&#x6CD5;&#x4F1A;&#x5148;&#x4E8E;&#x5206;&#x7C7B;&#x8C03;&#x7528;&#x3002;&#x4F46;&#x662F;&#x8FD9;&#x91CC;&#x4E0D;&#x80FD;&#x5B8C;&#x5168;&#x4FDD;&#x8BC1;&#x8C03;&#x7528;&#x987A;&#x5E8F;&#x7684;&#x6B63;&#x786E;&#x3002;</p>
+<p>&#x5982;&#x679C;<strong>&#x5206;&#x7C7B;&#x7684;&#x955C;&#x50CF;&#x5728;&#x7C7B;&#x7684;&#x955C;&#x50CF;&#x4E4B;&#x524D;&#x52A0;&#x8F7D;&#x5230;&#x8FD0;&#x884C;&#x65F6;</strong>&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5C31;&#x6CA1;&#x6CD5;&#x4FDD;&#x8BC1;&#x987A;&#x5E8F;&#x7684;&#x6B63;&#x786E;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x5728; <code>call_category_loads</code> &#x4E2D;&#x5224;&#x65AD;&#x7C7B;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x52A0;&#x8F7D;&#x5230;&#x5185;&#x5B58;&#x4E2D;&#xFF08;&#x8C03;&#x7528; <code>load</code> &#x65B9;&#x6CD5;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">if</span> (cls  &amp;&amp;  cls-&gt;isLoadable()) {
+    (*load_method)(cls, SEL_load);
+    cats[i].cat = <span class="hljs-literal">nil</span>;
+}
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#xFF0C;&#x68C0;&#x67E5;&#x4E86;&#x7C7B;&#x662F;&#x5426;&#x5B58;&#x5728;&#x5E76;&#x4E14;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x52A0;&#x8F7D;&#xFF0C;&#x5982;&#x679C;&#x90FD;&#x4E3A;&#x771F;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x8C03;&#x7528;&#x5206;&#x7C7B;&#x7684; load &#x65B9;&#x6CD5;&#x4E86;&#x3002;</p>
+<h2 id="load-&#x7684;&#x5E94;&#x7528;">load &#x7684;&#x5E94;&#x7528;</h2>
+<p><code>load</code> &#x53EF;&#x4EE5;&#x8BF4;&#x6211;&#x4EEC;&#x5728;&#x65E5;&#x5E38;&#x5F00;&#x53D1;&#x4E2D;&#x53EF;&#x4EE5;&#x63A5;&#x89E6;&#x5230;&#x7684;&#x8C03;&#x7528;&#x65F6;&#x95F4;<strong>&#x6700;&#x9760;&#x524D;&#x7684;&#x65B9;&#x6CD5;</strong>&#xFF0C;&#x5728;&#x4E3B;&#x51FD;&#x6570;&#x8FD0;&#x884C;&#x4E4B;&#x524D;&#xFF0C;<code>load</code> &#x65B9;&#x6CD5;&#x5C31;&#x4F1A;&#x8C03;&#x7528;&#x3002;</p>
+<p>&#x7531;&#x4E8E;&#x5B83;&#x7684;&#x8C03;&#x7528;&#x4E0D;&#x662F;<em>&#x60F0;&#x6027;</em>&#x7684;&#xFF0C;&#x4E14;&#x5176;&#x53EA;&#x4F1A;&#x5728;&#x7A0B;&#x5E8F;&#x8C03;&#x7528;&#x671F;&#x95F4;&#x8C03;&#x7528;&#x4E00;&#x6B21;&#xFF0C;&#x6700;&#x6700;&#x91CD;&#x8981;&#x7684;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x5728;&#x7C7B;&#x4E0E;&#x5206;&#x7C7B;&#x4E2D;&#x90FD;&#x5B9E;&#x73B0;&#x4E86; <code>load</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x4E0D;&#x50CF;&#x5176;&#x5B83;&#x7684;&#x5728;&#x5206;&#x7C7B;&#x4E2D;&#x5B9E;&#x73B0;&#x7684;&#x65B9;&#x6CD5;&#x4F1A;&#x88AB;&#x8986;&#x76D6;&#xFF0C;&#x8FD9;&#x5C31;&#x4F7F; <code>load</code> &#x65B9;&#x6CD5;&#x6210;&#x4E3A;&#x4E86;<a href="http://nshipster.com/method-swizzling/" target="_blank">&#x65B9;&#x6CD5;&#x8C03;&#x5242;</a>&#x7684;&#x7EDD;&#x4F73;&#x65F6;&#x673A;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x7531;&#x4E8E; <code>load</code> &#x65B9;&#x6CD5;&#x7684;&#x8FD0;&#x884C;&#x65F6;&#x95F4;&#x8FC7;&#x65E9;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x53EF;&#x80FD;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x7406;&#x60F3;&#x7684;&#x73AF;&#x5883;&#xFF0C;&#x56E0;&#x4E3A;<strong>&#x67D0;&#x4E9B;&#x7C7B;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5728;&#x5728;&#x5176;&#x5B83;&#x7C7B;&#x4E4B;&#x524D;&#x52A0;&#x8F7D;</strong>&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x662F;&#x6211;&#x4EEC;&#x65E0;&#x6CD5;&#x4FDD;&#x8BC1;&#x7684;&#x3002;&#x4E0D;&#x8FC7;&#x5728;&#x8FD9;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#xFF0C;&#x6240;&#x6709;&#x7684; framework &#x90FD;&#x5DF2;&#x7ECF;&#x52A0;&#x8F7D;&#x5230;&#x4E86;&#x8FD0;&#x884C;&#x65F6;&#x4E2D;&#xFF0C;&#x6240;&#x4EE5;&#x8C03;&#x7528; framework &#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x90FD;&#x662F;&#x5B89;&#x5168;&#x7684;&#x3002;</p>
+<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;">&#x53C2;&#x8003;&#x8D44;&#x6599;</h2>
+<ul>
+<li><a href="http://stackoverflow.com/questions/13326435/nsobject-load-and-initialize-what-do-they-do" target="_blank">NSObject +load and +initialize - What do they do?</a></li>
+<li><a href="http://nshipster.com/method-swizzling/" target="_blank">Method Swizzling</a></li>
+<li><a href="https://www.mikeash.com/pyblog/friday-qa-2009-05-22-objective-c-class-loading-and-initialization.html" target="_blank">Objective-C Class Loading and Initialization</a></li>
+</ul>
+<p>Follow: <a href="https://github.com/Draveness" target="_blank">@Draveness</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="lazy-initialize.html" class="navigation navigation-prev " aria-label="Previous page: 懒惰的 initialize 方法">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="msgSend.html" class="navigation navigation-next " aria-label="Next page: 消息传递">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"load 方法","level":"1.1.5.17.9","depth":4,"next":{"title":"消息传递","level":"1.1.5.17.10","depth":4,"path":"Source-Code-Analysis/objc/msgSend.md","ref":"Source-Code-Analysis/objc/msgSend.md","articles":[]},"previous":{"title":"懒惰的 initialize 方法","level":"1.1.5.17.8","depth":4,"path":"Source-Code-Analysis/objc/lazy-initialize.md","ref":"Source-Code-Analysis/objc/lazy-initialize.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Source-Code-Analysis/objc/load.md","mtime":"2018-05-22T14:51:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-23T11:29:51.711Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

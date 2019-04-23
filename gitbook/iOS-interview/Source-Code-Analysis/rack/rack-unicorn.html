@@ -1,0 +1,2263 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Unicorn 的多进程模型 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="rack-webrik.html" />
+    
+    
+    <link rel="prev" href="rack-thin.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    iOS 开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../../ObjC-Basic/">
+            
+                <a href="../../ObjC-Basic/">
+            
+                    
+                    Objective-C 语言基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../../ObjC-Basic/Class.html">
+            
+                <a href="../../ObjC-Basic/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2" data-path="../../ObjC-Basic/Block.html">
+            
+                <a href="../../ObjC-Basic/Block.html">
+            
+                    
+                    Block 编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.3" data-path="../../ObjC-Basic/Runtime.html">
+            
+                <a href="../../ObjC-Basic/Runtime.html">
+            
+                    
+                    Objective-C Runtime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.4" data-path="../../ObjC-Basic/MM.html">
+            
+                <a href="../../ObjC-Basic/MM.html">
+            
+                    
+                    Objective-C 内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.5" data-path="../../ObjC-Basic/Runloop.html">
+            
+                <a href="../../ObjC-Basic/Runloop.html">
+            
+                    
+                    Runloop
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../../Cocoa-Touch/">
+            
+                <a href="../../Cocoa-Touch/">
+            
+                    
+                    Cocoa Touch
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="../../Cocoa-Touch/Event-Handling.html">
+            
+                <a href="../../Cocoa-Touch/Event-Handling.html">
+            
+                    
+                    事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2" data-path="../../Cocoa-Touch/UIApplication.html">
+            
+                <a href="../../Cocoa-Touch/UIApplication.html">
+            
+                    
+                    UIApplication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.3" data-path="../../Cocoa-Touch/UIView-Basic.html">
+            
+                <a href="../../Cocoa-Touch/UIView-Basic.html">
+            
+                    
+                    UIView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.4" data-path="../../Cocoa-Touch/UIViewController.html">
+            
+                <a href="../../Cocoa-Touch/UIViewController.html">
+            
+                    
+                    UIViewController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.5" data-path="../../Cocoa-Touch/Animation.html">
+            
+                <a href="../../Cocoa-Touch/Animation.html">
+            
+                    
+                    动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.6" data-path="../../Cocoa-Touch/Network.html">
+            
+                <a href="../../Cocoa-Touch/Network.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.7" data-path="../../Cocoa-Touch/Multithreading.html">
+            
+                <a href="../../Cocoa-Touch/Multithreading.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../../Cocoa-Touch/File-System.html">
+            
+                <a href="../../Cocoa-Touch/File-System.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.9" data-path="../../Cocoa-Touch/Design.html">
+            
+                <a href="../../Cocoa-Touch/Design.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.10" data-path="../../Cocoa-Touch/Performance.html">
+            
+                <a href="../../Cocoa-Touch/Performance.html">
+            
+                    
+                    性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../../Swift/">
+            
+                <a href="../../Swift/">
+            
+                    
+                    Swift
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="../../Swift/Class.html">
+            
+                <a href="../../Swift/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="../../Swift/Struct-And-Enum.html">
+            
+                <a href="../../Swift/Struct-And-Enum.html">
+            
+                    
+                    结构体与枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3" data-path="../../Swift/Function-And-Closure.html">
+            
+                <a href="../../Swift/Function-And-Closure.html">
+            
+                    
+                    函数与闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../../Interview/">
+            
+                <a href="../../Interview/">
+            
+                    
+                    面试问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1" data-path="../../Interview/iOSInterviewQuestions/">
+            
+                <a href="../../Interview/iOSInterviewQuestions/">
+            
+                    
+                    《招聘一个靠谱的iOS》
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1.1" data-path="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.1.2" data-path="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.2" data-path="../../interview/ZhiHu-QA/">
+            
+                <a href="../../interview/ZhiHu-QA/">
+            
+                    
+                    关于一些 iOS 面试问题的解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.3" data-path="../../interview/iOSDeveloperQA/">
+            
+                <a href="../../interview/iOSDeveloperQA/">
+            
+                    
+                    iOS 开发面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.4" data-path="../../interview/MXR-QA/">
+            
+                <a href="../../interview/MXR-QA/">
+            
+                    
+                    MXR 面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    源码分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1" data-path="../AFNetworking/AFNetworking_1.html">
+            
+                <a href="../AFNetworking/AFNetworking_1.html">
+            
+                    
+                    AFNetworking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1.1" data-path="../AFNetworking/AFNetworking_2.html">
+            
+                <a href="../AFNetworking/AFNetworking_2.html">
+            
+                    
+                    AFURLSessionManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.2" data-path="../AFNetworking/AFNetworking_3.html">
+            
+                <a href="../AFNetworking/AFNetworking_3.html">
+            
+                    
+                    AFURLSerialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.3" data-path="../AFNetworking/AFNetworking_4.html">
+            
+                <a href="../AFNetworking/AFNetworking_4.html">
+            
+                    
+                    AFNetworkReachabilityManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.4" data-path="../AFNetworking/AFNetworking_5.html">
+            
+                <a href="../AFNetworking/AFNetworking_5.html">
+            
+                    
+                    HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.2" data-path="../Alamofire/">
+            
+                <a href="../Alamofire/">
+            
+                    
+                    Alamofire
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3" data-path="../architecture/mvx.html">
+            
+                <a href="../architecture/mvx.html">
+            
+                    
+                    architecture
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.3.1" data-path="../architecture/mvx-model.html">
+            
+                <a href="../architecture/mvx-model.html">
+            
+                    
+                    MVX-Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.2" data-path="../architecture/mvx-view.html">
+            
+                <a href="../architecture/mvx-view.html">
+            
+                    
+                    MVX-View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.3" data-path="../architecture/mvx-controller.html">
+            
+                <a href="../architecture/mvx-controller.html">
+            
+                    
+                    MVX-Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4" >
+            
+                <span>
+            
+                    
+                    AsyncDisplayKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.4.1" data-path="../AsyncDisplayKit/ASDK_1.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_1.html">
+            
+                    
+                    提升界面的渲染性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4.2" data-path="../AsyncDisplayKit/ASDK_2.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_2.html">
+            
+                    
+                    布局算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4.3" data-path="../AsyncDisplayKit/ASDK_3.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_3.html">
+            
+                    
+                    预加载与智能预加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5" >
+            
+                <span>
+            
+                    
+                    BlocksKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.5.1" data-path="../BlocksKit/BlocksKit_1.html">
+            
+                <a href="../BlocksKit/BlocksKit_1.html">
+            
+                    
+                    神奇的 BlocksKit (一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5.2" data-path="../BlocksKit/BlocksKit_2.html">
+            
+                <a href="../BlocksKit/BlocksKit_2.html">
+            
+                    
+                    神奇的 BlocksKit (二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.6" data-path="../Blog/initialize-comments.html">
+            
+                <a href="../Blog/initialize-comments.html">
+            
+                    
+                    Gitalk/Gitment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7" >
+            
+                <span>
+            
+                    
+                    CocoaPods
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.7.1" data-path="../CocoaPods/CocoaPods.html">
+            
+                <a href="../CocoaPods/CocoaPods.html">
+            
+                    
+                    CocoaPods 都做了什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7.2" data-path="../CocoaPods/DSL.html">
+            
+                <a href="../CocoaPods/DSL.html">
+            
+                    
+                    DSL 以及 DSL 的应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8" >
+            
+                <span>
+            
+                    
+                    Database
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.8.1" data-path="../Database/concurrency-control.html">
+            
+                <a href="../Database/concurrency-control.html">
+            
+                    
+                    数据库并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.2" data-path="../Database/dynamo.html">
+            
+                <a href="../Database/dynamo.html">
+            
+                    
+                    分布式键值存储 Dynamo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.3" data-path="../Database/leveldb-bigtable.html">
+            
+                <a href="../Database/leveldb-bigtable.html">
+            
+                    
+                    Bigtable 和 LevelDB 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.4" data-path="../Database/mongodb-to-mysql.html">
+            
+                <a href="../Database/mongodb-to-mysql.html">
+            
+                    
+                    MongoDB 迁移到 MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.5" data-path="../Database/mongodb-wiredtiger.html">
+            
+                <a href="../Database/mongodb-wiredtiger.html">
+            
+                    
+                    MongoDB 和 WiredTiger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.6" data-path="../Database/mysql.html">
+            
+                <a href="../Database/mysql.html">
+            
+                    
+                    MySQL 和 InnoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.7" data-path="../Database/sql-index-intro.html">
+            
+                <a href="../Database/sql-index-intro.html">
+            
+                    
+                    MySQL 索引设计概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.8" data-path="../Database/sql-index-performance.html">
+            
+                <a href="../Database/sql-index-performance.html">
+            
+                    
+                    MySQL 索引性能分析概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.9" data-path="../Database/transaction.html">
+            
+                <a href="../Database/transaction.html">
+            
+                    
+                    MySQL 中事务的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.9" data-path="../DKNightVersion/DKNightVersion.html">
+            
+                <a href="../DKNightVersion/DKNightVersion.html">
+            
+                    
+                    DKNightVersion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10" >
+            
+                <span>
+            
+                    
+                    FBRetainCycleDetector
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.10.1" data-path="../FBRetainCycleDetector/block.html">
+            
+                <a href="../FBRetainCycleDetector/block.html">
+            
+                    
+                    block 如何持有对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.2" data-path="../FBRetainCycleDetector/Obj-Associated.html">
+            
+                <a href="../FBRetainCycleDetector/Obj-Associated.html">
+            
+                    
+                    Associated Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.3" data-path="../FBRetainCycleDetector/Obj-Strong.html">
+            
+                <a href="../FBRetainCycleDetector/Obj-Strong.html">
+            
+                    
+                    对象持有的强指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.4" data-path="../FBRetainCycleDetector/retain_cycle.html">
+            
+                <a href="../FBRetainCycleDetector/retain_cycle.html">
+            
+                    
+                    解决循环引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.11" data-path="../fishhook/fishhook.html">
+            
+                <a href="../fishhook/fishhook.html">
+            
+                    
+                    fishhook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.12" data-path="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                <a href="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                    
+                    IQKeyboardManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.13" data-path="../KVOController/KVOController.html">
+            
+                <a href="../KVOController/KVOController.html">
+            
+                    
+                    KVOController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.14" data-path="../libextobjc/libextobjc.html">
+            
+                <a href="../libextobjc/libextobjc.html">
+            
+                    
+                    libextobjc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.15" data-path="../Masonry/Masonry.html">
+            
+                <a href="../Masonry/Masonry.html">
+            
+                    
+                    Masonry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.16" data-path="../MBProgressHUD/">
+            
+                <a href="../MBProgressHUD/">
+            
+                    
+                    MBProgressHUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17" data-path="../objc/">
+            
+                <a href="../objc/">
+            
+                    
+                    objc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.17.1" data-path="../objc/associated-obj.html">
+            
+                <a href="../objc/associated-obj.html">
+            
+                    
+                    关联对象 AssociatedObject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.2" data-path="../objc/autoreleasepool.html">
+            
+                <a href="../objc/autoreleasepool.html">
+            
+                    
+                    自动释放池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.3" data-path="../objc/black-box-retain-release.html">
+            
+                <a href="../objc/black-box-retain-release.html">
+            
+                    
+                    黑箱中的 retain 和 release
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.4" data-path="../objc/func-structure.html">
+            
+                <a href="../objc/func-structure.html">
+            
+                    
+                    ObjC 中方法的结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.5" data-path="../objc/hash.html">
+            
+                <a href="../objc/hash.html">
+            
+                    
+                    哈希表的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.6" data-path="../objc/initialization.html">
+            
+                <a href="../objc/initialization.html">
+            
+                    
+                    初始化对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.7" data-path="../objc/isa.html">
+            
+                <a href="../objc/isa.html">
+            
+                    
+                    isa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.8" data-path="../objc/lazy-initialize.html">
+            
+                <a href="../objc/lazy-initialize.html">
+            
+                    
+                    懒惰的 initialize 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.9" data-path="../objc/load.html">
+            
+                <a href="../objc/load.html">
+            
+                    
+                    load 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.10" data-path="../objc/msgSend.html">
+            
+                <a href="../objc/msgSend.html">
+            
+                    
+                    消息传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18" >
+            
+                <span>
+            
+                    
+                    OHHTTPStubs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.18.1" data-path="../OHHTTPStubs/intercept.html">
+            
+                <a href="../OHHTTPStubs/intercept.html">
+            
+                    
+                    HTTP Intercept
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18.2" data-path="../OHHTTPStubs/mock.html">
+            
+                <a href="../OHHTTPStubs/mock.html">
+            
+                    
+                    HTTP Mock
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.19" data-path="../ProtocolKit/ProtocolKit.html">
+            
+                <a href="../ProtocolKit/ProtocolKit.html">
+            
+                    
+                    ProtocolKit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20" data-path="rack.html">
+            
+                <a href="rack.html">
+            
+                    
+                    rack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.20.1" data-path="rack-thin.html">
+            
+                <a href="rack-thin.html">
+            
+                    
+                    Thin 的事件驱动模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.5.20.2" data-path="rack-unicorn.html">
+            
+                <a href="rack-unicorn.html">
+            
+                    
+                    Unicorn 的多进程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20.3" data-path="rack-webrik.html">
+            
+                <a href="rack-webrik.html">
+            
+                    
+                    WEBrick 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.21" data-path="../Rails/activerecord.html">
+            
+                <a href="../Rails/activerecord.html">
+            
+                    
+                    Rails
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22" >
+            
+                <span>
+            
+                    
+                    ReactiveObjC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.22.1" data-path="../ReactiveObjC/RACChannel.html">
+            
+                <a href="../ReactiveObjC/RACChannel.html">
+            
+                    
+                    RACChannel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.2" data-path="../ReactiveObjC/RACCommand.html">
+            
+                <a href="../ReactiveObjC/RACCommand.html">
+            
+                    
+                    RACCommand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.3" data-path="../ReactiveObjC/RACDelegateProxy.html">
+            
+                <a href="../ReactiveObjC/RACDelegateProxy.html">
+            
+                    
+                    RACDelegateProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.4" data-path="../ReactiveObjC/RACMulticastConnection.html">
+            
+                <a href="../ReactiveObjC/RACMulticastConnection.html">
+            
+                    
+                    RACMulticastConnection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.5" data-path="../ReactiveObjC/RACScheduler.html">
+            
+                <a href="../ReactiveObjC/RACScheduler.html">
+            
+                    
+                    RACScheduler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.6" data-path="../ReactiveObjC/RACSequence.html">
+            
+                <a href="../ReactiveObjC/RACSequence.html">
+            
+                    
+                    RACSequence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.7" data-path="../ReactiveObjC/RACSignal.html">
+            
+                <a href="../ReactiveObjC/RACSignal.html">
+            
+                    
+                    RACSignal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.8" data-path="../ReactiveObjC/RACSubject.html">
+            
+                <a href="../ReactiveObjC/RACSubject.html">
+            
+                    
+                    RACSubject
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23" >
+            
+                <span>
+            
+                    
+                    Redis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.23.1" data-path="../Redis/redis-cli.html">
+            
+                <a href="../Redis/redis-cli.html">
+            
+                    
+                    命令处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.2" data-path="../Redis/redis-eventloop.html">
+            
+                <a href="../Redis/redis-eventloop.html">
+            
+                    
+                    事件循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.3" data-path="../Redis/redis-io-multiplexing.html">
+            
+                <a href="../Redis/redis-io-multiplexing.html">
+            
+                    
+                    I/O 多路复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.24" data-path="../Ruby/Ruby.html">
+            
+                <a href="../Ruby/Ruby.html">
+            
+                    
+                    Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.25" data-path="../SDWebImage/">
+            
+                <a href="../SDWebImage/">
+            
+                    
+                    SDWebImage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="../../More.html">
+            
+                <a href="../../More.html">
+            
+                    
+                    更多资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Unicorn 的多进程模型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6D45;&#x8C08;-unicorn-&#x7684;&#x591A;&#x8FDB;&#x7A0B;&#x6A21;&#x578B;">&#x6D45;&#x8C08; Unicorn &#x7684;&#x591A;&#x8FDB;&#x7A0B;&#x6A21;&#x578B;</h1>
+<ul>
+<li><a href="https://draveness.me/rack" target="_blank">&#x8C08;&#x8C08; Rack &#x534F;&#x8BAE;&#x4E0E;&#x5B9E;&#x73B0;</a></li>
+<li><a href="https://draveness.me/rack-webrick" target="_blank">&#x6D45;&#x8C08; WEBrick &#x7684;&#x5B9E;&#x73B0;</a></li>
+<li><a href="https://draveness.me/rack-thin" target="_blank">&#x6D45;&#x8C08; Thin &#x7684;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x6A21;&#x578B;</a></li>
+<li><a href="https://draveness.me/rack-unicorn" target="_blank">&#x6D45;&#x8C08; Unicorn &#x7684;&#x591A;&#x8FDB;&#x7A0B;&#x6A21;&#x578B;</a></li>
+<li><a href="https://draveness.me/rack-puma" target="_blank">&#x6D45;&#x8C08; Puma &#x7684;&#x5B9E;&#x73B0;</a></li>
+</ul>
+<p>&#x4F5C;&#x4E3A; Ruby &#x793E;&#x533A;&#x4E2D;&#x8001;&#x724C;&#x7684; webserver&#xFF0C;&#x5728;&#x4ECA;&#x5929;&#x4E5F;&#x6709;&#x5F88;&#x591A;&#x5F00;&#x53D1;&#x8005;&#x5728;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x4F7F;&#x7528; Unicorn &#x5904;&#x7406;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x53D1;&#x51FA;&#x53BB;&#x7684; HTTP &#x8BF7;&#x6C42;&#xFF0C;&#x4E0E; WEBrick &#x548C; Thin &#x4E0D;&#x540C;&#xFF0C;Unicorn &#x4F7F;&#x7528;&#x4E86;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#x7684;&#x6A21;&#x578B;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x591A;&#x8FDB;&#x7A0B;&#x6A21;&#x578B;&#x6279;&#x91CF;&#x5904;&#x7406;&#x6765;&#x81EA;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8BF7;&#x6C42;&#x3002;</p>
+<p><img src="images/rack-unicorn/unicorn.jpeg" alt="unicorn"></p>
+<p>Unicorn &#x4E3A; Rails &#x5E94;&#x7528;&#x63D0;&#x4F9B;&#x5E76;&#x53D1;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x4F7F;&#x7528; <code>fork</code> &#x521B;&#x5EFA;&#x591A;&#x4E2A; worker &#x7EBF;&#x7A0B;&#xFF0C;&#x76D1;&#x542C;&#x540C;&#x4E00;&#x4E2A; Socket &#x4E0A;&#x7684;&#x8F93;&#x5165;&#x3002;</p>
+<blockquote>
+<p>&#x672C;&#x6587;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x662F; 5.3.1 &#x7684; Unicorn&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x4F7F;&#x7528;&#x4E86;&#x4E0D;&#x540C;&#x7248;&#x672C;&#x7684; Unicorn&#xFF0C;&#x539F;&#x7406;&#x4E0A;&#x7684;&#x533A;&#x522B;&#x4E0D;&#x4F1A;&#x592A;&#x5927;&#xFF0C;&#x53EA;&#x662F;&#x5728;&#x4E00;&#x4E9B;&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x4E0A;&#x4F1A;&#x6709;&#x4E00;&#x4E9B;&#x7EC6;&#x5FAE;&#x7684;&#x4E0D;&#x540C;&#x3002;</p>
+</blockquote>
+<h2 id="&#x5B9E;&#x73B0;&#x539F;&#x7406;">&#x5B9E;&#x73B0;&#x539F;&#x7406;</h2>
+<p>Unicorn &#x867D;&#x7136;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x9075;&#x5FAA; Rack &#x534F;&#x8BAE;&#x7684; Ruby webserver&#xFF0C;&#x4F46;&#x662F;&#x56E0;&#x4E3A;&#x5B83;&#x672C;&#x8EAB;&#x5E76;&#x6CA1;&#x6709;&#x63D0;&#x4F9B; Rack &#x5904;&#x7406;&#x5668;&#xFF0C;&#x968F;&#x610F;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x76F4;&#x63A5;&#x901A;&#x8FC7; <code>rackup -s Unicorn</code> &#x6765;&#x542F;&#x52A8; Unicorn &#x7684;&#x8FDB;&#x7A0B;&#x3002;</p>
+<pre><code class="lang-ruby">$ unicorn -c unicorn.rb
+I, [<span class="hljs-number">2017</span>-<span class="hljs-number">11</span>-<span class="hljs-number">06</span><span class="hljs-symbol">T08:</span><span class="hljs-number">05</span><span class="hljs-symbol">:</span><span class="hljs-number">03</span>.082116 <span class="hljs-comment">#33222]  INFO -- : listening on addr=0.0.0.0:8080 fd=10</span>
+I, [<span class="hljs-number">2017</span>-<span class="hljs-number">11</span>-<span class="hljs-number">06</span><span class="hljs-symbol">T08:</span><span class="hljs-number">05</span><span class="hljs-symbol">:</span><span class="hljs-number">03</span>.08229<span class="hljs-number">0</span> <span class="hljs-comment">#33222]  INFO -- : worker=0 spawning...</span>
+I, [<span class="hljs-number">2017</span>-<span class="hljs-number">11</span>-<span class="hljs-number">06</span><span class="hljs-symbol">T08:</span><span class="hljs-number">05</span><span class="hljs-symbol">:</span><span class="hljs-number">03</span>.083505 <span class="hljs-comment">#33222]  INFO -- : worker=1 spawning...</span>
+I, [<span class="hljs-number">2017</span>-<span class="hljs-number">11</span>-<span class="hljs-number">06</span><span class="hljs-symbol">T08:</span><span class="hljs-number">05</span><span class="hljs-symbol">:</span><span class="hljs-number">03</span>.083989 <span class="hljs-comment">#33222]  INFO -- : master process ready</span>
+I, [<span class="hljs-number">2017</span>-<span class="hljs-number">11</span>-<span class="hljs-number">06</span><span class="hljs-symbol">T08:</span><span class="hljs-number">05</span><span class="hljs-symbol">:</span><span class="hljs-number">03</span>.08461<span class="hljs-number">0</span> <span class="hljs-comment">#33223]  INFO -- : worker=0 spawned pid=33223</span>
+I, [<span class="hljs-number">2017</span>-<span class="hljs-number">11</span>-<span class="hljs-number">06</span><span class="hljs-symbol">T08:</span><span class="hljs-number">05</span><span class="hljs-symbol">:</span><span class="hljs-number">03</span>.08510<span class="hljs-number">0</span> <span class="hljs-comment">#33223]  INFO -- : Refreshing Gem list</span>
+I, [<span class="hljs-number">2017</span>-<span class="hljs-number">11</span>-<span class="hljs-number">06</span><span class="hljs-symbol">T08:</span><span class="hljs-number">05</span><span class="hljs-symbol">:</span><span class="hljs-number">03</span>.084902 <span class="hljs-comment">#33224]  INFO -- : worker=1 spawned pid=33224</span>
+I, [<span class="hljs-number">2017</span>-<span class="hljs-number">11</span>-<span class="hljs-number">06</span><span class="hljs-symbol">T08:</span><span class="hljs-number">05</span><span class="hljs-symbol">:</span><span class="hljs-number">03</span>.085457 <span class="hljs-comment">#33224]  INFO -- : Refreshing Gem list</span>
+I, [<span class="hljs-number">2017</span>-<span class="hljs-number">11</span>-<span class="hljs-number">06</span><span class="hljs-symbol">T08:</span><span class="hljs-number">05</span><span class="hljs-symbol">:</span><span class="hljs-number">03</span>.<span class="hljs-number">123611</span> <span class="hljs-comment">#33224]  INFO -- : worker=1 ready</span>
+I, [<span class="hljs-number">2017</span>-<span class="hljs-number">11</span>-<span class="hljs-number">06</span><span class="hljs-symbol">T08:</span><span class="hljs-number">05</span><span class="hljs-symbol">:</span><span class="hljs-number">03</span>.<span class="hljs-number">123670</span> <span class="hljs-comment">#33223]  INFO -- : worker=0 ready</span>
+</code></pre>
+<p>&#x5728;&#x4F7F;&#x7528; Unicorn &#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x76F4;&#x63A5;&#x4F7F;&#x7528; <code>unicorn</code> &#x547D;&#x4EE4;&#x6765;&#x542F;&#x52A8;&#x4E00;&#x4E2A; Unicorn &#x670D;&#x52A1;&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x65F6;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>-c</code> &#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x5176;&#x5B9E;&#x90FD;&#x662F; Ruby &#x4EE3;&#x7801;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x90FD;&#x662F; Unicorn &#x7684;&#x4E00;&#x6761;&#x914D;&#x7F6E;&#x9879;&#xFF1A;</p>
+<pre><code class="lang-ruby">$ cat unicorn.rb
+worker_processes <span class="hljs-number">2</span>
+</code></pre>
+<h3 id="&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;">&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;</h3>
+<p><code>unicorn</code> &#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x4F4D;&#x4E8E; <code>bin/unicorn</code> &#x4E2D;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x5927;&#x90E8;&#x5206;&#x7684;&#x4EE3;&#x7801;&#x90FD;&#x662F;&#x5BF9;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#x7684;&#x914D;&#x7F6E;&#x548C;&#x8BF4;&#x660E;&#xFF0C;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x53EF;&#x4EE5;&#x7B80;&#x5316;&#x4E3A;&#x4EE5;&#x4E0B;&#x7684;&#x51E0;&#x884C;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-ruby">rackup_opts = <span class="hljs-comment"># ...</span>
+app = Unicorn.builder(ARGV[<span class="hljs-number">0</span>] || <span class="hljs-string">&apos;config.ru&apos;</span>, op)
+<span class="hljs-symbol">Unicorn:</span><span class="hljs-symbol">:Launcher</span>.daemonize!(options) <span class="hljs-keyword">if</span> rackup_opts[<span class="hljs-symbol">:daemonize</span>]
+<span class="hljs-symbol">Unicorn:</span><span class="hljs-symbol">:HttpServer</span>.new(app, options).start.join
+</code></pre>
+<p><code>unicorn</code> &#x547D;&#x4EE4;&#x4F1A;&#x4ECE; Rack &#x5E94;&#x7528;&#x7684;&#x6807;&#x914D; config.ru &#x6587;&#x4EF6;&#x6216;&#x8005;&#x4F20;&#x5165;&#x7684;&#x6587;&#x4EF6;&#x4E2D;&#x52A0;&#x8F7D;&#x4EE3;&#x7801;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; Rack &#x5E94;&#x7528;&#xFF1B;&#x521D;&#x59CB;&#x5316; Rack &#x5E94;&#x7528;&#x540E;&#x4F1A;&#x4F7F;&#x7528; <code>.daemonize!</code> &#x65B9;&#x6CD5;&#x5C06; unicorn &#x8FDB;&#x7A0B;&#x542F;&#x52A8;&#x5728;&#x540E;&#x53F0;&#x8FD0;&#x884C;&#xFF1B;&#x6700;&#x540E;&#x4F1A;&#x521B;&#x5EFA;&#x5E76;&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x65B0;&#x7684; <code>HttpServer</code> &#x7684;&#x5B9E;&#x4F8B;&#x3002;</p>
+<h3 id="&#x6784;&#x5EFA;&#x5E94;&#x7528;">&#x6784;&#x5EFA;&#x5E94;&#x7528;</h3>
+<p>&#x8BFB;&#x53D6; config.ru &#x6587;&#x4EF6;&#x5E76;&#x89E3;&#x6790;&#x7684;&#x8FC7;&#x7A0B;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x4E86; Rack &#x7684; <code>Builder</code> &#x6A21;&#x5757;&#xFF0C;&#x901A;&#x8FC7; <code>eval</code> &#x8FD0;&#x884C;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;&#x5F97;&#x5230;&#x4E00;&#x4E2A; Rack &#x5E94;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-symbol">From:</span> lib/unicorn.rb @ line <span class="hljs-number">39</span><span class="hljs-symbol">:</span>
+<span class="hljs-symbol">Owner:</span> <span class="hljs-comment">#&lt;Class:Unicorn&gt;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">self</span>.<span class="hljs-title">builder</span><span class="hljs-params">(ru, op)</span></span>
+raw = File.read(ru)
+inner_app = eval(<span class="hljs-string">&quot;Rack::Builder.new {(\n<span class="hljs-subst">#{raw}</span>\n)}.to_app&quot;</span>, TOPLEVEL_BINDING, ru)
+
+middleware = {
+<span class="hljs-symbol">ContentLength:</span> <span class="hljs-keyword">nil</span>,
+<span class="hljs-symbol">Chunked:</span> <span class="hljs-keyword">nil</span>,
+<span class="hljs-symbol">CommonLogger:</span> [ $stderr ],
+<span class="hljs-symbol">ShowExceptions:</span> <span class="hljs-keyword">nil</span>,
+<span class="hljs-symbol">Lint:</span> <span class="hljs-keyword">nil</span>,
+<span class="hljs-symbol">TempfileReaper:</span> <span class="hljs-keyword">nil</span>,
+}
+
+<span class="hljs-symbol">Rack:</span><span class="hljs-symbol">:Builder</span>.new <span class="hljs-keyword">do</span>
+middleware.each <span class="hljs-keyword">do</span> |m, args|
+use(Rack.const_get(m), *args) <span class="hljs-keyword">if</span> Rack.const_defined?(m)
+<span class="hljs-keyword">end</span>
+run inner_app
+<span class="hljs-keyword">end</span>.to_app
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x5728;&#x8BE5;&#x65B9;&#x6CD5;&#x4E2D;&#x4F1A;&#x6267;&#x884C;&#x4E24;&#x6B21; <code>Rack::Builder.new</code> &#x65B9;&#x6CD5;&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x4F1A;&#x8FD0;&#x884C; config.ru &#x4E2D;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x7B2C;&#x4E8C;&#x6B21;&#x4F1A;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x9ED8;&#x8BA4;&#x7684;&#x4E2D;&#x95F4;&#x4EF6;&#xFF0C;&#x6700;&#x7EC8;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x63A5;&#x53D7; <code>#call</code> &#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E09;&#x5143;&#x7EC4;&#x7684; Rack &#x5E94;&#x7528;&#x3002;</p>
+<h3 id="&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;">&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;</h3>
+<p>&#x5728;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;Unicorn &#x7684;&#x8FDB;&#x7A0B;&#x90FD;&#x662F;&#x4EE5;&#x524D;&#x53F0;&#x8FDB;&#x7A0B;&#x7684;&#x5F62;&#x5F0F;&#x8FD0;&#x884C;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x6211;&#x4EEC;&#x5F80;&#x5F80;&#x9700;&#x8981;&#x5728;&#x540E;&#x53F0;&#x8FD0;&#x884C; Unicorn &#x8FDB;&#x7A0B;&#xFF0C;&#x8FD9;&#x4E5F;&#x5C31;&#x662F; <code>Unicorn::Launcher</code> &#x6240;&#x505A;&#x7684;&#x5DE5;&#x4F5C;&#x3002;</p>
+<pre><code class="lang-ruby"><span class="hljs-symbol">From:</span> lib/unicorn.rb @ line <span class="hljs-number">23</span><span class="hljs-symbol">:</span>
+<span class="hljs-symbol">Owner:</span> <span class="hljs-comment">#&lt;Class:Unicorn::Launcher&gt;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">self</span>.<span class="hljs-title">daemonize!</span><span class="hljs-params">(options)</span></span>
+cfg = <span class="hljs-symbol">Unicorn:</span><span class="hljs-symbol">:Configurator</span>
+$stdin.reopen(<span class="hljs-string">&quot;/dev/null&quot;</span>)
+
+<span class="hljs-keyword">unless</span> ENV[<span class="hljs-string">&apos;UNICORN_FD&apos;</span>]
+rd, wr = IO.pipe
+grandparent = $$
+<span class="hljs-keyword">if</span> fork
+wr.close
+<span class="hljs-keyword">else</span>
+rd.close
+Process.setsid
+exit <span class="hljs-keyword">if</span> fork
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">if</span> grandparent == $$
+master_pid = (rd.readpartial(<span class="hljs-number">16</span>) <span class="hljs-keyword">rescue</span> <span class="hljs-keyword">nil</span>).to_i
+<span class="hljs-keyword">unless</span> master_pid &gt; <span class="hljs-number">1</span>
+warn <span class="hljs-string">&quot;master failed to start, check stderr log for details&quot;</span>
+exit!(<span class="hljs-number">1</span>)
+<span class="hljs-keyword">end</span>
+exit <span class="hljs-number">0</span>
+<span class="hljs-keyword">else</span>
+options[<span class="hljs-symbol">:ready_pipe</span>] = wr
+<span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+<span class="hljs-symbol">cfg:</span><span class="hljs-symbol">:DEFAULTS</span>[<span class="hljs-symbol">:stderr_path</span>] ||= <span class="hljs-string">&quot;/dev/null&quot;</span>
+<span class="hljs-symbol">cfg:</span><span class="hljs-symbol">:DEFAULTS</span>[<span class="hljs-symbol">:stdout_path</span>] ||= <span class="hljs-string">&quot;/dev/null&quot;</span>
+<span class="hljs-symbol">cfg:</span><span class="hljs-symbol">:RACKUP</span>[<span class="hljs-symbol">:daemonized</span>] = <span class="hljs-keyword">true</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x60F3;&#x8981;&#x771F;&#x6B63;&#x7406;&#x89E3;&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7406;&#x89E3;&#x5E7F;&#x4E49;&#x4E0A;&#x7684; daemonize &#x8FC7;&#x7A0B;&#xFF0C;&#x5728; Unix-like &#x7684;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x4E00;&#x4E2A; <a href="https://en.wikipedia.org/wiki/Daemon_(computing" target="_blank">daemon</a>)&#xFF08;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#xFF09;&#x662F;&#x8FD0;&#x884C;&#x5728;&#x540E;&#x53F0;&#x4E0D;&#x76F4;&#x63A5;&#x88AB;&#x7528;&#x6237;&#x64CD;&#x4F5C;&#x7684;&#x8FDB;&#x7A0B;&#xFF1B;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x60F3;&#x8981;&#x53D8;&#x6210;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x901A;&#x5E38;&#x9700;&#x8981;&#x505A;&#x4EE5;&#x4E0B;&#x7684;&#x4E8B;&#x60C5;&#xFF1A;</p>
+<ol>
+<li>&#x6267;&#x884C; <code>fork</code> &#x548C; <code>exit</code> &#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x540E;&#x53F0;&#x4EFB;&#x52A1;&#xFF1B;</li>
+<li>&#x4ECE; tty &#x7684;&#x63A7;&#x5236;&#x4E2D;&#x5206;&#x79BB;&#x3001;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; session &#x5E76;&#x6210;&#x4E3A;&#x65B0;&#x7684; session &#x548C;&#x8FDB;&#x7A0B;&#x7EC4;&#x7684;&#x7BA1;&#x7406;&#x8005;&#xFF1B;</li>
+<li>&#x5C06;&#x6839;&#x76EE;&#x5F55; <code>/</code> &#x8BBE;&#x7F6E;&#x4E3A;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#xFF1B;</li>
+<li>&#x5C06; umask &#x66F4;&#x65B0;&#x6210; <code>0</code> &#x4EE5;&#x63D0;&#x4F9B;&#x81EA;&#x5DF1;&#x7684;&#x6743;&#x9650;&#x7BA1;&#x7406;&#x63A9;&#x7801;&#xFF1B;</li>
+<li>&#x4F7F;&#x7528;&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x3001;&#x63A7;&#x5236;&#x53F0;&#x6216;&#x8005; <code>/dev/null</code> &#x8BBE;&#x5907;&#x4F5C;&#x4E3A;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x3001;&#x8F93;&#x51FA;&#x548C;&#x9519;&#x8BEF;&#xFF1B;</li>
+</ol>
+<p>&#x5728; <code>.daemonize!</code> &#x65B9;&#x6CD5;&#x4E2D;&#x6211;&#x4EEC;&#x603B;&#x5171;&#x4F7F;&#x7528; fork &#x521B;&#x5EFA;&#x4E86;&#x4E24;&#x4E2A;&#x8FDB;&#x7A0B;&#xFF0C;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x6D89;&#x53CA;&#x4E09;&#x4E2A;&#x8FDB;&#x7A0B;&#x7684;&#x534F;&#x4F5C;&#xFF0C;&#x5176;&#x4E2D; grandparent &#x662F;&#x542F;&#x52A8; Unicorn &#x7684;&#x8FDB;&#x7A0B;&#x4E00;&#x822C;&#x6307;&#x7EC8;&#x7AEF;&#xFF0C;parent &#x662F;&#x7528;&#x6765;&#x542F;&#x52A8; Unicorn &#x670D;&#x52A1;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;master &#x5C31;&#x662F; Unicorn &#x670D;&#x52A1;&#x4E2D;&#x7684;&#x4E3B;&#x8FDB;&#x7A0B;&#xFF0C;&#x4E09;&#x4E2A;&#x8FDB;&#x7A0B;&#x6709;&#x4EE5;&#x4E0B;&#x7684;&#x5173;&#x7CFB;&#xFF1A;</p>
+<p><img src="images/rack-unicorn/unicorn-daemonize.png" alt="unicorn-daemonize"></p>
+<p>&#x4E0A;&#x8FF0;&#x7684;&#x4E09;&#x4E2A;&#x8FDB;&#x7A0B;&#x4E2D;&#xFF0C;grandparent &#x8868;&#x793A;&#x7528;&#x4E8E;&#x542F;&#x52A8; Unicorn &#x8FDB;&#x7A0B;&#x7684;&#x7EC8;&#x7AEF;&#xFF0C;parent &#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x8BBE;&#x7F6E;&#x8FDB;&#x7A0B;&#x72B6;&#x6001;&#x548C;&#x63A9;&#x7801;&#x7684;&#x4E2D;&#x95F4;&#x8FDB;&#x7A0B;&#xFF0C;&#x5B83;&#x5728;&#x542F;&#x52A8; Unicorn &#x7684; master &#x8FDB;&#x7A0B;&#x540E;&#x5C31;&#x4F1A;&#x7ACB;&#x523B;&#x9000;&#x51FA;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x5206;&#x4E09;&#x4E2A;&#x90E8;&#x5206;&#x5206;&#x522B;&#x4ECB;&#x7ECD; grandparent&#x3001;parent &#x548C; master &#x7A76;&#x7ADF;&#x505A;&#x4E86;&#x54EA;&#x4E9B;&#x4E8B;&#x60C5;&#xFF1B;&#x9996;&#x5148;&#xFF0C;&#x5BF9;&#x4E8E; grandparent &#x8FDB;&#x7A0B;&#x6765;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x5B9E;&#x9645;&#x4E0A;&#x8FD0;&#x884C;&#x4E86;&#x4EE5;&#x4E0B;&#x7684;&#x4EE3;&#x7801;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">self</span>.<span class="hljs-title">daemonize!</span><span class="hljs-params">(options)</span></span>
+$stdin.reopen(<span class="hljs-string">&quot;/dev/null&quot;</span>)
+rd, wr = IO.pipe
+wr.close
+
+<span class="hljs-comment"># fork</span>
+
+master_pid = (rd.readpartial(<span class="hljs-number">16</span>) <span class="hljs-keyword">rescue</span> <span class="hljs-keyword">nil</span>).to_i
+<span class="hljs-keyword">unless</span> master_pid &gt; <span class="hljs-number">1</span>
+warn <span class="hljs-string">&quot;master failed to start, check stderr log for details&quot;</span>
+exit!(<span class="hljs-number">1</span>)
+<span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x901A;&#x8FC7; <code>IO.pipe</code> &#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x5BF9; Socket &#x8282;&#x70B9;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x8BFB;&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5199;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x7531;&#x4E8E;&#x5F53;&#x524D;&#x8FDB;&#x7A0B; grantparent &#x4E0D;&#x9700;&#x8981;&#x5199;&#xFF0C;&#x6240;&#x4EE5;&#x76F4;&#x63A5;&#x5C06;&#x5199;&#x7684;&#x4E00;&#x7AEF; <code>#close</code>&#xFF0C;&#x4FDD;&#x7559;&#x8BFB;&#x7684;&#x4E00;&#x7AEF;&#x7B49;&#x5F85; Unicorn master &#x8FDB;&#x7A0B;&#x53D1;&#x9001;&#x5B83;&#x7684; <code>pid</code>&#xFF0C;&#x5982;&#x679C; master &#x6CA1;&#x6709;&#x6210;&#x529F;&#x542F;&#x52A8;&#x5C31;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x8FD9;&#x4E5F;&#x662F; grandparent &#x8FDB;&#x7A0B;&#x7684;&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E; parent &#x8FDB;&#x7A0B;&#x6765;&#x8BF4;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x5176;&#x5B9E;&#x5C31;&#x66F4;&#x7B80;&#x5355;&#x4E86;&#xFF0C;&#x5728; <code>fork</code> &#x4E4B;&#x540E;&#x4F1A;&#x76F4;&#x63A5;&#x5C06;&#x8BFB;&#x7684;&#x4E00;&#x7AEF;&#x6267;&#x884C; <code>#close</code>&#xFF0C;&#x8FD9;&#x6837;&#x65E0;&#x8BBA;&#x662F;&#x5F53;&#x524D;&#x8FDB;&#x7A0B; parent &#x8FD8;&#x662F; parent fork &#x51FA;&#x6765;&#x7684;&#x8FDB;&#x7A0B;&#x90FD;&#x65E0;&#x6CD5;&#x901A;&#x8FC7; <code>rd</code> &#x8BFB;&#x53D6;&#x6570;&#x636E;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">self</span>.<span class="hljs-title">daemonize!</span><span class="hljs-params">(options)</span></span>
+$stdin.reopen(<span class="hljs-string">&quot;/dev/null&quot;</span>)
+rd, wr = IO.pipe
+
+<span class="hljs-comment"># fork</span>
+
+rd.close
+Process.setsid
+exit <span class="hljs-keyword">if</span> fork
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x5728; parent &#x8FDB;&#x7A0B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7; <code>Process.setsid</code> &#x5C06;&#x5F53;&#x524D;&#x7684;&#x8FDB;&#x7A0B;&#x8BBE;&#x7F6E;&#x4E3A;&#x65B0;&#x7684; session &#x548C;&#x8FDB;&#x7A0B;&#x7EC4;&#x7684;&#x7BA1;&#x7406;&#x8005;&#xFF0C;&#x4ECE; tty &#x4E2D;&#x5206;&#x79BB;&#xFF1B;&#x6700;&#x540E;&#x76F4;&#x63A5;&#x6267;&#x884C; <code>fork</code> &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8FDB;&#x7A0B; master &#x5E76;&#x9000;&#x51FA; parent &#x8FDB;&#x7A0B;&#xFF0C;parent &#x8FDB;&#x7A0B;&#x7684;&#x4F5C;&#x7528;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x542F;&#x52A8;&#x65B0; Unicorn master &#x8FDB;&#x7A0B;&#x3002;</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">self</span>.<span class="hljs-title">daemonize!</span><span class="hljs-params">(options)</span></span>
+cfg = <span class="hljs-symbol">Unicorn:</span><span class="hljs-symbol">:Configurator</span>
+$stdin.reopen(<span class="hljs-string">&quot;/dev/null&quot;</span>)
+
+rd, wr = IO.pipe
+rd.close
+
+Process.setsid
+
+<span class="hljs-comment"># fork</span>
+
+options[<span class="hljs-symbol">:ready_pipe</span>] = wr
+<span class="hljs-symbol">cfg:</span><span class="hljs-symbol">:DEFAULTS</span>[<span class="hljs-symbol">:stderr_path</span>] ||= <span class="hljs-string">&quot;/dev/null&quot;</span>
+<span class="hljs-symbol">cfg:</span><span class="hljs-symbol">:DEFAULTS</span>[<span class="hljs-symbol">:stdout_path</span>] ||= <span class="hljs-string">&quot;/dev/null&quot;</span>
+<span class="hljs-symbol">cfg:</span><span class="hljs-symbol">:RACKUP</span>[<span class="hljs-symbol">:daemonized</span>] = <span class="hljs-keyword">true</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x65B0;&#x7684;&#x8FDB;&#x7A0B; Unicorn master &#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x4E0D;&#x5173;&#x8054;&#x5728;&#x4EFB;&#x4F55; tty &#x7684;&#x4E00;&#x4E2A;&#x540E;&#x53F0;&#x8FDB;&#x7A0B;&#xFF0C;&#x4E0D;&#x8FC7;&#x5230;&#x8FD9;&#x91CC;&#x4E3A;&#x6B62;&#x4E5F;&#x4EC5;&#x4EC5;&#x521B;&#x5EFA;&#x53E6;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#xFF0C;Unicorn &#x8FD8;&#x65E0;&#x6CD5;&#x5BF9;&#x5916;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x53EF;&#x8BFB;&#x7684; Socket <code>wr</code> &#x5199;&#x5165; <code>options</code> &#x4E2D;&#xFF0C;&#x5728; webserver &#x6210;&#x529F;&#x542F;&#x52A8;&#x540E;&#x5C06;&#x901A;&#x8FC7; <code>IO.pipe</code> &#x521B;&#x5EFA;&#x7684;&#x4E00;&#x5BF9; Socket &#x5C06;&#x4FE1;&#x606F;&#x56DE;&#x4F20;&#x7ED9; grandparent &#x8FDB;&#x7A0B;&#x901A;&#x77E5;&#x670D;&#x52A1;&#x542F;&#x52A8;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<h3 id="&#x521D;&#x59CB;&#x5316;&#x670D;&#x52A1;">&#x521D;&#x59CB;&#x5316;&#x670D;&#x52A1;</h3>
+<p>HTTP &#x670D;&#x52A1;&#x5728;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x5176;&#x5B9E;&#x4E5F;&#x6CA1;&#x6709;&#x505A;&#x592A;&#x591A;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x53EA;&#x662F;&#x5BF9; Rack &#x5E94;&#x7528;&#x8FDB;&#x884C;&#x5B58;&#x50A8;&#x5E76;&#x521D;&#x59CB;&#x5316;&#x4E86;&#x4E00;&#x4E9B;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-symbol">From:</span> lib/unicorn/http_server.rb @ line <span class="hljs-number">69</span><span class="hljs-symbol">:</span>
+<span class="hljs-symbol">Owner:</span> <span class="hljs-symbol">Unicorn:</span><span class="hljs-symbol">:HttpServer</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">(app, options = {})</span></span>
+@app = app
+@request = <span class="hljs-symbol">Unicorn:</span><span class="hljs-symbol">:HttpRequest</span>.new
+@reexec_pid = <span class="hljs-number">0</span>
+@ready_pipe = options.delete(<span class="hljs-symbol">:ready_pipe</span>)
+@init_listeners = options[<span class="hljs-symbol">:listeners</span>] ? options[<span class="hljs-symbol">:listeners</span>].dup <span class="hljs-symbol">:</span> []
+<span class="hljs-keyword">self</span>.config = <span class="hljs-symbol">Unicorn:</span><span class="hljs-symbol">:Configurator</span>.new(options)
+<span class="hljs-keyword">self</span>.listener_opts = {}
+
+@self_pipe = []
+@workers = {}
+@sig_queue = []
+@pid = <span class="hljs-keyword">nil</span>
+
+config.commit!(<span class="hljs-keyword">self</span>, <span class="hljs-symbol">:skip</span> =&gt; [<span class="hljs-symbol">:listeners</span>, <span class="hljs-symbol">:pid</span>])
+@orig_app = app
+@queue_sigs = [<span class="hljs-symbol">:WINCH</span>, <span class="hljs-symbol">:QUIT</span>, <span class="hljs-symbol">:INT</span>, <span class="hljs-symbol">:TERM</span>, <span class="hljs-symbol">:USR1</span>, <span class="hljs-symbol">:USR2</span>, <span class="hljs-symbol">:HUP</span>, <span class="hljs-symbol">:TTIN</span>, <span class="hljs-symbol">:TTOU</span>]
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x5728; <code>.daemonize!</code> &#x65B9;&#x6CD5;&#x4E2D;&#x5B58;&#x50A8;&#x7684; <code>ready_pipe</code> &#x5728;&#x8FD9;&#x65F6;&#x88AB;&#x5F53;&#x524D;&#x7684; <code>HttpServer</code> &#x5BF9;&#x8C61;&#x6301;&#x6709;&#xFF0C;&#x4E4B;&#x540E;&#x4F1A;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x7BA1;&#x9053;&#x4E0A;&#x4F20;&#x6570;&#x636E;&#x3002;</p>
+<h3 id="&#x542F;&#x52A8;&#x670D;&#x52A1;">&#x542F;&#x52A8;&#x670D;&#x52A1;</h3>
+<p><code>HttpServer</code> &#x670D;&#x52A1;&#x7684;&#x542F;&#x52A8;&#x4E00;&#x770B;&#x5C31;&#x662F;&#x8FD9;&#x4E2A; <code>#start</code> &#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#x63A7;&#x5236;&#x7684;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E2D;&#x603B;&#x8FC7;&#x505A;&#x4E86;&#x4E24;&#x4EF6;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#x7684;&#x4E8B;&#x60C5;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-symbol">From:</span> lib/unicorn/http_server.rb @ line <span class="hljs-number">120</span><span class="hljs-symbol">:</span>
+<span class="hljs-symbol">Owner:</span> <span class="hljs-symbol">Unicorn:</span><span class="hljs-symbol">:HttpServer</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">start</span></span>
+@queue_sigs.each { |sig| trap(sig) { @sig_queue &lt;&lt; sig; awaken_master } }
+trap(<span class="hljs-symbol">:CHLD</span>) { awaken_master }
+
+<span class="hljs-keyword">self</span>.pid = config[<span class="hljs-symbol">:pid</span>]
+
+spawn_missing_workers
+<span class="hljs-keyword">self</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x7B2C;&#x4E00;&#x4EF6;&#x4E8B;&#x60C5;&#x662F;&#x5C06;&#x6784;&#x9020;&#x5668;&#x4E2D;&#x521D;&#x59CB;&#x5316;&#x7684; <code>queue_sigs</code> &#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x4E2D;&#x7684;&#x5168;&#x90E8;&#x4FE1;&#x53F7;&#xFF0C;&#x901A;&#x8FC7; <code>trap</code> &#x4E3A;&#x4FE1;&#x53F7;&#x63D0;&#x4F9B;&#x7528;&#x4E8E;&#x54CD;&#x5E94;&#x4E8B;&#x4EF6;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x7B2C;&#x4E8C;&#x4EF6;&#x4E8B;&#x60C5;&#x5C31;&#x662F;&#x901A;&#x8FC7; <code>#spawn_missing_workers</code> &#x65B9;&#x6CD5; <code>fork</code> &#x5F53;&#x524D; master &#x8FDB;&#x7A0B;&#x521B;&#x5EFA;&#x4E00;&#x7CFB;&#x5217;&#x7684; worker &#x8FDB;&#x7A0B;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-symbol">From:</span> lib/unicorn/http_server.rb @ line <span class="hljs-number">531</span><span class="hljs-symbol">:</span>
+<span class="hljs-symbol">Owner:</span> <span class="hljs-symbol">Unicorn:</span><span class="hljs-symbol">:HttpServer</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">spawn_missing_workers</span></span>
+worker_nr = -<span class="hljs-number">1</span>
+<span class="hljs-keyword">until</span> (worker_nr += <span class="hljs-number">1</span>) == @worker_processes
+worker = <span class="hljs-symbol">Unicorn:</span><span class="hljs-symbol">:Worker</span>.new(worker_nr)
+before_fork.call(<span class="hljs-keyword">self</span>, worker)
+
+pid = fork
+
+<span class="hljs-keyword">unless</span> pid
+after_fork_internal
+worker_loop(worker)
+exit
+<span class="hljs-keyword">end</span>
+
+@workers[pid] = worker
+worker.atfork_parent
+<span class="hljs-keyword">end</span>
+<span class="hljs-keyword">rescue</span> =&gt; e
+@logger.error(e) <span class="hljs-keyword">rescue</span> <span class="hljs-keyword">nil</span>
+exit!
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x5728;&#x8FD9;&#x79CD;&#x8C03;&#x7528;&#x4E86; <code>fork</code> &#x7684;&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x662F;&#x5C06;&#x5176;&#x4E00;&#x5206;&#x4E3A;&#x4E8C;&#x6765;&#x770B;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x5C31;&#x662F; master &#x548C; worker &#x8FDB;&#x7A0B;&#xFF0C;&#x5BF9;&#x4E8E; master &#x8FDB;&#x7A0B;&#x6765;&#x8BF4;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-symbol">From:</span> lib/unicorn/http_server.rb @ line <span class="hljs-number">531</span><span class="hljs-symbol">:</span>
+<span class="hljs-symbol">Owner:</span> <span class="hljs-symbol">Unicorn:</span><span class="hljs-symbol">:HttpServer</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">spawn_missing_workers</span></span>
+worker_nr = -<span class="hljs-number">1</span>
+<span class="hljs-keyword">until</span> (worker_nr += <span class="hljs-number">1</span>) == @worker_processes
+worker = <span class="hljs-symbol">Unicorn:</span><span class="hljs-symbol">:Worker</span>.new(worker_nr)
+before_fork.call(<span class="hljs-keyword">self</span>, worker)
+
+pid = fork
+
+<span class="hljs-comment"># ...</span>
+
+@workers[pid] = worker
+<span class="hljs-keyword">end</span>
+<span class="hljs-keyword">rescue</span> =&gt; e
+@logger.error(e) <span class="hljs-keyword">rescue</span> <span class="hljs-keyword">nil</span>
+exit!
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x4E00;&#x4E2A; until &#x5FAA;&#x73AF;&#xFF0C;master &#x8FDB;&#x7A0B;&#x80FD;&#x591F;&#x521B;&#x5EFA; <code>worker_processes</code> &#x4E2A; worker &#x8FDB;&#x7A0B;&#xFF0C;&#x5728;&#x6BCF;&#x4E2A;&#x5FAA;&#x73AF;&#x4E2D;&#xFF0C;&#x4E0A;&#x8FF0;&#x65B9;&#x6CD5;&#x90FD;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <code>Unicorn::Worker</code> &#x5BF9;&#x8C61;&#x5E76;&#x5728; <code>fork</code> &#x4E4B;&#x540E;&#xFF0C;&#x5C06;&#x5B50;&#x8FDB;&#x7A0B;&#x7684; <code>pid</code> &#x548C; <code>worker</code> &#x4EE5;&#x952E;&#x503C;&#x5BF9;&#x7684;&#x5F62;&#x5F0F;&#x5B58;&#x5230; <code>workers</code> &#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x4E2D;&#x3002;</p>
+<p><code>before_fork</code> &#x4E2D;&#x5B58;&#x50A8;&#x7684; block &#x662F;&#x6211;&#x4EEC;&#x975E;&#x5E38;&#x719F;&#x6089;&#x7684;&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x5411;&#x670D;&#x52A1;&#x5668;&#x7684;&#x65E5;&#x5FD7;&#x4E2D;&#x8FFD;&#x52A0;&#x5185;&#x5BB9;&#xFF1A;</p>
+<pre><code class="lang-ruby">DEFAULTS = {
+<span class="hljs-comment"># ...</span>
+<span class="hljs-symbol">:after_fork</span> =&gt; lambda { |server, worker|
+server.logger.info(<span class="hljs-string">&quot;worker=<span class="hljs-subst">#{worker.nr}</span> spawned pid=<span class="hljs-subst">#{$$}</span>&quot;</span>)
+},
+<span class="hljs-symbol">:before_fork</span> =&gt; lambda { |server, worker|
+server.logger.info(<span class="hljs-string">&quot;worker=<span class="hljs-subst">#{worker.nr}</span> spawning...&quot;</span>)
+},
+<span class="hljs-symbol">:before_exec</span> =&gt; lambda { |server|
+server.logger.info(<span class="hljs-string">&quot;forked child re-executing...&quot;</span>)
+},
+<span class="hljs-symbol">:after_worker_exit</span> =&gt; lambda { |server, worker, status|
+m = <span class="hljs-string">&quot;reaped <span class="hljs-subst">#{status.inspect}</span> worker=<span class="hljs-subst">#{worker.nr <span class="hljs-keyword">rescue</span> <span class="hljs-string">&apos;unknown&apos;</span>}</span>&quot;</span>
+<span class="hljs-keyword">if</span> status.success?
+server.logger.info(m)
+<span class="hljs-keyword">else</span>
+server.logger.error(m)
+<span class="hljs-keyword">end</span>
+},
+<span class="hljs-symbol">:after_worker_ready</span> =&gt; lambda { |server, worker|
+server.logger.info(<span class="hljs-string">&quot;worker=<span class="hljs-subst">#{worker.nr}</span> ready&quot;</span>)
+},
+<span class="hljs-comment"># ...</span>
+}
+</code></pre>
+<p>&#x6240;&#x6709;&#x65E5;&#x5FD7;&#x76F8;&#x5173;&#x7684;&#x8F93;&#x51FA;&#x5927;&#x90FD;&#x5728; <code>Unicorn::Configurator</code> &#x7C7B;&#x4E2D;&#x4F5C;&#x4E3A;&#x5E38;&#x91CF;&#x5B9A;&#x4E49;&#x8D77;&#x6765;&#xFF0C;&#x5E76;&#x5728;&#x521D;&#x59CB;&#x5316;&#x65F6;&#x4F5C;&#x4E3A;&#x7F3A;&#x7701;&#x503C;&#x8D4B;&#x503C;&#x5230; <code>HttpServer</code> &#x76F8;&#x5E94;&#x7684;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF;&#x4E0A;&#x3002;&#x800C;&#x5BF9;&#x4E8E;&#x771F;&#x6B63;&#x5904;&#x7406; HTTP &#x8BF7;&#x6C42;&#x7684; worker &#x8FDB;&#x7A0B;&#x6765;&#x8BF4;&#xFF0C;&#x5C31;&#x4F1A;&#x8FDB;&#x5165;&#x66F4;&#x52A0;&#x590D;&#x6742;&#x7684;&#x903B;&#x8F91;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">spawn_missing_workers</span></span>
+worker_nr = -<span class="hljs-number">1</span>
+<span class="hljs-keyword">until</span> (worker_nr += <span class="hljs-number">1</span>) == @worker_processes
+worker = <span class="hljs-symbol">Unicorn:</span><span class="hljs-symbol">:Worker</span>.new(worker_nr)
+before_fork.call(<span class="hljs-keyword">self</span>, worker)
+
+<span class="hljs-comment"># fork</span>
+
+after_fork_internal
+worker_loop(worker)
+exit
+<span class="hljs-keyword">end</span>
+<span class="hljs-keyword">rescue</span> =&gt; e
+@logger.error(e) <span class="hljs-keyword">rescue</span> <span class="hljs-keyword">nil</span>
+exit!
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x5728;&#x8FD9;&#x91CC;&#x8C03;&#x7528;&#x4E86;&#x4E24;&#x4E2A;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x662F; <code>#after_fork_internal</code>&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x662F; <code>#worker_loop</code> &#x65B9;&#x6CD5;&#xFF0C;&#x524D;&#x8005;&#x7528;&#x4E8E;&#x5904;&#x7406;&#x4E00;&#x4E9B; <code>fork</code> &#x4E4B;&#x540E;&#x6536;&#x5C3E;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x6BD4;&#x5982;&#x5173;&#x95ED;&#x4EC5;&#x5728; master &#x8FDB;&#x7A0B;&#x4E2D;&#x4F7F;&#x7528;&#x7684; <code>self_pipe</code>&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">after_fork_internal</span></span>
+@self_pipe.each(&amp;<span class="hljs-symbol">:close</span>).clear
+@ready_pipe.close <span class="hljs-keyword">if</span> @ready_pipe
+<span class="hljs-symbol">Unicorn:</span><span class="hljs-symbol">:Configurator</span><span class="hljs-symbol">:</span><span class="hljs-symbol">:RACKUP</span>.clear
+@ready_pipe = @init_listeners = @before_exec = @before_fork = <span class="hljs-keyword">nil</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x800C;&#x540E;&#x8005;&#x5C31;&#x662F; worker &#x6301;&#x7EED;&#x76D1;&#x542C; Socket &#x8F93;&#x5165;&#x5E76;&#x5904;&#x7406;&#x8BF7;&#x6C42;&#x7684;&#x5FAA;&#x73AF;&#x4E86;&#x3002;</p>
+<h3 id="&#x5FAA;&#x73AF;">&#x5FAA;&#x73AF;</h3>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x8FD0;&#x884C; worker &#x4E2D;&#x7684;&#x5FAA;&#x73AF;&#x65F6;&#xFF0C;&#x5C31;&#x5F00;&#x59CB;&#x76D1;&#x542C; Socket &#x4E0A;&#x7684;&#x4E8B;&#x4EF6;&#xFF0C;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x76F4;&#x89C2;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-symbol">From:</span> lib/unicorn/http_server.rb @ line <span class="hljs-number">681</span><span class="hljs-symbol">:</span>
+<span class="hljs-symbol">Owner:</span> <span class="hljs-symbol">Unicorn:</span><span class="hljs-symbol">:HttpServer</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">worker_loop</span><span class="hljs-params">(worker)</span></span>
+ppid = @master_pid
+readers = init_worker_process(worker)
+ready = readers.dup
+@after_worker_ready.call(<span class="hljs-keyword">self</span>, worker)
+
+<span class="hljs-keyword">begin</span>
+tmp = ready.dup
+<span class="hljs-keyword">while</span> sock = tmp.shift
+<span class="hljs-keyword">if</span> client = sock.kgio_tryaccept
+process_client(client)
+<span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">unless</span> nr == <span class="hljs-number">0</span>
+tmp = ready.dup
+<span class="hljs-keyword">redo</span>
+<span class="hljs-keyword">end</span>
+
+ppid == Process.ppid <span class="hljs-keyword">or</span> <span class="hljs-keyword">return</span>
+
+ret = IO.select(readers, <span class="hljs-keyword">nil</span>, <span class="hljs-keyword">nil</span>, @timeout) <span class="hljs-keyword">and</span> ready = ret[<span class="hljs-number">0</span>]
+<span class="hljs-keyword">rescue</span> =&gt; e
+<span class="hljs-comment"># ...</span>
+<span class="hljs-keyword">end</span> <span class="hljs-keyword">while</span> readers[<span class="hljs-number">0</span>]
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x5F53;&#x524D; Socket &#x4E0A;&#x6709;&#x7B49;&#x5F85;&#x5904;&#x7406;&#x7684; HTTP &#x8BF7;&#x6C42;&#xFF0C;&#x5C31;&#x4F1A;&#x6267;&#x884C; <code>#process_client</code> &#x65B9;&#x6CD5;&#x961F;&#x8BF7;&#x6C42;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x8C03;&#x7528;&#x4E86; Rack &#x5E94;&#x7528;&#x7684; <code>#call</code> &#x65B9;&#x6CD5;&#x5F97;&#x5230;&#x4E86;&#x4E09;&#x5143;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-symbol">From:</span> lib/unicorn/http_server.rb @ line <span class="hljs-number">605</span><span class="hljs-symbol">:</span>
+<span class="hljs-symbol">Owner:</span> <span class="hljs-symbol">Unicorn:</span><span class="hljs-symbol">:HttpServer</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">process_client</span><span class="hljs-params">(client)</span></span>
+status, headers, body = @app.call(env = @request.read(client))
+
+<span class="hljs-keyword">begin</span>
+<span class="hljs-keyword">return</span> <span class="hljs-keyword">if</span> @request.hijacked?
+
+@request.headers? <span class="hljs-keyword">or</span> headers = <span class="hljs-keyword">nil</span>
+http_response_write(client, status, headers, body,
+@request.response_start_sent)
+<span class="hljs-keyword">ensure</span>
+body.respond_to?(<span class="hljs-symbol">:close</span>) <span class="hljs-keyword">and</span> body.close
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">unless</span> client.closed?
+client.shutdown
+client.close
+<span class="hljs-keyword">end</span>
+<span class="hljs-keyword">rescue</span> =&gt; e
+handle_error(client, e)
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x8BF7;&#x6C42;&#x7684;&#x89E3;&#x6790;&#x662F;&#x901A;&#x8FC7; <code>Request#read</code> &#x5904;&#x7406;&#x7684;&#xFF0C;&#x800C;&#x5411; Socket &#x5199; HTTP &#x54CD;&#x5E94;&#x662F;&#x901A;&#x8FC7; <code>#http_response_write</code> &#x65B9;&#x6CD5;&#x6765;&#x5B8C;&#x6210;&#x7684;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x6709;&#x5173; HTTP &#x8BF7;&#x6C42;&#x7684;&#x89E3;&#x6790;&#x548C;&#x54CD;&#x5E94;&#x7684;&#x5904;&#x7406;&#x90FD;&#x5C5E;&#x4E8E;&#x4E00;&#x4E9B;&#x4E0D;&#x91CD;&#x8981;&#x7684;&#x5B9E;&#x73B0;&#x7EC6;&#x8282;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x4E5F;&#x5C31;&#x4E0D;&#x5C55;&#x5F00;&#x4ECB;&#x7ECD;&#x4E86;&#xFF1B;&#x5F53;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x54CD;&#x5E94;&#x4E86;&#x7528;&#x6237;&#x7684;&#x8BF7;&#x6C42;&#x5C31;&#x53EF;&#x4EE5;&#x5C06;&#x5F53;&#x524D; Socket &#x76F4;&#x63A5;&#x5173;&#x6389;&#xFF0C;&#x65AD;&#x6389;&#x8FD9;&#x4E2A; TCP &#x8FDE;&#x63A5;&#x4E86;&#x3002;</p>
+<h2 id="&#x8C03;&#x5EA6;">&#x8C03;&#x5EA6;</h2>
+<p>&#x6211;&#x4EEC;&#x5728;&#x4E0A;&#x9762;&#x5DF2;&#x7ECF;&#x901A;&#x8FC7;&#x591A;&#x6B21; <code>fork</code> &#x542F;&#x52A8;&#x4E86;&#x7528;&#x4E8E;&#x7BA1;&#x7406; Unicorn worker &#x8FDB;&#x7A0B;&#x7684; master &#x4EE5;&#x53CA;&#x591A;&#x4E2A; worker &#x8FDB;&#x7A0B;&#xFF0C;&#x7531;&#x4E8E; Unicorn webserver &#x6D89;&#x53CA;&#x4E86;&#x591A;&#x4E2A;&#x8FDB;&#x7A0B;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x8FDB;&#x7A0B;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x8C03;&#x5EA6;&#x3002;</p>
+<p>&#x5728; Unix &#x4E2D;&#xFF0C;&#x8FDB;&#x7A0B;&#x7684;&#x8C03;&#x5EA6;&#x5F80;&#x5F80;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x4FE1;&#x53F7;&#x6765;&#x8FDB;&#x884C;&#x7684;&#xFF0C;<code>HttpServer#join</code> &#x5C31;&#x5728; Unicorn &#x7684; master &#x8FDB;&#x7A0B;&#x4E0A;&#x76D1;&#x542C;&#x5916;&#x754C;&#x53D1;&#x9001;&#x7684;&#x5404;&#x79CD;&#x4FE1;&#x53F7;&#xFF0C;&#x4E0D;&#x8FC7;&#x5728;&#x76D1;&#x542C;&#x4FE1;&#x53F7;&#x4E4B;&#x524D;&#xFF0C;&#x8981;&#x901A;&#x8FC7; <code>ready_pipe</code> &#x901A;&#x77E5; grandparent &#x8FDB;&#x7A0B;&#x5F53;&#x524D; master &#x8FDB;&#x7A0B;&#x5DF2;&#x7ECF;&#x542F;&#x52A8;&#x5B8C;&#x6BD5;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-symbol">From:</span> lib/unicorn/http_server.rb @ line <span class="hljs-number">267</span><span class="hljs-symbol">:</span>
+<span class="hljs-symbol">Owner:</span> <span class="hljs-symbol">Unicorn:</span><span class="hljs-symbol">:HttpServer</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">join</span></span>
+respawn = <span class="hljs-keyword">true</span>
+last_check = time_now
+
+proc_name <span class="hljs-string">&apos;master&apos;</span>
+logger.info <span class="hljs-string">&quot;master process ready&quot;</span> <span class="hljs-comment"># test_exec.rb relies on this message</span>
+<span class="hljs-keyword">if</span> @ready_pipe
+<span class="hljs-keyword">begin</span>
+@ready_pipe.syswrite($$.to_s)
+<span class="hljs-keyword">rescue</span> =&gt; e
+logger.warn(<span class="hljs-string">&quot;grandparent died too soon?: <span class="hljs-subst">#{e.message}</span> (<span class="hljs-subst">#{e.<span class="hljs-keyword">class</span>}</span>)&quot;</span>)
+<span class="hljs-keyword">end</span>
+@ready_pipe = @ready_pipe.close <span class="hljs-keyword">rescue</span> <span class="hljs-keyword">nil</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-comment"># ...</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x5F53; grandparent &#x8FDB;&#x7A0B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6267;&#x884C; Unicorn &#x547D;&#x4EE4;&#x7684;&#x8FDB;&#x7A0B;&#x63A5;&#x6536;&#x5230;&#x547D;&#x4EE4;&#x9000;&#x51FA;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x505A;&#x5176;&#x4ED6;&#x7684;&#x64CD;&#x4F5C;&#x4E86;&#xFF0C;&#x800C; master &#x8FDB;&#x7A0B;&#x4F1A;&#x8FDB;&#x5165;&#x4E00;&#x4E2A; while &#x5FAA;&#x73AF;&#x6301;&#x7EED;&#x76D1;&#x542C;&#x5916;&#x754C;&#x53D1;&#x9001;&#x7684;&#x4FE1;&#x53F7;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">join</span></span>
+<span class="hljs-comment"># ...</span>
+
+<span class="hljs-keyword">begin</span>
+reap_all_workers
+<span class="hljs-keyword">case</span> @sig_queue.shift
+<span class="hljs-comment"># ...</span>
+<span class="hljs-keyword">when</span> <span class="hljs-symbol">:WINCH</span>
+respawn = <span class="hljs-keyword">false</span>
+soft_kill_each_worker(<span class="hljs-symbol">:QUIT</span>)
+<span class="hljs-keyword">self</span>.worker_processes = <span class="hljs-number">0</span>
+<span class="hljs-keyword">when</span> <span class="hljs-symbol">:TTIN</span>
+respawn = <span class="hljs-keyword">true</span>
+<span class="hljs-keyword">self</span>.worker_processes += <span class="hljs-number">1</span>
+<span class="hljs-keyword">when</span> <span class="hljs-symbol">:TTOU</span>
+<span class="hljs-keyword">self</span>.worker_processes -= <span class="hljs-number">1</span> <span class="hljs-keyword">if</span> <span class="hljs-keyword">self</span>.worker_processes &gt; <span class="hljs-number">0</span>
+<span class="hljs-keyword">when</span> <span class="hljs-comment"># ...</span>
+<span class="hljs-keyword">end</span>
+<span class="hljs-keyword">rescue</span> =&gt; e
+Unicorn.log_error(@logger, <span class="hljs-string">&quot;master loop error&quot;</span>, e)
+<span class="hljs-keyword">end</span> <span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span>
+
+<span class="hljs-comment"># ...</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x7684;&#x51E0;&#x4E2A;&#x4FE1;&#x53F7;&#x90FD;&#x4F1A;&#x6539;&#x53D8;&#x5F53;&#x524D; Unicorn worker &#x7684;&#x8FDB;&#x7A0B;&#x6570;&#xFF0C;&#x65E0;&#x8BBA;&#x662F; <code>TTIN</code>&#x3001;<code>TTOU</code> &#x8FD8;&#x662F; <code>WINCH</code> &#x4FE1;&#x53F7;&#x6700;&#x7EC8;&#x90FD;&#x4FEE;&#x6539;&#x4E86; <code>worker_processes</code> &#x53D8;&#x91CF;&#xFF0C;&#x5176;&#x4E2D; <code>#soft_kill_each_worker</code> &#x65B9;&#x6CD5;&#x5411;&#x6240;&#x6709;&#x7684; Unicorn worker &#x8FDB;&#x7A0B;&#x53D1;&#x9001;&#x4E86; <code>QUIT</code> &#x4FE1;&#x53F7;&#x3002;</p>
+<p>&#x9664;&#x4E86;&#x4E00;&#x4E9B;&#x7528;&#x4E8E;&#x6539;&#x53D8;&#x5F53;&#x524D; worker &#x6570;&#x91CF;&#x7684;&#x4FE1;&#x53F7;&#xFF0C;Unicorn &#x7684; master &#x8FDB;&#x7A0B;&#x8FD8;&#x76D1;&#x542C;&#x4E86;&#x4E00;&#x4E9B;&#x7528;&#x4E8E;&#x7EC8;&#x6B62; master &#x8FDB;&#x7A0B;&#x6216;&#x8005;&#x66F4;&#x65B0;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x7684;&#x4FE1;&#x53F7;&#x3002;</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">join</span></span>
+<span class="hljs-comment"># ...</span>
+
+<span class="hljs-keyword">begin</span>
+reap_all_workers
+<span class="hljs-keyword">case</span> @sig_queue.shift
+<span class="hljs-comment"># ...</span>
+<span class="hljs-keyword">when</span> <span class="hljs-symbol">:QUIT</span>
+<span class="hljs-keyword">break</span>
+<span class="hljs-keyword">when</span> <span class="hljs-symbol">:TERM</span>, <span class="hljs-symbol">:INT</span>
+stop(<span class="hljs-keyword">false</span>)
+<span class="hljs-keyword">break</span>
+<span class="hljs-keyword">when</span> <span class="hljs-symbol">:HUP</span>
+respawn = <span class="hljs-keyword">true</span>
+<span class="hljs-keyword">if</span> config.config_file
+load_config!
+<span class="hljs-keyword">else</span> <span class="hljs-comment"># exec binary and exit if there&apos;s no config file</span>
+reexec
+<span class="hljs-keyword">end</span>
+<span class="hljs-keyword">when</span> <span class="hljs-comment"># ...</span>
+<span class="hljs-keyword">end</span>
+<span class="hljs-keyword">rescue</span> =&gt; e
+Unicorn.log_error(@logger, <span class="hljs-string">&quot;master loop error&quot;</span>, e)
+<span class="hljs-keyword">end</span> <span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span>
+
+<span class="hljs-comment"># ...</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x65E0;&#x8BBA;&#x662F; <code>QUIT</code> &#x4FE1;&#x53F7;&#x8FD8;&#x662F; <code>TERM</code>&#x3001;<code>INT</code> &#x6700;&#x7EC8;&#x90FD;&#x6267;&#x884C;&#x4E86; <code>#stop</code> &#x65B9;&#x6CD5;&#xFF0C;&#x9009;&#x62E9;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x4FE1;&#x53F7;&#x5E72;&#x6389;&#x5F53;&#x524D; master &#x7BA1;&#x7406;&#x7684; worker &#x8FDB;&#x7A0B;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-symbol">From:</span> lib/unicorn/http_server.rb @ line <span class="hljs-number">339</span><span class="hljs-symbol">:</span>
+<span class="hljs-symbol">Owner:</span> <span class="hljs-symbol">Unicorn:</span><span class="hljs-symbol">:HttpServer</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">stop</span><span class="hljs-params">(graceful = <span class="hljs-keyword">true</span>)</span></span>
+<span class="hljs-keyword">self</span>.listeners = []
+limit = time_now + timeout
+<span class="hljs-keyword">until</span> @workers.empty? || time_now &gt; limit
+<span class="hljs-keyword">if</span> graceful
+soft_kill_each_worker(<span class="hljs-symbol">:QUIT</span>)
+<span class="hljs-keyword">else</span>
+kill_each_worker(<span class="hljs-symbol">:TERM</span>)
+<span class="hljs-keyword">end</span>
+sleep(<span class="hljs-number">0</span>.<span class="hljs-number">1</span>)
+reap_all_workers
+<span class="hljs-keyword">end</span>
+kill_each_worker(<span class="hljs-symbol">:KILL</span>)
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x65B9;&#x6CD5;&#x5176;&#x5B9E;&#x975E;&#x5E38;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#xFF0C;&#x5B83;&#x4F1A;&#x6839;&#x636E;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x9009;&#x62E9;&#x5F3A;&#x5236;&#x7EC8;&#x6B62;&#x6216;&#x8005;&#x6B63;&#x5E38;&#x505C;&#x6B62;&#x6240;&#x6709;&#x7684; worker &#x8FDB;&#x7A0B;&#xFF0C;&#x8FD9;&#x6837;&#x6574;&#x4E2A; Unicorn &#x670D;&#x52A1;&#x624D;&#x771F;&#x6B63;&#x505C;&#x6B62;&#x5E76;&#x4E0D;&#x518D;&#x4E3A;&#x5916;&#x754C;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x4E86;&#x3002;</p>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x5411; master &#x53D1;&#x9001; <code>TTIN</code> &#x6216;&#x8005; <code>TTOU</code> &#x4FE1;&#x53F7;&#x65F6;&#x53EA;&#x662F;&#x6539;&#x53D8;&#x4E86;&#x5B9E;&#x4F8B;&#x53D8;&#x91CF; <code>worker_process</code> &#x7684;&#x503C;&#xFF0C;&#x8FD8;&#x5E76;&#x6CA1;&#x6709; <code>fork</code> &#x51FA;&#x65B0;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x8FD9;&#x4E9B;&#x64CD;&#x4F5C;&#x90FD;&#x662F;&#x5728; <code>nil</code> &#x6761;&#x4EF6;&#x4E2D;&#x5B8C;&#x6210;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">join</span></span>
+<span class="hljs-comment"># ...</span>
+
+<span class="hljs-keyword">begin</span>
+reap_all_workers
+<span class="hljs-keyword">case</span> @sig_queue.shift
+<span class="hljs-keyword">when</span> <span class="hljs-keyword">nil</span>
+<span class="hljs-keyword">if</span> (last_check + @timeout) &gt;= (last_check = time_now)
+sleep_time = murder_lazy_workers
+<span class="hljs-keyword">else</span>
+sleep_time = @timeout/<span class="hljs-number">2.0</span> + <span class="hljs-number">1</span>
+<span class="hljs-keyword">end</span>
+maintain_worker_count <span class="hljs-keyword">if</span> respawn
+master_sleep(sleep_time)
+<span class="hljs-keyword">when</span> <span class="hljs-comment"># ...</span>
+<span class="hljs-keyword">end</span>
+<span class="hljs-keyword">rescue</span> =&gt; e
+Unicorn.log_error(@logger, <span class="hljs-string">&quot;master loop error&quot;</span>, e)
+<span class="hljs-keyword">end</span> <span class="hljs-keyword">while</span> <span class="hljs-keyword">true</span>
+
+<span class="hljs-comment"># ...</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x5F53; <code>@sig_queue.shift</code> &#x8FD4;&#x56DE; <code>nil</code> &#x65F6;&#x4E5F;&#x5C31;&#x4EE3;&#x8868;&#x5F53;&#x524D;&#x6CA1;&#x6709;&#x9700;&#x8981;&#x5904;&#x7406;&#x7684;&#x4FE1;&#x53F7;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x8FDB;&#x7A0B;&#x6216;&#x8005;&#x505C;&#x6389;&#x8FDB;&#x7A0B;&#x5C31;&#x4F1A;&#x901A;&#x8FC7; <code>#maintain_worker_count</code> &#x65B9;&#x6CD5;&#xFF0C;&#x4E4B;&#x540E; master &#x8FDB;&#x7A0B;&#x4F1A;&#x9677;&#x5165;&#x7761;&#x7720;&#x76F4;&#x5230;&#x88AB;&#x518D;&#x6B21;&#x5524;&#x9192;&#x3002;</p>
+<pre><code class="lang-ruby"><span class="hljs-symbol">From:</span> lib/unicorn/http_server.rb @ line <span class="hljs-number">561</span><span class="hljs-symbol">:</span>
+<span class="hljs-symbol">Owner:</span> <span class="hljs-symbol">Unicorn:</span><span class="hljs-symbol">:HttpServer</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">maintain_worker_count</span></span>
+(off = @workers.size - worker_processes) == <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> <span class="hljs-keyword">return</span>
+off &lt; <span class="hljs-number">0</span> <span class="hljs-keyword">and</span> <span class="hljs-keyword">return</span> spawn_missing_workers
+@workers.each_value { |w| w.nr &gt;= worker_processes <span class="hljs-keyword">and</span> w.soft_kill(<span class="hljs-symbol">:QUIT</span>) }
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x521B;&#x5EFA;&#x7F3A;&#x5931;&#x7684;&#x8FDB;&#x7A0B;&#x5E76;&#x5173;&#x95ED;&#x591A;&#x4F59;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x5B9E;&#x65F6;&#x7684;&#x4FDD;&#x8BC1;&#x6574;&#x4E2A; Unicorn &#x670D;&#x52A1;&#x4E2D;&#x7684;&#x8FDB;&#x7A0B;&#x6570;&#x4E0E;&#x671F;&#x671B;&#x7684;&#x914D;&#x7F6E;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x3002;</p>
+<p>&#x5728; Unicorn &#x7684;&#x670D;&#x52A1;&#x4E2D;&#xFF0C;&#x4E0D;&#x4EC5; master &#x8FDB;&#x7A0B;&#x80FD;&#x591F;&#x63A5;&#x6536;&#x5230;&#x6765;&#x81EA;&#x7528;&#x6237;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x8FDB;&#x7A0B;&#x7684;&#x5404;&#x79CD;&#x4FE1;&#x53F7;&#xFF0C;worker &#x8FDB;&#x7A0B;&#x4E5F;&#x80FD;&#x5C06;&#x63A5;&#x53D7;&#x5230;&#x7684;&#x4FE1;&#x53F7;&#x4EA4;&#x7ED9; master &#x5904;&#x7406;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x5373;&#x4F7F;&#x5411; worker &#x8FDB;&#x7A0B;&#x53D1;&#x9001; <code>TTIN</code> &#x6216;&#x8005; <code>TTOU</code> &#x7B49;&#x4FE1;&#x53F7;&#x4E5F;&#x80FD;&#x591F;&#x6539;&#x53D8;&#x6574;&#x4E2A; Unicorn &#x670D;&#x52A1;&#x4E2D; worker &#x8FDB;&#x7A0B;&#x7684;&#x4E2A;&#x6570;&#x3002;</p>
+<h2 id="&#x591A;&#x8FDB;&#x7A0B;&#x6A21;&#x578B;">&#x591A;&#x8FDB;&#x7A0B;&#x6A21;&#x578B;</h2>
+<p>&#x603B;&#x7684;&#x6765;&#x8BF4;&#xFF0C;Unicorn &#x4F5C;&#x4E3A; Web &#x670D;&#x52A1;&#x4F7F;&#x7528;&#x4E86;&#x591A;&#x8FDB;&#x7A0B;&#x7684;&#x6A21;&#x578B;&#xFF0C;&#x901A;&#x8FC7;&#x4E00;&#x4E2A; master &#x8FDB;&#x7A0B;&#x6765;&#x7BA1;&#x7406;&#x591A;&#x4E2A; worker &#x8FDB;&#x7A0B;&#xFF0C;&#x5176;&#x4E2D; master &#x8FDB;&#x7A0B;&#x4E0D;&#x8D1F;&#x8D23;&#x5904;&#x7406;&#x5BA2;&#x6237;&#x7AEF;&#x7684; HTTP &#x8BF7;&#x6C42;&#xFF0C;&#x591A;&#x4E2A; worker &#x8FDB;&#x7A0B;&#x76D1;&#x542C;&#x540C;&#x4E00;&#x7EC4; Socket&#xFF1A;</p>
+<p><img src="images/rack-unicorn/unicorn-io-model.png" alt="unicorn-io-mode"></p>
+<p>&#x4E00;&#x7EC4; worker &#x8FDB;&#x7A0B;&#x5728;&#x76D1;&#x542C; Socket &#x65F6;&#xFF0C;&#x5982;&#x679C;&#x53D1;&#x73B0;&#x5F53;&#x524D;&#x7684; Socket &#x6709;&#x7B49;&#x5F85;&#x5904;&#x7406;&#x7684;&#x8BF7;&#x6C42;&#x65F6;&#x5C31;&#x4F1A;&#x5728;&#x5F53;&#x524D;&#x7684;&#x8FDB;&#x7A0B;&#x4E2D;&#x76F4;&#x63A5;&#x901A;&#x8FC7; <code>#process_client</code> &#x65B9;&#x6CD5;&#x5904;&#x7406;&#xFF0C;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x4F1A;&#x963B;&#x585E;&#x5F53;&#x524D;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x800C;&#x591A;&#x8FDB;&#x7A0B;&#x963B;&#x585E; I/O &#x7684;&#x65B9;&#x5F0F;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x63A5;&#x53D7;&#x6162;&#x5BA2;&#x6237;&#x7AEF;&#x9020;&#x6210;&#x7684;&#x6027;&#x80FD;&#x635F;&#x5931;&#xFF0C;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x53CD;&#x5411;&#x4EE3;&#x7406; nginx &#x624D;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<p><img src="images/rack-unicorn/unicorn-multi-processes.png" alt="unicorn-multi-processes"></p>
+<p>&#x5728; Unicorn &#x4E2D;&#xFF0C;worker &#x4E4B;&#x95F4;&#x7684;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x662F;&#x7531;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x89E3;&#x51B3;&#x7684;&#xFF0C;&#x6240;&#x6709;&#x7684; worker &#x662F;&#x901A;&#x8FC7; <code>.select</code> &#x65B9;&#x6CD5;&#x7B49;&#x5F85;&#x5171;&#x4EAB; Socket &#x4E0A;&#x7684;&#x8BF7;&#x6C42;&#xFF0C;&#x4E00;&#x65E6;&#x51FA;&#x73B0;&#x53EF;&#x7528;&#x7684; worker&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x7ACB;&#x5373;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x907F;&#x5F00;&#x4E86;&#x5176;&#x4ED6;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x7B97;&#x6CD5;&#x6CA1;&#x6709;&#x8003;&#x8651;&#x5230;&#x8BF7;&#x6C42;&#x5904;&#x7406;&#x65F6;&#x95F4;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<p>Unicorn &#x7684;&#x6E90;&#x4EE3;&#x7801;&#x5176;&#x5B9E;&#x662F;&#x4F5C;&#x8005;&#x8BFB;&#x8FC7;&#x7684;&#x53EF;&#x8BFB;&#x6027;&#x6700;&#x5DEE;&#x7684; Ruby &#x4EE3;&#x7801;&#x4E86;&#xFF0C;&#x5F88;&#x591A; Ruby &#x4EE3;&#x7801;&#x7684;&#x98CE;&#x683C;&#x5199;&#x5F97;&#x8DDF; C &#x5DEE;&#x4E0D;&#x591A;&#xFF0C;&#x770B;&#x8D77;&#x6765;&#x4E5F;&#x6BD4;&#x8F83;&#x5934;&#x75BC;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x9700;&#x8981;&#x5904;&#x7406;&#x5F88;&#x591A;&#x8FB9;&#x754C;&#x6761;&#x4EF6;&#x4EE5;&#x53CA;&#x4FE1;&#x53F7;&#xFF0C;&#x6D89;&#x53CA;&#x8F83;&#x591A;&#x5E95;&#x5C42;&#x7684;&#x8FDB;&#x7A0B;&#x95EE;&#x9898;&#xFF1B;&#x867D;&#x7136;&#x4EE3;&#x7801;&#x98CE;&#x683C;&#x4E0A;&#x770B;&#x8D77;&#x6765;&#x786E;&#x5B9E;&#x8BA9;&#x4EBA;&#x5934;&#x75BC;&#xFF0C;&#x4E0D;&#x8FC7;&#x5B9E;&#x73B0;&#x8FD8;&#x662F;&#x503C;&#x5F97;&#x4E00;&#x770B;&#x7684;&#xFF0C;&#x91CD;&#x8981;&#x7684;&#x4EE3;&#x7801;&#x5927;&#x90FD;&#x5305;&#x542B;&#x5728; unicorn.rb &#x548C; http_server.rb &#x4E24;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x9605;&#x8BFB;&#x65F6;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x6539;&#x53D8;&#x592A;&#x591A;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x3002;</p>
+<p>&#x76F8;&#x6BD4;&#x4E8E; WEBrick &#x7684;&#x5355;&#x8FDB;&#x7A0B;&#x591A;&#x7EBF;&#x7A0B;&#x7684; I/O &#x6A21;&#x578B;&#xFF0C;Unicorn &#x7684;&#x591A;&#x8FDB;&#x7A0B;&#x6A21;&#x578B;&#x6709;&#x5F88;&#x591A;&#x4F18;&#x52BF;&#xFF0C;&#x4E00;&#x662F;&#x80FD;&#x591F;&#x5145;&#x5206;&#x5229;&#x7528;&#x591A;&#x6838; CPU &#x7684;&#x6027;&#x80FD;&#xFF0C;&#x5176;&#x6B21;&#x80FD;&#x591F;&#x901A;&#x8FC7; master &#x6765;&#x7BA1;&#x7406;&#x5E76;&#x76D1;&#x63A7; Unicorn &#x4E2D;&#x5305;&#x542B;&#x7684;&#x4E00;&#x7EC4; worker &#x5E76;&#x63D0;&#x4F9B;&#x4E86;&#x96F6;&#x5B95;&#x673A;&#x90E8;&#x7F72;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x591A;&#x8FDB;&#x7A0B;&#x7684; I/O &#x6A21;&#x578B;&#x8FD8;&#x4E0D;&#x5728;&#x4E4E;&#x5F53;&#x524D;&#x7684;&#x5E94;&#x7528;&#x662F;&#x5426;&#x662F;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x7EBF;&#x7A0B;&#x7ADE;&#x4E89;&#x7B49;&#x95EE;&#x9898;&#xFF0C;&#x4E0D;&#x8FC7; Unicorn &#x7531;&#x4E8E; <code>fork</code> &#x4E86;&#x5927;&#x91CF;&#x7684; worker &#x8FDB;&#x7A0B;&#xFF0C;&#x5982;&#x679C;&#x957F;&#x65F6;&#x95F4;&#x7684;&#x5728; Unicorn &#x4E0A;&#x8FD0;&#x884C;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x7684;&#x5E94;&#x7528;&#x4F1A;&#x975E;&#x5E38;&#x8017;&#x8D39;&#x5185;&#x5B58;&#x8D44;&#x6E90;&#xFF0C;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528; <a href="https://github.com/kzk/unicorn-worker-killer" target="_blank">unicorn-worker-killer</a> &#x6765;&#x81EA;&#x52A8;&#x91CD;&#x542F;&#x3002;</p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-optimize-unicorn-workers-in-a-ruby-on-rails-app" target="_blank">How To Optimize Unicorn Workers in a Ruby on Rails App</a></li>
+<li><a href="https://read01.com/zh-hk/zm5B.html#.Wf0oLduB0sk" target="_blank">Ruby Web &#x670D;&#x52A1;&#x5668;&#xFF1A;&#x8FD9;&#x5341;&#x4E94;&#x5E74;</a></li>
+<li><a href="https://github.com/kzk/unicorn-worker-killer" target="_blank">unicorn-worker-killer</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Daemon_(computing" target="_blank">Daemon (computing)</a>)</li>
+<li><a href="http://jiangpeng.info/blogs/2014/03/10/nginx-unicorn.html" target="_blank">Nginx &#x4E0E; Unicorn</a></li>
+<li><a href="https://github.com/blog/517-unicorn" target="_blank">Unicorn!</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="rack-thin.html" class="navigation navigation-prev " aria-label="Previous page: Thin 的事件驱动模型">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="rack-webrik.html" class="navigation navigation-next " aria-label="Next page: WEBrick 的实现">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Unicorn 的多进程模型","level":"1.1.5.20.2","depth":4,"next":{"title":"WEBrick 的实现","level":"1.1.5.20.3","depth":4,"path":"Source-Code-Analysis/rack/rack-webrik.md","ref":"Source-Code-Analysis/rack/rack-webrik.md","articles":[]},"previous":{"title":"Thin 的事件驱动模型","level":"1.1.5.20.1","depth":4,"path":"Source-Code-Analysis/rack/rack-thin.md","ref":"Source-Code-Analysis/rack/rack-thin.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Source-Code-Analysis/rack/rack-unicorn.md","mtime":"2019-04-23T11:27:40.707Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-23T11:29:51.711Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

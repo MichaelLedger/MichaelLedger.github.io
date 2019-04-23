@@ -1,0 +1,1979 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>布局算法 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ASDK_3.html" />
+    
+    
+    <link rel="prev" href="ASDK_1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    iOS 开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../../ObjC-Basic/">
+            
+                <a href="../../ObjC-Basic/">
+            
+                    
+                    Objective-C 语言基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../../ObjC-Basic/Class.html">
+            
+                <a href="../../ObjC-Basic/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2" data-path="../../ObjC-Basic/Block.html">
+            
+                <a href="../../ObjC-Basic/Block.html">
+            
+                    
+                    Block 编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.3" data-path="../../ObjC-Basic/Runtime.html">
+            
+                <a href="../../ObjC-Basic/Runtime.html">
+            
+                    
+                    Objective-C Runtime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.4" data-path="../../ObjC-Basic/MM.html">
+            
+                <a href="../../ObjC-Basic/MM.html">
+            
+                    
+                    Objective-C 内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.5" data-path="../../ObjC-Basic/Runloop.html">
+            
+                <a href="../../ObjC-Basic/Runloop.html">
+            
+                    
+                    Runloop
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../../Cocoa-Touch/">
+            
+                <a href="../../Cocoa-Touch/">
+            
+                    
+                    Cocoa Touch
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="../../Cocoa-Touch/Event-Handling.html">
+            
+                <a href="../../Cocoa-Touch/Event-Handling.html">
+            
+                    
+                    事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2" data-path="../../Cocoa-Touch/UIApplication.html">
+            
+                <a href="../../Cocoa-Touch/UIApplication.html">
+            
+                    
+                    UIApplication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.3" data-path="../../Cocoa-Touch/UIView-Basic.html">
+            
+                <a href="../../Cocoa-Touch/UIView-Basic.html">
+            
+                    
+                    UIView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.4" data-path="../../Cocoa-Touch/UIViewController.html">
+            
+                <a href="../../Cocoa-Touch/UIViewController.html">
+            
+                    
+                    UIViewController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.5" data-path="../../Cocoa-Touch/Animation.html">
+            
+                <a href="../../Cocoa-Touch/Animation.html">
+            
+                    
+                    动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.6" data-path="../../Cocoa-Touch/Network.html">
+            
+                <a href="../../Cocoa-Touch/Network.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.7" data-path="../../Cocoa-Touch/Multithreading.html">
+            
+                <a href="../../Cocoa-Touch/Multithreading.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../../Cocoa-Touch/File-System.html">
+            
+                <a href="../../Cocoa-Touch/File-System.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.9" data-path="../../Cocoa-Touch/Design.html">
+            
+                <a href="../../Cocoa-Touch/Design.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.10" data-path="../../Cocoa-Touch/Performance.html">
+            
+                <a href="../../Cocoa-Touch/Performance.html">
+            
+                    
+                    性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../../Swift/">
+            
+                <a href="../../Swift/">
+            
+                    
+                    Swift
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="../../Swift/Class.html">
+            
+                <a href="../../Swift/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="../../Swift/Struct-And-Enum.html">
+            
+                <a href="../../Swift/Struct-And-Enum.html">
+            
+                    
+                    结构体与枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3" data-path="../../Swift/Function-And-Closure.html">
+            
+                <a href="../../Swift/Function-And-Closure.html">
+            
+                    
+                    函数与闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../../Interview/">
+            
+                <a href="../../Interview/">
+            
+                    
+                    面试问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1" data-path="../../Interview/iOSInterviewQuestions/">
+            
+                <a href="../../Interview/iOSInterviewQuestions/">
+            
+                    
+                    《招聘一个靠谱的iOS》
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1.1" data-path="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.1.2" data-path="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.2" data-path="../../interview/ZhiHu-QA/">
+            
+                <a href="../../interview/ZhiHu-QA/">
+            
+                    
+                    关于一些 iOS 面试问题的解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.3" data-path="../../interview/iOSDeveloperQA/">
+            
+                <a href="../../interview/iOSDeveloperQA/">
+            
+                    
+                    iOS 开发面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.4" data-path="../../interview/MXR-QA/">
+            
+                <a href="../../interview/MXR-QA/">
+            
+                    
+                    MXR 面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    源码分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1" data-path="../AFNetworking/AFNetworking_1.html">
+            
+                <a href="../AFNetworking/AFNetworking_1.html">
+            
+                    
+                    AFNetworking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1.1" data-path="../AFNetworking/AFNetworking_2.html">
+            
+                <a href="../AFNetworking/AFNetworking_2.html">
+            
+                    
+                    AFURLSessionManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.2" data-path="../AFNetworking/AFNetworking_3.html">
+            
+                <a href="../AFNetworking/AFNetworking_3.html">
+            
+                    
+                    AFURLSerialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.3" data-path="../AFNetworking/AFNetworking_4.html">
+            
+                <a href="../AFNetworking/AFNetworking_4.html">
+            
+                    
+                    AFNetworkReachabilityManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.4" data-path="../AFNetworking/AFNetworking_5.html">
+            
+                <a href="../AFNetworking/AFNetworking_5.html">
+            
+                    
+                    HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.2" data-path="../Alamofire/">
+            
+                <a href="../Alamofire/">
+            
+                    
+                    Alamofire
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3" data-path="../architecture/mvx.html">
+            
+                <a href="../architecture/mvx.html">
+            
+                    
+                    architecture
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.3.1" data-path="../architecture/mvx-model.html">
+            
+                <a href="../architecture/mvx-model.html">
+            
+                    
+                    MVX-Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.2" data-path="../architecture/mvx-view.html">
+            
+                <a href="../architecture/mvx-view.html">
+            
+                    
+                    MVX-View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.3" data-path="../architecture/mvx-controller.html">
+            
+                <a href="../architecture/mvx-controller.html">
+            
+                    
+                    MVX-Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4" >
+            
+                <span>
+            
+                    
+                    AsyncDisplayKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.4.1" data-path="ASDK_1.html">
+            
+                <a href="ASDK_1.html">
+            
+                    
+                    提升界面的渲染性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.5.4.2" data-path="ASDK_2.html">
+            
+                <a href="ASDK_2.html">
+            
+                    
+                    布局算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4.3" data-path="ASDK_3.html">
+            
+                <a href="ASDK_3.html">
+            
+                    
+                    预加载与智能预加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5" >
+            
+                <span>
+            
+                    
+                    BlocksKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.5.1" data-path="../BlocksKit/BlocksKit_1.html">
+            
+                <a href="../BlocksKit/BlocksKit_1.html">
+            
+                    
+                    神奇的 BlocksKit (一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5.2" data-path="../BlocksKit/BlocksKit_2.html">
+            
+                <a href="../BlocksKit/BlocksKit_2.html">
+            
+                    
+                    神奇的 BlocksKit (二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.6" data-path="../Blog/initialize-comments.html">
+            
+                <a href="../Blog/initialize-comments.html">
+            
+                    
+                    Gitalk/Gitment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7" >
+            
+                <span>
+            
+                    
+                    CocoaPods
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.7.1" data-path="../CocoaPods/CocoaPods.html">
+            
+                <a href="../CocoaPods/CocoaPods.html">
+            
+                    
+                    CocoaPods 都做了什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7.2" data-path="../CocoaPods/DSL.html">
+            
+                <a href="../CocoaPods/DSL.html">
+            
+                    
+                    DSL 以及 DSL 的应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8" >
+            
+                <span>
+            
+                    
+                    Database
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.8.1" data-path="../Database/concurrency-control.html">
+            
+                <a href="../Database/concurrency-control.html">
+            
+                    
+                    数据库并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.2" data-path="../Database/dynamo.html">
+            
+                <a href="../Database/dynamo.html">
+            
+                    
+                    分布式键值存储 Dynamo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.3" data-path="../Database/leveldb-bigtable.html">
+            
+                <a href="../Database/leveldb-bigtable.html">
+            
+                    
+                    Bigtable 和 LevelDB 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.4" data-path="../Database/mongodb-to-mysql.html">
+            
+                <a href="../Database/mongodb-to-mysql.html">
+            
+                    
+                    MongoDB 迁移到 MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.5" data-path="../Database/mongodb-wiredtiger.html">
+            
+                <a href="../Database/mongodb-wiredtiger.html">
+            
+                    
+                    MongoDB 和 WiredTiger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.6" data-path="../Database/mysql.html">
+            
+                <a href="../Database/mysql.html">
+            
+                    
+                    MySQL 和 InnoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.7" data-path="../Database/sql-index-intro.html">
+            
+                <a href="../Database/sql-index-intro.html">
+            
+                    
+                    MySQL 索引设计概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.8" data-path="../Database/sql-index-performance.html">
+            
+                <a href="../Database/sql-index-performance.html">
+            
+                    
+                    MySQL 索引性能分析概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.9" data-path="../Database/transaction.html">
+            
+                <a href="../Database/transaction.html">
+            
+                    
+                    MySQL 中事务的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.9" data-path="../DKNightVersion/DKNightVersion.html">
+            
+                <a href="../DKNightVersion/DKNightVersion.html">
+            
+                    
+                    DKNightVersion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10" >
+            
+                <span>
+            
+                    
+                    FBRetainCycleDetector
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.10.1" data-path="../FBRetainCycleDetector/block.html">
+            
+                <a href="../FBRetainCycleDetector/block.html">
+            
+                    
+                    block 如何持有对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.2" data-path="../FBRetainCycleDetector/Obj-Associated.html">
+            
+                <a href="../FBRetainCycleDetector/Obj-Associated.html">
+            
+                    
+                    Associated Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.3" data-path="../FBRetainCycleDetector/Obj-Strong.html">
+            
+                <a href="../FBRetainCycleDetector/Obj-Strong.html">
+            
+                    
+                    对象持有的强指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.4" data-path="../FBRetainCycleDetector/retain_cycle.html">
+            
+                <a href="../FBRetainCycleDetector/retain_cycle.html">
+            
+                    
+                    解决循环引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.11" data-path="../fishhook/fishhook.html">
+            
+                <a href="../fishhook/fishhook.html">
+            
+                    
+                    fishhook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.12" data-path="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                <a href="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                    
+                    IQKeyboardManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.13" data-path="../KVOController/KVOController.html">
+            
+                <a href="../KVOController/KVOController.html">
+            
+                    
+                    KVOController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.14" data-path="../libextobjc/libextobjc.html">
+            
+                <a href="../libextobjc/libextobjc.html">
+            
+                    
+                    libextobjc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.15" data-path="../Masonry/Masonry.html">
+            
+                <a href="../Masonry/Masonry.html">
+            
+                    
+                    Masonry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.16" data-path="../MBProgressHUD/">
+            
+                <a href="../MBProgressHUD/">
+            
+                    
+                    MBProgressHUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17" data-path="../objc/">
+            
+                <a href="../objc/">
+            
+                    
+                    objc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.17.1" data-path="../objc/associated-obj.html">
+            
+                <a href="../objc/associated-obj.html">
+            
+                    
+                    关联对象 AssociatedObject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.2" data-path="../objc/autoreleasepool.html">
+            
+                <a href="../objc/autoreleasepool.html">
+            
+                    
+                    自动释放池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.3" data-path="../objc/black-box-retain-release.html">
+            
+                <a href="../objc/black-box-retain-release.html">
+            
+                    
+                    黑箱中的 retain 和 release
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.4" data-path="../objc/func-structure.html">
+            
+                <a href="../objc/func-structure.html">
+            
+                    
+                    ObjC 中方法的结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.5" data-path="../objc/hash.html">
+            
+                <a href="../objc/hash.html">
+            
+                    
+                    哈希表的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.6" data-path="../objc/initialization.html">
+            
+                <a href="../objc/initialization.html">
+            
+                    
+                    初始化对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.7" data-path="../objc/isa.html">
+            
+                <a href="../objc/isa.html">
+            
+                    
+                    isa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.8" data-path="../objc/lazy-initialize.html">
+            
+                <a href="../objc/lazy-initialize.html">
+            
+                    
+                    懒惰的 initialize 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.9" data-path="../objc/load.html">
+            
+                <a href="../objc/load.html">
+            
+                    
+                    load 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.10" data-path="../objc/msgSend.html">
+            
+                <a href="../objc/msgSend.html">
+            
+                    
+                    消息传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18" >
+            
+                <span>
+            
+                    
+                    OHHTTPStubs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.18.1" data-path="../OHHTTPStubs/intercept.html">
+            
+                <a href="../OHHTTPStubs/intercept.html">
+            
+                    
+                    HTTP Intercept
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18.2" data-path="../OHHTTPStubs/mock.html">
+            
+                <a href="../OHHTTPStubs/mock.html">
+            
+                    
+                    HTTP Mock
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.19" data-path="../ProtocolKit/ProtocolKit.html">
+            
+                <a href="../ProtocolKit/ProtocolKit.html">
+            
+                    
+                    ProtocolKit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20" data-path="../rack/rack.html">
+            
+                <a href="../rack/rack.html">
+            
+                    
+                    rack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.20.1" data-path="../rack/rack-thin.html">
+            
+                <a href="../rack/rack-thin.html">
+            
+                    
+                    Thin 的事件驱动模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20.2" data-path="../rack/rack-unicorn.html">
+            
+                <a href="../rack/rack-unicorn.html">
+            
+                    
+                    Unicorn 的多进程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20.3" data-path="../rack/rack-webrik.html">
+            
+                <a href="../rack/rack-webrik.html">
+            
+                    
+                    WEBrick 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.21" data-path="../Rails/activerecord.html">
+            
+                <a href="../Rails/activerecord.html">
+            
+                    
+                    Rails
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22" >
+            
+                <span>
+            
+                    
+                    ReactiveObjC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.22.1" data-path="../ReactiveObjC/RACChannel.html">
+            
+                <a href="../ReactiveObjC/RACChannel.html">
+            
+                    
+                    RACChannel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.2" data-path="../ReactiveObjC/RACCommand.html">
+            
+                <a href="../ReactiveObjC/RACCommand.html">
+            
+                    
+                    RACCommand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.3" data-path="../ReactiveObjC/RACDelegateProxy.html">
+            
+                <a href="../ReactiveObjC/RACDelegateProxy.html">
+            
+                    
+                    RACDelegateProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.4" data-path="../ReactiveObjC/RACMulticastConnection.html">
+            
+                <a href="../ReactiveObjC/RACMulticastConnection.html">
+            
+                    
+                    RACMulticastConnection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.5" data-path="../ReactiveObjC/RACScheduler.html">
+            
+                <a href="../ReactiveObjC/RACScheduler.html">
+            
+                    
+                    RACScheduler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.6" data-path="../ReactiveObjC/RACSequence.html">
+            
+                <a href="../ReactiveObjC/RACSequence.html">
+            
+                    
+                    RACSequence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.7" data-path="../ReactiveObjC/RACSignal.html">
+            
+                <a href="../ReactiveObjC/RACSignal.html">
+            
+                    
+                    RACSignal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.8" data-path="../ReactiveObjC/RACSubject.html">
+            
+                <a href="../ReactiveObjC/RACSubject.html">
+            
+                    
+                    RACSubject
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23" >
+            
+                <span>
+            
+                    
+                    Redis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.23.1" data-path="../Redis/redis-cli.html">
+            
+                <a href="../Redis/redis-cli.html">
+            
+                    
+                    命令处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.2" data-path="../Redis/redis-eventloop.html">
+            
+                <a href="../Redis/redis-eventloop.html">
+            
+                    
+                    事件循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.3" data-path="../Redis/redis-io-multiplexing.html">
+            
+                <a href="../Redis/redis-io-multiplexing.html">
+            
+                    
+                    I/O 多路复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.24" data-path="../Ruby/Ruby.html">
+            
+                <a href="../Ruby/Ruby.html">
+            
+                    
+                    Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.25" data-path="../SDWebImage/">
+            
+                <a href="../SDWebImage/">
+            
+                    
+                    SDWebImage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="../../More.html">
+            
+                <a href="../../More.html">
+            
+                    
+                    更多资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >布局算法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4ECE;-auto-layout-&#x7684;&#x5E03;&#x5C40;&#x7B97;&#x6CD5;&#x8C08;&#x6027;&#x80FD;">&#x4ECE; Auto Layout &#x7684;&#x5E03;&#x5C40;&#x7B97;&#x6CD5;&#x8C08;&#x6027;&#x80FD;</h1>
+<blockquote>
+<p>&#x8FD9;&#x662F;&#x4F7F;&#x7528; ASDK &#x6027;&#x80FD;&#x8C03;&#x4F18;&#x7CFB;&#x5217;&#x7684;&#x7B2C;&#x4E8C;&#x7BC7;&#x6587;&#x7AE0;&#xFF0C;&#x524D;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#x8BB2;&#x5230;&#x4E86;&#x5982;&#x4F55;&#x63D0;&#x5347; iOS &#x5E94;&#x7528;&#x7684;&#x6E32;&#x67D3;&#x6027;&#x80FD;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x70B9;&#x51FB; <a href="https://github.com/Draveness/iOS-Source-Code-Analyze/blob/master/contents/AsyncDisplayKit/&#x63D0;&#x5347;%20iOS%20&#x754C;&#x9762;&#x7684;&#x6E32;&#x67D3;&#x6027;&#x80FD;.md" target="_blank">&#x8FD9;&#x91CC;</a> &#x4E86;&#x89E3;&#x8FD9;&#x90E8;&#x5206;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+</blockquote>
+<p>&#x5728;&#x4E0A;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x63D0;&#x5230;&#x4E86; iOS &#x754C;&#x9762;&#x7684;&#x6E32;&#x67D3;&#x8FC7;&#x7A0B;&#x4EE5;&#x53CA;&#x5982;&#x4F55;&#x5BF9;&#x6E32;&#x67D3;&#x8FC7;&#x7A0B;&#x8FDB;&#x884C;&#x4F18;&#x5316;&#x3002;ASDK &#x7684;&#x505A;&#x6CD5;&#x662F;&#x5C06;&#x6E32;&#x67D3;&#x7ED8;&#x5236;&#x7684;&#x5DE5;&#x4F5C;&#x629B;&#x5230;&#x540E;&#x53F0;&#x7EBF;&#x7A0B;&#x8FDB;&#x884C;&#xFF0C;&#x5E76;&#x5728;&#x6BCF;&#x6B21; Runloop &#x7ED3;&#x675F;&#x65F6;&#xFF0C;&#x5C06;&#x7ED8;&#x5236;&#x7ED3;&#x679C;&#x4EA4;&#x7ED9; <code>CALayer</code> &#x8FDB;&#x884C;&#x5C55;&#x793A;&#x3002;</p>
+<p>&#x800C;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x5C31;&#x8981;&#x4ECE; iOS &#x4E2D;&#x5F71;&#x54CD;&#x6027;&#x80FD;&#x7684;&#x53E6;&#x4E00;&#x5927;&#x6740;&#x624B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E07;&#x6076;&#x4E4B;&#x6E90; Auto Layout&#xFF08;&#x81EA;&#x52A8;&#x5E03;&#x5C40;&#xFF09;&#x6765;&#x5206;&#x6790;&#x5982;&#x4F55;&#x5BF9; iOS &#x5E94;&#x7528;&#x7684;&#x6027;&#x80FD;&#x8FDB;&#x884C;&#x4F18;&#x5316;&#x4EE5;&#x53CA; Auto Layout &#x5230;&#x5E95;&#x4E3A;&#x4EC0;&#x4E48;&#x4F1A;&#x5F71;&#x54CD;&#x6027;&#x80FD;&#xFF1F;</p>
+<p><img src="images/box-layout.jpg" alt="box-layout"></p>
+<h2 id="&#x628A;-auto-layout-&#x6279;&#x5224;&#x4E00;&#x756A;">&#x628A; Auto Layout &#x6279;&#x5224;&#x4E00;&#x756A;</h2>
+<p>&#x7531;&#x4E8E;&#x5728; 2012 &#x5E74;&#x82F9;&#x679C;&#x53D1;&#x5E03;&#x4E86; 4.0 &#x5BF8;&#x7684; iPhone5&#xFF0C;&#x5728; iOS &#x5E73;&#x53F0;&#x4E0A;&#x51FA;&#x73B0;&#x4E86;&#x4E0D;&#x540C;&#x5C3A;&#x5BF8;&#x7684;&#x79FB;&#x52A8;&#x8BBE;&#x5907;&#xFF0C;&#x4F7F;&#x5F97;&#x539F;&#x6709;&#x7684; <code>frame</code> &#x5E03;&#x5C40;&#x65B9;&#x5F0F;&#x65E0;&#x6CD5;&#x5F88;&#x597D;&#x5730;&#x9002;&#x914D;&#x4E0D;&#x540C;&#x5C3A;&#x5BF8;&#x7684;&#x5C4F;&#x5E55;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E00;&#x95EE;&#x9898; Auto Layout &#x5C31;&#x8BDE;&#x751F;&#x4E86;&#x3002;</p>
+<p>Auto Layout &#x7684;&#x8BDE;&#x751F;&#x5E76;&#x6CA1;&#x6709;&#x5982;&#x540C;&#x82F9;&#x679C;&#x7684;&#x5176;&#x5B83;&#x6846;&#x67B6;&#x4E00;&#x6837;&#x6536;&#x5230;&#x5F00;&#x53D1;&#x8005;&#x7684;&#x597D;&#x8BC4;&#xFF0C;&#x5B83;&#x81EA;&#x8BDE;&#x751F;&#x7684;&#x7B2C;&#x4E00;&#x5929;&#x8D77;&#x5C31;&#x9971;&#x53D7; iOS &#x5F00;&#x53D1;&#x8005;&#x7684;&#x6279;&#x8BC4;&#xFF0C;&#x5176;&#x8E69;&#x811A;&#x3001;&#x5197;&#x957F;&#x7684;&#x8BED;&#x6CD5;&#x4F7F;&#x5F97;&#x5B83;&#x5728;&#x521A;&#x521A;&#x9762;&#x4E16;&#x5C31;&#x88AB;&#x65E0;&#x6570;&#x5F00;&#x53D1;&#x8005;&#x5410;&#x69FD;&#xFF0C;&#x5199;&#x4E86;&#x51E0;&#x4E2A;&#x5C4F;&#x5E55;&#x7684;&#x4EE3;&#x7801;&#x90FD;&#x4E0D;&#x80FD;&#x5B8C;&#x6210;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x5E03;&#x5C40;&#xFF0C;&#x54EA;&#x6015;&#x662F; VFL&#xFF08;Visual Format Language&#xFF09;&#x4E5F;&#x62EF;&#x6551;&#x4E0D;&#x4E86;&#x5B83;&#x3002;</p>
+<p>&#x771F;&#x6B63;&#x4F7F; Auto Layout &#x5927;&#x89C4;&#x6A21;&#x6295;&#x5165;&#x4F7F;&#x7528;&#x7684;&#x5E94;&#x8BE5;&#x8FD8;&#x662F; <a href="https://github.com/SnapKit/Masonry" target="_blank">Masonry</a>&#xFF0C;&#x5B83;&#x4F7F;&#x7528;&#x4E86;&#x94FE;&#x5F0F;&#x7684;&#x8BED;&#x6CD5;&#x5BF9; Auto Layout &#x8FDB;&#x884C;&#x4E86;&#x5F88;&#x597D;&#x7684;&#x5C01;&#x88C5;&#xFF0C;&#x4F7F;&#x5F97; Auto Layout &#x66F4;&#x52A0;&#x7B80;&#x5355;&#x6613;&#x7528;&#xFF1B;&#x65F6;&#x81F3;&#x4ECA;&#x65E5;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x4E5F;&#x5728;&#x65E5;&#x5E38;&#x4F7F;&#x7528;&#x4E2D;&#x53D1;&#x73B0;&#x4E86; Masonry &#x7684;&#x5404;&#x79CD;&#x95EE;&#x9898;&#xFF0C;&#x4E8E;&#x662F;&#x51FA;&#x73B0;&#x4E86;&#x5404;&#x79CD;&#x5404;&#x6837;&#x7684;&#x5E03;&#x5C40;&#x6846;&#x67B6;&#xFF0C;&#x4E0D;&#x8FC7;&#x8FD9;&#x90FD;&#x662F;&#x540E;&#x8BDD;&#x4E86;&#x3002;</p>
+<p><img src="images/masonry.jpg" alt="masonry"></p>
+<h2 id="auto-layout-&#x7684;&#x539F;&#x7406;&#x548C;-cassowary">Auto Layout &#x7684;&#x539F;&#x7406;&#x548C; Cassowary</h2>
+<p>Auto Layout &#x7684;&#x539F;&#x7406;&#x5176;&#x5B9E;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x5148;&#x7B80;&#x5355;&#x7684;&#x89E3;&#x91CA;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<p><img src="images/view-demonstrate.png" alt="view-demonstrate"></p>
+<p>iOS &#x4E2D;&#x89C6;&#x56FE;&#x6240;&#x9700;&#x8981;&#x7684;&#x5E03;&#x5C40;&#x4FE1;&#x606F;&#x53EA;&#x6709;&#x4E24;&#x4E2A;&#xFF0C;&#x5206;&#x522B;&#x662F; <code>origin/center</code> &#x548C; <code>size</code>&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4EE5; <code>origin &amp; size</code> &#x4E3A;&#x4F8B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; <code>frame</code> &#x65F6;&#x4EE3;&#x4E0B;&#x5E03;&#x5C40;&#x7684;&#x9700;&#x8981;&#x7684;&#x4E24;&#x4E2A;&#x4FE1;&#x606F;&#xFF1B;&#x8FD9;&#x4E24;&#x4E2A;&#x4FE1;&#x606F;&#x7531;&#x56DB;&#x90E8;&#x5206;&#x7EC4;&#x6210;&#xFF1A;</p>
+<ul>
+<li><code>x</code> &amp; <code>y</code></li>
+<li><code>width</code> &amp; <code>height</code></li>
+</ul>
+<p>&#x4EE5;&#x5DE6;&#x4E0A;&#x89D2;&#x7684; <code>(0, 0)</code> &#x4E3A;&#x5750;&#x6807;&#x7684;&#x539F;&#x70B9;&#xFF0C;&#x627E;&#x5230;&#x5750;&#x6807; <code>(x, y)</code>&#xFF0C;&#x7136;&#x540E;&#x7ED8;&#x5236;&#x4E00;&#x4E2A;&#x5927;&#x5C0F;&#x4E3A; <code>(width, height)</code> &#x7684;&#x77E9;&#x5F62;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x5B8C;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x6700;&#x7B80;&#x5355;&#x7684;&#x5E03;&#x5C40;&#x3002;&#x800C; Auto Layout &#x7684;&#x5E03;&#x5C40;&#x65B9;&#x5F0F;&#x4E0E;&#x4E0A;&#x9762;&#x6240;&#x8BF4;&#x7684; <code>frame</code> &#x6709;&#x4E9B;&#x4E0D;&#x540C;&#xFF0C;<code>frame</code> &#x7684;&#x539F;&#x7406;&#x662F;&#x4E0E;&#x7236;&#x89C6;&#x56FE;&#x4E4B;&#x95F4;&#x7684;&#x7EDD;&#x5BF9;&#x8DDD;&#x79BB;&#xFF0C;&#x4F46;&#x662F; Auto Layout &#x4E2D;&#x5927;&#x90E8;&#x5206;&#x7684;&#x7EA6;&#x675F;&#x90FD;&#x662F;<strong>&#x63CF;&#x8FF0;&#x6027;&#x7684;</strong>&#xFF0C;&#x8868;&#x793A;&#x89C6;&#x56FE;&#x95F4;&#x76F8;&#x5BF9;&#x8DDD;&#x79BB;&#xFF0C;&#x4EE5;&#x4E0A;&#x56FE;&#x4E3A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-objectivec">A.left = Superview.left + <span class="hljs-number">50</span>
+A.top  = Superview.top + <span class="hljs-number">30</span>
+A.width  = <span class="hljs-number">100</span>
+A.height = <span class="hljs-number">100</span>
+
+B.left = (A.left + A.width)/(A.right) + <span class="hljs-number">30</span>
+B.top  = A.top
+B.width  = A.width
+B.height = A.height
+</code></pre>
+<p>&#x867D;&#x7136;&#x4E0A;&#x9762;&#x7684;&#x7EA6;&#x675F;&#x5F88;&#x597D;&#x7684;&#x8868;&#x793A;&#x4E86;&#x5404;&#x4E2A;&#x89C6;&#x56FE;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x4F46;&#x662F; Auto Layout &#x5B9E;&#x9645;&#x4E0A;&#x5E76;&#x6CA1;&#x6709;&#x6539;&#x53D8;&#x539F;&#x6709;&#x7684; Hard-Coded &#x5F62;&#x5F0F;&#x7684;&#x5E03;&#x5C40;&#x65B9;&#x5F0F;&#xFF0C;&#x53EA;&#x662F;&#x5C06;&#x539F;&#x6709;&#x6CA1;&#x6709;&#x592A;&#x591A;&#x610F;&#x4E49;&#x7684; <code>(x, y)</code> &#x503C;&#xFF0C;&#x53D8;&#x6210;&#x4E86;&#x63CF;&#x8FF0;&#x6027;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x4ECD;&#x7136;&#x9700;&#x8981;&#x77E5;&#x9053;&#x5E03;&#x5C40;&#x4FE1;&#x606F;&#x6240;&#x9700;&#x8981;&#x7684;&#x56DB;&#x90E8;&#x5206; <code>x</code>&#x3001;<code>y</code>&#x3001;<code>width</code> &#x4EE5;&#x53CA; <code>height</code>&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x6C42;&#x89E3;&#x4E0A;&#x8FF0;&#x7684;<strong>&#x516B;&#x5143;&#x4E00;&#x6B21;</strong>&#x65B9;&#x7A0B;&#x7EC4;&#xFF0C;&#x5C06;&#x6BCF;&#x4E2A;&#x89C6;&#x56FE;&#x6240;&#x9700;&#x8981;&#x7684;&#x4FE1;&#x606F;&#x89E3;&#x51FA;&#x6765;&#xFF1B;Cocoa &#x4F1A;&#x5728;&#x8FD0;&#x884C;&#x65F6;&#x6C42;&#x89E3;&#x4E0A;&#x8FF0;&#x7684;&#x65B9;&#x7A0B;&#x7EC4;&#xFF0C;&#x6700;&#x7EC8;&#x4F7F;&#x7528; <code>frame</code> &#x6765;&#x7ED8;&#x5236;&#x89C6;&#x56FE;&#x3002;</p>
+<p><img src="images/layout-phase.png" alt="layout-phase"></p>
+<h3 id="cassowary-&#x7B97;&#x6CD5;">Cassowary &#x7B97;&#x6CD5;</h3>
+<p>&#x5728;&#x4E0A;&#x4E16;&#x7EAA; 90 &#x5E74;&#x4EE3;&#xFF0C;&#x4E00;&#x4E2A;&#x540D;&#x53EB; <a href="https://en.wikipedia.org/wiki/Cassowary_(software" target="_blank">Cassowary</a>) &#x7684;&#x5E03;&#x5C40;&#x7B97;&#x6CD5;&#x89E3;&#x51B3;&#x4E86;&#x7528;&#x6237;&#x754C;&#x9762;&#x7684;&#x5E03;&#x5C40;&#x95EE;&#x9898;&#xFF0C;&#x5B83;&#x901A;&#x8FC7;&#x5C06;&#x5E03;&#x5C40;&#x95EE;&#x9898;&#x62BD;&#x8C61;&#x6210;&#x7EBF;&#x6027;&#x7B49;&#x5F0F;&#x548C;&#x4E0D;&#x7B49;&#x5F0F;&#x7EA6;&#x675F;&#x6765;&#x8FDB;&#x884C;&#x6C42;&#x89E3;&#x3002;</p>
+<p>Auto Layout &#x5176;&#x5B9E;&#x5C31;&#x662F;&#x5BF9; Cassowary &#x7B97;&#x6CD5;&#x7684;&#x4E00;&#x79CD;&#x5B9E;&#x73B0;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x91CC;&#x5E76;&#x4E0D;&#x4F1A;&#x5BF9;&#x5B83;&#x5C55;&#x5F00;&#x4ECB;&#x7ECD;&#xFF0C;&#x6709;&#x5174;&#x8DA3;&#x7684;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x5728;&#x6587;&#x7AE0;&#x6700;&#x540E;&#x7684; Reference &#x4E2D;&#x4E86;&#x89E3;&#x4E00;&#x4E0B; Cassowary &#x7B97;&#x6CD5;&#x76F8;&#x5173;&#x7684;&#x6587;&#x7AE0;&#x3002;</p>
+<blockquote>
+<p>Auto Layout &#x7684;&#x539F;&#x7406;&#x5C31;&#x662F;&#x5BF9;<strong>&#x7EBF;&#x6027;&#x65B9;&#x7A0B;&#x7EC4;&#x6216;&#x8005;&#x4E0D;&#x7B49;&#x5F0F;</strong>&#x7684;&#x6C42;&#x89E3;&#x3002;</p>
+</blockquote>
+<h2 id="auto-layout-&#x7684;&#x6027;&#x80FD;">Auto Layout &#x7684;&#x6027;&#x80FD;</h2>
+<p>&#x5728;&#x4F7F;&#x7528; Auto Layout &#x8FDB;&#x884C;&#x5E03;&#x5C40;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x7EA6;&#x675F;&#xFF0C;&#x6BD4;&#x5982;&#x89C6;&#x56FE;&#x7684;&#x9AD8;&#x5EA6;&#x3001;&#x5BBD;&#x5EA6;&#x7B49;&#x7B49;&#x3002;&#x800C;&#x6BCF;&#x4E00;&#x4E2A;&#x7EA6;&#x675F;&#x5176;&#x5B9E;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x7EBF;&#x6027;&#x7B49;&#x5F0F;&#x6216;&#x4E0D;&#x7B49;&#x5F0F;&#xFF0C;&#x6574;&#x4E2A;&#x754C;&#x9762;&#x4E0A;&#x7684;&#x6240;&#x6709;&#x7EA6;&#x675F;&#x5728;&#x4E00;&#x8D77;&#x5C31;<strong>&#x660E;&#x786E;&#x5730;&#xFF08;&#x6CA1;&#x6709;&#x51B2;&#x7A81;&#xFF09;</strong>&#x5B9A;&#x4E49;&#x4E86;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x7684;&#x5E03;&#x5C40;&#x3002;</p>
+<blockquote>
+<p>&#x5728;&#x6D89;&#x53CA;&#x51B2;&#x7A81;&#x53D1;&#x751F;&#x65F6;&#xFF0C;Auto Layout &#x4F1A;&#x5C1D;&#x8BD5; break &#x4E00;&#x4E9B;&#x4F18;&#x5148;&#x7EA7;&#x4F4E;&#x7684;&#x7EA6;&#x675F;&#xFF0C;&#x5C3D;&#x91CF;&#x6EE1;&#x8DB3;&#x6700;&#x591A;&#x5E76;&#x4E14;&#x4F18;&#x5148;&#x7EA7;&#x6700;&#x9AD8;&#x7684;&#x7EA6;&#x675F;&#x3002;</p>
+</blockquote>
+<p>&#x56E0;&#x4E3A;&#x5E03;&#x5C40;&#x7CFB;&#x7EDF;&#x5728;&#x6700;&#x540E;&#x4ECD;&#x7136;&#x9700;&#x8981;&#x901A;&#x8FC7; <code>frame</code> &#x6765;&#x8FDB;&#x884C;&#xFF0C;&#x6240;&#x4EE5; Auto Layout &#x867D;&#x7136;&#x4E3A;&#x5F00;&#x53D1;&#x8005;&#x5728;&#x63CF;&#x8FF0;&#x5E03;&#x5C40;&#x65F6;&#x5E26;&#x6765;&#x4E86;&#x4E00;&#x4E9B;&#x597D;&#x5904;&#xFF0C;&#x4E0D;&#x8FC7;&#x5B83;&#x76F8;&#x6BD4;&#x539F;&#x6709;&#x7684;&#x5E03;&#x5C40;&#x7CFB;&#x7EDF;&#x52A0;&#x5165;&#x4E86;&#x4ECE;&#x7EA6;&#x675F;&#x8BA1;&#x7B97; <code>frame</code> &#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x800C;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E86;&#x89E3; Auto Layout &#x7684;&#x5E03;&#x5C40;&#x6027;&#x80FD;&#x5982;&#x4F55;&#x3002;</p>
+<p><img src="images/performance-loss.jpeg" alt="performance-loss"></p>
+<p>&#x56E0;&#x4E3A;&#x4F7F;&#x7528; Cassowary &#x7B97;&#x6CD5;&#x89E3;&#x51B3;&#x7EA6;&#x675F;&#x95EE;&#x9898;&#x5C31;&#x662F;&#x5BF9;&#x7EBF;&#x6027;&#x7B49;&#x5F0F;&#x6216;&#x4E0D;&#x7B49;&#x5F0F;&#x6C42;&#x89E3;&#xFF0C;&#x6240;&#x4EE5;&#x5176;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x5C31;&#x662F;<strong>&#x591A;&#x9879;&#x5F0F;&#x65F6;&#x95F4;</strong>&#x7684;&#xFF0C;&#x4E0D;&#x96BE;&#x63A8;&#x6D4B;&#x51FA;&#xFF0C;&#x5728;&#x5904;&#x7406;&#x6781;&#x5176;&#x590D;&#x6742;&#x7684; UI &#x754C;&#x9762;&#x65F6;&#xFF0C;&#x4F1A;&#x9020;&#x6210;&#x6027;&#x80FD;&#x4E0A;&#x7684;&#x5DE8;&#x5927;&#x635F;&#x5931;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4F1A;&#x5BF9; Auto Layout &#x7684;&#x6027;&#x80FD;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#xFF0C;&#x4E3A;&#x4E86;&#x66F4;&#x660E;&#x663E;&#x7684;&#x5C55;&#x793A;  Auto Layout &#x7684;&#x6027;&#x80FD;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7; <code>frame</code> &#x7684;&#x6027;&#x80FD;&#x5EFA;&#x7ACB;&#x4E00;&#x6761;&#x57FA;&#x51C6;&#x7EBF;<strong>&#x4EE5;&#x6D88;&#x9664;&#x5BF9;&#x8C61;&#x7684;&#x521B;&#x5EFA;&#x548C;&#x9500;&#x6BC1;&#x3001;&#x89C6;&#x56FE;&#x7684;&#x6E32;&#x67D3;&#x3001;&#x89C6;&#x56FE;&#x5C42;&#x7EA7;&#x7684;&#x6539;&#x53D8;&#x5E26;&#x6765;&#x7684;&#x5F71;&#x54CD;</strong>&#x3002;</p>
+<blockquote>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5728; <a href="https://github.com/Draveness/iOS-Source-Code-Analyze/tree/master/contents/AsyncDisplayKit/Layout" target="_blank">&#x8FD9;&#x91CC;</a> &#x627E;&#x5230;&#x8FD9;&#x6B21;&#x5BF9; Layout &#x6027;&#x80FD;&#x6D4B;&#x91CF;&#x4F7F;&#x7528;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x4EE3;&#x7801;&#x5206;&#x522B;&#x4F7F;&#x7528; Auto Layout &#x548C; <code>frame</code> &#x5BF9; N &#x4E2A;&#x89C6;&#x56FE;&#x8FDB;&#x884C;&#x5E03;&#x5C40;&#xFF0C;&#x6D4B;&#x7B97;&#x5176;&#x8FD0;&#x884C;&#x65F6;&#x95F4;&#x3002;</p>
+<p>&#x4F7F;&#x7528; AutoLayout &#x65F6;&#xFF0C;&#x6BCF;&#x4E2A;&#x89C6;&#x56FE;&#x4F1A;&#x968F;&#x673A;&#x9009;&#x62E9;&#x4E24;&#x4E2A;&#x89C6;&#x56FE;&#x5BF9;&#x5B83;&#x7684; <code>top</code> &#x548C; <code>left</code> &#x8FDB;&#x884C;&#x7EA6;&#x675F;&#xFF0C;&#x968F;&#x673A;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x4F5C;&#x4E3A; <code>offset</code>&#xFF1B;&#x540C;&#x65F6;&#xFF0C;&#x8FD8;&#x4F1A;&#x7528;&#x51E0;&#x4E2A;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x7684;&#x7EA6;&#x675F;&#x4FDD;&#x8BC1;&#x89C6;&#x56FE;&#x7684;&#x5E03;&#x5C40;&#x4E0D;&#x4F1A;&#x8D85;&#x51FA;&#x6574;&#x4E2A; <code>keyWindow</code>&#x3002;</p>
+<p>&#x800C;&#x4E0B;&#x56FE;&#x5C31;&#x662F;&#x5BF9; 100~1000 &#x4E2A;&#x89C6;&#x56FE;&#x5E03;&#x5C40;&#x6240;&#x9700;&#x8981;&#x7684;&#x65F6;&#x95F4;&#x7684;&#x6298;&#x7EBF;&#x56FE;&#x3002;</p>
+<blockquote>
+<p>&#x8FD9;&#x91CC;&#x7684;&#x6570;&#x636E;&#x662F;&#x5728; OS X EL Captain&#xFF0C;Macbook Air (13-inch Mid 2013&#xFF09;&#x4E0A;&#x7684; iPhone 6s Plus &#x6A21;&#x62DF;&#x5668;&#x4E0A;&#x91C7;&#x96C6;&#x7684;&#xFF0C; Xcode &#x7248;&#x672C;&#x4E3A; 7.3.1&#x3002;&#x5728;&#x5176;&#x4ED6;&#x8BBE;&#x5907;&#x4E0A;&#x53EF;&#x80FD;&#x4E0D;&#x4F1A;&#x83B7;&#x5F97;&#x4E00;&#x81F4;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x7531;&#x4E8E;&#x7B14;&#x8005;&#x7684; iPhone &#x5347;&#x7EA7;&#x5230;&#x4E86; iOS 10&#xFF0C;&#x6240;&#x4EE5;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x771F;&#x673A;&#x6D4B;&#x8BD5;&#xFF0C;&#x6700;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x53EF;&#x80FD;&#x4F1A;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x504F;&#x5DEE;&#x3002;</p>
+</blockquote>
+<p><img src="images/performance-chart-100-1000.jpeg" alt="performance-chart-100-1000"></p>
+<p>&#x4ECE;&#x56FE;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x4F7F;&#x7528; Auto Layout &#x8FDB;&#x884C;&#x5E03;&#x5C40;&#x7684;&#x65F6;&#x95F4;&#x4F1A;&#x662F;&#x53EA;&#x4F7F;&#x7528; <code>frame</code> &#x7684; <strong>16 &#x500D;</strong>&#x5DE6;&#x53F3;&#xFF0C;&#x867D;&#x7136;&#x8FD9;&#x91CC;&#x7684;&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x53EF;&#x80FD;<strong>&#x53D7;&#x5916;&#x754C;&#x6761;&#x4EF6;&#x5F71;&#x54CD;&#x5DEE;&#x5F02;</strong>&#x6BD4;&#x8F83;&#x5927;&#xFF0C;&#x4E0D;&#x8FC7; Auto Layout &#x7684;&#x6027;&#x80FD;&#x76F8;&#x6BD4; <code>frame</code> &#x786E;&#x5B9E;&#x5DEE;&#x5F88;&#x591A;&#xFF0C;&#x5982;&#x679C;&#x53BB;&#x6389;&#x8BBE;&#x7F6E; <code>frame</code> &#x7684;&#x8FC7;&#x7A0B;&#x6D88;&#x8017;&#x7684;&#x65F6;&#x95F4;&#xFF0C;Auto Layout &#x8FC7;&#x7A0B;&#x8FDB;&#x884C;&#x7684;&#x8BA1;&#x7B97;&#x91CF;&#x4E5F;&#x662F;&#x975E;&#x5E38;&#x5DE8;&#x5927;&#x7684;&#x3002;</p>
+<p>&#x5728;&#x4E0A;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x66FE;&#x7ECF;&#x63D0;&#x5230;&#xFF0C;&#x60F3;&#x8981;&#x8BA9; iOS &#x5E94;&#x7528;&#x7684;&#x89C6;&#x56FE;&#x4FDD;&#x6301; 60 FPS &#x7684;&#x5237;&#x65B0;&#x9891;&#x7387;&#xFF0C;&#x6211;&#x4EEC;&#x5FC5;&#x987B;&#x5728; <strong>1/60 = 16.67 ms</strong> &#x4E4B;&#x5185;&#x5B8C;&#x6210;&#x5305;&#x62EC;&#x5E03;&#x5C40;&#x3001;&#x7ED8;&#x5236;&#x4EE5;&#x53CA;&#x6E32;&#x67D3;&#x7B49;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5982;&#x679C;&#x5F53;&#x524D;&#x754C;&#x9762;&#x4E0A;&#x7684;&#x89C6;&#x56FE;&#x5927;&#x4E8E; 100 &#x7684;&#x8BDD;&#xFF0C;&#x4F7F;&#x7528; Auto Layout &#x662F;&#x5F88;&#x96BE;&#x8FBE;&#x5230;&#x7EDD;&#x5BF9;&#x6D41;&#x7545;&#x7684;&#x8981;&#x6C42;&#x7684;&#xFF1B;&#x800C;&#x5728;&#x4F7F;&#x7528; <code>frame</code> &#x65F6;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;&#x754C;&#x9762;&#x4E0B;&#x54EA;&#x6015;&#x6709; 500 &#x4E2A;&#x89C6;&#x56FE;&#xFF0C;&#x4E5F;&#x662F;&#x53EF;&#x4EE5;&#x5728; 16.67 ms &#x4E4B;&#x5185;&#x5B8C;&#x6210;&#x5E03;&#x5C40;&#x7684;&#x3002;&#x4E0D;&#x8FC7;&#x5728;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5728; iOS &#x7684;&#x6574;&#x4E2A; <code>UIWindow</code> &#x4E2D;&#x4E5F;&#x4E0D;&#x4F1A;&#x4E00;&#x6B21;&#x6027;&#x51FA;&#x73B0;&#x5982;&#x6B64;&#x591A;&#x7684;&#x89C6;&#x56FE;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x66F4;&#x5173;&#x5FC3;&#x7684;&#x662F;&#xFF0C;&#x5728;&#x65E5;&#x5E38;&#x5F00;&#x53D1;&#x4E2D;&#x96BE;&#x514D;&#x4F1A;&#x4F7F;&#x7528; Auto Layout &#x8FDB;&#x884C;&#x5E03;&#x5C40;&#xFF0C;&#x65E2;&#x7136;&#x6709; 16.67 ms &#x8FD9;&#x4E2A;&#x9650;&#x5236;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x754C;&#x9762;&#x4E0A;&#x51FA;&#x73B0;&#x4E86;&#x591A;&#x5C11;&#x4E2A;&#x89C6;&#x56FE;&#x65F6;&#xFF0C;&#x6211;&#x624D;&#x9700;&#x8981;&#x8003;&#x8651;&#x5176;&#x5B83;&#x7684;&#x5E03;&#x5C40;&#x65B9;&#x5F0F;&#x5462;&#xFF1F;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x9700;&#x8981;&#x5E03;&#x5C40;&#x7684;&#x89C6;&#x56FE;&#x6570;&#x91CF;&#x51CF;&#x5C11;&#x4E00;&#x4E2A;&#x91CF;&#x7EA7;&#xFF0C;&#x91CD;&#x65B0;&#x7ED8;&#x5236;&#x4E00;&#x4E2A;&#x56FE;&#x8868;&#xFF1A;</p>
+<p><img src="images/performance-layout-10-90.jpeg" alt="performance-layout-10-90"></p>
+<p>&#x4ECE;&#x56FE;&#x4E2D;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x5F53;&#x5BF9; <strong>30 &#x4E2A;&#x5DE6;&#x53F3;&#x89C6;&#x56FE;</strong>&#x4F7F;&#x7528; Auto Layout &#x8FDB;&#x884C;&#x5E03;&#x5C40;&#x65F6;&#xFF0C;&#x6240;&#x9700;&#x8981;&#x7684;&#x65F6;&#x95F4;&#x5C31;&#x4F1A;&#x5728; 16.67 ms &#x5DE6;&#x53F3;&#xFF0C;&#x5F53;&#x7136;&#x8FD9;&#x91CC;&#x4E0D;&#x6392;&#x9664;&#x4E00;&#x4E9B;&#x5176;&#x5B83;&#x56E0;&#x7D20;&#x7684;&#x5F71;&#x54CD;&#xFF1B;&#x5230;&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#xFF0C;&#x4F1A;&#x5F97;&#x51FA;&#x4E00;&#x4E2A;&#x5927;&#x81F4;&#x7684;&#x7ED3;&#x8BBA;&#xFF0C;&#x4F7F;&#x7528; Auto Layout &#x5BF9;&#x590D;&#x6742;&#x7684; UI &#x754C;&#x9762;&#x8FDB;&#x884C;&#x5E03;&#x5C40;&#x65F6;&#xFF08;&#x5927;&#x4E8E; 30 &#x4E2A;&#x89C6;&#x56FE;&#xFF09;&#x5C31;&#x4F1A;&#x5BF9;&#x6027;&#x80FD;&#x6709;&#x4E25;&#x91CD;&#x7684;&#x5F71;&#x54CD;&#xFF08;&#x540C;&#x65F6;&#x4E0E;&#x8BBE;&#x5907;&#x6709;&#x5173;&#xFF0C;&#x6587;&#x7AE0;&#x4E2D;&#x4E0D;&#x4F1A;&#x8003;&#x8651;&#x8BBE;&#x5907;&#x6027;&#x80FD;&#x7684;&#x5DEE;&#x5F02;&#x6027;&#xFF09;&#x3002;</p>
+<p>&#x4E0A;&#x8FF0;&#x5BF9; Auto Layout &#x7684;&#x4F7F;&#x7528;&#x8FD8;&#x662F;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x7684;&#xFF0C;&#x800C;&#x5728;&#x65E5;&#x5E38;&#x4F7F;&#x7528;&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;&#x5D4C;&#x5957;&#x7684;&#x89C6;&#x56FE;&#x5C42;&#x7EA7;&#x53C8;&#x975E;&#x5E38;&#x6B63;&#x5E38;&#x3002;</p>
+<blockquote>
+<p>&#x5728;&#x7B14;&#x8005;&#x5BF9;&#x5D4C;&#x5957;&#x89C6;&#x56FE;&#x5C42;&#x7EA7;&#x4E2D;&#x4F7F;&#x7528; Auto Layout &#x8FDB;&#x884C;&#x5E03;&#x5C40;&#x65F6;&#xFF0C;&#x5F53;&#x89C6;&#x56FE;&#x7684;&#x6570;&#x91CF;&#x8D85;&#x8FC7;&#x4E86; 500 &#x65F6;&#xFF0C;&#x6A21;&#x62DF;&#x5668;&#x76F4;&#x63A5;&#x5C31; crash &#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x6CA1;&#x6709;&#x8D85;&#x8FC7; 500 &#x4E2A;&#x89C6;&#x56FE;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+</blockquote>
+<p>&#x6211;&#x4EEC;&#x5BF9;&#x5D4C;&#x5957;&#x89C6;&#x56FE;&#x6570;&#x91CF;&#x5728; 100~500 &#x4E4B;&#x95F4;&#x5E03;&#x5C40;&#x65F6;&#x95F4;&#x8FDB;&#x884C;&#x6D4B;&#x91CF;&#xFF0C;&#x5E76;&#x4E0E; Auto Layout &#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#xFF1A;</p>
+<p><img src="images/performance-nested-autolayout-frame.jpeg" alt="performance-nested-autolayout-frame"></p>
+<p>&#x5728;&#x89C6;&#x56FE;&#x6570;&#x91CF;&#x5927;&#x4E8E; 200 &#x4E4B;&#x540E;&#xFF0C;&#x968F;&#x7740;&#x89C6;&#x56FE;&#x6570;&#x91CF;&#x7684;&#x589E;&#x52A0;&#xFF0C;&#x4F7F;&#x7528; Auto Layout &#x5BF9;&#x5D4C;&#x5957;&#x89C6;&#x56FE;&#x8FDB;&#x884C;&#x5E03;&#x5C40;&#x7684;&#x65F6;&#x95F4;&#x76F8;&#x6BD4;&#x975E;&#x5D4C;&#x5957;&#x7684;&#x5E03;&#x5C40;&#x6210;&#x500D;&#x589E;&#x957F;&#x3002;</p>
+<p>&#x867D;&#x7136;&#x8BF4; Auto Layout &#x4E3A;&#x5F00;&#x53D1;&#x8005;&#x5728;&#x591A;&#x5C3A;&#x5BF8;&#x5E03;&#x5C40;&#x4E0A;&#x63D0;&#x4F9B;&#x4E86;&#x904D;&#x5386;&#xFF0C;&#x800C;&#x4E14;<strong>&#x652F;&#x6301;&#x8DE8;&#x8D8A;&#x89C6;&#x56FE;&#x5C42;&#x7EA7;</strong>&#x7684;&#x7EA6;&#x675F;&#xFF0C;&#x4F46;&#x662F;&#x7531;&#x4E8E;&#x5176;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#x5BFC;&#x81F4;&#x5176;&#x65F6;&#x95F4;&#x590D;&#x6742;&#x5EA6;&#x4E3A;<strong>&#x591A;&#x9879;&#x5F0F;&#x65F6;&#x95F4;</strong>&#xFF0C;&#x5176;&#x6027;&#x80FD;&#x635F;&#x8017;&#x662F;&#x4EC5;&#x4F7F;&#x7528; <code>frame</code> &#x7684;&#x5341;&#x51E0;&#x500D;&#xFF0C;&#x6240;&#x4EE5;&#x5728;&#x5904;&#x7406;&#x5E9E;&#x5927;&#x7684; UI &#x754C;&#x9762;&#x65F6;&#x8868;&#x73B0;&#x5DEE;&#x5F3A;&#x4EBA;&#x610F;&#x3002;</p>
+<blockquote>
+<p>&#x5728;&#x4E09;&#x5E74;&#x4EE5;&#x524D;&#xFF0C;&#x6709;&#x4E00;&#x7BC7;&#x5173;&#x4E8E; Auto Layout &#x6027;&#x80FD;&#x5206;&#x6790;&#x7684;&#x6587;&#x7AE0;&#xFF0C;&#x53EF;&#x4EE5;&#x70B9;&#x51FB;&#x8FD9;&#x91CC;&#x4E86;&#x89E3;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x7684;&#x5185;&#x5BB9; <a href="http://floriankugler.com/2013/04/22/auto-layout-performance-on-ios/" target="_blank">Auto Layout Performance on iOS</a>&#x3002;</p>
+</blockquote>
+<h2 id="asdk-&#x7684;&#x5E03;&#x5C40;&#x5F15;&#x64CE;">ASDK &#x7684;&#x5E03;&#x5C40;&#x5F15;&#x64CE;</h2>
+<p>Auto Layout &#x4E0D;&#x6B62;&#x5728;&#x590D;&#x6742; UI &#x754C;&#x9762;&#x5E03;&#x5C40;&#x7684;&#x8868;&#x73B0;&#x4E0D;&#x4F73;&#xFF0C;&#x5B83;&#x8FD8;&#x4F1A;&#x5F3A;&#x5236;&#x89C6;&#x56FE;&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x4E0A;&#x5E03;&#x5C40;&#xFF1B;&#x6240;&#x4EE5;&#x5728; ASDK &#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x53E6;&#x4E00;&#x79CD;&#x53EF;&#x4EE5;&#x5728;&#x540E;&#x53F0;&#x7EBF;&#x7A0B;&#x4E2D;&#x8FD0;&#x884C;&#x7684;&#x5E03;&#x5C40;&#x5F15;&#x64CE;&#xFF0C;&#x5B83;&#x7684;&#x7ED3;&#x6784;&#x5927;&#x81F4;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<p><img src="images/layout-hierarchy.png" alt="layout-hierarchy"></p>
+<p><code>ASLayoutSpec</code> &#x4E0E;&#x4E0B;&#x9762;&#x7684;&#x6240;&#x6709;&#x7684; Spec &#x7C7B;&#x90FD;&#x662F;&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#xFF0C;&#x5728;&#x89C6;&#x56FE;&#x9700;&#x8981;&#x5E03;&#x5C40;&#x65F6;&#xFF0C;&#x4F1A;&#x8C03;&#x7528; <code>ASLayoutSpec</code> &#x6216;&#x8005;&#x5B83;&#x7684;&#x5B50;&#x7C7B;&#x7684; <code>- measureWithSizeRange:</code> &#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5E03;&#x5C40;&#x7684;&#x5BF9;&#x8C61; <a href="#aslayout">ASLayout</a>&#x3002;</p>
+<blockquote>
+<p><code>ASLayoutable</code> &#x662F; ASDK &#x4E2D;&#x4E00;&#x4E2A;&#x534F;&#x8BAE;&#xFF0C;&#x9075;&#x5FAA;&#x8BE5;&#x534F;&#x8BAE;&#x7684;&#x7C7B;&#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x5E03;&#x5C40;&#x65B9;&#x6CD5;&#x3002;</p>
+</blockquote>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x4F7F;&#x7528; ASDK &#x5E03;&#x5C40;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x505A;&#x4E0B;&#x9762;&#x56DB;&#x4EF6;&#x4E8B;&#x60C5;&#x4E2D;&#x7684;&#x4E00;&#x4EF6;&#xFF1A;</p>
+<ul>
+<li>&#x63D0;&#x4F9B; <code>layoutSpecBlock</code></li>
+<li>&#x8986;&#x5199; <code>- layoutSpecThatFits:</code> &#x65B9;&#x6CD5;</li>
+<li>&#x8986;&#x5199; <code>- calculateSizeThatFits:</code> &#x65B9;&#x6CD5;</li>
+<li>&#x8986;&#x5199; <code>- calculateLayoutThatFits:</code> &#x65B9;&#x6CD5;</li>
+</ul>
+<p>&#x53EA;&#x6709;&#x505A;&#x4E0A;&#x9762;&#x56DB;&#x4EF6;&#x4E8B;&#x60C5;&#x4E2D;&#x7684;&#x5176;&#x4E2D;&#x4E00;&#x4EF6;&#x624D;&#x80FD;&#x5BF9; ASDK &#x4E2D;&#x7684;&#x89C6;&#x56FE;&#x6216;&#x8005;&#x8BF4;&#x7ED3;&#x70B9;&#x8FDB;&#x884C;&#x5E03;&#x5C40;&#x3002;</p>
+<p>&#x65B9;&#x6CD5; <code>- calculateSizeThatFits:</code> &#x63D0;&#x4F9B;&#x4E86;&#x624B;&#x52A8;&#x5E03;&#x5C40;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x901A;&#x8FC7;&#x5728;&#x8BE5;&#x65B9;&#x6CD5;&#x5185;&#x5BF9; <code>frame</code> &#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5F53;&#x524D;&#x89C6;&#x56FE;&#x7684; <code>CGSize</code>&#x3002;</p>
+<p>&#x800C; <code>- layoutSpecThatFits:</code> &#x4E0E; <code>layoutSpecBlock</code> &#x5176;&#x5B9E;&#x6CA1;&#x4EC0;&#x4E48;&#x4E0D;&#x540C;&#xFF0C;&#x53EA;&#x662F;&#x524D;&#x8005;&#x901A;&#x8FC7;&#x8986;&#x5199;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE; <code>ASLayoutSpec</code>&#xFF1B;&#x540E;&#x8005;&#x901A;&#x8FC7; block &#x7684;&#x5F62;&#x5F0F;&#x63D0;&#x4F9B;&#x4E00;&#x79CD;&#x4E0D;&#x9700;&#x8981;&#x5B50;&#x7C7B;&#x5316;&#x5C31;&#x53EF;&#x4EE5;&#x5B8C;&#x6210;&#x5E03;&#x5C40;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4E24;&#x8005;&#x53EF;&#x4EE5;&#x770B;&#x505A;&#x662F;&#x5B8C;&#x5168;&#x7B49;&#x4EF7;&#x7684;&#x3002;</p>
+<p><code>- calculateLayoutThatFits:</code> &#x65B9;&#x6CD5;&#x6709;&#x4E00;&#x4E9B;&#x4E0D;&#x540C;&#xFF0C;&#x5B83;&#x628A;&#x4E0A;&#x9762;&#x7684;&#x4E24;&#x79CD;&#x5E03;&#x5C40;&#x65B9;&#x5F0F;&#xFF1A;&#x624B;&#x52A8;&#x5E03;&#x5C40;&#x548C; Spec &#x5E03;&#x5C40;&#x5C01;&#x88C5;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x63A5;&#x53E3;&#xFF0C;&#x8FD9;&#x6837;&#xFF0C;&#x65E0;&#x8BBA;&#x662F; <code>CGSize</code> &#x8FD8;&#x662F; <code>ASLayoutSpec</code> &#x6700;&#x540E;&#x90FD;&#x4F1A;&#x4EE5; <code>ASLayout</code> &#x7684;&#x5F62;&#x5F0F;&#x8FD4;&#x56DE;&#x7ED9;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x8005;&#x3002;</p>
+<h3 id="&#x624B;&#x52A8;&#x5E03;&#x5C40;">&#x624B;&#x52A8;&#x5E03;&#x5C40;</h3>
+<p>&#x8FD9;&#x91CC;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x624B;&#x52A8;&#x5E03;&#x5C40;&#x4F7F;&#x7528;&#x7684; <code>-[ASDisplayNode calculatedSizeThatFits:]</code> &#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E0E; <code>UIView</code> &#x4E2D;&#x7684; <code>-[UIView sizeThatFits:]</code> &#x975E;&#x5E38;&#x76F8;&#x4F3C;&#xFF0C;&#x5176;&#x533A;&#x522B;&#x53EA;&#x662F;&#x5728; ASDK &#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x8BA1;&#x7B97;&#x51FA;&#x7684;&#x5927;&#x5C0F;&#x90FD;&#x4F1A;&#x901A;&#x8FC7;&#x7F13;&#x5B58;&#x6765;&#x63D0;&#x5347;&#x6027;&#x80FD;&#x3002;</p>
+<pre><code class="lang-objectivec">- (<span class="hljs-built_in">CGSize</span>)calculateSizeThatFits:(<span class="hljs-built_in">CGSize</span>)constrainedSize {
+  <span class="hljs-keyword">return</span> _preferredFrameSize;
+}
+</code></pre>
+<p>&#x5B50;&#x7C7B;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E2D;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#xFF0C;&#x901A;&#x8FC7;&#x8986;&#x5199;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5408;&#x9002;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x4E0D;&#x8FC7;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x90FD;&#x4E0D;&#x4F1A;&#x4F7F;&#x7528;&#x624B;&#x52A8;&#x5E03;&#x5C40;&#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
+<h3 id="&#x4F7F;&#x7528;-aslayoutspec-&#x5E03;&#x5C40;">&#x4F7F;&#x7528; ASLayoutSpec &#x5E03;&#x5C40;</h3>
+<p>&#x5728; ASDK &#x4E2D;&#xFF0C;&#x66F4;&#x52A0;&#x5E38;&#x7528;&#x7684;&#x662F;&#x4F7F;&#x7528; <code>ASLayoutSpec</code> &#x5E03;&#x5C40;&#xFF0C;&#x5728;&#x4E0A;&#x9762;&#x63D0;&#x5230;&#x7684; <code>ASLayout</code> &#x662F;&#x4E00;&#x4E2A;&#x4FDD;&#x5B58;&#x5E03;&#x5C40;&#x4FE1;&#x606F;&#x7684;&#x5A92;&#x4ECB;&#xFF0C;&#x800C;&#x771F;&#x6B63;&#x8BA1;&#x7B97;&#x89C6;&#x56FE;&#x5E03;&#x5C40;&#x7684;&#x4EE3;&#x7801;&#x90FD;&#x5728; <code>ASLayoutSpec</code> &#x4E2D;&#xFF1B;&#x6240;&#x6709; ASDK &#x4E2D;&#x7684;&#x5E03;&#x5C40;&#xFF08;&#x624B;&#x52A8; / Spec&#xFF09;&#x90FD;&#x662F;&#x7531; <code>-[ASLayoutable measureWithSizeRange:]</code> &#x65B9;&#x6CD5;&#x89E6;&#x53D1;&#x7684;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4EE5; <code>ASDisplayNode</code> &#x7684;&#x8C03;&#x7528;&#x6808;&#x4E3A;&#x4F8B;&#x770B;&#x4E00;&#x4E0B;&#x65B9;&#x6CD5;&#x7684;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#xFF1A;</p>
+<pre><code class="lang-objectivec">-[ASDisplayNode measureWithSizeRange:]
+    -[ASDisplayNode shouldMeasureWithSizeRange:]
+    -[ASDisplayNode calculateLayoutThatFits:]
+        -[ASDisplayNode layoutSpecThatFits:]
+        -[ASLayoutSpec measureWithSizeRange:]
+        +[ASLayout layoutWithLayoutableObject:constrainedSizeRange:size:sublayouts:]
+        -[ASLayout filteredNodeLayoutTree]
+</code></pre>
+<p>ASDK &#x7684;&#x6587;&#x6863;&#x4E2D;&#x63A8;&#x8350;&#x5728;&#x5B50;&#x7C7B;&#x4E2D;&#x8986;&#x5199; <code>- layoutSpecThatFits:</code> &#x65B9;&#x6CD5;&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x5E03;&#x5C40;&#x7684; <code>ASLayoutSpec</code> &#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528; <code>ASLayoutSpec</code> &#x4E2D;&#x7684; <code>- measureWithSizeRange:</code> &#x65B9;&#x6CD5;&#x5BF9;&#x5B83;&#x6307;&#x5B9A;&#x7684;&#x89C6;&#x56FE;&#x8FDB;&#x884C;&#x5E03;&#x5C40;&#xFF0C;&#x4E0D;&#x8FC7;&#x901A;&#x8FC7;&#x8986;&#x5199; <a href="#asdk-&#x7684;&#x5E03;&#x5C40;&#x5F15;&#x64CE;">ASDK &#x7684;&#x5E03;&#x5C40;&#x5F15;&#x64CE;</a> &#x4E00;&#x8282;&#x4E2D;&#x7684;&#x5176;&#x5B83;&#x65B9;&#x6CD5;&#x4E5F;&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x7684;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>ASStackLayoutSpec</code> &#x5BF9;&#x89C6;&#x56FE;&#x8FDB;&#x884C;&#x5E03;&#x5C40;&#x7684;&#x8BDD;&#xFF0C;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x6808;&#x5927;&#x6982;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-objectivec">-[ASDisplayNode measureWithSizeRange:]
+    -[ASDisplayNode shouldMeasureWithSizeRange:]
+    -[ASDisplayNode calculateLayoutThatFits:]
+        -[ASDisplayNode layoutSpecThatFits:]
+        -[ASStackLayoutSpec measureWithSizeRange:]
+            ASStackUnpositionedLayout::compute
+            ASStackPositionedLayout::compute            ASStackBaselinePositionedLayout::compute        +[ASLayout layoutWithLayoutableObject:constrainedSizeRange:size:sublayouts:]
+        -[ASLayout filteredNodeLayoutTree]
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x53EA;&#x662F;&#x6267;&#x884C;&#x4E86; <code>ASStackLayoutSpec</code> &#x5BF9;&#x5E94;&#x7684; <code>- measureWithSizeRange:</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5BF9;&#x5176;&#x4E2D;&#x7684;&#x89C6;&#x56FE;&#x8FDB;&#x884C;&#x5E03;&#x5C40;&#x3002;&#x5728; <code>- measureWithSizeRange:</code> &#x4E2D;&#x8C03;&#x7528;&#x4E86;&#x4E00;&#x4E9B; C++ &#x65B9;&#x6CD5; <code>ASStackUnpositionedLayout</code>&#x3001;<code>ASStackPositionedLayout</code> &#x4EE5;&#x53CA; <code>ASStackBaselinePositionedLayout</code> &#x7684; <code>compute</code> &#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x5B8C;&#x6210;&#x4E86;&#x5BF9; <code>ASStackLayoutSpec</code> &#x4E2D;&#x89C6;&#x56FE;&#x7684;&#x5E03;&#x5C40;&#x3002;</p>
+<p>&#x76F8;&#x6BD4;&#x4E8E; Auto Layout&#xFF0C;ASDK &#x5B9E;&#x73B0;&#x4E86;&#x4E00;&#x79CD;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#x7684;&#x5E03;&#x5C40;&#x65B9;&#x5F0F;&#xFF1B;&#x6BD4;&#x8F83;&#x7C7B;&#x4F3C;&#x4E0E;&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x4E2D;&#x7684; <code>Flexbox</code> &#x6A21;&#x578B;&#xFF0C;&#x800C; ASDK &#x5176;&#x5B9E;&#x5C31;&#x5B9E;&#x73B0;&#x4E86; <code>Flexbox</code> &#x7684;&#x4E00;&#x4E2A;&#x5B50;&#x96C6;&#x3002;</p>
+<p>&#x5728; ASDK 1.0 &#x65F6;&#x4EE3;&#xFF0C;&#x5F88;&#x591A;&#x5F00;&#x53D1;&#x8005;&#x90FD;&#x8868;&#x793A;&#x5E0C;&#x671B; ASDK &#x4E2D;&#x52A0;&#x5165; ComponentKit &#x7684;&#x5E03;&#x5C40;&#x5F15;&#x64CE;&#xFF1B;&#x800C;&#x73B0;&#x5728;&#xFF0C;ASDK &#x5E03;&#x5C40;&#x5F15;&#x64CE;&#x7684;&#x5927;&#x90E8;&#x5206;&#x4EE3;&#x7801;&#x90FD;&#x662F;&#x4ECE; <a href="http://componentkit.org" target="_blank">ComponentKit</a> &#x4E2D;&#x79FB;&#x690D;&#x8FC7;&#x6765;&#x7684;&#xFF08;ComponentKit &#x662F;&#x53E6;&#x4E00;&#x4E2A; Facebook &#x56E2;&#x961F;&#x5F00;&#x53D1;&#x7684;&#x7528;&#x4E8E;&#x5E03;&#x5C40;&#x7684;&#x6846;&#x67B6;&#xFF09;&#x3002;</p>
+<h4 id="aslayout">ASLayout</h4>
+<p><code>ASLayout</code> &#x8868;&#x793A;&#x5F53;&#x524D;&#x7684;&#x7ED3;&#x70B9;&#x5728;&#x5E03;&#x5C40;&#x6811;&#x4E2D;&#x7684;&#x5927;&#x5C0F;&#x548C;&#x4F4D;&#x7F6E;&#xFF1B;&#x5F53;&#x7136;&#xFF0C;&#x5B83;&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x5176;&#x5B83;&#x7684;&#x5947;&#x602A;&#x7684;&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-class"><span class="hljs-keyword">@interface</span> <span class="hljs-title">ASLayout</span> : <span class="hljs-title">NSObject</span></span>
+
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">weak</span>, <span class="hljs-keyword">readonly</span>) <span class="hljs-keyword">id</span>&lt;ASLayoutable&gt; layoutableObject;
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">readonly</span>) <span class="hljs-built_in">CGSize</span> size;
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">readwrite</span>) <span class="hljs-built_in">CGPoint</span> position;
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">readonly</span>) <span class="hljs-built_in">NSArray</span>&lt;ASLayout *&gt; *sublayouts;
+<span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">readonly</span>) <span class="hljs-built_in">CGRect</span> frame;
+
+...
+
+<span class="hljs-keyword">@end</span>
+</code></pre>
+<p>&#x4EE3;&#x7801;&#x4E2D;&#x7684; <code>layoutableObject</code> &#x8868;&#x793A;&#x5F53;&#x524D;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;<code>sublayouts</code> &#x8868;&#x793A;&#x5F53;&#x524D;&#x89C6;&#x56FE;&#x7684;&#x5B50;&#x5E03;&#x5C40; <code>ASLayout</code> &#x6570;&#x7EC4;&#x3002;</p>
+<p>&#x6574;&#x4E2A;&#x7C7B;&#x7684;&#x5B9E;&#x73B0;&#x90FD;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x503C;&#x5F97;&#x591A;&#x8BF4;&#x7684;&#xFF0C;&#x9664;&#x4E86;&#x5927;&#x91CF;&#x7684;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#xFF0C;&#x552F;&#x4E00;&#x4E00;&#x4E2A;&#x505A;&#x4E86;&#x4E00;&#x4E9B;&#x4E8B;&#x60C5;&#x7684;&#x5C31;&#x662F; <code>-[ASLayout filteredNodeLayoutTree]</code> &#x65B9;&#x6CD5;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-objectivec">- (ASLayout *)filteredNodeLayoutTree {
+  <span class="hljs-built_in">NSMutableArray</span> *flattenedSublayouts = [<span class="hljs-built_in">NSMutableArray</span> array];
+  <span class="hljs-keyword">struct</span> Context {
+    ASLayout *layout;
+    <span class="hljs-built_in">CGPoint</span> absolutePosition;
+  };
+  std::queue&lt;Context&gt; queue;
+  queue.push({<span class="hljs-keyword">self</span>, <span class="hljs-built_in">CGPointMake</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>)});
+  <span class="hljs-keyword">while</span> (!queue.empty()) {
+    Context context = queue.front();
+    queue.pop();
+
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">self</span> != context.layout &amp;&amp; context.layout.type == ASLayoutableTypeDisplayNode) {
+      ASLayout *layout = [ASLayout layoutWithLayout:context.layout position:context.absolutePosition];
+      layout.flattened = <span class="hljs-literal">YES</span>;
+      [flattenedSublayouts addObject:layout];
+    }
+
+    <span class="hljs-keyword">for</span> (ASLayout *sublayout <span class="hljs-keyword">in</span> context.layout.sublayouts) {
+      <span class="hljs-keyword">if</span> (sublayout.isFlattened == <span class="hljs-literal">NO</span>) queue.push({sublayout, context.absolutePosition + sublayout.position});
+  }
+
+  <span class="hljs-keyword">return</span> [ASLayout layoutWithLayoutableObject:_layoutableObject
+                         constrainedSizeRange:_constrainedSizeRange
+                                         size:_size
+                                   sublayouts:flattenedSublayouts];
+}
+</code></pre>
+<p>&#x800C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4E5F;&#x53EA;&#x662F;&#x5C06; <code>sublayouts</code> &#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x5C55;&#x5E73;&#xFF0C;&#x7136;&#x540E;&#x5B9E;&#x4F8B;&#x5316;&#x4E00;&#x4E2A;&#x65B0;&#x7684; <code>ASLayout</code> &#x5BF9;&#x8C61;&#x3002;</p>
+<h4 id="aslayoutspec">ASLayoutSpec</h4>
+<p><code>ASLayoutSpec</code> &#x7684;&#x4F5C;&#x7528;&#x66F4;&#x50CF;&#x662F;&#x4E00;&#x4E2A;&#x62BD;&#x8C61;&#x7C7B;&#xFF0C;&#x5728;&#x771F;&#x6B63;&#x4F7F;&#x7528; ASDK &#x7684;&#x5E03;&#x5C40;&#x5F15;&#x64CE;&#x65F6;&#xFF0C;&#x90FD;&#x4E0D;&#x4F1A;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x7C7B;&#xFF0C;&#x800C;&#x662F;&#x4F1A;&#x7528;&#x7C7B;&#x4F3C; <code>ASStackLayoutSpec</code>&#x3001;<code>ASRelativeLayoutSpec</code>&#x3001;<code>ASOverlayLayoutSpec</code> &#x4EE5;&#x53CA; <code>ASRatioLayoutSpec</code> &#x7B49;&#x5B50;&#x7C7B;&#x3002;</p>
+<p>&#x7B14;&#x8005;&#x4E0D;&#x6253;&#x7B97;&#x4E00;&#x884C;&#x4E00;&#x884C;&#x4EE3;&#x7801;&#x6DF1;&#x5165;&#x8BB2;&#x89E3;&#x5176;&#x5185;&#x5BB9;&#xFF0C;&#x7B80;&#x5355;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x6700;&#x91CD;&#x8981;&#x7684; <code>ASStackLayoutSpec</code>&#x3002;</p>
+<p><img src="images/stack.jpg" alt="stack"></p>
+<p><code>ASStackLayoutSpec</code> &#x4ECE; <code>Flexbox</code> &#x4E2D;&#x83B7;&#x5F97;&#x4E86;&#x975E;&#x5E38;&#x591A;&#x7684;&#x7075;&#x611F;&#xFF0C;&#x6BD4;&#x5982;&#x8BF4; <code>justifyContent</code>&#x3001;<code>alignItems</code> &#x7B49;&#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x548C;&#x82F9;&#x679C;&#x7684; <code>UIStackView</code> &#x6BD4;&#x8F83;&#x7C7B;&#x4F3C;&#xFF0C;&#x4E0D;&#x8FC7;&#x5E95;&#x5C42;&#x5E76;&#x6CA1;&#x6709;&#x4F7F;&#x7528; Auto Layout &#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x63A5;&#x89E6;&#x8FC7; <code>ASStackLayoutSpec</code> &#x7684;&#x5F00;&#x53D1;&#x8005;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x5C0F;&#x6E38;&#x620F; <a href="http://nguyenhuy.github.io/froggy-asdk-layout/" target="_blank">Foggy-ASDK-Layout</a> &#x5FEB;&#x901F;&#x5B66;&#x4E60; <code>ASStackLayoutSpec</code> &#x7684;&#x4F7F;&#x7528;&#x3002;</p>
+<h3 id="&#x5173;&#x4E8E;&#x7F13;&#x5B58;&#x4EE5;&#x53CA;&#x5F02;&#x6B65;&#x5E76;&#x53D1;">&#x5173;&#x4E8E;&#x7F13;&#x5B58;&#x4EE5;&#x53CA;&#x5F02;&#x6B65;&#x5E76;&#x53D1;</h3>
+<p>&#x56E0;&#x4E3A;&#x8BA1;&#x7B97;&#x89C6;&#x56FE;&#x7684; <code>CGRect</code> &#x8FDB;&#x884C;&#x5E03;&#x5C40;&#x662F;&#x4E00;&#x79CD;&#x975E;&#x5E38;&#x6602;&#x8D35;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x6240;&#x4EE5; ASDK &#x5728;&#x8FD9;&#x91CC;&#x9762;&#x52A0;&#x5165;&#x4E86;&#x7F13;&#x5B58;&#x673A;&#x5236;&#xFF0C;&#x5728;&#x6BCF;&#x6B21;&#x6267;&#x884C; <code>- measureWithSizeRange:</code> &#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x90FD;&#x4F1A;&#x901A;&#x8FC7; <code>-shouldMeasureWithSizeRange:</code> &#x5224;&#x65AD;&#x662F;&#x5426;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x8BA1;&#x7B97;&#x5E03;&#x5C40;&#xFF1A;</p>
+<pre><code class="lang-objectivec">- (<span class="hljs-built_in">BOOL</span>)shouldMeasureWithSizeRange:(ASSizeRange)constrainedSize {
+  <span class="hljs-keyword">return</span> [<span class="hljs-keyword">self</span> _hasDirtyLayout] || !ASSizeRangeEqualToSizeRange(constrainedSize, _calculatedLayout.constrainedSizeRange);
+}
+
+- (<span class="hljs-built_in">BOOL</span>)_hasDirtyLayout {
+  <span class="hljs-keyword">return</span> _calculatedLayout == <span class="hljs-literal">nil</span> || _calculatedLayout.isDirty;
+}
+</code></pre>
+<p>&#x5728;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EA;&#x6709;&#x5F53;&#x524D;&#x7ED3;&#x70B9;&#x88AB;&#x6807;&#x8BB0;&#x4E3A; <code>dirty</code> &#x6216;&#x8005;&#x8FD9;&#x4E00;&#x6B21;&#x5E03;&#x5C40;&#x4F20;&#x5165;&#x7684; <code>constrainedSize</code> &#x4E0D;&#x540C;&#x65F6;&#xFF0C;&#x624D;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x91CD;&#x65B0;&#x8BA1;&#x7B97;&#x3002;&#x5728;&#x4E0D;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x8BA1;&#x7B97;&#x5E03;&#x5C40;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x76F4;&#x63A5;&#x8FD4;&#x56DE; <code>_calculatedLayout</code> &#x5E03;&#x5C40;&#x5BF9;&#x8C61;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+<p>&#x56E0;&#x4E3A; ASDK &#x5B9E;&#x73B0;&#x7684;&#x5E03;&#x5C40;&#x5F15;&#x64CE;&#x5176;&#x5B9E;&#x53EA;&#x662F;&#x5BF9; <code>frame</code> &#x7684;&#x8BA1;&#x7B97;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x8BBA;&#x662F;&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x8FD8;&#x662F;&#x540E;&#x53F0;&#x7684;&#x5F02;&#x6B65;&#x5E76;&#x53D1;&#x8FDB;&#x7A0B;&#x4E2D;&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x7684;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x610F;&#x7EBF;&#x7A0B;&#x4E2D;&#x8C03;&#x7528; <code>- measureWithSizeRange:</code> &#x65B9;&#x6CD5;&#xFF0C;ASDK &#x4E2D;&#x7684;&#x4E00;&#x4E9B; <code>ViewController</code> &#x6BD4;&#x5982;&#xFF1A;<code>ASDataViewController</code> &#x5C31;&#x4F1A;&#x5728;&#x540E;&#x53F0;&#x5E76;&#x53D1;&#x8FDB;&#x7A0B;&#x4E2D;&#x6267;&#x884C;&#x8BE5;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-objectivec">- (<span class="hljs-built_in">NSArray</span>&lt;ASCellNode *&gt; *)_layoutNodesFromContexts:(<span class="hljs-built_in">NSArray</span>&lt;ASIndexedNodeContext *&gt; *)contexts {
+  ...
+
+  <span class="hljs-built_in">dispatch_queue_t</span> queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, <span class="hljs-number">0</span>);
+  dispatch_apply(nodeCount, queue, ^(size_t i) {
+    ASIndexedNodeContext *context = contexts[i];
+    ASCellNode *node = [context allocateNode];
+    <span class="hljs-keyword">if</span> (node == <span class="hljs-literal">nil</span>) node = [[ASCellNode alloc] init];
+
+    <span class="hljs-built_in">CGRect</span> frame = <span class="hljs-built_in">CGRectZero</span>;
+    frame.size = [node measureWithSizeRange:context.constrainedSize].size;
+    node.frame = frame;
+
+    [ASDataController _didLayoutNode];
+  });
+
+  ...
+
+  <span class="hljs-keyword">return</span> nodes;
+}
+</code></pre>
+<blockquote>
+<p>&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x505A;&#x4E86;&#x6BD4;&#x8F83;&#x5927;&#x7684;&#x4FEE;&#x6539;&#xFF0C;&#x5C06;&#x539F;&#x6709;&#x4E00;&#x4E9B;&#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x653E;&#x5230;&#x4E86;&#x5F53;&#x524D;&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x5E76;&#x7701;&#x7565;&#x4E86;&#x5927;&#x91CF;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<h3 id="&#x5173;&#x4E8E;&#x6027;&#x80FD;&#x7684;&#x5BF9;&#x6BD4;">&#x5173;&#x4E8E;&#x6027;&#x80FD;&#x7684;&#x5BF9;&#x6BD4;</h3>
+<p>&#x7531;&#x4E8E; ASDK &#x7684;&#x5E03;&#x5C40;&#x5F15;&#x64CE;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5176;&#x6027;&#x80FD;&#x6BD4;&#x8F83;&#x96BE;&#x4EE5;&#x6D4B;&#x8BD5;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x53EA;&#x5BF9; ASDK &#x4F7F;&#x7528; <code>ASStackLayoutSpec</code> &#x7684;<strong>&#x5E03;&#x5C40;&#x8BA1;&#x7B97;&#x65F6;&#x95F4;</strong>&#x8FDB;&#x884C;&#x4E86;&#x6D4B;&#x8BD5;&#xFF0C;&#x4E0D;&#x5305;&#x62EC;&#x89C6;&#x56FE;&#x7684;&#x6E32;&#x67D3;&#x4EE5;&#x53CA;&#x5176;&#x5B83;&#x65F6;&#x95F4;&#xFF1A;</p>
+<p><img src="images/async-node-calculate.jpeg" alt="async-node-calculate"></p>
+<p>&#x6D4B;&#x8BD5;&#x7ED3;&#x679C;&#x8868;&#x660E; <code>ASStackLayoutSpec</code> &#x82B1;&#x8D39;&#x7684;&#x5E03;&#x5C40;&#x65F6;&#x95F4;&#x4E0E;&#x7ED3;&#x70B9;&#x7684;&#x6570;&#x91CF;&#x6210;&#x6B63;&#x6BD4;&#xFF0C;&#x54EA;&#x6015;&#x8BA1;&#x7B97; 100 &#x4E2A;&#x89C6;&#x56FE;&#x7684;&#x5E03;&#x5C40;&#x4E5F;&#x53EA;&#x9700;&#x8981; <strong>8.89 ms</strong>&#xFF0C;&#x867D;&#x7136;&#x8FD9;&#x91CC;&#x6CA1;&#x6709;&#x5305;&#x62EC;&#x89C6;&#x56FE;&#x7684;&#x6E32;&#x67D3;&#x65F6;&#x95F4;&#xFF0C;&#x4E0D;&#x8FC7;&#x4E0E; Auto Layout &#x76F8;&#x6BD4;&#x6027;&#x80FD;&#x8FD8;&#x662F;&#x6709;&#x6BD4;&#x8F83;&#x5927;&#x7684;&#x63D0;&#x5347;&#x3002;</p>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<p>&#x5176;&#x5B9E; ASDK &#x7684;&#x5E03;&#x5C40;&#x5F15;&#x64CE;&#x5927;&#x90E8;&#x5206;&#x90FD;&#x662F;&#x5BF9; ComponentKit &#x7684;&#x5C01;&#x88C5;&#xFF0C;&#x4E0D;&#x8FC7;&#x7531;&#x4E8E;&#x6446;&#x8131;&#x4E86; Auto Layout &#x8FD9;&#x4E00;&#x5957;&#x4F4E;&#x6548;&#x4F46;&#x662F;&#x901A;&#x7528;&#x7684;&#x5E03;&#x5C40;&#x65B9;&#x5F0F;&#xFF0C;ASDK &#x7684;&#x5E03;&#x5C40;&#x8BA1;&#x7B97;&#x4E0D;&#x4EC5;&#x5728;&#x540E;&#x53F0;&#x5E76;&#x53D1;&#x7EBF;&#x7A0B;&#x4E2D;&#x8FDB;&#x884C;&#x3001;&#x800C;&#x4E14;&#x901A;&#x8FC7;&#x5F15;&#x5165; <code>Flexbox</code> &#x63D0;&#x5347;&#x4E86;&#x5E03;&#x5C40;&#x7684;&#x6027;&#x80FD;&#xFF0C;&#x4F46;&#x662F; ASDK &#x7684;&#x4F7F;&#x7528;&#x76F8;&#x5BF9;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x5982;&#x679C;&#x53EA;&#x60F3;&#x5BF9;&#x5E03;&#x5C40;&#x6027;&#x80FD;&#x8FDB;&#x884C;&#x4F18;&#x5316;&#xFF0C;&#x66F4;&#x63A8;&#x8350;&#x5355;&#x72EC;&#x4F7F;&#x7528; ComponentKit &#x6846;&#x67B6;&#x3002;</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://stacks.11craft.com/cassowary-cocoa-autolayout-and-enaml-constraints.html" target="_blank">Cassowary, Cocoa Auto Layout, and enaml constraints</a></li>
+<li><a href="http://cassowary.readthedocs.io/en/latest/topics/theory.html" target="_blank">Solving constraint systems</a></li>
+<li><a href="http://floriankugler.com/2013/04/22/auto-layout-performance-on-ios/" target="_blank">Auto Layout Performance on iOS</a></li>
+<li><a href="https://constraints.cs.washington.edu/cassowary/cassowary-tr.pdf" target="_blank">The Cassowary Linear Arithmetic Constraint Solving Algorithm: Interface and Implementation</a></li>
+<li><a href="http://constraints.cs.washington.edu/solvers/cassowary-tochi.pdf" target="_blank">The Cassowary Linear Arithmetic Constraint Solving Algorithm</a></li>
+<li><a href="http://constraints.cs.washington.edu/solvers/uist97.pdf" target="_blank">Solving Linear Arithmetic Constraints for User Interface Applications</a></li>
+<li><a href="https://medium.com/@jasonyuh/asyncdisplaykit&#x4ECB;&#x7ECD;-&#x4E8C;-&#x5E03;&#x5C40;&#x7CFB;&#x7EDF;-1f1a674cf644#.8jskykm15" target="_blank">AsyncDisplayKit &#x4ECB;&#x7ECD;&#xFF08;&#x4E8C;&#xFF09;&#x5E03;&#x5C40;&#x7CFB;&#x7EDF;</a></li>
+</ul>
+<blockquote>
+<p>Github Repo&#xFF1A;<a href="https://github.com/draveness/iOS-Source-Code-Analyze" target="_blank">iOS-Source-Code-Analyze</a></p>
+<p>Follow: <a href="https://github.com/Draveness" target="_blank">Draveness &#xB7; GitHub</a></p>
+<p>Source: <a href="http://draveness.me/layout-performance" target="_blank">http://draveness.me/layout-performance</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ASDK_1.html" class="navigation navigation-prev " aria-label="Previous page: 提升界面的渲染性能">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ASDK_3.html" class="navigation navigation-next " aria-label="Next page: 预加载与智能预加载">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"布局算法","level":"1.1.5.4.2","depth":4,"next":{"title":"预加载与智能预加载","level":"1.1.5.4.3","depth":4,"path":"Source-Code-Analysis/AsyncDisplayKit/ASDK_3.md","ref":"Source-Code-Analysis/AsyncDisplayKit/ASDK_3.md","articles":[]},"previous":{"title":"提升界面的渲染性能","level":"1.1.5.4.1","depth":4,"path":"Source-Code-Analysis/AsyncDisplayKit/ASDK_1.md","ref":"Source-Code-Analysis/AsyncDisplayKit/ASDK_1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Source-Code-Analysis/AsyncDisplayKit/ASDK_2.md","mtime":"2018-05-22T14:51:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-23T11:29:51.711Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

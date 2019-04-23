@@ -1,0 +1,2079 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>MongoDB 迁移到 MySQL · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mongodb-wiredtiger.html" />
+    
+    
+    <link rel="prev" href="leveldb-bigtable.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    iOS 开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../../ObjC-Basic/">
+            
+                <a href="../../ObjC-Basic/">
+            
+                    
+                    Objective-C 语言基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../../ObjC-Basic/Class.html">
+            
+                <a href="../../ObjC-Basic/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2" data-path="../../ObjC-Basic/Block.html">
+            
+                <a href="../../ObjC-Basic/Block.html">
+            
+                    
+                    Block 编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.3" data-path="../../ObjC-Basic/Runtime.html">
+            
+                <a href="../../ObjC-Basic/Runtime.html">
+            
+                    
+                    Objective-C Runtime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.4" data-path="../../ObjC-Basic/MM.html">
+            
+                <a href="../../ObjC-Basic/MM.html">
+            
+                    
+                    Objective-C 内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.5" data-path="../../ObjC-Basic/Runloop.html">
+            
+                <a href="../../ObjC-Basic/Runloop.html">
+            
+                    
+                    Runloop
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../../Cocoa-Touch/">
+            
+                <a href="../../Cocoa-Touch/">
+            
+                    
+                    Cocoa Touch
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="../../Cocoa-Touch/Event-Handling.html">
+            
+                <a href="../../Cocoa-Touch/Event-Handling.html">
+            
+                    
+                    事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2" data-path="../../Cocoa-Touch/UIApplication.html">
+            
+                <a href="../../Cocoa-Touch/UIApplication.html">
+            
+                    
+                    UIApplication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.3" data-path="../../Cocoa-Touch/UIView-Basic.html">
+            
+                <a href="../../Cocoa-Touch/UIView-Basic.html">
+            
+                    
+                    UIView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.4" data-path="../../Cocoa-Touch/UIViewController.html">
+            
+                <a href="../../Cocoa-Touch/UIViewController.html">
+            
+                    
+                    UIViewController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.5" data-path="../../Cocoa-Touch/Animation.html">
+            
+                <a href="../../Cocoa-Touch/Animation.html">
+            
+                    
+                    动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.6" data-path="../../Cocoa-Touch/Network.html">
+            
+                <a href="../../Cocoa-Touch/Network.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.7" data-path="../../Cocoa-Touch/Multithreading.html">
+            
+                <a href="../../Cocoa-Touch/Multithreading.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../../Cocoa-Touch/File-System.html">
+            
+                <a href="../../Cocoa-Touch/File-System.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.9" data-path="../../Cocoa-Touch/Design.html">
+            
+                <a href="../../Cocoa-Touch/Design.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.10" data-path="../../Cocoa-Touch/Performance.html">
+            
+                <a href="../../Cocoa-Touch/Performance.html">
+            
+                    
+                    性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../../Swift/">
+            
+                <a href="../../Swift/">
+            
+                    
+                    Swift
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="../../Swift/Class.html">
+            
+                <a href="../../Swift/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="../../Swift/Struct-And-Enum.html">
+            
+                <a href="../../Swift/Struct-And-Enum.html">
+            
+                    
+                    结构体与枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3" data-path="../../Swift/Function-And-Closure.html">
+            
+                <a href="../../Swift/Function-And-Closure.html">
+            
+                    
+                    函数与闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../../Interview/">
+            
+                <a href="../../Interview/">
+            
+                    
+                    面试问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1" data-path="../../Interview/iOSInterviewQuestions/">
+            
+                <a href="../../Interview/iOSInterviewQuestions/">
+            
+                    
+                    《招聘一个靠谱的iOS》
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1.1" data-path="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.1.2" data-path="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.2" data-path="../../interview/ZhiHu-QA/">
+            
+                <a href="../../interview/ZhiHu-QA/">
+            
+                    
+                    关于一些 iOS 面试问题的解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.3" data-path="../../interview/iOSDeveloperQA/">
+            
+                <a href="../../interview/iOSDeveloperQA/">
+            
+                    
+                    iOS 开发面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.4" data-path="../../interview/MXR-QA/">
+            
+                <a href="../../interview/MXR-QA/">
+            
+                    
+                    MXR 面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    源码分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1" data-path="../AFNetworking/AFNetworking_1.html">
+            
+                <a href="../AFNetworking/AFNetworking_1.html">
+            
+                    
+                    AFNetworking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1.1" data-path="../AFNetworking/AFNetworking_2.html">
+            
+                <a href="../AFNetworking/AFNetworking_2.html">
+            
+                    
+                    AFURLSessionManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.2" data-path="../AFNetworking/AFNetworking_3.html">
+            
+                <a href="../AFNetworking/AFNetworking_3.html">
+            
+                    
+                    AFURLSerialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.3" data-path="../AFNetworking/AFNetworking_4.html">
+            
+                <a href="../AFNetworking/AFNetworking_4.html">
+            
+                    
+                    AFNetworkReachabilityManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.4" data-path="../AFNetworking/AFNetworking_5.html">
+            
+                <a href="../AFNetworking/AFNetworking_5.html">
+            
+                    
+                    HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.2" data-path="../Alamofire/">
+            
+                <a href="../Alamofire/">
+            
+                    
+                    Alamofire
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3" data-path="../architecture/mvx.html">
+            
+                <a href="../architecture/mvx.html">
+            
+                    
+                    architecture
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.3.1" data-path="../architecture/mvx-model.html">
+            
+                <a href="../architecture/mvx-model.html">
+            
+                    
+                    MVX-Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.2" data-path="../architecture/mvx-view.html">
+            
+                <a href="../architecture/mvx-view.html">
+            
+                    
+                    MVX-View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.3" data-path="../architecture/mvx-controller.html">
+            
+                <a href="../architecture/mvx-controller.html">
+            
+                    
+                    MVX-Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4" >
+            
+                <span>
+            
+                    
+                    AsyncDisplayKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.4.1" data-path="../AsyncDisplayKit/ASDK_1.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_1.html">
+            
+                    
+                    提升界面的渲染性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4.2" data-path="../AsyncDisplayKit/ASDK_2.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_2.html">
+            
+                    
+                    布局算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4.3" data-path="../AsyncDisplayKit/ASDK_3.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_3.html">
+            
+                    
+                    预加载与智能预加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5" >
+            
+                <span>
+            
+                    
+                    BlocksKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.5.1" data-path="../BlocksKit/BlocksKit_1.html">
+            
+                <a href="../BlocksKit/BlocksKit_1.html">
+            
+                    
+                    神奇的 BlocksKit (一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5.2" data-path="../BlocksKit/BlocksKit_2.html">
+            
+                <a href="../BlocksKit/BlocksKit_2.html">
+            
+                    
+                    神奇的 BlocksKit (二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.6" data-path="../Blog/initialize-comments.html">
+            
+                <a href="../Blog/initialize-comments.html">
+            
+                    
+                    Gitalk/Gitment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7" >
+            
+                <span>
+            
+                    
+                    CocoaPods
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.7.1" data-path="../CocoaPods/CocoaPods.html">
+            
+                <a href="../CocoaPods/CocoaPods.html">
+            
+                    
+                    CocoaPods 都做了什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7.2" data-path="../CocoaPods/DSL.html">
+            
+                <a href="../CocoaPods/DSL.html">
+            
+                    
+                    DSL 以及 DSL 的应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8" >
+            
+                <span>
+            
+                    
+                    Database
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.8.1" data-path="concurrency-control.html">
+            
+                <a href="concurrency-control.html">
+            
+                    
+                    数据库并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.2" data-path="dynamo.html">
+            
+                <a href="dynamo.html">
+            
+                    
+                    分布式键值存储 Dynamo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.3" data-path="leveldb-bigtable.html">
+            
+                <a href="leveldb-bigtable.html">
+            
+                    
+                    Bigtable 和 LevelDB 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.5.8.4" data-path="mongodb-to-mysql.html">
+            
+                <a href="mongodb-to-mysql.html">
+            
+                    
+                    MongoDB 迁移到 MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.5" data-path="mongodb-wiredtiger.html">
+            
+                <a href="mongodb-wiredtiger.html">
+            
+                    
+                    MongoDB 和 WiredTiger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.6" data-path="mysql.html">
+            
+                <a href="mysql.html">
+            
+                    
+                    MySQL 和 InnoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.7" data-path="sql-index-intro.html">
+            
+                <a href="sql-index-intro.html">
+            
+                    
+                    MySQL 索引设计概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.8" data-path="sql-index-performance.html">
+            
+                <a href="sql-index-performance.html">
+            
+                    
+                    MySQL 索引性能分析概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.9" data-path="transaction.html">
+            
+                <a href="transaction.html">
+            
+                    
+                    MySQL 中事务的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.9" data-path="../DKNightVersion/DKNightVersion.html">
+            
+                <a href="../DKNightVersion/DKNightVersion.html">
+            
+                    
+                    DKNightVersion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10" >
+            
+                <span>
+            
+                    
+                    FBRetainCycleDetector
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.10.1" data-path="../FBRetainCycleDetector/block.html">
+            
+                <a href="../FBRetainCycleDetector/block.html">
+            
+                    
+                    block 如何持有对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.2" data-path="../FBRetainCycleDetector/Obj-Associated.html">
+            
+                <a href="../FBRetainCycleDetector/Obj-Associated.html">
+            
+                    
+                    Associated Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.3" data-path="../FBRetainCycleDetector/Obj-Strong.html">
+            
+                <a href="../FBRetainCycleDetector/Obj-Strong.html">
+            
+                    
+                    对象持有的强指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.4" data-path="../FBRetainCycleDetector/retain_cycle.html">
+            
+                <a href="../FBRetainCycleDetector/retain_cycle.html">
+            
+                    
+                    解决循环引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.11" data-path="../fishhook/fishhook.html">
+            
+                <a href="../fishhook/fishhook.html">
+            
+                    
+                    fishhook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.12" data-path="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                <a href="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                    
+                    IQKeyboardManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.13" data-path="../KVOController/KVOController.html">
+            
+                <a href="../KVOController/KVOController.html">
+            
+                    
+                    KVOController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.14" data-path="../libextobjc/libextobjc.html">
+            
+                <a href="../libextobjc/libextobjc.html">
+            
+                    
+                    libextobjc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.15" data-path="../Masonry/Masonry.html">
+            
+                <a href="../Masonry/Masonry.html">
+            
+                    
+                    Masonry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.16" data-path="../MBProgressHUD/">
+            
+                <a href="../MBProgressHUD/">
+            
+                    
+                    MBProgressHUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17" data-path="../objc/">
+            
+                <a href="../objc/">
+            
+                    
+                    objc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.17.1" data-path="../objc/associated-obj.html">
+            
+                <a href="../objc/associated-obj.html">
+            
+                    
+                    关联对象 AssociatedObject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.2" data-path="../objc/autoreleasepool.html">
+            
+                <a href="../objc/autoreleasepool.html">
+            
+                    
+                    自动释放池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.3" data-path="../objc/black-box-retain-release.html">
+            
+                <a href="../objc/black-box-retain-release.html">
+            
+                    
+                    黑箱中的 retain 和 release
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.4" data-path="../objc/func-structure.html">
+            
+                <a href="../objc/func-structure.html">
+            
+                    
+                    ObjC 中方法的结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.5" data-path="../objc/hash.html">
+            
+                <a href="../objc/hash.html">
+            
+                    
+                    哈希表的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.6" data-path="../objc/initialization.html">
+            
+                <a href="../objc/initialization.html">
+            
+                    
+                    初始化对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.7" data-path="../objc/isa.html">
+            
+                <a href="../objc/isa.html">
+            
+                    
+                    isa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.8" data-path="../objc/lazy-initialize.html">
+            
+                <a href="../objc/lazy-initialize.html">
+            
+                    
+                    懒惰的 initialize 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.9" data-path="../objc/load.html">
+            
+                <a href="../objc/load.html">
+            
+                    
+                    load 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.10" data-path="../objc/msgSend.html">
+            
+                <a href="../objc/msgSend.html">
+            
+                    
+                    消息传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18" >
+            
+                <span>
+            
+                    
+                    OHHTTPStubs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.18.1" data-path="../OHHTTPStubs/intercept.html">
+            
+                <a href="../OHHTTPStubs/intercept.html">
+            
+                    
+                    HTTP Intercept
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18.2" data-path="../OHHTTPStubs/mock.html">
+            
+                <a href="../OHHTTPStubs/mock.html">
+            
+                    
+                    HTTP Mock
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.19" data-path="../ProtocolKit/ProtocolKit.html">
+            
+                <a href="../ProtocolKit/ProtocolKit.html">
+            
+                    
+                    ProtocolKit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20" data-path="../rack/rack.html">
+            
+                <a href="../rack/rack.html">
+            
+                    
+                    rack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.20.1" data-path="../rack/rack-thin.html">
+            
+                <a href="../rack/rack-thin.html">
+            
+                    
+                    Thin 的事件驱动模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20.2" data-path="../rack/rack-unicorn.html">
+            
+                <a href="../rack/rack-unicorn.html">
+            
+                    
+                    Unicorn 的多进程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20.3" data-path="../rack/rack-webrik.html">
+            
+                <a href="../rack/rack-webrik.html">
+            
+                    
+                    WEBrick 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.21" data-path="../Rails/activerecord.html">
+            
+                <a href="../Rails/activerecord.html">
+            
+                    
+                    Rails
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22" >
+            
+                <span>
+            
+                    
+                    ReactiveObjC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.22.1" data-path="../ReactiveObjC/RACChannel.html">
+            
+                <a href="../ReactiveObjC/RACChannel.html">
+            
+                    
+                    RACChannel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.2" data-path="../ReactiveObjC/RACCommand.html">
+            
+                <a href="../ReactiveObjC/RACCommand.html">
+            
+                    
+                    RACCommand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.3" data-path="../ReactiveObjC/RACDelegateProxy.html">
+            
+                <a href="../ReactiveObjC/RACDelegateProxy.html">
+            
+                    
+                    RACDelegateProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.4" data-path="../ReactiveObjC/RACMulticastConnection.html">
+            
+                <a href="../ReactiveObjC/RACMulticastConnection.html">
+            
+                    
+                    RACMulticastConnection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.5" data-path="../ReactiveObjC/RACScheduler.html">
+            
+                <a href="../ReactiveObjC/RACScheduler.html">
+            
+                    
+                    RACScheduler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.6" data-path="../ReactiveObjC/RACSequence.html">
+            
+                <a href="../ReactiveObjC/RACSequence.html">
+            
+                    
+                    RACSequence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.7" data-path="../ReactiveObjC/RACSignal.html">
+            
+                <a href="../ReactiveObjC/RACSignal.html">
+            
+                    
+                    RACSignal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.8" data-path="../ReactiveObjC/RACSubject.html">
+            
+                <a href="../ReactiveObjC/RACSubject.html">
+            
+                    
+                    RACSubject
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23" >
+            
+                <span>
+            
+                    
+                    Redis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.23.1" data-path="../Redis/redis-cli.html">
+            
+                <a href="../Redis/redis-cli.html">
+            
+                    
+                    命令处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.2" data-path="../Redis/redis-eventloop.html">
+            
+                <a href="../Redis/redis-eventloop.html">
+            
+                    
+                    事件循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.3" data-path="../Redis/redis-io-multiplexing.html">
+            
+                <a href="../Redis/redis-io-multiplexing.html">
+            
+                    
+                    I/O 多路复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.24" data-path="../Ruby/Ruby.html">
+            
+                <a href="../Ruby/Ruby.html">
+            
+                    
+                    Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.25" data-path="../SDWebImage/">
+            
+                <a href="../SDWebImage/">
+            
+                    
+                    SDWebImage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="../../More.html">
+            
+                <a href="../../More.html">
+            
+                    
+                    更多资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >MongoDB 迁移到 MySQL</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5982;&#x4F55;&#x4ECE;-mongodb-&#x8FC1;&#x79FB;&#x5230;-mysql">&#x5982;&#x4F55;&#x4ECE; MongoDB &#x8FC1;&#x79FB;&#x5230; MySQL</h1>
+<p>&#x6700;&#x8FD1;&#x7684;&#x4E00;&#x4E2A;&#x591A;&#x6708;&#x65F6;&#x95F4;&#x5176;&#x5B9E;&#x90FD;&#x5728;&#x505A;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8FC1;&#x79FB;&#x5DE5;&#x4F5C;&#xFF0C;&#x6211;&#x76EE;&#x524D;&#x5728;&#x5F00;&#x53D1;&#x7684;&#x9879;&#x76EE;&#x5176;&#x5B9E;&#x5728;&#x4E0A;&#x53E4;&#x65F6;&#x4EE3;&#x662F;&#x4F7F;&#x7528; MySQL &#x4F5C;&#x4E3A;&#x4E3B;&#x8981;&#x6570;&#x636E;&#x5E93;&#x7684;&#xFF0C;&#x540E;&#x6765;&#x7531;&#x4E8E;&#x4E00;&#x4E9B;&#x4E1A;&#x52A1;&#x4E0A;&#x7684;&#x539F;&#x56E0;&#x4ECE; MySQL &#x8FC1;&#x79FB;&#x5230;&#x4E86; MongoDB&#xFF0C;&#x4F7F;&#x7528;&#x4E86;&#x51E0;&#x4E2A;&#x6708;&#x7684;&#x65F6;&#x95F4;&#x540E;&#xFF0C;&#x7531;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x670D;&#x52A1;&#x975E;&#x5E38;&#x4E0D;&#x7A33;&#x5B9A;&#xFF0C;&#x518D;&#x52A0;&#x4E0A;&#x65E0;&#x4EBA;&#x770B;&#x7BA1;&#xFF0C;&#x540C;&#x65F6; MongoDB &#x672C;&#x8EAB;&#x5C31;&#x662F;&#x65E0; Schema &#x7684;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x6700;&#x540E;&#x5BFC;&#x81F4;&#x6570;&#x636E;&#x5E93;&#x7684;&#x810F;&#x6570;&#x636E;&#x95EE;&#x9898;&#x975E;&#x5E38;&#x4E25;&#x91CD;&#x3002;&#x76EE;&#x524D;&#x56E2;&#x961F;&#x7684;&#x6210;&#x5458;&#x6CA1;&#x6709;&#x8F83;&#x4E3A;&#x4E30;&#x5BCC;&#x7684; Rails &#x5F00;&#x53D1;&#x7ECF;&#x9A8C;&#xFF0C;&#x6240;&#x4EE5;&#x8FD8;&#x662F;&#x5E0C;&#x671B;&#x4F7F;&#x7528; ActiveRecord &#x52A0;&#x4E0A; Migration &#x7684;&#x65B9;&#x5F0F;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x4E00;&#x4E9B;&#x5F3A;&#x9650;&#x5236;&#xFF0C;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x6570;&#x636E;&#x7684;&#x5408;&#x6CD5;&#x3002;</p>
+<p><img src="images/mongodb-to-mysql/mysql-and-mongodb.png" alt="mysql-and-mongodb"></p>
+<p>&#x6587;&#x4E2D;&#x4F1A;&#x4ECB;&#x7ECD;&#x4F5C;&#x8005;&#x5728;&#x8FC1;&#x79FB;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x9047;&#x5230;&#x7684;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#xFF0C;&#x5E76;&#x4E3A;&#x5404;&#x4F4D;&#x8BFB;&#x8005;&#x63D0;&#x4F9B;&#x9700;&#x8981;<strong>&#x505C;&#x673A;</strong>&#x8FC1;&#x79FB;&#x6570;&#x636E;&#x5E93;&#x7684;&#x53EF;&#x884C;&#x65B9;&#x6848;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x4E0D;&#x505C;&#x673A;&#x8FC1;&#x79FB;&#x6570;&#x636E;&#x5E93;&#x8FD8;&#x662F;&#x9700;&#x8981;&#x522B;&#x7684;&#x65B9;&#x6848;&#x6765;&#x89E3;&#x51B3;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x63D0;&#x4F9B;&#x7684;&#x65B9;&#x6848;&#x7528;&#x4E8E;&#x767E;&#x4E07;&#x6570;&#x636E;&#x91CF;&#x7684; MongoDB&#xFF0C;&#x9884;&#x8BA1;&#x7684;&#x505C;&#x673A;&#x65F6;&#x95F4;&#x5728;&#x4E24;&#x5C0F;&#x65F6;&#x5DE6;&#x53F3;&#xFF0C;&#x5982;&#x679C;&#x6570;&#x636E;&#x91CF;&#x5728;&#x5343;&#x4E07;&#x7EA7;&#x522B;&#x4EE5;&#x4E0A;&#xFF0C;&#x8FC7;&#x957F;&#x7684;&#x505C;&#x673A;&#x65F6;&#x95F4;&#x53EF;&#x80FD;&#x662F;&#x65E0;&#x6CD5;&#x63A5;&#x53D7;&#x7684;&#xFF0C;&#x5E94;&#x8BE5;&#x8BBE;&#x8BA1;&#x4E0D;&#x505C;&#x673A;&#x7684;&#x8FC1;&#x79FB;&#x65B9;&#x6848;&#xFF1B;&#x65E0;&#x8BBA;&#x5982;&#x4F55;&#xFF0C;&#x4F5C;&#x8005;&#x5E0C;&#x671B;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x80FD;&#x591F;&#x7ED9;&#x60F3;&#x8981;&#x505A;&#x6570;&#x636E;&#x5E93;&#x8FC1;&#x79FB;&#x7684;&#x5F00;&#x53D1;&#x8005;&#x5E26;&#x6765;&#x4E00;&#x4E9B;&#x601D;&#x8DEF;&#xFF0C;&#x5C11;&#x8D70;&#x4E00;&#x4E9B;&#x5751;&#x3002;</p>
+<h2 id="&#x4ECE;&#x5173;&#x7CFB;&#x5230;&#x6587;&#x6863;">&#x4ECE;&#x5173;&#x7CFB;&#x5230;&#x6587;&#x6863;</h2>
+<p>&#x867D;&#x7136;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x7684;&#x91CD;&#x70B9;&#x662F;&#x4ECE; MongoDB &#x8FC1;&#x79FB;&#x5230; MySQL&#xFF0C;&#x4F46;&#x662F;&#x4F5C;&#x8005;&#x8FD8;&#x662F;&#x60F3;&#x7B80;&#x5355;&#x63D0;&#x4E00;&#x4E0B;&#x4ECE; MySQL &#x5230; MongoDB &#x7684;&#x8FC1;&#x79FB;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4EC5;&#x4EC5;&#x662F;&#x5C06; MySQL &#x4E2D;&#x7684;&#x5168;&#x90E8;&#x6570;&#x636E;&#x5BFC;&#x5165;&#x5230; MongoDB &#x4E2D;&#x5176;&#x5B9E;&#x662F;&#x4E00;&#x95F4;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x5176;&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x539F;&#x56E0;&#x5C31;&#x662F; <strong>MySQL &#x652F;&#x6301;&#x7684;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x662F; MongoDB &#x7684;&#x5B50;&#x96C6;</strong>&#xFF1A;</p>
+<p><img src="images/mongodb-to-mysql/mongodb-mysql-datatype-relation.png" alt="mongodb-mysql-datatype-relation"></p>
+<p>&#x5728;&#x8FC1;&#x79FB;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x53EF;&#x4EE5;&#x5C06; MySQL &#x4E2D;&#x7684;&#x5168;&#x90E8;&#x6570;&#x636E;&#x4EE5; csv &#x7684;&#x683C;&#x5F0F;&#x5BFC;&#x51FA;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5C06;&#x6240;&#x6709; csv &#x683C;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x4F7F;&#x7528; <code>mongoimport</code> &#x5168;&#x90E8;&#x5BFC;&#x5165;&#x5230; MongoDB &#x4E2D;&#xFF1A;</p>
+<pre><code>$ mysqldump -u&lt;username&gt; -p&lt;password&gt; \
+    -T &lt;output_directory&gt; \
+    --fields-terminated-by &apos;,&apos; \
+    --fields-enclosed-by &apos;\&quot;&apos; \
+    --fields-escaped-by &apos;\&apos; \
+    --no-create-info &lt;database_name&gt;
+
+$ mongoimport --db &lt;database_name&gt; --collection &lt;collection_name&gt; \
+    --type csv \
+    --file &lt;data.csv&gt; \
+    --headerline
+</code></pre><p>&#x867D;&#x7136;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x770B;&#x8D77;&#x6765;&#x53EA;&#x9700;&#x8981;&#x4E24;&#x4E2A;&#x547D;&#x4EE4;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x4F46;&#x662F;&#x7B49;&#x5230;&#x4F60;&#x771F;&#x8981;&#x53BB;&#x505A;&#x7684;&#x65F6;&#x5019;&#x4F60;&#x4F1A;&#x9047;&#x5230;&#x975E;&#x5E38;&#x591A;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4F5C;&#x8005;&#x6CA1;&#x6709;&#x8FC7;&#x4ECE; MySQL &#x6216;&#x8005;&#x5176;&#x4ED6;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x5E93;&#x8FC1;&#x79FB;&#x5230; MongoDB &#x7684;&#x7ECF;&#x9A8C;&#xFF0C;&#x4F46;&#x662F; Google &#x4E0A;&#x76F8;&#x5173;&#x7684;&#x8D44;&#x6599;&#x7279;&#x522B;&#x591A;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x603B;&#x662F;&#x4E00;&#x4E2A;&#x6709;&#x65E0;&#x6570;&#x524D;&#x4EBA;&#x8E29;&#x8FC7;&#x5751;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x800C;&#x524D;&#x4EBA;&#x7684;&#x7ECF;&#x9A8C;&#x4E5F;&#x80FD;&#x591F;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x8282;&#x7701;&#x5F88;&#x591A;&#x65F6;&#x95F4;&#x3002;</p>
+<p><img src="images/mongodb-to-mysql/mysql-to-mongodb.png" alt="mysql-to-mongodb"></p>
+<blockquote>
+<p>&#x4F7F;&#x7528; csv &#x7684;&#x65B9;&#x5F0F;&#x5BFC;&#x51FA;&#x6570;&#x636E;&#x5728;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x7684;&#x60C5;&#x51B5;&#x90FD;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x67D0;&#x4E9B;&#x6587;&#x6863;&#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x662F;&#x5BCC;&#x6587;&#x672C;&#xFF0C;&#x90A3;&#x4E48;&#x867D;&#x7136;&#x5728;&#x5BFC;&#x51FA;&#x6570;&#x636E;&#x65F6;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#xFF0C;&#x6700;&#x7EC8;&#x5BFC;&#x5165;&#x65F6;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x4E00;&#x4E9B;&#x6BD4;&#x8F83;&#x5947;&#x602A;&#x7684;&#x9519;&#x8BEF;&#x3002;</p>
+</blockquote>
+<h2 id="&#x4ECE;&#x6587;&#x6863;&#x5230;&#x5173;&#x7CFB;">&#x4ECE;&#x6587;&#x6863;&#x5230;&#x5173;&#x7CFB;</h2>
+<p>&#x76F8;&#x6BD4;&#x4E8E;&#x4ECE; MySQL &#x5230; MongoDB &#x7684;&#x8FC1;&#x79FB;&#xFF0C;&#x53CD;&#x5411;&#x7684;&#x8FC1;&#x79FB;&#x5C31;&#x9EBB;&#x70E6;&#x4E86;&#x4E0D;&#x6B62;&#x4E00;&#x500D;&#xFF0C;&#x8FD9;&#x4E3B;&#x8981;&#x662F;&#x56E0;&#x4E3A; MongoDB &#x4E2D;&#x7684;&#x5F88;&#x591A;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x548C;&#x96C6;&#x5408;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x5728; MySQL &#x4E2D;&#x90FD;&#x5E76;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x6BD4;&#x5982;&#x5D4C;&#x5165;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3001;&#x6570;&#x7EC4;&#x548C;&#x54C8;&#x5E0C;&#x7B49;&#x96C6;&#x5408;&#x7C7B;&#x578B;&#x3001;&#x591A;&#x5BF9;&#x591A;&#x5173;&#x7CFB;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5F88;&#x591A;&#x7684;&#x95EE;&#x9898;&#x90FD;&#x4E0D;&#x662F;&#x4EC5;&#x4EC5;&#x80FD;&#x901A;&#x8FC7;&#x6570;&#x636E;&#x4E0A;&#x7684;&#x8FC1;&#x79FB;&#x89E3;&#x51B3;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5728;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x8FC1;&#x79FB;&#x4E4B;&#x524D;&#x5148;&#x5BF9;&#x90E8;&#x5206;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x8FDB;&#x884C;&#x91CD;&#x6784;&#xFF0C;&#x672C;&#x6587;&#x4E2D;&#x7684;&#x540E;&#x534A;&#x90E8;&#x5206;&#x4F1A;&#x4ECB;&#x7ECD;&#x9700;&#x8981;&#x5904;&#x7406;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x548C;&#x903B;&#x8F91;&#x3002;</p>
+<p><img src="images/mongodb-to-mysql/mongodb-mysql-problems-to-be-solved.png" alt="mongodb-mysql-problems-to-be-solved"></p>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x51C6;&#x5907;&#x5C06;&#x6570;&#x636E;&#x5E93;&#x5F7B;&#x5E95;&#x8FC1;&#x79FB;&#x5230; MySQL &#x4E4B;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x505A;&#x4E00;&#x4E9B;&#x51C6;&#x5907;&#x5DE5;&#x4F5C;&#xFF0C;&#x5C06;&#x6700;&#x540E;&#x8FC1;&#x79FB;&#x6240;&#x9700;&#x8981;&#x7684;&#x5DE5;&#x4F5C;&#x5C3D;&#x53EF;&#x80FD;&#x5730;&#x51CF;&#x5C11;&#xFF0C;&#x4FDD;&#x8BC1;&#x505C;&#x673A;&#x7684;&#x65F6;&#x95F4;&#x4E0D;&#x4F1A;&#x592A;&#x957F;&#xFF0C;&#x51C6;&#x5907;&#x5DE5;&#x4F5C;&#x7684;&#x76EE;&#x6807;&#x5C31;&#x662F;&#x5C3D;&#x91CF;&#x6D88;&#x706D;&#x5DE5;&#x7A0B;&#x4E2D;&#x590D;&#x6742;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;</p>
+<h3 id="&#x6570;&#x636E;&#x7684;&#x9884;&#x5904;&#x7406;">&#x6570;&#x636E;&#x7684;&#x9884;&#x5904;&#x7406;</h3>
+<p>&#x5728;&#x8FDB;&#x884C;&#x8FC1;&#x79FB;&#x4E4B;&#x524D;&#x8981;&#x505A;&#x5F88;&#x591A;&#x51C6;&#x5907;&#x5DE5;&#x4F5C;&#xFF0C;&#x7B2C;&#x4E00;&#x4EF6;&#x4E8B;&#x60C5;&#x662F;&#x8981;&#x628A;&#x6240;&#x6709;&#x5D4C;&#x5165;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x6539;&#x6210;&#x975E;&#x5D4C;&#x5165;&#x5F0F;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF1A;</p>
+<p><img src="images/mongodb-to-mysql/embedded-reference-documents.png" alt="embedded-reference-documents"></p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x628A;&#x6240;&#x6709; <code>embeds_many</code> &#x548C; <code>embeds_one</code> &#x7684;&#x5173;&#x7CFB;&#x90FD;&#x6539;&#x6210; <code>has_many</code> &#x548C; <code>has_one</code>&#xFF0C;&#x540C;&#x65F6;&#x5C06; <code>embedded_in</code> &#x90FD;&#x66FF;&#x6362;&#x6210; <code>belongs_to</code>&#xFF0C;&#x540C;&#x65F6;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5C06;&#x5DE5;&#x7A0B;&#x4E2D;&#x5BF9;&#x5E94;&#x7684;&#x6D4B;&#x8BD5;&#x90FD;&#x6539;&#x6210;&#x8FD9;&#x79CD;&#x5F15;&#x7528;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x7136;&#x800C;&#x53EA;&#x6539;&#x53D8;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x5173;&#x7CFB;&#x5E76;&#x6CA1;&#x6709;&#x771F;&#x6B63;&#x6539;&#x53D8; MongoDB &#x4E2D;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">embeds_many_to_has_many</span><span class="hljs-params">(parent, child)</span></span>
+  child_key_name = child.to_s.underscore.pluralize
+  parent.collection.find({}).each <span class="hljs-keyword">do</span> |parent_document|
+    <span class="hljs-keyword">next</span> <span class="hljs-keyword">unless</span> parent_document[child_key_name]
+    parent_document[child_key_name].each <span class="hljs-keyword">do</span> |child_document|
+      new_child = child_document.merge <span class="hljs-string">&quot;<span class="hljs-subst">#{parent.to_s.underscore}</span>_id&quot;</span><span class="hljs-symbol">:</span> parent_document[<span class="hljs-string">&apos;_id&apos;</span>]
+      child.collection.insert_one new_child
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+  parent.all.unset(child_key_name.to_sym)
+<span class="hljs-keyword">end</span>
+
+embeds_many_to_has_many(Person, Address)
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0A;&#x8FF0;&#x7684;&#x4EE3;&#x7801;&#x5C06;&#x5173;&#x7CFB;&#x4E3A;&#x5D4C;&#x5165;&#x7684;&#x6A21;&#x578B;&#x90FD;&#x8F6C;&#x6362;&#x6210;&#x5F15;&#x7528;&#xFF0C;&#x62CD;&#x5E73;&#x6240;&#x6709;&#x590D;&#x6742;&#x7684;&#x6570;&#x636E;&#x5173;&#x7CFB;&#xFF0C;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x8FD0;&#x884C;&#x65F6;&#x95F4;&#x4E0E;&#x5D4C;&#x5165;&#x5173;&#x7CFB;&#x4E2D;&#x7684;&#x4E24;&#x4E2A;&#x6A21;&#x578B;&#x7684;&#x6570;&#x91CF;&#x6709;&#x5173;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;MongoDB &#x4E2D;&#x5D4C;&#x5165;&#x6A21;&#x578B;&#x7684;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x56E0;&#x4E3A;&#x67D0;&#x4E9B;&#x539F;&#x56E0;&#x51FA;&#x73B0;&#x76F8;&#x540C;&#x7684; <code>_id</code> &#x5728;&#x63D2;&#x5165;&#x65F6;&#x4F1A;&#x53D1;&#x751F;&#x51B2;&#x7A81;&#x5BFC;&#x81F4;&#x5D29;&#x6E83;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5BF9; <code>insert_one</code> &#x4F7F;&#x7528; <code>resuce</code> &#x6765;&#x4FDD;&#x8BC1;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x8FD0;&#x884C;&#x4E0D;&#x4F1A;&#x56E0;&#x4E3A;&#x4E0A;&#x8FF0;&#x539F;&#x56E0;&#x800C;&#x505C;&#x6B62;&#x3002;</p>
+<p><img src="images/mongodb-to-mysql/embedded-to-reference.png" alt="embedded-to-reference"></p>
+<p>&#x901A;&#x8FC7;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x8F7B;&#x677E;&#x5C06;&#x539F;&#x6709;&#x7684;&#x5D4C;&#x5165;&#x5173;&#x7CFB;&#x5168;&#x90E8;&#x5C55;&#x5F00;&#x53D8;&#x6210;&#x5F15;&#x7528;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x5C06;&#x5D4C;&#x5165;&#x7684;&#x5173;&#x7CFB;&#x53D8;&#x6210;&#x5F15;&#x7528;&#x9664;&#x4E86;&#x505A;&#x8FD9;&#x4E24;&#x4E2A;&#x6539;&#x53D8;&#x4E4B;&#x5916;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x505A;&#x5176;&#x4ED6;&#x7684;&#x4E8B;&#x60C5;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x6570;&#x636E;&#x7684;&#x67E5;&#x8BE2;&#x8FD8;&#x662F;&#x6A21;&#x578B;&#x7684;&#x521B;&#x5EFA;&#x90FD;&#x4E0D;&#x9700;&#x8981;&#x6539;&#x53D8;&#x4EE3;&#x7801;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x4E0D;&#x8FC7;&#x8BB0;&#x5F97;&#x4E3A;&#x5B50;&#x6A21;&#x578B;&#x4E2D;&#x7236;&#x6A21;&#x578B;&#x7684;&#x5916;&#x952E;<strong>&#x6DFB;&#x52A0;&#x7D22;&#x5F15;</strong>&#xFF0C;&#x5426;&#x5219;&#x4F1A;&#x5BFC;&#x81F4;&#x7236;&#x6A21;&#x578B;&#x5728;&#x83B7;&#x53D6;&#x81EA;&#x5DF1;&#x6301;&#x6709;&#x7684;&#x5168;&#x90E8;&#x5B50;&#x6A21;&#x578B;&#x65F6;&#x9020;&#x6210;<strong>&#x5168;&#x8868;&#x626B;&#x63CF;</strong>&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Comment</span></span>
+  <span class="hljs-keyword">include</span> <span class="hljs-symbol">Mongoid:</span><span class="hljs-symbol">:Document</span>
+  index <span class="hljs-symbol">post_id:</span> <span class="hljs-number">1</span>
+  belongs_to <span class="hljs-symbol">:post</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x5728;&#x5904;&#x7406;&#x4E86; MongoDB &#x4E2D;&#x72EC;&#x6709;&#x7684;&#x5D4C;&#x5165;&#x5F0F;&#x5173;&#x7CFB;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x9700;&#x8981;&#x89E3;&#x51B3;&#x4E00;&#x4E9B;&#x590D;&#x6742;&#x7684;&#x96C6;&#x5408;&#x7C7B;&#x578B;&#x4E86;&#xFF0C;&#x6BD4;&#x5982;&#x6570;&#x7EC4;&#x548C;&#x54C8;&#x5E0C;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4F7F;&#x7528; MySQL5.7 &#x6216;&#x8005; PostgreSQL &#x7684;&#x8BDD;&#xFF0C;&#x5176;&#x5B9E;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x5BF9;&#x4ED6;&#x4EEC;&#x8FDB;&#x884C;&#x5904;&#x7406;&#xFF0C;&#x56E0;&#x4E3A;&#x6700;&#x65B0;&#x7248;&#x672C;&#x7684; MySQL &#x548C; PostgreSQL &#x5DF2;&#x7ECF;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9; JSON &#x7684;&#x652F;&#x6301;&#xFF0C;&#x4E0D;&#x8FC7;&#x4F5C;&#x8005;&#x8FD8;&#x662F;&#x5C06;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x6570;&#x7EC4;&#x548C;&#x54C8;&#x5E0C;&#x90FD;&#x53D8;&#x6210;&#x4E86;&#x5E38;&#x89C1;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x53EF;&#x9009;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x5176;&#x5B9E;&#x5E76;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x6807;&#x51C6;&#x7B54;&#x6848;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x9700;&#x8981;&#x5C06;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x6210;&#x4E0D;&#x540C;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF1A;</p>
+<p><img src="images/mongodb-to-mysql/array-to-string-or-relation.png" alt="array-to-string-or-relation"></p>
+<p>&#x6BD4;&#x5982;&#xFF0C;&#x5C06;&#x6570;&#x7EC4;&#x53D8;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x8005;&#x4E00;&#x5BF9;&#x591A;&#x5173;&#x7CFB;&#xFF0C;&#x5C06;&#x54C8;&#x5E0C;&#x53D8;&#x6210;&#x5F53;&#x524D;&#x6587;&#x6863;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x7B49;&#x7B49;&#xFF0C;&#x5982;&#x4F55;&#x5904;&#x7406;&#x8FD9;&#x4E9B;&#x96C6;&#x5408;&#x6570;&#x636E;&#x5176;&#x5B9E;&#x90FD;&#x8981;&#x770B;&#x6211;&#x4EEC;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#xFF0C;&#x5728;&#x6539;&#x53D8;&#x8FD9;&#x4E9B;&#x5B57;&#x6BB5;&#x7684;&#x540C;&#x65F6;&#x5C3D;&#x91CF;&#x4E3A;&#x4E0A;&#x5C42;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x4E0E;&#x539F;&#x6765;&#x76F4;&#x63A5; <code>.tags</code> &#x6216;&#x8005; <code>.categories</code> &#x7ED3;&#x679C;&#x76F8;&#x540C;&#x7684; API&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Post</span></span>
+  ...
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">tag_titles</span></span>
+    tags.map(&amp;<span class="hljs-symbol">:title</span>)
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">split_categories</span></span>
+    categories.split(<span class="hljs-string">&apos;,&apos;</span>)
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x8FD9;&#x4E00;&#x6B65;&#x5176;&#x5B9E;&#x4E5F;&#x662F;&#x53EF;&#x9009;&#x7684;&#xFF0C;&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x53EA;&#x662F;&#x4E3A;&#x4E86;&#x51CF;&#x5C11;&#x5176;&#x4ED6;&#x5730;&#x65B9;&#x7684;&#x4FEE;&#x6539;&#x8D1F;&#x62C5;&#xFF0C;&#x5F53;&#x7136;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x4F7F;&#x7528; MySQL5.7 &#x6216;&#x8005; PostgreSQL &#x6570;&#x636E;&#x5E93;&#x5BF9; JSON &#x7684;&#x652F;&#x6301;&#x4E5F;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x592A;&#x5927;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x53EA;&#x662F;&#x5728;&#x67E5;&#x8BE2;&#x96C6;&#x5408;&#x5B57;&#x6BB5;&#x65F6;&#x6709;&#x4E00;&#x4E9B;&#x4E0D;&#x65B9;&#x4FBF;&#x3002;</p>
+<h3 id="mongoid-&#x7684;&#x300E;&#x5C0F;&#x5144;&#x5F1F;&#x300F;&#x4EEC;">Mongoid &#x7684;&#x300E;&#x5C0F;&#x5144;&#x5F1F;&#x300F;&#x4EEC;</h3>
+<p>&#x5728;&#x4F7F;&#x7528; Mongoid &#x8FDB;&#x884C;&#x5F00;&#x53D1;&#x671F;&#x95F4;&#x96BE;&#x514D;&#x4F1A;&#x7528;&#x5230;&#x4E00;&#x4E9B;&#x76F8;&#x5173;&#x63D2;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982; <a href="https://github.com/thetron/mongoid-enum" target="_blank">mongoid-enum</a>&#x3001;<a href="https://github.com/mongoid/mongoid-slug" target="_blank">mongoid-slug</a> &#x548C; <a href="https://github.com/mongoid/mongoid-history" target="_blank">mongoid-history</a> &#x7B49;&#xFF0C;&#x8FD9;&#x4E9B;&#x63D2;&#x4EF6;&#x7684;&#x5B9E;&#x73B0;&#x4E0E; ActiveRecord &#x4E2D;&#x5177;&#x6709;&#x76F8;&#x540C;&#x529F;&#x80FD;&#x7684;&#x63D2;&#x4EF6;&#x5728;&#x5B9E;&#x73B0;&#x4E0A;&#x6709;&#x5F88;&#x5927;&#x7684;&#x4E0D;&#x540C;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x6709;&#x4E9B;&#x63D2;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982; mongoid-slug &#x53EA;&#x662F;&#x5728;&#x5F15;&#x5165;&#x63D2;&#x4EF6;&#x7684;&#x6A21;&#x578B;&#x7684;&#x6587;&#x6863;&#x4E2D;&#x63D2;&#x5165;&#x4E86; <code>_slugs</code> &#x5B57;&#x6BB5;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x5728;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x8FC1;&#x79FB;&#x5FFD;&#x7565;&#x8FD9;&#x4E9B;&#x6DFB;&#x52A0;&#x7684;&#x5B57;&#x6BB5;&#x5E76;&#x5C06;&#x6240;&#x6709;&#x7684; <code>#slug</code> &#x65B9;&#x6CD5;&#x6539;&#x6210; <code>#id</code>&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x5728;&#x9884;&#x5904;&#x7406;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x505A;&#x5176;&#x5B83;&#x7684;&#x6539;&#x53D8;&#x3002;&#x800C;&#x679A;&#x4E3E;&#x7684;&#x5B9E;&#x73B0;&#x5728; Mongoid &#x7684;&#x63D2;&#x4EF6;&#x548C; ActiveRecord &#x4E2D;&#x5C31;&#x622A;&#x7136;&#x4E0D;&#x540C;&#x4E86;&#xFF1A;</p>
+<p><img src="images/mongodb-to-mysql/mongodb-mysql-enum.png" alt="mongodb-mysql-enu"></p>
+<p>mongoid-enum &#x4F7F;&#x7528;&#x5B57;&#x7B26;&#x4E32;&#x548C; <code>_status</code> &#x6765;&#x4FDD;&#x5B58;&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x800C; ActiveRecord &#x4F7F;&#x7528;&#x6574;&#x6570;&#x548C; <code>status</code> &#x8868;&#x793A;&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#xFF0C;&#x4E24;&#x8005;&#x5728;&#x5E95;&#x5C42;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7684;&#x5B58;&#x50A8;&#x4E0A;&#x6709;&#x4E00;&#x4E9B;&#x4E0D;&#x540C;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x5728;&#x4E4B;&#x540E;&#x7684;&#x8FC1;&#x79FB;&#x811A;&#x672C;&#x4E2D;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<p><img src="images/mongodb-to-mysql/mongoid-activerecord-enum.png" alt="mongoid-activerecord-enum"></p>
+<p>&#x5982;&#x679C;&#x5728;&#x9879;&#x76EE;&#x4E2D;&#x4F7F;&#x7528;&#x4E86;&#x5F88;&#x591A; Mongoid &#x7684;&#x63D2;&#x4EF6;&#xFF0C;&#x7531;&#x4E8E;&#x5176;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EA;&#x80FD;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x63D2;&#x4EF6;&#x7684;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x6765;&#x51B3;&#x5B9A;&#x5982;&#x4F55;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x8FC1;&#x79FB;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x4E9B;&#x652F;&#x6301;&#x7279;&#x6B8A;&#x529F;&#x80FD;&#x7684;&#x63D2;&#x4EF6;&#x53EF;&#x80FD;&#x5F88;&#x96BE;&#x5728; ActiveRecord &#x4E2D;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x652F;&#x6301;&#xFF0C;&#x5728;&#x8FC1;&#x79FB;&#x65F6;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x6682;&#x65F6;&#x5C06;&#x90E8;&#x5206;&#x4E0D;&#x91CD;&#x8981;&#x7684;&#x529F;&#x80FD;&#x79FB;&#x9664;&#x3002;</p>
+<h3 id="&#x4E3B;&#x952E;&#x4E0E;-uuid">&#x4E3B;&#x952E;&#x4E0E; UUID</h3>
+<p>&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x4ECE; MongoDB &#x8FC1;&#x79FB;&#x5230; MySQL &#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x539F;&#x56E0;&#x5C31;&#x662F; MongoDB &#x6BCF;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#x7684;&#x4E3B;&#x952E;&#x5B9E;&#x5728;&#x662F;&#x592A;&#x8FC7;&#x5197;&#x957F;&#xFF0C;&#x4E00;&#x4E2A; 32 &#x5B57;&#x8282;&#x7684; <code>_id</code> &#x65E0;&#x6CD5;&#x7ED9;&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x7279;&#x522B;&#x591A;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x53EA;&#x80FD;&#x589E;&#x52A0;&#x6211;&#x4EEC;&#x7684;&#x9605;&#x8BFB;&#x969C;&#x788D;&#xFF0C;&#x518D;&#x52A0;&#x4E0A;&#x9879;&#x76EE;&#x4E2D;&#x5E76;&#x6CA1;&#x6709;&#x90E8;&#x7F72; MongoDB &#x96C6;&#x7FA4;&#xFF0C;&#x6240;&#x4EE5;&#x6CA1;&#x80FD;&#x4EAB;&#x53D7;&#x5230;&#x7528;&#x9ED8;&#x8BA4;&#x7684; UUID &#x751F;&#x6210;&#x673A;&#x5236;&#x5E26;&#x6765;&#x7684;&#x597D;&#x5904;&#x3002;</p>
+<p><img src="images/mongodb-to-mysql/mongodb-mysql-id.png" alt="mongodb-mysql-id"></p>
+<p>&#x6211;&#x4EEC;&#x4E0D;&#x4EC5;&#x6CA1;&#x6709;&#x4EAB;&#x53D7;&#x5230; UUID &#x5E26;&#x6765;&#x7684;&#x6709;&#x70B9;&#xFF0C;&#x5B83;&#x8FD8;&#x5728;&#x8FC1;&#x79FB; MySQL &#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E3A;&#x6211;&#x4EEC;&#x5E26;&#x6765;&#x4E86;&#x5F88;&#x5927;&#x7684;&#x9EBB;&#x70E6;&#xFF0C;&#x4E00;&#x65B9;&#x9762;&#x662F;&#x56E0;&#x4E3A; ActiveRecord &#x7684;&#x9ED8;&#x8BA4;&#x4E3B;&#x952E;&#x662F;&#x6574;&#x6570;&#xFF0C;&#x4E0D;&#x652F;&#x6301; 32 &#x5B57;&#x8282;&#x957F;&#x5EA6;&#x7684; UUID&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x4E0D;&#x6539;&#x53D8; MongoDB &#x7684; UUID&#xFF0C;&#x76F4;&#x63A5;&#x8FC1;&#x79FB;&#x5230; MySQL &#x4E2D;&#x4F7F;&#x7528;&#x5176;&#x5B9E;&#x4E5F;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#xFF0C;&#x53EA;&#x662F;&#x6211;&#x4EEC;&#x8981;&#x5C06;&#x9ED8;&#x8BA4;&#x7684;&#x6574;&#x6570;&#x7C7B;&#x578B;&#x7684;&#x4E3B;&#x952E;&#x53D8;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#xFF0C;&#x540C;&#x65F6;&#x8981;&#x4F7F;&#x7528;&#x4E00;&#x4E2A; UUID &#x751F;&#x6210;&#x5668;&#x6765;&#x4FDD;&#x8BC1;&#x6240;&#x6709;&#x7684;&#x4E3B;&#x952E;&#x90FD;&#x662F;&#x6839;&#x636E;&#x65F6;&#x95F4;&#x9012;&#x589E;&#x7684;&#x5E76;&#x4E14;&#x4E0D;&#x4F1A;&#x51B2;&#x7A81;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x51C6;&#x5907;&#x4F7F;&#x7528; UUID &#x52A0;&#x751F;&#x6210;&#x5668;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5176;&#x5B9E;&#x4F1A;&#x7701;&#x53BB;&#x5F88;&#x591A;&#x8FC1;&#x79FB;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x4E0D;&#x8FC7;&#x770B;&#x8D77;&#x6765;&#x786E;&#x5B9E;&#x4E0D;&#x662F;&#x7279;&#x522B;&#x7684;&#x4F18;&#x96C5;&#xFF0C;&#x5982;&#x4F55;&#x9009;&#x62E9;&#x8FD8;&#x662F;&#x8981;&#x6743;&#x8861;&#x548C;&#x8BC4;&#x4F30;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x9009;&#x62E9;&#x4E86;&#x4F7F;&#x7528; <code>integer</code> &#x7C7B;&#x578B;&#x7684;&#x81EA;&#x589E;&#x4E3B;&#x952E;&#x65F6;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x505A;&#x5F88;&#x591A;&#x989D;&#x5916;&#x7684;&#x5DE5;&#x4F5C;&#x4E86;&#xFF0C;&#x9996;&#x5148;&#x662F;&#x4E3A;&#x6240;&#x6709;&#x7684;&#x8868;&#x6DFB;&#x52A0; <code>uuid</code> &#x5B57;&#x6BB5;&#xFF0C;&#x540C;&#x65F6;&#x4E3A;&#x6240;&#x6709;&#x7684;&#x5916;&#x952E;&#x4F8B;&#x5982; <code>post_id</code> &#x521B;&#x5EFA;&#x5BF9;&#x5E94;&#x7684; <code>post_uuid</code> &#x5B57;&#x6BB5;&#xFF0C;&#x901A;&#x8FC7; <code>uuid</code> &#x5C06;&#x4E24;&#x8005;&#x5173;&#x8054;&#x8D77;&#x6765;&#xFF1A;</p>
+<p><img src="images/mongodb-to-mysql/mysql-before-migrations.png" alt="mysql-before-migrations"></p>
+<p>&#x5728;&#x6570;&#x636E;&#x7684;&#x8FC1;&#x79FB;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x5C06;&#x539F;&#x6709;&#x7684; <code>_id</code> &#x6620;&#x5C04;&#x5230; <code>uuid</code> &#x4E2D;&#xFF0C;<code>post_id</code> &#x6620;&#x5C04;&#x5230; <code>post_uuid</code> &#x4E0A;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x4FDD;&#x6301; <code>uuid</code> &#x548C; <code>post_uuid</code> &#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x4FDD;&#x8BC1;&#x6A21;&#x578B;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x6CA1;&#x6709;&#x4E22;&#x5931;&#xFF0C;&#x5728;&#x8FC1;&#x79FB;&#x6570;&#x636E;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D; <code>id</code> &#x548C; <code>post_id</code> &#x662F;&#x5B8C;&#x5168;&#x4E0D;&#x5B58;&#x5728;&#x4EFB;&#x4F55;&#x8054;&#x7CFB;&#x7684;&#x3002;</p>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x6309;&#x7167; <code>_id</code> &#x7684;&#x987A;&#x5E8F;&#x904D;&#x5386;&#x6574;&#x4E2A;&#x6587;&#x6863;&#xFF0C;&#x5C06;&#x6587;&#x6863;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x88AB;&#x63D2;&#x5165;&#x5230;&#x8868;&#x4E2D;&#x65F6;&#xFF0C;MySQL &#x4F1A;&#x4E3A;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x884C;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x9012;&#x589E;&#x7684;&#x4E3B;&#x952E; <code>id</code>&#xFF0C;&#x800C; <code>post_id</code> &#x5728;&#x8FD9;&#x65F6;&#x90FD;&#x4E3A;&#x7A7A;&#x3002;</p>
+<p><img src="images/mongodb-to-mysql/mysql-after-migrations.png" alt="mysql-after-migrations"></p>
+<p>&#x5728;&#x5168;&#x90E8;&#x7684;&#x6570;&#x636E;&#x90FD;&#x88AB;&#x63D2;&#x5165;&#x5230; MySQL &#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7; <code>#find_by_uuid</code> &#x67E5;&#x8BE2;&#x7684;&#x65B9;&#x5F0F;&#x5C06; <code>uuid</code> &#x548C; <code>post_uuid</code> &#x4E2D;&#x7684;&#x5173;&#x7CFB;&#x8FC1;&#x79FB;&#x5230; <code>id</code> &#x548C; <code>post_id</code> &#x4E2D;&#xFF0C;&#x5E76;&#x5C06;&#x4E0E; <code>uuid</code> &#x76F8;&#x5173;&#x7684;&#x5B57;&#x6BB5;&#x5168;&#x90E8;&#x5220;&#x9664;&#xFF0C;&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x4FDD;&#x8BC1;&#x6A21;&#x578B;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x4E0D;&#x4F1A;&#x6D88;&#x5931;&#xFF0C;&#x5E76;&#x4E14;&#x6570;&#x636E;&#x884C;&#x7684;&#x76F8;&#x5BF9;&#x4F4D;&#x7F6E;&#x4E0E;&#x8FC1;&#x79FB;&#x524D;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#x3002;</p>
+<h3 id="&#x4EE3;&#x7801;&#x7684;&#x8FC1;&#x79FB;">&#x4EE3;&#x7801;&#x7684;&#x8FC1;&#x79FB;</h3>
+<p>Mongoid &#x5728;&#x4F7F;&#x7528;&#x65F6;&#x90FD;&#x662F;&#x901A;&#x8FC7; <code>include</code> &#x5C06;&#x76F8;&#x5173;&#x65B9;&#x6CD5;&#x52A0;&#x8F7D;&#x5230;&#x5F53;&#x524D;&#x6A21;&#x578B;&#x4E2D;&#x7684;&#xFF0C;&#x800C; ActiveRecord &#x662F;&#x901A;&#x8FC7;&#x7EE7;&#x627F; <code>ActiveRecord::Base</code> &#x7684;&#x65B9;&#x5F0F;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x5B8C;&#x6210;&#x4E86;&#x5BF9;&#x6570;&#x636E;&#x7684;&#x9884;&#x5904;&#x7406;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5BF9;&#x73B0;&#x6709;&#x6A21;&#x578B;&#x5C42;&#x7684;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x4E86;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x5F53;&#x7136;&#x662F;&#x66F4;&#x6539;&#x6A21;&#x578B;&#x7684;&#x300E;&#x7236;&#x7C7B;&#x300F;&#xFF0C;&#x628A;&#x6240;&#x6709;&#x7684; <code>Mongoid::Document</code> &#x90FD;&#x6539;&#x6210; <code>ActiveRecord::Base</code>&#xFF0C;&#x7136;&#x540E;&#x521B;&#x5EFA;&#x7C7B;&#x5BF9;&#x5E94;&#x7684; Migration &#x8FC1;&#x79FB;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-comment"># app/models/post.rb</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Post</span> &lt; ActiveRecord::Base</span>
+  validate_presence_of <span class="hljs-symbol">:title</span>, <span class="hljs-symbol">:content</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-comment"># db/migrate/20170908075625_create_posts.rb</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CreatePosts</span> &lt; ActiveRecord::Migration[5.1]</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">change</span></span>
+    create_table <span class="hljs-symbol">:posts</span> <span class="hljs-keyword">do</span> |t|
+      t.string <span class="hljs-symbol">:title</span>, <span class="hljs-symbol">null:</span> <span class="hljs-keyword">false</span>
+      t.text <span class="hljs-symbol">:content</span>, <span class="hljs-symbol">null:</span> <span class="hljs-keyword">false</span>
+      t.string <span class="hljs-symbol">:uuid</span>, <span class="hljs-symbol">null:</span> <span class="hljs-keyword">false</span>
+
+      t.timestamps <span class="hljs-symbol">null:</span> <span class="hljs-keyword">false</span>
+    <span class="hljs-keyword">end</span>
+
+    add_index <span class="hljs-symbol">:posts</span>, <span class="hljs-symbol">:uuid</span>, <span class="hljs-symbol">unique:</span> <span class="hljs-keyword">true</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;&#x8981;&#x4E3A;&#x6BCF;&#x4E00;&#x5F20;&#x8868;&#x6DFB;&#x52A0;&#x7C7B;&#x578B;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x7684; <code>uuid</code> &#x5B57;&#x6BB5;&#xFF0C;&#x540C;&#x65F6;&#x4E3A; <code>uuid</code> &#x5EFA;&#x7ACB;&#x552F;&#x4E00;&#x7D22;&#x5F15;&#xFF0C;&#x4EE5;&#x52A0;&#x5FEB;&#x901A;&#x8FC7; <code>uuid</code> &#x5EFA;&#x7ACB;&#x4E0D;&#x540C;&#x6570;&#x636E;&#x6A21;&#x578B;&#x4E4B;&#x95F4;&#x5173;&#x7CFB;&#x7684;&#x901F;&#x5EA6;&#x3002;</p>
+</blockquote>
+<p>&#x9664;&#x4E86;&#x5EFA;&#x7ACB;&#x6570;&#x636E;&#x5E93;&#x7684;&#x8FC1;&#x79FB;&#x6587;&#x4EF6;&#x5E76;&#x4FEE;&#x6539;&#x57FA;&#x7C7B;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x4E00;&#x4E9B; <code>include</code> &#x7684;&#x6A21;&#x5757;&#x548C; Mongoid &#x4E2D;&#x72EC;&#x6709;&#x7684;&#x67E5;&#x8BE2;&#xFF0C;&#x6BD4;&#x5982;&#x4F7F;&#x7528; <code>gte</code> &#x6216;&#x8005; <code>lte</code> &#x7684;&#x65E5;&#x671F;&#x67E5;&#x8BE2;&#x548C;&#x4F7F;&#x7528;&#x6B63;&#x5219;&#x8FDB;&#x884C;&#x6A21;&#x5F0F;&#x5339;&#x914D;&#x7684;&#x67E5;&#x8BE2;&#xFF0C;&#x8FD9;&#x4E9B;&#x67E5;&#x8BE2;&#x5728; ActiveRecord &#x4E2D;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#x4E0E; Mongoid &#x4E2D;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x624B;&#x5199; SQL &#x6765;&#x89E3;&#x51B3;&#x8FD9;&#x4E9B;&#x95EE;&#x9898;&#x3002;</p>
+<p><img src="images/mongodb-to-mysql/mongoid-to-activerecord-model-and-query.png" alt="mongoid-to-activerecord-model-and-query"></p>
+<p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x9700;&#x8981;&#x5904;&#x7406;&#x4E00;&#x4E9B;&#x590D;&#x6742;&#x7684;&#x6A21;&#x578B;&#x5173;&#x7CFB;&#xFF0C;&#x6BD4;&#x5982; Mongoid &#x4E2D;&#x7684; <code>inverse_of</code> &#x5728; ActiveRecord &#x4E2D;&#x53EB;&#x505A;  <code>foreign_key</code> &#x7B49;&#x7B49;&#xFF0C;&#x8FD9;&#x4E9B;&#x4FEE;&#x6539;&#x5176;&#x5B9E;&#x90FD;&#x5E76;&#x4E0D;&#x590D;&#x6742;&#xFF0C;&#x53EA;&#x662F;&#x5982;&#x679C;&#x60F3;&#x8981;&#x5C06;&#x8FD9;&#x90E8;&#x5206;&#x7684;&#x4EE3;&#x7801;&#x5168;&#x90E8;&#x5904;&#x7406;&#x6389;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x5BF9;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x8FDB;&#x884C;&#x8BE6;&#x7EC6;&#x5730;&#x6D4B;&#x8BD5;&#x4EE5;&#x4FDD;&#x8BC1;&#x4E0D;&#x4F1A;&#x6709;&#x9057;&#x7559;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x8FD9;&#x4E5F;&#x5C31;&#x5BF9;&#x6211;&#x4EEC;&#x9879;&#x76EE;&#x7684;&#x6D4B;&#x8BD5;&#x8986;&#x76D6;&#x7387;&#x6709;&#x7740;&#x6BD4;&#x8F83;&#x9AD8;&#x7684;&#x8981;&#x6C42;&#x4E86;&#xFF0C;&#x4E0D;&#x8FC7;&#x6211;&#x76F8;&#x4FE1;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x7684; Rails &#x5DE5;&#x7A0B;&#x90FD;&#x6709;&#x7740;&#x975E;&#x5E38;&#x597D;&#x7684;&#x6D4B;&#x8BD5;&#x8986;&#x76D6;&#x7387;&#xFF0C;&#x80FD;&#x591F;&#x4FDD;&#x8BC1;&#x8FD9;&#x4E00;&#x90E8;&#x5206;&#x4EE3;&#x7801;&#x548C;&#x903B;&#x8F91;&#x80FD;&#x591F;&#x987A;&#x5229;&#x8FC1;&#x79FB;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x9879;&#x76EE;&#x4E2D;&#x5B8C;&#x5168;&#x6CA1;&#x6709;&#x6D4B;&#x8BD5;&#x6216;&#x8005;&#x6D4B;&#x8BD5;&#x8986;&#x76D6;&#x7387;&#x5F88;&#x4F4E;&#xFF0C;&#x5C31;&#x53EA;&#x80FD;&#x4EBA;&#x8089;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x6216;&#x8005;&#x81EA;&#x6C42;&#x591A;&#x798F;&#x4E86;&#xFF0C;&#x6216;&#x8005;<strong>&#x5C31;&#x522B;&#x505A;&#x8FC1;&#x79FB;&#x4E86;&#xFF0C;&#x591A;&#x5199;&#x70B9;&#x6D4B;&#x8BD5;&#x518D;&#x8003;&#x8651;&#x8FD9;&#x4E9B;&#x91CD;&#x6784;&#x7684;&#x4E8B;&#x60C5;&#x5427;</strong>&#x3002;</p>
+<h3 id="&#x6570;&#x636E;&#x7684;&#x8FC1;&#x79FB;">&#x6570;&#x636E;&#x7684;&#x8FC1;&#x79FB;</h3>
+<p>&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x6A21;&#x578B;&#x521B;&#x5EFA;&#x5BF9;&#x5E94;&#x7684;&#x8FC1;&#x79FB;&#x6587;&#x4EF6;&#x5E76;&#x5EFA;&#x8868;&#x5176;&#x5B9E;&#x4E00;&#x4E2A;&#x4E0D;&#x5F97;&#x4E0D;&#x505A;&#x7684;&#x4F53;&#x529B;&#x6D3B;&#xFF0C;&#x867D;&#x7136;&#x6709;&#x4E00;&#x4E9B;&#x5DE5;&#x4F5C;&#x6211;&#x4EEC;&#x6CA1;&#x6CD5;&#x7701;&#x7565;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x4F7F;&#x7528;&#x81EA;&#x52A8;&#x5316;&#x7684;&#x65B9;&#x5F0F;&#x4E3A;&#x6240;&#x6709;&#x7684;&#x6A21;&#x578B;&#x6DFB;&#x52A0; <code>uuid</code> &#x5B57;&#x6BB5;&#x548C;&#x7D22;&#x5F15;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x4E3A;&#x7C7B;&#x4F3C; <code>post_id</code> &#x7684;&#x5B57;&#x6BB5;&#x6DFB;&#x52A0;&#x76F8;&#x5E94;&#x7684; <code>post_uuid</code> &#x5217;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AddUuidColumns</span> &lt; ActiveRecord::Migration[5.1]</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">change</span></span>
+    Rails.application.eager_load!
+    <span class="hljs-symbol">ActiveRecord:</span><span class="hljs-symbol">:Base</span>.descendants.map <span class="hljs-keyword">do</span> |klass|
+      <span class="hljs-comment"># add `uuid` column and create unique index on `uuid`.</span>
+      add_column klass.table_name, <span class="hljs-symbol">:uuid</span>, <span class="hljs-symbol">:string</span>, <span class="hljs-symbol">unique:</span> <span class="hljs-keyword">true</span>
+      add_index klass.table_name, <span class="hljs-symbol">unique:</span> <span class="hljs-keyword">true</span>
+
+      <span class="hljs-comment"># add `xxx_uuid` columns, ex: `post_uuid`, `comment_uuid` and etc.</span>
+      uuids = klass.attribute_names
+        .select { |attr| attr.<span class="hljs-keyword">include</span>? <span class="hljs-string">&apos;_id&apos;</span> }
+        .map    { |attr| attr.gsub <span class="hljs-string">&apos;_id&apos;</span>, <span class="hljs-string">&apos;_uuid&apos;</span> }
+      <span class="hljs-keyword">next</span> <span class="hljs-keyword">unless</span> uuids.present?
+      uuids.each <span class="hljs-keyword">do</span> |uuid|
+        add_column klass.table_name, uuid, <span class="hljs-symbol">:string</span>
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x5728;&#x6DFB;&#x52A0; <code>uuid</code> &#x5217;&#x5E76;&#x5EFA;&#x7ACB;&#x597D;&#x7D22;&#x5F15;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5F00;&#x59CB;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x8FC1;&#x79FB;&#x4E86;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x51B3;&#x5B9A;&#x5728;&#x8FC1;&#x79FB;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x6539;&#x53D8;&#x539F;&#x6709;&#x6570;&#x636E;&#x7684;&#x4E3B;&#x952E;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x4F1A;&#x5C06;&#x8FC1;&#x79FB;&#x5206;&#x6210;&#x4E24;&#x4E2A;&#x6B65;&#x9AA4;&#xFF0C;&#x6570;&#x636E;&#x7684;&#x8FC1;&#x79FB;&#x548C;&#x5173;&#x7CFB;&#x7684;&#x91CD;&#x5EFA;&#xFF0C;&#x524D;&#x8005;&#x4EC5;&#x6307;&#x5C06; MongoDB &#x4E2D;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#x5168;&#x90E8;&#x8FC1;&#x79FB;&#x5230; MySQL &#x4E2D;&#x5BF9;&#x5E94;&#x7684;&#x8868;&#x4E2D;&#xFF0C;&#x5E76;&#x5C06;&#x6240;&#x6709;&#x7684; <code>_id</code> &#x8F6C;&#x6362;&#x6210; <code>uuid</code>&#x3001;<code>xx_id</code> &#x8F6C;&#x6362;&#x6210; <code>xx_uuid</code>&#xFF0C;&#x800C;&#x540E;&#x8005;&#x5C31;&#x662F;&#x524D;&#x9762;&#x63D0;&#x5230;&#x7684;&#xFF1A;&#x901A;&#x8FC7; <code>uuid</code> &#x548C; <code>xx_uuid</code> &#x7684;&#x5173;&#x8054;&#x91CD;&#x65B0;&#x5EFA;&#x7ACB;&#x6A21;&#x578B;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x5E76;&#x5728;&#x6700;&#x540E;&#x5220;&#x9664;&#x6240;&#x6709;&#x7684; <code>uuid</code> &#x5B57;&#x6BB5;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x7684;&#x4EE3;&#x7801;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x8FC1;&#x79FB;&#xFF0C;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x4ECE; MongoDB &#x4E2D;&#x904D;&#x5386;&#x67D0;&#x4E2A;&#x96C6;&#x5408; Collection &#x4E2D;&#x7684;&#x5168;&#x90E8;&#x6570;&#x636E;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6587;&#x6863;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x4F20;&#x5165; block&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5206;&#x522B;&#x901A;&#x8FC7; <code>DatabaseTransformer#delete_obsolete_columns</code> &#x548C; <code>DatabaseTransformer#update_rename_columns</code> &#x65B9;&#x6CD5;&#x5220;&#x9664;&#x90E8;&#x5206;&#x5DF2;&#x6709;&#x7684;&#x5217;&#x3001;&#x66F4;&#x65B0;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#x5217;&#x6700;&#x540E;&#x5C06;&#x6240;&#x6709;&#x7684; <code>id</code> &#x5217;&#x90FD;&#x53D8;&#x6210; <code>uuid</code>&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">DatabaseTransformer</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">import</span><span class="hljs-params">(collection_name, *obsolete_columns, **rename_columns)</span></span>
+    collection = <span class="hljs-symbol">Mongoid:</span><span class="hljs-symbol">:Clients</span>.default.collections.select <span class="hljs-keyword">do</span> |c|
+      c.namespace == <span class="hljs-string">&quot;<span class="hljs-subst">#{database}</span>.<span class="hljs-subst">#{collection_name.to_s.pluralize}</span>&quot;</span>
+    <span class="hljs-keyword">end</span>.first
+
+    <span class="hljs-keyword">unless</span> collection.present?
+      STDOUT.puts <span class="hljs-string">&quot;<span class="hljs-subst">#{collection_name.to_s.yellow}</span>: skipped&quot;</span>
+      STDOUT.puts
+      <span class="hljs-keyword">return</span>
+    <span class="hljs-keyword">end</span>
+
+    constant = collection_name.to_s.singularize.camelcase.constantize
+    reset_callbacks constant
+
+    DatabaseTransformer.profiling <span class="hljs-keyword">do</span>
+      collection_count = collection.find.count
+      collection.find.each_with_index <span class="hljs-keyword">do</span> |document, index|
+        document = <span class="hljs-keyword">yield</span> document <span class="hljs-keyword">if</span> block_given?
+        delete_obsolete_columns document, obsolete_columns
+        update_rename_columns document, rename_columns
+        update_id_columns document
+
+        insert_record constant, document
+        STDOUT.puts <span class="hljs-string">&quot;<span class="hljs-subst">#{index}</span>/<span class="hljs-subst">#{collection_count}</span>\n&quot;</span> <span class="hljs-keyword">if</span> (index % <span class="hljs-number">1000</span>).zero?
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x5F53;&#x5B8C;&#x6210;&#x4E86;&#x5BF9;&#x6587;&#x6863;&#x7684;&#x5404;&#x79CD;&#x64CD;&#x4F5C;&#x4E4B;&#x540E;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x4F1A;&#x76F4;&#x63A5;&#x8C03;&#x7528; <code>DatabaseTransformer#insert_record</code> &#x5C06;&#x6570;&#x636E;&#x63D2;&#x5165; MySQL &#x5BF9;&#x5E94;&#x7684;&#x8868;&#x4E2D;&#xFF1B;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x7684;&#x4EE3;&#x7801;&#x5C06;&#x67D0;&#x4E2A; Collection &#x4E2D;&#x7684;&#x5168;&#x90E8;&#x6587;&#x6863;&#x8FC1;&#x79FB;&#x5230; MySQL &#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-ruby">transformer = DatabaseTransformer.new <span class="hljs-string">&apos;draven_production&apos;</span>
+transformer.import <span class="hljs-symbol">:post</span>, <span class="hljs-symbol">:_slugs</span>, <span class="hljs-symbol">name:</span> <span class="hljs-symbol">:title</span>, <span class="hljs-symbol">_status:</span> <span class="hljs-symbol">:status</span>
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x4F1A;&#x5728;&#x8FC1;&#x79FB;&#x65F6;&#x5C06;&#x96C6;&#x5408;&#x6BCF;&#x4E00;&#x4E2A;&#x6587;&#x6863;&#x7684; <code>_slugs</code> &#x5B57;&#x6BB5;&#x5168;&#x90E8;&#x5FFD;&#x7565;&#xFF0C;&#x540C;&#x65F6;&#x5C06; <code>name</code> &#x91CD;&#x547D;&#x540D;&#x6210; <code>title</code>&#x3001;<code>_status</code> &#x91CD;&#x547D;&#x540D;&#x6210; <code>status</code>&#xFF0C;&#x867D;&#x7136;&#x4F5C;&#x4E3A;&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#x7684;&#x5B57;&#x6BB5; mongoid-enum &#x548C; ActiveRecord &#x7684;&#x679A;&#x4E3E;&#x7C7B;&#x578B;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x63D2;&#x5165;&#x4E5F;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x95EE;&#x9898;&#xFF0C;ActiveRecord &#x7684;&#x6A21;&#x578B;&#x5728;&#x521B;&#x5EFA;&#x65F6;&#x4F1A;&#x81EA;&#x5DF1;&#x5904;&#x7406;&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x6574;&#x6570;&#x4E4B;&#x95F4;&#x7684;&#x8F6C;&#x6362;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">insert_record</span><span class="hljs-params">(constant, params)</span></span>
+  model = constant.new params
+  model.save! <span class="hljs-symbol">validate:</span> <span class="hljs-keyword">false</span>
+<span class="hljs-keyword">rescue</span> Exception =&gt; exception
+  STDERR.puts <span class="hljs-string">&quot;Import Error: <span class="hljs-subst">#{exception}</span>&quot;</span>
+  raise exception
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x4E3A;&#x4E86;&#x52A0;&#x5FEB;&#x6570;&#x636E;&#x7684;&#x63D2;&#x5165;&#x901F;&#x5EA6;&#xFF0C;&#x540C;&#x65F6;&#x907F;&#x514D;&#x6240;&#x6709;&#x7531;&#x4E8E;&#x63D2;&#x5165;&#x64CD;&#x4F5C;&#x5E26;&#x6765;&#x7684;&#x526F;&#x4F5C;&#x7528;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x5728;&#x6570;&#x636E;&#x8FC1;&#x79FB;&#x671F;&#x95F4;&#x91CD;&#x7F6E;&#x6240;&#x6709;&#x7684;&#x56DE;&#x8C03;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">reset_callbacks</span><span class="hljs-params">(constant)</span></span>
+  %i(create save update).each <span class="hljs-keyword">do</span> |callback|
+    constant.reset_callbacks callback
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x4F5C;&#x7528;&#x4EC5;&#x5728;&#x8FD9;&#x4E2A;&#x811A;&#x672C;&#x8FD0;&#x884C;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x624D;&#x4F1A;&#x751F;&#x6548;&#xFF0C;&#x4E0D;&#x4F1A;&#x5BF9;&#x5DE5;&#x7A0B;&#x4E2D;&#x7684;&#x5176;&#x4ED6;&#x5730;&#x65B9;&#x9020;&#x6210;&#x4EFB;&#x4F55;&#x7684;&#x5F71;&#x54CD;&#xFF1B;&#x540C;&#x65F6;&#xFF0C;&#x8BE5;&#x811A;&#x672C;&#x4F1A;&#x5728;&#x6BCF; 1000 &#x4E2A;&#x6A21;&#x578B;&#x63D2;&#x5165;&#x6210;&#x529F;&#x540E;&#x5411;&#x6807;&#x51C6;&#x8F93;&#x51FA;&#x6253;&#x5370;&#x5F53;&#x524D;&#x8FDB;&#x5EA6;&#xFF0C;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x5FEB;&#x901F;&#x53D1;&#x73B0;&#x95EE;&#x9898;&#x548C;&#x9884;&#x4F30;&#x8FC1;&#x79FB;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+<blockquote>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5728; <a href="https://gist.github.com/Draveness/10476fe67a10128a37ba27a4c6967d07" target="_blank">database_transformer.rb</a> &#x627E;&#x5230;&#x5B8C;&#x6574;&#x7684;&#x6570;&#x636E;&#x8FC1;&#x79FB;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<p>&#x5C06;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x5168;&#x90E8;&#x63D2;&#x5165;&#x5230; MySQL &#x7684;&#x8868;&#x4E4B;&#x540E;&#xFF0C;&#x6A21;&#x578B;&#x4E4B;&#x95F4;&#x8FD8;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x663E;&#x5F0F;&#x7684;&#x5173;&#x7CFB;&#xFF0C;&#x6211;&#x4EEC;&#x8FD8;&#x9700;&#x8981;&#x5C06;&#x901A;&#x8FC7; <code>uuid</code> &#x8FDE;&#x63A5;&#x7684;&#x6A21;&#x578B;&#x8F6C;&#x6362;&#x6210;&#x4F7F;&#x7528; <code>id</code> &#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5BF9;&#x8C61;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x624D;&#x80FD;&#x901A;&#x8FC7;&#x70B9;&#x8BED;&#x6CD5;&#x76F4;&#x63A5;&#x8BBF;&#x95EE;&#xFF0C;&#x5173;&#x7CFB;&#x7684;&#x5EFA;&#x7ACB;&#x5176;&#x5B9E;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x6211;&#x4EEC;&#x83B7;&#x5F97;&#x5F53;&#x524D;&#x7C7B;&#x6240;&#x6709;&#x7ED3;&#x5C3E;&#x4E3A; <code>_uuid</code> &#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x7136;&#x540E;&#x904D;&#x5386;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x884C;&#xFF0C;&#x6839;&#x636E; <code>uuid</code> &#x7684;&#x503C;&#x548C; <code>post_uuid</code> &#x5C5E;&#x6027;&#x4E2D;&#x7684; &quot;post&quot; &#x90E8;&#x5206;&#x83B7;&#x53D6;&#x5230;&#x8868;&#x540D;&#xFF0C;&#x6700;&#x7EC8;&#x5F97;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x5173;&#x8054;&#x6A21;&#x578B;&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4E5F;&#x5904;&#x7406;&#x4E86;&#x7C7B;&#x4F3C;&#x591A;&#x6001;&#x7684;&#x7279;&#x6B8A;&#x60C5;&#x51B5;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">RelationBuilder</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">build_relations</span><span class="hljs-params">(class_name, polymorphic_associations = [], rename_associations = {})</span></span>
+    uuids = class_name.attribute_names.select { |name| name.end_with? <span class="hljs-string">&apos;_uuid&apos;</span> }
+
+    <span class="hljs-keyword">unless</span> uuids.present?
+      STDOUT.puts <span class="hljs-string">&quot;<span class="hljs-subst">#{class_name.to_s.yellow}</span>: skipped&quot;</span>
+      STDOUT.puts
+      <span class="hljs-keyword">return</span>
+    <span class="hljs-keyword">end</span>
+
+    reset_callbacks class_name
+
+    RelationBuilder.profiling <span class="hljs-keyword">do</span>
+      models_count = class_name.count
+      class_name.unscoped.all.each_with_index <span class="hljs-keyword">do</span> |model, index|
+        update_params = uuids.map <span class="hljs-keyword">do</span> |uuid|
+          original_association_name = uuid[<span class="hljs-number">0</span>...-<span class="hljs-number">5</span>]
+
+          association_model = association_model(
+            original_association_name,
+            model[uuid],
+            polymorphic_associations,
+            rename_associations
+          )
+
+          [original_association_name.to_s, association_model]
+        <span class="hljs-keyword">end</span>.compact
+
+        <span class="hljs-keyword">begin</span>
+          Hash[update_params].each <span class="hljs-keyword">do</span> |key, value|
+            model.send <span class="hljs-string">&quot;<span class="hljs-subst">#{key}</span>=&quot;</span>, value
+          <span class="hljs-keyword">end</span>
+          model.save! <span class="hljs-symbol">validate:</span> <span class="hljs-keyword">false</span>
+        <span class="hljs-keyword">rescue</span> Exception =&gt; e
+          STDERR.puts e
+          raise e
+        <span class="hljs-keyword">end</span>
+
+        STDOUT.puts <span class="hljs-string">&quot;<span class="hljs-subst">#{index}</span>/<span class="hljs-subst">#{models_count}</span>\n&quot;</span> <span class="hljs-keyword">if</span> (counter % <span class="hljs-number">1000</span>).zero?
+      <span class="hljs-keyword">end</span>
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x5728;&#x67E5;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x884C;&#x4E4B;&#x540E;&#x5C31;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x8C03;&#x7528;&#x5BF9;&#x5E94;&#x7684; <code>post=</code> &#x7B49;&#x65B9;&#x6CD5;&#x66F4;&#x65B0;&#x5916;&#x952E;&#x6700;&#x540E;&#x76F4;&#x63A5;&#x5C06;&#x5916;&#x952E;&#x7684;&#x503C;&#x4FDD;&#x5B58;&#x5230;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x4E0E;&#x6570;&#x636E;&#x7684;&#x8FC1;&#x79FB;&#x8FC7;&#x7A0B;&#x4E00;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x7684;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E5F;&#x4F1A;&#x6253;&#x5370;&#x51FA;&#x5F53;&#x524D;&#x7684;&#x8FDB;&#x5EA6;&#x3002;</p>
+<p>&#x5728;&#x521D;&#x59CB;&#x5316; <code>RelationBuilder</code> &#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4F20;&#x5165;&#x4E86; <code>constants</code>&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x8C03;&#x7528; <code>RelationBuilder#build!</code> &#x65F6;&#x5C31;&#x4F1A;&#x91CD;&#x5EFA;&#x5176;&#x4E2D;&#x7684;&#x5168;&#x90E8;&#x5173;&#x7CFB;&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4F20;&#x5165;&#x5C31;&#x4F1A;&#x9ED8;&#x8BA4;&#x52A0;&#x8F7D; ActiveRecord &#x4E2D;&#x6240;&#x6709;&#x7684;&#x5B50;&#x7C7B;&#xFF0C;&#x5E76;&#x53BB;&#x6389;&#x5176;&#x4E2D;&#x5305;&#x542B; <code>::</code> &#x7684;&#x6A21;&#x578B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; ActiveRecord &#x4E2D;&#x4F7F;&#x7528; <code>has_and_belongs_to_many</code> &#x521B;&#x5EFA;&#x7684;&#x4E2D;&#x95F4;&#x7C7B;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x5728;&#x4E0B;&#x4E00;&#x8282;&#x4E2D;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x5355;&#x72EC;&#x5904;&#x7406;&#x591A;&#x5BF9;&#x591A;&#x5173;&#x7CFB;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">(constants = [])</span></span>
+  <span class="hljs-keyword">if</span> constants.present?
+    @constants = constants
+  <span class="hljs-keyword">else</span>
+    Rails.application.eager_load!
+    @constants = <span class="hljs-symbol">ActiveRecord:</span><span class="hljs-symbol">:Base</span>.descendants
+        .reject { |constant| constant.to_s.<span class="hljs-keyword">include</span>?(<span class="hljs-string">&apos;::&apos;</span>) }
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<blockquote>
+<p>&#x8DDF;&#x5173;&#x7CFB;&#x91CD;&#x5EFA;&#x76F8;&#x5173;&#x7684;&#x4EE3;&#x7801;&#x53EF;&#x4EE5;&#x5728; <a href="https://gist.github.com/Draveness/c0798fb1272f483a176fa67741a3f1ee" target="_blank">relation_builder.rb</a> &#x627E;&#x5230;&#x5B8C;&#x6574;&#x7684;&#x7528;&#x4E8E;&#x5173;&#x7CFB;&#x8FC1;&#x79FB;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-ruby">builder = RelationBuilder.new([Post, Comment])
+builder.build!
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x8FD9;&#x6570;&#x636E;&#x8FC1;&#x79FB;&#x548C;&#x5173;&#x7CFB;&#x91CD;&#x5EFA;&#x4E24;&#x4E2A;&#x6B65;&#x9AA4;&#x5C31;&#x5DF2;&#x7ECF;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x7EDD;&#x5927;&#x90E8;&#x5206;&#x7684;&#x6570;&#x636E;&#x8FC1;&#x79FB;&#x95EE;&#x9898;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x7531;&#x4E8E; MongoDB &#x548C; ActiveRecord &#x4E2D;&#x5BF9;&#x4E8E;&#x591A;&#x5BF9;&#x591A;&#x5173;&#x7CFB;&#x7684;&#x5904;&#x7406;&#x6BD4;&#x8F83;&#x7279;&#x6B8A;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5355;&#x72EC;&#x8FDB;&#x884C;&#x89E3;&#x51B3;&#xFF0C;&#x5982;&#x679C;&#x6240;&#x6709;&#x7684;&#x8FC1;&#x79FB;&#x95EE;&#x9898;&#x5230;&#x8FD9;&#x91CC;&#x90FD;&#x5DF2;&#x7ECF;&#x89E3;&#x51B3;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x8FC1;&#x79FB;&#x6587;&#x4EF6;&#x5C06;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x4E0E; <code>uuid</code> &#x6709;&#x5173;&#x7684;&#x5168;&#x90E8;&#x5217;&#x90FD;&#x5220;&#x9664;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">RemoveAllUuidColumns</span> &lt; ActiveRecord::Migration[5.1]</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">change</span></span>
+    Rails.application.eager_load!
+    <span class="hljs-symbol">ActiveRecord:</span><span class="hljs-symbol">:Base</span>.descendants.map <span class="hljs-keyword">do</span> |klass|
+      attrs = klass.attribute_names.select { |n| n.<span class="hljs-keyword">include</span>? <span class="hljs-string">&apos;uuid&apos;</span> }
+      <span class="hljs-keyword">next</span> <span class="hljs-keyword">unless</span> attrs.present?
+      remove_columns klass.table_name, *attrs
+    <span class="hljs-keyword">end</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x5230;&#x8FD9;&#x91CC;&#x4F4D;&#x7F6E;&#x6574;&#x4E2A;&#x8FC1;&#x79FB;&#x7684;&#x8FC7;&#x7A0B;&#x5C31;&#x57FA;&#x672C;&#x5B8C;&#x6210;&#x4E86;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5C31;&#x662F;&#x8DDF;&#x6574;&#x4E2A;&#x8FC1;&#x79FB;&#x8FC7;&#x7A0B;&#x4E2D;&#x6709;&#x5173;&#x7684;&#x5176;&#x4ED6;&#x4E8B;&#x9879;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;&#x5BF9;&#x591A;&#x5BF9;&#x5173;&#x7CFB;&#x3001;&#x6D4B;&#x8BD5;&#x7684;&#x91CD;&#x8981;&#x6027;&#x7B49;&#x8BDD;&#x9898;&#x3002;</p>
+<h3 id="&#x591A;&#x5BF9;&#x591A;&#x5173;&#x7CFB;&#x7684;&#x5904;&#x7406;">&#x591A;&#x5BF9;&#x591A;&#x5173;&#x7CFB;&#x7684;&#x5904;&#x7406;</h3>
+<p>&#x591A;&#x5BF9;&#x591A;&#x5173;&#x7CFB;&#x5728;&#x6570;&#x636E;&#x7684;&#x8FC1;&#x79FB;&#x8FC7;&#x7A0B;&#x4E2D;&#x5176;&#x5B9E;&#x7A0D;&#x5FAE;&#x6709;&#x4E00;&#x4E9B;&#x590D;&#x6742;&#xFF0C;&#x5728; Mongoid &#x4E2D;&#x4F7F;&#x7528; <code>has_and_belongs_to_many</code> &#x4F1A;&#x5728;&#x76F8;&#x5173;&#x7684;&#x6587;&#x6863;&#x4E0B;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A; <code>tag_ids</code> &#x6216;&#x8005; <code>post_ids</code> &#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-comment"># The post document.</span>
+{
+  <span class="hljs-string">&quot;_id&quot;</span> <span class="hljs-symbol">:</span> ObjectId(<span class="hljs-string">&quot;4d3ed089fb60ab534684b7e9&quot;</span>),
+  <span class="hljs-string">&quot;tag_ids&quot;</span> <span class="hljs-symbol">:</span> [
+    ObjectId(<span class="hljs-string">&quot;4d3ed089fb60ab534684b7f2&quot;</span>), 
+    ObjectId(<span class="hljs-string">&quot;4d3ed089fb60ab53468831f1&quot;</span>)
+  ],
+  <span class="hljs-string">&quot;title&quot;</span><span class="hljs-symbol">:</span> <span class="hljs-string">&quot;xxx&quot;</span>,
+  <span class="hljs-string">&quot;content&quot;</span><span class="hljs-symbol">:</span> <span class="hljs-string">&quot;xxx&quot;</span>
+}
+</code></pre>
+<p>&#x800C; ActiveRecord &#x4E2D;&#x4F1A;&#x5EFA;&#x7ACB;&#x4E00;&#x5F20;&#x5355;&#x72EC;&#x7684;&#x8868;&#xFF0C;&#x8868;&#x7684;&#x540D;&#x79F0;&#x662F;&#x4E24;&#x5F20;&#x8868;&#x540D;&#x6309;&#x7167;&#x5B57;&#x6BCD;&#x8868;&#x987A;&#x5E8F;&#x7684;&#x62FC;&#x63A5;&#xFF0C;&#x5982;&#x679C;&#x662F; <code>Post</code> &#x548C; <code>Tag</code>&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x591A;&#x5BF9;&#x591A;&#x8868;&#x5C31;&#x662F; <code>posts_tags</code>&#xFF0C;&#x9664;&#x4E86;&#x521B;&#x5EFA;&#x591A;&#x5BF9;&#x591A;&#x8868;&#xFF0C;<code>has_and_belongs_to_many</code> &#x8FD8;&#x4F1A;&#x521B;&#x5EFA;&#x4E24;&#x4E2A; <code>ActiveRecord::Base</code> &#x7684;&#x5B50;&#x7C7B; <code>Tag::HABTM_Posts</code> &#x548C; <code>Post::HABTM_Tags</code>&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x7B80;&#x5355;&#x5B9E;&#x9A8C;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-keyword">require</span> <span class="hljs-string">&apos;active_record&apos;</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span> &lt; ActiveRecord::Base;</span> <span class="hljs-keyword">end</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Post</span> &lt; ActiveRecord::Base</span>
+  has_and_belongs_to_many <span class="hljs-symbol">:tags</span>
+<span class="hljs-keyword">end</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span> &lt; ActiveRecord::Base</span>
+  has_and_belongs_to_many <span class="hljs-symbol">:posts</span>
+<span class="hljs-keyword">end</span>
+puts <span class="hljs-symbol">ActiveRecord:</span><span class="hljs-symbol">:Base</span>.descendants
+<span class="hljs-comment"># =&gt; [Tag, Post, Post::HABTM_Tags, Tag::HABTM_Posts]</span>
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x6253;&#x5370;&#x51FA;&#x4E86;&#x4E24;&#x4E2A; <code>has_and_belongs_to_many</code> &#x751F;&#x6210;&#x7684;&#x7C7B; <code>Tag::HABTM_Posts</code> &#x548C; <code>Post::HABTM_Tags</code>&#xFF0C;&#x5B83;&#x4EEC;&#x6709;&#x7740;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x7684;&#x8868; <code>posts_tags</code>&#xFF0C;&#x5904;&#x7406;&#x591A;&#x5BF9;&#x591A;&#x5173;&#x7CFB;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x5728;&#x4F7F;&#x7528; <code>DatabaseTransformer</code> &#x5BFC;&#x5165;&#x8868;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x7684;&#x6570;&#x636E;&#x4E4B;&#x540E;&#xFF0C;&#x518D;&#x901A;&#x8FC7;&#x904D;&#x5386; <code>posts_tags</code> &#x8868;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x66F4;&#x65B0;&#x591A;&#x5BF9;&#x591A;&#x7684;&#x5173;&#x7CFB;&#x8868;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PostsTag</span> &lt; ActiveRecord::Base;</span> <span class="hljs-keyword">end</span>
+
+<span class="hljs-comment"># migrate data from mongodb to mysql.</span>
+transformer = DatabaseTransformer.new <span class="hljs-string">&apos;draven_production&apos;</span>
+transformer.import <span class="hljs-symbol">:posts_tags</span>
+
+<span class="hljs-comment"># establish association between posts and tags.</span>
+PostsTag.unscoped.all.each <span class="hljs-keyword">do</span> |model|
+  post = Post.find_by_uuid model.post_uuid
+  tag = Tag.find_by_uuid model.tag_uuid
+  <span class="hljs-keyword">next</span> <span class="hljs-keyword">unless</span> post.present? &amp;&amp; tag.present?
+  model.update_columns <span class="hljs-symbol">post_id:</span> post.id, <span class="hljs-symbol">tag_id:</span> tag.id
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x6240;&#x6709;&#x4F7F;&#x7528; <code>has_and_belongs_to_many</code> &#x7684;&#x591A;&#x5BF9;&#x591A;&#x5173;&#x7CFB;&#x90FD;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x8FC1;&#x79FB;&#xFF0C;&#x8FD9;&#x4E00;&#x6B65;&#x9700;&#x8981;&#x5728;&#x5220;&#x9664;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684;&#x6240;&#x6709; <code>uuid</code> &#x5B57;&#x6BB5;&#x4E4B;&#x524D;&#x5B8C;&#x6210;&#x3002;</p>
+<h3 id="&#x6D4B;&#x8BD5;&#x7684;&#x91CD;&#x8981;&#x6027;">&#x6D4B;&#x8BD5;&#x7684;&#x91CD;&#x8981;&#x6027;</h3>
+<p>&#x5728;&#x771F;&#x6B63;&#x5BF9;&#x7EBF;&#x4E0A;&#x7684;&#x670D;&#x52A1;&#x8FDB;&#x884C;&#x505C;&#x673A;&#x8FC1;&#x79FB;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x5176;&#x5B9E;&#x9700;&#x8981;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x5DF2;&#x6709;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x90E8;&#x5206;&#x548C;&#x5168;&#x91CF;&#x6D4B;&#x8BD5;&#xFF0C;&#x5728;&#x90E8;&#x5206;&#x6D4B;&#x8BD5;&#x9636;&#x6BB5;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x672C;&#x5730;&#x51C6;&#x5907;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x91CF;&#x4E3A;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x6570;&#x636E;&#x91CF; 1/10 &#x6216;&#x8005; 1/100 &#x7684; MongoDB &#x6570;&#x636E;&#x5E93;&#xFF0C;&#x901A;&#x8FC7;&#x5728;&#x672C;&#x5730;&#x6A21;&#x62DF; MongoDB &#x548C; MySQL &#x7684;&#x73AF;&#x5883;&#x8FDB;&#x884C;&#x9884;&#x8FC1;&#x79FB;&#xFF0C;&#x786E;&#x4FDD;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x5C3D;&#x5FEB;&#x5730;&#x53D1;&#x73B0;&#x8FC1;&#x79FB;&#x811A;&#x672C;&#x4E2D;&#x7684;&#x9519;&#x8BEF;&#x3002;</p>
+<p><img src="images/mongodb-to-mysql/mongodb-pre-migration.png" alt="mongodb-pre-migration"></p>
+<p>&#x51C6;&#x5907;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x5E93;&#x7684;&#x529E;&#x6CD5;&#x662F;&#x901A;&#x8FC7;&#x5173;&#x7CFB;&#x5220;&#x9664;&#x4E00;&#x4E9B;&#x4E3B;&#x8981;&#x6A21;&#x578B;&#x7684;&#x6570;&#x636E;&#x884C;&#xFF0C;&#x5728;&#x5220;&#x9664;&#x65F6;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; MongoDB &#x4E2D;&#x7684; <code>dependent: :destroy</code> &#x5220;&#x9664;&#x76F8;&#x5173;&#x7684;&#x6A21;&#x578B;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x5C3D;&#x53EF;&#x80FD;&#x7684;&#x4FDD;&#x8BC1;&#x6570;&#x636E;&#x7684;&#x4E00;&#x81F4;&#x6027;&#x548C;&#x5B8C;&#x6574;&#x6027;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x5BF9;&#x7EBF;&#x4E0A;&#x6570;&#x636E;&#x5E93;&#x8FDB;&#x884C;&#x8FC1;&#x79FB;&#x4E4B;&#x524D;&#xFF0C;&#x6211;&#x4EEC;&#x4F9D;&#x7136;&#x9700;&#x8981;&#x5BF9; MongoDB &#x4E2D;&#x7684;&#x5168;&#x90E8;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5168;&#x91CF;&#x7684;&#x8FC1;&#x79FB;&#x6D4B;&#x8BD5;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#x4E00;&#x4E9B;&#x66F4;&#x52A0;&#x9690;&#x853D;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4FDD;&#x8BC1;&#x771F;&#x6B63;&#x4E0A;&#x7EBF;&#x65F6;&#x53EF;&#x4EE5;&#x51FA;&#x73B0;&#x66F4;&#x5C11;&#x7684;&#x72B6;&#x51B5;&#x3002;</p>
+<p>&#x6570;&#x636E;&#x5E93;&#x7684;&#x8FC1;&#x79FB;&#x5176;&#x5B9E;&#x4E5F;&#x5C5E;&#x4E8E;&#x91CD;&#x6784;&#xFF0C;&#x5728;&#x8FDB;&#x884C; MongoDB &#x7684;&#x6570;&#x636E;&#x5E93;&#x8FC1;&#x79FB;&#x4E4B;&#x524D;&#x4E00;&#x5B9A;&#x8981;&#x4FDD;&#x8BC1;&#x9879;&#x76EE;&#x6709;&#x7740;&#x5B8C;&#x5584;&#x7684;&#x6D4B;&#x8BD5;&#x4F53;&#x7CFB;&#x548C;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#xFF0C;&#x8FD9;&#x6837;&#x624D;&#x80FD;&#x8BA9;&#x6211;&#x4EEC;&#x5728;&#x9879;&#x76EE;&#x91CD;&#x6784;&#x4E4B;&#x540E;&#xFF0C;&#x786E;&#x5B9A;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x6211;&#x4EEC;&#x96BE;&#x4EE5;&#x9884;&#x6599;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x6574;&#x4E2A;&#x9879;&#x76EE;&#x624D;&#x662F;&#x53EF;&#x63A7;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x5DE5;&#x7A0B;&#x4E2D;&#x6CA1;&#x6709;&#x8DB3;&#x591F;&#x7684;&#x6D4B;&#x8BD5;&#x751A;&#x81F3;&#x6CA1;&#x6709;&#x6D4B;&#x8BD5;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4E0D;&#x8981;&#x518D;&#x8BF4;&#x91CD;&#x6784;&#x8FD9;&#x4EF6;&#x4E8B;&#x60C5;&#x4E86; -- <strong>&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x662F;&#x91CD;&#x6784;&#x7684;&#x57FA;&#x7840;</strong>&#x3002;</p>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<p>&#x5982;&#x4F55;&#x4ECE; MongoDB &#x8FC1;&#x79FB;&#x5230; MySQL &#x5176;&#x5B9E;&#x662F;&#x4E00;&#x4E2A;&#x5DE5;&#x7A0B;&#x95EE;&#x9898;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5728;&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0D;&#x65AD;&#x5BFB;&#x627E;&#x53EF;&#x80FD;&#x51FA;&#x9519;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5C06;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x7684;&#x4EFB;&#x52A1;&#x8FDB;&#x884C;&#x62C6;&#x5206;&#xFF0C;&#x5728;&#x771F;&#x6B63;&#x505A;&#x8FC1;&#x79FB;&#x4E4B;&#x524D;&#x5C3D;&#x53EF;&#x80FD;&#x5730;&#x51CF;&#x5C11;&#x8FC1;&#x79FB;&#x5BF9;&#x670D;&#x52A1;&#x53EF;&#x7528;&#x6027;&#x4EE5;&#x53CA;&#x7A33;&#x5B9A;&#x6027;&#x5E26;&#x6765;&#x7684;&#x5F71;&#x54CD;&#x3002;</p>
+<p><img src="images/mongodb-to-mysql/mysql-and-mongodb-work-together.png" alt="mysql-and-mongodb-work-together"></p>
+<p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;MongoDB &#x548C; MySQL &#x4E4B;&#x95F4;&#x7684;&#x9009;&#x62E9;&#x4E5F;&#x4E0D;&#x4E00;&#x5B9A;&#x662F;&#x975E;&#x6B64;&#x5373;&#x5F7C;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x9879;&#x76EE;&#x4E2D;&#x7684;&#x5927;&#x90E8;&#x5206;&#x6570;&#x636E;&#x90FD;&#x8FC1;&#x79FB;&#x5230;&#x4E86; MySQL &#x4E2D;&#xFF0C;&#x4F46;&#x662F;&#x5C06;&#x4E00;&#x90E8;&#x5206;&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x548C;&#x5206;&#x6790;&#x7684;&#x6570;&#x636E;&#x7559;&#x5728;&#x4E86; MongoDB&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1; MongoDB &#x5B95;&#x673A;&#x4E4B;&#x540E;&#x4ECD;&#x7136;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x9879;&#x76EE;&#x7684;&#x4E3B;&#x8981;&#x4EFB;&#x52A1;&#xFF0C;&#x540C;&#x65F6;&#xFF0C;MySQL &#x7684;&#x5907;&#x4EFD;&#x548C;&#x6062;&#x590D;&#x901F;&#x5EA6;&#x4E5F;&#x4F1A;&#x56E0;&#x4E3A;&#x6570;&#x636E;&#x5E93;&#x53D8;&#x5C0F;&#x800C;&#x975E;&#x5E38;&#x8FC5;&#x901F;&#x3002;</p>
+<p>&#x6700;&#x540E;&#x4E00;&#x70B9;&#xFF0C;&#x6D4B;&#x8BD5;&#x771F;&#x7684;&#x5F88;&#x91CD;&#x8981;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6D4B;&#x8BD5;&#xFF0C;&#x6CA1;&#x6709;&#x4EBA;&#x80FD;&#x591F;&#x505A;&#x5230;&#x5728;<strong>&#x4FEE;&#x6539;&#x5927;&#x91CF;&#x7684;&#x4E1A;&#x52A1;&#x4EE3;&#x7801;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E0D;&#x4E22;&#x5931;&#x4EFB;&#x4F55;&#x7684;&#x4E1A;&#x52A1;&#x903B;&#x8F91;</strong>&#xFF0C;&#x751A;&#x81F3;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x6D4B;&#x8BD5;&#xFF0C;&#x5F88;&#x591A;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x53EF;&#x80FD;&#x5728;&#x5F00;&#x53D1;&#x7684;&#x90A3;&#x4E00;&#x5929;&#x5C31;&#x5DF2;&#x7ECF;&#x4E22;&#x5931;&#x4E86;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5BF9;&#x6587;&#x7AE0;&#x7684;&#x5185;&#x5BB9;&#x6709;&#x7591;&#x95EE;&#x6216;&#x8005;&#x6709; MongoDB &#x8FC1;&#x79FB;&#x76F8;&#x5173;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x8BC4;&#x8BBA;&#x4E2D;&#x7559;&#x8A00;&#xFF0C;&#x8BC4;&#x8BBA;&#x7CFB;&#x7EDF;&#x4F7F;&#x7528; Disqus &#x9700;&#x8981;&#x68AF;&#x5B50;&#x3002;</p>
+<blockquote>
+<p>&#x539F;&#x6587;&#x94FE;&#x63A5;&#xFF1A;<a href="https://draveness.me/mongodb-to-mysql.html" target="_blank">&#x5982;&#x4F55;&#x4ECE; MongoDB &#x8FC1;&#x79FB;&#x5230; MySQL &#xB7; &#x9762;&#x5411;&#x4FE1;&#x4EF0;&#x7F16;&#x7A0B;</a></p>
+<p>Follow: <a href="https://github.com/Draveness" target="_blank">Draveness &#xB7; GitHub</a></p>
+</blockquote>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://www.quora.com/How-do-I-migrate-data-from-a-MongoDB-to-MySQL-database-Can-it-be-done-in-a-real-time-scenario-What-are-the-pros-and-cons-for-each-migration-Which-one-do-you-advice-What-is-your-experience-Any-reference-DB-expert-who-can-do-it" target="_blank">How do I migrate data from a MongoDB to MySQL database? &#xB7; Quora</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="leveldb-bigtable.html" class="navigation navigation-prev " aria-label="Previous page: Bigtable 和 LevelDB 的实现">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mongodb-wiredtiger.html" class="navigation navigation-next " aria-label="Next page: MongoDB 和 WiredTiger">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"MongoDB 迁移到 MySQL","level":"1.1.5.8.4","depth":4,"next":{"title":"MongoDB 和 WiredTiger","level":"1.1.5.8.5","depth":4,"path":"Source-Code-Analysis/Database/mongodb-wiredtiger.md","ref":"Source-Code-Analysis/Database/mongodb-wiredtiger.md","articles":[]},"previous":{"title":"Bigtable 和 LevelDB 的实现","level":"1.1.5.8.3","depth":4,"path":"Source-Code-Analysis/Database/leveldb-bigtable.md","ref":"Source-Code-Analysis/Database/leveldb-bigtable.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Source-Code-Analysis/Database/mongodb-to-mysql.md","mtime":"2018-05-22T14:51:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-23T11:29:51.711Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,2080 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Bigtable 和 LevelDB 的实现 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="mongodb-to-mysql.html" />
+    
+    
+    <link rel="prev" href="dynamo.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    iOS 开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../../ObjC-Basic/">
+            
+                <a href="../../ObjC-Basic/">
+            
+                    
+                    Objective-C 语言基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../../ObjC-Basic/Class.html">
+            
+                <a href="../../ObjC-Basic/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2" data-path="../../ObjC-Basic/Block.html">
+            
+                <a href="../../ObjC-Basic/Block.html">
+            
+                    
+                    Block 编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.3" data-path="../../ObjC-Basic/Runtime.html">
+            
+                <a href="../../ObjC-Basic/Runtime.html">
+            
+                    
+                    Objective-C Runtime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.4" data-path="../../ObjC-Basic/MM.html">
+            
+                <a href="../../ObjC-Basic/MM.html">
+            
+                    
+                    Objective-C 内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.5" data-path="../../ObjC-Basic/Runloop.html">
+            
+                <a href="../../ObjC-Basic/Runloop.html">
+            
+                    
+                    Runloop
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../../Cocoa-Touch/">
+            
+                <a href="../../Cocoa-Touch/">
+            
+                    
+                    Cocoa Touch
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="../../Cocoa-Touch/Event-Handling.html">
+            
+                <a href="../../Cocoa-Touch/Event-Handling.html">
+            
+                    
+                    事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2" data-path="../../Cocoa-Touch/UIApplication.html">
+            
+                <a href="../../Cocoa-Touch/UIApplication.html">
+            
+                    
+                    UIApplication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.3" data-path="../../Cocoa-Touch/UIView-Basic.html">
+            
+                <a href="../../Cocoa-Touch/UIView-Basic.html">
+            
+                    
+                    UIView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.4" data-path="../../Cocoa-Touch/UIViewController.html">
+            
+                <a href="../../Cocoa-Touch/UIViewController.html">
+            
+                    
+                    UIViewController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.5" data-path="../../Cocoa-Touch/Animation.html">
+            
+                <a href="../../Cocoa-Touch/Animation.html">
+            
+                    
+                    动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.6" data-path="../../Cocoa-Touch/Network.html">
+            
+                <a href="../../Cocoa-Touch/Network.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.7" data-path="../../Cocoa-Touch/Multithreading.html">
+            
+                <a href="../../Cocoa-Touch/Multithreading.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../../Cocoa-Touch/File-System.html">
+            
+                <a href="../../Cocoa-Touch/File-System.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.9" data-path="../../Cocoa-Touch/Design.html">
+            
+                <a href="../../Cocoa-Touch/Design.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.10" data-path="../../Cocoa-Touch/Performance.html">
+            
+                <a href="../../Cocoa-Touch/Performance.html">
+            
+                    
+                    性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../../Swift/">
+            
+                <a href="../../Swift/">
+            
+                    
+                    Swift
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="../../Swift/Class.html">
+            
+                <a href="../../Swift/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="../../Swift/Struct-And-Enum.html">
+            
+                <a href="../../Swift/Struct-And-Enum.html">
+            
+                    
+                    结构体与枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3" data-path="../../Swift/Function-And-Closure.html">
+            
+                <a href="../../Swift/Function-And-Closure.html">
+            
+                    
+                    函数与闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../../Interview/">
+            
+                <a href="../../Interview/">
+            
+                    
+                    面试问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1" data-path="../../Interview/iOSInterviewQuestions/">
+            
+                <a href="../../Interview/iOSInterviewQuestions/">
+            
+                    
+                    《招聘一个靠谱的iOS》
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1.1" data-path="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.1.2" data-path="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.2" data-path="../../interview/ZhiHu-QA/">
+            
+                <a href="../../interview/ZhiHu-QA/">
+            
+                    
+                    关于一些 iOS 面试问题的解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.3" data-path="../../interview/iOSDeveloperQA/">
+            
+                <a href="../../interview/iOSDeveloperQA/">
+            
+                    
+                    iOS 开发面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.4" data-path="../../interview/MXR-QA/">
+            
+                <a href="../../interview/MXR-QA/">
+            
+                    
+                    MXR 面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    源码分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1" data-path="../AFNetworking/AFNetworking_1.html">
+            
+                <a href="../AFNetworking/AFNetworking_1.html">
+            
+                    
+                    AFNetworking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1.1" data-path="../AFNetworking/AFNetworking_2.html">
+            
+                <a href="../AFNetworking/AFNetworking_2.html">
+            
+                    
+                    AFURLSessionManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.2" data-path="../AFNetworking/AFNetworking_3.html">
+            
+                <a href="../AFNetworking/AFNetworking_3.html">
+            
+                    
+                    AFURLSerialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.3" data-path="../AFNetworking/AFNetworking_4.html">
+            
+                <a href="../AFNetworking/AFNetworking_4.html">
+            
+                    
+                    AFNetworkReachabilityManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.4" data-path="../AFNetworking/AFNetworking_5.html">
+            
+                <a href="../AFNetworking/AFNetworking_5.html">
+            
+                    
+                    HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.2" data-path="../Alamofire/">
+            
+                <a href="../Alamofire/">
+            
+                    
+                    Alamofire
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3" data-path="../architecture/mvx.html">
+            
+                <a href="../architecture/mvx.html">
+            
+                    
+                    architecture
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.3.1" data-path="../architecture/mvx-model.html">
+            
+                <a href="../architecture/mvx-model.html">
+            
+                    
+                    MVX-Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.2" data-path="../architecture/mvx-view.html">
+            
+                <a href="../architecture/mvx-view.html">
+            
+                    
+                    MVX-View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.3" data-path="../architecture/mvx-controller.html">
+            
+                <a href="../architecture/mvx-controller.html">
+            
+                    
+                    MVX-Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4" >
+            
+                <span>
+            
+                    
+                    AsyncDisplayKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.4.1" data-path="../AsyncDisplayKit/ASDK_1.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_1.html">
+            
+                    
+                    提升界面的渲染性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4.2" data-path="../AsyncDisplayKit/ASDK_2.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_2.html">
+            
+                    
+                    布局算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4.3" data-path="../AsyncDisplayKit/ASDK_3.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_3.html">
+            
+                    
+                    预加载与智能预加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5" >
+            
+                <span>
+            
+                    
+                    BlocksKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.5.1" data-path="../BlocksKit/BlocksKit_1.html">
+            
+                <a href="../BlocksKit/BlocksKit_1.html">
+            
+                    
+                    神奇的 BlocksKit (一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5.2" data-path="../BlocksKit/BlocksKit_2.html">
+            
+                <a href="../BlocksKit/BlocksKit_2.html">
+            
+                    
+                    神奇的 BlocksKit (二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.6" data-path="../Blog/initialize-comments.html">
+            
+                <a href="../Blog/initialize-comments.html">
+            
+                    
+                    Gitalk/Gitment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7" >
+            
+                <span>
+            
+                    
+                    CocoaPods
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.7.1" data-path="../CocoaPods/CocoaPods.html">
+            
+                <a href="../CocoaPods/CocoaPods.html">
+            
+                    
+                    CocoaPods 都做了什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7.2" data-path="../CocoaPods/DSL.html">
+            
+                <a href="../CocoaPods/DSL.html">
+            
+                    
+                    DSL 以及 DSL 的应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8" >
+            
+                <span>
+            
+                    
+                    Database
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.8.1" data-path="concurrency-control.html">
+            
+                <a href="concurrency-control.html">
+            
+                    
+                    数据库并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.2" data-path="dynamo.html">
+            
+                <a href="dynamo.html">
+            
+                    
+                    分布式键值存储 Dynamo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.5.8.3" data-path="leveldb-bigtable.html">
+            
+                <a href="leveldb-bigtable.html">
+            
+                    
+                    Bigtable 和 LevelDB 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.4" data-path="mongodb-to-mysql.html">
+            
+                <a href="mongodb-to-mysql.html">
+            
+                    
+                    MongoDB 迁移到 MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.5" data-path="mongodb-wiredtiger.html">
+            
+                <a href="mongodb-wiredtiger.html">
+            
+                    
+                    MongoDB 和 WiredTiger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.6" data-path="mysql.html">
+            
+                <a href="mysql.html">
+            
+                    
+                    MySQL 和 InnoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.7" data-path="sql-index-intro.html">
+            
+                <a href="sql-index-intro.html">
+            
+                    
+                    MySQL 索引设计概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.8" data-path="sql-index-performance.html">
+            
+                <a href="sql-index-performance.html">
+            
+                    
+                    MySQL 索引性能分析概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.9" data-path="transaction.html">
+            
+                <a href="transaction.html">
+            
+                    
+                    MySQL 中事务的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.9" data-path="../DKNightVersion/DKNightVersion.html">
+            
+                <a href="../DKNightVersion/DKNightVersion.html">
+            
+                    
+                    DKNightVersion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10" >
+            
+                <span>
+            
+                    
+                    FBRetainCycleDetector
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.10.1" data-path="../FBRetainCycleDetector/block.html">
+            
+                <a href="../FBRetainCycleDetector/block.html">
+            
+                    
+                    block 如何持有对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.2" data-path="../FBRetainCycleDetector/Obj-Associated.html">
+            
+                <a href="../FBRetainCycleDetector/Obj-Associated.html">
+            
+                    
+                    Associated Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.3" data-path="../FBRetainCycleDetector/Obj-Strong.html">
+            
+                <a href="../FBRetainCycleDetector/Obj-Strong.html">
+            
+                    
+                    对象持有的强指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.4" data-path="../FBRetainCycleDetector/retain_cycle.html">
+            
+                <a href="../FBRetainCycleDetector/retain_cycle.html">
+            
+                    
+                    解决循环引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.11" data-path="../fishhook/fishhook.html">
+            
+                <a href="../fishhook/fishhook.html">
+            
+                    
+                    fishhook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.12" data-path="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                <a href="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                    
+                    IQKeyboardManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.13" data-path="../KVOController/KVOController.html">
+            
+                <a href="../KVOController/KVOController.html">
+            
+                    
+                    KVOController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.14" data-path="../libextobjc/libextobjc.html">
+            
+                <a href="../libextobjc/libextobjc.html">
+            
+                    
+                    libextobjc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.15" data-path="../Masonry/Masonry.html">
+            
+                <a href="../Masonry/Masonry.html">
+            
+                    
+                    Masonry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.16" data-path="../MBProgressHUD/">
+            
+                <a href="../MBProgressHUD/">
+            
+                    
+                    MBProgressHUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17" data-path="../objc/">
+            
+                <a href="../objc/">
+            
+                    
+                    objc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.17.1" data-path="../objc/associated-obj.html">
+            
+                <a href="../objc/associated-obj.html">
+            
+                    
+                    关联对象 AssociatedObject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.2" data-path="../objc/autoreleasepool.html">
+            
+                <a href="../objc/autoreleasepool.html">
+            
+                    
+                    自动释放池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.3" data-path="../objc/black-box-retain-release.html">
+            
+                <a href="../objc/black-box-retain-release.html">
+            
+                    
+                    黑箱中的 retain 和 release
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.4" data-path="../objc/func-structure.html">
+            
+                <a href="../objc/func-structure.html">
+            
+                    
+                    ObjC 中方法的结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.5" data-path="../objc/hash.html">
+            
+                <a href="../objc/hash.html">
+            
+                    
+                    哈希表的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.6" data-path="../objc/initialization.html">
+            
+                <a href="../objc/initialization.html">
+            
+                    
+                    初始化对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.7" data-path="../objc/isa.html">
+            
+                <a href="../objc/isa.html">
+            
+                    
+                    isa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.8" data-path="../objc/lazy-initialize.html">
+            
+                <a href="../objc/lazy-initialize.html">
+            
+                    
+                    懒惰的 initialize 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.9" data-path="../objc/load.html">
+            
+                <a href="../objc/load.html">
+            
+                    
+                    load 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.10" data-path="../objc/msgSend.html">
+            
+                <a href="../objc/msgSend.html">
+            
+                    
+                    消息传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18" >
+            
+                <span>
+            
+                    
+                    OHHTTPStubs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.18.1" data-path="../OHHTTPStubs/intercept.html">
+            
+                <a href="../OHHTTPStubs/intercept.html">
+            
+                    
+                    HTTP Intercept
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18.2" data-path="../OHHTTPStubs/mock.html">
+            
+                <a href="../OHHTTPStubs/mock.html">
+            
+                    
+                    HTTP Mock
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.19" data-path="../ProtocolKit/ProtocolKit.html">
+            
+                <a href="../ProtocolKit/ProtocolKit.html">
+            
+                    
+                    ProtocolKit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20" data-path="../rack/rack.html">
+            
+                <a href="../rack/rack.html">
+            
+                    
+                    rack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.20.1" data-path="../rack/rack-thin.html">
+            
+                <a href="../rack/rack-thin.html">
+            
+                    
+                    Thin 的事件驱动模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20.2" data-path="../rack/rack-unicorn.html">
+            
+                <a href="../rack/rack-unicorn.html">
+            
+                    
+                    Unicorn 的多进程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20.3" data-path="../rack/rack-webrik.html">
+            
+                <a href="../rack/rack-webrik.html">
+            
+                    
+                    WEBrick 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.21" data-path="../Rails/activerecord.html">
+            
+                <a href="../Rails/activerecord.html">
+            
+                    
+                    Rails
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22" >
+            
+                <span>
+            
+                    
+                    ReactiveObjC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.22.1" data-path="../ReactiveObjC/RACChannel.html">
+            
+                <a href="../ReactiveObjC/RACChannel.html">
+            
+                    
+                    RACChannel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.2" data-path="../ReactiveObjC/RACCommand.html">
+            
+                <a href="../ReactiveObjC/RACCommand.html">
+            
+                    
+                    RACCommand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.3" data-path="../ReactiveObjC/RACDelegateProxy.html">
+            
+                <a href="../ReactiveObjC/RACDelegateProxy.html">
+            
+                    
+                    RACDelegateProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.4" data-path="../ReactiveObjC/RACMulticastConnection.html">
+            
+                <a href="../ReactiveObjC/RACMulticastConnection.html">
+            
+                    
+                    RACMulticastConnection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.5" data-path="../ReactiveObjC/RACScheduler.html">
+            
+                <a href="../ReactiveObjC/RACScheduler.html">
+            
+                    
+                    RACScheduler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.6" data-path="../ReactiveObjC/RACSequence.html">
+            
+                <a href="../ReactiveObjC/RACSequence.html">
+            
+                    
+                    RACSequence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.7" data-path="../ReactiveObjC/RACSignal.html">
+            
+                <a href="../ReactiveObjC/RACSignal.html">
+            
+                    
+                    RACSignal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.8" data-path="../ReactiveObjC/RACSubject.html">
+            
+                <a href="../ReactiveObjC/RACSubject.html">
+            
+                    
+                    RACSubject
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23" >
+            
+                <span>
+            
+                    
+                    Redis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.23.1" data-path="../Redis/redis-cli.html">
+            
+                <a href="../Redis/redis-cli.html">
+            
+                    
+                    命令处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.2" data-path="../Redis/redis-eventloop.html">
+            
+                <a href="../Redis/redis-eventloop.html">
+            
+                    
+                    事件循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.3" data-path="../Redis/redis-io-multiplexing.html">
+            
+                <a href="../Redis/redis-io-multiplexing.html">
+            
+                    
+                    I/O 多路复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.24" data-path="../Ruby/Ruby.html">
+            
+                <a href="../Ruby/Ruby.html">
+            
+                    
+                    Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.25" data-path="../SDWebImage/">
+            
+                <a href="../SDWebImage/">
+            
+                    
+                    SDWebImage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="../../More.html">
+            
+                <a href="../../More.html">
+            
+                    
+                    更多资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Bigtable 和 LevelDB 的实现</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><img src="images/leveldb-bigtable/Bigtable-LevelDB-Cover.jpg" alt="Bigtable-LevelDB-Cover"></p>
+<h1 id="&#x6D45;&#x6790;-bigtable-&#x548C;-leveldb-&#x7684;&#x5B9E;&#x73B0;">&#x6D45;&#x6790; Bigtable &#x548C; LevelDB &#x7684;&#x5B9E;&#x73B0;</h1>
+<p>&#x5728; 2006 &#x5E74;&#x7684; OSDI &#x4E0A;&#xFF0C;Google &#x53D1;&#x5E03;&#x4E86;&#x540D;&#x4E3A; <a href="https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf" target="_blank">Bigtable: A Distributed Storage System for Structured Data</a> &#x7684;&#x8BBA;&#x6587;&#xFF0C;&#x5176;&#x4E2D;&#x63CF;&#x8FF0;&#x4E86;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x7BA1;&#x7406;&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;  - Bigtable &#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#x3001;&#x63A5;&#x53E3;&#x4EE5;&#x53CA;&#x5B9E;&#x73B0;&#x7B49;&#x5185;&#x5BB9;&#x3002;</p>
+<p><img src="images/leveldb-bigtable/leveldb-logo.png" alt="leveldb-logo"></p>
+<p>&#x672C;&#x6587;&#x4F1A;&#x5148;&#x5BF9; Bigtable &#x4E00;&#x6587;&#x4E2D;&#x63CF;&#x8FF0;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#x8FDB;&#x884C;&#x7B80;&#x5355;&#x7684;&#x63CF;&#x8FF0;&#xFF0C;&#x7136;&#x540E;&#x5BF9; Google &#x5F00;&#x6E90;&#x7684; KV &#x5B58;&#x50A8;&#x6570;&#x636E;&#x5E93; <a href="https://github.com/google/leveldb" target="_blank">LevelDB</a> &#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF1B;LevelDB &#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x5355;&#x70B9;&#x7684; Bigtable &#x7684;&#x7CFB;&#x7EDF;&#xFF0C;&#x867D;&#x7136;&#x5176;&#x4E2D;&#x6CA1;&#x6709; Bigtable &#x4E2D;&#x4E0E; tablet &#x7BA1;&#x7406;&#x4EE5;&#x53CA;&#x4E00;&#x4E9B;&#x5206;&#x5E03;&#x5F0F;&#x76F8;&#x5173;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x4E0D;&#x8FC7;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5BF9; LevelDB &#x6E90;&#x4EE3;&#x7801;&#x7684;&#x9605;&#x8BFB;&#x589E;&#x52A0;&#x5BF9; Bigtable &#x7684;&#x7406;&#x89E3;&#x3002;</p>
+<h2 id="bigtable">Bigtable</h2>
+<p>Bigtable &#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x7BA1;&#x7406;<strong>&#x7ED3;&#x6784;&#x5316;&#x6570;&#x636E;</strong>&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#xFF0C;&#x5B83;&#x6709;&#x975E;&#x5E38;&#x4F18;&#x79C0;&#x7684;&#x6269;&#x5C55;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x5904;&#x7406;&#x4E0A;&#x5343;&#x53F0;&#x673A;&#x5668;&#x4E2D;&#x7684; PB &#x7EA7;&#x522B;&#x7684;&#x6570;&#x636E;&#xFF1B;Google &#x4E2D;&#x7684;&#x5F88;&#x591A;&#x9879;&#x76EE;&#xFF0C;&#x5305;&#x62EC; Web &#x7D22;&#x5F15;&#x90FD;&#x4F7F;&#x7528; Bigtable &#x6765;&#x5B58;&#x50A8;&#x6D77;&#x91CF;&#x7684;&#x6570;&#x636E;&#xFF1B;Bigtable &#x7684;&#x8BBA;&#x6587;&#x4E2D;&#x58F0;&#x79F0;&#x5B83;&#x5B9E;&#x73B0;&#x4E86;&#x56DB;&#x4E2A;&#x76EE;&#x6807;&#xFF1A;</p>
+<p><img src="images/leveldb-bigtable/Goals-of-Bigtable.jpg" alt="Goals-of-Bigtable"></p>
+<p>&#x5728;&#x4F5C;&#x8005;&#x770B;&#x6765;&#x8FD9;&#x4E9B;&#x76EE;&#x6807;&#x770B;&#x770B;&#x5C31;&#x597D;&#xFF0C;&#x5176;&#x5B9E;&#x5E76;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x592A;&#x5927;&#x7684;&#x610F;&#x4E49;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x9879;&#x76EE;&#x90FD;&#x4F1A;&#x5BF9;&#x5916;&#x5BA3;&#x79F0;&#x5B83;&#x4EEC;&#x8FBE;&#x5230;&#x4E86;&#x9AD8;&#x6027;&#x80FD;&#x3001;&#x9AD8;&#x53EF;&#x7528;&#x6027;&#x7B49;&#x7B49;&#x7279;&#x6027;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x7684;&#x662F; Bigtable &#x5230;&#x5E95;&#x662F;&#x5982;&#x4F55;&#x5B9E;&#x73B0;&#x7684;&#x3002;</p>
+<h3 id="&#x6570;&#x636E;&#x6A21;&#x578B;">&#x6570;&#x636E;&#x6A21;&#x578B;</h3>
+<p>Bigtable &#x4E0E;&#x6570;&#x636E;&#x5E93;&#x5728;&#x5F88;&#x591A;&#x65B9;&#x9762;&#x90FD;&#x975E;&#x5E38;&#x76F8;&#x4F3C;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x4E0E;&#x6570;&#x636E;&#x5E93;&#x4E0D;&#x540C;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x5B83;&#x5E76;&#x6CA1;&#x6709;&#x652F;&#x6301;&#x5168;&#x90E8;&#x7684;&#x5173;&#x7CFB;&#x578B;&#x6570;&#x636E;&#x6A21;&#x578B;&#xFF0C;&#x53CD;&#x800C;&#x4F7F;&#x7528;&#x4E86;&#x7B80;&#x5355;&#x7684;&#x6570;&#x636E;&#x6A21;&#x578B;&#xFF0C;&#x4F7F;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x88AB;&#x66F4;&#x7075;&#x6D3B;&#x7684;&#x63A7;&#x5236;&#x548C;&#x7BA1;&#x7406;&#x3002;</p>
+<p>&#x5728;&#x5B9E;&#x73B0;&#x4E2D;&#xFF0C;Bigtable &#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x7A00;&#x758F;&#x7684;&#x3001;&#x5206;&#x5E03;&#x5F0F;&#x7684;&#x3001;&#x591A;&#x7EF4;&#x6301;&#x4E45;&#x6709;&#x5E8F;&#x54C8;&#x5E0C;&#x3002;</p>
+<blockquote>
+<p>A Bigtable is a sparse, distributed, persistent multi-dimensional sorted map.</p>
+</blockquote>
+<p>&#x5B83;&#x7684;&#x5B9A;&#x4E49;&#x5176;&#x5B9E;&#x4E5F;&#x5C31;&#x51B3;&#x5B9A;&#x4E86;&#x5176;&#x6570;&#x636E;&#x6A21;&#x578B;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x5E76;&#x4E14;&#x6613;&#x4E8E;&#x5B9E;&#x73B0;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>row</code>&#x3001;<code>column</code> &#x548C; <code>timestamp</code> &#x4E09;&#x4E2A;&#x5B57;&#x6BB5;&#x4F5C;&#x4E3A;&#x8FD9;&#x4E2A;&#x54C8;&#x5E0C;&#x7684;&#x952E;&#xFF0C;&#x503C;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x6570;&#x7EC4;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<p><img src="images/leveldb-bigtable/Bigtable-DataModel-Row-Column-Timestamp-Value.jpg" alt="Bigtable-DataModel-Row-Column-Timestamp-Value"></p>
+<p>&#x8FD9;&#x91CC;&#x6700;&#x91CD;&#x8981;&#x7684;&#x5C31;&#x662F; <code>row</code> &#x7684;&#x503C;&#xFF0C;&#x5B83;&#x7684;&#x957F;&#x5EA6;&#x6700;&#x5927;&#x53EF;&#x4EE5;&#x4E3A; 64KB&#xFF0C;&#x5BF9;&#x4E8E;&#x540C;&#x4E00; <code>row</code> &#x4E0B;&#x6570;&#x636E;&#x7684;&#x8BFB;&#x5199;&#x90FD;&#x53EF;&#x4EE5;&#x770B;&#x505A;&#x662F;&#x539F;&#x5B50;&#x7684;&#xFF1B;&#x56E0;&#x4E3A; Bigtable &#x662F;&#x6309;&#x7167; <code>row</code> &#x7684;&#x503C;&#x4F7F;&#x7528;&#x5B57;&#x5178;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x7684;&#xFF0C;&#x6BCF;&#x4E00;&#x6BB5; <code>row</code> &#x7684;&#x8303;&#x56F4;&#x90FD;&#x4F1A;&#x88AB; Bigtable &#x8FDB;&#x884C;&#x5206;&#x533A;&#xFF0C;&#x5E76;&#x4EA4;&#x7ED9;&#x4E00;&#x4E2A; tablet &#x8FDB;&#x884C;&#x5904;&#x7406;&#x3002;</p>
+<h3 id="&#x5B9E;&#x73B0;">&#x5B9E;&#x73B0;</h3>
+<p>&#x5728;&#x8FD9;&#x4E00;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x4ECB;&#x7ECD; Bigtable &#x8BBA;&#x6587;&#x5BF9;&#x4E8E;&#x5176;&#x672C;&#x8EAB;&#x5B9E;&#x73B0;&#x7684;&#x63CF;&#x8FF0;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x5F88;&#x591A;&#x5185;&#x5BB9;&#xFF1A;tablet &#x7684;&#x7EC4;&#x7EC7;&#x5F62;&#x5F0F;&#x3001;tablet &#x7684;&#x7BA1;&#x7406;&#x3001;&#x8BFB;&#x5199;&#x8BF7;&#x6C42;&#x7684;&#x5904;&#x7406;&#x4EE5;&#x53CA;&#x6570;&#x636E;&#x7684;&#x538B;&#x7F29;&#x7B49;&#x51E0;&#x4E2A;&#x90E8;&#x5206;&#x3002;</p>
+<h4 id="tablet-&#x7684;&#x7EC4;&#x7EC7;&#x5F62;&#x5F0F;">tablet &#x7684;&#x7EC4;&#x7EC7;&#x5F62;&#x5F0F;</h4>
+<p>&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7C7B;&#x4F3C; B+ &#x6811;&#x7684;&#x4E09;&#x5C42;&#x7ED3;&#x6784;&#x6765;&#x5B58;&#x50A8; tablet &#x7684;&#x4F4D;&#x7F6E;&#x4FE1;&#x606F;&#xFF0C;&#x7B2C;&#x4E00;&#x5C42;&#x662F;&#x4E00;&#x4E2A;&#x5355;&#x72EC;&#x7684; <a href="https://static.googleusercontent.com/media/research.google.com/en//archive/chubby-osdi06.pdf" target="_blank">Chubby</a> &#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x4E2D;&#x4FDD;&#x5B58;&#x4E86;&#x6839; tablet &#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<blockquote>
+<p>Chubby &#x662F;&#x4E00;&#x4E2A;&#x5206;&#x5E03;&#x5F0F;&#x9501;&#x670D;&#x52A1;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x4F1A;&#x5728;&#x540E;&#x9762;&#x7684;&#x6587;&#x7AE0;&#x4E2D;&#x4ECB;&#x7ECD;&#x5B83;&#x3002;</p>
+</blockquote>
+<p><img src="images/leveldb-bigtable/Tablet-Location-Hierarchy.jpg" alt="Tablet-Location-Hierarchy"></p>
+<p>&#x6BCF;&#x4E00;&#x4E2A; METADATA tablet &#x5305;&#x62EC;&#x6839;&#x8282;&#x70B9;&#x4E0A;&#x7684; tablet &#x90FD;&#x5B58;&#x50A8;&#x4E86; tablet &#x7684;&#x4F4D;&#x7F6E;&#x548C;&#x8BE5; tablet &#x4E2D; key &#x7684;&#x6700;&#x5C0F;&#x503C;&#x548C;&#x6700;&#x5927;&#x503C;&#xFF1B;&#x6BCF;&#x4E00;&#x4E2A; METADATA &#x884C;&#x5927;&#x7EA6;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x5B58;&#x50A8;&#x4E86; 1KB &#x7684;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x679C;&#x6BCF;&#x4E00;&#x4E2A; METADATA tablet &#x7684;&#x5927;&#x5C0F;&#x90FD;&#x4E3A; 128MB&#xFF0C;&#x90A3;&#x4E48;&#x6574;&#x4E2A;&#x4E09;&#x5C42;&#x7ED3;&#x6784;&#x53EF;&#x4EE5;&#x5B58;&#x50A8; 2^61 &#x5B57;&#x8282;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<h4 id="tablet-&#x7684;&#x7BA1;&#x7406;">tablet &#x7684;&#x7BA1;&#x7406;</h4>
+<p>&#x65E2;&#x7136;&#x5728;&#x6574;&#x4E2A; Bigtable &#x4E2D;&#x6709;&#x7740;&#x6D77;&#x91CF;&#x7684; tablet &#x670D;&#x52A1;&#x5668;&#x4EE5;&#x53CA;&#x6570;&#x636E;&#x7684;&#x5206;&#x7247; tablet&#xFF0C;&#x90A3;&#x4E48; Bigtable &#x662F;&#x5982;&#x4F55;&#x7BA1;&#x7406;&#x6D77;&#x91CF;&#x7684;&#x6570;&#x636E;&#x5462;&#xFF1F;Bigtable &#x4E0E;&#x5F88;&#x591A;&#x7684;&#x5206;&#x5E03;&#x5F0F;&#x7CFB;&#x7EDF;&#x4E00;&#x6837;&#xFF0C;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x4E3B;&#x670D;&#x52A1;&#x5668;&#x5C06; tablet &#x5206;&#x6D3E;&#x7ED9;&#x4E0D;&#x540C;&#x7684;&#x670D;&#x52A1;&#x5668;&#x8282;&#x70B9;&#x3002;</p>
+<p><img src="images/leveldb-bigtable/Master-Manage-Tablet-Servers-And-Tablets.jpg" alt="Master-Manage-Tablet-Servers-And-Tablets"></p>
+<p>&#x4E3A;&#x4E86;&#x51CF;&#x8F7B;&#x4E3B;&#x670D;&#x52A1;&#x5668;&#x7684;&#x8D1F;&#x8F7D;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x4EC5;&#x4EC5;&#x901A;&#x8FC7; Master &#x83B7;&#x53D6; tablet &#x670D;&#x52A1;&#x5668;&#x7684;&#x4F4D;&#x7F6E;&#x4FE1;&#x606F;&#xFF0C;&#x5B83;&#x5E76;&#x4E0D;&#x4F1A;&#x5728;&#x6BCF;&#x6B21;&#x8BFB;&#x5199;&#x65F6;&#x90FD;&#x8BF7;&#x6C42; Master &#x8282;&#x70B9;&#xFF0C;&#x800C;&#x662F;&#x76F4;&#x63A5;&#x4E0E; tablet &#x670D;&#x52A1;&#x5668;&#x76F8;&#x8FDE;&#xFF0C;&#x540C;&#x65F6;&#x5BA2;&#x6237;&#x7AEF;&#x672C;&#x8EAB;&#x4E5F;&#x4F1A;&#x4FDD;&#x5B58;&#x4E00;&#x4EFD; tablet &#x670D;&#x52A1;&#x5668;&#x4F4D;&#x7F6E;&#x7684;&#x7F13;&#x5B58;&#x4EE5;&#x51CF;&#x5C11;&#x4E0E; Master &#x901A;&#x4FE1;&#x7684;&#x6B21;&#x6570;&#x548C;&#x9891;&#x7387;&#x3002;</p>
+<h4 id="&#x8BFB;&#x5199;&#x8BF7;&#x6C42;&#x7684;&#x5904;&#x7406;">&#x8BFB;&#x5199;&#x8BF7;&#x6C42;&#x7684;&#x5904;&#x7406;</h4>
+<p>&#x4ECE;&#x8BFB;&#x5199;&#x8BF7;&#x6C42;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x6211;&#x4EEC;&#x5176;&#x5B9E;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x6574;&#x4E2A; Bigtable &#x4E2D;&#x7684;&#x5404;&#x4E2A;&#x90E8;&#x5206;&#x662F;&#x5982;&#x4F55;&#x534F;&#x4F5C;&#x7684;&#xFF0C;&#x5305;&#x62EC;&#x65E5;&#x5FD7;&#x3001;memtable &#x4EE5;&#x53CA; SSTable &#x6587;&#x4EF6;&#x3002;</p>
+<p><img src="images/leveldb-bigtable/Tablet-Serving.jpg" alt="Tablet-Serving"></p>
+<p>&#x5F53;&#x6709;&#x5BA2;&#x6237;&#x7AEF;&#x5411; tablet &#x670D;&#x52A1;&#x5668;&#x53D1;&#x9001;&#x5199;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x5148;&#x5411; tablet &#x670D;&#x52A1;&#x5668;&#x4E2D;&#x7684;&#x65E5;&#x5FD7;&#x8FFD;&#x52A0;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#xFF0C;&#x5728;&#x65E5;&#x5FD7;&#x6210;&#x529F;&#x8FFD;&#x52A0;&#x4E4B;&#x540E;&#x518D;&#x5411; memtable &#x4E2D;&#x63D2;&#x5165;&#x8BE5;&#x6761;&#x8BB0;&#x5F55;&#xFF1B;&#x8FD9;&#x4E0E;&#x73B0;&#x5728;&#x5927;&#x591A;&#x7684;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5B9E;&#x73B0;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#xFF0C;&#x901A;&#x8FC7;&#x987A;&#x5E8F;&#x5199;&#x5411;&#x65E5;&#x5FD7;&#x8FFD;&#x52A0;&#x8BB0;&#x5F55;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5411;&#x6570;&#x636E;&#x5E93;&#x968F;&#x673A;&#x5199;&#xFF0C;&#x56E0;&#x4E3A;&#x968F;&#x673A;&#x5199;&#x7684;&#x8017;&#x65F6;&#x8FDC;&#x8FDC;&#x5927;&#x4E8E;&#x8FFD;&#x52A0;&#x5185;&#x5BB9;&#xFF0C;&#x5982;&#x679C;&#x76F4;&#x63A5;&#x8FDB;&#x884C;&#x968F;&#x673A;&#x5199;&#xFF0C;&#x53EF;&#x80FD;&#x7531;&#x4E8E;&#x53D1;&#x751F;&#x8BBE;&#x5907;&#x6545;&#x969C;&#x9020;&#x6210;&#x6570;&#x636E;&#x4E22;&#x5931;&#x3002;</p>
+<p>&#x5F53; tablet &#x670D;&#x52A1;&#x5668;&#x63A5;&#x6536;&#x5230;&#x8BFB;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x5728; memtable &#x548C; SSTable &#x4E0A;&#x8FDB;&#x884C;&#x5408;&#x5E76;&#x67E5;&#x627E;&#xFF0C;&#x56E0;&#x4E3A; memtable &#x548C; SSTable &#x4E2D;&#x5BF9;&#x4E8E;&#x952E;&#x503C;&#x7684;&#x5B58;&#x50A8;&#x90FD;&#x662F;&#x5B57;&#x5178;&#x987A;&#x5E8F;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6574;&#x4E2A;&#x8BFB;&#x64CD;&#x4F5C;&#x7684;&#x6267;&#x884C;&#x4F1A;&#x975E;&#x5E38;&#x5FEB;&#x3002;</p>
+<h4 id="&#x8868;&#x7684;&#x538B;&#x7F29;">&#x8868;&#x7684;&#x538B;&#x7F29;</h4>
+<p>&#x968F;&#x7740;&#x5199;&#x64CD;&#x4F5C;&#x7684;&#x8FDB;&#x884C;&#xFF0C;memtable &#x4F1A;&#x968F;&#x7740;&#x4E8B;&#x4EF6;&#x7684;&#x63A8;&#x79FB;&#x9010;&#x6E10;&#x589E;&#x5927;&#xFF0C;&#x5F53; memtable &#x7684;&#x5927;&#x5C0F;&#x8D85;&#x8FC7;&#x4E00;&#x5B9A;&#x7684;&#x9608;&#x503C;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x5C06;&#x5F53;&#x524D;&#x7684; memtable &#x51BB;&#x7ED3;&#xFF0C;&#x5E76;&#x4E14;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; memtable&#xFF0C;&#x88AB;&#x51BB;&#x7ED3;&#x7684; memtable &#x4F1A;&#x88AB;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A; SSTable &#x5E76;&#x4E14;&#x5199;&#x5165;&#x5230; GFS &#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x8FD9;&#x79CD;&#x538B;&#x7F29;&#x65B9;&#x5F0F;&#x4E5F;&#x88AB;&#x79F0;&#x4F5C; <em>Minor Compaction</em>&#x3002;</p>
+<p><img src="images/leveldb-bigtable/Minor-Compaction.jpg" alt="Minor-Compaction"></p>
+<p>&#x6BCF;&#x4E00;&#x4E2A; Minor Compaction &#x90FD;&#x80FD;&#x591F;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; SSTable&#xFF0C;&#x5B83;&#x80FD;&#x591F;&#x6709;&#x6548;&#x5730;&#x964D;&#x4F4E;&#x5185;&#x5B58;&#x7684;&#x5360;&#x7528;&#x5E76;&#x4E14;&#x964D;&#x4F4E;&#x670D;&#x52A1;&#x8FDB;&#x7A0B;&#x5F02;&#x5E38;&#x9000;&#x51FA;&#x540E;&#xFF0C;&#x8FC7;&#x5927;&#x7684;&#x65E5;&#x5FD7;&#x5BFC;&#x81F4;&#x7684;&#x8FC7;&#x957F;&#x7684;&#x6062;&#x590D;&#x65F6;&#x95F4;&#x3002;&#x65E2;&#x7136;&#x6709;&#x7528;&#x4E8E;&#x538B;&#x7F29; memtable &#x4E2D;&#x6570;&#x636E;&#x7684; Minor Compaction&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4E00;&#x5B9A;&#x6709;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684; Major Compaction &#x64CD;&#x4F5C;&#x3002;</p>
+<p><img src="images/leveldb-bigtable/Major-Compaction.jpg" alt="Major-Compaction"></p>
+<p>Bigtable &#x4F1A;&#x5728;<strong>&#x540E;&#x53F0;&#x5468;&#x671F;&#x6027;</strong>&#x5730;&#x8FDB;&#x884C; <em>Major Compaction</em>&#xFF0C;&#x5C06; memtable &#x4E2D;&#x7684;&#x6570;&#x636E;&#x548C;&#x4E00;&#x90E8;&#x5206;&#x7684; SSTable &#x4F5C;&#x4E3A;&#x8F93;&#x5165;&#xFF0C;&#x5C06;&#x5176;&#x4E2D;&#x7684;&#x952E;&#x503C;&#x8FDB;&#x884C;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#xFF0C;&#x751F;&#x6210;&#x65B0;&#x7684; SSTable &#x5E76;&#x79FB;&#x9664;&#x539F;&#x6709;&#x7684; memtable &#x548C; SSTable&#xFF0C;&#x65B0;&#x751F;&#x6210;&#x7684; SSTable &#x4E2D;&#x5305;&#x542B;&#x524D;&#x4E24;&#x8005;&#x7684;&#x5168;&#x90E8;&#x6570;&#x636E;&#x548C;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x5176;&#x4E2D;&#x4E00;&#x90E8;&#x5206;&#x6807;&#x8BB0;&#x672A;&#x5220;&#x9664;&#x7684;&#x4FE1;&#x606F;&#x5F7B;&#x5E95;&#x6E05;&#x9664;&#x3002;</p>
+<h4 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h4>
+<p>&#x5230;&#x8FD9;&#x91CC;&#x4E3A;&#x6B62;&#xFF0C;&#x5BF9;&#x4E8E; Google &#x7684; Bigtable &#x8BBA;&#x6587;&#x7684;&#x4ECB;&#x7ECD;&#x5C31;&#x5DEE;&#x4E0D;&#x591A;&#x5B8C;&#x6210;&#x4E86;&#xFF0C;&#x5F53;&#x7136;&#x672C;&#x6587;&#x53EA;&#x4ECB;&#x7ECD;&#x4E86;&#x5176;&#x4E2D;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#xFF0C;&#x5173;&#x4E8E;&#x538B;&#x7F29;&#x7B97;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x7EC6;&#x8282;&#x3001;&#x7F13;&#x5B58;&#x4EE5;&#x53CA;&#x63D0;&#x4EA4;&#x65E5;&#x5FD7;&#x7684;&#x5B9E;&#x73B0;&#x7B49;&#x95EE;&#x9898;&#x6211;&#x4EEC;&#x90FD;&#x6CA1;&#x6709;&#x6D89;&#x53CA;&#xFF0C;&#x60F3;&#x8981;&#x4E86;&#x89E3;&#x66F4;&#x591A;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x7684;&#x8BFB;&#x8005;&#xFF0C;&#x8FD9;&#x91CC;&#x5F3A;&#x70C8;&#x63A8;&#x8350;&#x53BB;&#x770B;&#x4E00;&#x904D; Bigtable &#x8FD9;&#x7BC7;&#x8BBA;&#x6587;&#x7684;&#x539F;&#x6587; <a href="https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf" target="_blank">Bigtable: A Distributed Storage System for Structured Data</a> &#x4EE5;&#x589E;&#x5F3A;&#x5BF9;&#x5176;&#x5B9E;&#x73B0;&#x7684;&#x7406;&#x89E3;&#x3002;</p>
+<h2 id="leveldb">LevelDB</h2>
+<p>&#x6587;&#x7AE0;&#x524D;&#x9762;&#x5BF9;&#x4E8E; Bigtable &#x7684;&#x4ECB;&#x7ECD;&#x5176;&#x5B9E;&#x90FD;&#x662F;&#x5BF9; <a href="https://github.com/google/leveldb" target="_blank">LevelDB</a> &#x8FD9;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x6240;&#x505A;&#x7684;&#x94FA;&#x57AB;&#xFF0C;&#x5F53;&#x7136;&#x8FD9;&#x5E76;&#x4E0D;&#x662F;&#x8BF4;&#x524D;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x5C31;&#x4E0D;&#x91CD;&#x8981;&#xFF0C;LevelDB &#x662F;&#x5BF9; Bigtable &#x8BBA;&#x6587;&#x4E2D;&#x63CF;&#x8FF0;&#x7684;&#x952E;&#x503C;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#x7684;&#x5355;&#x673A;&#x7248;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x6781;&#x5176;&#x9AD8;&#x901F;&#x7684;&#x952E;&#x503C;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#xFF0C;&#x5E76;&#x4E14;&#x7531; Bigtable &#x7684;&#x4F5C;&#x8005; <a href="https://research.google.com/pubs/jeff.html" target="_blank">Jeff Dean</a> &#x548C; <a href="https://research.google.com/pubs/SanjayGhemawat.html" target="_blank">Sanjay Ghemawat</a> &#x5171;&#x540C;&#x5B8C;&#x6210;&#xFF0C;&#x53EF;&#x4EE5;&#x8BF4;&#x9AD8;&#x5EA6;&#x590D;&#x523B;&#x4E86; Bigtable &#x8BBA;&#x6587;&#x4E2D;&#x5BF9;&#x4E8E;&#x5176;&#x5B9E;&#x73B0;&#x7684;&#x63CF;&#x8FF0;&#x3002;</p>
+<p>&#x56E0;&#x4E3A; Bigtable &#x53EA;&#x662F;&#x4E00;&#x7BC7;&#x8BBA;&#x6587;&#xFF0C;&#x540C;&#x65F6;&#x53C8;&#x56E0;&#x4E3A;&#x5176;&#x5B9E;&#x73B0;&#x4F9D;&#x8D56;&#x4E8E; Google &#x7684;&#x4E00;&#x4E9B;&#x4E0D;&#x5F00;&#x6E90;&#x7684;&#x57FA;&#x7840;&#x670D;&#x52A1;&#xFF1A;GFS&#x3001;Chubby &#x7B49;&#x7B49;&#xFF0C;&#x6211;&#x4EEC;&#x5F88;&#x96BE;&#x63A5;&#x89E6;&#x5230;&#x5B83;&#x7684;&#x6E90;&#x4EE3;&#x7801;&#xFF0C;&#x4E0D;&#x8FC7;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; LevelDB &#x66F4;&#x597D;&#x5730;&#x4E86;&#x89E3;&#x8FD9;&#x7BC7;&#x8BBA;&#x6587;&#x4E2D;&#x63D0;&#x5230;&#x7684;&#x8BF8;&#x591A;&#x5185;&#x5BB9;&#x548C;&#x601D;&#x91CF;&#x3002;</p>
+<h3 id="&#x6982;&#x8FF0;">&#x6982;&#x8FF0;</h3>
+<p>LevelDB &#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x952E;&#x503C;&#x5B58;&#x50A8;&#x7684;&#x300E;&#x4ED3;&#x5E93;&#x300F;&#xFF0C;&#x5B83;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7EC4;&#x975E;&#x5E38;&#x7B80;&#x5355;&#x7684;&#x589E;&#x5220;&#x6539;&#x67E5;&#x63A5;&#x53E3;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">class</span> DB {
+ <span class="hljs-keyword">public</span>:
+  <span class="hljs-function"><span class="hljs-keyword">virtual</span> Status <span class="hljs-title">Put</span><span class="hljs-params">(<span class="hljs-keyword">const</span> WriteOptions&amp; options, <span class="hljs-keyword">const</span> Slice&amp; key, <span class="hljs-keyword">const</span> Slice&amp; value)</span> </span>= <span class="hljs-number">0</span>;
+  <span class="hljs-function"><span class="hljs-keyword">virtual</span> Status <span class="hljs-title">Delete</span><span class="hljs-params">(<span class="hljs-keyword">const</span> WriteOptions&amp; options, <span class="hljs-keyword">const</span> Slice&amp; key)</span> </span>= <span class="hljs-number">0</span>;
+  <span class="hljs-function"><span class="hljs-keyword">virtual</span> Status <span class="hljs-title">Write</span><span class="hljs-params">(<span class="hljs-keyword">const</span> WriteOptions&amp; options, WriteBatch* updates)</span> </span>= <span class="hljs-number">0</span>;
+  <span class="hljs-function"><span class="hljs-keyword">virtual</span> Status <span class="hljs-title">Get</span><span class="hljs-params">(<span class="hljs-keyword">const</span> ReadOptions&amp; options, <span class="hljs-keyword">const</span> Slice&amp; key, <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span>* value)</span> </span>= <span class="hljs-number">0</span>;
+}
+</code></pre>
+<blockquote>
+<p><code>Put</code> &#x65B9;&#x6CD5;&#x5728;&#x5185;&#x90E8;&#x6700;&#x7EC8;&#x4F1A;&#x8C03;&#x7528; <code>Write</code> &#x65B9;&#x6CD5;&#xFF0C;&#x53EA;&#x662F;&#x5728;&#x4E0A;&#x5C42;&#x4E3A;&#x8C03;&#x7528;&#x8005;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x9009;&#x62E9;&#x3002;</p>
+</blockquote>
+<p><code>Get</code> &#x548C; <code>Put</code> &#x662F; LevelDB &#x4E3A;&#x4E0A;&#x5C42;&#x63D0;&#x4F9B;&#x7684;&#x7528;&#x4E8E;&#x8BFB;&#x5199;&#x7684;&#x63A5;&#x53E3;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x5BF9;&#x8BFB;&#x5199;&#x7684;&#x8FC7;&#x7A0B;&#x6709;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x6E05;&#x6670;&#x7684;&#x8BA4;&#x77E5;&#xFF0C;&#x90A3;&#x4E48;&#x7406;&#x89E3; LevelDB &#x7684;&#x5B9E;&#x73B0;&#x5C31;&#x4E0D;&#x662F;&#x90A3;&#x4E48;&#x56F0;&#x96BE;&#x4E86;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x4E00;&#x8282;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5148;&#x901A;&#x8FC7;&#x5BF9;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;&#x7684;&#x5206;&#x6790;&#x4E86;&#x89E3;&#x6574;&#x4E2A;&#x5DE5;&#x7A0B;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x5B9E;&#x73B0;&#xFF0C;&#x5E76;&#x5728;&#x9047;&#x5230;&#x95EE;&#x9898;&#x548C;&#x65B0;&#x7684;&#x6982;&#x5FF5;&#x65F6;&#x8FDB;&#x884C;&#x89E3;&#x91CA;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x5728;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x4E2D;&#x4E00;&#x6B65;&#x4E00;&#x6B65;&#x4ECB;&#x7ECD; LevelDB &#x4E2D;&#x4E00;&#x4E9B;&#x91CD;&#x8981;&#x6A21;&#x5757;&#x7684;&#x5B9E;&#x73B0;&#x4EE5;&#x8FBE;&#x5230;&#x638C;&#x63E1;&#x5B83;&#x7684;&#x539F;&#x7406;&#x7684;&#x76EE;&#x6807;&#x3002;</p>
+<h3 id="&#x4ECE;&#x5199;&#x64CD;&#x4F5C;&#x5F00;&#x59CB;">&#x4ECE;&#x5199;&#x64CD;&#x4F5C;&#x5F00;&#x59CB;</h3>
+<p>&#x9996;&#x5148;&#x6765;&#x770B; <code>Get</code> &#x548C; <code>Put</code> &#x4E24;&#x8005;&#x4E2D;&#x7684;&#x5199;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-cpp">Status DB::Put(<span class="hljs-keyword">const</span> WriteOptions&amp; opt, <span class="hljs-keyword">const</span> Slice&amp; key, <span class="hljs-keyword">const</span> Slice&amp; value) {
+  WriteBatch batch;
+  batch.Put(key, value);
+  <span class="hljs-keyword">return</span> Write(opt, &amp;batch);
+}
+
+Status DBImpl::Write(<span class="hljs-keyword">const</span> WriteOptions&amp; options, WriteBatch* my_batch) {
+    ...
+}
+</code></pre>
+<p>&#x6B63;&#x5982;&#x4E0A;&#x9762;&#x6240;&#x4ECB;&#x7ECD;&#x7684;&#xFF0C;<code>DB::Put</code> &#x65B9;&#x6CD5;&#x5C06;&#x4F20;&#x5165;&#x7684;&#x53C2;&#x6570;&#x5C01;&#x88C5;&#x6210;&#x4E86;&#x4E00;&#x4E2A; <code>WritaBatch</code>&#xFF0C;&#x7136;&#x540E;&#x4ECD;&#x7136;&#x4F1A;&#x6267;&#x884C; <code>DBImpl::Write</code> &#x65B9;&#x6CD5;&#x5411;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5199;&#x5165;&#x6570;&#x636E;&#xFF1B;&#x5199;&#x5165;&#x65B9;&#x6CD5; <code>DBImpl::Write</code> &#x5176;&#x5B9E;&#x662F;&#x4E00;&#x4E2A;&#x662F;&#x975E;&#x5E38;&#x590D;&#x6742;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x5F88;&#x591A;&#x5BF9;&#x4E0A;&#x4E0B;&#x6587;&#x72B6;&#x6001;&#x7684;&#x5224;&#x65AD;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x5199;&#x64CD;&#x4F5C;&#x7684;&#x6574;&#x4F53;&#x903B;&#x8F91;&#xFF1A;</p>
+<p><img src="images/leveldb-bigtable/LevelDB-Put.jpg" alt="LevelDB-Put"></p>
+<p>&#x4ECE;&#x603B;&#x4F53;&#x4E0A;&#x770B;&#xFF0C;LevelDB &#x5728;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x6267;&#x884C;&#x5199;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x4F1A;&#x6709;&#x4E09;&#x4E2A;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li>&#x8C03;&#x7528; <code>MakeRoomForWrite</code> &#x65B9;&#x6CD5;&#x4E3A;&#x5373;&#x5C06;&#x8FDB;&#x884C;&#x7684;&#x5199;&#x5165;&#x63D0;&#x4F9B;&#x8DB3;&#x591F;&#x7684;&#x7A7A;&#x95F4;&#xFF1B;<ul>
+<li>&#x5728;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x7531;&#x4E8E; memtable &#x4E2D;&#x7A7A;&#x95F4;&#x7684;&#x4E0D;&#x8DB3;&#x53EF;&#x80FD;&#x4F1A;&#x51BB;&#x7ED3;&#x5F53;&#x524D;&#x7684; memtable&#xFF0C;&#x53D1;&#x751F; Minor Compaction &#x5E76;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; <code>MemTable</code> &#x5BF9;&#x8C61;&#xFF1B;</li>
+<li>&#x5728;&#x67D0;&#x4E9B;&#x6761;&#x4EF6;&#x6EE1;&#x8DB3;&#x65F6;&#xFF0C;&#x4E5F;&#x53EF;&#x80FD;&#x53D1;&#x751F; Major Compaction&#xFF0C;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684; SSTable &#x8FDB;&#x884C;&#x538B;&#x7F29;&#xFF1B;</li>
+</ul>
+</li>
+<li>&#x901A;&#x8FC7; <code>AddRecord</code> &#x65B9;&#x6CD5;&#x5411;&#x65E5;&#x5FD7;&#x4E2D;&#x8FFD;&#x52A0;&#x4E00;&#x6761;&#x5199;&#x64CD;&#x4F5C;&#x7684;&#x8BB0;&#x5F55;&#xFF1B;</li>
+<li>&#x518D;&#x5411;&#x65E5;&#x5FD7;&#x6210;&#x529F;&#x5199;&#x5165;&#x8BB0;&#x5F55;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>InsertInto</code> &#x76F4;&#x63A5;&#x63D2;&#x5165; memtable &#x4E2D;&#xFF0C;&#x5B8C;&#x6210;&#x6574;&#x4E2A;&#x5199;&#x64CD;&#x4F5C;&#x7684;&#x6D41;&#x7A0B;&#xFF1B;</li>
+</ol>
+<p>&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x5E76;&#x4E0D;&#x4F1A;&#x63D0;&#x4F9B; LevelDB &#x5BF9;&#x4E8E; <code>Put</code> &#x65B9;&#x6CD5;&#x5B9E;&#x73B0;&#x7684;&#x5168;&#x90E8;&#x4EE3;&#x7801;&#xFF0C;&#x53EA;&#x4F1A;&#x5C55;&#x793A;&#x4E00;&#x4EFD;&#x7CBE;&#x7B80;&#x540E;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x5927;&#x81F4;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;&#x6574;&#x4E2A;&#x5199;&#x64CD;&#x4F5C;&#x7684;&#x6D41;&#x7A0B;&#xFF1A;</p>
+<pre><code class="lang-cpp">Status DBImpl::Write(<span class="hljs-keyword">const</span> WriteOptions&amp; options, WriteBatch* my_batch) {
+  <span class="hljs-function">Writer <span class="hljs-title">w</span><span class="hljs-params">(&amp;mutex_)</span></span>;
+  w.batch = my_batch;
+
+  MakeRoomForWrite(my_batch == <span class="hljs-literal">NULL</span>);
+
+  <span class="hljs-keyword">uint64_t</span> last_sequence = versions_-&gt;LastSequence();
+  Writer* last_writer = &amp;w;
+  WriteBatch* updates = BuildBatchGroup(&amp;last_writer);
+  WriteBatchInternal::SetSequence(updates, last_sequence + <span class="hljs-number">1</span>);
+  last_sequence += WriteBatchInternal::Count(updates);
+
+  log_-&gt;AddRecord(WriteBatchInternal::Contents(updates));
+  WriteBatchInternal::InsertInto(updates, mem_);
+
+  versions_-&gt;SetLastSequence(last_sequence);
+  <span class="hljs-keyword">return</span> Status::OK();
+}
+</code></pre>
+<h4 id="&#x4E0D;&#x53EF;&#x53D8;&#x7684;-memtable">&#x4E0D;&#x53EF;&#x53D8;&#x7684; memtable</h4>
+<p>&#x5728;&#x5199;&#x64CD;&#x4F5C;&#x7684;&#x5B9E;&#x73B0;&#x4EE3;&#x7801; <code>DBImpl::Put</code> &#x4E2D;&#xFF0C;&#x5199;&#x64CD;&#x4F5C;&#x7684;&#x51C6;&#x5907;&#x8FC7;&#x7A0B; <code>MakeRoomForWrite</code> &#x662F;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-cpp">Status DBImpl::MakeRoomForWrite(<span class="hljs-keyword">bool</span> force) {
+  <span class="hljs-keyword">uint64_t</span> new_log_number = versions_-&gt;NewFileNumber();
+  WritableFile* lfile = <span class="hljs-literal">NULL</span>;
+  env_-&gt;NewWritableFile(LogFileName(dbname_, new_log_number), &amp;lfile);
+
+  <span class="hljs-keyword">delete</span> log_;
+  <span class="hljs-keyword">delete</span> logfile_;
+  logfile_ = lfile;
+  logfile_number_ = new_log_number;
+  log_ = <span class="hljs-keyword">new</span> <span class="hljs-built_in">log</span>::Writer(lfile);
+  imm_ = mem_;
+  has_imm_.Release_Store(imm_);
+  mem_ = <span class="hljs-keyword">new</span> MemTable(internal_comparator_);
+  mem_-&gt;Ref();
+  MaybeScheduleCompaction();
+  <span class="hljs-keyword">return</span> Status::OK();
+}
+</code></pre>
+<p>&#x5F53; LevelDB &#x4E2D;&#x7684; memtable &#x5DF2;&#x7ECF;&#x88AB;&#x6570;&#x636E;&#x586B;&#x6EE1;&#x5BFC;&#x81F4;&#x5185;&#x5B58;&#x5DF2;&#x7ECF;&#x5FEB;&#x4E0D;&#x591F;&#x7528;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x5F00;&#x59CB;&#x5BF9; memtable &#x4E2D;&#x7684;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x51BB;&#x7ED3;&#x5E76;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; <code>MemTable</code> &#x5BF9;&#x8C61;&#x3002;</p>
+<p><img src="images/leveldb-bigtable/Immutable-MemTable.jpg" alt="Immutable-MemTable"></p>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x4E0E; Bigtable &#x4E2D;&#x8BBA;&#x6587;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;LevelDB &#x4E2D;&#x5F15;&#x5165;&#x4E86;&#x4E00;&#x4E2A;&#x4E0D;&#x53EF;&#x53D8;&#x7684; memtable &#x7ED3;&#x6784; imm&#xFF0C;&#x5B83;&#x7684;&#x7ED3;&#x6784;&#x4E0E; memtable &#x5B8C;&#x5168;&#x76F8;&#x540C;&#xFF0C;&#x53EA;&#x662F;&#x5176;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#x90FD;&#x662F;&#x4E0D;&#x53EF;&#x53D8;&#x7684;&#x3002;</p>
+<p><img src="images/leveldb-bigtable/LevelDB-Serving.jpg" alt="LevelDB-Serving"></p>
+<p>&#x5728;&#x5207;&#x6362;&#x5230;&#x65B0;&#x7684; memtable &#x4E4B;&#x540E;&#xFF0C;&#x8FD8;&#x53EF;&#x80FD;&#x4F1A;&#x6267;&#x884C; <code>MaybeScheduleCompaction</code> &#x6765;&#x89E6;&#x53D1;&#x4E00;&#x6B21; Minor Compaction &#x5C06; imm &#x4E2D;&#x6570;&#x636E;&#x56FA;&#x5316;&#x6210;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684; SSTable&#xFF1B;imm &#x7684;&#x5F15;&#x5165;&#x80FD;&#x591F;&#x89E3;&#x51B3;&#x7531;&#x4E8E; memtable &#x4E2D;&#x6570;&#x636E;&#x8FC7;&#x5927;&#x5BFC;&#x81F4;&#x538B;&#x7F29;&#x65F6;&#x4E0D;&#x53EF;&#x5199;&#x5165;&#x6570;&#x636E;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x5F15;&#x5165; imm &#x540E;&#xFF0C;&#x5982;&#x679C; memtable &#x4E2D;&#x7684;&#x6570;&#x636E;&#x8FC7;&#x591A;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5C06; memtable &#x6307;&#x9488;&#x8D4B;&#x503C;&#x7ED9; imm&#xFF0C;&#x7136;&#x540E;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684; MemTable &#x5B9E;&#x4F8B;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x63A5;&#x53D7;&#x5916;&#x754C;&#x7684;&#x5199;&#x64CD;&#x4F5C;&#xFF0C;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x7B49;&#x5F85; Minor Compaction &#x7684;&#x7ED3;&#x675F;&#x4E86;&#x3002;</p>
+<h4 id="&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x7684;&#x683C;&#x5F0F;">&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x7684;&#x683C;&#x5F0F;</h4>
+<p>&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x6301;&#x4E45;&#x5B58;&#x50A8;&#x7684; KV &#x6570;&#x636E;&#x5E93;&#xFF0C;LevelDB &#x4E00;&#x5B9A;&#x8981;&#x6709;&#x65E5;&#x5FD7;&#x6A21;&#x5757;&#x4EE5;&#x652F;&#x6301;&#x9519;&#x8BEF;&#x53D1;&#x751F;&#x65F6;&#x6062;&#x590D;&#x6570;&#x636E;&#xFF0C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x6DF1;&#x5165;&#x4E86;&#x89E3; LevelDB &#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x90A3;&#x4E48;&#x65E5;&#x5FD7;&#x7684;&#x683C;&#x5F0F;&#x662F;&#x4E00;&#x5B9A;&#x7ED5;&#x4E0D;&#x5F00;&#x7684;&#x95EE;&#x9898;&#xFF1B;&#x8FD9;&#x91CC;&#x5E76;&#x4E0D;&#x6253;&#x7B97;&#x5C55;&#x793A;&#x7528;&#x4E8E;&#x8FFD;&#x52A0;&#x65E5;&#x5FD7;&#x7684;&#x65B9;&#x6CD5; <code>AddRecord</code> &#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x56E0;&#x4E3A;&#x65B9;&#x6CD5;&#x4E2D;&#x53EA;&#x662F;&#x5B9E;&#x73B0;&#x4E86;&#x5BF9;&#x8868;&#x5934;&#x548C;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x62FC;&#x63A5;&#x3002;</p>
+<p>&#x65E5;&#x5FD7;&#x5728; LevelDB &#x662F;&#x4EE5;&#x5757;&#x7684;&#x5F62;&#x5F0F;&#x5B58;&#x50A8;&#x7684;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x5757;&#x7684;&#x957F;&#x5EA6;&#x90FD;&#x662F; 32KB&#xFF0C;<strong>&#x56FA;&#x5B9A;&#x7684;&#x5757;&#x957F;&#x5EA6;</strong>&#x4E5F;&#x5C31;&#x51B3;&#x5B9A;&#x4E86;&#x65E5;&#x5FD7;&#x53EF;&#x80FD;&#x5B58;&#x653E;&#x5728;&#x5757;&#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x4F4D;&#x7F6E;&#xFF0C;LevelDB &#x4E2D;&#x901A;&#x8FC7;&#x5F15;&#x5165;&#x4E00;&#x4F4D; <code>RecordType</code> &#x6765;&#x8868;&#x793A;&#x5F53;&#x524D;&#x8BB0;&#x5F55;&#x5728;&#x5757;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">enum</span> RecordType {
+  <span class="hljs-comment">// Zero is reserved for preallocated files</span>
+  kZeroType = <span class="hljs-number">0</span>,
+  kFullType = <span class="hljs-number">1</span>,
+  <span class="hljs-comment">// For fragments</span>
+  kFirstType = <span class="hljs-number">2</span>,
+  kMiddleType = <span class="hljs-number">3</span>,
+  kLastType = <span class="hljs-number">4</span>
+};
+</code></pre>
+<p>&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x7684;&#x7C7B;&#x578B;&#x5B58;&#x50A8;&#x5728;&#x8BE5;&#x6761;&#x8BB0;&#x5F55;&#x7684;&#x5934;&#x90E8;&#xFF0C;&#x5176;&#x4E2D;&#x8FD8;&#x5B58;&#x50A8;&#x4E86; 4 &#x5B57;&#x8282;&#x65E5;&#x5FD7;&#x7684; CRC &#x6821;&#x9A8C;&#x3001;&#x8BB0;&#x5F55;&#x7684;&#x957F;&#x5EA6;&#x7B49;&#x4FE1;&#x606F;&#xFF1A;</p>
+<p><img src="images/leveldb-bigtable/LevelDB-log-format-and-recordtype.jpg" alt="LevelDB-log-format-and-recordtype"></p>
+<p>&#x4E0A;&#x56FE;&#x4E2D;&#x4E00;&#x5171;&#x5305;&#x542B; 4 &#x4E2A;&#x5757;&#xFF0C;&#x5176;&#x4E2D;&#x5B58;&#x50A8;&#x7740; 6 &#x6761;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>RecordType</code> &#x5BF9;&#x6BCF;&#x4E00;&#x6761;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x6216;&#x8005;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x8FDB;&#x884C;&#x6807;&#x8BB0;&#xFF0C;&#x5E76;&#x5728;&#x65E5;&#x5FD7;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x65F6;&#x901A;&#x8FC7;&#x8BE5;&#x4FE1;&#x606F;&#x91CD;&#x65B0;&#x6784;&#x9020;&#x51FA;&#x8FD9;&#x6761;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;&#x3002;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">virtual</span> Status <span class="hljs-title">Sync</span><span class="hljs-params">()</span> </span>{
+  Status s = SyncDirIfManifest();
+  <span class="hljs-keyword">if</span> (fflush_unlocked(file_) != <span class="hljs-number">0</span> ||
+      fdatasync(fileno(file_)) != <span class="hljs-number">0</span>) {
+    s = Status::IOError(filename_, strerror(errno));
+  }
+  <span class="hljs-keyword">return</span> s;
+}
+</code></pre>
+<p>&#x56E0;&#x4E3A;&#x5411;&#x65E5;&#x5FD7;&#x4E2D;&#x5199;&#x65B0;&#x8BB0;&#x5F55;&#x90FD;&#x662F;&#x987A;&#x5E8F;&#x5199;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x5199;&#x5165;&#x7684;&#x901F;&#x5EA6;&#x975E;&#x5E38;&#x5FEB;&#xFF0C;&#x5F53;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x5199;&#x5165;&#x5B8C;&#x6210;&#x65F6;&#xFF0C;&#x4E5F;&#x4F1A;&#x76F4;&#x63A5;&#x5C06;&#x7F13;&#x51B2;&#x533A;&#x7684;&#x8FD9;&#x90E8;&#x5206;&#x7684;&#x5185;&#x5BB9; <code>fflush</code> &#x5230;&#x78C1;&#x76D8;&#x4E0A;&#xFF0C;&#x5B9E;&#x73B0;&#x5BF9;&#x8BB0;&#x5F55;&#x7684;&#x6301;&#x4E45;&#x5316;&#xFF0C;&#x7528;&#x4E8E;&#x4E4B;&#x540E;&#x7684;&#x9519;&#x8BEF;&#x6062;&#x590D;&#x7B49;&#x64CD;&#x4F5C;&#x3002;</p>
+<h4 id="&#x8BB0;&#x5F55;&#x7684;&#x63D2;&#x5165;">&#x8BB0;&#x5F55;&#x7684;&#x63D2;&#x5165;</h4>
+<p>&#x5F53;&#x4E00;&#x6761;&#x6570;&#x636E;&#x7684;&#x8BB0;&#x5F55;&#x5199;&#x5165;&#x65E5;&#x5FD7;&#x65F6;&#xFF0C;&#x8FD9;&#x6761;&#x8BB0;&#x5F55;&#x4ECD;&#x7136;&#x65E0;&#x6CD5;&#x88AB;&#x67E5;&#x8BE2;&#xFF0C;&#x53EA;&#x6709;&#x5F53;&#x8BE5;&#x6570;&#x636E;&#x5199;&#x5165; memtable &#x540E;&#x624D;&#x53EF;&#x4EE5;&#x88AB;&#x67E5;&#x8BE2;&#xFF0C;&#x800C;&#x8FD9;&#x4E5F;&#x662F;&#x8FD9;&#x4E00;&#x8282;&#x5C06;&#x8981;&#x4ECB;&#x7ECD;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x65E0;&#x8BBA;&#x662F;&#x6570;&#x636E;&#x7684;&#x63D2;&#x5165;&#x8FD8;&#x662F;&#x6570;&#x636E;&#x7684;&#x5220;&#x9664;&#x90FD;&#x4F1A;&#x5411; memtable &#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x3002;</p>
+<p><img src="images/leveldb-bigtable/LevelDB-Memtable-Key-Value-Format.jpg" alt="LevelDB-Memtable-Key-Value-Format"></p>
+<p>&#x6DFB;&#x52A0;&#x548C;&#x5220;&#x9664;&#x7684;&#x8BB0;&#x5F55;&#x7684;&#x533A;&#x522B;&#x5C31;&#x662F;&#x5B83;&#x4EEC;&#x4F7F;&#x7528;&#x4E86;&#x4E0D;&#x7528;&#x7684; <code>ValueType</code> &#x6807;&#x8BB0;&#xFF0C;&#x63D2;&#x5165;&#x7684;&#x6570;&#x636E;&#x4F1A;&#x5C06;&#x5176;&#x8BBE;&#x7F6E;&#x4E3A; <code>kTypeValue</code>&#xFF0C;&#x5220;&#x9664;&#x7684;&#x64CD;&#x4F5C;&#x4F1A;&#x6807;&#x8BB0;&#x4E3A; <code>kTypeDeletion</code>&#xFF1B;&#x4F46;&#x662F;&#x5B83;&#x4EEC;&#x5B9E;&#x9645;&#x4E0A;&#x90FD;&#x5411; memtable &#x4E2D;&#x63D2;&#x5165;&#x4E86;&#x4E00;&#x6761;&#x6570;&#x636E;&#x3002;</p>
+<pre><code class="lang-cpp"><span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Put</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Slice&amp; key, <span class="hljs-keyword">const</span> Slice&amp; value)</span> </span>{
+  mem_-&gt;Add(sequence_, kTypeValue, key, value);
+  sequence_++;
+}
+<span class="hljs-function"><span class="hljs-keyword">virtual</span> <span class="hljs-keyword">void</span> <span class="hljs-title">Delete</span><span class="hljs-params">(<span class="hljs-keyword">const</span> Slice&amp; key)</span> </span>{
+  mem_-&gt;Add(sequence_, kTypeDeletion, key, Slice());
+  sequence_++;
+}
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5B83;&#x4EEC;&#x90FD;&#x8C03;&#x7528;&#x4E86; memtable &#x7684; <code>Add</code> &#x65B9;&#x6CD5;&#xFF0C;&#x5411;&#x5176;&#x5185;&#x90E8;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784; skiplist &#x4EE5;&#x4E0A;&#x56FE;&#x5C55;&#x793A;&#x7684;&#x683C;&#x5F0F;&#x63D2;&#x5165;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x6761;&#x6570;&#x636E;&#x4E2D;&#x65E2;&#x5305;&#x542B;&#x4E86;&#x8BE5;&#x8BB0;&#x5F55;&#x7684;&#x952E;&#x503C;&#x3001;&#x5E8F;&#x5217;&#x53F7;&#x4EE5;&#x53CA;&#x8FD9;&#x6761;&#x8BB0;&#x5F55;&#x7684;&#x79CD;&#x7C7B;&#xFF0C;&#x8FD9;&#x4E9B;&#x5B57;&#x6BB5;&#x4F1A;&#x5728;&#x62FC;&#x63A5;&#x540E;&#x5B58;&#x5165; skiplist&#xFF1B;&#x65E2;&#x7136;&#x6211;&#x4EEC;&#x5E76;&#x6CA1;&#x6709;&#x5728; memtable &#x4E2D;&#x5BF9;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5220;&#x9664;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x662F;&#x5982;&#x4F55;&#x4FDD;&#x8BC1;&#x6BCF;&#x6B21;&#x53D6;&#x5230;&#x7684;&#x6570;&#x636E;&#x90FD;&#x662F;&#x6700;&#x65B0;&#x7684;&#x5462;&#xFF1F;&#x9996;&#x5148;&#xFF0C;&#x5728; skiplist &#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x4E86;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#x7684;&#x4E00;&#x4E2A; <code>comparator</code>&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">int</span> InternalKeyComparator::Compare(<span class="hljs-keyword">const</span> Slice&amp; akey, <span class="hljs-keyword">const</span> Slice&amp; bkey) <span class="hljs-keyword">const</span> {
+  <span class="hljs-keyword">int</span> r = user_comparator_-&gt;Compare(ExtractUserKey(akey), ExtractUserKey(bkey));
+  <span class="hljs-keyword">if</span> (r == <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">uint64_t</span> anum = DecodeFixed64(akey.data() + akey.size() - <span class="hljs-number">8</span>);
+    <span class="hljs-keyword">const</span> <span class="hljs-keyword">uint64_t</span> bnum = DecodeFixed64(bkey.data() + bkey.size() - <span class="hljs-number">8</span>);
+    <span class="hljs-keyword">if</span> (anum &gt; bnum) {
+      r = <span class="hljs-number">-1</span>;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (anum &lt; bnum) {
+      r = +<span class="hljs-number">1</span>;
+    }
+  }
+  <span class="hljs-keyword">return</span> r;
+}
+</code></pre>
+<blockquote>
+<p>&#x6BD4;&#x8F83;&#x7684;&#x4E24;&#x4E2A; key &#x4E2D;&#x7684;&#x6570;&#x636E;&#x53EF;&#x80FD;&#x5305;&#x542B;&#x7684;&#x5185;&#x5BB9;&#x90FD;&#x4E0D;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#xFF0C;&#x6709;&#x7684;&#x4F1A;&#x5305;&#x542B;&#x952E;&#x503C;&#x3001;&#x5E8F;&#x5217;&#x53F7;&#x7B49;&#x5168;&#x90E8;&#x4FE1;&#x606F;&#xFF0C;&#x4F46;&#x662F;&#x4F8B;&#x5982;&#x4ECE; <code>Get</code> &#x65B9;&#x6CD5;&#x8C03;&#x7528;&#x8FC7;&#x6765;&#x7684; key &#x4E2D;&#x53EF;&#x80FD;&#x5C31;&#x53EA;&#x5305;&#x542B;&#x952E;&#x7684;&#x957F;&#x5EA6;&#x3001;&#x952E;&#x503C;&#x548C;&#x5E8F;&#x5217;&#x53F7;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x5E76;&#x4E0D;&#x5F71;&#x54CD;&#x8FD9;&#x91CC;&#x5BF9;&#x6570;&#x636E;&#x7684;&#x63D0;&#x53D6;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x53EA;&#x4ECE;&#x6BCF;&#x4E2A; key &#x7684;&#x5934;&#x90E8;&#x63D0;&#x53D6;&#x4FE1;&#x606F;&#xFF0C;&#x6240;&#x4EE5;&#x65E0;&#x8BBA;&#x662F;&#x5B8C;&#x6574;&#x7684; key/value &#x8FD8;&#x662F;&#x5355;&#x72EC;&#x7684; key&#xFF0C;&#x6211;&#x4EEC;&#x90FD;&#x4E0D;&#x4F1A;&#x53D6;&#x5230; key &#x4E4B;&#x5916;&#x7684;&#x4EFB;&#x4F55;&#x6570;&#x636E;&#x3002;</p>
+</blockquote>
+<p>&#x8BE5;&#x65B9;&#x6CD5;&#x5206;&#x522B;&#x4ECE;&#x4E24;&#x4E2A;&#x4E0D;&#x540C;&#x7684; key &#x4E2D;&#x53D6;&#x51FA;&#x952E;&#x548C;&#x5E8F;&#x5217;&#x53F7;&#xFF0C;&#x7136;&#x540E;&#x5BF9;&#x5B83;&#x4EEC;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#xFF1B;&#x6BD4;&#x8F83;&#x7684;&#x8FC7;&#x7A0B;&#x5C31;&#x662F;&#x4F7F;&#x7528; <code>InternalKeyComparator</code> &#x6BD4;&#x8F83;&#x5668;&#xFF0C;&#x5B83;&#x901A;&#x8FC7; <code>user_key</code> &#x548C; <code>sequence_number</code> &#x8FDB;&#x884C;&#x6392;&#x5E8F;&#xFF0C;&#x5176;&#x4E2D; <code>user_key</code> &#x6309;&#x7167;&#x9012;&#x589E;&#x7684;&#x987A;&#x5E8F;&#x6392;&#x5E8F;&#x3001;<code>sequence_number</code> &#x6309;&#x7167;&#x9012;&#x51CF;&#x7684;&#x987A;&#x5E8F;&#x6392;&#x5E8F;&#xFF0C;&#x56E0;&#x4E3A;&#x968F;&#x7740;&#x6570;&#x636E;&#x7684;&#x63D2;&#x5165;&#x5E8F;&#x5217;&#x53F7;&#x662F;&#x4E0D;&#x65AD;&#x9012;&#x589E;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x5148;&#x53D6;&#x5230;&#x7684;&#x90FD;&#x662F;&#x6700;&#x65B0;&#x7684;&#x6570;&#x636E;&#x6216;&#x8005;&#x5220;&#x9664;&#x4FE1;&#x606F;&#x3002;</p>
+<p><img src="images/leveldb-bigtable/LevelDB-MemTable-SkipList.jpg" alt="LevelDB-MemTable-SkipList"></p>
+<p>&#x5728;&#x5E8F;&#x5217;&#x53F7;&#x7684;&#x5E2E;&#x52A9;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x5BF9;&#x5386;&#x53F2;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x5220;&#x9664;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x80FD;&#x52A0;&#x5FEB;&#x5199;&#x64CD;&#x4F5C;&#x7684;&#x901F;&#x5EA6;&#xFF0C;&#x63D0;&#x5347; LevelDB &#x7684;&#x5199;&#x6027;&#x80FD;&#x3002;</p>
+<h3 id="&#x6570;&#x636E;&#x7684;&#x8BFB;&#x53D6;">&#x6570;&#x636E;&#x7684;&#x8BFB;&#x53D6;</h3>
+<p>&#x4ECE; LevelDB &#x4E2D;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x5176;&#x5B9E;&#x5E76;&#x4E0D;&#x590D;&#x6742;&#xFF0C;memtable &#x548C; imm &#x66F4;&#x50CF;&#x662F;&#x4E24;&#x7EA7;&#x7F13;&#x5B58;&#xFF0C;&#x5B83;&#x4EEC;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x5FEB;&#x7684;&#x8BBF;&#x95EE;&#x901F;&#x5EA6;&#xFF0C;&#x5982;&#x679C;&#x80FD;&#x76F4;&#x63A5;&#x4ECE;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x8FD9;&#x4E24;&#x5904;&#x76F4;&#x63A5;&#x83B7;&#x53D6;&#x5230;&#x54CD;&#x5E94;&#x7684;&#x503C;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x4EEC;&#x4E00;&#x5B9A;&#x662F;&#x6700;&#x65B0;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<blockquote>
+<p>LevelDB &#x603B;&#x4F1A;&#x5C06;&#x65B0;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x5199;&#x5728;&#x6700;&#x524D;&#x9762;&#xFF0C;&#x5E76;&#x5728;&#x6570;&#x636E;&#x538B;&#x7F29;&#x65F6;&#x5220;&#x9664;&#x5386;&#x53F2;&#x6570;&#x636E;&#x3002;</p>
+</blockquote>
+<p><img src="images/leveldb-bigtable/LevelDB-Read-Processes.jpg" alt="LevelDB-Read-Processes"></p>
+<p>&#x6570;&#x636E;&#x7684;&#x8BFB;&#x53D6;&#x662F;&#x6309;&#x7167; MemTable&#x3001;Immutable MemTable &#x4EE5;&#x53CA;&#x4E0D;&#x540C;&#x5C42;&#x7EA7;&#x7684; SSTable &#x7684;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x7684;&#xFF0C;&#x524D;&#x4E24;&#x8005;&#x90FD;&#x662F;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x540E;&#x9762;&#x4E0D;&#x540C;&#x5C42;&#x7EA7;&#x7684; SSTable &#x90FD;&#x662F;&#x4EE5; <code>*.ldb</code> &#x6587;&#x4EF6;&#x7684;&#x5F62;&#x5F0F;&#x6301;&#x4E45;&#x5B58;&#x50A8;&#x5728;&#x78C1;&#x76D8;&#x4E0A;&#xFF0C;&#x800C;&#x6B63;&#x662F;&#x56E0;&#x4E3A;&#x6709;&#x7740;&#x4E0D;&#x540C;&#x5C42;&#x7EA7;&#x7684; SSTable&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x7684;&#x6570;&#x636E;&#x5E93;&#x7684;&#x540D;&#x5B57;&#x53EB;&#x505A; LevelDB&#x3002;</p>
+<p>&#x7CBE;&#x7B80;&#x540E;&#x7684;&#x8BFB;&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;&#x7684;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF0C;&#x65B9;&#x6CD5;&#x7684;&#x8109;&#x7EDC;&#x975E;&#x5E38;&#x6E05;&#x6670;&#xFF0C;&#x4F5C;&#x8005;&#x76F8;&#x4FE1;&#x8FD9;&#x91CC;&#x4E5F;&#x4E0D;&#x9700;&#x8981;&#x8FC7;&#x591A;&#x7684;&#x89E3;&#x91CA;&#xFF1A;</p>
+<pre><code class="lang-cpp">Status DBImpl::Get(const ReadOptions&amp; options, const Slice&amp; key, std::string* value) {
+  LookupKey lkey(key, versions_-&gt;LastSequence());
+  if (mem_-&gt;Get(lkey, value, NULL)) {
+    // Done
+  } else if (imm_ != NULL &amp;&amp; imm_-&gt;Get(lkey, value, NULL)) {
+    // Done
+  } else {
+    versions_-&gt;current()-&gt;Get(options, lkey, value, NULL);
+  }
+
+  MaybeScheduleCompaction();
+  return Status::OK();
+}
+</code></pre>
+<p>&#x5F53; LevelDB &#x5728; memtable &#x548C; imm &#x4E2D;&#x67E5;&#x8BE2;&#x5230;&#x7ED3;&#x679C;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x67E5;&#x8BE2;&#x5230;&#x4E86;&#x6570;&#x636E;&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#x8868;&#x793A;&#x5F53;&#x524D;&#x7684;&#x503C;&#x4E00;&#x5B9A;&#x5B58;&#x5728;&#xFF0C;&#x5B83;&#x4ECD;&#x7136;&#x9700;&#x8981;&#x5224;&#x65AD; <code>ValueType</code> &#x6765;&#x786E;&#x5B9A;&#x5F53;&#x524D;&#x8BB0;&#x5F55;&#x662F;&#x5426;&#x88AB;&#x5220;&#x9664;&#x3002;</p>
+<h4 id="&#x591A;&#x5C42;&#x7EA7;&#x7684;-sstable">&#x591A;&#x5C42;&#x7EA7;&#x7684; SSTable</h4>
+<p>&#x5F53; LevelDB &#x5728;&#x5185;&#x5B58;&#x4E2D;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x5B83;&#x624D;&#x4F1A;&#x5230;&#x78C1;&#x76D8;&#x4E2D;&#x591A;&#x4E2A;&#x5C42;&#x7EA7;&#x7684; SSTable &#x4E2D;&#x8FDB;&#x884C;&#x67E5;&#x627E;&#xFF0C;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x5C31;&#x7A0D;&#x5FAE;&#x6709;&#x4E00;&#x70B9;&#x590D;&#x6742;&#x4E86;&#xFF0C;LevelDB &#x4F1A;&#x5728;&#x591A;&#x4E2A;&#x5C42;&#x7EA7;&#x4E2D;&#x9010;&#x7EA7;&#x8FDB;&#x884C;&#x67E5;&#x627E;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x4F1A;&#x8DF3;&#x8FC7;&#x5176;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x5C42;&#x7EA7;&#xFF1B;&#x5728;&#x67E5;&#x627E;&#x7684;&#x8FC7;&#x7A0B;&#x5C31;&#x6D89;&#x53CA;&#x5230;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x91CD;&#x8981;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784; <code>FileMetaData</code>&#xFF1A;</p>
+<p><img src="images/leveldb-bigtable/FileMetaData.jpg" alt="FileMetaData"></p>
+<p><code>FileMetaData</code> &#x4E2D;&#x5305;&#x542B;&#x4E86;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x5168;&#x90E8;&#x4FE1;&#x606F;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x62EC;&#x952E;&#x7684;&#x6700;&#x5927;&#x503C;&#x548C;&#x6700;&#x5C0F;&#x503C;&#x3001;&#x5141;&#x8BB8;&#x67E5;&#x627E;&#x7684;&#x6B21;&#x6570;&#x3001;&#x6587;&#x4EF6;&#x88AB;&#x5F15;&#x7528;&#x7684;&#x6B21;&#x6570;&#x3001;&#x6587;&#x4EF6;&#x7684;&#x5927;&#x5C0F;&#x4EE5;&#x53CA;&#x6587;&#x4EF6;&#x53F7;&#xFF0C;&#x56E0;&#x4E3A;&#x6240;&#x6709;&#x7684; <code>SSTable</code> &#x90FD;&#x662F;&#x4EE5;&#x56FA;&#x5B9A;&#x7684;&#x5F62;&#x5F0F;&#x5B58;&#x50A8;&#x5728;&#x540C;&#x4E00;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x53F7;&#x8F7B;&#x677E;&#x67E5;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+<p><img src="images/leveldb-bigtable/LevelDB-Level0-Layer.jpg" alt="LevelDB-Level0-Laye"></p>
+<p>&#x67E5;&#x627E;&#x7684;&#x987A;&#x5E8F;&#x5C31;&#x662F;&#x4ECE;&#x4F4E;&#x5230;&#x9AD8;&#x4E86;&#xFF0C;LevelDB &#x9996;&#x5148;&#x4F1A;&#x5728; Level0 &#x4E2D;&#x67E5;&#x627E;&#x5BF9;&#x5E94;&#x7684;&#x952E;&#x3002;&#x4F46;&#x662F;&#xFF0C;&#x4E0E;&#x5176;&#x4ED6;&#x5C42;&#x7EA7;&#x4E0D;&#x540C;&#xFF0C;Level0 &#x4E2D;&#x591A;&#x4E2A; SSTable &#x7684;&#x952E;&#x7684;&#x8303;&#x56F4;&#x6709;&#x91CD;&#x5408;&#x90E8;&#x5206;&#x7684;&#xFF0C;&#x5728;&#x67E5;&#x627E;&#x5BF9;&#x5E94;&#x503C;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4F1A;&#x4F9D;&#x6B21;&#x67E5;&#x627E; Level0 &#x4E2D;&#x56FA;&#x5B9A;&#x7684; 4 &#x4E2A; SSTable&#x3002;</p>
+<p><img src="images/leveldb-bigtable/LevelDB-LevelN-Layers.jpg" alt="LevelDB-LevelN-Layers"></p>
+<p>&#x4F46;&#x662F;&#x5F53;&#x6D89;&#x53CA;&#x5230;&#x66F4;&#x9AD8;&#x5C42;&#x7EA7;&#x7684; SSTable &#x65F6;&#xFF0C;&#x56E0;&#x4E3A;&#x540C;&#x4E00;&#x5C42;&#x7EA7;&#x7684; SSTable &#x90FD;&#x662F;&#x6CA1;&#x6709;&#x91CD;&#x53E0;&#x90E8;&#x5206;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x5728;&#x67E5;&#x627E;&#x65F6;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x5DF2;&#x77E5;&#x7684; SSTable &#x4E2D;&#x7684;&#x6781;&#x503C;&#x4FE1;&#x606F; <code>smallest/largest</code> &#x5FEB;&#x901F;&#x67E5;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684; SSTable&#xFF0C;&#x518D;&#x5224;&#x65AD;&#x5F53;&#x524D;&#x7684; SSTable &#x662F;&#x5426;&#x5305;&#x542B;&#x67E5;&#x8BE2;&#x7684; key&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5C31;&#x7EE7;&#x7EED;&#x67E5;&#x627E;&#x4E0B;&#x4E00;&#x4E2A;&#x5C42;&#x7EA7;&#x76F4;&#x5230;&#x6700;&#x540E;&#x7684;&#x4E00;&#x4E2A;&#x5C42;&#x7EA7; <code>kNumLevels</code>&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A; 7 &#x7EA7;&#xFF09;&#x6216;&#x8005;&#x67E5;&#x8BE2;&#x5230;&#x4E86;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x3002;</p>
+<h4 id="sstable-&#x7684;&#x300E;&#x5408;&#x5E76;&#x300F;">SSTable &#x7684;&#x300E;&#x5408;&#x5E76;&#x300F;</h4>
+<p>&#x65E2;&#x7136; LevelDB &#x4E2D;&#x7684;&#x6570;&#x636E;&#x662F;&#x901A;&#x8FC7;&#x591A;&#x4E2A;&#x5C42;&#x7EA7;&#x7684; SSTable &#x7EC4;&#x7EC7;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x662F;&#x5982;&#x4F55;&#x5BF9;&#x4E0D;&#x540C;&#x5C42;&#x7EA7;&#x4E2D;&#x7684; SSTable &#x8FDB;&#x884C;&#x5408;&#x5E76;&#x548C;&#x538B;&#x7F29;&#x7684;&#x5462;&#xFF1B;&#x4E0E; Bigtable &#x8BBA;&#x6587;&#x4E2D;&#x63CF;&#x8FF0;&#x7684;&#x4E24;&#x79CD; Compaction &#x51E0;&#x4E4E;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#xFF0C;LevelDB &#x5BF9;&#x8FD9;&#x4E24;&#x79CD;&#x538B;&#x7F29;&#x7684;&#x65B9;&#x5F0F;&#x90FD;&#x8FDB;&#x884C;&#x4E86;&#x5B9E;&#x73B0;&#x3002;</p>
+<p>&#x65E0;&#x8BBA;&#x662F;&#x8BFB;&#x64CD;&#x4F5C;&#x8FD8;&#x662F;&#x5199;&#x64CD;&#x4F5C;&#xFF0C;&#x5728;&#x6267;&#x884C;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x90FD;&#x53EF;&#x80FD;&#x8C03;&#x7528; <code>MaybeScheduleCompaction</code> &#x6765;&#x5C1D;&#x8BD5;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x7684; SSTable &#x8FDB;&#x884C;&#x5408;&#x5E76;&#xFF0C;&#x5F53;&#x5408;&#x5E76;&#x7684;&#x6761;&#x4EF6;&#x6EE1;&#x8DB3;&#x65F6;&#xFF0C;&#x6700;&#x7EC8;&#x90FD;&#x4F1A;&#x6267;&#x884C; <code>BackgroundCompaction</code> &#x65B9;&#x6CD5;&#x5728;&#x540E;&#x53F0;&#x5B8C;&#x6210;&#x8FD9;&#x4E2A;&#x6B65;&#x9AA4;&#x3002;</p>
+<p><img src="images/leveldb-bigtable/LevelDB-BackgroundCompaction-Processes.jpg" alt="LevelDB-BackgroundCompaction-Processes"></p>
+<p>&#x8FD9;&#x79CD;&#x5408;&#x5E76;&#x5206;&#x4E3A;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x4E00;&#x79CD;&#x662F; Minor Compaction&#xFF0C;&#x5373;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x8D85;&#x8FC7;&#x4E86; memtable &#x5927;&#x5C0F;&#x7684;&#x6700;&#x5927;&#x9650;&#x5236;&#xFF0C;&#x6539; memtable &#x88AB;&#x51BB;&#x7ED3;&#x4E3A;&#x4E0D;&#x53EF;&#x53D8;&#x7684; imm&#xFF0C;&#x7136;&#x540E;&#x6267;&#x884C;&#x65B9;&#x6CD5; <code>CompactMemTable()</code> &#x5BF9;&#x5185;&#x5B58;&#x8868;&#x8FDB;&#x884C;&#x538B;&#x7F29;&#x3002;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">void</span> DBImpl::CompactMemTable() {
+  VersionEdit edit;
+  Version* base = versions_-&gt;current();
+  WriteLevel0Table(imm_, &amp;edit, base);
+  versions_-&gt;LogAndApply(&amp;edit, &amp;mutex_);
+  DeleteObsoleteFiles();
+}
+</code></pre>
+<p><code>CompactMemTable</code> &#x4F1A;&#x6267;&#x884C; <code>WriteLevel0Table</code> &#x5C06;&#x5F53;&#x524D;&#x7684; imm &#x8F6C;&#x6362;&#x6210;&#x4E00;&#x4E2A; Level0 &#x7684; SSTable &#x6587;&#x4EF6;&#xFF0C;&#x540C;&#x65F6;&#x7531;&#x4E8E; Level0 &#x5C42;&#x7EA7;&#x7684;&#x6587;&#x4EF6;&#x53D8;&#x591A;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x7EE7;&#x7EED;&#x89E6;&#x53D1;&#x4E00;&#x4E2A;&#x65B0;&#x7684; Major Compaction&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x5C31;&#x9700;&#x8981;&#x5728;&#x8FD9;&#x91CC;&#x9009;&#x62E9;&#x9700;&#x8981;&#x538B;&#x7F29;&#x7684;&#x5408;&#x9002;&#x7684;&#x5C42;&#x7EA7;&#xFF1A;</p>
+<pre><code class="lang-cpp">Status DBImpl::WriteLevel0Table(MemTable* mem, VersionEdit* edit, Version* base) {
+  FileMetaData meta;
+  meta.number = versions_-&gt;NewFileNumber();
+  Iterator* iter = mem-&gt;NewIterator();
+  BuildTable(dbname_, env_, options_, table_cache_, iter, &amp;meta);
+
+  <span class="hljs-keyword">const</span> Slice min_user_key = meta.smallest.user_key();
+  <span class="hljs-keyword">const</span> Slice max_user_key = meta.largest.user_key();
+  <span class="hljs-keyword">int</span> level = base-&gt;PickLevelForMemTableOutput(min_user_key, max_user_key);
+  edit-&gt;AddFile(level, meta.number, meta.file_size, meta.smallest, meta.largest);
+  <span class="hljs-keyword">return</span> Status::OK();
+}
+</code></pre>
+<p>&#x6240;&#x6709;&#x5BF9;&#x5F53;&#x524D; SSTable &#x6570;&#x636E;&#x7684;&#x4FEE;&#x6539;&#x7531;&#x4E00;&#x4E2A;&#x7EDF;&#x4E00;&#x7684; <code>VersionEdit</code> &#x5BF9;&#x8C61;&#x8BB0;&#x5F55;&#x548C;&#x7BA1;&#x7406;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x5728;&#x540E;&#x9762;&#x4ECB;&#x7ECD;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x4F5C;&#x7528;&#x548C;&#x5B9E;&#x73B0;&#xFF0C;&#x5982;&#x679C;&#x6210;&#x529F;&#x5199;&#x5165;&#x4E86;&#x5C31;&#x4F1A;&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x7684;&#x5143;&#x6570;&#x636E; <code>FileMetaData</code>&#xFF0C;&#x6700;&#x540E;&#x8C03;&#x7528; <code>VersionSet</code> &#x7684;&#x65B9;&#x6CD5; <code>LogAndApply</code> &#x5C06;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5168;&#x90E8;&#x53D8;&#x5316;&#x5982;&#x5B9E;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;&#xFF0C;&#x6700;&#x540E;&#x505A;&#x4E00;&#x4E9B;&#x6570;&#x636E;&#x7684;&#x6E05;&#x7406;&#x5DE5;&#x4F5C;&#x3002;</p>
+<p>&#x5F53;&#x7136;&#x5982;&#x679C;&#x662F; Major Compaction &#x5C31;&#x7A0D;&#x5FAE;&#x6709;&#x4E00;&#x4E9B;&#x590D;&#x6742;&#x4E86;&#xFF0C;&#x4E0D;&#x8FC7;&#x6574;&#x7406;&#x540E;&#x7684; <code>BackgroundCompaction</code> &#x65B9;&#x6CD5;&#x7684;&#x903B;&#x8F91;&#x975E;&#x5E38;&#x6E05;&#x6670;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">void</span> DBImpl::BackgroundCompaction() {
+  <span class="hljs-keyword">if</span> (imm_ != <span class="hljs-literal">NULL</span>) {
+    CompactMemTable();
+    <span class="hljs-keyword">return</span>;
+  }
+
+  Compaction* c = versions_-&gt;PickCompaction();
+  CompactionState* compact = <span class="hljs-keyword">new</span> CompactionState(c);
+  DoCompactionWork(compact);
+  CleanupCompaction(compact);
+  DeleteObsoleteFiles();
+}
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x4ECE;&#x5F53;&#x524D;&#x7684; <code>VersionSet</code> &#x4E2D;&#x627E;&#x5230;&#x9700;&#x8981;&#x538B;&#x7F29;&#x7684;&#x6587;&#x4EF6;&#x4FE1;&#x606F;&#xFF0C;&#x5C06;&#x5B83;&#x4EEC;&#x6253;&#x5305;&#x5B58;&#x5165;&#x4E00;&#x4E2A; <code>Compaction</code> &#x5BF9;&#x8C61;&#xFF0C;&#x8BE5;&#x5BF9;&#x8C61;&#x9700;&#x8981;&#x9009;&#x62E9;&#x4E24;&#x4E2A;&#x5C42;&#x7EA7;&#x7684; SSTable&#xFF0C;&#x4F4E;&#x5C42;&#x7EA7;&#x7684;&#x8868;&#x5F88;&#x597D;&#x9009;&#x62E9;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x9009;&#x62E9;&#x5927;&#x5C0F;&#x8D85;&#x8FC7;&#x9650;&#x5236;&#x7684;&#x6216;&#x8005;&#x67E5;&#x8BE2;&#x6B21;&#x6570;&#x592A;&#x591A;&#x7684; SSTable&#xFF1B;&#x5F53;&#x6211;&#x4EEC;&#x9009;&#x62E9;&#x4E86;&#x4F4E;&#x5C42;&#x7EA7;&#x7684;&#x4E00;&#x4E2A; SSTable &#x540E;&#xFF0C;&#x5C31;&#x5728;&#x66F4;&#x9AD8;&#x7684;&#x5C42;&#x7EA7;&#x9009;&#x62E9;&#x4E0E;&#x8BE5; SSTable &#x6709;&#x91CD;&#x53E0;&#x952E;&#x7684; SSTable &#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x901A;&#x8FC7; <code>FileMetaData</code> &#x4E2D;&#x6570;&#x636E;&#x7684;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5F88;&#x5FEB;&#x627E;&#x5230;&#x5F85;&#x538B;&#x7F29;&#x7684;&#x5168;&#x90E8;&#x6570;&#x636E;&#x3002;</p>
+<blockquote>
+<p>&#x67E5;&#x8BE2;&#x6B21;&#x6570;&#x592A;&#x591A;&#x7684;&#x610F;&#x601D;&#x5C31;&#x662F;&#xFF0C;&#x5F53;&#x5BA2;&#x6237;&#x7AEF;&#x8C03;&#x7528;&#x591A;&#x6B21; <code>Get</code> &#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x6B21; <code>Get</code> &#x65B9;&#x6CD5;&#x5728;&#x67D0;&#x4E2A;&#x5C42;&#x7EA7;&#x7684; SSTable &#x4E2D;&#x627E;&#x5230;&#x4E86;&#x5BF9;&#x5E94;&#x7684;&#x952E;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x7B97;&#x505A;&#x4E0A;&#x4E00;&#x5C42;&#x7EA7;&#x4E2D;&#x5305;&#x542B;&#x8BE5;&#x952E;&#x7684; SSTable &#x7684;&#x4E00;&#x6B21;&#x67E5;&#x627E;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8FD9;&#x6B21;&#x67E5;&#x627E;&#x7531;&#x4E8E;&#x4E0D;&#x540C;&#x5C42;&#x7EA7;&#x952E;&#x7684;&#x8986;&#x76D6;&#x8303;&#x56F4;&#x9020;&#x6210;&#x4E86;&#x66F4;&#x591A;&#x7684;&#x8017;&#x65F6;&#xFF0C;&#x6BCF;&#x4E2A; SSTable &#x5728;&#x521B;&#x5EFA;&#x4E4B;&#x540E;&#x7684; <code>allowed_seeks</code> &#x90FD;&#x4E3A; 100 &#x6B21;&#xFF0C;&#x5F53; <code>allowed_seeks &lt; 0</code> &#x65F6;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;&#x8BE5;&#x6587;&#x4EF6;&#x7684;&#x4E0E;&#x66F4;&#x9AD8;&#x5C42;&#x7EA7;&#x548C;&#x5408;&#x5E76;&#xFF0C;&#x4EE5;&#x51CF;&#x5C11;&#x4EE5;&#x540E;&#x67E5;&#x8BE2;&#x7684;&#x67E5;&#x627E;&#x6B21;&#x6570;&#x3002;</p>
+</blockquote>
+<p><img src="images/leveldb-bigtable/LevelDB-Pick-Compactions.jpg" alt="LevelDB-Pick-Compactions"></p>
+<p>LevelDB &#x4E2D;&#x7684; <code>DoCompactionWork</code> &#x65B9;&#x6CD5;&#x4F1A;&#x5BF9;&#x6240;&#x6709;&#x4F20;&#x5165;&#x7684; SSTable &#x4E2D;&#x7684;&#x952E;&#x503C;&#x4F7F;&#x7528;&#x5F52;&#x5E76;&#x6392;&#x5E8F;&#x8FDB;&#x884C;&#x5408;&#x5E76;&#xFF0C;&#x6700;&#x540E;&#x4F1A;&#x5728;&#x9AD8;&#x9AD8;&#x5C42;&#x7EA7;&#xFF08;&#x56FE;&#x4E2D;&#x4E3A; Level2&#xFF09;&#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684; SSTable&#x3002;</p>
+<p><img src="images/leveldb-bigtable/LevelDB-After-Compactions.jpg" alt="LevelDB-After-Compactions"></p>
+<p>&#x8FD9;&#x6837;&#x4E0B;&#x4E00;&#x6B21;&#x67E5;&#x8BE2; 17~40 &#x4E4B;&#x95F4;&#x7684;&#x503C;&#x65F6;&#x5C31;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;&#x4E00;&#x6B21;&#x5BF9; SSTable &#x4E2D;&#x6570;&#x636E;&#x7684;&#x4E8C;&#x5206;&#x67E5;&#x627E;&#x4EE5;&#x53CA;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x63D0;&#x5347;&#x8BFB;&#x5199;&#x7684;&#x6027;&#x80FD;&#x3002;</p>
+<h4 id="&#x5B58;&#x50A8;-db-&#x72B6;&#x6001;&#x7684;-versionset">&#x5B58;&#x50A8; db &#x72B6;&#x6001;&#x7684; VersionSet</h4>
+<p>LevelDB &#x4E2D;&#x7684;&#x6240;&#x6709;&#x72B6;&#x6001;&#x5176;&#x5B9E;&#x90FD;&#x662F;&#x88AB;&#x4E00;&#x4E2A; <code>VersionSet</code> &#x7ED3;&#x6784;&#x6240;&#x5B58;&#x50A8;&#x7684;&#xFF0C;&#x4E00;&#x4E2A; <code>VersionSet</code> &#x5305;&#x542B;&#x4E00;&#x7EC4; <code>Version</code> &#x7ED3;&#x6784;&#x4F53;&#xFF0C;&#x6240;&#x6709;&#x7684; <code>Version</code> &#x5305;&#x62EC;&#x5386;&#x53F2;&#x7248;&#x672C;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x53CC;&#x5411;&#x94FE;&#x8868;&#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x7248;&#x672C;&#x662F;&#x5F53;&#x524D;&#x7248;&#x672C;&#x3002;</p>
+<p><img src="images/leveldb-bigtable/VersionSet-Version-And-VersionEdit.jpg" alt="VersionSet-Version-And-VersionEdit"></p>
+<p>&#x5F53; LevelDB &#x4E2D;&#x7684; SSTable &#x53D1;&#x751F;&#x53D8;&#x52A8;&#x65F6;&#xFF0C;&#x5B83;&#x4F1A;&#x751F;&#x6210;&#x4E00;&#x4E2A; <code>VersionEdit</code> &#x7ED3;&#x6784;&#xFF0C;&#x6700;&#x7EC8;&#x6267;&#x884C; <code>LogAndApply</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-cpp">Status VersionSet::LogAndApply(VersionEdit* edit, port::Mutex* mu) {
+  Version* v = <span class="hljs-keyword">new</span> Version(<span class="hljs-keyword">this</span>);
+  <span class="hljs-function">Builder <span class="hljs-title">builder</span><span class="hljs-params">(<span class="hljs-keyword">this</span>, current_)</span></span>;
+  builder.Apply(edit);
+  builder.SaveTo(v);
+
+  <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> new_manifest_file;
+  new_manifest_file = DescriptorFileName(dbname_, manifest_file_number_);
+  env_-&gt;NewWritableFile(new_manifest_file, &amp;descriptor_file_);
+
+  <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> record;
+  edit-&gt;EncodeTo(&amp;record);
+  descriptor_log_-&gt;AddRecord(record);
+  descriptor_file_-&gt;Sync();
+
+  SetCurrentFile(env_, dbname_, manifest_file_number_);
+  AppendVersion(v);
+
+  <span class="hljs-keyword">return</span> Status::OK();
+}
+</code></pre>
+<p>&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x4E3B;&#x8981;&#x5DE5;&#x4F5C;&#x662F;&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x7248;&#x672C;&#x548C; <code>VersionEdit</code> &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7248;&#x672C;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x5C06; <code>Version</code> &#x7684;&#x53D8;&#x66F4;&#x8FFD;&#x52A0;&#x5230; MANIFEST &#x65E5;&#x5FD7;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x6539;&#x53D8;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x5168;&#x5C40;&#x5F53;&#x524D;&#x7248;&#x672C;&#x4FE1;&#x606F;&#x3002;</p>
+<blockquote>
+<p>MANIFEST &#x6587;&#x4EF6;&#x4E2D;&#x8BB0;&#x5F55;&#x4E86; LevelDB &#x4E2D;&#x6240;&#x6709;&#x5C42;&#x7EA7;&#x4E2D;&#x7684;&#x8868;&#x3001;&#x6BCF;&#x4E00;&#x4E2A; SSTable &#x7684; Key &#x8303;&#x56F4;&#x548C;&#x5176;&#x4ED6;&#x91CD;&#x8981;&#x7684;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x5B83;&#x4EE5;&#x65E5;&#x5FD7;&#x7684;&#x683C;&#x5F0F;&#x5B58;&#x50A8;&#xFF0C;&#x6240;&#x6709;&#x5BF9;&#x6587;&#x4EF6;&#x7684;&#x589E;&#x5220;&#x64CD;&#x4F5C;&#x90FD;&#x4F1A;&#x8FFD;&#x52A0;&#x5230;&#x8FD9;&#x4E2A;&#x65E5;&#x5FD7;&#x4E2D;&#x3002;</p>
+</blockquote>
+<h4 id="sstable-&#x7684;&#x683C;&#x5F0F;">SSTable &#x7684;&#x683C;&#x5F0F;</h4>
+<p>SSTable &#x4E2D;&#x5176;&#x5B9E;&#x5B58;&#x50A8;&#x7684;&#x4E0D;&#x53EA;&#x662F;&#x6570;&#x636E;&#xFF0C;&#x5176;&#x4E2D;&#x8FD8;&#x4FDD;&#x5B58;&#x4E86;&#x4E00;&#x4E9B;&#x5143;&#x6570;&#x636E;&#x3001;&#x7D22;&#x5F15;&#x7B49;&#x4FE1;&#x606F;&#xFF0C;&#x7528;&#x4E8E;&#x52A0;&#x901F;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;&#x7684;&#x901F;&#x5EA6;&#xFF0C;&#x867D;&#x7136;&#x5728; Bigtable &#x7684;&#x8BBA;&#x6587;&#x4E2D;&#x5E76;&#x6CA1;&#x6709;&#x7ED9;&#x51FA; SSTable &#x7684;&#x6570;&#x636E;&#x683C;&#x5F0F;&#xFF0C;&#x4E0D;&#x8FC7;&#x5728; LevelDB &#x7684;&#x5B9E;&#x73B0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53D1;&#x73B0; SSTable &#x662F;&#x4EE5;&#x8FD9;&#x79CD;&#x683C;&#x5F0F;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;&#xFF1A;</p>
+<p><img src="images/leveldb-bigtable/SSTable-Format.jpg" alt="SSTable-Format"></p>
+<p>&#x5F53; LevelDB &#x8BFB;&#x53D6; SSTable &#x5B58;&#x5728;&#x7684; <code>ldb</code> &#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x4F1A;&#x5148;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x4E2D;&#x7684; <code>Footer</code> &#x4FE1;&#x606F;&#x3002;</p>
+<p><img src="images/leveldb-bigtable/SSTable-Footer.jpg" alt="SSTable-Foote"></p>
+<p>&#x6574;&#x4E2A; <code>Footer</code> &#x5728;&#x6587;&#x4EF6;&#x4E2D;&#x5360;&#x7528; 48 &#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x6211;&#x4EEC;&#x80FD;&#x5728;&#x5176;&#x4E2D;&#x62FF;&#x5230; MetaIndex &#x5757;&#x548C; Index &#x5757;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x518D;&#x901A;&#x8FC7;&#x5176;&#x4E2D;&#x7684;&#x7D22;&#x5F15;&#x7EE7;&#x800C;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x503C;&#x5B58;&#x5728;&#x7684;&#x4F4D;&#x7F6E;&#x3002;</p>
+<p><code>TableBuilder::Rep</code> &#x7ED3;&#x6784;&#x4F53;&#x4E2D;&#x5C31;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x7684;&#x5168;&#x90E8;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#x6570;&#x636E;&#x5757;&#x3001;&#x7D22;&#x5F15;&#x5757;&#x7B49;&#x7B49;&#xFF1A;</p>
+<pre><code class="lang-cpp"><span class="hljs-keyword">struct</span> TableBuilder::Rep {
+  WritableFile* file;
+  <span class="hljs-keyword">uint64_t</span> offset;
+  BlockBuilder data_block;
+  BlockBuilder index_block;
+  <span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> last_key;
+  <span class="hljs-keyword">int64_t</span> num_entries;
+  <span class="hljs-keyword">bool</span> closed;
+  FilterBlockBuilder* filter_block;
+  ...
+}
+</code></pre>
+<p>&#x5230;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x5B8C;&#x6210;&#x4E86;&#x5BF9;&#x6574;&#x4E2A;&#x6570;&#x636E;&#x8BFB;&#x53D6;&#x8FC7;&#x7A0B;&#x7684;&#x89E3;&#x6790;&#x4E86;&#xFF1B;&#x5BF9;&#x4E8E;&#x8BFB;&#x64CD;&#x4F5C;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A; LevelDB &#x5728;&#x5B83;&#x5185;&#x90E8;&#x7684;&#x300E;&#x591A;&#x7EA7;&#x7F13;&#x5B58;&#x300F;&#x4E2D;&#x4F9D;&#x6B21;&#x67E5;&#x627E;&#x662F;&#x5426;&#x5B58;&#x5728;&#x5BF9;&#x5E94;&#x7684;&#x952E;&#xFF0C;&#x5982;&#x679C;&#x5B58;&#x5728;&#x5C31;&#x4F1A;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#xFF0C;&#x552F;&#x4E00;&#x4E0E;&#x7F13;&#x5B58;&#x4E0D;&#x540C;&#x53EF;&#x80FD;&#x5C31;&#x662F;&#xFF0C;&#x5728;&#x6570;&#x636E;&#x300E;&#x547D;&#x4E2D;&#x300F;&#x540E;&#xFF0C;&#x5B83;&#x5E76;&#x4E0D;&#x4F1A;&#x628A;&#x6570;&#x636E;&#x79FB;&#x52A8;&#x5230;&#x66F4;&#x8FD1;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x800C;&#x662F;&#x4F1A;&#x628A;&#x6570;&#x636E;&#x79FB;&#x5230;&#x66F4;&#x8FDC;&#x7684;&#x5730;&#x65B9;&#x6765;&#x51CF;&#x5C11;&#x4E0B;&#x4E00;&#x6B21;&#x7684;&#x8BBF;&#x95EE;&#x65F6;&#x95F4;&#xFF0C;&#x867D;&#x7136;&#x8FD9;&#x4E48;&#x542C;&#x8D77;&#x6765;&#x5374;&#x662F;&#x4E0D;&#x53EF;&#x601D;&#x8BAE;&#xFF0C;&#x4E0D;&#x8FC7;&#x4ED4;&#x7EC6;&#x60F3;&#x4E00;&#x4E0B;&#x786E;&#x5B9E;&#x662F;&#x8FD9;&#x6837;&#x3002;</p>
+<h2 id="&#x5C0F;&#x7ED3;">&#x5C0F;&#x7ED3;</h2>
+<p>&#x5728;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x5BF9; LevelDB &#x6E90;&#x4EE3;&#x7801;&#x4E2D;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;&#x7684;&#x5206;&#x6790;&#xFF0C;&#x4E86;&#x89E3;&#x4E86;&#x6574;&#x4E2A;&#x6846;&#x67B6;&#x7684;&#x7EDD;&#x5927;&#x90E8;&#x5206;&#x5B9E;&#x73B0;&#x7EC6;&#x8282;&#xFF0C;&#x5305;&#x62EC; LevelDB &#x4E2D;&#x5B58;&#x50A8;&#x6570;&#x636E;&#x7684;&#x683C;&#x5F0F;&#x3001;&#x591A;&#x7EA7; SSTable&#x3001;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x5408;&#x5E76;&#x4EE5;&#x53CA;&#x7BA1;&#x7406;&#x7248;&#x672C;&#x7B49;&#x4FE1;&#x606F;&#xFF0C;&#x4E0D;&#x8FC7;&#x7531;&#x4E8E;&#x7BC7;&#x5E45;&#x6240;&#x9650;&#xFF0C;&#x5BF9;&#x4E8E;&#x5176;&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#x5E76;&#x6CA1;&#x6709;&#x5C55;&#x5F00;&#x8BE6;&#x7EC6;&#x5730;&#x8FDB;&#x884C;&#x4ECB;&#x7ECD;&#x548C;&#x5206;&#x6790;&#xFF0C;&#x4F8B;&#x5982;&#x9519;&#x8BEF;&#x6062;&#x590D;&#x4EE5;&#x53CA;&#x7F13;&#x5B58;&#x7B49;&#x95EE;&#x9898;&#xFF1B;&#x4F46;&#x662F;&#x5BF9; LevelDB &#x6E90;&#x4EE3;&#x7801;&#x7684;&#x9605;&#x8BFB;&#xFF0C;&#x52A0;&#x6DF1;&#x4E86;&#x6211;&#x4EEC;&#x5BF9; Bigtable &#x8BBA;&#x6587;&#x4E2D;&#x63CF;&#x8FF0;&#x7684;&#x5206;&#x5E03;&#x5F0F; KV &#x5B58;&#x50A8;&#x6570;&#x636E;&#x5E93;&#x7684;&#x7406;&#x89E3;&#x3002;</p>
+<p>LevelDB &#x7684;&#x6E90;&#x4EE3;&#x7801;&#x975E;&#x5E38;&#x6613;&#x4E8E;&#x9605;&#x8BFB;&#xFF0C;&#x4E5F;&#x662F;&#x5B66;&#x4E60; C++ &#x8BED;&#x8A00;&#x975E;&#x5E38;&#x4F18;&#x79C0;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x5982;&#x679C;&#x5BF9;&#x6587;&#x7AE0;&#x7684;&#x5185;&#x5BB9;&#x6709;&#x7591;&#x95EE;&#xFF0C;&#x53EF;&#x4EE5;&#x7FFB;&#x5899;&#x540E;&#x5728;&#x535A;&#x5BA2;&#x4E0B;&#x9762;&#x7684; Disqus &#x4E2D;&#x7559;&#x8A00;&#x3002;</p>
+<h2 id="reference">Reference</h2>
+<ul>
+<li><a href="https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf" target="_blank">Bigtable: A Distributed Storage System for Structured Data</a></li>
+<li><a href="https://github.com/google/leveldb" target="_blank">LevelDB</a></li>
+<li><a href="https://static.googleusercontent.com/media/research.google.com/en//archive/chubby-osdi06.pdf" target="_blank">The Chubby lock service for loosely-coupled distributed systems</a></li>
+<li><a href="https://github.com/google/leveldb/blob/master/doc/impl.md" target="_blank">LevelDB &#xB7; Impl</a></li>
+<li><a href="http://bean-li.github.io/leveldb-sstable/" target="_blank">leveldb &#x4E2D;&#x7684; SSTable</a></li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="dynamo.html" class="navigation navigation-prev " aria-label="Previous page: 分布式键值存储 Dynamo">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="mongodb-to-mysql.html" class="navigation navigation-next " aria-label="Next page: MongoDB 迁移到 MySQL">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Bigtable 和 LevelDB 的实现","level":"1.1.5.8.3","depth":4,"next":{"title":"MongoDB 迁移到 MySQL","level":"1.1.5.8.4","depth":4,"path":"Source-Code-Analysis/Database/mongodb-to-mysql.md","ref":"Source-Code-Analysis/Database/mongodb-to-mysql.md","articles":[]},"previous":{"title":"分布式键值存储 Dynamo","level":"1.1.5.8.2","depth":4,"path":"Source-Code-Analysis/Database/dynamo.md","ref":"Source-Code-Analysis/Database/dynamo.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Source-Code-Analysis/Database/leveldb-bigtable.md","mtime":"2018-05-22T14:51:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-23T11:29:51.711Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

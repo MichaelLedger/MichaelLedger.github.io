@@ -1,0 +1,2056 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>RACCommand · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="RACDelegateProxy.html" />
+    
+    
+    <link rel="prev" href="RACChannel.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    iOS 开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../../ObjC-Basic/">
+            
+                <a href="../../ObjC-Basic/">
+            
+                    
+                    Objective-C 语言基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../../ObjC-Basic/Class.html">
+            
+                <a href="../../ObjC-Basic/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2" data-path="../../ObjC-Basic/Block.html">
+            
+                <a href="../../ObjC-Basic/Block.html">
+            
+                    
+                    Block 编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.3" data-path="../../ObjC-Basic/Runtime.html">
+            
+                <a href="../../ObjC-Basic/Runtime.html">
+            
+                    
+                    Objective-C Runtime
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.4" data-path="../../ObjC-Basic/MM.html">
+            
+                <a href="../../ObjC-Basic/MM.html">
+            
+                    
+                    Objective-C 内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.5" data-path="../../ObjC-Basic/Runloop.html">
+            
+                <a href="../../ObjC-Basic/Runloop.html">
+            
+                    
+                    Runloop
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../../Cocoa-Touch/">
+            
+                <a href="../../Cocoa-Touch/">
+            
+                    
+                    Cocoa Touch
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="../../Cocoa-Touch/Event-Handling.html">
+            
+                <a href="../../Cocoa-Touch/Event-Handling.html">
+            
+                    
+                    事件处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2" data-path="../../Cocoa-Touch/UIApplication.html">
+            
+                <a href="../../Cocoa-Touch/UIApplication.html">
+            
+                    
+                    UIApplication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.3" data-path="../../Cocoa-Touch/UIView-Basic.html">
+            
+                <a href="../../Cocoa-Touch/UIView-Basic.html">
+            
+                    
+                    UIView
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.4" data-path="../../Cocoa-Touch/UIViewController.html">
+            
+                <a href="../../Cocoa-Touch/UIViewController.html">
+            
+                    
+                    UIViewController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.5" data-path="../../Cocoa-Touch/Animation.html">
+            
+                <a href="../../Cocoa-Touch/Animation.html">
+            
+                    
+                    动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.6" data-path="../../Cocoa-Touch/Network.html">
+            
+                <a href="../../Cocoa-Touch/Network.html">
+            
+                    
+                    网络编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.7" data-path="../../Cocoa-Touch/Multithreading.html">
+            
+                <a href="../../Cocoa-Touch/Multithreading.html">
+            
+                    
+                    并发编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.8" data-path="../../Cocoa-Touch/File-System.html">
+            
+                <a href="../../Cocoa-Touch/File-System.html">
+            
+                    
+                    文件系统
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.9" data-path="../../Cocoa-Touch/Design.html">
+            
+                <a href="../../Cocoa-Touch/Design.html">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.10" data-path="../../Cocoa-Touch/Performance.html">
+            
+                <a href="../../Cocoa-Touch/Performance.html">
+            
+                    
+                    性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../../Swift/">
+            
+                <a href="../../Swift/">
+            
+                    
+                    Swift
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="../../Swift/Class.html">
+            
+                <a href="../../Swift/Class.html">
+            
+                    
+                    类与对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="../../Swift/Struct-And-Enum.html">
+            
+                <a href="../../Swift/Struct-And-Enum.html">
+            
+                    
+                    结构体与枚举
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3" data-path="../../Swift/Function-And-Closure.html">
+            
+                <a href="../../Swift/Function-And-Closure.html">
+            
+                    
+                    函数与闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../../Interview/">
+            
+                <a href="../../Interview/">
+            
+                    
+                    面试问题
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1" data-path="../../Interview/iOSInterviewQuestions/">
+            
+                <a href="../../Interview/iOSInterviewQuestions/">
+            
+                    
+                    《招聘一个靠谱的iOS》
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1.1" data-path="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-One/volume-one.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(上)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.1.2" data-path="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                <a href="../../Interview/iOSInterviewQuestions/Volume-Two/volume-two.html">
+            
+                    
+                    《招聘一个靠谱的iOS》(下)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.2" data-path="../../interview/ZhiHu-QA/">
+            
+                <a href="../../interview/ZhiHu-QA/">
+            
+                    
+                    关于一些 iOS 面试问题的解答
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.3" data-path="../../interview/iOSDeveloperQA/">
+            
+                <a href="../../interview/iOSDeveloperQA/">
+            
+                    
+                    iOS 开发面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.4" data-path="../../interview/MXR-QA/">
+            
+                <a href="../../interview/MXR-QA/">
+            
+                    
+                    MXR 面试问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    源码分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1" data-path="../AFNetworking/AFNetworking_1.html">
+            
+                <a href="../AFNetworking/AFNetworking_1.html">
+            
+                    
+                    AFNetworking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1.1" data-path="../AFNetworking/AFNetworking_2.html">
+            
+                <a href="../AFNetworking/AFNetworking_2.html">
+            
+                    
+                    AFURLSessionManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.2" data-path="../AFNetworking/AFNetworking_3.html">
+            
+                <a href="../AFNetworking/AFNetworking_3.html">
+            
+                    
+                    AFURLSerialization
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.3" data-path="../AFNetworking/AFNetworking_4.html">
+            
+                <a href="../AFNetworking/AFNetworking_4.html">
+            
+                    
+                    AFNetworkReachabilityManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.1.4" data-path="../AFNetworking/AFNetworking_5.html">
+            
+                <a href="../AFNetworking/AFNetworking_5.html">
+            
+                    
+                    HTTPS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.2" data-path="../Alamofire/">
+            
+                <a href="../Alamofire/">
+            
+                    
+                    Alamofire
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3" data-path="../architecture/mvx.html">
+            
+                <a href="../architecture/mvx.html">
+            
+                    
+                    architecture
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.3.1" data-path="../architecture/mvx-model.html">
+            
+                <a href="../architecture/mvx-model.html">
+            
+                    
+                    MVX-Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.2" data-path="../architecture/mvx-view.html">
+            
+                <a href="../architecture/mvx-view.html">
+            
+                    
+                    MVX-View
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3.3" data-path="../architecture/mvx-controller.html">
+            
+                <a href="../architecture/mvx-controller.html">
+            
+                    
+                    MVX-Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4" >
+            
+                <span>
+            
+                    
+                    AsyncDisplayKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.4.1" data-path="../AsyncDisplayKit/ASDK_1.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_1.html">
+            
+                    
+                    提升界面的渲染性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4.2" data-path="../AsyncDisplayKit/ASDK_2.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_2.html">
+            
+                    
+                    布局算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4.3" data-path="../AsyncDisplayKit/ASDK_3.html">
+            
+                <a href="../AsyncDisplayKit/ASDK_3.html">
+            
+                    
+                    预加载与智能预加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5" >
+            
+                <span>
+            
+                    
+                    BlocksKit
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.5.1" data-path="../BlocksKit/BlocksKit_1.html">
+            
+                <a href="../BlocksKit/BlocksKit_1.html">
+            
+                    
+                    神奇的 BlocksKit (一)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5.2" data-path="../BlocksKit/BlocksKit_2.html">
+            
+                <a href="../BlocksKit/BlocksKit_2.html">
+            
+                    
+                    神奇的 BlocksKit (二)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.6" data-path="../Blog/initialize-comments.html">
+            
+                <a href="../Blog/initialize-comments.html">
+            
+                    
+                    Gitalk/Gitment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7" >
+            
+                <span>
+            
+                    
+                    CocoaPods
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.7.1" data-path="../CocoaPods/CocoaPods.html">
+            
+                <a href="../CocoaPods/CocoaPods.html">
+            
+                    
+                    CocoaPods 都做了什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.7.2" data-path="../CocoaPods/DSL.html">
+            
+                <a href="../CocoaPods/DSL.html">
+            
+                    
+                    DSL 以及 DSL 的应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8" >
+            
+                <span>
+            
+                    
+                    Database
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.8.1" data-path="../Database/concurrency-control.html">
+            
+                <a href="../Database/concurrency-control.html">
+            
+                    
+                    数据库并发控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.2" data-path="../Database/dynamo.html">
+            
+                <a href="../Database/dynamo.html">
+            
+                    
+                    分布式键值存储 Dynamo
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.3" data-path="../Database/leveldb-bigtable.html">
+            
+                <a href="../Database/leveldb-bigtable.html">
+            
+                    
+                    Bigtable 和 LevelDB 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.4" data-path="../Database/mongodb-to-mysql.html">
+            
+                <a href="../Database/mongodb-to-mysql.html">
+            
+                    
+                    MongoDB 迁移到 MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.5" data-path="../Database/mongodb-wiredtiger.html">
+            
+                <a href="../Database/mongodb-wiredtiger.html">
+            
+                    
+                    MongoDB 和 WiredTiger
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.6" data-path="../Database/mysql.html">
+            
+                <a href="../Database/mysql.html">
+            
+                    
+                    MySQL 和 InnoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.7" data-path="../Database/sql-index-intro.html">
+            
+                <a href="../Database/sql-index-intro.html">
+            
+                    
+                    MySQL 索引设计概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.8" data-path="../Database/sql-index-performance.html">
+            
+                <a href="../Database/sql-index-performance.html">
+            
+                    
+                    MySQL 索引性能分析概要
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.8.9" data-path="../Database/transaction.html">
+            
+                <a href="../Database/transaction.html">
+            
+                    
+                    MySQL 中事务的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.9" data-path="../DKNightVersion/DKNightVersion.html">
+            
+                <a href="../DKNightVersion/DKNightVersion.html">
+            
+                    
+                    DKNightVersion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10" >
+            
+                <span>
+            
+                    
+                    FBRetainCycleDetector
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.10.1" data-path="../FBRetainCycleDetector/block.html">
+            
+                <a href="../FBRetainCycleDetector/block.html">
+            
+                    
+                    block 如何持有对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.2" data-path="../FBRetainCycleDetector/Obj-Associated.html">
+            
+                <a href="../FBRetainCycleDetector/Obj-Associated.html">
+            
+                    
+                    Associated Object
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.3" data-path="../FBRetainCycleDetector/Obj-Strong.html">
+            
+                <a href="../FBRetainCycleDetector/Obj-Strong.html">
+            
+                    
+                    对象持有的强指针
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.10.4" data-path="../FBRetainCycleDetector/retain_cycle.html">
+            
+                <a href="../FBRetainCycleDetector/retain_cycle.html">
+            
+                    
+                    解决循环引用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.11" data-path="../fishhook/fishhook.html">
+            
+                <a href="../fishhook/fishhook.html">
+            
+                    
+                    fishhook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.12" data-path="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                <a href="../IQKeyboardManager/IQKeyboardManager.html">
+            
+                    
+                    IQKeyboardManager
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.13" data-path="../KVOController/KVOController.html">
+            
+                <a href="../KVOController/KVOController.html">
+            
+                    
+                    KVOController
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.14" data-path="../libextobjc/libextobjc.html">
+            
+                <a href="../libextobjc/libextobjc.html">
+            
+                    
+                    libextobjc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.15" data-path="../Masonry/Masonry.html">
+            
+                <a href="../Masonry/Masonry.html">
+            
+                    
+                    Masonry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.16" data-path="../MBProgressHUD/">
+            
+                <a href="../MBProgressHUD/">
+            
+                    
+                    MBProgressHUD
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17" data-path="../objc/">
+            
+                <a href="../objc/">
+            
+                    
+                    objc
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.17.1" data-path="../objc/associated-obj.html">
+            
+                <a href="../objc/associated-obj.html">
+            
+                    
+                    关联对象 AssociatedObject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.2" data-path="../objc/autoreleasepool.html">
+            
+                <a href="../objc/autoreleasepool.html">
+            
+                    
+                    自动释放池
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.3" data-path="../objc/black-box-retain-release.html">
+            
+                <a href="../objc/black-box-retain-release.html">
+            
+                    
+                    黑箱中的 retain 和 release
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.4" data-path="../objc/func-structure.html">
+            
+                <a href="../objc/func-structure.html">
+            
+                    
+                    ObjC 中方法的结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.5" data-path="../objc/hash.html">
+            
+                <a href="../objc/hash.html">
+            
+                    
+                    哈希表的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.6" data-path="../objc/initialization.html">
+            
+                <a href="../objc/initialization.html">
+            
+                    
+                    初始化对象
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.7" data-path="../objc/isa.html">
+            
+                <a href="../objc/isa.html">
+            
+                    
+                    isa
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.8" data-path="../objc/lazy-initialize.html">
+            
+                <a href="../objc/lazy-initialize.html">
+            
+                    
+                    懒惰的 initialize 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.9" data-path="../objc/load.html">
+            
+                <a href="../objc/load.html">
+            
+                    
+                    load 方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.17.10" data-path="../objc/msgSend.html">
+            
+                <a href="../objc/msgSend.html">
+            
+                    
+                    消息传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18" >
+            
+                <span>
+            
+                    
+                    OHHTTPStubs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.18.1" data-path="../OHHTTPStubs/intercept.html">
+            
+                <a href="../OHHTTPStubs/intercept.html">
+            
+                    
+                    HTTP Intercept
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.18.2" data-path="../OHHTTPStubs/mock.html">
+            
+                <a href="../OHHTTPStubs/mock.html">
+            
+                    
+                    HTTP Mock
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.19" data-path="../ProtocolKit/ProtocolKit.html">
+            
+                <a href="../ProtocolKit/ProtocolKit.html">
+            
+                    
+                    ProtocolKit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20" data-path="../rack/rack.html">
+            
+                <a href="../rack/rack.html">
+            
+                    
+                    rack
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.20.1" data-path="../rack/rack-thin.html">
+            
+                <a href="../rack/rack-thin.html">
+            
+                    
+                    Thin 的事件驱动模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20.2" data-path="../rack/rack-unicorn.html">
+            
+                <a href="../rack/rack-unicorn.html">
+            
+                    
+                    Unicorn 的多进程模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.20.3" data-path="../rack/rack-webrik.html">
+            
+                <a href="../rack/rack-webrik.html">
+            
+                    
+                    WEBrick 的实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.21" data-path="../Rails/activerecord.html">
+            
+                <a href="../Rails/activerecord.html">
+            
+                    
+                    Rails
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22" >
+            
+                <span>
+            
+                    
+                    ReactiveObjC
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.22.1" data-path="RACChannel.html">
+            
+                <a href="RACChannel.html">
+            
+                    
+                    RACChannel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.5.22.2" data-path="RACCommand.html">
+            
+                <a href="RACCommand.html">
+            
+                    
+                    RACCommand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.3" data-path="RACDelegateProxy.html">
+            
+                <a href="RACDelegateProxy.html">
+            
+                    
+                    RACDelegateProxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.4" data-path="RACMulticastConnection.html">
+            
+                <a href="RACMulticastConnection.html">
+            
+                    
+                    RACMulticastConnection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.5" data-path="RACScheduler.html">
+            
+                <a href="RACScheduler.html">
+            
+                    
+                    RACScheduler
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.6" data-path="RACSequence.html">
+            
+                <a href="RACSequence.html">
+            
+                    
+                    RACSequence
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.7" data-path="RACSignal.html">
+            
+                <a href="RACSignal.html">
+            
+                    
+                    RACSignal
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.22.8" data-path="RACSubject.html">
+            
+                <a href="RACSubject.html">
+            
+                    
+                    RACSubject
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23" >
+            
+                <span>
+            
+                    
+                    Redis
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.23.1" data-path="../Redis/redis-cli.html">
+            
+                <a href="../Redis/redis-cli.html">
+            
+                    
+                    命令处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.2" data-path="../Redis/redis-eventloop.html">
+            
+                <a href="../Redis/redis-eventloop.html">
+            
+                    
+                    事件循环
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.23.3" data-path="../Redis/redis-io-multiplexing.html">
+            
+                <a href="../Redis/redis-io-multiplexing.html">
+            
+                    
+                    I/O 多路复用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.24" data-path="../Ruby/Ruby.html">
+            
+                <a href="../Ruby/Ruby.html">
+            
+                    
+                    Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.25" data-path="../SDWebImage/">
+            
+                <a href="../SDWebImage/">
+            
+                    
+                    SDWebImage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="../../More.html">
+            
+                <a href="../../More.html">
+            
+                    
+                    更多资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >RACCommand</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4F18;&#x96C5;&#x7684;-raccommand">&#x4F18;&#x96C5;&#x7684; RACCommand</h1>
+<p><img src="images/RACCommand/raccommad-cover.jpg" alt="raccommad-cove"></p>
+<p><code>RACCommand</code> &#x662F;&#x4E00;&#x4E2A;&#x5728; ReactiveCocoa &#x4E2D;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#x7684;&#x7C7B;&#xFF0C;&#x5927;&#x591A;&#x6570;&#x4F7F;&#x7528; ReactiveCocoa &#x7684;&#x4EBA;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x521D;&#x5B66;&#x8005;&#x5E76;&#x4E0D;&#x4F1A;&#x7ECF;&#x5E38;&#x4F7F;&#x7528;&#x5B83;&#x3002;</p>
+<p>&#x5728;&#x5F88;&#x591A;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x867D;&#x7136;&#x4F7F;&#x7528; <code>RACSignal</code> &#x548C; <code>RACSubject</code> &#x5C31;&#x80FD;&#x89E3;&#x51B3;&#x7EDD;&#x5927;&#x90E8;&#x5206;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x662F; <code>RACCommand</code> &#x7684;&#x4F7F;&#x7528;&#x4F1A;&#x4E3A;&#x6211;&#x4EEC;&#x5E26;&#x6765;&#x5DE8;&#x5927;&#x7684;&#x4FBF;&#x5229;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x5728;&#x4E0E;&#x526F;&#x4F5C;&#x7528;&#x76F8;&#x5173;&#x7684;&#x64CD;&#x4F5C;&#x4E2D;&#x3002;</p>
+<p><img src="images/RACCommand/What-is-RACCommand.png" alt="What-is-RACCommand"></p>
+<blockquote>
+<p>&#x6587;&#x7AE0;&#x4E2D;&#x4E0D;&#x4F1A;&#x8BA8;&#x8BBA; <code>RACCommand</code> &#x4E2D;&#x7684;&#x5E76;&#x884C;&#x6267;&#x884C;&#x95EE;&#x9898;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5FFD;&#x7565;&#x4E86; <code>allowsConcurrentExecution</code> &#x4EE5;&#x53CA; <code>allowsConcurrentExecutionSubject</code> &#x7684;&#x5B58;&#x5728;&#xFF0C;&#x4E0D;&#x8FC7;&#x5B83;&#x4EEC;&#x786E;&#x5B9E;&#x5728; <code>RACCommand</code> &#x4E2D;&#x975E;&#x5E38;&#x91CD;&#x8981;&#xFF0C;&#x8FD9;&#x91CC;&#x53EA;&#x662F;&#x4E3A;&#x4E86;&#x51CF;&#x5C11;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x5E72;&#x6270;&#x56E0;&#x7D20;&#x3002;</p>
+</blockquote>
+<h2 id="raccommand-&#x7B80;&#x4ECB;">RACCommand &#x7B80;&#x4ECB;</h2>
+<p>&#x4E0E;&#x524D;&#x9762;&#x51E0;&#x7BC7;&#x6587;&#x7AE0;&#x4E2D;&#x4ECB;&#x7ECD;&#x7684; <code>RACSignal</code> &#x7B49;&#x5143;&#x7D20;&#x4E0D;&#x540C;&#xFF0C;<code>RACCommand</code> &#x5E76;&#x4E0D;&#x8868;&#x793A;&#x6570;&#x636E;&#x6D41;&#xFF0C;&#x5B83;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x7EE7;&#x627F;&#x81EA; <code>NSObject</code> &#x7684;&#x7C7B;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x5374;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x521B;&#x5EFA;&#x548C;&#x8BA2;&#x9605;&#x7528;&#x4E8E;&#x54CD;&#x5E94;&#x67D0;&#x4E9B;&#x4E8B;&#x4EF6;&#x7684;&#x4FE1;&#x53F7;&#x3002;</p>
+<pre><code class="lang-objectivec"><span class="hljs-class"><span class="hljs-keyword">@interface</span> <span class="hljs-title">RACCommand</span>&lt;<span class="hljs-title">__contravariant</span> <span class="hljs-title">InputType</span>, <span class="hljs-title">__covariant</span> <span class="hljs-title">ValueType</span>&gt; : <span class="hljs-title">NSObject</span></span>
+
+<span class="hljs-keyword">@end</span>
+</code></pre>
+<p>&#x5B83;&#x672C;&#x8EAB;&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x4E2A; <code>RACStream</code> &#x6216;&#x8005; <code>RACSignal</code> &#x7684;&#x5B50;&#x7C7B;&#xFF0C;&#x800C;&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x7BA1;&#x7406; <code>RACSignal</code> &#x7684;&#x521B;&#x5EFA;&#x4E0E;&#x8BA2;&#x9605;&#x7684;&#x7C7B;&#x3002;</p>
+<p>&#x5728; ReactiveCocoa &#x4E2D;&#x7684; FrameworkOverview &#x90E8;&#x5206;&#x5BF9; <code>RACCommand</code> &#x6709;&#x8FD9;&#x6837;&#x7684;&#x89E3;&#x91CA;&#xFF1A;</p>
+<blockquote>
+<p>A command, represented by the RACCommand class, creates and subscribes to a signal in response to some action. This makes it easy to perform side-effecting work as the user interacts with the app.</p>
+</blockquote>
+<p>&#x5728;&#x7528;&#x4E8E;&#x4E0E; UIKit &#x7EC4;&#x4EF6;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x6216;&#x8005;&#x6267;&#x884C;&#x5305;&#x542B;&#x526F;&#x4F5C;&#x7528;&#x7684;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;<code>RACCommand</code> &#x80FD;&#x591F;&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x66F4;&#x5FEB;&#x7684;&#x5904;&#x7406;&#x5E76;&#x4E14;&#x54CD;&#x5E94;&#x4EFB;&#x52A1;&#xFF0C;&#x51CF;&#x5C11;&#x7F16;&#x7801;&#x4EE5;&#x53CA;&#x5DE5;&#x7A0B;&#x7684;&#x590D;&#x6742;&#x5EA6;&#x3002;</p>
+<h2 id="raccommand-&#x7684;&#x521D;&#x59CB;&#x5316;&#x4E0E;&#x6267;&#x884C;">RACCommand &#x7684;&#x521D;&#x59CB;&#x5316;&#x4E0E;&#x6267;&#x884C;</h2>
+<p>&#x5728; <code>-initWithSignalBlock:</code> &#x65B9;&#x6CD5;&#x7684;&#x65B9;&#x6CD5;&#x7B7E;&#x540D;&#x4E0A;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5728;&#x6BCF;&#x6B21; <code>RACCommand</code> &#x521D;&#x59CB;&#x5316;&#x65F6;&#x90FD;&#x4F1A;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x4E3A; <code>RACSignal&lt;ValueType&gt; * (^)(InputType _Nullable input)</code> &#x7684; <code>signalBlock</code>&#xFF1A;</p>
+<pre><code class="lang-objectivec">- (instancetype)initWithSignalBlock:(RACSignal&lt;ValueType&gt; * (^)(InputType _Nullable input))signalBlock;
+</code></pre>
+<p>&#x8F93;&#x5165;&#x4E3A; <code>InputType</code> &#x8FD4;&#x56DE;&#x503C;&#x4E3A; <code>RACSignal&lt;ValueType&gt; *</code>&#xFF0C;&#x800C; <code>InputType</code> &#x4E5F;&#x5C31;&#x662F;&#x5728;&#x8C03;&#x7528; <code>-execute:</code> &#x65B9;&#x6CD5;&#x65F6;&#x4F20;&#x5165;&#x7684;&#x5BF9;&#x8C61;&#xFF1A;</p>
+<pre><code class="lang-objectivec">- (RACSignal&lt;ValueType&gt; *)execute:(nullable InputType)input;
+</code></pre>
+<p>&#x8FD9;&#x4E5F;&#x5C31;&#x662F; <code>RACCommand</code> &#x5C06;&#x5916;&#x90E8;&#x53D8;&#x91CF;&#xFF08;&#x6216;&#x300E;&#x526F;&#x4F5C;&#x7528;&#x300F;&#xFF09;&#x4F20;&#x5165; ReactiveCocoa &#x5185;&#x90E8;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A; <code>RACCommand</code> &#x5C06;&#x5916;&#x90E8;&#x7684;&#x53D8;&#x91CF; <code>InputType</code> &#x8F6C;&#x6362;&#x6210;&#x4E86;&#x4F7F;&#x7528; <code>RACSignal</code> &#x5305;&#x88F9;&#x7684; <code>ValueType</code> &#x5BF9;&#x8C61;&#x3002;</p>
+<p><img src="images/RACCommand/Execute-For-RACCommand.png" alt="Execute-For-RACCommand"></p>
+<p>&#x6211;&#x4EEC;&#x4EE5;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4E3A;&#x4F8B;&#xFF0C;&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E0B; <code>RACCommand</code> &#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-objectivec">RACCommand *command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(<span class="hljs-built_in">NSNumber</span> * _Nullable input) {
+    <span class="hljs-keyword">return</span> [RACSignal createSignal:^RACDisposable * _Nullable(<span class="hljs-keyword">id</span>&lt;RACSubscriber&gt;  _Nonnull subscriber) {
+        <span class="hljs-built_in">NSInteger</span> integer = [input integerValue];
+        <span class="hljs-keyword">for</span> (<span class="hljs-built_in">NSInteger</span> i = <span class="hljs-number">0</span>; i &lt; integer; i++) {
+            [subscriber sendNext:@(i)];
+        }
+        [subscriber sendCompleted];
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>;
+    }];
+}];
+[[command.executionSignals switchToLatest] subscribeNext:^(<span class="hljs-keyword">id</span>  _Nullable x) {
+    <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@&quot;%@&quot;</span>, x);
+}];
+
+[command execute:@<span class="hljs-number">1</span>];
+[RACScheduler.mainThreadScheduler afterDelay:<span class="hljs-number">0.1</span>
+                                    schedule:^{
+                                        [command execute:@<span class="hljs-number">2</span>];
+                                    }];
+[RACScheduler.mainThreadScheduler afterDelay:<span class="hljs-number">0.2</span>
+                                    schedule:^{
+                                        [command execute:@<span class="hljs-number">3</span>];
+                                    }];
+</code></pre>
+<p>&#x9996;&#x5148;&#x4F7F;&#x7528; <code>-initWithSignalBlock:</code> &#x65B9;&#x6CD5;&#x521B;&#x5EFA;&#x4E00;&#x4E2A; <code>RACCommand</code> &#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;&#x4E3A; <code>InputType -&gt; RACSignal&lt;ValueType&gt;</code> &#x7684; block&#xFF0C;&#x8FD9;&#x4E2A;&#x4FE1;&#x53F7;&#x6839;&#x636E;&#x8F93;&#x5165;&#x4F1A;&#x53D1;&#x9001;&#x5BF9;&#x5E94;&#x6B21;&#x6570;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x5982;&#x679C;&#x8FD0;&#x884C;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x4F1A;&#x6253;&#x5370;&#x51FA;&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-number">0</span>
+<span class="hljs-number">0</span>
+<span class="hljs-number">1</span>
+<span class="hljs-number">0</span>
+<span class="hljs-number">1</span>
+<span class="hljs-number">2</span>
+</code></pre>
+<blockquote>
+<p><code>-switchToLatest</code> &#x65B9;&#x6CD5;&#x53EA;&#x80FD;&#x64CD;&#x4F5C;<strong>&#x4FE1;&#x53F7;&#x7684;&#x4FE1;&#x53F7;</strong>&#x3002;</p>
+</blockquote>
+<p>&#x6BCF;&#x6B21; <code>executionSignals</code> &#x4E2D;&#x53D1;&#x9001;&#x4E86;&#x65B0;&#x7684;&#x4FE1;&#x53F7;&#x65F6;&#xFF0C;<code>switchToLatest</code> &#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x7684;&#x4FE1;&#x53F7;&#x90FD;&#x4F1A;&#x8BA2;&#x9605;&#x8FD9;&#x4E2A;&#x6700;&#x65B0;&#x7684;&#x4FE1;&#x53F7;&#xFF0C;&#x8FD9;&#x91CC;&#x4E5F;&#x5C31;&#x4FDD;&#x8BC1;&#x4E86;&#x6BCF;&#x6B21;&#x90FD;&#x4F1A;&#x6253;&#x5370;&#x51FA;&#x6700;&#x65B0;&#x7684;&#x4FE1;&#x53F7;&#x4E2D;&#x7684;&#x503C;&#x3002;</p>
+<p><img src="images/RACCommand/Multiple-Executes.png" alt="Multiple-Executes"></p>
+<p>&#x5728;&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#x8FD8;&#x6709;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x9700;&#x8981;&#x56DE;&#x7B54;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x4F7F;&#x7528; <code>RACScheduler.mainThreadScheduler</code> &#x5EF6;&#x8FDF;&#x8C03;&#x7528;&#x4E4B;&#x540E;&#x7684; <code>-execute:</code> &#x65B9;&#x6CD5;&#xFF1F;&#x7531;&#x4E8E;&#x5728;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B; <code>RACCommand</code> &#x90FD;&#x662F;&#x4E0D;&#x652F;&#x6301;&#x5E76;&#x53D1;&#x64CD;&#x4F5C;&#x7684;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x4E0A;&#x4E00;&#x6B21;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x4E4B;&#x540E;&#x624D;&#x53EF;&#x4EE5;&#x53D1;&#x9001;&#x4E0B;&#x4E00;&#x6B21;&#x64CD;&#x4F5C;&#xFF0C;&#x5426;&#x5219;&#x5C31;&#x4F1A;&#x8FD4;&#x56DE;&#x9519;&#x8BEF;&#x4FE1;&#x53F7; <code>RACErrorSignal</code>&#xFF0C;&#x8FD9;&#x4E9B;&#x9519;&#x8BEF;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BA2;&#x9605; <code>command.errors</code> &#x83B7;&#x5F97;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x7684;&#x65B9;&#x5F0F;&#x6267;&#x884C;&#x51E0;&#x6B21; <code>-execute:</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-objectivec">[command execute:@<span class="hljs-number">1</span>];
+[command execute:@<span class="hljs-number">2</span>];
+[command execute:@<span class="hljs-number">3</span>];
+</code></pre>
+<p>&#x7B14;&#x8005;&#x76F8;&#x4FE1;&#xFF0C;&#x4E0D;&#x51FA;&#x610F;&#x5916;&#x7684;&#x8BDD;&#xFF0C;&#x4F60;&#x53EA;&#x80FD;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x770B;&#x5230;&#x8F93;&#x51FA; <code>0</code>&#x3002;</p>
+<h3 id="&#x6700;&#x91CD;&#x8981;&#x7684;&#x5185;&#x90E8;&#x300E;&#x4FE1;&#x53F7;&#x300F;">&#x6700;&#x91CD;&#x8981;&#x7684;&#x5185;&#x90E8;&#x300E;&#x4FE1;&#x53F7;&#x300F;</h3>
+<p><code>RACCommand</code> &#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x5185;&#x90E8;&#x300E;&#x4FE1;&#x53F7;&#x300F;&#x5C31;&#x662F; <code>addedExecutionSignalsSubject</code>&#xFF1A;</p>
+<pre><code class="lang-objectivec"><span class="hljs-keyword">@property</span> (<span class="hljs-keyword">nonatomic</span>, <span class="hljs-keyword">strong</span>, <span class="hljs-keyword">readonly</span>) RACSubject *addedExecutionSignalsSubject;
+</code></pre>
+<p>&#x8FD9;&#x4E2A; <code>RACSubject</code> &#x5BF9;&#x8C61;&#x901A;&#x8FC7;&#x5404;&#x79CD;&#x64CD;&#x4F5C;&#x884D;&#x751F;&#x4E86;&#x51E0;&#x4E4E;&#x6240;&#x6709; <code>RACCommand</code> &#x4E2D;&#x7684;&#x5176;&#x4ED6;&#x4FE1;&#x53F7;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x5728;&#x4E0B;&#x4E00;&#x8282;&#x4E2D;&#x5177;&#x4F53;&#x4ECB;&#x7ECD;&#xFF1B;</p>
+<p>&#x65E2;&#x7136; <code>addedExecutionSignalsSubject</code> &#x662F;&#x4E00;&#x4E2A; <code>RACSubject</code>&#xFF0C;&#x5B83;&#x4E0D;&#x80FD;&#x5728;&#x521B;&#x5EFA;&#x65F6;&#x9884;&#x8BBE;&#x597D;&#x5BF9;&#x8BA2;&#x9605;&#x8005;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#xFF0C;&#x5B83;&#x4F1A;&#x5728;&#x54EA;&#x91CC;&#x63A5;&#x53D7;&#x6570;&#x636E;&#x5E76;&#x63A8;&#x9001;&#x7ED9;&#x8BA2;&#x9605;&#x8005;&#x5462;&#xFF1F;&#x7B54;&#x6848;&#x5C31;&#x5728; <code>-execute:</code> &#x65B9;&#x6CD5;&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-objectivec">- (RACSignal *)execute:(<span class="hljs-keyword">id</span>)input {
+    <span class="hljs-built_in">BOOL</span> enabled = [[<span class="hljs-keyword">self</span>.immediateEnabled first] boolValue];
+    <span class="hljs-keyword">if</span> (!enabled) {
+        <span class="hljs-built_in">NSError</span> *error = [<span class="hljs-built_in">NSError</span> errorWithDomain:RACCommandErrorDomain code:RACCommandErrorNotEnabled userInfo:@{
+            <span class="hljs-built_in">NSLocalizedDescriptionKey</span>: <span class="hljs-built_in">NSLocalizedString</span>(<span class="hljs-string">@&quot;The command is disabled and cannot be executed&quot;</span>, <span class="hljs-literal">nil</span>),
+            RACUnderlyingCommandErrorKey: <span class="hljs-keyword">self</span>
+        }];
+
+        <span class="hljs-keyword">return</span> [RACSignal error:error];
+    }
+
+    RACSignal *signal = <span class="hljs-keyword">self</span>.signalBlock(input);
+    RACMulticastConnection *connection = [[signal
+        subscribeOn:RACScheduler.mainThreadScheduler]
+        multicast:[RACReplaySubject subject]];
+
+    [<span class="hljs-keyword">self</span>.addedExecutionSignalsSubject sendNext:connection.signal];
+
+    [connection connect];
+    <span class="hljs-keyword">return</span> [connection.signal setNameWithFormat:<span class="hljs-string">@&quot;%@ -execute: %@&quot;</span>, <span class="hljs-keyword">self</span>, RACDescription(input)];
+}
+</code></pre>
+<p>&#x5728;&#x65B9;&#x6CD5;&#x4E2D;&#x8FD9;&#x91CC;&#x4F60;&#x4E5F;&#x80FD;&#x770B;&#x5230;&#x8FDE;&#x7EED;&#x51E0;&#x6B21;&#x6267;&#x884C; <code>-execute:</code> &#x65B9;&#x6CD5;&#x4E0D;&#x80FD;&#x6210;&#x529F;&#x7684;&#x539F;&#x56E0;&#xFF1A;&#x6BCF;&#x6B21;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x90FD;&#x4F1A;&#x4ECE;&#x53E6;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7; <code>immediateEnabled</code> &#x4E2D;&#x8BFB;&#x53D6;&#x662F;&#x5426;&#x80FD;&#x6267;&#x884C;&#x5F53;&#x524D;&#x547D;&#x4EE4;&#x7684; <code>BOOL</code> &#x503C;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x76F4;&#x63A5;&#x8FD4;&#x56DE; <code>RACErrorSignal</code>&#x3002;</p>
+<p><img src="images/RACCommand/Execute-on-RACCommand.png" alt="Execute-on-RACCommand"></p>
+<blockquote>
+<p><code>-execute:</code> &#x65B9;&#x6CD5;&#x662F;&#x552F;&#x4E00;&#x4E00;&#x4E2A;&#x4E3A; <code>addedExecutionSignalsSubject</code> &#x751F;&#x4EA7;&#x4FE1;&#x606F;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+</blockquote>
+<p>&#x5728;&#x6267;&#x884C; <code>signalBlock</code> &#x8FD4;&#x56DE;&#x4E00;&#x4E2A; <code>RACSignal</code> &#x4E4B;&#x540E;&#xFF0C;&#x4F1A;&#x5C06;&#x5F53;&#x524D;&#x4FE1;&#x53F7;&#x5305;&#x88C5;&#x6210;&#x4E00;&#x4E2A; <code>RACMulticastConnection</code>&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528; <code>-sendNext:</code> &#x65B9;&#x6CD5;&#x53D1;&#x9001;&#x5230; <code>addedExecutionSignalsSubject</code> &#x4E0A;&#xFF0C;&#x6267;&#x884C; <code>-connect</code> &#x65B9;&#x6CD5;&#x8BA2;&#x9605;&#x539F;&#x6709;&#x7684;&#x4FE1;&#x53F7;&#xFF0C;&#x6700;&#x540E;&#x8FD4;&#x56DE;&#x3002;</p>
+<h3 id="&#x590D;&#x6742;&#x7684;&#x521D;&#x59CB;&#x5316;">&#x590D;&#x6742;&#x7684;&#x521D;&#x59CB;&#x5316;</h3>
+<p>&#x4E0E;&#x7B80;&#x5355;&#x7684; <code>-execute:</code> &#x65B9;&#x6CD5;&#x76F8;&#x6BD4;&#xFF0C;<code>RACCommand</code> &#x7684;&#x521D;&#x59CB;&#x5316;&#x65B9;&#x6CD5;&#x5C31;&#x590D;&#x6742;&#x591A;&#x4E86;&#xFF0C;&#x867D;&#x7136;&#x6211;&#x4EEC;&#x5728;&#x65B9;&#x6CD5;&#x4E2D;&#x4F20;&#x5165;&#x4E86; <code>signalBlock</code>&#xFF0C;&#x4F46;&#x662F; <code>-initWithEnabled:signalBlock:</code> &#x65B9;&#x6CD5;&#x53EA;&#x662F;&#x5BF9;&#x8FD9;&#x4E2A; block &#x8FDB;&#x884C;&#x4E86;&#x7B80;&#x5355;&#x7684; <code>copy</code>&#xFF0C;&#x771F;&#x6B63;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A; block &#x7684;&#x8FD8;&#x662F;&#x4E0A;&#x4E00;&#x8282;&#x4E2D;&#x7684; <code>-execute:</code> &#x65B9;&#x6CD5;&#x4E2D;&#x3002;</p>
+<p>&#x7531;&#x4E8E; <code>RACCommand</code> &#x5728;&#x521D;&#x59CB;&#x5316;&#x65B9;&#x6CD5;&#x4E2D;&#x521D;&#x59CB;&#x5316;&#x4E86;&#x4E03;&#x4E2A;&#x9AD8;&#x9636;&#x4FE1;&#x53F7;&#xFF0C;&#x5B83;&#x7684;&#x5B9E;&#x73B0;&#x975E;&#x5E38;&#x590D;&#x6742;&#xFF1A;</p>
+<pre><code class="lang-objectivec">- (instancetype)initWithEnabled:(RACSignal *)enabledSignal signalBlock:(RACSignal&lt;<span class="hljs-keyword">id</span>&gt; * (^)(<span class="hljs-keyword">id</span> input))signalBlock {
+    <span class="hljs-keyword">self</span> = [<span class="hljs-keyword">super</span> init];
+
+    _addedExecutionSignalsSubject = [RACSubject new];
+    _signalBlock = [signalBlock <span class="hljs-keyword">copy</span>];
+
+    _executionSignals = ...;
+    _errors = ...;
+    RACSignal *immediateExecuting = ...;
+    _executing = ...;
+    RACSignal *moreExecutionsAllowed = ...;
+    _immediateEnabled =...;
+    _enabled = ...;
+
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">self</span>;
+}
+</code></pre>
+<p>&#x8FD9;&#x4E00;&#x5C0F;&#x8282;&#x5E76;&#x4E0D;&#x80FD;&#x5B8C;&#x5168;&#x4ECB;&#x7ECD;&#x5168;&#x90E8;&#x7684;&#x4E03;&#x4E2A;&#x4FE1;&#x53F7;&#x7684;&#x5B9E;&#x73B0;&#xFF0C;&#x53EA;&#x4F1A;&#x4ECB;&#x7ECD;&#x5176;&#x4E2D;&#x7684; <code>immediateExecuting</code> &#x548C; <code>moreExecutionsAllowed</code> &#x4E24;&#x4E2A;&#x4E34;&#x65F6;&#x4FE1;&#x53F7;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x4FE1;&#x53F7;&#x90FD;&#x4F1A;&#x5728;&#x4E0B;&#x4E00;&#x8282;&#x4E2D;&#x5206;&#x6790;&#x3002;</p>
+<h4 id="&#x8868;&#x793A;&#x5F53;&#x524D;&#x6709;&#x64CD;&#x4F5C;&#x6267;&#x884C;&#x7684;&#x4FE1;&#x53F7;">&#x8868;&#x793A;&#x5F53;&#x524D;&#x6709;&#x64CD;&#x4F5C;&#x6267;&#x884C;&#x7684;&#x4FE1;&#x53F7;</h4>
+<p>&#x9996;&#x5148;&#x662F; <code>immediateExecuting</code> &#x4FE1;&#x53F7;&#xFF1A;</p>
+<pre><code class="lang-objectivec">RACSignal *immediateExecuting = [[[[<span class="hljs-keyword">self</span>.addedExecutionSignalsSubject
+    flattenMap:^(RACSignal *signal) {
+        <span class="hljs-keyword">return</span> [[[signal
+            catchTo:[RACSignal empty]]
+            then:^{
+                <span class="hljs-keyword">return</span> [RACSignal <span class="hljs-keyword">return</span>:@<span class="hljs-number">-1</span>];
+            }]
+            startWith:@<span class="hljs-number">1</span>];
+    }]
+    scanWithStart:@<span class="hljs-number">0</span> reduce:^(<span class="hljs-built_in">NSNumber</span> *running, <span class="hljs-built_in">NSNumber</span> *next) {
+        <span class="hljs-keyword">return</span> @(running.integerValue + next.integerValue);
+    }]
+    map:^(<span class="hljs-built_in">NSNumber</span> *count) {
+        <span class="hljs-keyword">return</span> @(count.integerValue &gt; <span class="hljs-number">0</span>);
+    }]
+    startWith:@NO];
+</code></pre>
+<p><code>immediateExecuting</code> &#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x8868;&#x793A;&#x5F53;&#x524D;&#x662F;&#x5426;&#x6709;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x7684;&#x4FE1;&#x53F7;&#xFF0C;&#x5982;&#x679C;&#x8F93;&#x5165;&#x7684; <code>addedExecutionSignalsSubject</code> &#x7B49;&#x4EF7;&#x4E8E;&#x4EE5;&#x4E0B;&#x7684;&#x4FE1;&#x53F7;&#xFF1A;</p>
+<pre><code class="lang-objectivec">[RACSignal createSignal:^RACDisposable * _Nullable(<span class="hljs-keyword">id</span>&lt;RACSubscriber&gt;  _Nonnull subscriber) {
+    [subscriber sendNext:[RACSignal error:[<span class="hljs-built_in">NSError</span> errorWithDomain:<span class="hljs-string">@&quot;Error&quot;</span> code:<span class="hljs-number">1</span> userInfo:<span class="hljs-literal">nil</span>]]];
+    [subscriber sendNext:[RACSignal <span class="hljs-keyword">return</span>:@<span class="hljs-number">1</span>]];
+    [subscriber sendNext:[RACSignal createSignal:^RACDisposable * _Nullable(<span class="hljs-keyword">id</span>&lt;RACSubscriber&gt;  _Nonnull subscriber) {
+        [RACScheduler.mainThreadScheduler afterDelay:<span class="hljs-number">1</span>
+                                            schedule:^
+         {
+             [subscriber sendCompleted];
+         }];
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>;
+    }]];
+    [subscriber sendNext:[RACSignal <span class="hljs-keyword">return</span>:@<span class="hljs-number">3</span>]];
+    [subscriber sendCompleted];
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>;
+}];
+</code></pre>
+<blockquote>
+<p>&#x5728;&#x672C;&#x6587;&#x7684;&#x6240;&#x6709;&#x7AE0;&#x8282;&#x4E2D;&#x90FD;&#x4F1A;&#x5047;&#x8BBE;&#x8F93;&#x5165;&#x7684; <code>addedExecutionSignalsSubject</code> &#x4FE1;&#x53F7;&#x8DDF;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x8FD4;&#x56DE;&#x7684;&#x5B8C;&#x5168;&#x76F8;&#x540C;&#x3002;</p>
+</blockquote>
+<p>&#x90A3;&#x4E48;&#xFF0C;&#x6700;&#x540E;&#x751F;&#x6210;&#x7684;&#x9AD8;&#x9636;&#x4FE1;&#x53F7; <code>immediateExecuting</code> &#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="images/RACCommand/immediateExecuting-Signal-in-RACCommand.png" alt="immediateExecuting-Signal-in-RACCommand"></p>
+<ol>
+<li><code>-catchTo:</code> &#x5C06;&#x6240;&#x6709;&#x7684;&#x9519;&#x8BEF;&#x8F6C;&#x6362;&#x6210; <code>RACEmptySignal</code> &#x4FE1;&#x53F7;&#xFF1B;</li>
+<li><code>-flattenMap:</code> &#x5C06;&#x6BCF;&#x4E00;&#x4E2A;&#x4FE1;&#x53F7;&#x7684;&#x5F00;&#x59CB;&#x548C;&#x7ED3;&#x675F;&#x7684;&#x65F6;&#x95F4;&#x70B9;&#x8F6C;&#x6362;&#x6210; <code>1</code> &#x548C; <code>-1</code> &#x4E24;&#x4E2A;&#x4FE1;&#x53F7;&#xFF1B;</li>
+<li><code>-scanWithStart:reduce:</code> &#x4ECE; <code>0</code> &#x5F00;&#x59CB;&#x7D2F;&#x52A0;&#x539F;&#x6709;&#x7684;&#x4FE1;&#x53F7;&#xFF1B;</li>
+<li><code>-map:</code> &#x5C06;&#x5927;&#x4E8E; <code>1</code> &#x7684;&#x4FE1;&#x53F7;&#x8F6C;&#x6362;&#x4E3A; <code>@YES</code>&#xFF1B;</li>
+<li><code>-startWith:</code> &#x5728;&#x4FE1;&#x53F7;&#x5E8F;&#x5217;&#x6700;&#x524D;&#x9762;&#x52A0;&#x5165; <code>@NO</code>&#xFF0C;&#x8868;&#x793A;&#x5728;&#x6700;&#x5F00;&#x59CB;&#x65F6;&#xFF0C;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x52A8;&#x4F5C;&#x5728;&#x6267;&#x884C;&#x3002;</li>
+</ol>
+<p><code>immediateExecuting</code> &#x4F7F;&#x7528;&#x51E0;&#x4E2A; <code>RACSignal</code> &#x7684;&#x64CD;&#x4F5C;&#x6210;&#x529F;&#x5C06;&#x539F;&#x6709;&#x7684;&#x4FE1;&#x53F7;&#x6D41;&#x8F6C;&#x6362;&#x6210;&#x4E86;&#x8868;&#x793A;&#x662F;&#x5426;&#x6709;&#x64CD;&#x4F5C;&#x6267;&#x884C;&#x7684;&#x4FE1;&#x53F7;&#x6D41;&#x3002;</p>
+<h4 id="&#x8868;&#x793A;&#x662F;&#x5426;&#x5141;&#x8BB8;&#x66F4;&#x591A;&#x64CD;&#x4F5C;&#x6267;&#x884C;&#x7684;&#x4FE1;&#x53F7;">&#x8868;&#x793A;&#x662F;&#x5426;&#x5141;&#x8BB8;&#x66F4;&#x591A;&#x64CD;&#x4F5C;&#x6267;&#x884C;&#x7684;&#x4FE1;&#x53F7;</h4>
+<p>&#x76F8;&#x6BD4;&#x4E8E; <code>immediateExecuting</code> &#x4FE1;&#x53F7;&#x7684;&#x590D;&#x6742;&#xFF0C;<code>moreExecutionsAllowed</code> &#x5C31;&#x7B80;&#x5355;&#x591A;&#x4E86;&#xFF1A;</p>
+<pre><code class="lang-objectivec">RACSignal *moreExecutionsAllowed = [RACSignal
+    <span class="hljs-keyword">if</span>:[<span class="hljs-keyword">self</span>.allowsConcurrentExecutionSubject startWith:@NO]
+    then:[RACSignal <span class="hljs-keyword">return</span>:@YES]
+    <span class="hljs-keyword">else</span>:[immediateExecuting not]];
+</code></pre>
+<p>&#x56E0;&#x4E3A;&#x6587;&#x7AE0;&#x4E2D;&#x4E0D;&#x51C6;&#x5907;&#x4ECB;&#x7ECD;&#x4E0E;&#x5E76;&#x53D1;&#x6267;&#x884C;&#x6709;&#x5173;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x7684; <code>then</code> &#x8BED;&#x53E5;&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#xFF0C;&#x65E2;&#x7136; <code>RACCommand</code> &#x4E0D;&#x652F;&#x6301;&#x5E76;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x90A3;&#x4E48;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x5C31;&#x975E;&#x5E38;&#x597D;&#x7406;&#x89E3;&#x4E86;&#xFF0C;&#x5F53;&#x524D; <code>RACCommand</code> &#x80FD;&#x5426;&#x6267;&#x884C;&#x64CD;&#x4F5C;&#x5C31;&#x662F; <code>immediateExecuting</code> &#x53D6;&#x53CD;&#xFF1A;</p>
+<p><img src="images/RACCommand/MoreExecutionAllowed-Signal.png" alt="MoreExecutionAllowed-Signa"></p>
+<p>&#x5230;&#x8FD9;&#x91CC;&#x6240;&#x6709;&#x521D;&#x59CB;&#x5316;&#x65B9;&#x6CD5;&#x4E2D;&#x7684;&#x4E34;&#x65F6;&#x4FE1;&#x53F7;&#x5C31;&#x4ECB;&#x7ECD;&#x5B8C;&#x4E86;&#xFF0C;&#x5728;&#x4E0B;&#x4E00;&#x8282;&#x4E2D;&#x4F1A;&#x7EE7;&#x7EED;&#x4ECB;&#x7ECD;&#x521D;&#x59CB;&#x5316;&#x65B9;&#x6CD5;&#x4E2D;&#x7684;&#x5176;&#x5B83;&#x9AD8;&#x9636;&#x4FE1;&#x53F7;&#x3002;</p>
+<h2 id="raccommand-&#x63A5;&#x53E3;&#x4E2D;&#x7684;&#x9AD8;&#x9636;&#x4FE1;&#x53F7;">RACCommand &#x63A5;&#x53E3;&#x4E2D;&#x7684;&#x9AD8;&#x9636;&#x4FE1;&#x53F7;</h2>
+<p>&#x6BCF;&#x4E00;&#x4E2A; <code>RACCommand</code> &#x5BF9;&#x8C61;&#x4E2D;&#x90FD;&#x7BA1;&#x7406;&#x7740;&#x591A;&#x4E2A;&#x4FE1;&#x53F7;&#xFF0C;&#x5B83;&#x5728;&#x63A5;&#x53E3;&#x4E2D;&#x66B4;&#x9732;&#x51FA;&#x7684;&#x56DB;&#x4E2A;&#x4FE1;&#x53F7;&#x662F;&#x8FD9;&#x4E00;&#x8282;&#x5173;&#x6CE8;&#x7684;&#x91CD;&#x70B9;&#xFF1A;</p>
+<p><img src="images/RACCommand/RACCommand-Interface.png" alt="RACCommand-Interface"></p>
+<p>&#x8FD9;&#x4E00;&#x5C0F;&#x8282;&#x4F1A;&#x6309;&#x7167;&#x987A;&#x5E8F;&#x56FE;&#x4E2D;&#x4ECE;&#x4E0A;&#x5230;&#x4E0B;&#x7684;&#x987A;&#x5E8F;&#x4ECB;&#x7ECD; <code>RACCommand</code> &#x63A5;&#x53E3;&#x4E2D;&#x66B4;&#x9732;&#x51FA;&#x6765;&#x7684;&#x4FE1;&#x53F7;&#xFF0C;&#x540C;&#x65F6;&#x4F1A;&#x6D89;&#x53CA;&#x4E00;&#x4E9B;&#x4E3A;&#x4E86;&#x751F;&#x6210;&#x8FD9;&#x4E9B;&#x4FE1;&#x53F7;&#x7684;&#x4E2D;&#x95F4;&#x4EA7;&#x7269;&#x3002;</p>
+<h3 id="executionsignals">executionSignals</h3>
+<p><code>executionSignals</code> &#x662F; <code>RACCommand</code> &#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x4FE1;&#x53F7;&#xFF1B;&#x4ECE;&#x7C7B;&#x578B;&#x6765;&#x770B;&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x4E2A;<strong>&#x5305;&#x542B;&#x4FE1;&#x53F7;&#x7684;&#x4FE1;&#x53F7;</strong>&#xFF0C;&#x5728;&#x6BCF;&#x6B21;&#x6267;&#x884C; <code>-execute:</code> &#x65B9;&#x6CD5;&#x65F6;&#xFF0C;&#x6700;&#x7EC8;&#x90FD;&#x4F1A;&#x5411; <code>executionSignals</code> &#x4E2D;&#x4F20;&#x5165;&#x4E00;&#x4E2A;&#x6700;&#x65B0;&#x7684;&#x4FE1;&#x53F7;&#x3002;</p>
+<p>&#x867D;&#x7136;&#x5B83;&#x6700;&#x91CD;&#x8981;&#xFF0C;&#x4F46;&#x662F;<code>executionSignals</code> &#x662F;&#x8FD9;&#x4E2A;&#x51E0;&#x4E2A;&#x9AD8;&#x9636;&#x4FE1;&#x53F7;&#x4E2D;&#x5B9E;&#x73B0;&#x6700;&#x7B80;&#x5355;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-objectivec">_executionSignals = [[[<span class="hljs-keyword">self</span>.addedExecutionSignalsSubject
+    map:^(RACSignal *signal) {
+        <span class="hljs-keyword">return</span> [signal catchTo:[RACSignal empty]];
+    }]
+    deliverOn:RACScheduler.mainThreadScheduler]
+    setNameWithFormat:<span class="hljs-string">@&quot;%@ -executionSignals&quot;</span>, <span class="hljs-keyword">self</span>];
+</code></pre>
+<p>&#x5B83;&#x53EA;&#x662F;&#x5C06;&#x4FE1;&#x53F7;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x7684;&#x9519;&#x8BEF; <code>NSError</code> &#x8F6C;&#x6362;&#x6210;&#x4E86; <code>RACEmptySignal</code> &#x5BF9;&#x8C61;&#xFF0C;&#x5E76;&#x6D3E;&#x53D1;&#x5230;&#x4E3B;&#x7EBF;&#x7A0B;&#x4E0A;&#x3002;</p>
+<p><img src="images/RACCommand/Execution-Signals.png" alt="Execution-Signals"></p>
+<p>&#x5982;&#x679C;&#x4F60;&#x53EA;&#x8BA2;&#x9605;&#x4E86; <code>executionSignals</code>&#xFF0C;&#x90A3;&#x4E48;&#x5176;&#x5B9E;&#x4F60;&#x4E0D;&#x4F1A;&#x6536;&#x5230;&#x4EFB;&#x4F55;&#x7684;&#x9519;&#x8BEF;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x9519;&#x8BEF;&#x90FD;&#x4F1A;&#x4EE5; <code>-sendNext:</code> &#x7684;&#x5F62;&#x5F0F;&#x88AB;&#x53D1;&#x9001;&#x5230; <code>errors</code> &#x4FE1;&#x53F7;&#x4E2D;&#xFF0C;&#x8FD9;&#x4F1A;&#x5728;&#x540E;&#x9762;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#x3002;</p>
+<h3 id="executing">executing</h3>
+<p><code>executing</code> &#x662F;&#x4E00;&#x4E2A;&#x8868;&#x793A;&#x5F53;&#x524D;&#x662F;&#x5426;&#x6709;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x7684;&#x4FE1;&#x53F7;&#xFF0C;&#x8FD9;&#x4E2A;&#x4FE1;&#x53F7;&#x4F7F;&#x7528;&#x4E86;&#x5728;&#x4E0A;&#x4E00;&#x8282;&#x4E2D;&#x4ECB;&#x7ECD;&#x7684;&#x4E34;&#x65F6;&#x53D8;&#x91CF;&#x4F5C;&#x4E3A;&#x6570;&#x636E;&#x6E90;&#xFF1A;</p>
+<pre><code class="lang-objectivec">_executing = [[[[[immediateExecuting
+    deliverOn:RACScheduler.mainThreadScheduler]
+    startWith:@NO]
+    distinctUntilChanged]
+    replayLast]
+    setNameWithFormat:<span class="hljs-string">@&quot;%@ -executing&quot;</span>, <span class="hljs-keyword">self</span>];
+</code></pre>
+<p>&#x8FD9;&#x91CC;&#x5BF9; <code>immediateExecuting</code> &#x7684;&#x53D8;&#x6362;&#x8FD8;&#x662F;&#x975E;&#x5E38;&#x5BB9;&#x6613;&#x7406;&#x89E3;&#x7684;&#xFF1A;</p>
+<p><img src="images/RACCommand/Executing-Signal.png" alt="Executing-Signa"></p>
+<p>&#x6700;&#x540E;&#x7684; <code>replayLast</code> &#x65B9;&#x6CD5;&#x5C06;&#x539F;&#x6709;&#x7684;&#x4FE1;&#x53F7;&#x53D8;&#x6210;&#x4E86;&#x5BB9;&#x91CF;&#x4E3A; <code>1</code> &#x7684; <code>RACReplaySubject</code> &#x5BF9;&#x8C61;&#xFF0C;&#x8FD9;&#x6837;&#x5728;&#x6BCF;&#x6B21;&#x6709;&#x8BA2;&#x9605;&#x8005;&#x8BA2;&#x9605; <code>executing</code> &#x4FE1;&#x53F7;&#x65F6;&#xFF0C;&#x90FD;&#x53EA;&#x4F1A;&#x53D1;&#x9001;&#x6700;&#x65B0;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x56E0;&#x4E3A;&#x8BA2;&#x9605;&#x8005;&#x5E76;&#x4E0D;&#x5173;&#x5FC3;&#x8FC7;&#x53BB;&#x7684; <code>executing</code> &#x7684;&#x503C;&#x3002;</p>
+<h3 id="enabled">enabled</h3>
+<p><code>enabled</code> &#x4FE1;&#x53F7;&#x6D41;&#x8868;&#x793A;&#x5F53;&#x524D;&#x7684;&#x547D;&#x4EE4;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x518D;&#x6B21;&#x88AB;&#x6267;&#x884C;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; <code>-execute:</code> &#x65B9;&#x6CD5;&#x80FD;&#x5426;&#x53EF;&#x4EE5;&#x6210;&#x529F;&#x6267;&#x884C;&#x65B0;&#x7684;&#x4EFB;&#x52A1;&#xFF1B;&#x8BE5;&#x4FE1;&#x53F7;&#x6D41;&#x4F9D;&#x8D56;&#x4E8E;&#x53E6;&#x4E00;&#x4E2A;&#x79C1;&#x6709;&#x4FE1;&#x53F7; <code>immediateEnabled</code>&#xFF1A;</p>
+<pre><code class="lang-objectivec">RACSignal *enabledSignal = [RACSignal <span class="hljs-keyword">return</span>:@YES];
+
+_immediateEnabled = [[[[RACSignal
+    combineLatest:@[ enabledSignal, moreExecutionsAllowed ]]
+    and]
+    takeUntil:<span class="hljs-keyword">self</span>.rac_willDeallocSignal]
+    replayLast];
+</code></pre>
+<p>&#x867D;&#x7136;&#x8FD9;&#x4E2A;&#x4FE1;&#x53F7;&#x7684;&#x5B9E;&#x73B0;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x4E0D;&#x8FC7;&#x5B83;&#x540C;&#x65F6;&#x4E0E;&#x4E09;&#x4E2A;&#x4FE1;&#x53F7;&#x6709;&#x5173;&#xFF0C;<code>enabledSignal</code>&#x3001;<code>moreExecutionsAllowed</code> &#x4EE5;&#x53CA; <code>rac_willDeallocSignal</code>&#xFF1A;</p>
+<p><img src="images/RACCommand/Immediate-Enabled-Signal.png" alt="Immediate-Enabled-Signa"></p>
+<p>&#x867D;&#x7136;&#x56FE;&#x4E2D;&#x6CA1;&#x6709;&#x4F53;&#x73B0;&#x51FA;&#x65B9;&#x6CD5; <code>-takeUntil:self.rac_willDeallocSignal</code> &#x7684;&#x6267;&#x884C;&#xFF0C;&#x4E0D;&#x8FC7;&#x4F60;&#x9700;&#x8981;&#x77E5;&#x9053;&#xFF0C;&#x8FD9;&#x4E2A;&#x4FE1;&#x53F7;&#x5728;&#x5F53;&#x524D; <code>RACCommand</code> &#x6267;&#x884C; <code>dealloc</code> &#x4E4B;&#x540E;&#x5C31;&#x4E0D;&#x4F1A;&#x518D;&#x53D1;&#x51FA;&#x4EFB;&#x4F55;&#x6D88;&#x606F;&#x4E86;&#x3002;</p>
+<p>&#x800C; <code>enabled</code> &#x4FE1;&#x53F7;&#x5176;&#x5B9E;&#x4E0E; <code>immediateEnabled</code> &#x76F8;&#x5DEE;&#x65E0;&#x51E0;&#xFF1A;</p>
+<pre><code class="lang-objectivec">_enabled = [[[[[<span class="hljs-keyword">self</span>.immediateEnabled
+    take:<span class="hljs-number">1</span>]
+    concat:[[<span class="hljs-keyword">self</span>.immediateEnabled skip:<span class="hljs-number">1</span>] deliverOn:RACScheduler.mainThreadScheduler]]
+    distinctUntilChanged]
+    replayLast]
+    setNameWithFormat:<span class="hljs-string">@&quot;%@ -enabled&quot;</span>, <span class="hljs-keyword">self</span>];
+</code></pre>
+<p>&#x4ECE;&#x540D;&#x5B57;&#x4F60;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x6765;&#xFF0C;<code>immediateEnabled</code> &#x5728;&#x6BCF;&#x6B21;&#x539F;&#x4FE1;&#x53F7;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x65F6;&#x90FD;&#x4F1A;&#x91CD;&#x65B0;&#x8BA1;&#x7B97;&#xFF0C;&#x800C; <code>enabled</code> &#x8C03;&#x7528;&#x4E86; <code>-distinctUntilChanged</code> &#x65B9;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x8FDE;&#x7EED;&#x51E0;&#x6B21;&#x503C;&#x76F8;&#x540C;&#x5C31;&#x4E0D;&#x4F1A;&#x518D;&#x6B21;&#x53D1;&#x9001;&#x4EFB;&#x4F55;&#x6D88;&#x606F;&#x3002;</p>
+<p>&#x9664;&#x4E86;&#x8C03;&#x7528; <code>-distinctUntilChanged</code> &#x7684;&#x533A;&#x522B;&#x4E4B;&#x5916;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x770B;&#x5230; <code>enabled</code> &#x4FE1;&#x53F7;&#x5728;&#x6700;&#x5F00;&#x59CB;&#x8C03;&#x7528;&#x4E86; <code>-take:</code>&#x548C; <code>-concat:</code> &#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-objectivec">[[<span class="hljs-keyword">self</span>.immediateEnabled
+        take:<span class="hljs-number">1</span>]
+        concat:[[<span class="hljs-keyword">self</span>.immediateEnabled skip:<span class="hljs-number">1</span>] deliverOn:RACScheduler.mainThreadScheduler]]
+</code></pre>
+<p>&#x867D;&#x7136;&#x5E8F;&#x5217;&#x5E76;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;<code>enabled</code> &#x4FE1;&#x53F7;&#x6D41;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x503C;&#x4F1A;&#x5728;&#x8BA2;&#x9605;&#x7EBF;&#x7A0B;&#x4E0A;&#x5230;&#x8FBE;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x6240;&#x6709;&#x7684;&#x503C;&#x90FD;&#x4F1A;&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x4E0A;&#x6D3E;&#x53D1;&#xFF1B;&#x5982;&#x679C;&#x4F60;&#x77E5;&#x9053;&#xFF0C;&#x5728;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x90FD;&#x4F1A;&#x4F7F;&#x7528; <code>enabled</code> &#x4FE1;&#x53F7;&#x6765;&#x63A7;&#x5236; UI &#x7684;&#x6539;&#x53D8;&#xFF08;&#x4F8B;&#x5982; <code>UIButton</code>&#xFF09;&#xFF0C;&#x76F8;&#x4FE1;&#x4F60;&#x5C31;&#x4F1A;&#x660E;&#x767D;&#x8FD9;&#x4E48;&#x505A;&#x7684;&#x7406;&#x7531;&#x4E86;&#x3002;</p>
+<h3 id="errors">errors</h3>
+<p>&#x9519;&#x8BEF;&#x4FE1;&#x53F7;&#x662F; <code>RACCommand</code> &#x4E2D;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x7684;&#x4FE1;&#x53F7;&#xFF1B;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1; <code>RACCommand</code> &#x5BF9;&#x6B64;&#x6267;&#x884C; <code>-execute:</code> &#x65B9;&#x6CD5;&#x4E5F;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x8FD0;&#x884C;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x80FD;&#x5C06;&#x6240;&#x6709;&#x7684;&#x9519;&#x8BEF;&#x4EE5;&#x5176;&#x5B83;&#x7684;&#x5F62;&#x5F0F;&#x53D1;&#x9001;&#x5230; <code>errors</code> &#x4FE1;&#x53F7;&#x4E2D;&#xFF0C;&#x9632;&#x6B62;&#x5411; <code>executionSignals</code> &#x53D1;&#x9001;&#x9519;&#x8BEF;&#x4FE1;&#x53F7;&#x540E;&#xFF0C;<code>executionSignals</code> &#x4FE1;&#x53F7;&#x5C31;&#x4F1A;&#x4E2D;&#x6B62;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x7684;&#x65B9;&#x5F0F;&#x521B;&#x5EFA; <code>errors</code> &#x4FE1;&#x53F7;&#xFF1A;</p>
+<pre><code class="lang-objectivec">RACMulticastConnection *errorsConnection = [[[<span class="hljs-keyword">self</span>.addedExecutionSignalsSubject
+    flattenMap:^(RACSignal *signal) {
+        <span class="hljs-keyword">return</span> [[signal
+            ignoreValues]
+            catch:^(<span class="hljs-built_in">NSError</span> *error) {
+                <span class="hljs-keyword">return</span> [RACSignal <span class="hljs-keyword">return</span>:error];
+            }];
+    }]
+    deliverOn:RACScheduler.mainThreadScheduler]
+    publish];
+
+_errors = [errorsConnection.signal setNameWithFormat:<span class="hljs-string">@&quot;%@ -errors&quot;</span>, <span class="hljs-keyword">self</span>];
+[errorsConnection connect];
+</code></pre>
+<p>&#x4FE1;&#x53F7;&#x7684;&#x521B;&#x5EFA;&#x8FC7;&#x7A0B;&#x662F;&#x628A;&#x6240;&#x6709;&#x7684;&#x9519;&#x8BEF;&#x6D88;&#x606F;&#x91CD;&#x65B0;&#x6253;&#x5305;&#x6210; <code>RACErrorSignal</code> &#x5E76;&#x5728;&#x4E3B;&#x7EBF;&#x7A0B;&#x4E0A;&#x8FDB;&#x884C;&#x6D3E;&#x53D1;&#xFF1A;</p>
+<p><img src="images/RACCommand/Errors-Signals.png" alt="Errors-Signals"></p>
+<p>&#x4F7F;&#x7528;&#x8005;&#x53EA;&#x9700;&#x8981;&#x8C03;&#x7528; <code>-subscribeNext:</code> &#x5C31;&#x53EF;&#x4EE5;&#x4ECE;&#x8FD9;&#x4E2A;&#x4FE1;&#x53F7;&#x4E2D;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x53D1;&#x751F;&#x7684;&#x9519;&#x8BEF;&#x3002;</p>
+<h2 id="raccommand-&#x7684;&#x4F7F;&#x7528;">RACCommand &#x7684;&#x4F7F;&#x7528;</h2>
+<p><code>RACCommand</code> &#x975E;&#x5E38;&#x9002;&#x5408;&#x5C01;&#x88C5;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5C01;&#x88C5;&#x4E00;&#x4E2A;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#xFF1A;</p>
+<pre><code class="lang-objectivec">RACCommand *command = [[RACCommand alloc] initWithSignalBlock:^RACSignal * _Nonnull(<span class="hljs-keyword">id</span>  _Nullable input) {
+    <span class="hljs-keyword">return</span> [RACSignal createSignal:^RACDisposable * _Nullable(<span class="hljs-keyword">id</span>&lt;RACSubscriber&gt;  _Nonnull subscriber) {
+        <span class="hljs-built_in">NSURL</span> *url = [<span class="hljs-built_in">NSURL</span> URLWithString:<span class="hljs-string">@&quot;http://localhost:3000&quot;</span>];
+        AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:url];
+        <span class="hljs-built_in">NSString</span> *URLString = [<span class="hljs-built_in">NSString</span> stringWithFormat:<span class="hljs-string">@&quot;/api/products/%@&quot;</span>, input ?: @<span class="hljs-number">1</span>];
+        <span class="hljs-built_in">NSURLSessionDataTask</span> *task = [manager GET:URLString parameters:<span class="hljs-literal">nil</span> progress:<span class="hljs-literal">nil</span>
+             success:^(<span class="hljs-built_in">NSURLSessionDataTask</span> * _Nonnull task, <span class="hljs-keyword">id</span> _Nullable responseObject) {
+                 [subscriber sendNext:responseObject];
+                 [subscriber sendCompleted];
+             } failure:^(<span class="hljs-built_in">NSURLSessionDataTask</span> * _Nullable task, <span class="hljs-built_in">NSError</span> * _Nonnull error) {
+                 [subscriber sendError:error];
+             }];
+        <span class="hljs-keyword">return</span> [RACDisposable disposableWithBlock:^{
+            [task cancel];
+        }];
+    }];
+}];
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684; <code>RACCommand</code> &#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; <code>-execute:</code> &#x65B9;&#x6CD5;&#x6267;&#x884C;&#xFF0C;&#x540C;&#x65F6;&#xFF0C;&#x8BA2;&#x9605; <code>executionSignals</code> &#x4EE5;&#x53CA; <code>errors</code> &#x6765;&#x83B7;&#x53D6;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<pre><code class="lang-objectivec">[[command.executionSignals switchToLatest] subscribeNext:^(<span class="hljs-keyword">id</span>  _Nullable x) {
+    <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@&quot;%@&quot;</span>, x);
+}];
+[command.errors subscribeNext:^(<span class="hljs-built_in">NSError</span> * _Nullable x) {
+    <span class="hljs-built_in">NSLog</span>(<span class="hljs-string">@&quot;%@&quot;</span>, x);
+}];
+[command execute:@<span class="hljs-number">1</span>];
+</code></pre>
+<p>&#x5411;&#x65B9;&#x6CD5; <code>-execute:</code> &#x4E2D;&#x4F20;&#x5165;&#x4E86; <code>@1</code> &#x5BF9;&#x8C61;&#xFF0C;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x4E2D;&#x83B7;&#x53D6;&#x4E86; <code>id = 1</code> &#x7684;&#x5546;&#x54C1;&#x5BF9;&#x8C61;&#xFF1B;&#x5F53;&#x7136;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x4F20;&#x5165;&#x4E0D;&#x540C;&#x7684; <code>id</code> &#x6765;&#x83B7;&#x53D6;&#x4E0D;&#x540C;&#x7684;&#x6A21;&#x578B;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;&#x4EE5;&#x53CA; JSON &#x8F6C;&#x6362;&#x6A21;&#x578B;&#x7684;&#x903B;&#x8F91;&#x90FD;&#x53EF;&#x4EE5;&#x5C01;&#x88C5;&#x5230;&#x8FD9;&#x4E2A; <code>RACCommand</code> &#x7684; block &#x4E2D;&#xFF0C;&#x5916;&#x754C;&#x53EA;&#x662F;&#x4F20;&#x5165;&#x4E00;&#x4E2A; <code>id</code>&#xFF0C;&#x6700;&#x540E;&#x5C31;&#x4ECE; <code>executionSignals</code> &#x4FE1;&#x53F7;&#x4E2D;&#x83B7;&#x53D6;&#x4E86;&#x5F00;&#x7BB1;&#x5373;&#x7528;&#x7684;&#x5BF9;&#x8C61;&#x3002;</p>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<p>&#x4F7F;&#x7528; <code>RACCommand</code> &#x80FD;&#x591F;&#x4F18;&#x96C5;&#x5730;&#x5C06;&#x5305;&#x542B;&#x526F;&#x4F5C;&#x7528;&#x7684;&#x64CD;&#x4F5C;&#x548C;&#x4E0E;&#x526F;&#x4F5C;&#x7528;&#x65E0;&#x5173;&#x7684;&#x64CD;&#x4F5C;&#x5206;&#x9694;&#x8D77;&#x6765;&#xFF1B;&#x6574;&#x4E2A; <code>RACCommand</code> &#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;&#x9ED1;&#x7BB1;&#xFF0C;&#x4ECE; <code>-execute:</code> &#x65B9;&#x6CD5;&#x4E2D;&#x83B7;&#x5F97;&#x8F93;&#x5165;&#xFF0C;&#x6700;&#x540E;&#x4EE5;&#x5411;&#x4FE1;&#x53F7;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5411;&#x8BA2;&#x9605;&#x8005;&#x63A8;&#x9001;&#x7ED3;&#x679C;&#x3002;</p>
+<p><img src="images/RACCommand/RACCommand-Side-Effect.png" alt="RACCommand-Side-Effect"></p>
+<p>&#x8FD9;&#x79CD;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#x7684;&#x65B9;&#x5F0F;&#x5C31;&#x50CF;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x6839;&#x636E;&#x8F93;&#x5165;&#x7684;&#x4E0D;&#x540C;&#xFF0C;&#x6709;&#x7740;&#x4E0D;&#x540C;&#x7684;&#x8F93;&#x51FA;&#xFF0C;&#x975E;&#x5E38;&#x9002;&#x5408;&#x4E0E; UI&#x3001;&#x7F51;&#x7EDC;&#x64CD;&#x4F5C;&#x7684;&#x76F8;&#x5173;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x8FD9;&#x4E5F;&#x662F; <code>RACCommand</code> &#x7684;&#x8BBE;&#x8BA1;&#x7684;&#x4F18;&#x96C5;&#x4E4B;&#x5904;&#x3002;</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="http://codeblog.shape.dk/blog/2013/12/05/reactivecocoa-essentials-understanding-and-using-raccommand/" target="_blank">ReactiveCocoa Essentials: Understanding and Using RACCommand</a></li>
+<li><a href="https://halfrost.com/reactivecocoa_raccommand/" target="_blank">ReactiveCocoa &#x4E2D; RACCommand &#x5E95;&#x5C42;&#x5B9E;&#x73B0;&#x5206;&#x6790;</a></li>
+</ul>
+<blockquote>
+<p>Github Repo&#xFF1A;<a href="https://github.com/draveness/iOS-Source-Code-Analyze" target="_blank">iOS-Source-Code-Analyze</a></p>
+<p>Follow: <a href="https://github.com/Draveness" target="_blank">Draveness &#xB7; GitHub</a></p>
+<p>Source: <a href="http://draveness.me/raccommand" target="_blank">http://draveness.me/raccommand</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="RACChannel.html" class="navigation navigation-prev " aria-label="Previous page: RACChannel">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="RACDelegateProxy.html" class="navigation navigation-next " aria-label="Next page: RACDelegateProxy">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"RACCommand","level":"1.1.5.22.2","depth":4,"next":{"title":"RACDelegateProxy","level":"1.1.5.22.3","depth":4,"path":"Source-Code-Analysis/ReactiveObjC/RACDelegateProxy.md","ref":"Source-Code-Analysis/ReactiveObjC/RACDelegateProxy.md","articles":[]},"previous":{"title":"RACChannel","level":"1.1.5.22.1","depth":4,"path":"Source-Code-Analysis/ReactiveObjC/RACChannel.md","ref":"Source-Code-Analysis/ReactiveObjC/RACChannel.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Source-Code-Analysis/ReactiveObjC/RACCommand.md","mtime":"2018-05-22T14:51:32.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-23T11:29:51.711Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
