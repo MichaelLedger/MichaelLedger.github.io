@@ -43,6 +43,10 @@
 	<!-- https://github.com/showdownjs/showdown -->
 	<!-- <script src="../public/showdown/dist/showdown.min.js"></script> -->
 
+	<!-- Gitalk is a modern comment component based on Github Issue and Preact. https://gitalk.github.io -->
+	<link rel="stylesheet" href="../gitalk/gitalk.css">
+	<script src="../gitalk/gitalk.min.js"></script>
+
 	</head>
 	<body class="single">
 		
@@ -71,6 +75,8 @@
 			</div>
 		</div>
 	</div>
+
+	<div id="gitalk-container"></div>
 
 	<div class="fh5co-navigation">
 		<div class="fh5co-cover prev fh5co-cover-sm" id="previous-post-cover" style="background-image: url()">
@@ -176,6 +182,23 @@
             });
 		})
 	</script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			const gitalk = new Gitalk({
+				  clientID: 'GitHub Application Client ID',
+				  clientSecret: 'GitHub Application Client Secret',
+				  repo: 'GitHub repo',
+				  owner: 'GitHub repo owner',
+				  admin: ['GitHub repo owner and collaborators, only these guys can initialize github issues'],
+				  id: location.pathname,      // Ensure uniqueness and length less than 50
+				  distractionFreeMode: false,  // Facebook-like distraction free mode
+				  language: 'zh-CN'
+			})
+
+			gitalk.render('gitalk-container')
+		})
+	</script>>
 
 	<script type="text/javascript">
 			function fetchDetailData(divIdentifier, englishId) {
