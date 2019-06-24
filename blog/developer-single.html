@@ -46,6 +46,8 @@
 	<!-- Gitalk is a modern comment component based on Github Issue and Preact. https://gitalk.github.io -->
 	<link rel="stylesheet" href="../gitalk/gitalk.css">
 	<script src="../gitalk/gitalk.min.js"></script>
+	<!-- Gitalk md5加密 clientID & ClientSecret -->
+	<script src="../gitalk/md5.min.js "></script>
 
 	</head>
 	<body class="single">
@@ -190,7 +192,7 @@
 				  clientSecret: 'dfb9324cec7487fc0518094153b119a0644b2d69',
 				  repo: 'MichaelLedger.github.io',
 				  owner: 'MichaelLedger',
-				  admin: ['GitHub repo owner and collaborators, only these guys can initialize github issues'],
+				  admin: ['MichaelLedger'],
 				  id: location.pathname,      // Ensure uniqueness and length less than 50
 				  distractionFreeMode: false,  // Facebook-like distraction free mode
 				  language: 'zh-CN'
