@@ -164,7 +164,8 @@
 
                         var blog = {};
                         if (location.indexOf("korean-single.html") != -1) {
-                        	blog["location"] = location + "?id=" + id_value;
+                        	// Gitalk 回调地址会自动去除'?'，故改用'#'
+                        	blog["location"] = location + "#id=" + id_value;
                         } else {
                         	blog["location"] = location;
                         }
@@ -178,7 +179,11 @@
                         blog["content"] = markdownContent;
                         dataList.push(blog);                        
                     });
-                    var englishId = getQueryString("id");
+                    // var englishId = getQueryString("id");
+                    // Gitalk 回调地址会自动去除'?'，故改用'#'
+                    var englishId = getHashString("id");
+                    // console.log(englishId);
+                    // alert(englishId);
 					fetchDetailData("english-content", englishId);
                 }
             });
@@ -263,6 +268,14 @@
 			function getQueryString(name) {
 			  var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
 			  var r = window.location.search.substr(1).match(reg);
+			  if (r != null) {
+			    return unescape(r[2]);
+			  }
+			  return null;
+			}
+			function getHashString(name) {
+			  var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+			  var r = window.location.hash.substr(1).match(reg);
 			  if (r != null) {
 			    return unescape(r[2]);
 			  }
