@@ -204,6 +204,19 @@
 		})
 	</script>
 
+	<!-- Gitalk 回调地址会自动去除'?'，故改用'#' 而修改hash不会刷新页面，需要监听锚部分的修改事件-->
+	<script type="text/javascript">
+		document.getElementsByTagName("BODY")[0].onhashchange = function() { hashChangedFunction()};
+		function hashChangedFunction() {
+		    // alert("锚部分已修改！");
+		    // 手动滚动到顶部
+		    document.body.scrollTop = 0;
+		    // Gitalk 回调地址会自动去除'?'，故改用'#'
+            var englishId = getHashString("id");
+			fetchDetailData("english-content", englishId);
+		}
+	</script>
+
 	<script type="text/javascript">
 			function fetchDetailData(divIdentifier, englishId) {
 				if (!divIdentifier) return;
