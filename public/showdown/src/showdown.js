@@ -1,6 +1,7 @@
 /**
  * Created by Tivie on 06-01-2015.
  */
+
 // Private properties
 var showdown = {},
     parsers = {},
@@ -11,6 +12,7 @@ var showdown = {},
       github: {
         omitExtraWLInCodeBlocks:              true,
         simplifiedAutoLink:                   true,
+        excludeTrailingPunctuationFromURLs:   true,
         literalMidWordUnderscores:            true,
         strikethrough:                        true,
         tables:                               true,
@@ -34,6 +36,7 @@ var showdown = {},
         omitExtraWLInCodeBlocks:              true,
         parseImgDimensions:                   true,
         simplifiedAutoLink:                   true,
+        excludeTrailingPunctuationFromURLs:   true,
         literalMidWordUnderscores:            true,
         strikethrough:                        true,
         tables:                               true,
@@ -178,8 +181,6 @@ showdown.subParser = function (name, func) {
         throw Error('SubParser named ' + name + ' not registered!');
       }
     }
-  } else {
-    throw Error('showdown.subParser function first argument must be a string (the name of the subparser)');
   }
 };
 

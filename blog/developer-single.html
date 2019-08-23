@@ -146,6 +146,9 @@
 	<script src="../public/static/bejson/convert/markdown.min.js"></script>
 	<script src="../public/static/bejson/convert/to-markdown.js"></script>
 
+	<!-- Marked: https://github.com/markedjs/marked -->
+	<!-- <script src="../public/marked/marked.min.js"></script> -->
+
 	<script type="text/javascript">
 		var dataList = new Array();
 		$(document).ready(function() {
@@ -297,10 +300,6 @@
 			  return null;
 			}
 			function convertMarkdownToHtml(markdownStr){
-				// showdown
-			    // var converter = new showdown.Converter();
-			    // var html = converter.makeHtml(markdown);
-
 			    // console.log('before:\n'+ markdownStr);
 
 			    // 将XML中的/n解析为<br/>
@@ -308,9 +307,21 @@
 
 			    // bejson
 			    var html = markdown.toHTML(markdownStr);
+
+				// marked
+				// var html = marked(markdownStr);
+
+				// showdown
+			    // var converter = new showdown.Converter();
+			    // var html = converter.makeHtml(markdownStr);
+
 			    html = html.replace(/&lt;br\/&gt;/g, '<br/>');// html转码，换行符正确解析
 			    html = html.replace(/<br\/>/g, '<br\/><br\/>');// 添加一个换行，美化排版
 			    html = html.replace(/&amp;rsquo;/g, '\'');// &rsquo;正常解析为'
+
+				// jianshu math image
+				// let mathStr = "<img class=\"math-block\" src=\"https://math.jianshu.com/math?formula=f(x%2C%20y)%20%3D%20100%20*%20%5Clbrace%5B(x%20%2B%20y)%20*%203%5D%20-%2088%5Crbrace\" alt=\"f(x, y) = 100 * \lbrace[(x + y) * 3] - 88\rbrace\" mathimg=\"1\">";
+				// html = html.concat(mathStr);
 
 			    // console.log('after:\n' + html);
 			    

@@ -6,12 +6,6 @@ if (!showdown.hasOwnProperty('helper')) {
   showdown.helper = {};
 }
 
-if (typeof this.document === 'undefined' && typeof this.window === 'undefined') {
-  var jsdom = require('jsdom');
-  this.window = new jsdom.JSDOM('', {}).window; // jshint ignore:line
-}
-showdown.helper.document = this.window.document;
-
 /**
  * Check if var is string
  * @static
@@ -144,6 +138,21 @@ showdown.helper.escapeCharacters = function (text, charsToEscape, afterBackslash
   text = text.replace(regex, escapeCharactersCallback);
 
   return text;
+};
+
+/**
+ * Unescape HTML entities
+ * @param txt
+ * @returns {string}
+ */
+showdown.helper.unescapeHTMLEntities = function (txt) {
+  'use strict';
+
+  return txt
+    .replace(/&quot;/g, '"')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&');
 };
 
 var rgxFindMatchPos = function (str, left, right, flags) {
@@ -382,98 +391,6 @@ showdown.helper.padEnd = function padEnd (str, targetLength, padString) {
 };
 
 /**
- * Unescape HTML entities
- * @param txt
- * @returns {string}
- */
-showdown.helper.unescapeHTMLEntities = function (txt) {
-  'use strict';
-
-  return txt
-    .replace(/&quot;/g, '"')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&amp;/g, '&');
-};
-
-showdown.helper._hashHTMLSpan = function (html, globals) {
-  return '¨C' + (globals.gHtmlSpans.push(html) - 1) + 'C';
-};
-
-/**
- * Showdown's Event Object
- * @param {string} name Name of the event
- * @param {string} text Text
- * @param {{}} params optional. params of the event
- * @constructor
- */
-showdown.helper.Event = function (name, text, params) {
-  'use strict';
-
-  var regexp = params.regexp || null;
-  var matches = params.matches || {};
-  var options = params.options || {};
-  var converter = params.converter || null;
-  var globals = params.globals || {};
-
-  /**
-   * Get the name of the event
-   * @returns {string}
-   */
-  this.getName = function () {
-    return name;
-  };
-
-  this.getEventName = function () {
-    return name;
-  };
-
-  this._stopExecution = false;
-
-  this.parsedText = params.parsedText || null;
-
-  this.getRegexp = function () {
-    return regexp;
-  };
-
-  this.getOptions = function () {
-    return options;
-  };
-
-  this.getConverter = function () {
-    return converter;
-  };
-
-  this.getGlobals = function () {
-    return globals;
-  };
-
-  this.getCapturedText = function () {
-    return text;
-  };
-
-  this.getText = function () {
-    return text;
-  };
-
-  this.setText = function (newText) {
-    text = newText;
-  };
-
-  this.getMatches = function () {
-    return matches;
-  };
-
-  this.setMatches = function (newMatches) {
-    matches = newMatches;
-  };
-
-  this.preventDefault = function (bool) {
-    this._stopExecution = !bool;
-  };
-};
-
-/**
  * POLYFILLS
  */
 // use this instead of builtin is undefined for IE8 compatibility
@@ -499,8 +416,7 @@ if (typeof(console) === 'undefined') {
  * We declare some common regexes to improve performance
  */
 showdown.helper.regexes = {
-  asteriskDashTildeAndColon: /([*_:~])/g,
-  asteriskDashAndTilde:      /([*_~])/g
+  asteriskDashAndColon: /([*_:~])/g
 };
 
 /**
@@ -1682,6 +1598,6 @@ showdown.helper.emojis = {
   'zzz':'\ud83d\udca4',
 
   /* special emojis :P */
-  'octocat':  '<img width="20" height="20" align="absmiddle" src="https://assets-cdn.github.com/images/icons/emoji/octocat.png">',
-  'showdown': '<img width="20" height="20" align="absmiddle" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAS1BMVEX///8jJS0jJS0jJS0jJS0jJS0jJS0jJS0jJS0jJS0jJS0jJS0jJS0jJS0jJS0jJS0jJS3b1q3b1q3b1q3b1q3b1q3b1q3b1q3b1q0565CIAAAAGXRSTlMAQHCAYCCw/+DQwPCQUBAwoHCAEP+wwFBgS2fvBgAAAUZJREFUeAHs1cGy7BAUheFFsEDw/k97VTq3T6ge2EmdM+pvrP6Iwd74XV9Kb52xuMU4/uc1YNgZLFOeV8FGdhGrNk5SEgUyPxAEdj4LlMRDyhVAMVEa2M7TBSeVZAFPdqHgzSZJwPKgcLFLAooHDJo4EDCw4gAtBoJA5UFj4Ng5LOGLwVXZuoIlji/jeQHFk7+baHxrCjeUwB9+s88KndvlhcyBN5BSkYNQIVVb4pV+Npm7hhuKDs/uMP5KxT3WzSNNLIuuoDpMmuAVMruMSeDyQBi24DTr43LAY7ILA1QYaWkgfHzFthYYzg67SQsCbB8GhJUEGCtO9n0rSaCLxgJQjS/JSgMTg2eBDEHAJ+H350AsjYNYscrErgI2e/l+mdR967TCX/v6N0EhPECYCP0i+IAoYQOE8BogNhQMEMdrgAQWHaMAAGi5I5euoY9NAAAAAElFTkSuQmCC">'
+  'octocat':  '<img alt=":octocat:" height="20" width="20" align="absmiddle" src="https://assets-cdn.github.com/images/icons/emoji/octocat.png">',
+  'showdown': '<span style="font-family: \'Anonymous Pro\', monospace; text-decoration: underline; text-decoration-style: dashed; text-decoration-color: #3e8b8a;text-underline-position: under;">S</span>'
 };

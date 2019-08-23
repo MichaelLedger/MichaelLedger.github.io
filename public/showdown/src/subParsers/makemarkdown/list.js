@@ -27,5 +27,7 @@ showdown.subParser('makeMarkdown.list', function (node, globals, type) {
     ++listNum;
   }
 
+  // add comment at the end to prevent consecutive lists to be parsed as one
+  txt += '\n<!-- -->\n';
   return txt.trim();
 });

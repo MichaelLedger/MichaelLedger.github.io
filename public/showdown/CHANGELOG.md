@@ -1,3 +1,45 @@
+<a name="1.9.0"></a>
+# [1.9.0](https://github.com/showdownjs/showdown/compare/1.8.7...1.9.0) (2018-11-10)
+
+
+### Bug Fixes
+
+* **italicsAndBold:** fix issue with consecutive spans ([#608](https://github.com/showdownjs/showdown/issues/608)) ([5c0d67e](https://github.com/showdownjs/showdown/commit/5c0d67e)), closes [#544](https://github.com/showdownjs/showdown/issues/544)
+* **underline**: fix issue with consecutive spans ([81edc70](https://github.com/showdownjs/showdown/commit/81edc70))
+
+### Features
+
+* **converter.makeMarkdown:** [EXPERIMENTAL] add an HTML to MD converter ([e4b0e69](https://github.com/showdownjs/showdown/commit/e4b0e69)), closes [#388](https://github.com/showdownjs/showdown/issues/388) [#233](https://github.com/showdownjs/showdown/issues/233)
+
+
+
+<a name="1.8.7"></a>
+## [1.8.7](https://github.com/showdownjs/showdown/compare/1.8.6...1.8.7) (2018-10-16)
+
+
+### Bug Fixes
+
+* **emojis:** fix emoji excessive size ([4aca41c](https://github.com/showdownjs/showdown/commit/4aca41c))
+* **gfm-codeblocks:** 
+    * add support for spaces before language declaration ([24bf7b1](https://github.com/showdownjs/showdown/commit/24bf7b1)), closes [#569](https://github.com/showdownjs/showdown/issues/569)
+    * leading space no longer breaks gfm codeblocks ([828c32f](https://github.com/showdownjs/showdown/commit/828c32f)), closes [#523](https://github.com/showdownjs/showdown/issues/523)
+* **images:** fix js error when using image references ([980e702](https://github.com/showdownjs/showdown/commit/980e702)), closes [#585](https://github.com/showdownjs/showdown/issues/585)
+* **literalMidWordAsterisks:** now parses single characters enclosed by * correctly ([fe70e45](https://github.com/showdownjs/showdown/commit/fe70e45)), closes [#478](https://github.com/showdownjs/showdown/issues/478)
+* **mentions:** allow for usernames with dot, underscore and dash ([dfeb1e2](https://github.com/showdownjs/showdown/commit/dfeb1e2)), closes [#574](https://github.com/showdownjs/showdown/issues/574)
+* **nbsp:** fix replacing of nbsp with regular spaces ([8bc1f42](https://github.com/showdownjs/showdown/commit/8bc1f42))
+
+
+
+<a name="1.8.6"></a>
+## [1.8.6](https://github.com/showdownjs/showdown/compare/1.8.5...1.8.6) (2017-12-22)
+
+
+### Features
+
+* **splitAdjacentBlockquotes:** add option to split adjacent blockquote blocks ([da328f2](https://github.com/showdownjs/showdown/commit/da328f2)), closes [#477](https://github.com/showdownjs/showdown/issues/477)
+
+
+
 <a name="1.8.5"></a>
 # [1.8.5](https://github.com/showdownjs/showdown/compare/1.8.4...1.8.5) (2017-12-10)
 
@@ -52,7 +94,7 @@
 
 ### Bug Fixes
 
-* **CDNjs:** bump version to fix version mismatch with CDNjs ([#452](https://github.com/showdownjs/showdown/issues/452))
+* **CDNjs:** bump version to fix version missmatch with CDNjs ([#452](https://github.com/showdownjs/showdown/issues/452))
 
 
 <a name="1.8.0"></a>
@@ -178,7 +220,7 @@ list output may differ.
 
 ### Bug Fixes
 
-* **html-comments:** changed regex to prevent malformed long comment to freeze showdown ([3efcd10](https://github.com/showdownjs/showdown/commit/3efcd10)), closes [#439](https://github.com/showdownjs/showdown/issues/439)
+* **html-comments:** changed regex to precent malformed long comment to freeze showdown ([3efcd10](https://github.com/showdownjs/showdown/commit/3efcd10)), closes [#439](https://github.com/showdownjs/showdown/issues/439)
 
 
 
@@ -223,7 +265,7 @@ list output may differ.
 
 * **githubMentions:** githubMentions now works with openLinksInNewWindow options ([1194d88](https://github.com/showdownjs/showdown/commit/1194d88)), closes [#403](https://github.com/showdownjs/showdown/issues/403)
 * **lists:** fix multi paragraph lists with sublists ([a2259c0](https://github.com/showdownjs/showdown/commit/a2259c0)), closes [#397](https://github.com/showdownjs/showdown/issues/397)
-* **tablesHeaderId:** fix mismatch of option name ([51e4693](https://github.com/showdownjs/showdown/commit/51e4693)), closes [#412](https://github.com/showdownjs/showdown/issues/412)
+* **tablesHeaderId:** fix missmatch of option name ([51e4693](https://github.com/showdownjs/showdown/commit/51e4693)), closes [#412](https://github.com/showdownjs/showdown/issues/412)
 
 
 ### Features
@@ -303,7 +345,7 @@ Important HOTFIX
 * **italicsAndBold:** fix inconsistency in italicsAndBold parsing ([a4f05d4](https://github.com/showdownjs/showdown/commit/a4f05d4)), closes [#332](https://github.com/showdownjs/showdown/issues/332)
 * **literalMidWordUnderscores:** fix inconsistent behavior of emphasis and strong with literalMidWordUndescores ([0292ae0](https://github.com/showdownjs/showdown/commit/0292ae0)), closes [#333](https://github.com/showdownjs/showdown/issues/333)
 * **paragraphs:** fix empty lines generating empty paragraphs ([54bf744](https://github.com/showdownjs/showdown/commit/54bf744)), closes [#334](https://github.com/showdownjs/showdown/issues/334)
-* **strikethrough:** fix strikethrough being wrongly parsed inside codeSpans ([169cbe8](https://github.com/showdownjs/showdown/commit/169cbe8))
+* **strikethrough:** fix striketrough being wrongly parsed inside codeSpans ([169cbe8](https://github.com/showdownjs/showdown/commit/169cbe8))
 
 ### Features
 
@@ -318,7 +360,7 @@ Important HOTFIX
 ### Bug Fixes
 
 * **escapeSpecialCharsWithinTagAttributes:** add ~ and = to escaped chars ([bfcc0e4](https://github.com/showdownjs/showdown/commit/bfcc0e4))
-* **strikethrough:** allow escaping tilde char ([24d47d7](https://github.com/showdownjs/showdown/commit/24d47d7)), closes [#331](https://github.com/showdownjs/showdown/issues/331)
+* **strikethrough:** allow escapinging tilde char ([24d47d7](https://github.com/showdownjs/showdown/commit/24d47d7)), closes [#331](https://github.com/showdownjs/showdown/issues/331)
 
 ### Features
 
@@ -411,7 +453,7 @@ This release also improves performance a bit (around 8%)
 ### Bug Fixes
 
 * **listeners:** fix listeners typo ([f0d25b7](https://github.com/showdownjs/showdown/commit/f0d25b7)), closes [#290](https://github.com/showdownjs/showdown/issues/290)
-* **lists:** lines with multiple dashes being parsed as multilists ([10b3410](https://github.com/showdownjs/showdown/commit/10b3410)), closes [#312](https://github.com/showdownjs/showdown/issues/312)
+* **lists:** lines with mutiple dashes being parsed as multilists ([10b3410](https://github.com/showdownjs/showdown/commit/10b3410)), closes [#312](https://github.com/showdownjs/showdown/issues/312)
 * **nbsp:** nbsp are replaced with simple spaces ([6e90f7c](https://github.com/showdownjs/showdown/commit/6e90f7c))
 
 
@@ -454,7 +496,7 @@ This release also improves performance a bit (around 8%)
         * three
     ```
     
-    Before (output):
+    Before (ouput):
     ```html
     <ul>
       <li>one

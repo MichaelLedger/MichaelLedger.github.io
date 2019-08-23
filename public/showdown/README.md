@@ -25,8 +25,7 @@ If you like our work and find our library useful, please donate through [patreon
 
 ## License
 
-ShowdownJS v 2.0 is release under the MIT version.
-Previous versions are release under GPL 2.0
+Showdown 1.x is released under GPL 2.0
 
 ## Who uses Showdown (or a fork)
 
@@ -88,7 +87,7 @@ The converter itself might even work in things that aren't web browsers, like Ac
 
 ## Node compatibility
 
-Showdown has been tested with node 0.8 and 0.10. However, it should work with previous versions, such as node 0.6.
+Showdown has been tested with node 6, 8 and 10. However, it should work with previous versions, such as node 0.12.
 
 
 ## Legacy version
@@ -107,6 +106,7 @@ Check our [wiki pages][wiki] for examples and a more in-depth documentation.
 
 ### Node
 
+**Markdown to HTML**
 ```js
 var showdown  = require('showdown'),
     converter = new showdown.Converter(),
@@ -114,12 +114,21 @@ var showdown  = require('showdown'),
     html      = converter.makeHtml(text);
 ```
 
+**HTML to Markdown**
+```js
+var showdown  = require('showdown'),
+    converter = new showdown.Converter(),
+    html      = '<a href="https://patreon.com/showdownjs">Please Support us!</a>',
+    md        = converter.makeMarkdown(text);
+```
+
+
 ### Browser
 
 ```js
 var converter = new showdown.Converter(),
-    text      = '# hello, markdown!',
-    html      = converter.makeHtml(text);
+    html      = converter.makeHtml('# hello, markdown!'),
+    md        = converter.makeMd('<a href="https://patreon.com/showdownjs">Please Support us!</a>');
 ```
 
 ### Output 
@@ -128,6 +137,10 @@ Both examples should output...
 
 ```html
     <h1 id="hellomarkdown">hello, markdown!</h1>
+```
+
+```md
+[Please Support us!](https://patreon.com/showdownjs)
 ```
 
 ## Options
@@ -228,6 +241,14 @@ var defaultOptions = showdown.getDefaultOptions();
  * **rawHeaderId**: (boolean) [default false] Remove only spaces, ' and " from generated header ids (including prefixes),
     replacing them with dashes (-). WARNING: This might result in malformed ids **(since v1.7.3)**
  
+ * **parseImgDimensions**: (boolean) [default false] Enable support for setting image dimensions from within markdown syntax.
+   Examples:
+   ```
+   ![foo](foo.jpg =100x80)     simple, assumes units are in px
+   ![bar](bar.jpg =100x*)      sets the height to "auto"
+   ![baz](baz.jpg =80%x5em)  Image with width of 80% and height of 5em
+   ```
+ 
  * **headerLevelStart**: (integer) [default 1] Set the header starting level. For instance, setting this to 3 means that
 
     ```md
@@ -238,14 +259,6 @@ var defaultOptions = showdown.getDefaultOptions();
     ```html
     <h3>foo</h3>
     ```
-
- * **parseImgDimensions**: (boolean) [default false] Enable support for setting image dimensions from within markdown syntax.
-   Examples:
-   ```
-   ![foo](foo.jpg =100x80)     simple, assumes units are in px
-   ![bar](bar.jpg =100x*)      sets the height to "auto"
-   ![baz](baz.jpg =80%x5em)  Image with width of 80% and height of 5em
-   ```
 
  * **simplifiedAutoLink**: (boolean) [default false] Turning this option on will enable automatic linking to urls.
    This means that:
@@ -258,8 +271,16 @@ var defaultOptions = showdown.getDefaultOptions();
    <p>some text <a href="www.google.com">www.google.com</a>
    ```
  
- * ~~**excludeTrailingPunctuationFromURLs**: (boolean) [default false] This option excludes trailing punctuation from autolinking urls.
-   Punctuation excluded: `. !  ? ( )`. Only applies if **simplifiedAutoLink** option is set to `true`.~~
+ * **excludeTrailingPunctuationFromURLs**: (boolean) [default false] This option excludes trailing punctuation from autolinking urls.
+   Punctuation excluded: `. !  ? ( )`. Only applies if **simplifiedAutoLink** option is set to `true`.
+   
+   ```md
+   check this link www.google.com!
+   ```
+   will be parsed as
+   ```html
+   <p>check this link <a href="www.google.com">www.google.com</a>!</p>
+   ```
    
  * **literalMidWordUnderscores**: (boolean) [default false] Turning this on will stop showdown from interpreting
    underscores in the middle of words as `<em>` and `<strong>` and instead treat them as literal underscores.
@@ -274,8 +295,18 @@ var defaultOptions = showdown.getDefaultOptions();
    <p>some text with__underscores__in middle</p>
    ```
 
- * ~~**literalMidWordAsterisks**: (boolean) [default false] Turning this on will stop showdown from interpreting asterisks
-   in the middle of words as `<em>` and `<strong>` and instead treat them as literal asterisks.~~
+ * **literalMidWordAsterisks**: (boolean) [default false] Turning this on will stop showdown from interpreting asterisks
+   in the middle of words as `<em>` and `<strong>` and instead treat them as literal asterisks.
+
+   Example:
+
+   ```md
+   some text with**underscores**in middle
+   ```
+   will be parsed as
+   ```html
+   <p>some text with**underscores**in middle</p>
+   ```
    
  * **strikethrough**: (boolean) [default false] Enable support for strikethrough syntax.
    `~~strikethrough~~` as `<del>strikethrough</del>`
@@ -310,7 +341,7 @@ var defaultOptions = showdown.getDefaultOptions();
    by 4 spaces for them to be nested, effectively reverting to the old behavior where 2 or 3 spaces were enough.
    **(since v1.5.0)**
  
- * **simpleLineBreaks**: (boolean) [default false] Parses line breaks as <br>, without
+ * **simpleLineBreaks**: (boolean) [default false] Parses line breaks as <br> like GitHub does, without
    needing 2 spaces at the end of the line **(since v1.5.1)**
  
    ```md
@@ -419,11 +450,12 @@ You can also find a boilerplate, to create your own extensions in [this reposito
 
 ### Client-side Extension Usage
 
-```js
-<script src="showdown.js" />
-<script src="twitter-extension.js" />
-
+```html
+<script src="showdown.js"></script>
+<script src="twitter-extension.js"></script>
+<script>
 var converter = new showdown.Converter({ extensions: ['twitter'] });
+</script>
 ```
 
 ### Server-side Extension Usage

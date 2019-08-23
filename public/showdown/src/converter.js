@@ -197,7 +197,7 @@ showdown.Converter = function (converterOptions) {
     if (typeof callback !== 'function') {
       throw Error('Invalid argument in converter.listen() method: callback must be a function, but ' + typeof callback + ' given');
     }
-    name = name.toLowerCase();
+
     if (!listeners.hasOwnProperty(name)) {
       listeners[name] = [];
     }
@@ -211,33 +211,24 @@ showdown.Converter = function (converterOptions) {
   }
 
   /**
-   *
+   * Dispatch an event
+   * @private
    * @param {string} evtName Event name
    * @param {string} text Text
    * @param {{}} options Converter Options
-   * @param {{}} globals Converter globals
-   * @param {{}} pParams extra params for event
-   * @returns showdown.helper.Event
-   * @private
+   * @param {{}} globals
+   * @returns {string}
    */
-  this._dispatch = function dispatch (evtName, text, options, globals, pParams) {
-    evtName = evtName.toLowerCase();
-    var params = pParams || {};
-    params.converter = this;
-    params.text = text;
-    params.options = options;
-    params.globals = globals;
-    var event = new showdown.helper.Event(evtName, text, params);
-
+  this._dispatch = function dispatch (evtName, text, options, globals) {
     if (listeners.hasOwnProperty(evtName)) {
       for (var ei = 0; ei < listeners[evtName].length; ++ei) {
-        var nText = listeners[evtName][ei](event);
+        var nText = listeners[evtName][ei](evtName, text, this, options, globals);
         if (nText && typeof nText !== 'undefined') {
-          event.setText(nText);
+          text = nText;
         }
       }
     }
-    return event;
+    return text;
   };
 
   /**
@@ -252,7 +243,7 @@ showdown.Converter = function (converterOptions) {
   };
 
   /**
-   * Converts a markdown string into HTML string
+   * Converts a markdown string into HTML
    * @param {string} text
    * @returns {*}
    */
@@ -307,7 +298,7 @@ showdown.Converter = function (converterOptions) {
     text = '\n\n' + text + '\n\n';
 
     // detab
-    text = showdown.subParser('makehtml.detab')(text, options, globals);
+    text = showdown.subParser('detab')(text, options, globals);
 
     /**
      * Strip any lines consisting only of spaces and tabs.
@@ -319,19 +310,19 @@ showdown.Converter = function (converterOptions) {
 
     //run languageExtensions
     showdown.helper.forEach(langExtensions, function (ext) {
-      text = showdown.subParser('makehtml.runExtension')(ext, text, options, globals);
+      text = showdown.subParser('runExtension')(ext, text, options, globals);
     });
 
     // run the sub parsers
-    text = showdown.subParser('makehtml.metadata')(text, options, globals);
-    text = showdown.subParser('makehtml.hashPreCodeTags')(text, options, globals);
-    text = showdown.subParser('makehtml.githubCodeBlocks')(text, options, globals);
-    text = showdown.subParser('makehtml.hashHTMLBlocks')(text, options, globals);
-    text = showdown.subParser('makehtml.hashCodeTags')(text, options, globals);
-    text = showdown.subParser('makehtml.stripLinkDefinitions')(text, options, globals);
-    text = showdown.subParser('makehtml.blockGamut')(text, options, globals);
-    text = showdown.subParser('makehtml.unhashHTMLSpans')(text, options, globals);
-    text = showdown.subParser('makehtml.unescapeSpecialChars')(text, options, globals);
+    text = showdown.subParser('metadata')(text, options, globals);
+    text = showdown.subParser('hashPreCodeTags')(text, options, globals);
+    text = showdown.subParser('githubCodeBlocks')(text, options, globals);
+    text = showdown.subParser('hashHTMLBlocks')(text, options, globals);
+    text = showdown.subParser('hashCodeTags')(text, options, globals);
+    text = showdown.subParser('stripLinkDefinitions')(text, options, globals);
+    text = showdown.subParser('blockGamut')(text, options, globals);
+    text = showdown.subParser('unhashHTMLSpans')(text, options, globals);
+    text = showdown.subParser('unescapeSpecialChars')(text, options, globals);
 
     // attacklab: Restore dollar signs
     text = text.replace(/¨D/g, '$$');
@@ -340,11 +331,11 @@ showdown.Converter = function (converterOptions) {
     text = text.replace(/¨T/g, '¨');
 
     // render a complete html document instead of a partial if the option is enabled
-    text = showdown.subParser('makehtml.completeHTMLDocument')(text, options, globals);
+    text = showdown.subParser('completeHTMLDocument')(text, options, globals);
 
     // Run output modifiers
     showdown.helper.forEach(outputModifiers, function (ext) {
-      text = showdown.subParser('makehtml.runExtension')(ext, text, options, globals);
+      text = showdown.subParser('runExtension')(ext, text, options, globals);
     });
 
     // update metadata
@@ -355,9 +346,10 @@ showdown.Converter = function (converterOptions) {
   /**
    * Converts an HTML string into a markdown string
    * @param src
+   * @param [HTMLParser] A WHATWG DOM and HTML parser, such as JSDOM. If none is supplied, window.document will be used.
    * @returns {string}
    */
-  this.makeMarkdown = function (src) {
+  this.makeMarkdown = this.makeMd = function (src, HTMLParser) {
 
     // replace \r\n with \n
     src = src.replace(/\r\n/g, '\n');
@@ -368,7 +360,15 @@ showdown.Converter = function (converterOptions) {
     // ex: <em>this is</em> <strong>sparta</strong>
     src = src.replace(/>[ \t]+</, '>¨NBSP;<');
 
-    var doc = showdown.helper.document.createElement('div');
+    if (!HTMLParser) {
+      if (window && window.document) {
+        HTMLParser = window.document;
+      } else {
+        throw new Error('HTMLParser is undefined. If in a webworker or nodejs environment, you need to provide a WHATWG DOM and HTML such as JSDOM');
+      }
+    }
+
+    var doc = HTMLParser.createElement('div');
     doc.innerHTML = src;
 
     var globals = {
