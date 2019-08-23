@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>MichaelLedger's Blog - English</title>
+	<title>MichaelLedger's Blog - Academic</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="MichaelLedger's Blog" />
 	<meta name="keywords" content="MichaelLedger, Blog" />
@@ -68,12 +68,12 @@
 		<div id="fh5co-aside" style="background-image: url(images/mountain.jpg)">
 			<div class="overlay"></div>
 			<div class="featured">
-				<span>English</span>
-				<h2>Michael Ledger</a></h2>
+				<span>academic</span>
+				<h2>Michael Ledger</h2>
 			</div>
 			<nav role="navigation">
 				<ul>
-					<li><a href="index.html"><i class="icon-home"></i></a></li>
+					<li><a href="academic.html"><i class="icon-home"></i></a></li>
 				</ul>
 			</nav>
 		</div>
@@ -88,7 +88,7 @@
 
 			<footer>
 				<div>
-					Copyright &copy; 2018-2019 MTX Software Technology Co.,Ltd. All rights reserved. Designed by <a href="index.html" target="_blank">MichaelLedger</a>.
+					Copyright &copy; 2018-2019 MTX Software Technology Co.,Ltd. All rights reserved. Designed by <a href="academic.html" target="_blank">MichaelLedger</a>.
 					<br/>
 					For personal study only, please do not reprint, not for any commercial use.</p>
 				</div>
@@ -101,6 +101,8 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
+
+
 	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
@@ -123,7 +125,7 @@
 			$.ajax({
 				async: true, //是否异步
                 type:"get",
-                url:"english.xml",//这里通过设置url属性来获取xml
+                url:"academic.xml",//这里通过设置url属性来获取xml
                 dataType:"xml",
                 timeout:10000,      //设定超时，单位毫秒
                 cache:true,       //是否设置缓存
@@ -137,7 +139,7 @@
                         var cover = $(this).children("cover").text();  // 封面图片
 
                         var blog = {};
-                        if (location.indexOf("english.html") != -1) {
+                        if (location.indexOf("academic-single.html") != -1) {
                         	// Gitalk 回调地址会自动去除'?'，故改用'#'
                         	blog["location"] = location + "#id=" + id_value;
                         } else {

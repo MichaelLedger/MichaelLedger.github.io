@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--以下特殊字符不可使用：-->
+<!--&rsquo;全局替换为'-->
+<!--<br/>换行符全局替换为\n-->
+<blogs>
+    <blog location="academic-single.html">
+        <id>1</id>
+        <date>August 23, 2019</date>
+        <title>MathJax AsciiMath - 书写数学公式</title>
+        <description>
+            MathJax是一个JavaScript引擎，用来显示网络上的数学公式。它可以工作于所有流行的浏览器上。
+        </description>
+        <cover>academic-images/math-formula.jpg</cover>
+        <markdown-content>Visit [AsciiMath](http://asciimath.org) to see more\nMathJax is an open-source JavaScript display engine for LaTeX, MathML, and AsciiMath notation that works in all modern browsers. It was designed with the goal of consolidating the recent advances in web technologies into a single, definitive, math-on-the-web platform supporting the major browsers and operating systems. It requires no setup on the part of the user (no plugins to download or software to install), so the page author can write web documents that include mathematics and be confident that users will be able to view it naturally and easily. Simply include MathJax and some mathematics in a web page, and MathJax does the rest.
+            
+            Greek Letters:
+            ```alpha、beta、gamma(Gamma)、delta(Delta)、epsilon、varepsilon、zeta、eta、theta(Theta)、vartheta、iota、kappa、
+            lambda(Lambda)、mu、nu、xi(Xi)、pi(Pi)、rho、sigma(Sigma)、tau、upsilon、phi(Phi)、varphi、chi、psi(Psi)、omega(Omega)
+            ```
+            
+            Accents:
+            ```hat x、bar x、ul x、vec x、dot x、ddot x、overset(x)(=)、underset(x)(=)、ubrace(1+2)、obrace(1+2)、color(red)(x)、cancel(x)
+            ```
+            
+            Special Cases:
+            `sum_(i=1)^n i^3=((n(n+1))/2)^2` \n
+            `[[a_1,a_2,a_3],[b_1,b_2,b_3],[c_1,c_2,c_3]]` \n
+            `((a),(b))` \n
+            `{(2x,+,17y,=,23),(x,-,y,=,5):}` \n
+            `lim_(N->oo) sum_(i=0)^N` \n
+            `int_0^1 f(x)dx` \n
+            `f'(x) = dy/dx` \n
+            `ubrace(1+2+3+4)_("4 terms")` \n
+            `obrace(1+2+3+4)^("4 terms")`
+        </markdown-content>
+    </blog>
+</blogs>
