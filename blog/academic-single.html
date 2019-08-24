@@ -53,9 +53,10 @@
 	<link type="text/css" href="css/canvas-particle.css" rel="stylesheet" />
 
  	<!-- MathJax -->
+ 	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/latest.js?config=TeX-MML-AM_CHTML' async></script>
 	<script type="text/x-mathjax-config">
 	    MathJax.Hub.Config({
-           showProcessingMessages: false, //关闭js加载过程信息
+           showProcessingMessages: true, //关闭js加载过程信息
            extensions: ["tex2jax.js"],
            jax: ["input/TeX", "output/HTML-CSS"],
            tex2jax: {
@@ -66,13 +67,11 @@
            },
            "HTML-CSS": {
                availableFonts: ["STIX", "TeX"],//可选字体
-               showMathMenu: true //关闭右击菜单显示
-           },
-           isMathjaxConfig: true,
+               showMathMenu: false //关闭右击菜单显示
+           }
         }); 
     </script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/latest.js?config=TeX-MML-AM_CHTML' async></script>
-
+    
 	</head>
 	<body class="single">
 
@@ -104,7 +103,7 @@
 		</div>
 	</div>
 
-	<div id="gitalk-container"></div>
+	<!-- <div id="gitalk-container"></div> -->
 
 	<div class="fh5co-navigation">
 		<div class="fh5co-cover prev fh5co-cover-sm" id="previous-post-cover" style="background-image: url()">
@@ -371,7 +370,7 @@
 			  return null;
 			}
 			function convertMarkdownToHtml(markdownStr){
-			    // console.log('before:\n'+ markdownStr);
+			    console.log('before:\n'+ markdownStr);
 
 			    // 将XML中的/n解析为<br/>
 			    // \s表示space空格,^\s表示以空格开始，\s$表示以空格结束，前后添加空格，避免转码MathJax的特定语法，比如:'\ne'
@@ -394,11 +393,17 @@
 			    html = html.replace(/<br\/>/g, '<br\/><br\/>');// 添加一个换行，美化排版
 			    html = html.replace(/&amp;rsquo;/g, '\'');// &rsquo;正常解析为'
 
+			    html = html.replace(/#38/g, '\&'); // '&'替换为'#38'
+
+			    //Latex中的'<'替换为'\less';'>'替换为'\greater'
+			    html = html.replace(/\\less/g, '\<');
+			    html = html.replace(/\\greater/g, '\>');
+
 				// jianshu math image
 				// let mathStr = "<img class=\"math-block\" src=\"https://math.jianshu.com/math?formula=f(x%2C%20y)%20%3D%20100%20*%20%5Clbrace%5B(x%20%2B%20y)%20*%203%5D%20-%2088%5Crbrace\" alt=\"f(x, y) = 100 * \lbrace[(x + y) * 3] - 88\rbrace\" mathimg=\"1\">";
 				// html = html.concat(mathStr);
 
-			    // console.log('after:\n' + html);
+			    console.log('after:\n' + html);
 			    
 			    return html;
 			}
