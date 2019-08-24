@@ -52,6 +52,27 @@
 
 	<link type="text/css" href="css/canvas-particle.css" rel="stylesheet" />
 
+ 	<!-- MathJax -->
+	<script type="text/x-mathjax-config">
+	    MathJax.Hub.Config({
+           showProcessingMessages: false, //关闭js加载过程信息
+           extensions: ["tex2jax.js"],
+           jax: ["input/TeX", "output/HTML-CSS"],
+           tex2jax: {
+               inlineMath: [ ['$','$'], ["\\(","\\)"] ],//行内公式选择符
+               displayMath: [ ['$$','$$'], ["\\[","\\]"] ],//段内公式选择符
+               processEscapes: true,
+               skipTags: ["script", "noscript", "style", "textarea", "pre", "code", "a"] //避开某些标签
+           },
+           "HTML-CSS": {
+               availableFonts: ["STIX", "TeX"],//可选字体
+               showMathMenu: true //关闭右击菜单显示
+           },
+           isMathjaxConfig: true,
+        }); 
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/latest.js?config=TeX-MML-AM_CHTML' async></script>
+
 	</head>
 	<body class="single">
 
@@ -150,12 +171,13 @@
 	<!-- <script src="../public/marked/marked.min.js"></script> -->
     
     <!-- MathJax: https://github.com/mathjax/MathJax -->
-<!--        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"></script>-->
+    <!-- online js -->
+        <!-- <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=AM_CHTML"></script> -->
 <!--    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
 <!--    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=Tex-AMS-CHTML"></script>-->
 
     <!-- Asciimathml: https://github.com/asciimath/asciimathml -->
-    <script src="../public/asciimathml/ASCIIMathML.js"></script>
+    <!-- <script src="../public/asciimathml/ASCIIMathML.js"></script> -->
 
 	<script type="text/javascript">
 		var dataList = new Array();
@@ -242,8 +264,8 @@
 	</script>
     
     <!-- 加载和配置MathJax https://mathjax-chinese-doc.readthedocs.io/en/latest/configuration.html#mathjax -->
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
+   <!--  <script type="text/x-mathjax-config">
+	    MathJax.Hub.Config({
            showProcessingMessages: false, //关闭js加载过程信息
            extensions: ["tex2jax.js"],
            jax: ["input/TeX", "output/HTML-CSS"],
@@ -258,9 +280,9 @@
                showMathMenu: true //关闭右击菜单显示
            },
            isMathjaxConfig: true,
-        });
-    </script>
-    
+        }); 
+    </script> -->
+
 	<!-- Gitalk 回调地址会自动去除'?'，故改用'#' 而修改hash不会刷新页面，需要监听锚部分的修改事件-->
 	<script type="text/javascript">
 		document.getElementsByTagName("BODY")[0].onhashchange = function() { hashChangedFunction()};
@@ -349,10 +371,11 @@
 			  return null;
 			}
 			function convertMarkdownToHtml(markdownStr){
-			    console.log('before:\n'+ markdownStr);
+			    // console.log('before:\n'+ markdownStr);
 
 			    // 将XML中的/n解析为<br/>
-			    markdownStr = markdownStr.replace(/\\n/g, '<br/>');
+			    // \s表示space空格,^\s表示以空格开始，\s$表示以空格结束，前后添加空格，避免转码MathJax的特定语法，比如:'\ne'
+			    markdownStr = markdownStr.replace(/\s\\n\s/g, '<br/>');
 
 			    // bejson
 			    var html = markdown.toHTML(markdownStr);
@@ -364,8 +387,8 @@
 			    // var converter = new showdown.Converter();
 			    // var html = converter.makeHtml(markdownStr);
                 
-                // math
-                // var html = markdownStr
+                // MathJax
+                // var html = markdownStr;
 
 			    html = html.replace(/&lt;br\/&gt;/g, '<br/>');// html转码，换行符正确解析
 			    html = html.replace(/<br\/>/g, '<br\/><br\/>');// 添加一个换行，美化排版
@@ -375,7 +398,7 @@
 				// let mathStr = "<img class=\"math-block\" src=\"https://math.jianshu.com/math?formula=f(x%2C%20y)%20%3D%20100%20*%20%5Clbrace%5B(x%20%2B%20y)%20*%203%5D%20-%2088%5Crbrace\" alt=\"f(x, y) = 100 * \lbrace[(x + y) * 3] - 88\rbrace\" mathimg=\"1\">";
 				// html = html.concat(mathStr);
 
-			    console.log('after:\n' + html);
+			    // console.log('after:\n' + html);
 			    
 			    return html;
 			}
