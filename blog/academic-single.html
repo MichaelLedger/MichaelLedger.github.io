@@ -370,7 +370,7 @@
 			  return null;
 			}
 			function convertMarkdownToHtml(markdownStr){
-			    // console.log('before:\n'+ markdownStr);
+			    console.log('before:\n'+ markdownStr);
 
 			    // 将XML中的/n解析为<br/>
 			    // \s表示space空格,^\s表示以空格开始，\s$表示以空格结束，前后添加空格，避免转码MathJax的特定语法，比如:'\ne'
@@ -403,7 +403,7 @@
 				// let mathStr = "<img class=\"math-block\" src=\"https://math.jianshu.com/math?formula=f(x%2C%20y)%20%3D%20100%20*%20%5Clbrace%5B(x%20%2B%20y)%20*%203%5D%20-%2088%5Crbrace\" alt=\"f(x, y) = 100 * \lbrace[(x + y) * 3] - 88\rbrace\" mathimg=\"1\">";
 				// html = html.concat(mathStr);
 
-			    // console.log('after:\n' + html);
+			    console.log('after:\n' + html);
 			    
 			    return html;
 			}

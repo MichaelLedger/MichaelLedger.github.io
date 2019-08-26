@@ -4,6 +4,7 @@
 <!--<br/>换行符全局替换为' \n '-->
 <!--'&'替换为'#38'-->
 <!--LaTex中的'<'替换为'\less';'>'替换为'\greater'-->
+<!--LaTex中的换行'\\'替换为'\\\'-->
 <blogs>
     <blog location="academic-single.html">
         <id>1</id>
@@ -26,21 +27,29 @@
     <blog location="academic-single.html">
         <id>2</id>
         <date>August 24, 2019</date>
-        <title>CAA - 数学：随机事件与概率</title>
+        <title>CAA 数学 - 随机事件与概率</title>
         <description>
         </description>
-        <cover>academic-images/math-formula.jpg</cover>
+        <cover>academic-images/caa_mathematics.JPG</cover>
         <markdown-content>**习题1** \n 写出下列随机试验的样本空间： \n （1）对一目标射击三次，记录射击结果； \n （2）投掷两颗匀称的骰子，记录点数之和； \n （3）射击一目标，直至击中目标为止，记录射击次数； \n （4）袋中装有4只白球，6只黑球。逐个取出，直至白球全部取出为止，记录取球次数； \n （5）往数轴上任意投掷两个质点，观察它们之间的距离； \n （6）将一尺之锤截成三段，观察各段之长。 \n *参考答案* \n (1) $\Omega=${ 111, 110, 101, 100, 011, 010, 001, 000 }，其中 1 表示击中，0 表示不中； \n (2) $\Omega = ${ 2, 3, $\cdots$, 12 }; \n (3)  $\Omega = ${ 1, 2, 3, $\cdots$ };  \n (4) $\Omega = ${ 4, 5, 6, $\cdots$, 10 };  \n (5) $\Omega = ${ d | d $\geqslant$ 0 } ; \n (6) $\Omega = ${ (x, y, z) | x > 0, y > 0, z > 0, x + y + z = 1 }
         </markdown-content>
     </blog>
     <blog location="academic-single.html">
         <id>3</id>
         <date>August 24, 2019</date>
-        <title>CAA - 数学：随机变量与分布函数</title>
+        <title>CAA 数学 - 随机变量与分布函数</title>
         <description>
         </description>
-        <cover>academic-images/math-formula.jpg</cover>
-        <markdown-content>**习题1** \n 设随机变量 X 的分布列为：$P( X = x) = c\;0.5^x, x = 1, 2, 3$, 求c的值。 \n *参考答案* \n 根据有**概率分布列**定义可知： \n $$\sum_{x=1}^{3}c\;0.5^x = 1$$计算后可得 c = $\frac{8}{7}$ \n **习题14** \n 设随机变量 X 服从正态分布 $N(1, 2^2)$, 求：（1）P(X $\less$ -3); (2) P(1 $\leqslant$ X $\less$ 3); (3) P( | x | $\less$ 3)。 \n *参考答案* \n 待定
+        <cover>academic-images/caa_mathematics.JPG</cover>
+        <markdown-content>**习题1** \n 设随机变量 X 的分布列为：$P( X = x) = c\;0.5^x, x = 1, 2, 3$, 求c的值。 \n *参考答案* \n 根据有**概率分布列**定义可知： \n $$\sum_{x=1}^{3}c\;0.5^x = 1$$计算后可得 c = $\frac{8}{7}$ \n **习题14** \n 设随机变量 X 服从正态分布 $N(1, 2^2)$, 求：（1）P(X $\less$ -3); (2) P(1 $\leqslant$ X $\less$ 3); (3) P( | x | $\less$ 3)。 \n *参考答案* \n 解：由正态分布$N(\mu, \sigma^2)$性质可知:
+            $$
+            \left\\{
+            \begin{aligned}
+            \phi(x) + \phi(-x) #38 = #38 1, x \in R \\\
+            P(a \less X \leqslant b) #38 = #38 P (X \leqslant b) - P (X \leqslant a) #38 = #38 \phi(\frac{b - \mu}{\sigma}) - \phi(\frac{a - \mu}{\sigma}) \\\
+            \end{aligned}
+            \right.
+            $$可得 \n (1) $$P(X \less -3) = \phi(\frac{-3-\mu}{\sigma}) = \phi(\frac{-3-1}{2}) = \phi(-2) = 1 - \phi(2) = 1 - 0.9772 = 0.0228$$ (2) $$P(1 \leqslant X \less 3) = \phi(\frac{3-1}{2}) - \phi(\frac{1-1}{2}) = \phi(1) - \phi(0) = 0.8413 - 1/2 = 0.3413$$ (3) $$P( | x | \less 3) = P(-3 \less x \less 3) = \phi(\frac{3 - 1}{2}) - \phi(\frac{-3-1}{2}) \\\ = \phi(1) - \phi(-2) = \phi(1) - (1 - \phi(2)) = \phi(1) + \phi(2) - 1 = 0.8413 + 0.9772 - 1 = 0.8185$$
         </markdown-content>
     </blog>
 </blogs>
