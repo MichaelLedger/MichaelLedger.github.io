@@ -5,6 +5,7 @@
 <!--'&'替换为'#38'-->
 <!--LaTex中的'<'替换为'\less';'>'替换为'\greater'-->
 <!--LaTex中的换行'\\'替换为'\\\'-->
+<!--LaTex大括号{array}{lcl}为左对齐;{array}{rcl}、{cases}、{aligned}为右对齐;{array}{ccc}为居中-->
 <blogs>
     <blog location="academic-single.html">
         <id>1</id>
@@ -49,7 +50,61 @@
             P(a \less X \leqslant b) #38 = #38 P (X \leqslant b) - P (X \leqslant a) #38 = #38 \phi(\frac{b - \mu}{\sigma}) - \phi(\frac{a - \mu}{\sigma}) \\\
             \end{aligned}
             \right.
-            $$可得 \n (1) $$P(X \less -3) = \phi(\frac{-3-\mu}{\sigma}) = \phi(\frac{-3-1}{2}) = \phi(-2) = 1 - \phi(2) = 1 - 0.9772 = 0.0228$$ (2) $$P(1 \leqslant X \less 3) = \phi(\frac{3-1}{2}) - \phi(\frac{1-1}{2}) = \phi(1) - \phi(0) = 0.8413 - 1/2 = 0.3413$$ (3) $$P( | x | \less 3) = P(-3 \less x \less 3) = \phi(\frac{3 - 1}{2}) - \phi(\frac{-3-1}{2}) \\\ = \phi(1) - \phi(-2) = \phi(1) - (1 - \phi(2)) = \phi(1) + \phi(2) - 1 = 0.8413 + 0.9772 - 1 = 0.8185$$
+            $$可得: \n (1) $$P(X \less -3) = \phi(\frac{-3-\mu}{\sigma}) = \phi(\frac{-3-1}{2}) = \phi(-2) = 1 - \phi(2) = 1 - 0.9772 = 0.0228$$ (2) $$P(1 \leqslant X \less 3) = \phi(\frac{3-1}{2}) - \phi(\frac{1-1}{2}) = \phi(1) - \phi(0) = 0.8413 - 1/2 = 0.3413$$ (3) $$P( | x | \less 3) = P(-3 \less x \less 3) = \phi(\frac{3 - 1}{2}) - \phi(\frac{-3-1}{2}) \\\ = \phi(1) - \phi(-2) = \phi(1) - (1 - \phi(2)) = \phi(1) + \phi(2) - 1 = 0.8413 + 0.9772 - 1 = 0.8185$$
+        </markdown-content>
+    </blog>
+    <blog location="academic-single.html">
+        <id>4</id>
+        <date>August 28, 2019</date>
+        <title>CAA 数学 - 随机变量的数字特征</title>
+        <description>
+        </description>
+        <cover>academic-images/caa_mathematics.JPG</cover>
+        <markdown-content>**习题24** \n 设随机变量 3X + Y 和 2X - 3Y 的方差分别为 333 和 280，且两者的协方差为 -42，求 X - 2Y 和 2X + 3Y 的协方差。 \n *参考答案* \n 由协方差(相关矩)和方差的性质
+            $$
+            \left\\{
+            \begin{array}{lcl}
+            Cov(X, Y) = E[X - E(X)][Y - E(Y)] = E(XY) - 2E(X)E(Y) + E(X)E(Y) = E(XY) - E(X)E(Y) \\\
+            Cov(X,X) = E[X-E(X)]^2 = Var(X) \\\
+            \end{array}
+            \right.
+            $$
+            可知：
+            $$
+            \left\\{
+            \begin{array}{lcl}
+            Cov(X, Y) = Cov(Y, X) \\\
+            Cov(aX, bY) = abCov(X, Y) \\\
+            Cov(X_1 + X\_2, Y) = Cov(X\_1, Y) + Cov(X\_2, Y) \\\
+            Var(aX + bY) = Cov(aX + bY, aX + bY) = a^2Var(X) + b^2Var(Y) + 2abCov(X, Y)  \\\
+            \end{array}
+            \right.
+            $$
+            可得:
+            $$
+            \left\\{
+            \begin{array}{lcl}
+            Var(3X + Y) = 9Var(X) + Var(Y) + 6Cov(X, Y) = 333 \\\
+            Var(2X - 3Y) = 4Var(X) + 9Var(Y) - 12Cov(X, Y) = 280 \\\
+            Cov(3X + Y, 2X - 3Y) = 6Var(X) - 3Var(Y) - 7Cov(X, Y) = -42 \\\
+            \end{array}
+            \right.
+            $$
+            计算可得：
+            $$
+            \left\\{
+            \begin{array}{lcl}
+            Var(X) = 25 \\\
+            Var(Y) = 36 \\\
+            Cov(X, Y) = 12 \\\
+            \end{array}
+            \right.
+            $$
+            故 $Cov(X - 2Y, 2X + 3Y) = 2Var(X) - 6Var(Y) - Cov(X, Y) = 50 - 216 - 12 = -178$ 。 \n
+            *备注:* \n
+            方差 $Var(X)$ 也可用 $D(X)$ 表示; \n
+            方差的正平方根 $[D(X)]^\frac{1}{2}$ 称为标准差，记为 $\sigma_X$ 或 $\sigma(X)$ ; \n
+            相关系数 $\rho = \rho\_{XY} = \frac{Cov(X,Y)}{\sqrt[2]{Var(X)Var(Y)}}$ 。
         </markdown-content>
     </blog>
 </blogs>
