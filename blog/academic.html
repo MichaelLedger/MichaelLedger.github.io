@@ -140,8 +140,8 @@
 
                         var blog = {};
                         if (location.indexOf("academic-single.html") != -1) {
-                        	// Gitalk 回调地址会自动去除'?'，故改用'#'
-                        	blog["location"] = location + "#id=" + id_value;
+                        	// '#'不会触发MathJax刷新导致数学公式需要刷新页面才能正常显示，故使用'?'
+                        	blog["location"] = location + "?id=" + id_value;
                         } else {
                         	blog["location"] = location;
                         }
