@@ -107,4 +107,19 @@
             相关系数 $\rho = \rho\_{XY} = \frac{Cov(X,Y)}{\sqrt[2]{Var(X)Var(Y)}}$ 。
         </markdown-content>
     </blog>
+    <blog location="academic-single.html">
+        <id>5</id>
+        <date>August 30, 2019</date>
+        <title>CAA 数学 - 大数定律与中心极限定理</title>
+        <description>
+        </description>
+        <cover>academic-images/caa_mathematics.JPG</cover>
+        <markdown-content>**习题11** \n 某商店负责供应某地区1000人的商品，某种商品在一段时间内每个人需用一件的概率为 0.6，假定在这一段时间各人购买与否是独立的。问商店应预备多少件这种商品，才能以 99.7% 的概率保证不会脱销。 \n *参考答案* \n 解：设需 n 件商品，令 X = {这段时间内该地区1000人中购买这种商品的人数}, 则X满足二项分布(重复n次独立的伯努利试验)： X ~ B(1000, 0.6), 其概率分布为
+            $$P(X=k) = C_{1000}^{k} \times 0.6^k \times 0.4^{1000-k}, k \in [0, 1000]$$
+            利用德莫弗-拉普拉斯中心极限定理可得
+            $$P(k \leq n) = \sum\_{k=0}^{n}C\_{1000}^{k} \times 0.6^k \times 0.4^{1000-k} \\\ \thickapprox \Phi(\frac{n - 1000 * 0.6}{\sqrt{1000 \times 0.6 \times 0.4}}) = \Phi(\frac{n - 600}{\sqrt{240}}) \geqslant 0.997 $$
+            查《标准正态分布函数数值表》可得：$$\frac{n - 600}{\sqrt{240}} \geqslant 2.75 \Rightarrow n \geqslant 2.75 \times 15.5 + 600 = 642.625$$
+            故商店应预备643件这种商品。
+        </markdown-content>
+    </blog>
 </blogs>
