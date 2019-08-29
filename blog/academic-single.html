@@ -52,25 +52,41 @@
 
 	<link type="text/css" href="css/canvas-particle.css" rel="stylesheet" />
 
- 	<!-- MathJax -->
- 	<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/latest.js?config=TeX-MML-AM_CHTML' async></script>
-	<script type="text/x-mathjax-config">
+	<!-- MathJax -->
+	<!-- online -->
+	<!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/latest.js?config=TeX-MML-AM_CHTML' async></script> -->
+	<!-- offline -->
+	<script src='../public/mathjax/MathJax-2.7.6/latest.js?config=TeX-MML-AM_CHTML' async></script>
+	<!-- <script type="text/x-mathjax-config">
 	    MathJax.Hub.Config({
-           showProcessingMessages: true, //关闭js加载过程信息
+           showProcessingMessages: true,
            extensions: ["tex2jax.js"],
            jax: ["input/TeX", "output/HTML-CSS"],
            tex2jax: {
-               inlineMath: [ ['$','$'], ["\\(","\\)"] ],//行内公式选择符
-               displayMath: [ ['$$','$$'], ["\\[","\\]"] ],//段内公式选择符
+               inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+               displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
                processEscapes: true,
-               skipTags: ["script", "noscript", "style", "textarea", "pre", "code", "a"] //避开某些标签
+               skipTags: ["script", "noscript", "style", "textarea", "pre", "code", "a"]
            },
            "HTML-CSS": {
-               availableFonts: ["STIX", "TeX"],//可选字体
-               showMathMenu: false //关闭右击菜单显示
+               availableFonts: ["STIX", "TeX"],
+               showMathMenu: false
            }
         }); 
-    </script>
+	</script> -->
+	<script type="text/javascript">
+		window.MathJax = {
+			extensions: ["tex2jax.js"],
+			tex2jax: {
+				inlineMath: [ ['$','$'], ["\\(","\\)"] ], 
+				processEscapes: true
+			},
+			"HTML-CSS": {
+				availableFonts: ["STIX", "TeX"],
+                showMathMenu: false
+           }
+		};
+	</script>
     
 	</head>
 	<body class="single">
