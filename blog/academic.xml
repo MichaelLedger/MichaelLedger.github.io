@@ -7,26 +7,26 @@
 <!--LaTex中的换行'\\'替换为'\\\'-->
 <!--LaTex大括号{array}{lcl}为左对齐;{array}{rcl}、{cases}、{aligned}为右对齐;{array}{ccc}为居中-->
 <blogs>
+<!--    <blog location="academic-single.html">-->
+<!--        <id>0</id>-->
+<!--        <date>August 23, 2019</date>-->
+<!--        <title>MathJax LaTex - 书写数学公式</title>-->
+<!--        <description>-->
+<!--            MathJax是一个JavaScript引擎，用来显示网络上的数学公式。它可以工作于所有流行的浏览器上。-->
+<!--        </description>-->
+<!--        <cover>academic-images/math-formula.jpg</cover>-->
+<!--        <markdown-content>When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are-->
+<!--            $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$-->
+<!--            In equation, we find the value of an interesting integral:-->
+<!--            \begin{equation}-->
+<!--            \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15} \label{eq:sample}-->
+<!--            \end{equation} \n-->
+<!--            $$\[\overbrace {\left( {1,1, \cdots ,1} \right)}^K\]$$-->
+<!--            \n *Latex中希腊字母的输入法* \n ![](academic-images/LaTex_Greek_Letter.jpg)![](academic-images/LaTex_AMS_Greek_Hebrew.png)![](academic-images/LaTex_Mit.jpg)-->
+<!--        </markdown-content>-->
+<!--    </blog>-->
     <blog location="academic-single.html">
         <id>1</id>
-        <date>August 23, 2019</date>
-        <title>MathJax LaTex - 书写数学公式</title>
-        <description>
-            MathJax是一个JavaScript引擎，用来显示网络上的数学公式。它可以工作于所有流行的浏览器上。
-        </description>
-        <cover>academic-images/math-formula.jpg</cover>
-        <markdown-content>When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
-            $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-            In equation, we find the value of an interesting integral:
-            \begin{equation}
-            \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15} \label{eq:sample}
-            \end{equation} \n
-            $$\[\overbrace {\left( {1,1, \cdots ,1} \right)}^K\]$$
-            \n *Latex中希腊字母的输入法* \n ![](academic-images/LaTex_Greek_Letter.jpg)![](academic-images/LaTex_AMS_Greek_Hebrew.png)![](academic-images/LaTex_Mit.jpg)
-        </markdown-content>
-    </blog>
-    <blog location="academic-single.html">
-        <id>2</id>
         <date>August 24, 2019</date>
         <title>CAA 数学 - 随机事件与概率</title>
         <description>
@@ -36,7 +36,7 @@
         </markdown-content>
     </blog>
     <blog location="academic-single.html">
-        <id>3</id>
+        <id>2</id>
         <date>August 24, 2019</date>
         <title>CAA 数学 - 随机变量与分布函数</title>
         <description>
@@ -54,7 +54,7 @@
         </markdown-content>
     </blog>
     <blog location="academic-single.html">
-        <id>4</id>
+        <id>3</id>
         <date>August 28, 2019</date>
         <title>CAA 数学 - 随机变量的数字特征</title>
         <description>
@@ -108,7 +108,7 @@
         </markdown-content>
     </blog>
     <blog location="academic-single.html">
-        <id>5</id>
+        <id>4</id>
         <date>August 30, 2019</date>
         <title>CAA 数学 - 大数定律与中心极限定理</title>
         <description>
@@ -123,13 +123,23 @@
         </markdown-content>
     </blog>
     <blog location="academic-single.html">
-        <id>6</id>
+        <id>5</id>
         <date>September 2, 2019</date>
         <title>CAA 金融数学 - 利息的基本概念</title>
         <description>
         </description>
         <cover>academic-images/caa_financial_mathematics.JPG</cover>
         <markdown-content>**习题1** \n 已知 $A(t) = 2t + \sqrt{t} + 5$, 求： \n (1) 对应的 a(t) ; \n (2) $I\_{3}$ ; \n (3) $i\_{4}$ 。 \n *参考答案* \n 答: \n (1) $a(t) = A(t) / 5 = \frac{2}{5}t + \frac{1}{5}\sqrt{t} + 1$ ; \n (2) 从投资日起第n期所得的利息金额: $$I\_{n} = A(n) - A(n - 1)$$ 可得 $I\_3 = A(3) - A(2) = 2 + \sqrt{3} - \sqrt{2} \approx 2.318$ \n (3) 从投资日算起第n个度量期的实际利率: $$i\_{n} = \frac{A(n) - A(n - 1)}{A(n - 1)} = \frac{I_n}{A\_{n - 1}} (n \geqslant 1 的整数)$$ 可得 $i\_{4} = \frac{A(4) - A(3)}{A(3)} = \frac{4 - \sqrt{3}}{\sqrt{3} + 11} \approx 0.178 $ 。
+        </markdown-content>
+    </blog>
+    <blog location="academic-single.html">
+        <id>6</id>
+        <date>September 2, 2019</date>
+        <title>CAA 精算模型 - 生存分析的基本函数及生存模型</title>
+        <description>
+        </description>
+        <cover>academic-images/caa_acturial_models.JPG</cover>
+        <markdown-content>**习题1** \n 生存函数 $S(t) = 0.1 \times (100 - t)^{\frac{1}{2}}, 0 \leqslant t \leqslant 100$, 求下列各值： \n (1) $f(36)$ ; (2) $h(50)$ ; (3) $H(75)$ ; (4) $E(T)$ ; (5) $Var(T)$ \n *参考答案* \n 答: (1) 生存函数$S(t)$为概率密度函数$f(t)$的积分：$${\color{Goldenrod}{S(t) = P(T \greater t) = \mathop{ \int }\nolimits\_{{t}}^{{\infty}}f(y)\text{d}y}}$$ 可得 $$f(t) = \frac{dS(t)}{dt}$$根据求导公式$$(x^n)^{'} = n * x^{n-1} \Rightarrow f(t) = 0.1 \times 0.5 \times (100 - t)^{-\frac{1}{2}}$$故$$f(36) = 0.1 \times 0.5 \times (100 - 36)^{-\frac{1}{2}} = 0.05 \times (\frac{1}{8}) = 0.00625$$ \n (2) 危险率函数 $${\color{Maroon}{h(t) = \frac{f(t)}{S(t)}}}$$可得$$h(t) = \frac{0.1 \times 0.5 \times (100 - t)^{-\frac{1}{2}}}{0.1 \times (100 - t)^{\frac{1}{2}}} = 0.5 \times (100 - t)^{-1} = \frac{1}{2 \times (100 - t)}$$故$$h(50) = \frac{1}{2 \times 50} = 0.01$$ \n (3)累积危险率函数 $$H(t) = \mathop{\int}\nolimits_{0}^{t}h(y)dy = - In S(t)$$可得$$H(75) = - In(0.1 \times 5) = 0.69314718$$ \n (4) 剩余寿命均值为T的期望值(**分布积分法**) $$E(T) = \mathop{\int}\nolimits\_{0}^{+\infty}t \cdot f(t)dt = \mathop{\int}\nolimits\_{0}^{+\infty}S(t)dt$$可得$$E(T) = \mathop{\int}\nolimits\_{0}^{100}0.1 \times (100 - t)^{\frac{1}{2}}dt \\\ = - 0.1 \times \mathop{\int}\nolimits\_{0}^{100}(100 - t)^{\frac{1}{2}}d(100 - t) \\\ = - 0.1 \times \frac{2}{3} \times (100 - t)^{\frac{3}{2}} \vert\_{0}^{100} \\\ = 0 + 0.1 \times \frac{2}{3} \times 100^{\frac{3}{2}} \\\ = 100 \times \frac{2}{3} \approx 66.7$$ \n (5) T的方差：$$Var(T) = \mathop{\int}\nolimits\_{0}^{+\infty}t^{2} \cdot f(t)dt - (\mathop{\int}\nolimits\_{0}^{+\infty}t \cdot f(t)dt)^{2}$$换元，令$(100 - t)^{\frac{1}{2}} = x$, 则 $t=100 - x^2$, dt = -2xdx。故$$\mathop{\int}\nolimits\_{0}^{100}t^{2} \cdot f(t)dt = \mathop{\int}\nolimits\_{10}^{1}(100 - x^2)^{2} \times 0.1 \times 0.5 \times (100 - (100 - x^2))^{-\frac{1}{2}} \times -2x dx$$故... \n $$E(T^2) = \frac{16000}{3}$$$$Var(T) = 888.9$$
         </markdown-content>
     </blog>
 </blogs>
