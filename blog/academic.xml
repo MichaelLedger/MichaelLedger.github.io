@@ -122,4 +122,14 @@
             故商店应预备643件这种商品。
         </markdown-content>
     </blog>
+    <blog location="academic-single.html">
+        <id>6</id>
+        <date>September 2, 2019</date>
+        <title>CAA 金融数学 - 利息的基本概念</title>
+        <description>
+        </description>
+        <cover>academic-images/caa_financial_mathematics.JPG</cover>
+        <markdown-content>**习题1** \n 已知 $A(t) = 2t + \sqrt{t} + 5$, 求： \n (1) 对应的 a(t) ; \n (2) $I\_{3}$ ; \n (3) $i\_{4}$ 。 \n *参考答案* \n 答: \n (1) $a(t) = A(t) / 5 = \frac{2}{5}t + \frac{1}{5}\sqrt{t} + 1$ ; \n (2) 从投资日起第n期所得的利息金额: $$I\_{n} = A(n) - A(n - 1)$$ 可得 $I\_3 = A(3) - A(2) = 2 + \sqrt{3} - \sqrt{2} \approx 2.318$ \n (3) 从投资日算起第n个度量期的实际利率: $$i\_{n} = \frac{A(n) - A(n - 1)}{A(n - 1)} = \frac{I_n}{A\_{n - 1}} (n \geqslant 1 的整数)$$ 可得 $i\_{4} = \frac{A(4) - A(3)}{A(3)} = \frac{4 - \sqrt{3}}{\sqrt{3} + 11} \approx 0.178 $ 。
+        </markdown-content>
+    </blog>
 </blogs>
