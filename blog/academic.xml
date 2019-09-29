@@ -153,4 +153,14 @@
             故该工厂： \n 第一年2500只灯泡毁坏500只，剩余2000只； \n 第二年新换的500只灯泡毁坏了100只，剩余400只；2000只灯泡毁坏了500只，剩余1500只； \n 第三年新换的600只灯泡毁坏了120只；400只灯泡毁坏了100只；1500只灯泡毁坏了750只； \n 所以第三年末一共需要更换：$120 + 100 + 750 = 970$ 只灯泡。
         </markdown-content>
     </blog>
+    <blog location="academic-single.html">
+        <id>8</id>
+        <date>September 29, 2019</date>
+        <title>CAA 经济学基础 - 经济学的研究对象和研究方法</title>
+        <description>
+        </description>
+        <cover>academic-images/caa_economics.JPG</cover>
+        <markdown-content>**经济学的研究对象** \n 经济学的传统定义是研究稀缺资源如何在竞争性的最终用途之间配置的。 \n 经济学的两个重要特点：第一，资源的稀缺性 (the Law of Scarcity) 和需要的无限性。第二，生产可能性曲线 (Production Possibility Curve) 、机会成本 (Opportunity Cost) 和选择。 \n **经济学的研究方法** \n 一、理性假定 (The rational assumption) \n 二、边际分析 (Marginal Analysis) 与决策规则 \n 三、实证分析和规范分析 (Normative Analysis) \n 四、均衡分析 (Equilibrium Analysis) \n 五、静态分析 (Static Analysis) 、比较静态分析 (Comparative Static Analysis) 和动态分析 (Dynamic Analysis)
+        </markdown-content>
+    </blog>
 </blogs>
