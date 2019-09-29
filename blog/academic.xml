@@ -163,4 +163,14 @@
         <markdown-content>**经济学的研究对象** \n 经济学的传统定义是研究稀缺资源如何在竞争性的最终用途之间配置的。 \n 经济学的两个重要特点：第一，资源的稀缺性 (the Law of Scarcity) 和需要的无限性。第二，生产可能性曲线 (Production Possibility Curve) 、机会成本 (Opportunity Cost) 和选择。 \n **经济学的研究方法** \n 一、理性假定 (The rational assumption) \n 二、边际分析 (Marginal Analysis) 与决策规则 \n 三、实证分析和规范分析 (Normative Analysis) \n 四、均衡分析 (Equilibrium Analysis) \n 五、静态分析 (Static Analysis) 、比较静态分析 (Comparative Static Analysis) 和动态分析 (Dynamic Analysis)
         </markdown-content>
     </blog>
+    <blog location="academic-single.html">
+        <id>9</id>
+        <date>September 29, 2019</date>
+        <title>CAA 非寿险精算 - 风险度量</title>
+        <description>
+        </description>
+        <cover>academic-images/caa_actuarial_aspects_nonlife_insurance.JPG</cover>
+        <markdown-content>[标准差-方差在线计算器](https://tool.520101.com/calculator/biaozhuncha-fangcha/) \n **习题一** \n 我们得到某公司的年度收益率数据如下：$22\% , 5\% , -7\% , 11\% , 2\% , 11\%$ ，求该样本的标准差。 \n **参考答案** \n 答: 数学期望为：$E(\mu_{x}) \approx 7.3\%$ \n 由方差 $\sigma^2 = E[(x - \mu_{x}) ^ 2]$ 可得标准差 $$\sigma = \sqrt{E[(x - \mu_{x}) ^ 2]} = \sqrt{\frac{\sum(X-M)^2}{n-1}} \approx \sqrt{\frac{481.34}{5}} \% = \sqrt{96.268}\% \approx 9.811\%$$
+        </markdown-content>
+    </blog>
 </blogs>
