@@ -145,22 +145,22 @@
     <blog location="academic-single.html">
         <id>7</id>
         <date>September 18, 2019</date>
+        <title>CAA 经济学基础 - 经济学的研究对象和研究方法</title>
+        <description>
+        </description>
+        <cover>academic-images/caa_economics.JPG</cover>
+        <markdown-content>**经济学的研究对象** \n 经济学的传统定义是研究稀缺资源如何在竞争性的最终用途之间配置的。 \n 经济学的两个重要特点：第一，资源的稀缺性 (the Law of Scarcity) 和需要的无限性。第二，生产可能性曲线 (Production Possibility Curve) 、机会成本 (Opportunity Cost) 和选择。 \n **经济学的研究方法** \n 一、理性假定 (The rational assumption) \n 二、边际分析 (Marginal Analysis) 与决策规则 \n 三、实证分析和规范分析 (Normative Analysis) \n 四、均衡分析 (Equilibrium Analysis) \n 五、静态分析 (Static Analysis) 、比较静态分析 (Comparative Static Analysis) 和动态分析 (Dynamic Analysis)
+        </markdown-content>
+    </blog>
+    <blog location="academic-single.html">
+        <id>8</id>
+        <date>September 29, 2019</date>
         <title>CAA 寿险精算 - 生存分布与生命表</title>
         <description>
         </description>
         <cover>academic-images/caa_actural_aspects_life_insurance.JPG</cover>
         <markdown-content>**习题3** \n 已知电灯泡的使用寿命分布为：$$l\_{0} = 1\,000\,000, l\_{1} = 800\,000, l\_{2} = 600\,000, l\_{3} = 300\,000, l\_{4} = 0$$ 某家工厂初始有2500只灯泡，毁坏的灯泡将会在年末的时候更换。求在第三年末的时候需要更换多少只灯泡? \n *参考答案* \n 答:由使用寿命分可得：$$生存数\;l\_{x}、死亡数\;d\_{x}、死亡率\;q\_{x}、生存率\;p\_{x}$$ $$l\_{1} = 800\,000, d\_{1}=200\,000, q\_{1} = 0.2, p\_{1} = 0.8$$ $$l\_{2} = 600\,000, d\_{2}=200\,000, q\_{2} = 0.25, p\_{2} = 0.75$$ $$l\_{3} = 300\,000, d\_{3}=300\,000, q\_{3} = 0.5, p\_{3} = 0.5$$
             故该工厂： \n 第一年2500只灯泡毁坏500只，剩余2000只； \n 第二年新换的500只灯泡毁坏了100只，剩余400只；2000只灯泡毁坏了500只，剩余1500只； \n 第三年新换的600只灯泡毁坏了120只；400只灯泡毁坏了100只；1500只灯泡毁坏了750只； \n 所以第三年末一共需要更换：$120 + 100 + 750 = 970$ 只灯泡。
-        </markdown-content>
-    </blog>
-    <blog location="academic-single.html">
-        <id>8</id>
-        <date>September 29, 2019</date>
-        <title>CAA 经济学基础 - 经济学的研究对象和研究方法</title>
-        <description>
-        </description>
-        <cover>academic-images/caa_economics.JPG</cover>
-        <markdown-content>**经济学的研究对象** \n 经济学的传统定义是研究稀缺资源如何在竞争性的最终用途之间配置的。 \n 经济学的两个重要特点：第一，资源的稀缺性 (the Law of Scarcity) 和需要的无限性。第二，生产可能性曲线 (Production Possibility Curve) 、机会成本 (Opportunity Cost) 和选择。 \n **经济学的研究方法** \n 一、理性假定 (The rational assumption) \n 二、边际分析 (Marginal Analysis) 与决策规则 \n 三、实证分析和规范分析 (Normative Analysis) \n 四、均衡分析 (Equilibrium Analysis) \n 五、静态分析 (Static Analysis) 、比较静态分析 (Comparative Static Analysis) 和动态分析 (Dynamic Analysis)
         </markdown-content>
     </blog>
     <blog location="academic-single.html">
@@ -181,6 +181,16 @@
         </description>
         <cover>academic-images/caa_accounting_finance.JPG</cover>
         <markdown-content>**$\xi1.1 \quad 会计的涵义和作用$** \n 1、会计的涵义： \n (1)从技术角度看，会计是一种计量的技术。 \n (2)从会计活动结果的角度看，会计是一个信息系统，它旨在向利益相关的各个方面传输一家企业或其他个体的富有意义的经济信息。 \n (3)从明确经济责任的角度看，会计是使经济管理责任得以落实的手段，是一种管理活动。 \n (4)从会计信息利用结果的角度看，会计信息的决策有用性构成了会计的基本目标及会计信息应具备的质量特征等重要会计概念的界定基础。 \n 综上所述，现代会计是对会计主体能够以货币计量的经济活动，运用专门对技术方法，进行连续、系统、全面的反映和控制的信息处理过程，该过程的执行表现为一项管理活动，，该过程的结果则表现为一个经济信息系统，旨在反映企业管理者受托经济责任的履行情况，并向会计主体的利益相关者提供决策有用的信息。 \n 2、会计的基本职能 \n 不论是以事后核算为主的财务会计，还是以预测、分析、评价、决策为主的管理会计，其基本职能都能够以核算和控制两大职能加以概括。
+        </markdown-content>
+    </blog>
+    <blog location="academic-single.html">
+        <id>11</id>
+        <date>September 29, 2019</date>
+        <title>CAA 精算管理 - 精算师与精算职业</title>
+        <description>
+        </description>
+        <cover>academic-images/caa_actuarial_management.JPG</cover>
+        <markdown-content>**$\xi1.1 \quad 精算师及其职业领域$** \n 精算师是分析风险并量化其财务影响的专门职业人员。他们综合运用数学、统计学、经济学、金融学及财务管理等方面的专业知识及技能，在保险、金融及其他领域中，分析、评估不确定的现金流对未来财务状况的影响。 \n 精算师在不同领域和不同工作岗位上工作，工作内容及其体现的价值和意义有一定的差异性。 \n 精算师在保险公司主要就职于产品开发部、精算部、风险管理部、财务部等相关部门，其工作职责主要有经验数据分析、新产品设计和定价、再保险安排、负债评估、利润分析等。 \n 精算师在保险公司应承担监管职能。在我国，按照中国保险监督管理委员会于2007年颁布的《保险公司总精算师管理办法》，要求保险公司的总精算师对产品费率、准备金水平、偿付能力、再保险安排、红利分配等承担相应的审核职责，并根据保监会和国家相关部门的规定，审核并签署公开披露的有关数据和报告，如精算报告和内含价值报告等。 \n 精算师在养老金计划管理中的工作：在养老金计划的设计中，需要与计划发起人充分沟通，明确计划的设计目标和原则，在此基础上，考虑法律法规的限制，对计划的类型、参保要求和覆盖范围、筹资方式和筹资水平、待遇水平及其调整、既得权益的确认与管理等提出详细的设计建议。 \n 社会保障制度运行中的精算师的工作：通过对社会保障项目未来财务收支的预测，评估制度的偿付能力和可持续发展，分析未来各种不确定因素的变动对制度偿付能力的影响，为制度的改革和发展提供精细化的风险管理依据。
         </markdown-content>
     </blog>
 </blogs>
