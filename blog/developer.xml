@@ -128,8 +128,7 @@
             国家缩写和各国语言缩写在配置language时常常使用缩写，留存以备后续使用方便查找。
         </description>
         <cover>developer-images/closeup-blue-desk-globe.jpg</cover>
-        <markdown-content>
-            国家与地区缩写
+        <markdown-content>```// 获取当前设备支持语言数组\nNSArray *arr = [NSLocale availableLocaleIdentifiers];\n[arr enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {\nNSLocale *local =[[NSLocale alloc] initWithLocaleIdentifier:obj];\nNSLocale *chineseLocal = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];\nNSString *chineseLanguage = [chineseLocal displayNameForKey:NSLocaleIdentifier value:obj];\nNSLocale *englishLocal = [[NSLocale alloc] initWithLocaleIdentifier:@"en-US"];\nNSString *englishLanguage = [englishLocal displayNameForKey:NSLocaleIdentifier value:obj];\nNSString *currencySymbol = local.currencySymbol;\nNSString *countryCode = local.countryCode;\nNSLog(@"%@-%@-%@-%@-%@", obj, chineseLanguage, englishLanguage, currencySymbol, countryCode);\n}];```\n国家与地区缩写
             ---------------------------------------------------------------------------------------------
              
             英文    中文   域名缩写  电话代码
