@@ -537,8 +537,9 @@ footer {
   margin-bottom: 10px;
   display: block;
   text-transform: uppercase;
-  font-weight: 100;
+  font-weight: 30;
   letter-spacing: .05em;
+  font-size: 14px;
 }
 
 .padding {
@@ -547,6 +548,9 @@ footer {
 @media screen and (max-width: 768px) {
   .padding {
     padding: 25px;/*小屏幕内边距减少*/
+  }
+  .fh5co-post-date {
+    font-size: 12px;
   }
 }
 
@@ -573,7 +577,8 @@ footer {
 }
 .fh5co-post .fh5co-entry > img {
   /*float: right;*/
-  width: 18%;
+  width: 30%;
+  height: 100%;
   /*height: 18%;*/
   /*float: right;*/
   /*position: absolute;*/
@@ -601,6 +606,7 @@ footer {
     /*position: static;*/
     margin-top: 10px;
     width: 50%;
+    /*height: 100%;*/
   }
 }
 .fh5co-post .fh5co-entry > div {
@@ -626,6 +632,12 @@ footer {
 .fh5co-post .fh5co-entry > div a {
   color: #000;
   text-decoration: none;
+  font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+  .fh5co-post .fh5co-entry > div a {
+    font-size: 18px;
+  }
 }
 .fh5co-post .fh5co-entry > div a:hover {
   color: #FC5185;
@@ -643,7 +655,14 @@ footer {
 .fh5co-post .fh5co-entry > div p:last-child {
   margin-bottom: 0;
 }
-
+.fh5co-post .fh5co-entry > div p {
+  font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+  .fh5co-post .fh5co-entry > div p {
+    font-size: 14px;
+  }
+}
 .gototop {
   position: fixed;
   bottom: 20px;
