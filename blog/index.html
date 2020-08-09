@@ -121,16 +121,30 @@
 		var dataList = new Array();
 		$(document).ready(function() {
 			fetchXMLData()
+
+			if (navigator.onLine) {
+			   // console.log('网络已连接');
+			} else {
+			   // console.log('已断网');
+			   alert('Please check your network connection and try again.')
+			}
+
+			// window.addEventListener('online', function() {
+			// 	console.log('网络已连接');
+			// });
+			// window.addEventListener('offline', function() {
+			// 	console.log('已断网');
+			// });
 		})
 
 		function fetchXMLData() {
 			$.ajax({
-				async: true, //是否异步，默认为true(同步：当执行当前AJAX的时候会停止执行后面的JS代码，直到AJAX执行完毕后时，才能继续执行后面的JS代码)
+				async:true, //是否异步，默认为true(同步：当执行当前AJAX的时候会停止执行后面的JS代码，直到AJAX执行完毕后时，才能继续执行后面的JS代码)
                 type:"GET",
                 url:"english.xml",//这里通过设置url属性来获取xml
                 dataType:"xml",
                 timeout:30000,      //设定超时，单位毫秒(1秒=1000毫秒)
-                cache:false,       //禁用缓存
+                cache:true,       //是否加载缓存
                 success:function(xml){//这里是解析xml
                     $(xml).find("blog").each(function(i){
                     	var location = $(this).attr("location");     // 跳转页面地址
@@ -186,15 +200,24 @@
 					});
 					fetchPageData("blog-content", curPage, pageSize);
                 },
-                complete: function(XMLHttpRequest, status) {
-                	if (status === 'timeout') {
-                		console.log(status)
+                complete: function(XHR, TS) {
+                	// console.log(status)
+                	if (TS === 'timeout') {
 						fetchXMLData()//try again
-                	} else if (status === 'error') {
-						alert('Please check your network connection and try again.')
-                	} else if (status === 'success') {
+                	} else if (TS === 'error') {//maybe is fetching,not network problem
+						// alert('Please check your network connection and try again.')
+                	} else if (TS === 'success') {
                 		//console.log('==fetchXMLDataSuccess==');
                 	}
+                },
+                error: function(XMLHttpRequest, textStatus, errorThrown) {
+//          textStatus: "timeout", "error", "notmodified" 和 "parsererror"。
+//          （0）null
+//          （1）timeout 超时
+//          （2）error
+//          （3）notmodified 未修改
+//          （4）parsererror 解析错误
+                	console.log(textStatus)
                 }
             });
 		}
