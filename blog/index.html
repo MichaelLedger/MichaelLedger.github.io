@@ -120,12 +120,16 @@
 	<script type="text/javascript">
 		var dataList = new Array();
 		$(document).ready(function() {
+			fetchXMLData()
+		})
+
+		function fetchXMLData() {
 			$.ajax({
 				async: true, //是否异步
                 type:"get",
                 url:"english.xml",//这里通过设置url属性来获取xml
                 dataType:"xml",
-                timeout:10000,      //设定超时，单位毫秒
+                timeout:10000,      //设定超时，单位毫秒(1秒=1000毫秒)
                 cache:true,       //是否设置缓存
                 success:function(xml){//这里是解析xml
                     $(xml).find("blog").each(function(i){
@@ -181,9 +185,19 @@
 						}
 					});
 					fetchPageData("blog-content", curPage, pageSize);
+                },
+                complete: function(XMLHttpRequest, status) {
+                	if (status === 'timeout') {
+                		alert(status)
+						fetchXMLData()
+                	} else if (status === 'error') {
+						alert(status)
+                	} else if (status === 'success') {
+                		//console.log('==fetchXMLDataSuccess==');
+                	}
                 }
             });
-		})
+		}
 	</script>
 	<script type="text/javascript">
 		function fetchPageData(divIdentifier, currentPage, pageSize) {
