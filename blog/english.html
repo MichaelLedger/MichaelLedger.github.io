@@ -310,7 +310,7 @@
 			    // bejson
 			    var html = markdown.toHTML(markdownStr);
 			    html = html.replace(/&lt;br\/&gt;/g, '<br/>');// html转码，换行符正确解析
-			    html = html.replace(/<br\/>/g, '<br\/><br\/>');// 添加一个换行，美化排版
+			    // html = html.replace(/<br\/>/g, '<br\/><br\/>');// 添加一个换行，美化排版
 			    html = html.replace(/&amp;rsquo;/g, '\'');// &rsquo;正常解析为'
 
 			    // console.log('after:\n' + html);

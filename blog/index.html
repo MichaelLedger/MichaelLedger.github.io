@@ -275,11 +275,11 @@
 			background: "rgba(0,0,0,0)",//背景颜色
 			color: "rgba(252,81,133,0.5)",//粒子和连线的颜色 (#fc5185)
 			particlesNumber:document.body.clientWidth > 768 ? 60 : 30,//粒子数量
-			// disableLinks:true,//禁止粒子间连线
-			// disableMouse:true,//禁止粒子间连线(鼠标)
+			disableLinks:true,//禁止粒子间连线
+			disableMouse:true,//禁止粒子间连线(鼠标)
 			particle: {
 				minSize: 1,//最小粒子
-				maxSize: 3,//最大粒子
+				maxSize: 10,//最大粒子
 				speed: 30,//粒子的动画速度
 			 }
 		});
