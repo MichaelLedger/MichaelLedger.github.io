@@ -61,8 +61,6 @@
 	<div id="page">
 		<div id="fh5co-aside" style="background-image: url()" data-stellar-background-ratio="0.5">
 			<div class="overlay"></div>
-			
-			
 			<nav role="navigation">
 				<ul>
 					<li><a href="index.html"><i class="icon-home"></i></a></li>
@@ -84,7 +82,7 @@
 		</div>
 	</div>
 
-	<div id="gitalk-container"></div>
+	<!-- <div id="gitalk-container"></div> -->
 
 	<div class="fh5co-navigation">
 		<div class="fh5co-cover prev fh5co-cover-sm" id="previous-post-cover" style="background-image: url()">
@@ -193,7 +191,7 @@
 		})
 	</script>
 
-	<script type="text/javascript">
+<!-- 	<script type="text/javascript">
 		$(document).ready(function() {
 			const gitalk = new Gitalk({
 				  clientID: '3423b73b29f74a75e453',
@@ -208,18 +206,38 @@
 
 			gitalk.render('gitalk-container')
 		})
-	</script>
+	</script> -->
 
 	<!-- Gitalk 回调地址会自动去除'?'，故改用'#' 而修改hash不会刷新页面，需要监听锚部分的修改事件-->
 	<script type="text/javascript">
 		document.getElementsByTagName("BODY")[0].onhashchange = function() { hashChangedFunction()};
 		function hashChangedFunction() {
 		    // alert("锚部分已修改！");
-		    // 手动滚动到顶部
-		    document.body.scrollTop = 0;
+		    
 		    // Gitalk 回调地址会自动去除'?'，故改用'#'
             var englishId = getHashString("id");
 			fetchDetailData("english-content", englishId);
+
+			// 手动滚动到顶部
+		    // document.body.scrollTop = 0;
+
+		    //保证刷新后能滚动到准确的顶部位置
+		    $('html,body').animate({scrollTop: 0}, 0);
+
+		    //获取组件高度
+		 //    var cover = document.getElementById("fh5co-aside");
+			// var offset = cover.offsetHeight;  //高度px
+			// console.log(offset)
+
+			//延时处理
+			// setTimeout(function(){
+				// window.scrollBy(0,0)
+			// }, 0);//毫秒
+
+		 // var $objTr = $("#page-title"); //找到要定位的地方 tr 
+		 // // $objTr.css("background-color","lightgray"); //设置要定位地方的css 
+		 // var objTr = $objTr[0]; //转化为dom对象 
+		 // $("#page").animate({scrollTop:objTr.offsetTop},"slow"); //定位tr 
 		}
 	</script>
 
