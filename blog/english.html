@@ -455,18 +455,59 @@
             }
         });
     </script>
-    <div id="live2d-widget" class="live2d-widget-container" style="position: fixed; right: 0px; bottom: -20px; width: 200px; height: 400px; z-index: 99999; opacity: 1; pointer-events: none;">
+    <div id="live2d-widget" class="live2d-widget-container">
         <div class="live2d-widget-dialog-container" style="transform: scale(0.8);">
             <div class="live2d-widget-dialog" style="opacity: 0;">我，将某个人，唯一的某个人，试图锁定。我，</div>
         </div><canvas id="live2dcanvas" width="400" height="800" style="position: absolute; left: 0px; top: 0px; width: 200px; height: 400px;"></canvas>
     </div>
     
     <script type="text/javascript">
-        window.onload = function(){
-            if (document.body.clientWidth < 768) {
-                $("#live2d-widget").attr("style","display:none");
+        /*
+        document.addEventListener('DOMContentLoaded',function(){
+            //...
+        });
+         */
+    
+        window.onload = function () {
+            if (document.body.clientWidth <= 768) {
+                //$("#live2d-widget").attr("style", "display:none");
+                $("#live2d-widget").css("display", "none");
+            } else {
+                //$("#live2d-widget").attr("style", "display:block");
+                $("#live2d-widget").css("display", "block");
             }
-        }
+        };
+    
+        $(window).resize( function  () {           //当浏览器大小变化时
+            /*
+             alert($(window).height());           //浏览器时下窗口可视区域高度
+             alert($(document).height());         //浏览器时下窗口文档的高度
+             alert($(document.body).height());    //浏览器时下窗口文档body的高度
+             alert($(document.body).outerHeight( true ));  //浏览器时下窗口文档body的总高度 包括border padding margin
+             */
+            //console.log('width:' + document.body.clientWidth);
+            
+            if (document.body.clientWidth <= 768) {
+                /*JS修改元素的样式*/
+                /*
+                 //1.原生Js法
+                 var a= document.getElementById("a");
+                 a.style.display="block";
+                 //2.用JQuery的css方法
+                 var a =$("#a");
+                 a.css("display","block");
+                 //3.用JQuery的attr方法
+                 var a =$("#a");
+                 a.attr("style","display:block");
+                 */
+                
+                $("#live2d-widget").css("display", "none");
+            } else {
+                $("#live2d-widget").css("display", "block");
+            }
+        });
+    
+        
     </script>
 	</body>
     

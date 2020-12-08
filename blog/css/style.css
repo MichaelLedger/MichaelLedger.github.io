@@ -632,8 +632,7 @@ footer {
   bottom:30px;
   left:0;
   right:0;
-  width:500px;
-  max-width:80%;
+  width:30%;
   margin:auto;
   z-index: 999;
 }
@@ -643,8 +642,7 @@ footer {
     bottom:30px;
     left:0;
     right:0;
-    width:200px;
-    max-width:80%;
+    width:50%;
     margin:auto;
     z-index: 999;
   }
