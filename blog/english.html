@@ -361,6 +361,57 @@
 	});
 	</script>
 
+    <div id="page_end_html">
+        <!-- 底部加了小鱼<・)))><<~ -->
+        <div id="jsi-flying-fish-container"></div>
+        <script src='js/fish.js'></script>
+        <style>
+            @media only screen and (max-width: 767px){
+                #sidebar_search_box input[type=text]{width:calc(100% - 24px)}
+            }
+        </style>
+        
+        <!--音乐-->
+<!--        <link rel="stylesheet" href="css/APlayer.min.css">-->
+<!--        <div id="player" class="aplayer aplayer-withlist aplayer-fixed" data-id="3025663508" data-server="netease" data-type="playlist" data-order="random" data-fixed="true" data-listfolded="true" data-theme="#2D8CF0"></div>-->
+<!--        <script src="js/APlayer.min.js"></script>-->
+<!--        <script src="js/Meting.min.js"></script>-->
+        
+        <!--看板娘 - 猫-->
+        <!-- https://github.com/raoenhui/raoenhui.github.io -->
+        <!-- <script src="https://l2dwidget.js.org/lib/L2Dwidget.min.js"></script> -->
+        <script src='plugins/live2d/src/L2Dwidget.min.js'></script>
+        <script>
+            L2Dwidget.init({
+                "model": {
+                    jsonPath: 'https://michaelledger.github.io/blog/plugins/live2d/packages/live2d-widget-model-hibiki/assets/hijiki.model.json',<!--这里改模型-->//"https://unpkg.com/live2d-widget-model-hijiki/assets/hijiki.model.json"
+                    "scale": 1
+                },
+                "display": {
+                    "position": "left",<!--设置看板娘的上下左右位置-->
+                    "width": 100,
+                    "height": 200,
+                    "hOffset": 70,
+                    "vOffset": 0
+                },
+                "mobile": {
+                    "show": true,
+                    "scale": 0.5
+                },
+                "react": {
+                    "opacityDefault": 0.7,<!--设置透明度-->
+                    "opacityOnHover": 0.2
+                }
+            });
+        window.onload = function(){
+            $("#live2dcanvas").attr("style","position: fixed; opacity: 0.7; left: 70px; bottom: 0px; z-index: 1; pointer-events: none;")
+        }
+        </script>
+        <!--点击冒点-->
+        <canvas width="1777" height="841" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas>
+        <script src="js/mouse-click.js"></script>
+    </div>
+
 	</body>
 </html>
 
