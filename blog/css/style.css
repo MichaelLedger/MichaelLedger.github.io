@@ -512,11 +512,12 @@ footer {
   background: #fafafa;
   clear: both;
   font-size: 12px;
+  text-align: center;
   padding: 20px 30px !important;
 }
 .single footer > div {
-  max-width: 960px;
-  margin: 0px 0px 60px 0px;
+  /*max-width: 960px;*/
+  margin: 0;
   text-align: center;
 }
 
