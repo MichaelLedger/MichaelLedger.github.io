@@ -250,7 +250,8 @@
 						currentIndex = i;
 						var audioHtmlStr;
 						if (data.audio && data.audio.length > 0) {
-							audioHtmlStr = "<audio style=\"margin-bottom:20px\" preload=\"auto\" controls><source src=\""+ data.audio + "\" id='mp3_fileurl'></audio>";
+							// audioHtmlStr = "<audio style=\"margin-bottom:20px\" preload=\"auto\" controls><source src=\""+ data.audio + "\" id='mp3_fileurl'></audio>";
+							audioHtmlStr = "<audio class=\"fixed-audio\" preload=\"auto\" controls><source src=\""+ data.audio + "\" id='mp3_fileurl'></audio>";
 						} else {
 							audioHtmlStr = "";
 						}

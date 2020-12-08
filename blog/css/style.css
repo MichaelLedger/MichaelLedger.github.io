@@ -516,7 +516,7 @@ footer {
 }
 .single footer > div {
   max-width: 960px;
-  margin: 0 auto;
+  margin: 0px 0px 60px 0px;
   text-align: center;
 }
 
@@ -625,6 +625,28 @@ footer {
 .single .fh5co-post .fh5co-entry > div {
   margin-right: 0 !important;
   width: 100%;
+}
+.fh5co-post .fh5co-entry .fixed-audio {
+  position:fixed;
+  bottom:30px;
+  left:0;
+  right:0;
+  width:500px;
+  max-width:80%;
+  margin:auto;
+  z-index: 999;
+}
+@media screen and (max-width: 768px) {
+  .fh5co-post .fh5co-entry .fixed-audio {
+    position:fixed;
+    bottom:30px;
+    left:0;
+    right:0;
+    width:200px;
+    max-width:80%;
+    margin:auto;
+    z-index: 999;
+  }
 }
 .single .fh5co-post .fh5co-entry .post-content img {
   width: 100%;
