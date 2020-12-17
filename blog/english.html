@@ -552,18 +552,46 @@
                 $("#live2d-widget").css("display", "block");
             }
             
-            //var cover = $("#fh5co-aside").style.backgroundImage;
+            // 获取的是包含url（“xxx.jpg”）形式的值
             var cover = document.getElementById('fh5co-aside').style.backgroundImage;
+            //在iphoneX上的background-image的值是不包含双引号的：url(image.png)；而在其他手机上background-image的值是包含双引号的：url("image.png"),
+            cover = cover.split('(')[1].split(')')[0];
+            if(cover.indexOf('"') > -1){
+                cover = cover.split('"')[1].split('"')[0];
+            }
             console.log('cover:' + cover);
             //https://cdn.cnbj1.fds.api.mi-img.com/middle.community.vip.bkt/9c614771b4a2905d3b788141926fa15f
+            //https://michaelledger.github.io/image/english/friends/season2/friends_season2_cover.jpg
             imgReady(cover, function () {
               console.log('size ready: width=' + this.width + '; height=' + this.height);
-              var param = this.height;
+              
+              //获取组件高度
+              var cover = document.getElementById("fh5co-aside");
+              var coverHeight = cover.offsetHeight;  //高度px
+              var coverWidth = cover.offsetWidth;
+              console.log('coverHeight:' + coverHeight);
+              console.log('coverWidth:' + coverWidth);
+              
+              //换算成图片显示的高度
+              var coverFullDisplayHeight = coverWidth / this.width * this.height;
+              console.log('coverFullDisplayHeight:' + coverFullDisplayHeight);
+              //动画偏移量=图片显示高度-封面组件高度
+              var param = coverFullDisplayHeight - coverHeight;
+              console.log('param:' + param);
               var style = document.styleSheets[0];
               // style.insertRule("@keyframes rotate_before{from{ transform: translate(0%,0%); }to{ transform: translate(0%,"+param +"%);}}",9);//写入样式
-              style.insertRule("@keyframes scrollToTop{from{ background-position: 0 0; }to{ background-position: 0 -"+param+"px;}}",0);//写入样式
-              $("#fh5co-aside").css("-webkit-animation", "scrollToTop 5s linear infinite");
-              $("#fh5co-aside").css("animation", "scrollToTop 5s linear infinite");
+              style.insertRule("@keyframes scrollToTop{from{ background-position: center center; }to{ background-position: center -"+param+"px;}}",0);//写入样式
+              
+              //时间根据图片的高度区分
+              var time = this.height / 200;
+              console.log('time:' + time);
+              var infinite = "";
+              if (this.height / this.width > 1.2)
+              {
+                  infinite = "infinite";
+              }
+              $("#fh5co-aside").css("-webkit-animation", "scrollToTop "+time+"s "+infinite+" linear");
+              $("#fh5co-aside").css("animation", "scrollToTop "+time+"s "+infinite+" linear");
             });
         };
     
