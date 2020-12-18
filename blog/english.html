@@ -610,12 +610,21 @@
               window.addCount = window.addCount + 1;
               // console.log(window.addCount);
 
+              // define diff name to reset animation
+              var animationName;
+              if (window.addCount % 2 == 0) {
+              	animationName = "scrollToTop";
+              } else {
+              	animationName = "scrollToTop2";
+              }
+              // console.log('animationName:' + animationName);
+
 		      if(typeof style.insertRule != 'undefined') {//W3C
               	// console.log('insertRule');
-              	style.insertRule("@keyframes scrollToTop{0%{ background-position: 0 0; }50%{ background-position: 0 -"+param+"px;}100%{ background-position: 0 0; }}",0);//写入样式
+              	style.insertRule("@keyframes "+animationName+"{0%{ background-position: 0 0; }50%{ background-position: 0 -"+param+"px;}100%{ background-position: 0 0; }}",0);//写入样式
 		      }else if(typeof style.addRule != 'undefined') {//IE
 		      	// console.log('addRule');
-		      	style.addRule("@keyframes scrollToTop{0%{ background-position: 0 0; }50%{ background-position: 0 -"+param+"px;}100%{ background-position: 0 0; }}",0);//写入样式
+		      	style.addRule("@keyframes "+animationName+"{0%{ background-position: 0 0; }50%{ background-position: 0 -"+param+"px;}100%{ background-position: 0 0; }}",0);//写入样式
 		      }
 
               // setTimeout(function() {
@@ -637,8 +646,8 @@
               }
               // console.log('infinite_value:' + infinite);
 
-              $("#fh5co-aside").css("-webkit-animation", "scrollToTop "+time+"s "+infinite+" linear");
-              $("#fh5co-aside").css("animation", "scrollToTop "+time+"s "+infinite+" linear");
+              $("#fh5co-aside").css("-webkit-animation", ""+animationName+" "+time+"s "+infinite+" linear");
+              $("#fh5co-aside").css("animation", ""+animationName+" "+time+"s "+infinite+" linear");
 
               $("#fh5co-aside").each(function() {
 			     // 目前只设置兼容谷歌浏览器
