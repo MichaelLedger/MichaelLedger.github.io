@@ -623,7 +623,12 @@
               // }, 100);
               
               //时间根据图片的高度区分
-              var time = coverFullDisplayHeight / 200;
+              var time;
+              if (document.body.clientWidth > 768) {
+              	time = coverFullDisplayHeight / 100.0;
+              } else {
+              	time = coverFullDisplayHeight / 50.0;
+              }
               // console.log('time:' + time);
               var infinite = "";
               if (coverFullDisplayHeight / coverHeight > 2)
@@ -670,7 +675,9 @@
              */
             //console.log('width:' + document.body.clientWidth);
 
-            autoScrollCover();
+            setTimeout(function() {
+            	autoScrollCover();
+            }, 100);
             
             if (document.body.clientWidth <= 768) {
                 /*JS修改元素的样式*/
