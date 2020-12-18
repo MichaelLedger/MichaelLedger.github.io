@@ -224,6 +224,8 @@
 		    //保证刷新后能滚动到准确的顶部位置
 		    $('html,body').animate({scrollTop: 0}, 0);
 
+		    autoScrollCover();
+
 		    //获取组件高度
 		 //    var cover = document.getElementById("fh5co-aside");
 			// var offset = cover.offsetHeight;  //高度px
@@ -542,6 +544,107 @@
                 };
             };
         })();
+
+        /*移除动画*/
+		function autoScrollDeleted(){
+		    $("#fh5co-aside").css("-webkit-animation", "none 0 ease 0 1 normal");
+            $("#fh5co-aside").css("animation", "none 0 ease 0 1 normal");
+		}
+
+        /*暂停动画*/
+		function autoScrollPaused(){
+		 	/*animation必须是infinite，animation-play-state才有效*/
+		    document.getElementById("fh5co-aside").style.animationPlayState = "paused";
+		    document.getElementById("fh5co-aside").style.WebkitAnimationPlayState = "paused"; // 针对 Chrome 和 Safari 的代码
+		}
+
+		/*继续动画*/
+		function autoScrollResume(){
+		 	/*animation必须是infinite，animation-play-state才有效*/
+		    document.getElementById("fh5co-aside").style.animationPlayState = "running";
+		    document.getElementById("fh5co-aside").style.WebkitAnimationPlayState = "running"; // 针对 Chrome 和 Safari 的代码
+		}
+
+        function autoScrollCover() {
+        	// console.log('autoScrollCover');
+        	// 获取的是包含url（“xxx.jpg”）形式的值
+            var cover = document.getElementById('fh5co-aside').style.backgroundImage;
+            //在iphoneX上的background-image的值是不包含双引号的：url(image.png)；而在其他手机上background-image的值是包含双引号的：url("image.png"),
+            cover = cover.split('(')[1].split(')')[0];
+            if(cover.indexOf('"') > -1){
+                cover = cover.split('"')[1].split('"')[0];
+            }
+            // console.log('cover:' + cover);
+            //https://cdn.cnbj1.fds.api.mi-img.com/middle.community.vip.bkt/9c614771b4a2905d3b788141926fa15f
+            //https://michaelledger.github.io/image/english/friends/season2/friends_season2_cover.jpg
+            imgReady(cover, function () {
+              // console.log('size ready: width=' + this.width + '; height=' + this.height);
+              
+              //获取组件高度
+              var cover = document.getElementById("fh5co-aside");
+              var coverHeight = cover.offsetHeight;  //高度px
+              var coverWidth = cover.offsetWidth;
+              // console.log('coverHeight:' + coverHeight);
+              // console.log('coverWidth:' + coverWidth);
+              
+              //换算成图片显示的高度
+              var coverFullDisplayHeight = coverWidth / this.width * this.height;
+              // console.log('coverFullDisplayHeight:' + coverFullDisplayHeight);
+              //动画偏移量=图片显示高度-封面组件高度
+              var param = coverFullDisplayHeight - coverHeight;
+              // var param = coverFullDisplayHeight;
+              // console.log('param:' + param);
+              var style = document.styleSheets[0];
+
+              if (window.addCount > 0) {
+	              //Avoid redundant insert rules
+			      if(typeof style.deleteRule != 'undefined') {//W3C
+	              	// console.log('deleteRule');
+			        style.deleteRule(0);
+			      }else if(typeof style.removeRule != 'undefined') {//IE
+			      	// console.log('removeRule');
+			        style.removeRule(0);
+			      }
+              }
+
+              window.addCount = window.addCount + 1;
+              // console.log(window.addCount);
+
+		      if(typeof style.insertRule != 'undefined') {//W3C
+              	// console.log('insertRule');
+              	style.insertRule("@keyframes scrollToTop{0%{ background-position: 0 0; }50%{ background-position: 0 -"+param+"px;}100%{ background-position: 0 0; }}",0);//写入样式
+		      }else if(typeof style.addRule != 'undefined') {//IE
+		      	// console.log('addRule');
+		      	style.addRule("@keyframes scrollToTop{0%{ background-position: 0 0; }50%{ background-position: 0 -"+param+"px;}100%{ background-position: 0 0; }}",0);//写入样式
+		      }
+
+              // setTimeout(function() {
+              // 	console.log(style);
+              // }, 100);
+              
+              //时间根据图片的高度区分
+              var time = coverFullDisplayHeight / 200;
+              // console.log('time:' + time);
+              var infinite = "";
+              if (coverFullDisplayHeight / coverHeight > 2)
+              {
+                  infinite = "infinite";
+              }
+              // console.log('infinite_value:' + infinite);
+
+              $("#fh5co-aside").css("-webkit-animation", "scrollToTop "+time+"s "+infinite+" linear");
+              $("#fh5co-aside").css("animation", "scrollToTop "+time+"s "+infinite+" linear");
+
+              $("#fh5co-aside").each(function() {
+			     // 目前只设置兼容谷歌浏览器
+			     $(this)[0].addEventListener("webkitAnimationEnd",function(){
+			     	// console.log('webkitAnimationEnd');
+			     	 // 动画结束就直接去除这个动画,否则非循环的动画无法再次启用
+			         $(this).css("animation","");
+			     });
+			  });
+            });
+        }
     
         window.onload = function () {
             if (document.body.clientWidth <= 768) {
@@ -551,48 +654,11 @@
                 //$("#live2d-widget").attr("style", "display:block");
                 $("#live2d-widget").css("display", "block");
             }
+
+            window.addCount = 0;
+            // console.log(window.addCount);
             
-            // 获取的是包含url（“xxx.jpg”）形式的值
-            var cover = document.getElementById('fh5co-aside').style.backgroundImage;
-            //在iphoneX上的background-image的值是不包含双引号的：url(image.png)；而在其他手机上background-image的值是包含双引号的：url("image.png"),
-            cover = cover.split('(')[1].split(')')[0];
-            if(cover.indexOf('"') > -1){
-                cover = cover.split('"')[1].split('"')[0];
-            }
-            console.log('cover:' + cover);
-            //https://cdn.cnbj1.fds.api.mi-img.com/middle.community.vip.bkt/9c614771b4a2905d3b788141926fa15f
-            //https://michaelledger.github.io/image/english/friends/season2/friends_season2_cover.jpg
-            imgReady(cover, function () {
-              console.log('size ready: width=' + this.width + '; height=' + this.height);
-              
-              //获取组件高度
-              var cover = document.getElementById("fh5co-aside");
-              var coverHeight = cover.offsetHeight;  //高度px
-              var coverWidth = cover.offsetWidth;
-              console.log('coverHeight:' + coverHeight);
-              console.log('coverWidth:' + coverWidth);
-              
-              //换算成图片显示的高度
-              var coverFullDisplayHeight = coverWidth / this.width * this.height;
-              console.log('coverFullDisplayHeight:' + coverFullDisplayHeight);
-              //动画偏移量=图片显示高度-封面组件高度
-              var param = coverFullDisplayHeight - coverHeight;
-              console.log('param:' + param);
-              var style = document.styleSheets[0];
-              // style.insertRule("@keyframes rotate_before{from{ transform: translate(0%,0%); }to{ transform: translate(0%,"+param +"%);}}",9);//写入样式
-              style.insertRule("@keyframes scrollToTop{from{ background-position: center center; }to{ background-position: center -"+param+"px;}}",0);//写入样式
-              
-              //时间根据图片的高度区分
-              var time = this.height / 200;
-              console.log('time:' + time);
-              var infinite = "";
-              if (this.height / this.width > 1.2)
-              {
-                  infinite = "infinite";
-              }
-              $("#fh5co-aside").css("-webkit-animation", "scrollToTop "+time+"s "+infinite+" linear");
-              $("#fh5co-aside").css("animation", "scrollToTop "+time+"s "+infinite+" linear");
-            });
+            autoScrollCover();
         };
     
         $(window).resize( function  () {           //当浏览器大小变化时
@@ -603,6 +669,8 @@
              alert($(document.body).outerHeight( true ));  //浏览器时下窗口文档body的总高度 包括border padding margin
              */
             //console.log('width:' + document.body.clientWidth);
+
+            autoScrollCover();
             
             if (document.body.clientWidth <= 768) {
                 /*JS修改元素的样式*/

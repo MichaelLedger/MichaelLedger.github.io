@@ -359,9 +359,9 @@ h1, h2, h3, h4, h5, h6, figure {
   position: fixed;
   height: 100%;
   z-index: 555;
-  background-size: cover;
+  background-size: 100% auto;
   background-repeat: no-repeat;
-  background-position: center center;
+  /*background-position: center center;*/
   background-attachment: fixed;
   /*-webkit-animation: auto_scroll 5s linear infinite;
   animation: auto_scroll 5s linear infinite;*/
@@ -371,9 +371,9 @@ h1, h2, h3, h4, h5, h6, figure {
   position: relative;
   height: 600px;
   width: 100%;
-  background-size: cover;
+  background-size: 100% auto;
   background-repeat: no-repeat;
-  background-position: center center;
+  /*background-position: center center;*/
   background-attachment: fixed;
   /*-webkit-animation: auto_scroll 5s linear infinite;
   animation: auto_scroll 5s linear infinite;*/
