@@ -45,7 +45,6 @@
 
 	<!-- Gitalk is a modern comment component based on Github Issue and Preact. https://gitalk.github.io -->
 	<link rel="stylesheet" href="../gitalk/gitalk.css">
-
 	<script src="../gitalk/gitalk.min.js"></script>
 	<!-- Gitalk md5加密 clientID & ClientSecret -->
 	<script src="../gitalk/md5.min.js "></script>
@@ -60,7 +59,7 @@
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
-		<div id="fh5co-aside" style="background-image: url()" data-stellar-background-ratio="0.5">
+		<div id="fh5co-aside" style="background-image: url()"><!-- data-stellar-background-ratio="0.5" -->
 			<div class="overlay"></div>
 			<nav role="navigation">
 				<ul>
@@ -83,7 +82,7 @@
 		</div>
 	</div>
 
-	<div id="gitalk-container"></div>
+	<!-- <div id="gitalk-container"></div> -->
 
 	<div class="fh5co-navigation">
 		<div class="fh5co-cover prev fh5co-cover-sm" id="previous-post-cover" style="background-image: url()">
@@ -146,9 +145,6 @@
 	<script src="../public/static/bejson/convert/markdown.min.js"></script>
 	<script src="../public/static/bejson/convert/to-markdown.js"></script>
 
-	<!-- Marked: https://github.com/markedjs/marked -->
-	<!-- <script src="../public/marked/marked.min.js"></script> -->
-
 	<script type="text/javascript">
 		var dataList = new Array();
 		$(document).ready(function() {
@@ -195,7 +191,7 @@
 		})
 	</script>
 
-	<script type="text/javascript">
+<!-- 	<script type="text/javascript">
 		$(document).ready(function() {
 			const gitalk = new Gitalk({
 				  clientID: '0601261d21cac3d14073',
@@ -205,23 +201,45 @@
 				  admin: ['MichaelLedger'],
 				  id: location.pathname,      // Ensure uniqueness and length less than 50
 				  distractionFreeMode: false,  // Facebook-like distraction free mode
-				  language: 'zh-CN'
+				  language: 'zh-CN' // [en, zh-CN, zh-TW, es-ES, fr, ru]
 			})
 
 			gitalk.render('gitalk-container')
 		})
-	</script>
+	</script> -->
 
 	<!-- Gitalk 回调地址会自动去除'?'，故改用'#' 而修改hash不会刷新页面，需要监听锚部分的修改事件-->
 	<script type="text/javascript">
 		document.getElementsByTagName("BODY")[0].onhashchange = function() { hashChangedFunction()};
 		function hashChangedFunction() {
 		    // alert("锚部分已修改！");
-		    // 手动滚动到顶部
-		    document.body.scrollTop = 0;
+		    
 		    // Gitalk 回调地址会自动去除'?'，故改用'#'
             var englishId = getHashString("id");
 			fetchDetailData("english-content", englishId);
+
+			// 手动滚动到顶部
+		    // document.body.scrollTop = 0;
+
+		    //保证刷新后能滚动到准确的顶部位置
+		    $('html,body').animate({scrollTop: 0}, 0);
+
+		    autoScrollCover();
+
+		    //获取组件高度
+		 //    var cover = document.getElementById("fh5co-aside");
+			// var offset = cover.offsetHeight;  //高度px
+			// console.log(offset)
+
+			//延时处理
+			// setTimeout(function(){
+				// window.scrollBy(0,0)
+			// }, 0);//毫秒
+
+		 // var $objTr = $("#page-title"); //找到要定位的地方 tr 
+		 // // $objTr.css("background-color","lightgray"); //设置要定位地方的css 
+		 // var objTr = $objTr[0]; //转化为dom对象 
+		 // $("#page").animate({scrollTop:objTr.offsetTop},"slow"); //定位tr 
 		}
 	</script>
 
@@ -234,7 +252,8 @@
 						currentIndex = i;
 						var audioHtmlStr;
 						if (data.audio && data.audio.length > 0) {
-							audioHtmlStr = "<audio style=\"margin-bottom:20px\" preload=\"auto\" controls><source src=\""+ data.audio + "\" id='mp3_fileurl'></audio>";
+							// audioHtmlStr = "<audio style=\"margin-bottom:20px\" preload=\"auto\" controls><source src=\""+ data.audio + "\" id='mp3_fileurl'></audio>";
+							audioHtmlStr = "<audio class=\"fixed-audio\" preload=\"auto\" controls><source src=\""+ data.audio + "\" id='mp3_fileurl'></audio>";
 						} else {
 							audioHtmlStr = "";
 						}
@@ -300,6 +319,10 @@
 			  return null;
 			}
 			function convertMarkdownToHtml(markdownStr){
+				// showdown
+			    // var converter = new showdown.Converter();
+			    // var html = converter.makeHtml(markdown);
+
 			    // console.log('before:\n'+ markdownStr);
 
 			    // 将XML中的/n解析为<br/>
@@ -307,21 +330,9 @@
 
 			    // bejson
 			    var html = markdown.toHTML(markdownStr);
-
-				// marked
-				// var html = marked(markdownStr);
-
-				// showdown
-			    // var converter = new showdown.Converter();
-			    // var html = converter.makeHtml(markdownStr);
-
 			    html = html.replace(/&lt;br\/&gt;/g, '<br/>');// html转码，换行符正确解析
-			    html = html.replace(/<br\/>/g, '<br\/><br\/>');// 添加一个换行，美化排版
+			    // html = html.replace(/<br\/>/g, '<br\/><br\/>');// 添加一个换行，美化排版
 			    html = html.replace(/&amp;rsquo;/g, '\'');// &rsquo;正常解析为'
-
-				// jianshu math image
-				// let mathStr = "<img class=\"math-block\" src=\"https://math.jianshu.com/math?formula=f(x%2C%20y)%20%3D%20100%20*%20%5Clbrace%5B(x%20%2B%20y)%20*%203%5D%20-%2088%5Crbrace\" alt=\"f(x, y) = 100 * \lbrace[(x + y) * 3] - 88\rbrace\" mathimg=\"1\">";
-				// html = html.concat(mathStr);
 
 			    // console.log('after:\n' + html);
 			    
@@ -329,10 +340,10 @@
 			}
 	</script>
 
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
         /*7Core-CN - 网页鼠标点击特效（爱心）*/
         !function (e, t, a) {function r() {for (var e = 0; e < s.length; e++) s[e].alpha <= 0 ? (t.body.removeChild(s[e].el), s.splice(e, 1)) : (s[e].y--, s[e].scale += .004, s[e].alpha -= .013, s[e].el.style.cssText = "left:" + s[e].x + "px;top:" + s[e].y + "px;opacity:" + s[e].alpha + ";transform:scale(" + s[e].scale + "," + s[e].scale + ") rotate(45deg);background:" + s[e].color + ";z-index:99999");requestAnimationFrame(r)}function n() {var t = "function" == typeof e.onclick && e.onclick;e.onclick = function (e) {t && t(), o(e)}}function o(e) {var a = t.createElement("div");a.className = "heart", s.push({el: a,x: e.clientX - 5,y: e.clientY - 5,scale: 1,alpha: 1,color: c()}), t.body.appendChild(a)}function i(e) {var a = t.createElement("style");a.type = "text/css";try {a.appendChild(t.createTextNode(e))} catch (t) {a.styleSheet.cssText = e}t.getElementsByTagName("head")[0].appendChild(a)}function c() {return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"}var s = [];e.requestAnimationFrame = e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || function (e) {setTimeout(e, 1e3 / 60)}, i(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;}.heart:after{top: -5px;}.heart:before{left: -5px;}"), n(), r()}(window, document);
-	</script>
+	</script> -->
 
 	<script type="text/javascript" src="js/jparticle.min.js"></script>
 	<script type="text/javascript">
@@ -345,13 +356,511 @@
 			disableMouse:true,//禁止粒子间连线(鼠标)
 			particle: {
 				minSize: 1,//最小粒子
-				maxSize: 3,//最大粒子
+				maxSize: 5,//最大粒子
 				speed: 30,//粒子的动画速度
 			 }
 		});
 	});
 	</script>
 
+    <div id="page_end_html">
+        <!-- 底部加了小鱼<・)))><<~ -->
+        <div id="jsi-flying-fish-container"></div>
+        <script src='js/fish.js'></script>
+        <style>
+            @media only screen and (max-width: 767px){
+                #sidebar_search_box input[type=text]{width:calc(100% - 24px)}
+            }
+        </style>
+        
+        <!--音乐-->
+<!--        <link rel="stylesheet" href="css/APlayer.min.css">-->
+<!--        <div id="player" class="aplayer aplayer-withlist aplayer-fixed" data-id="3025663508" data-server="netease" data-type="playlist" data-order="random" data-fixed="true" data-listfolded="true" data-theme="#2D8CF0"></div>-->
+<!--        <script src="js/APlayer.min.js"></script>-->
+<!--        <script src="js/Meting.min.js"></script>-->
+        
+        <!--看板娘 - 猫-->
+        <!-- https://github.com/raoenhui/raoenhui.github.io -->
+        <!-- <script src="https://l2dwidget.js.org/lib/L2Dwidget.min.js"></script> -->
+        <!-- https://michaelledger.github.io/plugins/live2d/packages/live2d-widget-model-chitose/assets/exp/f01.exp.json -->
+<!--        <script src='https://michaelledger.github.io/plugins/live2d/src/L2Dwidget.min.js'></script>-->
+        <!-- model list:
+        https://michaelledger.github.io/plugins/live2d/packages/live2d-widget-model-chitose/assets/chitose.model.json
+        https://michaelledger.github.io/plugins/live2d/packages/live2d-widget-model-epsilon2_1/assets/Epsilon2.1.model.json
+        https://michaelledger.github.io/plugins/live2d/packages/live2d-widget-model-gf/assets/Gantzert_Felixander.model.json
+        
+        https://michaelledger.github.io/plugins/live2d/packages/live2d-widget-model-hijiki/assets/hijiki.model.json
+        https://michaelledger.github.io/plugins/live2d/packages/live2d-widget-model-izumi/assets/izumi.model.json
+        https://michaelledger.github.io/plugins/live2d/packages/live2d-widget-model-koharu/assets/koharu.model.json
+        
+        https://michaelledger.github.io/plugins/live2d/packages/live2d-widget-model-z16/assets/z16.model.json
+        -->
+<!--        <script>-->
+<!--            L2Dwidget.init({-->
+<!--                "model": {-->
+<!--                    jsonPath: 'https://michaelledger.github.io/plugins/live2d/packages/live2d-widget-model-z16/assets/z16.model.json',<!--这里改模型-->
+<!--                    "scale": 1-->
+<!--                },-->
+<!--                "display": {-->
+<!--                    "position": "left",<!--设置看板娘的上下左右位置-->
+<!--                    "width": 100,-->
+<!--                    "height": 200,-->
+<!--                    "hOffset": 70,-->
+<!--                    "vOffset": 0-->
+<!--                },-->
+<!--                "mobile": {-->
+<!--                    "show": true,-->
+<!--                    "scale": 0.5-->
+<!--                },-->
+<!--                "react": {-->
+<!--                    "opacityDefault": 0.7,<!--设置透明度-->
+<!--                    "opacityOnHover": 0.2-->
+<!--                }-->
+<!--            });-->
+<!--        window.onload = function(){-->
+<!--            $("#live2dcanvas").attr("style","position: fixed; opacity: 0.7; left: 70px; bottom: 0px; z-index: 1; pointer-events: none;")-->
+<!--        }-->
+<!--        </script>-->
+        <!--点击冒点-->
+        <canvas width="1777" height="841" style="position: fixed; left: 0px; top: 0px; z-index: 2147483647; pointer-events: none;"></canvas>
+        <script src="js/mouse-click.js"></script>
+    </div>
+    
+<!--    <script src='https://michaelledger.github.io/plugins/live2d/src/L2Dwidget.min.js'></script>-->
+    <script src='../plugins/live2d/src/L2Dwidget.min.js'></script>
+<!--    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="190" height="180" class="star">-->
+<!--        <polygon points="100,0 160,180 10,60 190,60 40,180" style="fill:yellow;stroke:yellow;stroke-width:1;"></polygon>-->
+<!--    </svg>-->
+    <script type="text/javascript">
+        L2Dwidget
+        .on('*', (name) => {
+            /*console.log('%c EVENT ' + '%c -> ' + name, 'background: #222; color: yellow', 'background: #fff; color: #000')*/
+        })
+        .init({
+            display: {
+                "position": "left",
+                "hOffset": 40
+            },
+            dialog: {
+                // 开启对话框
+                enable: true,
+                script: {
+                    // 每空闲 10 秒钟，显示一条一言
+                    'every idle 10s': '$hitokoto$',
+                    // 当触摸到星星图案
+                    'hover .star': '星星在天上而你在我心里 (*/ω＼*)',
+                    // 当触摸到角色身体
+                    'tap body': '哎呀！别碰我！',
+                    // 当触摸到角色头部
+                    'tap face': '人家已经不是小孩子了！'
+                }
+            }
+        });
+    </script>
+    <div id="live2d-widget" class="live2d-widget-container">
+        <div class="live2d-widget-dialog-container" style="transform: scale(0.8);">
+            <div class="live2d-widget-dialog" style="opacity: 0;">我，将某个人，唯一的某个人，试图锁定。我，</div>
+        </div><canvas id="live2dcanvas" width="400" height="800" style="position: absolute; left: 0px; top: 0px; width: 200px; height: 400px;"></canvas>
+    </div>
+    
+    <script type="text/javascript">
+        /*
+        document.addEventListener('DOMContentLoaded',function(){
+            //...
+        });
+         */
+    
+        var imgLoad = function (url, callback) {
+            var img = new Image();
+            img.src = url;
+            if (img.complete) {
+                callback(img.width, img.height);
+            } else {
+                img.onload = function () {
+                    callback(img.width, img.height);
+                    img.onload = null;
+                };
+            };
+        };
+
+        var imgReady = (function () {
+            var list = [], intervalId = null,
+            // 用来执行队列
+            tick = function () {
+                var i = 0;
+                for (; i < list.length; i++) {
+                    list[i].end ? list.splice(i--, 1) : list[i]();
+                };
+                !list.length && stop();
+            },
+            // 停止所有定时器队列
+            stop = function () {
+                clearInterval(intervalId);
+                intervalId = null;
+            };
+            return function (url, ready, load, error) {
+                var onready, width, height, newWidth, newHeight,
+                img = new Image();
+                img.src = url;
+                // 如果图片被缓存，则直接返回缓存数据
+                if (img.complete) {
+                    ready.call(img);
+                    load && load.call(img);
+                    return;
+                };
+                width = img.width;
+                height = img.height;
+                // 加载错误后的事件
+                img.onerror = function () {
+                    error && error.call(img);
+                    onready.end = true;
+                    img = img.onload = img.onerror = null;
+                };
+                // 图片尺寸就绪
+                onready = function () {
+                    newWidth = img.width;
+                    newHeight = img.height;
+                    if (newWidth !== width || newHeight !== height ||newWidth * newHeight > 1024) {
+                        // 如果图片已经在其他地方加载可使用面积检测
+                        ready.call(img);
+                        onready.end = true;
+                    };
+                };
+                onready();
+                // 完全加载完毕的事件
+                img.onload = function () {
+                    // onload在定时器时间差范围内可能比onready快
+                    // 这里进行检查并保证onready优先执行
+                    !onready.end && onready();
+                    load && load.call(img);
+                    // IE gif动画会循环执行onload，置空onload即可
+                    img = img.onload = img.onerror = null;
+                };
+                // 加入队列中定期执行
+                if (!onready.end) {
+                    list.push(onready);
+                    // 无论何时只允许出现一个定时器，减少浏览器性能损耗
+                    if (intervalId === null) intervalId = setInterval(tick, 40);
+                };
+            };
+        })();
+
+        /*移除动画*/
+		function autoScrollDeleted(){
+		    $("#fh5co-aside").css("-webkit-animation", "none 0 ease 0 1 normal");
+            $("#fh5co-aside").css("animation", "none 0 ease 0 1 normal");
+		}
+
+        /*暂停动画*/
+		function autoScrollPaused(){
+		 	/*animation必须是infinite，animation-play-state才有效*/
+		    document.getElementById("fh5co-aside").style.animationPlayState = "paused";
+		    document.getElementById("fh5co-aside").style.WebkitAnimationPlayState = "paused"; // 针对 Chrome 和 Safari 的代码
+		}
+
+		/*继续动画*/
+		function autoScrollResume(){
+		 	/*animation必须是infinite，animation-play-state才有效*/
+		    document.getElementById("fh5co-aside").style.animationPlayState = "running";
+		    document.getElementById("fh5co-aside").style.WebkitAnimationPlayState = "running"; // 针对 Chrome 和 Safari 的代码
+		}
+
+        function autoScrollCover() {
+        	// console.log('autoScrollCover');
+        	// 获取的是包含url（“xxx.jpg”）形式的值
+            var cover = document.getElementById('fh5co-aside').style.backgroundImage;
+            //在iphoneX上的background-image的值是不包含双引号的：url(image.png)；而在其他手机上background-image的值是包含双引号的：url("image.png"),
+            cover = cover.split('(')[1].split(')')[0];
+            if(cover.indexOf('"') > -1){
+                cover = cover.split('"')[1].split('"')[0];
+            }
+            // console.log('cover:' + cover);
+            //https://cdn.cnbj1.fds.api.mi-img.com/middle.community.vip.bkt/9c614771b4a2905d3b788141926fa15f
+            //https://michaelledger.github.io/image/english/friends/season2/friends_season2_cover.jpg
+            imgReady(cover, function () {
+              // console.log('size ready: width=' + this.width + '; height=' + this.height);
+              
+              //获取组件高度
+              var cover = document.getElementById("fh5co-aside");
+              var coverHeight = cover.offsetHeight;  //高度px
+              var coverWidth = cover.offsetWidth;
+              // console.log('coverHeight:' + coverHeight);
+              // console.log('coverWidth:' + coverWidth);
+              
+              //换算成图片显示的高度
+              var coverFullDisplayHeight = coverWidth / this.width * this.height;
+              // console.log('coverFullDisplayHeight:' + coverFullDisplayHeight);
+              //动画偏移量=图片显示高度-封面组件高度
+              var param = coverFullDisplayHeight - coverHeight;
+              // var param = coverFullDisplayHeight;
+              // console.log('param:' + param);
+              var style = document.styleSheets[0];
+
+              if (window.addCount > 0) {
+	              //Avoid redundant insert rules
+			      if(typeof style.deleteRule != 'undefined') {//W3C
+	              	// console.log('deleteRule');
+			        style.deleteRule(0);
+			      }else if(typeof style.removeRule != 'undefined') {//IE
+			      	// console.log('removeRule');
+			        style.removeRule(0);
+			      }
+              }
+
+              window.addCount = window.addCount + 1;
+              // console.log(window.addCount);
+
+              // define diff name to reset animation
+              var animationName;
+              if (window.addCount % 2 == 0) {
+              	animationName = "scrollToTop";
+              } else {
+              	animationName = "scrollToTop2";
+              }
+              // console.log('animationName:' + animationName);
+
+		      if(typeof style.insertRule != 'undefined') {//W3C
+              	// console.log('insertRule');
+              	style.insertRule("@keyframes "+animationName+"{0%{ background-position: 0 0; }50%{ background-position: 0 -"+param+"px;}100%{ background-position: 0 0; }}",0);//写入样式
+		      }else if(typeof style.addRule != 'undefined') {//IE
+		      	// console.log('addRule');
+		      	style.addRule("@keyframes "+animationName+"{0%{ background-position: 0 0; }50%{ background-position: 0 -"+param+"px;}100%{ background-position: 0 0; }}",0);//写入样式
+		      }
+
+              // setTimeout(function() {
+              // 	console.log(style);
+              // }, 100);
+              
+              //时间根据图片的高度区分
+              var time;
+              if (document.body.clientWidth > 768) {
+              	time = coverFullDisplayHeight / 100.0;
+              } else {
+              	time = coverFullDisplayHeight / 50.0;
+              }
+              // console.log('time:' + time);
+              var infinite = "";
+              if (coverFullDisplayHeight / coverHeight > 2)
+              {
+                  infinite = "infinite";
+              }
+              // console.log('infinite_value:' + infinite);
+
+              $("#fh5co-aside").css("-webkit-animation", ""+animationName+" "+time+"s "+infinite+" linear");
+              $("#fh5co-aside").css("animation", ""+animationName+" "+time+"s "+infinite+" linear");
+
+              $("#fh5co-aside").each(function() {
+			     // 目前只设置兼容谷歌浏览器
+			     $(this)[0].addEventListener("webkitAnimationEnd",function(){
+			     	// console.log('webkitAnimationEnd');
+			     	 // 动画结束就直接去除这个动画,否则非循环的动画无法再次启用
+			         $(this).css("animation","");
+			     });
+			  });
+            });
+        }
+    
+        window.onload = function () {
+            if (document.body.clientWidth <= 768) {
+                //$("#live2d-widget").attr("style", "display:none");
+                $("#live2d-widget").css("display", "none");
+            } else {
+                //$("#live2d-widget").attr("style", "display:block");
+                $("#live2d-widget").css("display", "block");
+            }
+
+            window.addCount = 0;
+            // console.log(window.addCount);
+            
+            autoScrollCover();
+        };
+    
+        $(window).resize( function  () {           //当浏览器大小变化时
+            /*
+             alert($(window).height());           //浏览器时下窗口可视区域高度
+             alert($(document).height());         //浏览器时下窗口文档的高度
+             alert($(document.body).height());    //浏览器时下窗口文档body的高度
+             alert($(document.body).outerHeight( true ));  //浏览器时下窗口文档body的总高度 包括border padding margin
+             */
+            //console.log('width:' + document.body.clientWidth);
+
+            setTimeout(function() {
+            	autoScrollCover();
+            }, 100);
+            
+            if (document.body.clientWidth <= 768) {
+                /*JS修改元素的样式*/
+                /*
+                 //1.原生Js法
+                 var a= document.getElementById("a");
+                 a.style.display="block";
+                 //2.用JQuery的css方法
+                 var a =$("#a");
+                 a.css("display","block");
+                 //3.用JQuery的attr方法
+                 var a =$("#a");
+                 a.attr("style","display:block");
+                 */
+                
+                $("#live2d-widget").css("display", "none");
+            } else {
+                $("#live2d-widget").css("display", "block");
+            }
+        });
+    
+        
+    </script>
 	</body>
+    
+    <style type="text/css">
+    #yddContainer {
+        display: block;
+        font-family: Microsoft YaHei;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        top: -4px;
+        left: -4px;
+        font-size: 12px;
+        border: 1px solid
+    }
+
+    #yddTop {
+        display: block;
+        height: 22px
+    }
+
+    #yddTopBorderlr {
+        display: block;
+        position: static;
+        height: 17px;
+        padding: 2px 28px;
+        line-height: 17px;
+        font-size: 12px;
+        color: #5079bb;
+        font-weight: bold;
+        border-style: none solid;
+        border-width: 1px
+    }
+
+    #yddTopBorderlr .ydd-sp {
+        position: absolute;
+        top: 2px;
+        height: 0;
+        overflow: hidden
+    }
+
+    .ydd-icon {
+        left: 5px;
+        width: 17px;
+        padding: 0px 0px 0px 0px;
+        padding-top: 17px;
+        background-position: -16px -44px
+    }
+
+    .ydd-close {
+        right: 5px;
+        width: 16px;
+        padding-top: 16px;
+        background-position: left -44px
+    }
+
+    #yddKeyTitle {
+        float: left;
+        text-decoration: none
+    }
+
+    #yddMiddle {
+        display: block;
+        margin-bottom: 10px
+    }
+
+    .ydd-tabs {
+        display: block;
+        margin: 5px 0;
+        padding: 0 5px;
+        height: 18px;
+        border-bottom: 1px solid
+    }
+
+    .ydd-tab {
+        display: block;
+        float: left;
+        height: 18px;
+        margin: 0 5px -1px 0;
+        padding: 0 4px;
+        line-height: 18px;
+        border: 1px solid;
+        border-bottom: none
+    }
+
+    .ydd-trans-container {
+        display: block;
+        line-height: 160%
+    }
+
+    .ydd-trans-container a {
+        text-decoration: none;
+    }
+
+    #yddBottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 22px;
+        line-height: 22px;
+        overflow: hidden;
+        background-position: left -22px
+    }
+
+    .ydd-padding010 {
+        padding: 0 10px
+    }
+
+    #yddWrapper {
+        color: #252525;
+        z-index: 10001;
+        background: url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ab20.png);
+    }
+
+    #yddContainer {
+        background: #fff;
+        border-color: #4b7598
+    }
+
+    #yddTopBorderlr {
+        border-color: #f0f8fc
+    }
+
+    #yddWrapper .ydd-sp {
+        background-image: url(chrome-extension://eopjamdnofihpioajgfdikhhbobonhbb/ydd-sprite.png)
+    }
+
+    #yddWrapper a,
+    #yddWrapper a:hover,
+    #yddWrapper a:visited {
+        color: #50799b
+    }
+
+    #yddWrapper .ydd-tabs {
+        color: #959595
+    }
+
+    .ydd-tabs,
+    .ydd-tab {
+        background: #fff;
+        border-color: #d5e7f3
+    }
+
+    #yddBottom {
+        color: #363636
+    }
+
+    #yddWrapper {
+        min-width: 250px;
+        max-width: 400px;
+    }
+    </style>
 </html>
 
