@@ -17,7 +17,7 @@
     background-color: #ffffff;
     color: #606266;
     border-radius: 6px;
-    margin: 0 1px;
+    margin: 5px 1px;
     border: 1px solid #ebebeb;
     height: 30px;
 }
@@ -43,11 +43,15 @@
     padding: 0 6px;
 }
 
+.pagination li span {
+    background: orange;
+    cursor: default;
+}
+
 .pagination li.totalPage:hover {
     transform: none;
     background-color: #ffffff;
 }
-
 
 .pagination li input {
     -webkit-appearance: none;
@@ -57,14 +61,14 @@
     border: 1px solid #dcdfe6;
     box-sizing: border-box;
     color: #606266;
-    display: inline-block;
+    /*display: inline-block;*/
     font-size: inherit;
     outline: none;
-    padding: 3px 5px;
+    /*padding: 3px 5px;*/
     transition: border-color .2s cubic-bezier(.645,.045,.355,1);
     width: 40px;
     height: 25px;
-    margin: 0 6px;
+    /*margin: 0 6px;*/
 }
 
 .pagination li input:focus{

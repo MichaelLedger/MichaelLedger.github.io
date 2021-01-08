@@ -85,7 +85,7 @@ Page.prototype = {
     firstPage: function firstPage() {
         var that = this;
         var li = document.createElement('li');
-        li.innerHTML = '首页';
+        li.innerHTML = 'HEAD';//首页
         this.ul.appendChild(li);
         li.onclick = function () {
             var val = parseInt(1);
@@ -160,7 +160,7 @@ Page.prototype = {
     finalPage: function finalPage() {
         var that = this;
         var li = document.createElement('li');
-        li.innerHTML = '尾页';
+        li.innerHTML = 'TAIL';//尾页
         this.ul.appendChild(li);
         li.onclick = function () {
             var yyfinalPage = that.pageTotal;
@@ -172,12 +172,17 @@ Page.prototype = {
     },
     //是否支持跳转
     showSkipInput: function showSkipInput() {
+        var li0 = document.createElement('li');
+        li0.innerHTML = 'Goto';//跳转到
+        li0.className = 'totalPage';
+        this.ul.appendChild(li0);
+
         var that = this;
         var li = document.createElement('li');
         li.className = 'totalPage';
-        var span1 = document.createElement('span');
-        span1.innerHTML = '跳转到';
-        li.appendChild(span1);
+        // var span1 = document.createElement('span');
+        // span1.innerHTML = 'Jump to';//跳转到
+        // li.appendChild(span1);
         var input = document.createElement('input');
         input.setAttribute("type","number");
         input.onkeydown = function (e) {
@@ -188,30 +193,35 @@ Page.prototype = {
                     that.curPage = val;
                     that.getPage(that.curPage);
                 }else{
-                    alert("请输入正确的页数 !")
+                    alert("Please input right page number!")//请输入正确的页数!
                 }
                 that.init();
             }
         };
         li.appendChild(input);
-        var span2 = document.createElement('span');
-        span2.innerHTML = '页';
-        li.appendChild(span2);
+        // var span2 = document.createElement('span');
+        // span2.innerHTML = 'page';//页
+        // li.appendChild(span2);
         this.ul.appendChild(li);
+
+        var li2 = document.createElement('li');
+        li2.innerHTML = 'page';//页
+        li2.className = 'totalPage';
+        this.ul.appendChild(li2);
     },
     //是否显示总页数,每页个数,数据
     showPageTotal: function showPageTotal() {
         var that = this;
         var li = document.createElement('li');
-        li.innerHTML = '共&nbsp' + that.pageTotal + '&nbsp页';
+        li.innerHTML = 'Total&nbsp' + that.pageTotal + '&nbspPages';//共、页
         li.className = 'totalPage';
         this.ul.appendChild(li);
         var li2 = document.createElement('li');
-        li2.innerHTML = '每页&nbsp' + that.pageAmount + '&nbsp条';
+        li2.innerHTML = 'Eachpage&nbsp' + that.pageAmount + '&nbspBlogs';//每页、条
         li2.className = 'totalPage';
         this.ul.appendChild(li2);
         var li3 = document.createElement('li');
-        li3.innerHTML = '合计&nbsp' + that.dataTotal + '&nbsp条数据';
+        li3.innerHTML = 'Total&nbsp' + that.dataTotal + '&nbspBlogs';//合计、条数据
         li3.className = 'totalPage';
         this.ul.appendChild(li3);
     }
