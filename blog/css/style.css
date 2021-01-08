@@ -359,10 +359,12 @@ h1, h2, h3, h4, h5, h6, figure {
   position: fixed;
   height: 100%;
   z-index: 555;
-  background-size: 100% auto;
+  /*background-size: 100% auto;*/
   background-repeat: no-repeat;
+  -moz-background-size:100% 100%;
+  background-size:100% 100%;
   /*background-position: center center;*/
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
   /*-webkit-animation: auto_scroll 5s linear infinite;
   animation: auto_scroll 5s linear infinite;*/
 }
@@ -408,11 +410,17 @@ h1, h2, h3, h4, h5, h6, figure {
     position: relative;
     z-index: 999;
     height: 220px;
+    background-repeat: no-repeat;
+    -moz-background-size:100% auto;
+    background-size:100% auto;
+    /*background-position: 0px 50%;*/
+    background-position: center center;
   }
   .single #fh5co-aside {
     position: relative;
     height: 220px;
     width: 100%;
+    background-position: top left;
   }
 }
 #fh5co-aside .overlay {
