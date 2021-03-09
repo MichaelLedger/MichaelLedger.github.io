@@ -83,7 +83,7 @@
 		</div>
 	</div>
 
-	<div id="pagination-content" style="position: fixed; bottom: 0px; background-color: #fff">
+	<div id="pagination-content">
 			<!-- pagination -->
 			<div>
 				<div id="pagination" class="pagination" style="margin: 0;"></div>
@@ -231,9 +231,13 @@
 		}
 
 		function autoAdaptFooter() {
-			var footer = document.getElementById("pagination-content");
-			var footerHeight = footer.offsetHeight;  //高度px
-			$("#" + "page").css({"margin-bottom" : footerHeight});
+			if (document.body.clientWidth > 768) {
+				var footer = document.getElementById("pagination-content");
+				var footerHeight = footer.offsetHeight;  //高度px
+				$("#" + "page").css({"margin-bottom" : footerHeight});
+			} else {
+				$("#" + "page").css({"margin-bottom" : 0});
+			}
 		}
 
 		$(window).resize( function  () {           //当浏览器大小变化时

@@ -579,14 +579,18 @@ footer {
 #pagination-content {
   margin-left: 38%;
   width: 62%;
-  position: relative;
   z-index: 999;
+  position: fixed;
+  bottom: 0px;
+  background-color: #fff
 }
 
 @media screen and (max-width: 768px) {
   #pagination-content {
     margin-left: 0;
     width: 100%;
+    position: relative;
+    background-color: #fff;
   }
 }
 
