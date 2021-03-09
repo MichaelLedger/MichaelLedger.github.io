@@ -80,13 +80,16 @@
 		<div id="fh5co-main-content">
 			<div class="fh5co-post" id="blog-content">
 			</div>
+		</div>
+	</div>
 
+	<div id="pagination-content" style="position: fixed; bottom: 0px; background-color: #fff">
 			<!-- pagination -->
-			<div style="margin: 0px 20px 0px 20px;">
-				<div id="pagination" class="pagination"></div>
+			<div>
+				<div id="pagination" class="pagination" style="margin: 0;"></div>
 			</div>
 
-			<footer>
+			<footer id="blog-footer">
 				<div>
 					Copyright &copy; 2018-2021 MTX Software Technology Co.,Ltd. All rights reserved. Designed by <a href="index.html" target="_blank">MichaelLedger</a>.
 					<br/>
@@ -94,8 +97,6 @@
 				</div>
 			</footer>
 		</div>
-	</div>
-
 	
 
 	<div class="gototop js-top">
@@ -214,6 +215,8 @@
                 	} else if (TS === 'success') {
                 		//console.log('==fetchXMLDataSuccess==');
                 	}
+
+                	autoAdaptFooter();
                 },
                 error: function(XMLHttpRequest, textStatus, errorThrown) {
 //          textStatus: "timeout", "error", "notmodified" 和 "parsererror"。
@@ -226,7 +229,19 @@
                 }
             });
 		}
+
+		function autoAdaptFooter() {
+			var footer = document.getElementById("pagination-content");
+			var footerHeight = footer.offsetHeight;  //高度px
+			$("#" + "page").css({"margin-bottom" : footerHeight});
+		}
+
+		$(window).resize( function  () {           //当浏览器大小变化时
+            autoAdaptFooter();
+        });
 	</script>
+
+
 	<script type="text/javascript">
 		function fetchPageData(divIdentifier, currentPage, pageSize) {
 			if (!divIdentifier) return;

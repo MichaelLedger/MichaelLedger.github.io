@@ -28,6 +28,7 @@ body {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+
 .offcanvas #page {
   overflow: hidden;
   position: absolute;
@@ -572,6 +573,20 @@ footer {
 @media screen and (max-width: 768px) {
   #fh5co-main-content {
     margin-left: 0;
+  }
+}
+
+#pagination-content {
+  margin-left: 38%;
+  width: 62%;
+  position: relative;
+  z-index: 999;
+}
+
+@media screen and (max-width: 768px) {
+  #pagination-content {
+    margin-left: 0;
+    width: 100%;
   }
 }
 
