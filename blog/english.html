@@ -186,6 +186,7 @@
                     // Gitalk 回调地址会自动去除'?'，故改用'#'
                     var englishId = getHashString("id");
 					fetchDetailData("english-content", englishId);
+					autoPlayMusic();
                 }
             });
 		})
@@ -226,6 +227,8 @@
 
 		    autoScrollCover();
 
+		    autoPlayMusic();
+
 		    //获取组件高度
 		 //    var cover = document.getElementById("fh5co-aside");
 			// var offset = cover.offsetHeight;  //高度px
@@ -252,12 +255,12 @@
 						currentIndex = i;
 						var audioHtmlStr;
 						if (data.audio && data.audio.length > 0) {
-							// audioHtmlStr = "<audio style=\"margin-bottom:20px\" preload=\"auto\" controls><source src=\""+ data.audio + "\" id='mp3_fileurl'></audio>";
-							audioHtmlStr = "<audio class=\"fixed-audio\" preload=\"auto\" controls><source src=\""+ data.audio + "\" id='mp3_fileurl'></audio>";
+							audioHtmlStr = "<audio class=\"fixed-audio\" preload=\"auto\" autoplay controls id=\"audiojs\"><source src=\""+ data.audio + "\"></audio>";
 						} else {
 							audioHtmlStr = "";
 						}
-						
+
+						// var constrols = "<button id=\"down\">↓</button><button id=\"up\">↑</button>";
 						var textHtmlStr = convertMarkdownToHtml(data.content);
 						// document.all[divIdentifier].innerHTML = content;
 						// document.getElementById(divIdentifier).innerHTML = content;
@@ -299,8 +302,34 @@
 						break;
 					}
 				}
-				
+			}
+			function autoPlayMusic() {
+				// auto play music
+				var audio = document.getElementById('audiojs');
+				audio.play();
+				// reset audio volume
+				audio.volume = 0.8;
 
+				// document.addEventListener('DOMContentLoaded', function () {
+				// 	console.log("DOMContentLoaded");
+				// 	function audioAutoPlay() {
+				// 		var audio = document.getElementById('audiojs');
+				// 		audio.play();
+				// 		document.addEventListener("WeixinJSBridgeReady", function () {
+				// 			audio.play();
+				// 		}, false);
+				// 	}
+				// 	audioAutoPlay();
+				// });
+ 
+ 				// if (/i(Phone|P(o|a)d)/.test(navigator.userAgent)) {
+ 				// 	$(document).one('touchstart', function(e) {
+ 				// 		console.log("touchstart");
+ 				// 		$('#audiojs').get(0).touchstart = true;
+ 				// 		$('#audiojs').get(0).play();
+ 				// 		return false;
+ 				// 	});
+ 				// }
 			}
 			function getQueryString(name) {
 			  var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
@@ -339,6 +368,25 @@
 			    return html;
 			}
 	</script>
+
+	<!-- <script>
+		$(function(){
+		    let vol = $('#audiojs')[0].volume;
+		    $('#audiojs').on('canplay',function(){
+		        this.play()
+		    });
+		    $('#down').click(function(){
+		        console.log( vol)
+		        vol =vol>0?(vol*10 -1)/10:0;
+		        $('#audiojs')[0].volume = vol;
+		    })
+		      $('#up').click(function(){
+		      console.log( vol)
+		        vol =vol<1?(vol*10 +1)/10:1;
+		        $('#audiojs')[0].volume = vol;
+		    })
+		})
+    </script> -->
 
 	<!-- <script type="text/javascript">
         /*7Core-CN - 网页鼠标点击特效（爱心）*/
