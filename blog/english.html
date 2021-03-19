@@ -310,26 +310,24 @@
 				// reset audio volume
 				audio.volume = 0.8;
 
-				// document.addEventListener('DOMContentLoaded', function () {
-				// 	console.log("DOMContentLoaded");
-				// 	function audioAutoPlay() {
-				// 		var audio = document.getElementById('audiojs');
-				// 		audio.play();
-				// 		document.addEventListener("WeixinJSBridgeReady", function () {
-				// 			audio.play();
-				// 		}, false);
-				// 	}
-				// 	audioAutoPlay();
-				// });
+				document.addEventListener('DOMContentLoaded', function () {
+					function audioAutoPlay() {
+						var audio = document.getElementById('audiojs');
+						audio.play();
+						document.addEventListener("WeixinJSBridgeReady", function () {
+							audio.play();
+						}, false);
+					}
+					audioAutoPlay();
+				});
  
- 				// if (/i(Phone|P(o|a)d)/.test(navigator.userAgent)) {
- 				// 	$(document).one('touchstart', function(e) {
- 				// 		console.log("touchstart");
- 				// 		$('#audiojs').get(0).touchstart = true;
- 				// 		$('#audiojs').get(0).play();
- 				// 		return false;
- 				// 	});
- 				// }
+ 				if (/i(Phone|P(o|a)d)/.test(navigator.userAgent)) {
+ 					$(document).one('touchstart', function(e) {
+ 						$('#audiojs').get(0).touchstart = true;
+ 						$('#audiojs').get(0).play();
+ 						return false;
+ 					});
+ 				}
 			}
 			function getQueryString(name) {
 			  var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
