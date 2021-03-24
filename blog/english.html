@@ -306,6 +306,7 @@
 			function autoPlayMusic() {
 				// auto play music
 				var audio = document.getElementById('audiojs');
+				// Safari support remote resource auto play need manual setting: Safari -> Preferences -> Websites -> Autoplay
 				audio.play();
 				// reset audio volume
 				audio.volume = 0.8;
