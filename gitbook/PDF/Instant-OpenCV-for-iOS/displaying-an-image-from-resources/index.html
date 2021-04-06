@@ -1,0 +1,336 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Displaying an image from resources (Simple) · Instant OpenCV for iOS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../linking-opencv-to-an-ios-project/" />
+    
+    
+    <link rel="prev" href="../getting-started-with-ios/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Instant OpenCV for iOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../getting-started-with-ios/">
+            
+                <a href="../getting-started-with-ios/">
+            
+                    
+                    Getting started with iOS (Simple)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Displaying an image from resources (Simple)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../linking-opencv-to-an-ios-project/">
+            
+                <a href="../linking-opencv-to-an-ios-project/">
+            
+                    
+                    Linking OpenCV to an iOS project (Simple)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Displaying an image from resources (Simple)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="displaying-an-image-from-resources-simple">Displaying an image from resources (Simple)</h2>
+<p>Every application may keep some images in its resources, such as textures or icons. In this recipe, we&apos;ll study how one can add an image to resources, load it into the UIImage object, and then display it on the screen. We will use the UIImageView component for that purpose, and get familiar with the important Model-View-Controller (MVC) design pattern.</p>
+<p>In this recipe we have implemented our first GUI on iOS. We&apos;ll now discuss some basic concepts related to GUI development. The most important idea is using Model-View-Controller design pattern, which separates visual representation, user interaction logic, and the core logic of the application. There are three parts in this pattern:</p>
+<ol>
+<li><strong>Model</strong>: This contains business logic, such as data and algorithms for data processing. It does not know how this information should be presented to the user.</li>
+<li><strong>View</strong>: This is responsible for visualization. It can be imagined as some GUI form with visual components on it (for example, buttons, labels, and so on).</li>
+<li><strong>Controller</strong>: This provides communication between the user and the system core. It monitors the user&apos;s input and uses Model and a View to implement the necessary response.</li>
+</ol>
+<h4 id="code-snippet"><a href="https://github.com/MichaelLedger/Instant-OpenCV-for-iOS-Sample" target="_blank">Code Snippet</a></h4>
+<pre><code>//
+//  ViewController.m
+//  Recipe02_DisplayingImage
+//
+//  Created by MichaelLedger on 2021/3/23.
+//
+
+#import &quot;ViewController.h&quot;
+
+@interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    // Read the image
+    /*
+     &#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x7528;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x7684;&#x540D;&#x5B57;&#x5728;&#x7CFB;&#x7EDF;&#x7F13;&#x5B58;&#x4E2D;&#x67E5;&#x627E;&#x5E76;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x56FE;&#x7247;&#x5BF9;&#x8C61;&#x5982;&#x679C;&#x5B83;&#x5B58;&#x5728;&#x7684;&#x8BDD;&#x3002;&#x5982;&#x679C;&#x7F13;&#x5B58;&#x4E2D;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x76F8;&#x5E94;&#x7684;&#x56FE;&#x7247;&#xFF0C;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x4ECE;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x6863;&#x4E2D;&#x52A0;
+     &#x8F7D;&#x7136;&#x540E;&#x7F13;&#x5B58;&#x5E76;&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;&#x56E0;&#x6B64;&#x7684;&#x4F18;&#x70B9;&#x662F;&#x5F53;&#x52A0;&#x8F7D;&#x65F6;&#x4F1A;&#x7F13;&#x5B58;&#x56FE;&#x7247;&#x3002;&#x6240;&#x4EE5;&#x5F53;&#x56FE;&#x7247;&#x4F1A;&#x9891;&#x7E41;&#x7684;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x90A3;&#x4E48;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x4F1A;&#x6BD4;&#x8F83;&#x597D;&#x3002;&#x4F46;&#x6B63;&#x662F;&#x56E0;&#x6B64;&#x4F7F;&#x7528;&#x4F1A;&#x7F13;&#x5B58;&#x56FE;&#x7247;&#xFF0C;&#x5373;
+     &#x5C06;&#x56FE;&#x7247;&#x7684;&#x6570;&#x636E;&#x653E;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;iOS&#x7684;&#x5185;&#x5B58;&#x975E;&#x5E38;&#x73CD;&#x8D35;&#x5E76;&#x4E14;&#x5728;&#x5185;&#x5B58;&#x6D88;&#x8017;&#x8FC7;&#x5927;&#x65F6;&#xFF0C;&#x4F1A;&#x5F3A;&#x5236;&#x91CA;&#x653E;&#x5185;&#x5B58;&#xFF0C;&#x5373;&#x4F1A;&#x9047;&#x5230;memory warnings&#x3002;
+
+     &#x5BF9;&#x4E8E;&#x540C;&#x4E00;&#x4E2A;&#x56FE;&#x50CF;&#x7CFB;&#x7EDF;&#x53EA;&#x4F1A;&#x628A;&#x5B83;Cache&#x5230;&#x5185;&#x5B58;&#x4E00;&#x6B21;&#xFF0C;&#x8FD9;&#x5BF9;&#x4E8E;&#x56FE;&#x50CF;&#x7684;&#x91CD;&#x590D;&#x5229;&#x7528;&#x662F;&#x975E;&#x5E38;&#x6709;&#x4F18;&#x52BF;&#x7684;&#x3002;&#x4F8B;&#x5982;&#xFF1A;&#x4F60;&#x9700;&#x8981;&#x5728;&#x4E00;&#x4E2A;TableView&#x91CC;&#x91CD;&#x590D;&#x52A0;&#x8F7D;&#x540C;&#x6837;&#x4E00;&#x4E2A;&#x56FE;&#x6807;&#xFF0C;
+     &#x90A3;&#x4E48;&#x7528;imageNamed&#x52A0;&#x8F7D;&#x56FE;&#x50CF;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x628A;&#x90A3;&#x4E2A;&#x56FE;&#x6807;Cache&#x5230;&#x5185;&#x5B58;&#xFF0C;&#x5728;Table&#x91CC;&#x6BCF;&#x6B21;&#x5229;&#x7528;&#x90A3;&#x4E2A;&#x56FE;&#x50CF;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53EA;&#x4F1A;&#x628A;&#x56FE;&#x7247;&#x6307;&#x9488;&#x6307;&#x5411;&#x540C;&#x4E00;&#x5757;&#x5185;&#x5B58;&#x3002;
+     &#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4F7F;&#x7528;imageNamed&#x52A0;&#x8F7D;&#x56FE;&#x50CF;&#x5C31;&#x4F1A;&#x53D8;&#x5F97;&#x975E;&#x5E38;&#x6709;&#x6548;&#x3002;
+     */
+//    UIImage *image = [UIImage imageNamed:@&quot;picture&quot;];
+
+    /*
+     &#x4EC5;&#x52A0;&#x8F7D;&#x56FE;&#x7247;&#xFF0C;&#x56FE;&#x50CF;&#x6570;&#x636E;&#x4E0D;&#x4F1A;&#x7F13;&#x5B58;&#x3002;&#x56E0;&#x6B64;&#x5BF9;&#x4E8E;&#x8F83;&#x5927;&#x7684;&#x56FE;&#x7247;&#x4EE5;&#x53CA;&#x4F7F;&#x7528;&#x60C5;&#x51B5;&#x8F83;&#x5C11;&#x65F6;&#xFF0C;&#x90A3;&#x5C31;&#x53EF;&#x4EE5;&#x7528;&#x8BE5;&#x65B9;&#x6CD5;&#xFF0C;&#x964D;&#x4F4E;&#x5185;&#x5B58;&#x6D88;&#x8017;
+     */
+    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@&quot;picture&quot; ofType:@&quot;jpg&quot;];
+//    NSData *imageData = [NSData dataWithContentsOfFile:imagePath];
+//    UIImage *image = [UIImage imageWithData:imageData];
+    UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
+
+    _imageView.image = image; // Displaying the image
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self-&gt;_imageView.image = nil; // Eliminate the image after 3 seconds
+    });
+}
+
+
+@end
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../getting-started-with-ios/" class="navigation navigation-prev " aria-label="Previous page: Getting started with iOS (Simple)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../linking-opencv-to-an-ios-project/" class="navigation navigation-next " aria-label="Next page: Linking OpenCV to an iOS project (Simple)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Displaying an image from resources (Simple)","level":"1.1.2","depth":2,"next":{"title":"Linking OpenCV to an iOS project (Simple)","level":"1.1.3","depth":2,"path":"linking-opencv-to-an-ios-project/README.md","ref":"linking-opencv-to-an-ios-project/README.md","articles":[]},"previous":{"title":"Getting started with iOS (Simple)","level":"1.1.1","depth":2,"path":"getting-started-with-ios/README.md","ref":"getting-started-with-ios/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","include"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"include":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Instant OpenCV for iOS","gitbook":"*","description":"Instant OpenCV for iOS is a practical guide, showing every important step for building a computer vision application for the iOS platform."},"file":{"path":"displaying-an-image-from-resources/README.md","mtime":"2021-03-29T02:11:28.731Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-06T09:49:02.930Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

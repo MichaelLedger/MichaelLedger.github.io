@@ -1,0 +1,573 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Linking OpenCV to an iOS project (Simple) · Instant OpenCV for iOS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../displaying-an-image-from-resources/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Instant OpenCV for iOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../getting-started-with-ios/">
+            
+                <a href="../getting-started-with-ios/">
+            
+                    
+                    Getting started with iOS (Simple)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../displaying-an-image-from-resources/">
+            
+                <a href="../displaying-an-image-from-resources/">
+            
+                    
+                    Displaying an image from resources (Simple)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Linking OpenCV to an iOS project (Simple)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Linking OpenCV to an iOS project (Simple)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="linking-opencv-to-an-ios-project-simple">Linking OpenCV to an iOS project (Simple)</h2>
+<p>For now, we have some basic framework for testing image processing and computer vision algorithms. Now it&apos;s time to add OpenCV to your project and add your first call to the library. You will learn how to convert UIImage to cv::Mat, and make a call to the C++ library using Objective-C code.</p>
+<h4 id="getting-ready">Getting ready</h4>
+<p>First you should download the OpenCV framework for iOS from the official website at <a href="http://opencv.org" target="_blank">http://opencv.org</a>. In this book, we will use Version 2.4.6. You can use the iOS Simulator to work on this recipe. Source code for this recipe can be found in the Recipe03_LinkingOpenCV folder in the code bundle that accompanies this book.</p>
+<h4 id="how-to-do-it">How to do it...</h4>
+<p>The following are the main steps to accomplish the task:</p>
+<ol>
+<li>Add the OpenCV framework to your project.</li>
+<li>Convert image to the OpenCV format.</li>
+<li>Process image with a simple OpenCV call.</li>
+<li>Convert image back.</li>
+<li>Display image as before.</li>
+</ol>
+<p>Let&apos;s implement the described steps:</p>
+<p>1) We continue modifying the previous project, so that you can use it; otherwise create a new project with UIImageView. We&apos;ll start by adding the OpenCV framework to the Xcode project. There are two ways to do it.</p>
+<p>You can add the framework as a resource as described in previous recipe. This is a straightforward approach. Alternatively, the framework can be added through project properties by navigating to <strong>Project | Build Phases | Link Binary With Libraries</strong>.To open project properties you should click to the project name in the Project Navigator area.</p>
+<p>Navigating to <strong>Targets | Build Settings | Search Paths | Framework Search Paths</strong>, Add framework search path as following:</p>
+<p><code>&quot;$(SRCROOT)/../Library/OpenCV/Releases/3.0.0-ios&quot;</code></p>
+<p>2) Next, we&apos;ll include OpenCV header files to our project. In order to do so, we will modify the <code>PrefixHeader.pch</code> precompiled header. To avoid conflicts, we will add the following code to the very beginning of the file, above all other imports:</p>
+<pre><code>//
+//  PrefixHeader.pch
+//  Recipe03_LinkingOpenCV
+//
+//  Created by MichaelLedger on 2021/3/24.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __cplusplus
+#import &lt;opencv2/opencv.hpp&gt;
+#endif
+
+#endif /* PrefixHeader_pch */
+</code></pre><p>Navigating to <strong>Target | Build Settings | Apple Clang - Language | Prefix Header</strong>,  set path as following:</p>
+<p><code>$(SRCROOT)/Recipe03_LinkingOpenCV/PrefixHeader.pch</code></p>
+<p>This is needed, because OpenCV redefines some names, for example, min/max functions.</p>
+<p>3) Rename <code>ViewController.m</code> as <code>ViewController.mm</code> to tell GCC this file mixed Objective-C &amp; C++.
+    <del>Set the value of Compile Sources As property as Objective-C++. The property is available in the project settings and can be accessed by navigating to Project | Build Settings | Apple LLVM compiler 4.1 - Language.</del></p>
+<p>4) To convert the images from UIImage to cv::Mat, you can use the following functions:</p>
+<p><a href="https://github.com/opencv/opencv/blob/master/modules/imgcodecs/src/apple_conversions.mm" target="_blank">apple_conversions.mm</a></p>
+<pre><code>// This file is part of OpenCV project.
+// It is subject to the license terms in the LICENSE file found in the top-level directory
+// of this distribution and at http://opencv.org/license.html.
+
+#include &quot;apple_conversions.h&quot;
+#include &quot;precomp.hpp&quot;
+
+CGImageRef MatToCGImage(const cv::Mat&amp; image) {
+    NSData *data = [NSData dataWithBytes:image.data
+                                  length:image.step.p[0] * image.rows];
+
+    CGColorSpaceRef colorSpace;
+
+    if (image.elemSize() == 1) {
+        colorSpace = CGColorSpaceCreateDeviceGray();
+    } else {
+        colorSpace = CGColorSpaceCreateDeviceRGB();
+    }
+
+    CGDataProviderRef provider =
+            CGDataProviderCreateWithCFData((__bridge CFDataRef)data);
+
+    // Preserve alpha transparency, if exists
+    bool alpha = image.channels() == 4;
+    CGBitmapInfo bitmapInfo = (alpha ? kCGImageAlphaLast : kCGImageAlphaNone) | kCGBitmapByteOrderDefault;
+
+    // Creating CGImage from cv::Mat
+    CGImageRef imageRef = CGImageCreate(image.cols,
+                                        image.rows,
+                                        8 * image.elemSize1(),
+                                        8 * image.elemSize(),
+                                        image.step.p[0],
+                                        colorSpace,
+                                        bitmapInfo,
+                                        provider,
+                                        NULL,
+                                        false,
+                                        kCGRenderingIntentDefault
+                                        );
+
+    CGDataProviderRelease(provider);
+    CGColorSpaceRelease(colorSpace);
+
+    return imageRef;
+}
+
+void CGImageToMat(const CGImageRef image, cv::Mat&amp; m, bool alphaExist) {
+    CGColorSpaceRef colorSpace = CGImageGetColorSpace(image);
+    CGFloat cols = CGImageGetWidth(image), rows = CGImageGetHeight(image);
+    CGContextRef contextRef;
+    CGBitmapInfo bitmapInfo = kCGImageAlphaPremultipliedLast;
+    if (CGColorSpaceGetModel(colorSpace) == kCGColorSpaceModelMonochrome)
+    {
+        m.create(rows, cols, CV_8UC1); // 8 bits per component, 1 channel
+        bitmapInfo = kCGImageAlphaNone;
+        if (!alphaExist)
+            bitmapInfo = kCGImageAlphaNone;
+        else
+            m = cv::Scalar(0);
+        contextRef = CGBitmapContextCreate(m.data, m.cols, m.rows, 8,
+                                           m.step[0], colorSpace,
+                                           bitmapInfo);
+    }
+    else if (CGColorSpaceGetModel(colorSpace) == kCGColorSpaceModelIndexed)
+    {
+        // CGBitmapContextCreate() does not support indexed color spaces.
+        colorSpace = CGColorSpaceCreateDeviceRGB();
+        m.create(rows, cols, CV_8UC4); // 8 bits per component, 4 channels
+        if (!alphaExist)
+            bitmapInfo = kCGImageAlphaNoneSkipLast |
+                                kCGBitmapByteOrderDefault;
+        else
+            m = cv::Scalar(0);
+        contextRef = CGBitmapContextCreate(m.data, m.cols, m.rows, 8,
+                                           m.step[0], colorSpace,
+                                           bitmapInfo);
+        CGColorSpaceRelease(colorSpace);
+    }
+    else
+    {
+        m.create(rows, cols, CV_8UC4); // 8 bits per component, 4 channels
+        if (!alphaExist)
+            bitmapInfo = kCGImageAlphaNoneSkipLast |
+                                kCGBitmapByteOrderDefault;
+        else
+            m = cv::Scalar(0);
+        contextRef = CGBitmapContextCreate(m.data, m.cols, m.rows, 8,
+                                           m.step[0], colorSpace,
+                                           bitmapInfo);
+    }
+    CGContextDrawImage(contextRef, CGRectMake(0, 0, cols, rows),
+                       image);
+    CGContextRelease(contextRef);
+}
+</code></pre><p>5) These functions are included into the library starting from Version 2.4.6 of OpenCV. In order to use them, you should include the ios.h header file.</p>
+<p><code>#import &quot;opencv2/imgcodecs/ios.h&quot;</code>
+<del><code>#import &quot;opencv2/highgui/ios.h&quot;</code></del></p>
+<p>6) We won&apos;t explain these functions in this recipe, because it requires from readers some knowledge about CGImage and UIImage classes; but the use of these methods is really simple. Let&apos;s consider a simple example that extracts edges from the image. In order to do so, you have to add the following code to the viewDidLoad() method:</p>
+<pre><code>UIImage *image = [UIImage imageNamed:@&quot;FF7&quot;];
+
+cv::Mat cvImage;
+
+// Convert UIImage* to cv::Mat
+UIImageToMat(image, cvImage);
+
+if (!cvImage.empty())
+{
+    cv::Mat gray;
+
+    // Convert the image to grayscale
+//        cv::cvtColor(cvImage, gray, CV_RGBA2GRAY);
+    cv::cvtColor(cvImage, gray, cv::COLOR_RGBA2GRAY);//COLOR_RGBA2GRAY&#x3001;COLOR_BGR2GRAY&#x3001;COLOR_BGR2HSV
+
+    // Apply Gaussian filter to remove small edges
+    cv::GaussianBlur(gray, gray, cv::Size(5, 5), 1.2, 1.2);
+
+    // Calculate edges with Canny
+    cv::Mat edges;
+    cv::Canny(gray, edges, 0, 50);
+
+    // Fill image with white color
+    cvImage.setTo(cv::Scalar::all(255));
+
+    // Change color on edges
+    cvImage.setTo(cv::Scalar(0, 128, 255, 255), edges);
+
+    // Convert cv::Mat to UIImage* and show the resulting image
+    self.iv.image = MatToUIImage(cvImage);
+}
+</code></pre><p>Now run your application and check whether the application finds edges on the image correctly.</p>
+<hr>
+<p><strong>Please note that this is probably the most important performance tip&#x2014;to be very careful while working with memory in mobile applications. Avoid memory reallocations and copying as much as possible. Images require quite large chunks of memory, and you should reuse them between iterations. For example, if your application has some pipeline, you should preallocate all buffers and use the same memory while processing new frames.</strong></p>
+<hr>
+<h3 id="theres-more">There&apos;s more...</h3>
+<p>The following is additional advice.</p>
+<p><strong>Objective-C++</strong></p>
+<p>There is one more way to add support of Objective-C++ to your project. You should just change the extension of the source files to .mm where you plan to use C++ code. This extension is specific to Objective-C++ code.</p>
+<p><strong>Converting to cv::Mat</strong></p>
+<p>If you don&apos;t want to use UIImage, but want to load an image to cv::Mat directly, you can do it using the following code:</p>
+<pre><code>// Create file handle NSFileHandle* handle =
+[NSFileHandle fileHandleForReadingAtPath:filePath]; // Read content of the file
+NSData* data = [handle readDataToEndOfFile];
+// Decode image from the data buffer
+cvImage = cv::imdecode(cv::Mat(1, [data length], CV_8UC1, (void*)data.bytes),
+                          CV_LOAD_IMAGE_UNCHANGED);
+</code></pre><p>In this example we read the file content to the buffer and call the cv::imdecode function to decode the image. But there is one important note; if you later want to convert cv::Mat to the UIImage, you should change the channel order from BGR to RGB, as OpenCV&apos;s native image format is BGR.</p>
+<h4 id="code-snippet"><a href="https://github.com/MichaelLedger/Instant-OpenCV-for-iOS-Sample" target="_blank">Code Snippet</a></h4>
+<pre><code>//
+//  ViewController.mm
+//  Recipe03_LinkingOpenCV
+//
+//  Created by MichaelLedger on 2021/3/24.
+//
+
+/*
+ &#x5728;opencv&#x4E2D;&#x6709;&#x8D85;&#x8FC7;150&#x79CD;&#x989C;&#x8272;&#x7A7A;&#x95F4;&#x8F6C;&#x6362;&#x65B9;&#x6CD5;&#xFF08;&#x9707;&#x60CA;-_-&#xFF09;
+ &#x4F46;&#x662F;&#x7ECF;&#x5E38;&#x7528;&#x7684;&#x53EA;&#x6709;BGR-&#x7070;&#x5EA6;&#x56FE;&#x548C;BGR-HSV
+
+ &#x4F7F;&#x7528;&#x51FD;&#x6570;cv2.cvtColor(input_image &#xFF0C;flag)&#xFF0C;flag&#x662F;&#x8F6C;&#x6362;&#x7C7B;&#x578B;
+
+ BGR&#x548C;&#x7070;&#x5EA6;&#x56FE;&#x7684;&#x8F6C;&#x6362;&#x4F7F;&#x7528; cv2.COLOR_BGR2GRAY
+ BGR&#x548C;HSV&#x7684;&#x8F6C;&#x6362;&#x4F7F;&#x7528; cv2.COLOR_BGR2HSV
+ */
+
+#import &quot;ViewController.h&quot;
+#import &quot;opencv2/imgcodecs/ios.h&quot;
+
+@interface ViewController ()
+
+@property (nonatomic, strong) UIImageView *iv;
+
+@property (nonatomic, copy) NSArray&lt;NSLayoutConstraint *&gt; *horizontalConstraints;
+
+@property (nonatomic, copy) NSArray&lt;NSLayoutConstraint *&gt; *verticalConstraints;
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    UIImage *image = [UIImage imageNamed:@&quot;FF7&quot;];
+
+    cv::Mat cvImage;
+
+    // Convert UIImage* to cv::Mat
+    UIImageToMat(image, cvImage);
+
+    if (!cvImage.empty())
+    {
+        cv::Mat gray;
+
+        // Convert the image to grayscale
+//        cv::cvtColor(cvImage, gray, CV_RGBA2GRAY);
+        cv::cvtColor(cvImage, gray, cv::COLOR_RGBA2GRAY);//COLOR_RGBA2GRAY&#x3001;COLOR_BGR2GRAY&#x3001;COLOR_BGR2HSV
+
+        // Apply Gaussian filter to remove small edges
+        cv::GaussianBlur(gray, gray, cv::Size(5, 5), 1.2, 1.2);
+
+        // Calculate edges with Canny
+        cv::Mat edges;
+        cv::Canny(gray, edges, 0, 50);
+
+        // Fill image with white color
+        cvImage.setTo(cv::Scalar::all(255));
+
+        // Change color on edges
+        cvImage.setTo(cv::Scalar(0, 128, 255, 255), edges);
+
+        // Convert cv::Mat to UIImage* and show the resulting image
+        self.iv.image = MatToUIImage(cvImage);
+    }
+}
+
+#pragma mark - Lazy Loader
+- (UIImageView *)iv {
+    if (_iv == nil) {
+        _iv = [UIImageView new];
+        //&#x9632;&#x6B62;&#x82F9;&#x679C;&#x628A;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;&#x7684;Autoresizing&#x5C5E;&#x6027;&#x8F6C;&#x6210;Autolayout&#xFF0C;&#x9020;&#x6210;&#x9519;&#x8BEF;
+        _iv.translatesAutoresizingMaskIntoConstraints = NO;
+        _iv.backgroundColor = [UIColor lightGrayColor];
+        _iv.contentMode = UIViewContentModeScaleAspectFit;
+        [self.view addSubview:_iv];
+    }
+    return _iv;
+}
+
+- (void)viewSafeAreaInsetsDidChange {
+    [super viewSafeAreaInsetsDidChange];
+
+    [self.view removeConstraints:_horizontalConstraints];
+    [self.view removeConstraints:_verticalConstraints];
+
+    CGFloat topSafeMargin = self.view.safeAreaInsets.top;
+    CGFloat bottomSafeMargin = self.view.safeAreaInsets.bottom;
+    CGFloat leftSafeMargin = self.view.safeAreaInsets.left;
+    CGFloat rightSafeMargin = self.view.safeAreaInsets.right;
+
+    NSDictionary *views = @{@&quot;iv&quot; : self.iv};
+    NSDictionary&lt;NSString *,id&gt; *metrics = @{
+        @&quot;topSafeMargin&quot; : [NSNumber numberWithFloat:topSafeMargin],
+        @&quot;bottomSafeMargin&quot; : [NSNumber numberWithFloat:bottomSafeMargin],
+        @&quot;leftSafeMargin&quot; : [NSNumber numberWithFloat:leftSafeMargin],
+        @&quot;rightSafeMargin&quot; : [NSNumber numberWithFloat:rightSafeMargin]
+    };
+
+    NSArray&lt;NSLayoutConstraint *&gt; *horizontalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@&quot;H:|-leftSafeMargin-[iv]-rightSafeMargin-|&quot; options:0 metrics:metrics views:views];
+    [self.view addConstraints:horizontalConstraints];
+    _horizontalConstraints = horizontalConstraints;
+
+    NSArray&lt;NSLayoutConstraint *&gt; *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@&quot;V:|-topSafeMargin-[iv]-(==bottomSafeMargin@750)-|&quot; options:0 metrics:metrics views:views];// Must be ==, &gt;=, or &lt;=
+    [self.view addConstraints:verticalConstraints];
+    _verticalConstraints = verticalConstraints;
+}
+
+@end
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../displaying-an-image-from-resources/" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Displaying an image from resources (Simple)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Linking OpenCV to an iOS project (Simple)","level":"1.1.3","depth":2,"previous":{"title":"Displaying an image from resources (Simple)","level":"1.1.2","depth":2,"path":"displaying-an-image-from-resources/README.md","ref":"displaying-an-image-from-resources/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["katex","include"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"include":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Instant OpenCV for iOS","gitbook":"*","description":"Instant OpenCV for iOS is a practical guide, showing every important step for building a computer vision application for the iOS platform."},"file":{"path":"linking-opencv-to-an-ios-project/README.md","mtime":"2021-04-06T09:37:07.995Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-06T09:49:02.930Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

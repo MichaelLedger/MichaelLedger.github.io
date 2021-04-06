@@ -1,0 +1,344 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Getting started with iOS (Simple) · Instant OpenCV for iOS</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../displaying-an-image-from-resources/" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Instant OpenCV for iOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Getting started with iOS (Simple)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../displaying-an-image-from-resources/">
+            
+                <a href="../displaying-an-image-from-resources/">
+            
+                    
+                    Displaying an image from resources (Simple)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../linking-opencv-to-an-ios-project/">
+            
+                <a href="../linking-opencv-to-an-ios-project/">
+            
+                    
+                    Linking OpenCV to an iOS project (Simple)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Getting started with iOS (Simple)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="getting-started-with-ios-simple">Getting started with iOS (Simple)</h2>
+<p>In this recipe, we&apos;ll provide all the necessary steps to set up your environment and run a &quot;Hello World&quot; application on a device. Development for the iOS platform may seem to be difficult in the beginning, because the list of prerequisites is somewhat large. We&apos;ll provide important links for those who are not familiar with Mac/iOS development, Objective-C, and Xcode. If you&apos;re already familiar with the iOS development, you can skip this recipe.</p>
+<hr>
+<p><strong>While the NSLog function is useful for logging, you should not keep these logs in the production code because like any other IO procedure, it has its cost, which may negatively affect the performance. So, you should use conditional compilation or something else to remove all debug logs from the release code.</strong></p>
+<hr>
+<h3 id="xcode">Xcode</h3>
+<p>We encourage you to &quot;sharpen your saw&quot; and read more about Xcode. Refer to the official documentation at <a href="https://developer.apple.com/xcode/" target="_blank">https://developer.apple.com/xcode/</a>. For example, you can create several Simulators to test your application on different types of devices. Navigate to Xcode | Preferences, and then go to the Downloads | Components to see the available options. Many useful tips on Xcode and sample code examples are available in the iOS Developer Library at <a href="http://developer.apple.com/library/ios/navigation/" target="_blank">http://developer.apple.com/library/ios/navigation/</a>.</p>
+<h3 id="objective-c">Objective-C</h3>
+<p>One of the important things you should know about Objective-C is that it is a strict superset of C, and you can mix it with C. Because OpenCV is written in C++, we have to use Objective-C++, which allows to use a combination of C++ and Objective-C syntax and also allows you to reuse your C++ code or libraries (as we do with OpenCV). Nonetheless, Objective-C is the main language for iOS, so you should get familiar with it in order to use the available libraries and frameworks effectively.</p>
+<h4 id="code-snippet"><a href="https://github.com/MichaelLedger/Instant-OpenCV-for-iOS-Sample" target="_blank">Code Snippet</a></h4>
+<pre><code>//
+//  ViewController.m
+//  Recipe01_HelloWorld
+//
+//  Created by MichaelLedger on 2021/3/23.
+//
+
+#import &quot;ViewController.h&quot;
+
+@interface ViewController ()
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    // Console output
+    NSLog(@&quot;Hello, World!&quot;);
+
+    /*
+     Error message:
+     *** Terminating app due to uncaught exception &apos;NSObjectNotAvailableException&apos;, reason: &apos;UIAlertView is deprecated and unavailable for UIScene based applications, please use UIAlertController!&apos;
+     */
+    // Alert window
+//    UIAlertView *alert = [UIAlertView alloc];
+//    alert = [alert initWithTitle:@&quot;Hey there!&quot; message:@&quot;Welcome to OpenCV on iOS development community&quot; delegate:nil cancelButtonTitle:@&quot;Continue&quot; otherButtonTitles:nil];
+//    [alert show];
+
+    /*
+     Error message:
+     [Presentation] Attempt to present &lt;UIAlertController: 0x7fc976017000&gt; on &lt;ViewController: 0x7fc974c09b10&gt; (from &lt;ViewController: 0x7fc974c09b10&gt;) whose view is not in the window hierarchy.
+     */
+    // Alert window
+//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@&quot;Hey there!&quot; message:@&quot;Welcome to OpenCV on iOS development community&quot; preferredStyle:UIAlertControllerStyleAlert];
+//    UIAlertAction *continueAction = [UIAlertAction actionWithTitle:@&quot;Continue&quot; style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+//        [alert dismissViewControllerAnimated:YES completion:nil];
+//    }];
+//    [alert addAction:continueAction];
+//    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    // Alert window
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@&quot;Hey there!&quot; message:@&quot;Welcome to OpenCV on iOS development community&quot; preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *continueAction = [UIAlertAction actionWithTitle:@&quot;Continue&quot; style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alert dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [alert addAction:continueAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+@end
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Instant OpenCV for iOS">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../displaying-an-image-from-resources/" class="navigation navigation-next " aria-label="Next page: Displaying an image from resources (Simple)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Getting started with iOS (Simple)","level":"1.1.1","depth":2,"next":{"title":"Displaying an image from resources (Simple)","level":"1.1.2","depth":2,"path":"displaying-an-image-from-resources/README.md","ref":"displaying-an-image-from-resources/README.md","articles":[]},"previous":{"title":"Instant OpenCV for iOS","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[{"title":"Getting started with iOS (Simple)","level":"1.1.1","depth":2,"path":"getting-started-with-ios/README.md","ref":"getting-started-with-ios/README.md","articles":[]},{"title":"Displaying an image from resources (Simple)","level":"1.1.2","depth":2,"path":"displaying-an-image-from-resources/README.md","ref":"displaying-an-image-from-resources/README.md","articles":[]},{"title":"Linking OpenCV to an iOS project (Simple)","level":"1.1.3","depth":2,"path":"linking-opencv-to-an-ios-project/README.md","ref":"linking-opencv-to-an-ios-project/README.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["katex","include"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"katex":{},"include":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Instant OpenCV for iOS","gitbook":"*","description":"Instant OpenCV for iOS is a practical guide, showing every important step for building a computer vision application for the iOS platform."},"file":{"path":"getting-started-with-ios/README.md","mtime":"2021-03-29T02:11:28.731Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-04-06T09:49:02.930Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
