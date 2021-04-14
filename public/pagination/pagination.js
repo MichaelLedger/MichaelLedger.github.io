@@ -216,6 +216,7 @@ Page.prototype = {
         li.innerHTML = 'Total&nbsp' + that.pageTotal + '&nbspPages';//共、页
         li.className = 'totalPage';
         this.ul.appendChild(li);
+        /*
         var li2 = document.createElement('li');
         li2.innerHTML = 'Eachpage&nbsp' + that.pageAmount + '&nbspBlogs';//每页、条
         li2.className = 'totalPage';
@@ -224,5 +225,6 @@ Page.prototype = {
         li3.innerHTML = 'Total&nbsp' + that.dataTotal + '&nbspBlogs';//合计、条数据
         li3.className = 'totalPage';
         this.ul.appendChild(li3);
+        */
     }
 };
