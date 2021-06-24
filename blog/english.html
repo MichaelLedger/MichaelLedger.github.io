@@ -329,6 +329,12 @@
  						return false;
  					});
  				}
+                audio.loop = false;
+                //auto redirect to the next blog
+                audio.addEventListener('ended', function () {
+                    // alert('audio over');
+                    document.getElementById('next-post-location').click();
+                }, false);
 			}
 			function getQueryString(name) {
 			  var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
