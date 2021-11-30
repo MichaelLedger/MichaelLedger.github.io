@@ -78,6 +78,8 @@
 			<div class="fh5co-post"> 
 				<div class="fh5co-entry padding">
 					<div id="english-content" class="post-content">
+                        <div id="audio-content"></div>
+                        <div id="text-content"></div>
 					</div>
 				</div>
 			</div>
@@ -272,12 +274,23 @@
 						} else {
 							audioHtmlStr = "";
 						}
-
+                        
+                        if (audioHtmlStr.length > 0) {
+                            var audio = document.getElementById('audiojs');
+                            if (audio == null) {
+                                $("#" + "audio-content").html(audioHtmlStr);
+                            } else {
+                                audio.src = data.audio
+                            }
+                        } else {
+                            $("#" + "audio-content").html(audioHtmlStr);
+                        }
+                        
 						// var constrols = "<button id=\"down\">↓</button><button id=\"up\">↑</button>";
 						var textHtmlStr = convertMarkdownToHtml(data.content);
 						// document.all[divIdentifier].innerHTML = content;
 						// document.getElementById(divIdentifier).innerHTML = content;
-						$("#" + divIdentifier).html(audioHtmlStr + textHtmlStr);// 使用jQuery
+						$("#" + "text-content").html(textHtmlStr);// 使用jQuery
 						$("#" + "fh5co-aside").css({"background-image" : "url("+ data.cover + ")"});
 						$("#" + "post-date").html(data.date);
 						$("#" + "post-title").html(data.title);
@@ -322,8 +335,8 @@
 				// Safari support remote resource auto play need manual setting: Safari -> Preferences -> Websites -> Autoplay
 				audio.play();
 				// reset audio volume
-				audio.volume = 0.8;
-
+                // audio.volume = 0.8;
+				
 				document.addEventListener('DOMContentLoaded', function () {
 					function audioAutoPlay() {
 						var audio = document.getElementById('audiojs');
@@ -342,12 +355,16 @@
  						return false;
  					});
  				}
-                audio.loop = false;
+                // audio.loop = false;
+                // audio.playbackRate = 1.25;
+
                 //auto redirect to the next blog
                 audio.addEventListener('ended', function () {
                     // alert('audio over');
                     document.getElementById('next-post-location').click();
                 }, false);
+                
+                
 			}
 			function getQueryString(name) {
 			  var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
