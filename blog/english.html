@@ -334,8 +334,8 @@
 				var audio = document.getElementById('audiojs');
 				// Safari support remote resource auto play need manual setting: Safari -> Preferences -> Websites -> Autoplay
 				audio.play();
-				// reset audio volume
-                // audio.volume = 0.8;
+				// reset audio volume, i think this volume is fittest mainly for 'Friends' ^_^
+                audio.volume = 0.6;
 				
 				document.addEventListener('DOMContentLoaded', function () {
 					function audioAutoPlay() {
