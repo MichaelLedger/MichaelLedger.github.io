@@ -657,7 +657,7 @@ int editdistance(char *str1, int len1, char *str2, int len2) {
 <p>&#x3010;&#x95EE;&#x9898;3&#x3011;</p>
 <p>(7)4</p>
 <h4 id="code-sample">Code Sample</h4>
-<p><a href="https://github.com/MichaelLedger/SDE-Code-Samples/blob/main/C/DNA-Edit-Distance-Calculator/DNA-Edit-Distance-Calculator/main.c" target="_blank">DNA-Edit-Distance-Calculator</a></p>
+<p><a href="https://github.com/MichaelLedger/SDE-Code-Samples/tree/main/C/DNA-Edit-Distance-Calculator" target="_blank">DNA-Edit-Distance-Calculator</a></p>
 <hr>
 <h3 id="&#x8BD5;&#x9898;&#x4E94;-&#x5171;-15-&#x5206;">&#x8BD5;&#x9898;&#x4E94; (&#x5171; 15 &#x5206;)</h3>
 <p>&#x9605;&#x8BFB;&#x4E0B;&#x5217;&#x8BF4;&#x660E;&#x548C;C++&#x4EE3;&#x7801;,&#x5C06;&#x5E94;&#x586B;&#x5165;(n)&#x5904;&#x7684;&#x5B57;&#x53E5;&#x5199;&#x5728;&#x7B54;&#x9898;&#x7EB8;&#x7684;&#x5BF9;&#x5E94;&#x680F;&#x5185;&#x3002; </p>
@@ -692,6 +692,108 @@ int editdistance(char *str1, int len1, char *str2, int len2) {
     padding: 2px;"></div>
 </center>
 
+<pre><code>//
+//  main.cpp
+//  Go-FlyWeight
+//
+//  Created by MTX on 2022/3/12.
+//
+//  &#x5411;&#x91CF;&#xFF08;Vector&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x5C01;&#x88C5;&#x4E86;&#x52A8;&#x6001;&#x5927;&#x5C0F;&#x6570;&#x7EC4;&#x7684;&#x987A;&#x5E8F;&#x5BB9;&#x5668;&#xFF08;Sequence Container&#xFF09;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x662F;&#x4E00;&#x4E2A;&#x52A8;&#x6001;&#x6570;&#x7EC4;&#x7684;&#x62BD;&#x8C61;&#xFF0C;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;vector&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5BF9;&#x8C61;&#x90FD;&#x5FC5;&#x987B;&#x662F;&#x540C;&#x4E00;&#x79CD;&#x7C7B;&#x578B;
+
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+using namespace std;
+
+enum PieceColor {BLACK, WHITE};//&#x68CB;&#x5B50;&#x989C;&#x8272;
+class PiecePos {//&#x68CB;&#x5B50;&#x4F4D;&#x7F6E;
+private:
+    int x;
+    int y;
+public:
+    PiecePos(int a, int b): x(a), y(b) {}
+    int getX() { return x; }
+    int getY() { return y; }
+};
+class Piece {//&#x68CB;&#x5B50;&#x5B9A;&#x4E49;
+protected:
+    PieceColor m_color;//&#x989C;&#x8272;
+    PiecePos m_pos;//&#x4F4D;&#x7F6E;
+public:
+    Piece(PieceColor color, PiecePos pos): m_color(color), m_pos(pos) {}
+    virtual void Draw() {}
+    string description() {//&#x63CF;&#x8FF0;&#x68CB;&#x5B50;&#x7684;&#x989C;&#x8272;&#x548C;&#x4F4D;&#x7F6E;
+        const char *color = (m_color==BLACK)?&quot;black&quot;:&quot;white&quot;;
+        int x = m_pos.getX();
+        int y = m_pos.getY();
+        char *buf = new char[100];//&#x907F;&#x514D;&#x6570;&#x7EC4;&#x8D8A;&#x754C; malloc: Incorrect checksum for freed object
+        sprintf(buf, &quot;color:%s, position:(%d,%d)&quot;, color, x, y);
+        return buf;
+    }
+};
+class BlackPiece: public Piece {
+public:
+    BlackPiece(PieceColor color, PiecePos pos): Piece(color, pos){}
+    void Draw() {cout &lt;&lt; &quot;draw a black piece&quot; &lt;&lt; endl;}
+};
+class WhitePiece: public Piece {
+public:
+    WhitePiece(PieceColor color, PiecePos pos): Piece(color, pos){}
+    void Draw() {cout &lt;&lt; &quot;draw a white piece&quot; &lt;&lt; endl;}
+};
+class PieceBoard {
+private:
+    vector&lt;Piece*&gt; m_vecPiece;//&#x68CB;&#x76D8;&#x4E0A;&#x5DF2;&#x6709;&#x7684;&#x68CB;&#x5B50;
+    string m_blackName;//&#x9ED1;&#x65B9;&#x540D;&#x79F0;
+    string m_whiteName;//&#x767D;&#x65B9;&#x540D;&#x79F0;
+public:
+    PieceBoard(string black, string white): m_blackName(black), m_whiteName(white){}
+    void setPiece(PieceColor color, PiecePos pos) {//&#x4E00;&#x6B65;&#x68CB;&#xFF0C;&#x5728;&#x68CB;&#x76D8;&#x4E0A;&#x653E;&#x4E00;&#x9897;&#x68CB;&#x5B50;
+        Piece* piece = NULL;
+        if (color == BLACK) {//&#x653E;&#x9ED1;&#x5B50;
+            piece = new BlackPiece(color, pos);
+            cout &lt;&lt; m_blackName &lt;&lt; &quot;&#x5728;&#x4F4D;&#x7F6E;&#xFF08;&quot; &lt;&lt; pos.getX() &lt;&lt; &quot;,&quot; &lt;&lt; pos.getY() &lt;&lt; &quot;&#xFF09;&quot;;
+            piece-&gt;Draw();
+        }
+        else {//&#x653E;&#x767D;&#x5B50;
+            piece = new WhitePiece(color, pos);
+            cout &lt;&lt; m_whiteName &lt;&lt; &quot;&#x5728;&#x4F4D;&#x7F6E;&#xFF08;&quot; &lt;&lt; pos.getX() &lt;&lt; &quot;,&quot; &lt;&lt; pos.getY() &lt;&lt; &quot;&#xFF09;&quot;;
+            piece-&gt;Draw();
+        }
+        m_vecPiece.push_back(piece);
+    }
+    vector&lt;Piece*&gt; getAllPieces() {
+        cout &lt;&lt; &quot;&#x68CB;&#x76D8;&#x4E0A;&#x6240;&#x6709;&#x7684;&#x68CB;&#x5B50;(&quot; &lt;&lt; m_vecPiece.size() &lt;&lt; &quot;):&quot; &lt;&lt; endl;
+        /*
+         for(&#x8BED;&#x53E5;1;&#x8BED;&#x53E5;2;&#x8BED;&#x53E5;3) {}
+         &#x8BED;&#x53E5; 1 &#x5728;&#x5FAA;&#x73AF;&#xFF08;&#x4EE3;&#x7801;&#x5757;&#xFF09;&#x5F00;&#x59CB;&#x524D;&#x6267;&#x884C;
+         &#x8BED;&#x53E5; 2 &#x5B9A;&#x4E49;&#x8FD0;&#x884C;&#x5FAA;&#x73AF;&#xFF08;&#x4EE3;&#x7801;&#x5757;&#xFF09;&#x7684;&#x6761;&#x4EF6;
+         &#x8BED;&#x53E5; 3 &#x5728;&#x5FAA;&#x73AF;&#xFF08;&#x4EE3;&#x7801;&#x5757;&#xFF09;&#x5DF2;&#x88AB;&#x6267;&#x884C;&#x4E4B;&#x540E;&#x6267;&#x884C;
+         &#x8FD9;&#x5C31;&#x662F;&#x5FAA;&#x73AF;&#x4E2D;&#x7684; ++i &#x548C; i++ &#x7ED3;&#x679C;&#x4E00;&#x6837;&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x4F46;&#x662F;&#x6027;&#x80FD;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x5728;&#x5927;&#x91CF;&#x6570;&#x636E;&#x7684;&#x65F6;&#x5019; ++i &#x7684;&#x6027;&#x80FD;&#x8981;&#x6BD4; i++ &#x7684;&#x6027;&#x80FD;&#x597D;&#x539F;&#x56E0;:
+         i++ &#x7531;&#x4E8E;&#x662F;&#x5728;&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x503C;&#x4E4B;&#x540E; &#x518D;+1 &#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x4E34;&#x65F6;&#x7684;&#x53D8;&#x91CF;&#x6765;&#x8F6C;&#x5B58;&#x3002; &#x800C; ++i &#x5219;&#x662F;&#x5728;&#x76F4;&#x63A5; +1 &#xFF0C;&#x7701;&#x53BB;&#x4E86;&#x5BF9;&#x5185;&#x5B58;&#x7684;&#x64CD;&#x4F5C;&#x7684;&#x73AF;&#x8282;&#xFF0C;&#x76F8;&#x5BF9;&#x800C;&#x8A00;&#x80FD;&#x591F;&#x63D0;&#x9AD8;&#x6027;&#x80FD;&#x3002;
+         */
+        for(int i = 0;i &lt; m_vecPiece.size();++i) {
+            Piece* p = m_vecPiece[i];
+            cout &lt;&lt; &quot;[&quot; &lt;&lt; i &lt;&lt; &quot;] &quot; &lt;&lt; p-&gt;description() &lt;&lt; endl;//&#x6307;&#x9488;&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x6210;&#x5458;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; -&gt; &#x64CD;&#x4F5C;&#x7B26;
+        }
+        cout &lt;&lt; &quot;========&quot; &lt;&lt; endl;
+        for(vector&lt;Piece*&gt;::iterator item=m_vecPiece.begin();item&lt;m_vecPiece.end();++item){//&#x8FED;&#x4EE3;&#x5668;&#x904D;&#x5386;
+            Piece* p = *item;
+            cout &lt;&lt; p-&gt;description() &lt;&lt; endl;//&#x6307;&#x9488;&#x83B7;&#x53D6;&#x5BF9;&#x8C61;&#x7684;&#x6210;&#x5458;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; -&gt; &#x64CD;&#x4F5C;&#x7B26;
+        }
+        return m_vecPiece;
+    }
+};
+
+int main(int argc, const char * argv[]) {
+    PieceBoard board = PieceBoard(&quot;blackPlayer&quot;, &quot;whitePlayer&quot;);
+    board.setPiece(BLACK, PiecePos(2, 3));
+    board.setPiece(WHITE, PiecePos(3, 3));
+    board.getAllPieces();
+    return 0;
+}
+</code></pre><h4 id="code-sample">Code Sample</h4>
+<p><a href="https://github.com/MichaelLedger/SDE-Code-Samples/tree/main/C++/Go-FlyWeight" target="_blank">Go-FlyWeight</a></p>
 <hr>
 <h3 id="&#x8BD5;&#x9898;&#x516D;-&#x5171;-15-&#x5206;">&#x8BD5;&#x9898;&#x516D; (&#x5171; 15 &#x5206;)</h3>
 <p>&#x9605;&#x8BFB;&#x4E0B;&#x5217;&#x8BF4;&#x660E;&#x548C;Java&#x4EE3;&#x7801;,&#x5C06;&#x5E94;&#x586B;&#x5165;(n)&#x5904;&#x7684;&#x5B57;&#x53E5;&#x5199;&#x5728;&#x7B54;&#x9898;&#x7EB8;&#x7684;&#x5BF9;&#x5E94;&#x680F;&#x5185;&#x3002; </p>
@@ -709,72 +811,76 @@ int editdistance(char *str1, int len1, char *str2, int len2) {
 </center>
 
 <p>&#x3010;Java&#x4EE3;&#x7801;&#x3011; </p>
-<pre><code>mport java.util.*:
-enum PieceColor &#xFF5B;BLACK&#xFF0C;WHITE&#xFF5D;&#xFF0F;&#xFF0F;&#x68CB;&#x5B50;&#x989C;&#x8272;
-class PiecePos&#xFF5B;&#xFF0F;&#xFF0F;&#x68CB;&#x5B50;&#x4F4D;&#x7F6E;
-private int x;
-private int y:
-pubic PiecePos(int a,int b){x=a;y=b;}
-public int getX0{retun x;}
-public int getYO{return y;}
+<pre><code>import java.util.*;
+enum PieceColor{BLACK,WHITE}//&#x68CB;&#x5B50;&#x989C;&#x8272;
+class PiecePos{//&#x68CB;&#x5B50;&#x4F4D;&#x7F6E;
+    private int x;
+    private int y;
+    public PiecePos(int a,int b){x=a;y=b;}
+    public int getX(){return x;}
+    public int getY(){return y;}
 }
-abstract class Piece&#xFF5B;&#xFF0F;&#xFF0F;&#x68CB;&#x5B50;&#x5B9A;&#x4E49;
-protected PieceColor m&#xFF3F;color&#xFF1B;&#xFF0F;&#xFF0F;&#x989C;&#x8272;
-protected Piecemopos m&#xFF3F;pos&#xFF1B;&#xFF0F;&#xFF0F;&#x4F4D;&#x7F6E;
-public Piece(PieceColor,color PiecePos
-pos){m color=color;
-{:sod=sod u
-(1);
+abstract class Piece {//&#x68CB;&#x5B50;&#x5B9A;&#x4E49;
+    protected PieceColor m_color;//&#x989C;&#x8272;
+    protected PiecePos m_pos;//&#x4F4D;&#x7F6E;
+    public Piece(PieceColor color, PiecePos pos){m_color=color;m_pos=pos;}
+    //&#x6307;&#x5411;&#x57FA;&#x7C7B;&#x7684;&#x6307;&#x9488;&#x5728;&#x64CD;&#x4F5C;&#x5B83;&#x7684;&#x591A;&#x6001;&#x7C7B;&#x5BF9;&#x8C61;&#x65F6;&#xFF0C;&#x4F1A;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x7C7B;&#x5BF9;&#x8C61;&#xFF0C;&#x8C03;&#x7528;&#x5176;&#x76F8;&#x5E94;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5C31;&#x662F;&#x865A;&#x51FD;&#x6570;&#x3002;C++ &#x4E2D;&#x5FC5;&#x987B;&#x7528; virtual &#x4FEE;&#x9970;&#x3002;
+    //java&#x7684;&#x666E;&#x901A;&#x6210;&#x5458;&#x51FD;&#x6570;&#xFF08;&#x6CA1;&#x6709;&#x88AB;static&#x3001;native&#x3001;final&#x7B49;&#x5173;&#x952E;&#x5B57;&#x4FEE;&#x9970;&#xFF09;&#x5C31;&#x662F;&#x865A;&#x51FD;&#x6570;&#xFF0C;&#x539F;&#x56E0;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5B83;&#x672C;&#x8EAB;&#x5C31;&#x5B9E;&#x73B0;&#x865A;&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x7684;&#x529F;&#x80FD;-&#x591A;&#x6001;&#x3002;
+    //&#x4ECE;&#x5B57;&#x8282;&#x7801;&#x6307;&#x4EE4;&#x7684;&#x547D;&#x540D;&#x4E0A;&#x4E5F;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;java&#x4E2D;&#x7684;&#x666E;&#x901A;&#x6210;&#x5458;&#x51FD;&#x6570;&#x5C31;&#x662F;&#x865A;&#x51FD;&#x6570;&#x3002;
+    //&#x95EE;&#x9898;1: (1)
+    void draw(){}
 }
-class BlackPiece extends Piece{
-public BlackPiece(PieceColor
-color,PiecePos pos){super(color,pos);}
-public void drawO{
-System out println(&quot;draw a black
-piece&quot;);}
+class BlackPiece extends Piece {//&#x9ED1;&#x68CB;
+    public BlackPiece(PieceColor color, PiecePos pos) {super(color, pos);}
+    public void draw() {
+        System.out.println(&quot;draw a black piece.&quot;);
+    }
 }
-class WhitePiece extends Piece{
-public WhitePiece(PieceColor
-color,PiecePos pos){super(c
-olor,pos):}
-public void draw0{
-System.out.println(&quot;draw a white
-piece&quot;);
+class WhitePiece extends Piece {//&#x767D;&#x68CB;
+    public WhitePiece(PieceColor color, PiecePos pos) {super(color, pos);}
+    public void draw() {
+        System.out.println(&quot;draw a white piece.&quot;);
+    }
 }
-{
-class PieceBoard{
-&#xFF0F;&#xFF0F;&#x68CB;&#x76D8;&#x4E0A;&#x5DF2;&#x6709;&#x7684;&#x68CB;&#x5B50;
-private static final
-ArrayList&amp;lt;(2)&amp;gt;m_arrayPiece=new Arra
-yList
-private String m&#xFF3F;blackName&#xFF1B;&#xFF0F;&#xFF0F;&#x9ED1;&#x65B9;&#x540D;&#x79F0;
-private String m&#xFF3F;whiteName&#xFF1B;&#xFF0F;&#xFF0F;&#x767D;&#x65B9;&#x540D;&#x79F0;
-public PieceBoard(String black,String
-white){
-m_blackName=black;m_whiteName=white;
+class PieceBoard{//&#x68CB;&#x76D8;&#x4E0A;&#x5DF2;&#x6709;&#x7684;&#x68CB;&#x5B50;
+    //&#x95EE;&#x9898;2: private static final ArrayList&lt;(2)&gt; m_arrayPiece=new ArrayList();
+    private static final ArrayList&lt;Piece&gt; m_arrayPiece=new ArrayList();
+    private String m_blackName;//&#x9ED1;&#x65B9;&#x540D;&#x79F0;
+    private String m_whiteName;//&#x767D;&#x65B9;&#x540D;&#x79F0;
+    public PieceBoard(String black,String white){m_blackName=black;m_whiteName=white;}
+    //&#x4E00;&#x6B65;&#x68CB;,&#x5728;&#x68CB;&#x76D8;&#x4E0A;&#x653E;&#x4E00;&#x9897;&#x68CB;&#x5B50;
+    public void SetPiece(PieceColor color,PiecePos pos) {
+        //&#x95EE;&#x9898;3: (3) piece = null;
+        Piece piece = null;
+        if (color == PieceColor.BLACK) {//&#x653E;&#x9ED1;&#x5B50;
+            piece = new BlackPiece(color, pos);//&#x83B7;&#x53D6;&#x4E00;&#x9897;&#x9ED1;&#x5B50;
+            System.out.print(m_blackName + &quot; &#x5728;&#x4F4D;&#x7F6E;&#xFF08;&quot; + pos.getX() + &quot;,&quot; + pos.getY() + &quot;) &quot;);
+            //&#x95EE;&#x9898;4: (4)
+            piece.draw();
+        } else {//&#x653E;&#x767D;&#x5B50;
+            piece = new WhitePiece(color, pos);//&#x83B7;&#x53D6;&#x4E00;&#x9897;&#x767D;&#x5B50;
+            System.out.print(m_whiteName + &quot; &#x5728;&#x4F4D;&#x7F6E;&#xFF08;&quot; + pos.getX() + &quot;,&quot; + pos.getY() + &quot;) &quot;);
+            //&#x95EE;&#x9898;5: (5)
+            piece.draw();
+        }
+        m_arrayPiece.add(piece);
+    }
 }
-&#xFF0F;&#xFF0F;&#x4E00;&#x6B65;&#x68CB;&#xFF0C;&#x5728;&#x68CB;&#x76D8;&#x4E0A;&#x653E;&#x4E00;&#x9897;&#x68CB;&#x5B50;
-public void SetePiece(PieceColor
-color,PiecePos pos){
-(3)piece=null;
-if&#xFF08;color&#xFF1D;&#xFF1D;PieceColor.BLACK&#xFF09;&#xFF08;&#xFF0F;&#xFF0F;&#x653E;&#x9ED1;&#x5B50;
-piece&#xFF1D;new BlackPiece&#xFF08;color&#xFF0C;pos&#xFF09;&#xFF1B;&#xFF0F;&#xFF0F;&#x83B7;&#x53D6;&#x4E00;&#x9897;&#x9ED1;&#x5B50;
-System&#xFF0E;out&#xFF0E;println&#xFF08;m&#xFF3F;blackName&#xFF0B;&#xFF02;&#x5728;&#x4F4D;&#x7F6E;&#xFF08;&#xFF02;&#xFF0B;pos&#xFF0E;getX0&#xFF09;
-+&quot;,&quot;+pos.getYO+&quot;)&quot;);
-(4):
-{
-else&#xFF5B;&#xFF0F;&#xFF0F;&#x653E;&#x767D;&#x5B50;
-piece&#xFF1D;new WhitePiece&#xFF08;color&#xFF0C;pos&#xFF09;&#xFF1B;&#xFF0F;&#xFF0F;&#x83B7;&#x53D6;&#x4E00;&#x9897;&#x767D;&#x5B50;
-System&#xFF0E;out&#xFF0E;println&#xFF08;m whiteName&#xFF0B;&#xFF02;&#x5728;&#x4F4D;&#x7F6E;&#xFF08;&#xFF02;&#xFF0B;pos&#xFF0E;getX0&#xFF09;&#xFF0B;
-&quot;,&quot;+pos.getYO+&quot;)&quot;);
-(5):
+class go{//&#x56F4;&#x68CB;&#x7684;&#x82F1;&#x6587;&#x4E3A;go
+    public static void main(String[] args){
+        //System.out.println(&quot;Hello World!&quot;);
+        PieceBoard board=new PieceBoard(&quot;blackPlayer&quot;, &quot;whitePlayer&quot;);
+        BlackPiece black=new BlackPiece(PieceColor.BLACK, new PiecePos(1,2));
+        board.SetPiece(PieceColor.BLACK, new PiecePos(2,3));
+        board.SetPiece(PieceColor.WHITE, new PiecePos(3,3));
+    }
 }
-m_arrayPiece.add(piece);
-}
-}
-</code></pre><h4 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h4>
+</code></pre><h4 id="code-sample">Code Sample</h4>
+<p><a href="https://github.com/MichaelLedger/SDE-Code-Samples/tree/main/Java/Go-FlyWeight" target="_blank">Go-FlyWeight</a></p>
+<h4 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h4>
 <p><a href="http://www.cnitpm.com/st/459608903.html" target="_blank">&#x4FE1;&#x7BA1;&#x7F51;&#x9898;&#x5E93;</a></p>
 <p><a href="http://www.rkpass.cn/tk_timu/6_735_4_anli.html" target="_blank">&#x8F6F;&#x8003;&#x5728;&#x7EBF;&#x514D;&#x8D39;&#x667A;&#x80FD;&#x771F;&#x9898;&#x5E93;</a></p>
+<p><a href="https://blog.csdn.net/xiaornshuo/article/details/121232150" target="_blank">CSDN &#x8F6F;&#x4EF6;&#x8BBE;&#x8BA1;&#x5E08;&#x771F;&#x9898;&#x53CA;&#x7B54;&#x6848;&#x89E3;&#x6790;</a></p>
 
                                 
                                 </section>
@@ -814,7 +920,7 @@ m_arrayPiece.add(piece);
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2021下半年考试真题-下午卷","level":"1.1.2.2","depth":3,"next":{"title":"知识点","level":"1.1.3","depth":2,"ref":"","articles":[{"title":"顺序查找","level":"1.1.3.1","depth":3,"path":"知识点/顺序查找/README.md","ref":"知识点/顺序查找/README.md","articles":[]},{"title":"二分查找","level":"1.1.3.2","depth":3,"path":"知识点/二分查找/README.md","ref":"知识点/二分查找/README.md","articles":[]},{"title":"插入排序","level":"1.1.3.3","depth":3,"path":"知识点/插入排序/README.md","ref":"知识点/插入排序/README.md","articles":[]},{"title":"冒泡排序","level":"1.1.3.4","depth":3,"path":"知识点/冒泡排序/README.md","ref":"知识点/冒泡排序/README.md","articles":[]},{"title":"选择排序","level":"1.1.3.5","depth":3,"path":"知识点/选择排序/README.md","ref":"知识点/选择排序/README.md","articles":[]},{"title":"McCabe环路复杂度计算方法","level":"1.1.3.6","depth":3,"path":"知识点/McCabe环路复杂度计算方法/README.md","ref":"知识点/McCabe环路复杂度计算方法/README.md","articles":[]},{"title":"归并排序算法","level":"1.1.3.7","depth":3,"path":"知识点/归并排序算法/README.md","ref":"知识点/归并排序算法/README.md","articles":[]},{"title":"java数组元素交换的四种方法","level":"1.1.3.8","depth":3,"path":"知识点/java数组元素交换的四种方法/README.md","ref":"知识点/java数组元素交换的四种方法/README.md","articles":[]},{"title":"Armstrong公理","level":"1.1.3.9","depth":3,"path":"知识点/Armstrong公理/README.md","ref":"知识点/Armstrong公理/README.md","articles":[]},{"title":"数据库三级模式两级映射","level":"1.1.3.10","depth":3,"path":"知识点/数据库三级模式两级映射/README.md","ref":"知识点/数据库三级模式两级映射/README.md","articles":[]},{"title":"ISO/IEC和McCall软件质量模型","level":"1.1.3.11","depth":3,"path":"知识点/ISO:IEC和McCall软件质量模型/README.md","ref":"知识点/ISO:IEC和McCall软件质量模型/README.md","articles":[]},{"title":"软件测试V模型W模型H模型","level":"1.1.3.12","depth":3,"path":"知识点/软件测试V模型W模型H模型/README.md","ref":"知识点/软件测试V模型W模型H模型/README.md","articles":[]},{"title":"软件生存周期模型","level":"1.1.3.13","depth":3,"path":"知识点/软件生存周期模型/README.md","ref":"知识点/软件生存周期模型/README.md","articles":[]}]},"previous":{"title":"2021下半年考试真题-上午卷","level":"1.1.2.1","depth":3,"path":"考试真题/2021下半年/计算机与软件工程知识/README.md","ref":"考试真题/2021下半年/计算机与软件工程知识/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"考试真题/2021下半年/软件设计/README.md","mtime":"2022-03-10T14:49:02.245Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2022-03-10T14:52:35.278Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2021下半年考试真题-下午卷","level":"1.1.2.2","depth":3,"next":{"title":"知识点","level":"1.1.3","depth":2,"ref":"","articles":[{"title":"顺序查找","level":"1.1.3.1","depth":3,"path":"知识点/顺序查找/README.md","ref":"知识点/顺序查找/README.md","articles":[]},{"title":"二分查找","level":"1.1.3.2","depth":3,"path":"知识点/二分查找/README.md","ref":"知识点/二分查找/README.md","articles":[]},{"title":"插入排序","level":"1.1.3.3","depth":3,"path":"知识点/插入排序/README.md","ref":"知识点/插入排序/README.md","articles":[]},{"title":"冒泡排序","level":"1.1.3.4","depth":3,"path":"知识点/冒泡排序/README.md","ref":"知识点/冒泡排序/README.md","articles":[]},{"title":"选择排序","level":"1.1.3.5","depth":3,"path":"知识点/选择排序/README.md","ref":"知识点/选择排序/README.md","articles":[]},{"title":"McCabe环路复杂度计算方法","level":"1.1.3.6","depth":3,"path":"知识点/McCabe环路复杂度计算方法/README.md","ref":"知识点/McCabe环路复杂度计算方法/README.md","articles":[]},{"title":"归并排序算法","level":"1.1.3.7","depth":3,"path":"知识点/归并排序算法/README.md","ref":"知识点/归并排序算法/README.md","articles":[]},{"title":"java数组元素交换的四种方法","level":"1.1.3.8","depth":3,"path":"知识点/java数组元素交换的四种方法/README.md","ref":"知识点/java数组元素交换的四种方法/README.md","articles":[]},{"title":"Armstrong公理","level":"1.1.3.9","depth":3,"path":"知识点/Armstrong公理/README.md","ref":"知识点/Armstrong公理/README.md","articles":[]},{"title":"数据库三级模式两级映射","level":"1.1.3.10","depth":3,"path":"知识点/数据库三级模式两级映射/README.md","ref":"知识点/数据库三级模式两级映射/README.md","articles":[]},{"title":"ISO/IEC和McCall软件质量模型","level":"1.1.3.11","depth":3,"path":"知识点/ISO:IEC和McCall软件质量模型/README.md","ref":"知识点/ISO:IEC和McCall软件质量模型/README.md","articles":[]},{"title":"软件测试V模型W模型H模型","level":"1.1.3.12","depth":3,"path":"知识点/软件测试V模型W模型H模型/README.md","ref":"知识点/软件测试V模型W模型H模型/README.md","articles":[]},{"title":"软件生存周期模型","level":"1.1.3.13","depth":3,"path":"知识点/软件生存周期模型/README.md","ref":"知识点/软件生存周期模型/README.md","articles":[]}]},"previous":{"title":"2021下半年考试真题-上午卷","level":"1.1.2.1","depth":3,"path":"考试真题/2021下半年/计算机与软件工程知识/README.md","ref":"考试真题/2021下半年/计算机与软件工程知识/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"考试真题/2021下半年/软件设计/README.md","mtime":"2022-03-13T01:10:57.917Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2022-03-13T01:11:33.249Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
