@@ -31,6 +31,7 @@
 	
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../plugins/pure_css_close_icon/css/style.css" media="screen" type="text/css" />
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -127,6 +128,17 @@
 	<div class="gototop js-top">
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
+
+    <div id="live2d-widget-close" style="position: fixed; bottom: 300px; left:250px; z-index: 999;">
+        <span class="close fat thick" style="width: 20px" onclick="closeLive2D()"></span>
+    </div>
+    <script>
+        function closeLive2D() {
+            document.getElementById("live2d-widget").style.display="none";
+            document.getElementById("live2d-widget-close").style.display="none";
+            Window.showLive2d = 0
+        }
+    </script>
 	
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
@@ -661,12 +673,15 @@
         }
     
         window.onload = function () {
+            Window.showLive2d = 1
             if (document.body.clientWidth <= 768) {
                 //$("#live2d-widget").attr("style", "display:none");
                 $("#live2d-widget").css("display", "none");
+                $("#live2d-widget-close").css("display", "none");
             } else {
                 //$("#live2d-widget").attr("style", "display:block");
                 $("#live2d-widget").css("display", "block");
+                $("#live2d-widget-close").css("display", "block");
             }
 
             window.addCount = 0;
@@ -703,8 +718,12 @@
                  */
                 
                 $("#live2d-widget").css("display", "none");
+                $("#live2d-widget-close").css("display", "none");
             } else {
-                $("#live2d-widget").css("display", "block");
+                if (Window.showLive2d == 1) {
+                    $("#live2d-widget").css("display", "block");
+                    $("#live2d-widget-close").css("display", "block");
+                }
             }
         });
     
