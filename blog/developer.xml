@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--以下特殊字符不可使用：-->
-<!--&rsquo;全局替换为'-->
-<!--<br/>换行符全局替换为\n-->
-<blogs>
+<?xml version="1.0" ?><!--以下特殊字符不可使用：--><!--&rsquo;全局替换为'--><!--<br/>换行符全局替换为\n--><blogs>
     <blog location="markdown_tools.html">
         <id>1</id>
         <date>November 30, 2018</date>
@@ -29,8 +25,7 @@
             iOS代码重构 : Refactoring - 改善既有代码的设计
         </description>
         <cover>../refactoring/1.png</cover>
-        <markdown-content>![](../refactoring/2.png)![](../refactoring/3.png)![](../refactoring/4.png)![](../refactoring/5.png)![](../refactoring/6.png)![](../refactoring/7.png)![](../refactoring/8.png)![](../refactoring/9.png)![](../refactoring/10.png)![](../refactoring/11.png)![](../refactoring/12.png)![](../refactoring/13.png)![](../refactoring/14.png)![](../refactoring/15.png)![](../refactoring/16.png)![](../refactoring/17.png)![](../refactoring/18.png)![](../refactoring/19.png)![](../refactoring/20.png)![](../refactoring/21.png)![](../refactoring/22.png)![](../refactoring/23.png)![](../refactoring/24.png)![](../refactoring/25.png)![](../refactoring/26.png)![](../refactoring/27.png)![](../refactoring/28.png)![](../refactoring/29.png)![](../refactoring/30.png)![](../refactoring/31.png)![](../refactoring/32.png)![](../refactoring/33.png)![](../refactoring/34.png)
-        </markdown-content>
+        
     </blog>
     <blog location="developer-single.html">
         <id>4</id>
@@ -40,8 +35,7 @@
             网址中协议和域名部分不分大小写。路径部分是否区分大小写则不一定，尽量统一使用小写。
         </description>
         <cover>developer-images/html-java-book.jpg</cover>
-        <markdown-content>文件名和网址中尽量不用中文或者其他特殊符号；\n文件名尽量统一使用小写，单词之间连接使用“-”；\nurl路径名尽量统一使用小写，单词之间连接使用“_”。\n网址的基本结构是`[协议]://[域名]/[路径]`，其中协议和域名部分不分大小写。路径部分是否区分大小写则不一定。\nuri一般是直接映射到磁盘路径上，windows的磁盘路径不区分大小写，而unix区分。所以架在windows上的网站就不区分大小写，而架在unix上的就区分大小写。\n如果服务器是直接将路径映射到文件系统中去找，则不同平台上有不同实现：\nMac OS X 默认的文件系统（HFS case-insensitive) 是不分大小写的；\nWindows 上的 NTFS 也不区分大小写；\n Linux 系统常用的则是需要区分大小写的。
-        </markdown-content>
+        
     </blog>
     <blog location="developer-single.html">
         <id>5</id>
@@ -51,8 +45,7 @@
             使用脚本快速根据日期统计研发人员的代码行数并导出为csv文件
         </description>
         <cover>developer-images/code.jpg</cover>
-        <markdown-content>git_lines.sh脚本如下：\n```#!/bin/bash\ncsv=./$1年$2月$3日至$4年$5月$6日开发行数统计_temp.csv\ncsv2=./$1年$2月$3日至$4年$5月$6日开发行数统计.csv\necho "开始统计$1年$2月$3日至$4年$5月$6日每个人的代码行数..."\n# 移除同名文件\nrm -rf $csv $csv2\n# 防止csv乱码\n# printf "\xEF\xBB\xBF" > $csv\necho "$1年$2月$3日至$4年$5月$6日的开发行数,,," >> $csv\necho "开发人员,增加行数,删除行数,合计" >> $csv\n# 第一项($1)为增加的代码行数 第二项($2)为删除的代码行数 ($3)第三项为代码所在路径\ngit log --author=liulongdev --pretty=tformat: --numstat --since=$1-$2-$3 --until=$4-$5-$6 | awk '{add+=$1;del+=$2;total+=$1+$2;}END{print "刘X,"add,",",del,",",total}' >> $csv\ngit log --author=dashan.xiang --pretty=tformat: --numstat --since=$1-$2-$3 --until=$4-$5-$6 | awk '{add+=$1;del+=$2;total+=$1+$2}END{print "项XX,"add,",",del,",",total}' >> $csv\ngit log --author=minjing.lin --pretty=tformat: --numstat --since=$1-$2-$3 --until=$4-$5-$6 | awk '{add+=$1;del+=$2;total+=$1+$2}END{print "林XX,"add,",",del,",",total}' >> $csv\n# iconv文件字符转码为GB18030以支持Excel,避免中文乱码\niconv -f UTF8 -t GB18030 $csv >$csv2\n# 移除UTF8编码的csv文件\nrm -rf $csv\necho "结束统计:)"\necho "旧版本的Excel不支持逗号分割符"\necho "推荐使用Mac自带的Numbers打开《$1年$2月$3日至$4年$5月$6日开发行数统计.csv》"\n# 使用Mac自带的Numbers打开csv文件\nopen $csv2 -a Numbers```\n终端实例：\n```# 切换到Git项目目录下\n$ cd /Users/mxr/Desktop/4dbookcity\n# 执行脚本\n$ sh /Users/mxr/Desktop/XDS/git_lines.sh 2018 6 1 2018 6 30\n开始统计2018年6月1日至2018年6月30日每个人的代码行数...\n结束统计:)\n旧版本的Excel不支持逗号分割符\n推荐使用Mac自带的Numbers打开《2018年6月1日至2018年6月30日开发行数统计.csv》```![](developer-images/git_lines_csv.png)
-        </markdown-content>
+        
     </blog>
     <blog location="developer-single.html">
         <id>6</id>
@@ -62,8 +55,7 @@
             灵感、方案、审美、眼界 来源于日常储备
         </description>
         <cover>../product-manager/cover/turned-on-smartphone.jpg</cover>
-        <markdown-content>**一、哔哩哔哩**\n设计点：结合实际情况，将需求中的同类场景组织到一个页面内。\n随着二维码的广泛运用，扫码加好友的功能也越来越普及。每次加好友时，我们总需要问对方一句“你扫我还是我扫你呢？”来确认自己应该打开ID二维码，还是“扫一扫”的功能。\nB站就很聪明的将用户自己的ID二维码与扫码功能设置在了同一个界面，加好友时直接打开“扫一扫”界面就可以同时应对两种功能需求了。优化了功能的操作路径，也避免了用户询问扫码对象的麻烦和小尴尬，很贴心～![](../product-manager/images/bilibili-scan.jpg)**二、西瓜视频**\n设计点：合理利用系统控件简化界面，从而降低对用户的使用影响。\n用户沉浸Feed流观看视频时 进行音量调节会对屏幕造成遮挡，从而影响浏览体验，优化可针对市面两种类型手机（标准屏幕与iPhone X）分别进行优化。利用系统控件的可自定义化，增强产品的使用体验。![](../product-manager/images/watermelon-voice.jpg)![](../product-manager/images/watermelon-voice-iPhoneX.gif)**三、高德地图**\n设计点：优秀的设计源自对生活的观察，功能设计之前，需考虑到实际生活中各种可能发生的场景。\n现实中的痛点/教训：本人确实有因为某行周六周日营业时间是根据地区不同而轮值，导致白跑一趟的场景。吸取教训后，下次出发前都会先百度营业时间，先不谈搜索的准确率，退出高德→打开百度→输入搜索→等待→查找结果概览→查看详情→再返回高德，这个流程就很繁琐。\n所以，如果不清楚银行、政府机构或是店铺的办公营业时间，我们有时候会因为拿不准时间而白跑一趟。但使用“高德地图”导航路线，你就能一定程度上避免“吃闭门羹”的窘迫状况。\n新版的“高德地图”优化了营业时间查询的功能，用户不仅可以通过定位结果查询到该地址的办公时间、电话等信息，系统还会在导航路线里提醒用户店铺是否处于打烊状态。将营业时间查询功能直接嵌入到导航结果之中，能在第一时间给予用户贴心提示，避免用户浪费时间走冤枉路。![](../product-manager/images/gaode-map.jpg)**四、微博**\n设计点：产品诉求与用户诉求之间的区别，通过这2种维度去组织需求。从中起到平衡的作用，既尊重了用户 又考虑到产品面。\n【通知】产品面的诉求：通知栏是产品方面期望用户关注社交动态的强推功能，产品方面希望用户默认关注，并在tab bar内的布局层级最高。\n【消息】用户面的诉求：与自己最相关的消息是用户最为关心的，在用户的角度而言，消息栏的权重比通知栏相对重要。![](../product-manager/images/weibo-noti-type.jpg)**五、即刻**\n设计点：根据不同内容的情境，设计与之契合的icon和微交互，扩大惊喜层面的设计范围，也是件让用户既然开心又好奇的事。\n1. 点赞功能按钮，除了常规情况下会显示为表示点赞手势的icon，还会在不同内容的主题广场里变成与主题相关的图案。\n比如在篮球主题相关的搜索内容里，点赞按钮会变成篮球图标；在关于爱情综艺“心动的信号”的话题里，内容下方的点赞按钮会变成“心心眼”的笑脸图标。最有趣的是关于平台团宠猫果果的相关话题内容，点赞的图标会变成小鱼干，而点赞后的icon则变成了鱼骨头。仿佛小鱼干是被果果偷吃了呢，真是可爱又有灵性。![](../product-manager/images/jike-moment.gif)2. 在“即刻”收到信息通知，不仅会在tab栏的“我的”显示小黄点提醒，而且“我的通知”在列表页的信封小图标会呈现打开的状态。\n由于没有新信息的常态下信封图标是一直合上的，只有收到互动信息的用户才会发现这个可爱的彩蛋，算是团队为用户们准备的小惊喜吧。如果想要看到小信封开启，那就多和其他用户互动吧！![](../product-manager/images/jike-email.jpg)**六、抖音**\n设计点：缩短操作路径、合理利用点击热区，是提高使用效率和反馈体验的方法之一。\n多数产品在设计页面模态弹窗引导用户进行操作行为时，都会将操作控件放在固定的页面位置（一般居中或者处于页面底部）。但“抖音”的设计却让人眼前一亮：系统会检测用户进行操作时手指与屏幕的接触位置，并将模态弹窗的操控按钮显示在离触发手指最近的地方。\n随用户手部活动区域变化而灵活变更位置的模态弹窗设计，使用户在进行手势交互的过程中操作动作能始终在手部的舒适区域内进行，是应对大屏时代十分友好的体验设计。![](../product-manager/images/douyin-tap.jpg)**七、网易云音乐**\n设计点：深层次的情感化设计，互联网产品应有的社会责任。\n在“知乎”与“百度”等搜索平台搜索关键字“自杀”，都会出现暖心的开导用户的文案与心理援助热线提示。“网易云音乐”在处理这种特殊使用场景时也有自己特别的心理干预设计。当在“网易云”的搜索栏检索“自杀”，会跳转至由“云村治愈所”官方发布的一篇名为“生活没有那么奇妙，但有你才会变得美好”的文章。不仅有治愈性的文字与配图，还有抚慰心灵的音乐推荐。但更加具有治愈效果的是温情满满的评论区文字。\n就像一位用户在评论里说的：专栏的文字与歌单看了七七八八依旧漠然，但这些鲜活的评论，大家怀揣希望或忧郁写下的一字一句却让我出神了许久。云村治愈所收留每个想要倾诉的灵魂，保护每一位村民柔软的心。![](../product-manager/images/wangyiyun-suicide.gif)**八、微信**\n设计点：能提供默认或选择的，就不要让用户输入（表单设计法则之一）。通常在“微信”使用“发红包”的功能时，填写祝福文案的输入框内会默认显示“恭喜发财，大吉大利”，即默认的红包封面祝福语。当特殊节日来临时，默认文案就会自动变更为适合该节日的文案。比如元宵节到了，当天发红包时如果不填祝福语，封面的文案会默认显示“元宵节快乐”。灵活应景的默认祝福语预设，为不知道写什么或者懒得写祝福语的用户提供了极大的便利。![](../product-manager/images/wechat-red-packet.jpg)**九、还是微信**\n设计点：众多用户的使用习惯 逐渐形成了一个功能性诉求，提升易用性的方法就在其中，这里是用户为我们找到的设计点，因此要尊重用户的使用习惯，将使用习惯融入到流程设计中，从而简化“实际操作路径”。\n在最新版“微信”( V.7.0.3)使用红包功能时，你会发现收取红包后的页面比之前的版本多了“回复一个表情到聊天”的按钮。由于很多人在接受了他人的红包后，都有回复一个表情作为感谢的习惯。所以出于对这个较普遍使用场景的考量和预判，团队在对“微信”的交互体验进行优化时将回复表情的快捷操作放到了红包当前页。\n简化了用户操作时的页面跳转路径，收发红包变得更加方便。系统还会自动记录上一次收红包时回复使用的表情，点击即可一键回复，超级贴心。忍不住为这个小细节打call～![](../product-manager/images/wechat-packet-reply.jpg)**十、百度网盘**\n设计点：文案设计是【表现层】当中，重要的设计点之一，优质的文案能拉近产品与用户的距离。在不同时间段推出符合场景的文案，让人感觉产品有“温度”。\n记得上个月情人节，在各大产品放出情人节彩蛋的时候，「百度网盘」却用一句温暖的提示表达了对弱势群体—单身用户们的关爱。在首页的用户信息处会显示「无论今天几人，网盘都永远陪伴你」的微文案。\n在呼应「百度网盘」slogan「让美好永远陪伴」的同时，也传达了对特殊节日的关照。这个世界总是对单身狗恶意满满，这样的温馨提示会让孤单的你感到一丝温暖么？除了节日外，还会在不同时间段给出暖人心扉的文案。![](../product-manager/images/baidu-drive-date.jpg)**思考：弱化时间线是产品让人上瘾的关键因素**\n抖音、头条、微博这类信息流产品，核心产品指标永远是用户的浏览时长和深度，所以在产品设计的时候是无所不用其极，去吸引用户不断的刷下去，不管是算法还是UI ，都在想办法吸引用户去不断地消费内容，忘记时间。\n最典型的是抖音，刷过抖音的人都觉得有毒，一刷能刷好几个小时。头条和微博也一样，很容易打开就停不下来。这些产品都有一个共同的特点，界面上时间的印记很弱。尤其是抖音，几乎看不到时间的痕迹（状态栏被隐藏了），而微博的时间线现在也是紊乱的，时不时插入很多非线性的内容(根据你的浏览记录智能推荐，不基于时间)。头条的界面也把时间做得很弱。
-        </markdown-content>
+        
     </blog>
     <blog location="developer-single.html">
         <id>7</id>
@@ -73,8 +65,7 @@
             在说一个人的软实力时有一项——沟通交流能力，有效地沟通能够化解矛盾，将复杂的事情简单化。
         </description>
         <cover>../product-manager/cover/vexed-man.png</cover>
-        <markdown-content>沟通能力是一个人的软实力，同样一件事情，相同背景之下，不同的人去沟通，效果往往不同。最简单的沟通，是没有协作关系和环境约束的个体之间，大家在沟通过程中讲的都是漂亮话。\n比如，几个人相约去一场聚会，大家在场子里称兄道弟，侃侃而谈。\n而当沟通的个体有了环境约束和协作关系之后，沟通将变得复杂，通常认为越复杂的关系下，沟通难度更高。\n高难度的沟通包括打破僵局、冲突管理、沟通影响力管理等，我们重点谈一下大家经常遇到的冲突管理。\n**> 什么是冲突？**\n冲突的定义是，*“沟通双方对一件事情的不同看法和不同处理方式， 当事情的结果与某一方预期不符合时，一方就开始指责对方“*。\n比如在产品上线之后，出了紧急bug，产品经理就可能会指责测试，”怎么回事？，为什么在测试的时候没有发现bug？”\n当然，测试人员也会很委屈，可能会回怼，“是你把工期压缩的这么短，不出问题才怪”。\n如果一个组织中，经常出现冲突，并且没有很好的措施去解决，长此以往，组织内人员的默契度就会降低，更别提团队的活力了。\n刚才只是举了一个小例子，冲突在工作中给我们造成的困扰有时候比较严重.\n经常有人和我反应，在工作中过得不开心，结果一问，很多不开心并不是因为工作压力和待遇的问题，而是因为沟通方式的问题导致的同事关系紧张。\n因为平时关系好的同事，一旦发生了冲突，如果冲突双方在语言上没有处理好，很多时候就会产生隔阂，接着造成了心理的芥蒂，最终影响到彼此的关系，所以在工作和生活中，真正考验沟通能力的是冲突管理。\n那么如何处理冲突呢？主要分为 `心态建设`、`情感账户`、`冲突表达` 三部分组成。\n**> 心态建设**\n可能大家也会遇到，有些人天生和陌生人自然熟，很快就能与能打成一片，这种天生就讨人喜欢的性格，我自己就比较羡慕。\n那为什么要心态建设呢？\n以我自己的例子来说，我曾经害怕给他人提出不同意见，当别人的行动冒犯到我，或者做的不好的时候，我害怕去给他提出建议，心理会想：“这个人怎么这样呢？太不靠谱了吧？”\n但其实这样并没有解决彼此做事的方式，后面还会出现类似的事情发生。\n为此只有正视冲突，解决冲突，才是解决类似事情的源头，不知道大家有没有和我一样的心态呢？\n为应对冲突，为此我去刻意学习说话的技巧，但是遇到冲突的时候，依赖没有改变这种情况。\n后来终于我们明白，因为在冲突的时候，我们所有的埋怨和指责都来自于我们对他人的看法，*如果我们认为对方是故意的，那么自己就立刻有情绪，而如果我们认为对方是善意的时候，自己就会去理解对方*。\n这就解释了，为什么有些人性格讨人喜欢，因为在他们眼里，所有人天生都是善意的，那么他们在冲突的时候，也是先表现出善意，然后再寻求解决问题，这样解决问题的效率会更高。\n知道这个原因后，我试图去改变自己的心态，把所有人都看成是善意的，但是在这个过程中非常艰难和痛苦，有时候一不小心就搞砸了。\n这是为什么呢？这是因为*我们内心认识世界和他人的心态，受到我们过去成长环境的影响*，这种影响已经根深蒂固长在我们心里面了，不可能一朝一夕的彻底改变的。\n那么还有其它解决办法吗？ 答案就是自我修行，修行的目的是与现阶段相比境界更高、胸怀更广、视野更宽的个人修养水平。\n这也解释了，为什么很多双重性格的人会选择信佛，因为他们内心希望变得善良，但是现实确又往往不如所愿，所以他们寻求信仰的力量，去修行和约束自己。\n比如我们知道乔布斯就是著名的修行者，在修行过程中，说出了*“活着就是为了改变世界”*这样的至理名言。\n所以在面对社会的过程中，如果我们的心态是对世界充满恶意的，那么可能需要不断的修行去改变这种心态，不然学再多沟通技巧也没有用，因为情绪来自于心理，而不是某个技巧。\n**> 情感账户**\n情感储蓄指的是两个人在冲突之前，就要表现出一定的善意，对情感账户进行充值。\n那么什么又是情感账户呢？*像银行账户一样，人与人之间的情感联系，在对方心理也存在一个情感账户。*\n比如两个陌生人之间的情感账户是空的，如果其中一方向另外一方示好，例如每次见面都打个招呼，经常送点小礼物，那么在对方心中，示好一方的情感账户就会增值。\n大家可以观察一下，身边性格好的人，他们非常喜欢和人打招呼，爱帮忙，爱送小礼物等，这就是他们无意识在进行情感投资。\n只有当在对方的情感账户中有了投资之后，这时候提出一些合理的要求，对方才会乐于接受，并且消耗一下情感储蓄，帮越大的忙，消耗的情感储蓄越多。\n所以在日常沟通中要注重对潜在联系对象的情感账户充值，不然当要找别人帮忙的时候，再提要求可能就来不及了。\n**> 冲突表达**\n冲突表达可以用观察、感受、需要和请求来说明自己的想法。\n观察指的是自己观察到这个现象；\n感受指的是自己当下的感受，这感受要突出客观和对组织产生的影响；\n需要指出我想要的做法；\n最后请求指的是向对方提出请求。\n比如刚才线上出bug的例子，作为产品经理可以说：“我刚才看到线上除了一个很严重的bug（观察），这样对系统稳定性和用户体验造成了很大的影响（感受），我希望以后这种能避免（需求），我们一块努力解决好吗（请求）？\n在表达冲突的时候，除了遵循冲突表达基本方式，还应当注意，避免对对方进行道德评价，对对方进行比较，逃避自己的责任和用命令语气等。\n本质上来讲，就是沟通的时候对事不对人，不对人进行指责，对自己有担当。比如刚才最后一句，“我们一块努力解决好吗？”改成，以后一定不要发生了。\n同样是请求，以后一定不要发生了，是带有命令语气，并且逃避了自己的责任，这样效果会大打折扣。\n`心态建设`、`情感账户`、`冲突表达` 三个步骤当中，心态建设是最难，因为是反人性的行为，情感账户和冲突表达只要掌握基本的技巧，大部分人都很能很快学会，掌握这三步，就能掌握复杂的沟通冲突。
-        </markdown-content>
+        
     </blog>
     <blog location="developer-single.html">
         <id>8</id>
@@ -84,8 +75,7 @@
             Gitbox下载、安装、使用说明
         </description>
         <cover>developer-images/appstore-gitbox.png</cover>
-        <markdown-content>[**Gitbox免费下载地址**](https://github.com/MichaelLedger/Applications)\n**Gitbox激活码**\n`TNTCKVLSAXRJYIWROYLHNCZRVJNNWREOROBU6117904f`\n![](developer-images/gitbox-license-number.png)\n**GitBox默认使用Xcode自带的FileMerge打开diff页面**\n![](developer-images/gitbox-filemerge.png)\n正常情况下，选中左侧提交记录后，在右侧detail页面双击即可打开diff页面查看本次提交的所做的修改内容\n若打不开，则可按照以下方法解决：\n终端输入：\n`$ sudo /usr/bin/xcode-select -switch /Applications/Xcode.app/Contents/Developer`\n关闭GitBox后重新启动，尝试是否能够打开，如果仍然打不开，则按照以下步骤：\n1. 安装最新Xcode\n2. 安装Xcode对应版本的Command line tools工具：\n`$ xcode-select --install`\n3. 终端重新输入上面的命令。
-        </markdown-content>
+        
     </blog>
     <blog location="developer-single.html">
         <id>9</id>
@@ -95,8 +85,7 @@
             创业者和打工者选择人生的道路不一样，人生的风景完全不同。
         </description>
         <cover>developer-images/sunset-buildings.jpg</cover>
-        <markdown-content>现在一些刚踏入社会的大学毕业生在看到不少人创业成功，还当了大公司的老板，于是对创业者非常羡慕。他们也想学着创业前辈一样，奋力跃出职场，做一个实实在在的创业者。但是，周围却有人在不断劝告：创业者很艰苦，而且真正当大老板的并不多，还不如安心做个打工者，平平淡淡过一生，这样也挺好。\n那么究竟是打工好？还是创业好呢？其实，做一个打工者并非一点优势也没有。打工的最大优势是省力，时间宽松，且收入稳定。也就是说，打工能够维持生计，老婆孩子热炕头，这辈子也不会发大财，过着平平淡淡的小日子。而创业者的优势是，能够实现自我，有获得大财富的机会，但生活压力巨大，收入不稳定，这也是创业者的苦衷。\n实际上，很多人开始是不愿意创业的，因为创业前途未卜，谁放着安逸的工作不做，非要辞职去创业呢？但是，有时候是企业不要你，你只能被迫走上创业之路。1983年，任正飞被深圳南海石油后勤服务基地辞退。然后他东拼西凑，募集资金2万元，创办了华为。1991年，俞敏洪被迫辞职。他在中关村一所小学租了一间平房作为办公室，创办了东方大学英语培养训练班。\n我觉得人人都可以当一个打工者，但并不是人人都可以做一个创业者。一方面，创业者的人生压力远比打工者大得多，但是越是有压力，却越能迸发成功的渴望，最终被塑造为成功人士。打工者可能是平平淡淡过一生，而创业者却要挑起开创基业的重担，这种风险是打工者所不敢面对的。\n记得华为刚刚创立没多久，任正非团队要研发一个科研项目，结果发现研发的经费超出预算，而如果这个科研项目研制不出来，华为有可能面临倒闭的危险。任正非曾讲过一段非常经典的话：如果华为倒了，你们可以去另谋职业，而我只能选择去跳楼。最后在贵人的帮助下，华为解决了资金问题，成为当今知名企业。\n另一方面，创业者的付出要远比打工者高得多。打工者可能在单位里面只要拿出个人能力的70%就可以了，但是创业者必须要始终保持100%的投入。打工者有八小时工作制，有人喊你起床、吃早餐、打卡、工作、下班。而创业者没有双休日，没有任何制度来督促你，一切都要靠自己的毅力。创业者没有人会给你评劳模，你是在为自己打工，但是创业者只要有制订奋斗目标，更有机会实现目标。\n当然，也有从基层一步步爬上高层领域岗位的，这类人不同于普通打工者，他们把企业当作成功的阶梯，不断往上攀爬，最终成功打工皇帝。像董明珠（格力电器董事长），张晓龙（微信），杨元庆（联想总裁），唐骏（微软中国区总裁）这样的打工皇帝。但是，这类一点点爬上来的人，既要能力强悍，又要以企业为自己的创业家园，这是一般打工者做不到的。\n如果你是年轻人，又觉得自己能力很强，要想在社会上干一番事业，并不安于在企业的平淡生活，想给更多的人发工资，那么去品尝一下这苦涩的创业经历吧，这是人生的一种财富。而如果你已经在企业里干了几十年，觉得创业风险太大，不如安于现状，这也是一种稳健的生活方式。创业者和打工者选择人生的道路不一样，人生的风景完全不同。
-        </markdown-content>
+        
     </blog>
     <blog location="developer-single.html">
         <id>10</id>
@@ -106,19 +95,17 @@
             这是一篇经验帖，作者 Daniel Shenfeld 曾在 12 家创业公司工作过，这些公司覆盖金融科技、医疗、教育技术、生物技术等多个领域，所处的阶段也各有不同，从种子前（pre-seed）到收购后都有。
         </description>
         <cover>developer-images/closeup-robot-arm.jpg</cover>
-        <markdown-content>这是一篇经验帖，作者 Daniel Shenfeld 曾在 12 家创业公司工作过，这些公司覆盖金融科技、医疗、教育技术、生物技术等多个领域，所处的阶段也各有不同，从种子前（pre-seed）到收购后都有。Daniel 在不同的公司中担任各种各样的职位，从基层员工到数据科学主管和战略顾问主管都做过。在所有工作中，他一直致力于研究有趣的机器学习和数据科学问题。所有人都试图创造伟大的产品，一些人确实成功了。\n从这么多工作经历中他学到了什么？本文介绍了他对产品、数据和人才的 8 条经验。\n作为货真价实的数学家，我一开始是被机器学习科学打动的，想创建新的算法和方法来解决挑战。\n但我很快就意识到，即便是最准确的机器学习模型也没法自己创造价值。机器学习和 AI 的价值是根据它们支持的产品来衡量的。弄清楚如何有效地做到这一点才是构建 ML 驱动产品的真正意义所在。\n《爱丽丝梦游仙境》的作者刘易斯·卡罗尔（Lewis Carroll）也是一位数学家。他发明了许多极具吸引力的产品，尽管有一些并没能像预期的那样发挥作用。\n**关注问题，而非方法**\n如果以构建产品为目标，那么机器学习和 AI 就只是达成目标的手段。重要的是如何解决产品问题，而不是使用什么样的方法。在大多数情况中，快捷但有缺陷的方法（quick and dirty solution）会让你走得更远。如果一个问题用简单回归就能很好地解决时，就不要训练深度神经网络了。\n当关注问题本身时，你有时会发现机器学习并不是解决问题的最好工具。很多问题是流程的问题。即使在这些情况下，数据科学家也可以做出很多贡献，因为他们天然倾向于采取严格、数据驱动的方法。但这并不表示用 AI 修复糟糕的流程是个好主意。只需修复流程。\n**寻找数据和产品之间的协同效应**\n将现有产品和根据机器学习模型做的预测结果结合起来很少能体现出机器学习的真正价值。当然，这也会给它们加一点分，但在强大的 AI 产品中，机器学习不只是附加功能。它是创造价值的引擎，而产品是建立在引擎基础上的：产品和数据必须要协同工作。\n如果做得好，就会形成强大的良性循环，我称之为「产品／数据拟合」（product/data fit）：产品有效地意识到数据的潜在价值，同时持续生成必要数据来进一步改进产品。\n**将机器学习引入产品是次优策略。**\n尤其是，AI 不能只停留在数据科学和工程团队中。组织的其他部分，从产品到管理层，都要参与其中，来加速创造价值的过程。这需要大量的教育和投入，而这超出了工程师们以往构建软件的习惯（即便是在初创公司中）。\n**数据先行，AI 在后**\n机器学习和 AI 都需要大量数据，更重要的是「高质量数据」。如果你要从头构建一个产品，那从第一天开始你就要考虑收集数据了。如果你要在现有产品中引入 AI 技术，那在进入 AI 部分之前，首先要准备好在数据工程和重建架构方面进行大量投入。\n这并不意味着你要在实现价值前预先加载所有工作。更好的数据操作意味着更好的分析，这对任何组织的学习和改进都至关重要。利用这些成果来展示价值并产生组织认同。当你的分析非常坚实时，就可以真正开始考虑机器学习了。\n**进行有效沟通**\n打造优秀的产品需要优秀的产品经理和高管的支持。虽然 AI 和深度学习的力量吸引了许多人，但很少有非技术人员真正了解这些技术。有效讨论机器学习和 AI 需要对统计学有深刻的理解，沟通鸿沟往往会造成不切实际的期望。\n关于机器学习和 AI 的讨论显然不是完全基于业务指标的。\n一个关键点是讨论业务指标的同时，也要思考如何将业务指标转换为模型指标。这样的话产品经理要承担很多责任，但对数据科学家而言也是如此，他们必须了解拟建产品相关领域的知识，还要深入理解业务，这样才能真正高效地工作。\n**快捷但有缺陷的方法副作用并没有那么大**\n正如我前面提到的，快捷但有缺陷的方法会让你走得更远。部分在于，现在快捷但有缺陷的方法其实就是过去缓慢但准确的方法。像 word2vec 这样的工具变得和回归一样易于使用，而且研究者还在不断创建功能强大的新工具。对任何数据科学家来说，充分了解不同的构建模块以及它们之间的粘合剂是非常必要的。\n开源工具爆炸式增长的后果之一是，大多数情况下开发专门的 ML 平台算不上一个好主意。当然，你应该有用常见构建块建立的专门算法，并将这些算法用在自己的问题和领域中。但，请把深度学习的研究留给谷歌的研究人员——要专注于业务问题，还记得吗？\n**向用户展示数据很有用，但不是所有呈现方法都同样效果拔群。**\n在产品开发的早期阶段，最重要的活动是获得市场反馈。但机器学习需要大量数据，而这需要很长时间。这就出现了一个问题：如何在没有太多数据的情况下，获得市场对某个数据产品的反馈？\n一般来说最好的解决方案是向用户展示数据。人类一次只能处理少量数据，所以没有太多数据也没关系。用户会如何处理你展示给他们的数据呢？他们想掩饰哪些，又想深入挖掘哪些呢？公开之前无法获取的信息是一种很强大的方法，而且能够提供数据的潜在业务价值。\n**建立信任**\n信任是大多数技术成功的主要因素。最终，每一项技术都是供人类使用的，因此必须取得人们的信任。在机器学习应用的背景下，有些人可能担心他们的工作会被自动化取代。其他人则正在根据技术提供的信息做出重要决策。\n如果一个 AI 产品中混合了这些担忧，比如某个产品试图替人类做出决策，而不是让人类自主决策，则会导致信任的快速流失。\n信任易失不易得。打造人们信任的产品。
-        </markdown-content>
+        
     </blog>
     <blog location="developer-single.html">
         <id>11</id>
         <date>June 4, 2019</date>
-        <title>WWDC - Mac Pro 为何设计成"刨丝器"</title>
+        <title>WWDC - Mac Pro 为何设计成&quot;刨丝器&quot;</title>
         <description>
             苹果的产品，有两个极致。iPhone 是消费品的极致，Mac 则是生产力工具极致。
         </description>
         <cover>developer-images/mac-pro-2019.jpg</cover>
-        <markdown-content>苹果的产品，有两个极致。\niPhone 是消费品的极致，Mac 则是生产力工具极致。\n6 月 3 日，在 WWDC 大会开幕演讲结束后，在现场体验了刚刚发布的 Mac Pro 工作站——让我们抛开难懂的纸面参数，回归 Mac Pro 的工作场景。\n这台史上最强的苹果电脑，到底能干什么？\n![](developer-images/macpro-vs-grater.png)\n为什么 Mac Pro 开了那么多个洞？秘密在这里\n新 Mac Pro 体验区现场，一台用机械臂控制的摄录机，正围绕一座雕塑进行拍摄。这是佳能的 C300 Mark III，市面鲜见的 8K 摄录机。\n![](developer-images/video-camera-equipment.jpeg)\nC300 Mark III 录制的 8K RAW 视频文件，将会传输到 Mac Pro 上，得益于新加入的 Apple Afterburner 加速卡，你可以直接在 Mac Pro 上对视频流进行编辑。新 Mac Pro 的性能相当强大，即便是一次性剪辑 3 条 8K 视频也毫无压力。\n以往，这是需要好几台工作站才能完成的复杂工程，如今，在一台 Mac Pro 上就可以完成一整套的工作流。\n新 Mac Pro 的设计团队为了满足技术人员们各式各样的需求，将大量前所未有的新想法都融入到了新 Mac Pro 当中，这也为新 Mac Pro 的设计带来了不小的挑战。\n上一代 Mac Pro 就在设计上吃了大亏。\n尽管浑然一体的机身贯彻了苹果的设计美学，但可扩展性却让人堪忧。工作站的性能一旦跑不赢摩尔定律，就容易迅速过气，这也是旧款 Mac Pro 更新停滞的原因。\n![](developer-images/macpro2013.png)\n▲ 2013 款 Mac Pro\n因此，新 Mac Pro 的设计团队几乎完全推翻了之前的经验，更多优先考虑满足专业人士的需求，为了在工业设计和产品功能之间达到平衡，最终采用了如今我们所看到的设计——看上去更像是第一代 Mac Pro，那时候的苹果电脑主机，还残留着 Power Macintosh 的影子。\n![](developer-images/mac-pro-first-generation.jpeg)\n▲ 第一代 Mac Pro\n与第一代 Mac Pro 相比，新 Mac Pro 则是布满了密集的散热口——这几乎成了新 Mac Pro 最大的槽点，但这也是最考验设计功力的地方。\n新 Mac Pro 的最大电压功率高达 1.4KW，里面有大量的发热元件需要进行散热， 这必然会产生巨大的风量，狭小的机箱当中难免会发出巨大的风噪。\n因此，为了减少噪音，苹果借鉴了消声器的设计，仔细观察 Mac Pro 上的散热口，你会发现这并不是一般的开孔，而是一个个球状凹槽，类似的设计曾应用在工厂的通风口百叶窗上，可以形成较好的隔音效果。\n此外，这样的设计也有利于保证整个系统的刚性，同时让整机质量不至于过重，毕竟 Mac Pro 已经重达 18kg，内部还需要容纳很多模块。\n![](developer-images/noise-reduction-louvered-fan.png)\n▲ 日本曙工業株式会社为工厂设计的消音百叶扇，图片来源：曙工業株式会社\n转动机顶上的把手，可以轻易地拆卸外壳。苹果把一切好设计都藏在了 Mac Pro 里面。\n![](developer-images/macpro-handle.gif)\n苹果称 Mac Pro 搭载着最先进的散热结构，机身分为两大散热区，配备三个风扇和一个吹风机，这才压得住 28 核心的英特尔 Xeno 处理器和两张 Radeon Pro Vega II 显卡。\n值得一提的是，模块化设计也能够更好地兼顾 Mac Pro 的散热系统，不会像 DIY 装机一样，每加一张新显卡，就要重新考虑散热问题。\n![](developer-images/thermolysis.gif)\n在体验会场，苹果专门为 Mac Pro 设计了一个 AR 演示应用，用 iPad Pro 扫描桌面上的 Mac Pro 铝合金骨架，就会在屏幕上显示出 Mac Pro 的 3D 建模，掀去外壳，你可以一件一件地查看藏在 Mac Pro 内部的各种零部件，体会模块化设计潜藏的魅力。\n显然，如果说 iMac Pro 是为了满足个人的所有创作需求，那么新 Mac Pro 则是为了提升成熟技术团队的效率上限。为技术的边界开疆拓土，这才是 Mac Pro 更新的意义所在。\nPro Display XDR：媲美 20 万索尼监视器的专业级屏幕\n与 Mac Pro 共同亮相的，还有 6K 分辨率的专业级显示器 Pro Display XDR——苹果上一款显示器 Thunderbolt Display，已经是 2011 年发布的产品了。\n新 Mac Pro 的目标是最极致的工作站，而 Pro Display XDR 的目标，则是最极致的屏幕。\n有新 Mac Pro 购置需求的人群，相当一部分都是专业的影像设计或游戏开发工作室，对于他们来说，绝佳的显示设备也是工作的必需品——这样的设备，通常价格不菲。\n索尼 BVM-X300 监视器，采用 4K OLED 屏幕，能够保持 1000 nits 常亮，支持高动态范围显示，并且有着广阔的可视角度，是电影行业最顶级的监视级设备，售价高达 30000 美元。\n![](developer-images/sony-bvm-x300.jpeg)\n▲索尼 BVM-X300 监视器\n这也是苹果为 Pro Display XDR 寻找的对标物。\nPro Display XDR 是一款 32 英寸的 LCD 显示器，拥有 6K 的超高分辨率，动态范围也远非寻常，对比度达到了 1000000:1，苹果甚至为此专门发明了一个新词——XDR，意思是达到了 HDR 的极致。\n值得一提的是，Pro Display XDR 能够在 1000 nits 的亮度下保持常亮，峰值亮度则达到了 1600 nits，这是大部分专业级显示器所不具备的优势。\n![](developer-images/macpro-audio.jpeg)\n为了达成监视级的效果，苹果重新设计 Pro Display XDR 的背光系统，让 576 颗蓝色 LED 灯进行协同工作，从而让屏幕亮度均匀，实现超高的对比度。\n此外，苹果还为 Pro Display XDR 专门定制了一块 TCON 芯片，用于分析和再现图像的显示效果，以超过 LCD 本身刷新率的 10 倍速控制着 LED 背光，进而减少延迟和晕染。\n![](developer-images/pro-display-xdr-backlight.gif)\n▲Pro Display XDR 背光系统\n正是因为这些技术的加持，让 Pro Display XDR 能够以一个 4999 美元的较低成本、以及较为轻薄的机身，来实现顶级的屏幕显示效果——当然，为了散热，避免不了在铝合金机身开满了和 Mac Pro 一样的球状凹槽。\nPro Display XDR还有一款在屏幕上蚀刻纳米反眩光涂层的版本，能够极大地减少反光。在现场体验时，就算是凑近到屏幕跟前，也见不到自己的倒影，效果相当惊人。\n当然，仅仅加上这层纳米涂层的 Pro Display XDR，就要比普通版贵整整 1000 美元，售价达到 5999 美元。\n有意思的是，Pro Display XDR 还配备了一个名为 Pro Stand 的多用支架，可以对显示器角度进行细致入微的调整，无论是横着还是竖着，都可以稳稳地把 Pro Display XDR 托住。\n不过，999 美元的售价，对于一个屏幕支架来说，可算不上便宜。\n![](developer-images/xdr-holder.jpeg)\n一台比 PC 更胜 PC 的苹果电脑，一份超越极致的生产力\n进一步了解 Mac Pro 和 Pro Display XDR 之后，让我们回到文章最开始的问题——新 Mac Pro 到底能干什么？\n这是一台比 PC 更胜 PC 的苹果电脑，像 PC 一样可以灵活地进行调整升级，但比 PC 更胜一筹的是，借助于 macOS，Mac Pro 从硬件底层就能够充分发挥系统性能，这也意味着更强大的性能表现。\n皮克斯副总裁 Guido Quaroni 在体验过新 Mac Pro 之后称赞不已：\n`新 Mac Pro 清楚地表明，苹果正在满足皮克斯这样的专业团队的需求。`\n如果把 Mac Pro 放回苹果的产品线当中，Mac Pro 的意义便昭然若揭——\n长期以来，苹果都是一家顶级的消费品公司。\n以 iPhone 为代表的产品，旨在于让用户更好地消费内容，比如 App、游戏、影视，不一而足；而这些内容，则是来源于以 Mac 为代表的生产力工具。为了生产最顶级的内容，毫无疑问需要最极致的生产力工具。\nMac Pro，就是那份极致的生产力。
-        </markdown-content>
+        
     </blog>
     <blog location="developer-single.html">
         <id>12</id>
@@ -128,491 +115,7 @@
             国家缩写和各国语言缩写在配置language时常常使用缩写，留存以备后续使用方便查找。
         </description>
         <cover>developer-images/closeup-blue-desk-globe.jpg</cover>
-        <markdown-content>```// 获取当前设备支持语言数组\nNSArray *arr = [NSLocale availableLocaleIdentifiers];\n[arr enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {\nNSLocale *local =[[NSLocale alloc] initWithLocaleIdentifier:obj];\nNSLocale *chineseLocal = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];\nNSString *chineseLanguage = [chineseLocal displayNameForKey:NSLocaleIdentifier value:obj];\nNSLocale *englishLocal = [[NSLocale alloc] initWithLocaleIdentifier:@"en-US"];\nNSString *englishLanguage = [englishLocal displayNameForKey:NSLocaleIdentifier value:obj];\nNSString *currencySymbol = local.currencySymbol;\nNSString *countryCode = local.countryCode;\nNSLog(@"%@-%@-%@-%@-%@", obj, chineseLanguage, englishLanguage, currencySymbol, countryCode);\n}];```\n国家与地区缩写
-            ---------------------------------------------------------------------------------------------
-             
-            英文    中文   域名缩写  电话代码
-            Angola  安哥拉  AO  244
-            Afghanistan  阿富汗  AF  93
-            Albania  阿尔巴尼亚  AL  355
-            Algeria  阿尔及利亚  DZ  213
-            Andorra  安道尔共和国  AD  376
-            Anguilla  安圭拉岛  AI  1264
-            Antigua and Barbuda  安提瓜和巴布达  AG  1268
-            Argentina  阿根廷  AR  54
-            Armenia  亚美尼亚  AM  374
-            Ascension  阿森松  -  247
-            Australia  澳大利亚  AU  61
-            Austria  奥地利  AT  43
-            Azerbaijan  阿塞拜疆  AZ  994
-            Bahamas  巴哈马  BS  1242
-            Bahrain  巴林  BH  973
-            Bangladesh  孟加拉国  BD  880
-            Barbados  巴巴多斯  BB  1246
-            Belarus  白俄罗斯  BY  375
-            Belgium  比利时  BE  32
-            Belize  伯利兹  BZ  501
-            Benin  贝宁  BJ  229
-            BermudaIs.  百慕大群岛  BM  1441
-            Bolivia  玻利维亚  BO  591
-            Botswana  博茨瓦纳  BW  267
-            Brazil  巴西  BR  55
-            Brunei  文莱  BN  673
-            Bulgaria  保加利亚  BG  359
-            Burkina-faso  布基纳法索  BF  226
-            Burma  缅甸  MM  95
-            Burundi  布隆迪  BI  257
-            Cameroon  喀麦隆  CM  237
-            Canada  加拿大  CA  1
-            Cayman Is.  开曼群岛  -  1345
-            Central African Republic  中非共和国  CF  236
-            Chad  乍得  TD  235
-            Chile  智利  CL  56
-            China  中国  CN  86
-            Colombia  哥伦比亚  CO  57
-            Congo  刚果  CG  242
-            Cook Is.  库克群岛  CK  682
-            Costa Rica  哥斯达黎加  CR  506
-            Cuba  古巴  CU  53
-            Cyprus  塞浦路斯  CY  357
-            Czech Republic  捷克  CZ  420
-            Denmark  丹麦  DK  45
-            Djibouti  吉布提  DJ  253
-            Dominica Rep.  多米尼加共和国  DO  1890
-            Ecuador  厄瓜多尔  EC  593
-            Egypt  埃及  EG  20
-            EISalvador  萨尔瓦多  SV  503
-            Estonia  爱沙尼亚  EE  372
-            Ethiopia  埃塞俄比亚  ET  251
-            Fiji  斐济  FJ  679
-            Finland  芬兰  FI  358
-            France  法国  FR  33
-            French Guiana  法属圭亚那  GF  594
-            Gabon  加蓬  GA  241
-            Gambia  冈比亚  GM  220
-            Georgia  格鲁吉亚  GE  995
-            Germany  德国  DE  49
-            Ghana  加纳  GH  233
-            Gibraltar  直布罗陀  GI  350
-            Greece  希腊  GR  30
-            Grenada  格林纳达  GD  1809
-            Guam  关岛  GU  1671
-            Guatemala  危地马拉  GT  502
-            Guinea  几内亚  GN  224
-            Guyana  圭亚那  GY  592
-            Haiti  海地  HT  509
-            Honduras  洪都拉斯  HN  504
-            Hongkong  香港  HK  852
-            Hungary  匈牙利  HU  36
-            Iceland  冰岛  IS  354
-            India  印度  IN  91
-            Indonesia  印度尼西亚  ID  62
-            Iran  伊朗  IR  98
-            Iraq  伊拉克  IQ  964
-            Ireland  爱尔兰  IE  353
-            Israel  以色列  IL  972
-            Italy  意大利  IT  39
-            IvoryCoast  科特迪瓦  -  225
-            Jamaica  牙买加  JM  1876
-            Japan  日本  JP  81
-            Jordan  约旦  JO  962
-            Kampuchea (Cambodia )  柬埔寨  KH  855
-            Kazakstan  哈萨克斯坦  KZ  327
-            Kenya  肯尼亚  KE  254
-            Korea  韩国  KR  82
-            Kuwait  科威特  KW  965
-            Kyrgyzstan  吉尔吉斯坦  KG  331
-            Laos  老挝  LA  856
-            Latvia  拉脱维亚  LV  371
-            Lebanon  黎巴嫩  LB  961
-            Lesotho  莱索托  LS  266
-            Liberia  利比里亚  LR  231
-            Libya  利比亚  LY  218
-            Liechtenstein  列支敦士登  LI  423
-            Lithuania  立陶宛  LT  370
-            Luxembourg  卢森堡  LU  352
-            Macao  澳门  MO  853
-            Madagascar  马达加斯加  MG  261
-            Malawi  马拉维  MW  265
-            Malaysia  马来西亚  MY  60
-            Maldives  马尔代夫  MV  960
-            Mali  马里  ML  223
-            Malta  马耳他  MT  356
-            Mariana Is  马里亚那群岛  -  1670
-            Martinique  马提尼克  -  596
-            Mauritius  毛里求斯  MU  230
-            Mexico  墨西哥  MX  52
-            Moldova, Republic of  摩尔多瓦  MD  373
-            Monaco  摩纳哥  MC  377
-            Mongolia  蒙古  MN  976
-            Montserrat Is  蒙特塞拉特岛  MS  1664
-            Morocco  摩洛哥  MA  212
-            Mozambique  莫桑比克  MZ  258
-            Namibia  纳米比亚  NA  264
-            Nauru  瑙鲁  NR  674
-            Nepal  尼泊尔  NP  977
-            Netheriands Antilles  荷属安的列斯  -  599
-            Netherlands  荷兰  NL  31
-            NewZealand  新西兰  NZ  64
-            Nicaragua  尼加拉瓜  NI  505
-            Niger  尼日尔  NE  227
-            Nigeria  尼日利亚  NG  234
-            North Korea  朝鲜  KP  850
-            Norway  挪威  NO  47
-            Oman  阿曼  OM  968
-            Pakistan  巴基斯坦  PK  92
-            Panama  巴拿马  PA  507
-            Papua New Cuinea  巴布亚新几内亚  PG  675
-            Paraguay  巴拉圭  PY  595
-            Peru  秘鲁  PE  51
-            Philippines  菲律宾  PH  63
-            Poland  波兰  PL  48
-            French Polynesia  法属玻利尼西亚  PF  689
-            Portugal  葡萄牙  PT  351
-            PuertoRico  波多黎各  PR  1787
-            Qatar  卡塔尔  QA  974
-            Reunion  留尼旺  -  262
-            Romania  罗马尼亚  RO  40
-            Russia  俄罗斯  RU  7
-            Saint Lueia  圣卢西亚  LC  1758
-            Saint Vincent  圣文森特岛  VC  1784
-            Samoa Eastern  东萨摩亚(美)  -  684
-            Samoa Western  西萨摩亚  -  685
-            San Marino  圣马力诺  SM  378
-            Sao Tome and Principe  圣多美和普林西比  ST  239
-            Saudi Arabia  沙特阿拉伯  SA  966
-            Senegal  塞内加尔  SN  221
-            Seychelles  塞舌尔  SC  248
-            Sierra Leone  塞拉利昂  SL  232
-            Singapore  新加坡  SG  65
-            Slovakia  斯洛伐克  SK  421
-            Slovenia  斯洛文尼亚  SI  386
-            Solomon Is  所罗门群岛  SB  677
-            Somali  索马里  SO  252
-            South Africa  南非  ZA  27
-            Spain  西班牙  ES  34
-            Sri Lanka  斯里兰卡  LK  94
-            St.Lucia  圣卢西亚  LC  1758
-            St.Vincent  圣文森特  VC  1784
-            Sudan  苏丹  SD  249
-            Suriname  苏里南  SR  597
-            Swaziland  斯威士兰  SZ  268
-            Sweden  瑞典  SE  46
-            Switzerland  瑞士  CH  41
-            Syria  叙利亚  SY  963
-            Taiwan  台湾省  TW  886
-            Tajikstan  塔吉克斯坦  TJ  992
-            Tanzania  坦桑尼亚  TZ  255
-            Thailand  泰国  TH  66
-            Togo  多哥  TG  228
-            Tonga  汤加  TO  676
-            Trinidad and Tobago  特立尼达和多巴哥  TT  1809
-            Tunisia  突尼斯  TN  216
-            Turkey  土耳其  TR  90
-            Turkmenistan  土库曼斯坦  TM  993
-            Uganda  乌干达  UG  256
-            Ukraine  乌克兰  UA  380
-            United Arab Emirates  阿拉伯联合酋长国  AE  971
-            United Kiongdom  英国  GB/UK  44
-            United States of America  美国  US  1
-            Uruguay  乌拉圭  UY  598
-            Uzbekistan  乌兹别克斯坦  UZ  233
-            Venezuela  委内瑞拉  VE  58
-            Vietnam  越南  VN  84
-            Yemen  也门  YE  967
-            Yugoslavia  南斯拉夫  YU  381
-            Zimbabwe  津巴布韦  ZW  263
-            Zaire  扎伊尔  ZR  243
-            Zambia  赞比亚  ZM  260
-             
-             
-             
-            各国语言缩写
-            ---------------------------------------------------------------------------------------------
-            en 英文
-            en_US 英文 (美国)
-            ar 阿拉伯文
-            ar_AE 阿拉伯文 (阿拉伯联合酋长国)
-            ar_BH 阿拉伯文 (巴林)
-            ar_DZ 阿拉伯文 (阿尔及利亚)
-            ar_EG 阿拉伯文 (埃及)
-            ar_IQ 阿拉伯文 (伊拉克)
-            ar_JO 阿拉伯文 (约旦)
-            ar_KW 阿拉伯文 (科威特)
-            ar_LB 阿拉伯文 (黎巴嫩)
-            ar_LY 阿拉伯文 (利比亚)
-            ar_MA 阿拉伯文 (摩洛哥)
-            ar_OM 阿拉伯文 (阿曼)
-            ar_QA 阿拉伯文 (卡塔尔)
-            ar_SA 阿拉伯文 (沙特阿拉伯)
-            ar_SD 阿拉伯文 (苏丹)
-            ar_SY 阿拉伯文 (叙利亚)
-            ar_TN 阿拉伯文 (突尼斯)
-            ar_YE 阿拉伯文 (也门)
-            be 白俄罗斯文
-            be_BY 白俄罗斯文 (白俄罗斯)
-            bg 保加利亚文
-            bg_BG 保加利亚文 (保加利亚)
-            ca 加泰罗尼亚文
-            ca_ES 加泰罗尼亚文 (西班牙)
-            ca_ES_EURO 加泰罗尼亚文 (西班牙,Euro)
-            cs 捷克文
-            cs_CZ 捷克文 (捷克共和国)
-            da 丹麦文
-            da_DK 丹麦文 (丹麦)
-            de 德文
-            de_AT 德文 (奥地利)
-            de_AT_EURO 德文 (奥地利,Euro)
-            de_CH 德文 (瑞士)
-            de_DE 德文 (德国)
-            de_DE_EURO 德文 (德国,Euro)
-            de_LU 德文 (卢森堡)
-            de_LU_EURO 德文 (卢森堡,Euro)
-            el 希腊文
-            el_GR 希腊文 (希腊)
-            en_AU 英文 (澳大利亚)
-            en_CA 英文 (加拿大)
-            en_GB 英文 (英国)
-            en_IE 英文 (爱尔兰)
-            en_IE_EURO 英文 (爱尔兰,Euro)
-            en_NZ 英文 (新西兰)
-            en_ZA 英文 (南非)
-            es 西班牙文
-            es_BO 西班牙文 (玻利维亚)
-            es_AR 西班牙文 (阿根廷)
-            es_CL 西班牙文 (智利)
-            es_CO 西班牙文 (哥伦比亚)
-            es_CR 西班牙文 (哥斯达黎加)
-            es_DO 西班牙文 (多米尼加共和国)
-            es_EC 西班牙文 (厄瓜多尔)
-            es_ES 西班牙文 (西班牙)
-            es_ES_EURO 西班牙文 (西班牙,Euro)
-            es_GT 西班牙文 (危地马拉)
-            es_HN 西班牙文 (洪都拉斯)
-            es_MX 西班牙文 (墨西哥)
-            es_NI 西班牙文 (尼加拉瓜)
-            et 爱沙尼亚文
-            es_PA 西班牙文 (巴拿马)
-            es_PE 西班牙文 (秘鲁)
-            es_PR 西班牙文 (波多黎哥)
-            es_PY 西班牙文 (巴拉圭)
-            es_SV 西班牙文 (萨尔瓦多)
-            es_UY 西班牙文 (乌拉圭)
-            es_VE 西班牙文 (委内瑞拉)
-            et_EE 爱沙尼亚文 (爱沙尼亚)
-            fi 芬兰文
-            fi_FI 芬兰文 (芬兰)
-            fi_FI_EURO 芬兰文 (芬兰,Euro)
-            fr 法文
-            fr_BE 法文 (比利时)
-            fr_BE_EURO 法文 (比利时,Euro)
-            fr_CA 法文 (加拿大)
-            fr_CH 法文 (瑞士)
-            fr_FR 法文 (法国)
-            fr_FR_EURO 法文 (法国,Euro)
-            fr_LU 法文 (卢森堡)
-            fr_LU_EURO 法文 (卢森堡,Euro)
-            hr 克罗地亚文
-            hr_HR 克罗地亚文 (克罗地亚)
-            hu 匈牙利文
-            hu_HU 匈牙利文 (匈牙利)
-            is 冰岛文
-            is_IS 冰岛文 (冰岛)
-            it 意大利文
-            it_CH 意大利文 (瑞士)
-            it_IT 意大利文 (意大利)
-            it_IT_EURO 意大利文 (意大利,Euro)
-            iw 希伯来文
-            iw_IL 希伯来文 (以色列)
-            ja 日文
-            ja_JP 日文 (日本)
-            ko 朝鲜文
-            ko_KR 朝鲜文 (南朝鲜)
-            lt 立陶宛文
-            lt_LT 立陶宛文 (立陶宛)
-            lv 拉托维亚文(列托)
-            lv_LV 拉托维亚文(列托) (拉脱维亚)
-            mk 马其顿文
-            mk_MK 马其顿文 (马其顿王国)
-            nl 荷兰文
-            nl_BE 荷兰文 (比利时)
-            nl_BE_EURO 荷兰文 (比利时,Euro)
-            nl_NL 荷兰文 (荷兰)
-            nl_NL_EURO 荷兰文 (荷兰,Euro)
-            no 挪威文
-            no_NO 挪威文 (挪威)
-            no_NO_NY 挪威文 (挪威,Nynorsk)
-            pl 波兰文
-            pl_PL 波兰文 (波兰)
-            pt 葡萄牙文
-            pt_BR 葡萄牙文 (巴西)
-            pt_PT 葡萄牙文 (葡萄牙)
-            pt_PT_EURO 葡萄牙文 (葡萄牙,Euro)
-            ro 罗马尼亚文
-            ro_RO 罗马尼亚文 (罗马尼亚)
-            ru 俄文
-            ru_RU 俄文 (俄罗斯)
-            sh 塞波尼斯-克罗地亚文
-            sh_YU 塞波尼斯-克罗地亚文 (南斯拉夫)
-            sk 斯洛伐克文
-            sk_SK 斯洛伐克文 (斯洛伐克)
-            sl 斯洛文尼亚文
-            sl_SI 斯洛文尼亚文 (斯洛文尼亚)
-            sq 阿尔巴尼亚文
-            sq_AL 阿尔巴尼亚文 (阿尔巴尼亚)
-            sr 塞尔维亚文
-            sr_YU 塞尔维亚文 (南斯拉夫)
-            sv 瑞典文
-            sv_SE 瑞典文 (瑞典)
-            th 泰文
-            th_TH 泰文 (泰国)
-            tr 土耳其文
-            tr_TR 土耳其文 (土耳其)
-            uk 乌克兰文
-            uk_UA 乌克兰文 (乌克兰)
-            zh 中文
-            zh_CN 中文 (中国)
-            zh_HK 中文 (香港)
-            zh_TW 中文 (台湾)
-            
-            Locale Description // Short String //  Hex Value //  Decimal Value
-            Chinese-China // zh-cn // 0x0804 // 2052
-            Chinese-Taiwan // zh-tw // 0x0404 // 1028
-            English-United States // en-us // 0x0409 // 1033
-            Afrikaans // af // 0x0436 // 1078
-            Albanian // sq // 0x041C // 1052
-            Arabic-United Arab Emirates // ar-ae // 0x3801 // 14337
-            Arabic-Bahrain // ar-bh // 0x3C01 // 15361
-            Arabic-Algeria // ar-dz // 0x1401 // 5121
-            Arabic-Egypt // ar-eg // 0x0C01 // 3073
-            Arabic-Iraq // ar-iq // 0x0801 // 2049
-            Arabic-Jordan // ar-jo // 0x2C01 // 11265
-            Arabic-Kuwait // ar-kw // 0x3401 // 13313
-            Arabic-Lebanon // ar-lb // 0x3001 // 12289
-            Arabic-Libya // ar-ly // 0x1001 // 4097
-            Arabic-Morocco // ar-ma // 0x1801 // 6145
-            Arabic-Oman // ar-om // 0x2001 // 8193
-            Arabic-Qata // ar-qa // 0x4001 // 16385
-            Arabic-Saudi Arabia // ar-sa // 0x0401 // 1025
-            Arabic-Syria // ar-sy // 0x2801 // 10241
-            Arabic-Tunisia // ar-tn // 0x1C01 // 7169
-            Arabic-Yemen // ar-ye // 0x2401 // 9217
-            Armenian // hy // 0x042B // 1067
-            Azeri-Latin // az-az // 0x042C // 1068
-            Azeri-Cyrillic // az-az // 0x082C // 2092
-            Basque // eu // 0x042D // 1069
-            Belarusian // be // 0x0423 // 1059
-            Bulgarian // bg // 0x0402 // 1026
-            Catalan // ca // 0x0403 // 1027
-            Chinese-China // zh-cn // 0x0804 // 2052
-            Chinese-Hong Kong SAR // zh-hk // 0x0C04 // 3076
-            Chinese-Macau SAR // zh-mo // 0x1404 // 5124
-            Chinese-Singapore // zh-sg // 0x1004 // 4100
-            Chinese-Taiwan // zh-tw // 0x0404 // 1028
-            Croatian // hr // 0x041A // 1050
-            Czech // cs // 0x0405 // 1029
-            Danish // da // 0x0406 // 1030
-            Dutch-The Netherlands // nl-nl // 0x0413 // 1043
-            Dutch-Belgium // nl-be // 0x0813 // 2067
-            English-Australia // en-au // 0x0C09 // 3081
-            English-Belize // en-bz // 0x2809 // 10249
-            English-Canada // en-ca // 0x1009 // 4105
-            English-Caribbean // en-cb // 0x2409 // 9225
-            English-Ireland // en-ie // 0x1809 // 6153
-            English-Jamaica // en-jm // 0x2009 // 8201
-            English-New Zealand // en-nz // 0x1409 // 5129
-            English-Phillippines // en-ph // 0x3409 // 13321
-            English-South Africa // en-za // 0x1C09 // 7177
-            English-Trinidad // en-tt // 0x2C09 // 11273
-            English-United Kingdom // en-gb // 0x0809 // 2057
-            English-United States // en-us // 0x0409 // 1033
-            Estonian // et // 0x0425 // 1061
-            Fars // fa // 0x0429 // 1065
-            Finnish // fi // 0x040B // 1035
-            Faroese // fo // 0x0438 // 1080
-            French-France // fr-fr // 0x040C // 1036
-            French-Belgium // fr-be // 0x080C // 2060
-            French-Canada // fr-ca // 0x0C0C // 3084
-            French-Luxembourg // fr-lu // 0x140C // 5132
-            French-Switzerland // fr-ch // 0x100C // 4108
-            Gaelic-Ireland // gd-ie // 0x083C // 2108
-            Gaelic-Scotland // gd // 0x043C // 1084
-            German-Germany // de-de // 0x0407 // 1031
-            German-Austria // de-at // 0x0C07 // 3079
-            German-Liechtenstein // de-li // 0x1407 // 5127
-            German-Luxembourg // de-lu // 0x1007 // 4103
-            German-Switzerland // de-ch // 0x0807 // 2055
-            Greek // el // 0x0408 // 1032
-            Hebrew // he // 0x040D // 1037
-            Hindi // hi // 0x0439 // 1081
-            Hungarian // hu // 0x040E // 1038
-            Icelandic // is // 0x040F // 1039
-            Indonesian // id // 0x0421 // 1057
-            Italian-Italy // it-it // 0x0410 // 1040
-            Italian-Switzerland // it-ch // 0x0810 // 2064
-            Japanese // ja // 0x0411 // 1041
-            Korean // ko // 0x0412 // 1042
-            Latvian // lv // 0x0426 // 1062
-            Lithuanian // lt // 0x0427 // 1063
-            FYRO Macedonian // mk // 0x042F // 1071
-            Malay-Malaysia // ms-my // 0x043E // 1086
-            Malay–Brunei // ms-bn // 0x083E // 2110
-            Maltese // mt // 0x043A // 1082
-            Marathi // mr // 0x044E // 1102
-            Norwegian-Bokmål // no-no // 0x0414 // 1044
-            Norwegian-Nynorsk // no-no // 0x0814 // 2068
-            Polish // pl // 0x0415 // 1045
-            Portuguese-Portugal // pt-pt // 0x0816 // 2070
-            Portuguese-Brazil // pt-br // 0x0416 // 1046
-            Raeto-Romance // rm // 0x0417 // 1047
-            Romanian-Romania // ro // 0x0418 // 1048
-            Romanian-Moldova // ro-mo // 0x0818 // 2072
-            Russian // ru // 0x0419 // 1049
-            Russian-Moldova // ru-mo // 0x0819 // 2073
-            Sanskrit // sa // 0x044F // 1103
-            Serbian-Cyrillic // sr-sp // 0x0C1A // 3098
-            Serbian-Latin // sr-sp // 0x081A // 2074
-            Setsuana // tn // 0x0432 // 1074
-            Slovenian // sl // 0x0424 // 1060
-            Slovak // sk // 0x041B // 1051
-            Sorbian // sb 0x042E // 1070
-            Spanish-Spain // es-es // 0x0C0A // 1034
-            Spanish-Argentina // es-ar // 0x2C0A // 11274
-            Spanish-Bolivia // es-bo // 0x400A // 16394
-            Spanish-Chile // es-cl // 0x340A // 13322
-            Spanish-Colombia // es-co // 0x240A // 9226
-            Spanish-Costa Rica // es-cr // 0x140A // 5130
-            Spanish-Dominican Republic // es-do // 0x1C0A // 7178
-            Spanish-Ecuador // es-ec // 0x300A // 12298
-            Spanish-Guatemala // es-gt // 0x100A // 4106
-            Spanish-Honduras // es-hn // 0x480A // 18442
-            Spanish-Mexico // es-mx 0x080A  2058
-            Spanish-Nicaragua // es-ni // 0x4C0A // 19466
-            Spanish-Panama // es-pa // 0x180A // 6154
-            Spanish-Peru // es-pe // 0x280A // 10250
-            Spanish-Puerto Rico // es-pr // 0x500A // 20490
-            Spanish-Paraguay // es-py // 0x3C0A // 15370
-            Spanish-El Salvador // es-sv // 0x440A // 17418
-            Spanish-Uruguay // es-uy // 0x380A // 14346
-            Spanish-Venezuela // es-ve // 0x200A // 8202
-            Sutu // sx // 0x0430 // 1072
-            Swahili // sw // 0x0441 // 1089
-            Swedish-Sweden // sv-se // 0x041D // 1053
-            Swedish-Finland // sv-fi // 0x081D // 2077
-            Tamil // ta // 0x0449 // 1097
-            Tatar // tt // 0X0444 // 1092
-            Thai // th // 0x041E // 1054
-            Turkish // tr // 0x041F // 1055
-            Tsonga // ts // 0x0431 // 1073
-            Ukrainian // uk // 0x0422 // 1058
-            Urdu // ur // 0x0420 // 1056
-            Uzbek-Cyrillic // uz-uz // 0x0843 // 2115
-            Uzbek–Latin // uz-uz // 0x0443 // 1091
-            Vietnamese // vi // 0x042A // 1066
-            Xhosa // xh // 0x0434 // 1076
-            Yiddish // yi // 0x043D // 1085
-            Zulu // zu // 0x0435 // 1077
-        </markdown-content>
+        
     </blog>
     <blog location="developer-single.html">
         <id>13</id>
@@ -622,9 +125,7 @@
             使用脚本快速清理 Xcode 和 Git 垃圾回收机制来腾出磁盘空间,同时简单介绍 Git 正确的工作方式：git rebase
         </description>
         <cover>developer-images/git.jpeg</cover>
-        <markdown-content>资源库 `/Users/user/Library` 下文件夹占用系统内存的绝大部分，多大情况可以达到100G以上，建议手动进行删除无用的或者已卸载App的缓存文件，切记不可全选删除！\n建议使用命令`$ ls -la`或者 `$ ls -lhtr` 进行查看文件最近访问时间并使用Finder排序文件大小进行判断是否需要删除，删除切记谨慎！！！\nXcode会占用很大的内存空间，特别是各个版本的iOS的runtime文件,文件目录在\n`~/Library/Developer/Xcode/iOS\ DeviceSupport`\n这个根据个人手动筛选删除，建议每个大版本保留一个即可（**方便使用模拟器测试版本兼容问题**），需要的小版本可以后续使用的时候下载。\n**`Xcode_clean.sh` 脚本如下：**\n```#!/bin/bash\n# manual delete device support version in '~/Library/Developer/Xcode/iOS\ DeviceSupport'\nrm -rf ~/Library/Developer/Xcode/Archives\nrm -rf ~/Library/Developer/Xcode/DerivedData\nrm -rf ~/Library/Developer/Xcode/iOS\ Device\ Logs```\n*特别提醒，请勿在终端输入 `rm -rf ~` 会删除当前用户根目录下面的全部文件!!!*\n\n**`Git_clean.sh` 脚本如下：**\n```#!bin/bash\necho '====git size before clean===='\n# 查看 Git 仓库占用空间\ndu -hs .git/objects\n# 进行 Git 垃圾回收\ngit gc --prune=now\n# 删除提交记录中无用的大文件(比较耗时，可忽略)\ngit filter-branch --force --index-filter \\n'git rm --cached --ignore-unmatch bigfile' \\n--prune-empty --tag-name-filter cat -- --all\necho '====git size after clean===='\n# 查看 Git 仓库占用空间\ndu -hs .git/objects```\n**终端实例：**\n```$ cd /Users/mxr/Desktop/4dbookcity\n$ sh /Users/mxr/Desktop/XDS/git_clean.sh\n====git size before clean====\n5.4G    .git/objects\nEnumerating objects: 1140152, done.\nCounting objects: 100% (1140152/1140152), done.\nDelta compression using up to 4 threads
-            Compressing objects: 100% (83088/83088), done.\nWriting objects: 100% (1140152/1140152), done.\nTotal 1140152 (delta 1065385), reused 1127589 (delta 1054145)\nRemoving duplicate objects: 100% (256/256), done.\nChecking connectivity: 1140152, done.\n...\nWARNING: Ref 'refs/heads/5.33.0' is unchanged\nWARNING: Ref 'refs/remotes/origin/5.33.0' is unchanged\niOS_5.33.0 -> iOS_5.33.0 (5be804ae21213b0aff32525167fc5eed70b1dbd9 -> 5be804ae21213b0aff32525167fc5eed70b1dbd9)\n====git size after clean====\n5.2G    .git/objects```\n**Git 正确的工作方式 - `git rebase`**\n当然也有人会说，这是你不断地粗鲁地 `merge` 造成的结果，所以也可以去使用 `rebase` 命令来衍合你的分支代码，让整个历史 `log` 变成干净清晰的一条直线。\n`git rebase` 相对来说是比较复杂的一个命令了,但只要掌握了使用方式,你会深深地喜欢上他。\n如果连续多次的 `hotfix` 功能一致，建议使用 `git rebase` 将多个提交合并为一个，便于 `code review` 以及避免污染分支，遵循项目规范才能提高团队协作效率，而不是随心所欲。\n合并的时候需要修改合并规则，默认都是 `pick`，需要手动编辑修改，`squach` 或者 `fixup` 掉不需要的提交记录\n`$ git rebase -i HEAD~2` 编辑模式下终端实例 ：\n```pick ed181cb005b Translation:Shark iPhone to back to turn\nsquash 3171e58005e Add Description\n# Rebase 67a42ee1665..3171e58005e onto 67a42ee1665 (2 commands)\n#\n# Commands:\n# p, pick commit = use commit\n# r, reword commit = use commit, but edit the commit message\n# e, edit commit = use commit, but stop for amending\n# s, squash commit = use commit, but meld into previous commit\n# f, fixup commit = like "squash", but discard this commit's log message\n# x, exec command = run command (the rest of the line) using shell\n# b, break = stop here (continue rebase later with 'git rebase --continue')\n# d, drop commit = remove commit\n# l, label label = label current HEAD with a name\n# t, reset label = reset HEAD to a label\n# m, merge [-C commit | -c commit] label [# oneline]\n# .       create a merge commit using the original merge commit's\n# .       message (or the oneline, if no original merge commit was\n# .       specified). Use -c commit to reword the commit message.\n#\n# These lines can be re-ordered; they are executed from top to bottom.\n#\n# If you remove a line here THAT COMMIT WILL BE LOST.#\n# However, if you remove everything, the rebase will be aborted.\n#\n# Note that empty commits are commented out```\n编辑完毕后：`Esc+:wq` 后执行`$ git rebase --continue` 即可将多个提交合并为一个。\n*现将 `git rebase` 的正确使用步骤总结如下:*\n*Git 操作步骤*\n假设Git目前只有一个分支 `master`。开发人员的工作流程是\n`git clone master branch`\n在自己本地 `checkout -b local` 创建一个本地开发分支\n在本地的开发分支上开发和测试\n阶段性开发完成后（包含功能代码和单元测试），可以准备提交代码\n首先切换到 `master` 分支，`git pull` 拉取最新的分支状态\n然后切回 `local` 分支\n通过 `git rebase -i` 将本地的多次提交合并为一个，以简化提交历史。本地有多个提交时,如果不进行这一步,在 `git rebase master` 时会多次解决冲突(最坏情况下,每一个提交都会相应解决一个冲突)\n`git rebase master` 将 `master` 最新的分支同步到本地，这个过程可能需要手动解决冲突(如果进行了上一步的话,只用解决一次冲突)\n然后切换到 `master` 分支，`git merge` 将本地的 `local` 分支内容合并到 `master` 分支\n`git push` 将 `master` 分支的提交上传\n*本地开发分支可以灵活管理*\n```git checkout master\ngit pull\ngit checkout local\ngit rebase -i HEAD~2  //合并提交 --- 2表示合并两个\ngit rebase master---->解决冲突--->git rebase --continue(执行修改完毕后的合并规则)\ngit checkout master\ngit merge local\ngit push```\n关于 `rebase` 的更多使用可以参考官方文档，一旦你接受了这种方式，你的 `git log` 会变得更美观，也更符合人性。\n*但是也需要注意避免滥用 `rebase`:*\n如果你想要一个干净的，没有 `merge commit` 的线性历史树，那么你应该选择 `git rebase`;\n如果你想保留完整的历史记录，并且想要避免重写 `commit history` 的风险，你应该选择使用 `git merge`。
-        </markdown-content>
+        
     </blog>
     <blog location="developer-single.html">
         <id>14</id>
@@ -633,8 +134,7 @@
         <description>2019年已经过去一大半了，笔者从日常的产品体验中整理思考，给我们预测了2020年交互设计领域的最新趋势，结合自己的工作领域和方向，相信一定对大家有所帮助。
         </description>
         <cover>developer-images/design_delicacy_model.jpg</cover>
-        <markdown-content>在过去两个月，从国外的Google I/O、Apple WWDC、Facebook 开发者大会，到国内的飞聊、QQ改版、豆瓣FM 6.0，可以看到很多关于交互设计上的趋势。\n同时，我从日常的产品体验中，整理了一些思考内容，以下是对2020年交互设计趋势的展望。\n**一、模态展示**\n在 iOS 13 中，模态面板采用了新的卡片样式，它占据了屏幕90%的面积。模态面板拉起时，原有的页面会有一个纵深效果，以灰色状态显示，防止用户和它们发生交互。模态面板可以通过滑动操作下拉关闭，适用于单手操作，专为大屏服务。\n![](developer-images/design_pm_01.gif)\n在系统邮件、日历、通讯录、Apple Music、信息Animoji等自带应用中，模态面板得到了广泛应用。\n![](developer-images/design_pm_02.gif)\n**二、专注下半部分**\n夸克浏览器是专注下半部分做的最好的一个，夸克并没有像 Safari、Chrome 那样把搜索框放在顶部，而是将整合后的搜索栏放在了用户更容易操作的屏幕下半部分。\n![](developer-images/design_pm_03.gif)\n**三、分层内容**\n分层内容是基于动作菜单，弹出分层内容。分层内容的展现形式可以减少页面跳转，让用户保持在最原始的环境中。并且主要操作交互位于界面下半部分，触手可及。\n![](developer-images/design_pm_04.gif)\n**四、悬停分层**\n在网易云音乐、即刻、飞聊等应用中，采用了悬停分层。顶部展示的是介绍性内容，随着页面下滑，介绍内容隐藏，同时功能栏将置顶悬停，展示的内容区域大大增加。\n![](developer-images/design_pm_05.gif)\n**五、连续性页面**\n连续性页面的转换效果可以很好记住产品路线，加强了页面的层级关系。同时，流畅的动画转换效果，带来了更连贯的用户体验。App Store 和 Behance，以及最近发布的豆瓣 FM 6.0，都采用了这种方式。\n![](developer-images/design_pm_06.gif)\n**六、全屏展示**\n很多App在引导评分样式上，都采用的是系统弹窗。在Keep App上，设计了一个全屏展示的评分提示。形式新颖，加上背景图的气氛，让人想去评分的意愿大大增加。\n同样，Airbnb的系统通知提示也是采用的全屏展示，这是一个趋势，值得我们去关注。\n![](developer-images/airbnb_keep_full_screen.jpeg)\n**七、苹果账号登录**\n近两年几乎所有的 App 都会推荐首先使用手机号+短信验证码的方式注册/登录，同时也会接入像微信、QQ、支付宝这样的三方登录。\n在 WWDC 2019 上，苹果也给我们带来了“使用苹果账号登录”，几乎所有的苹果设备都会登录 Apple ID。因此，我们可以在不久的将来，通过苹果账号，就可以直接登录所有的 App，是不是很方便？\n![](developer-images/sign_in_with_apple.jpeg)\n**八、号码识别**\n网易易盾的号码识别，可以自动获取当前开启流量的SIM卡号码，一键点击即可完成注册、登录操作。减少手机号输入、短信验证码等待时间等传统步骤，提升关键环节转化率。\n![](developer-images/wangyi_yidun_quick_login.jpeg)\n**九、语言交互**\n近年来，智能语音技术在很多场景得到了应用，微软的 Cortana，苹果的 Siri、谷歌的 Assistant。在引入深度学习后，语音助手可以在训练中越来越强，吐词更连贯。夸克的语音助手有本地天气、本周本月可视化数据、新闻热点、节日问候、冷知识等功能。\n![](developer-images/ai_voice_assistant.gif)\n**十、AR增强现实**\n通过AR增强现实技术与智能手机相机的结合，帮助你看到YEEZY BOOST 350等运动鞋「穿」在自己脚上的效果，它甚至还能模拟出鞋子在光线不同环境下的各种效果。\n昨天，首个支持AR动态试妆的小程序“阿玛尼美妆”同步更新上线。基于小程序基础能力和谷歌TensorFlow机器学习开源平台支持，欧莱雅集团开发了AR动态试妆能力。相比以前上传照片的试色方式，AR动态试妆让试色更真实。\nAR 使用在网页设计或应用程序领域，它能够自然地将虚拟与现实结合，带来身临其境的新体验。\n![](developer-images/ar_pick_shoose.gif)\n**十一、多窗口预览**\n在QQ最新的版本中，列表页面长按消息，会弹出多窗口模式，消息可以来回切换，类似于iOS 后台切换模式。在会话窗口长按任意地方，也会呼出多窗口模式。\n![](developer-images/qq_multiple_windows.gif)\n**总结**\n科技发展给设计产生的影响是巨大的，让我更深刻的认识到作为设计师的责任。\n这些设计趋势有意或无意地将帮助用户得到更好的产品体验，我们期待2020年的设计将如何演变。
-        </markdown-content>
+        
     </blog>
     <blog location="developer-single.html">
         <id>15</id>
@@ -643,10 +143,7 @@
         <description>使用脚本将一张1024x1024的图片快速裁剪出App需要的所有尺寸的icon
         </description>
         <cover>developer-images/icon_list.png</cover>
-        <markdown-content>将脚本 `icon_gen.sh` 和1024尺寸的图片 `1024.png` 放在同级目录下执行脚本即可：`$ sh icon_gen.sh`\n`icon_gen.sh` 脚本如下：\n```#!/bin/bash\nrm -rf AppIcon.appiconset\nmkdir AppIcon.appiconset\nfunction cut(){\nsips -Z $1 1024.png --out ./AppIcon.appiconset/$2@$3x.png\n}\ncut 80 40 2\ncut 180 60 3\ncut 29 29 1\ncut 58 29 2\ncut 87 29 3\ncut 80 40 2\ncut 120 40 3\ncut 57 57 1\ncut 114 57 2\ncut 120 60 2\ncut 180 60 3\ncut 20 20 1\ncut 40 20 2\ncut 29 29 1\ncut 58 29 2\ncut 40 40 1\ncut 80 40 2\ncut 76 76 1\ncut 152 76 2\ncut 167 83.5 2\ncut 1024 1024 1\ncut 120 60 2\ncut 180 60 3\ncut 48 24 2\ncut 55 27.5 2\ncut 58 29 2\ncut 87 29 3\ncut 40 40 1\ncut 172 86 2\ncut 196 98 2\ncut 1024 1024 1\ncut 60 20 3\ncut 50 50 1\ncut 100 50 2\ncut 72 72 1\ncut 144 72 2\ncut 88 44 2\ncut 216 108 2\n```注意苹果要求AppIcon不能包含alpha通道，否则ipa包上传AppStore会报错:\n`1 package(s) were not uploaded because they had problems:
-            /var/folders/jw/m70dpfj10vg2zv1200gyp4000000gn/T/6FD72DC4-0E2D-47AD-8CB6-083E4BD59BDE/842495919.itmsp - Error Messages:
-            ERROR ITMS-90717: "Invalid App Store Icon. The App Store Icon in the asset catalog in '4dBookCity.app' can't be transparent nor contain an alpha channel."`\n通过右击图像->显示简介->更多信息->Alpha通道可确认是否包含透明通道\n利用Mac自带预览App将图片导出为不含透明通道的png图片![](developer-images/export-no-alpha-icon.png)
-        </markdown-content>
+        
     </blog>
     <blog location="developer-single.html">
         <id>16</id>
@@ -655,8 +152,7 @@
         <description>审核被拒2.5.1使用苹果私有API，使用命令快速定位
         </description>
         <cover>developer-images/macbook-pro-desk.jpg</cover>
-        <markdown-content>**代码仓库检测**\n```$ cd '/Users/mxr/Desktop/4dbookcity'\n$ grep -R 'locationServicesEnabled:' *\nBinary file ios/Pods/MOBFoundation/MOBFoundation.framework/MOBFoundation matches\n$ grep -R 'allocBatch' *\n$ grep -R 'allocWithEntity' *```\n**IPA包检测**\n将ipa包后缀改为.zip，解压后包含两个文件夹：Payload、Symbols。\n```$ cd /Users/mxr/Desktop/XDS/BookCity_iPA/5.35.0/4dBookCity/Payload/4dBookCity.app\n$ strings - -a -arch armv7 "4dBookCity" | grep AVFullScreen```\n**静态库检测**\n```$ cd /Users/mxr/Desktop/XDS/Apple-API-Check\n$ ls\nlibmil.a    libmtl.a\n$ find . | grep -v .svn | grep "\.a" | grep -v "\.app" | xargs grep locationServicesEnabled\nBinary file ./libmil.a matches\n或者\n$ grep -r locationServicesEnabled .```\n**被拒邮件**：\nGuideline 2.5.1 - Performance - Software Requirements\nYour app uses or references the following non-public APIs:\nSpecifically, this app includes one or more Private API use, including but not limited to, "AVFullScreenViewController, allocWithEntity:, locationServicesEnabled:, allocBatch:withEntity:count:"\nThe use of non-public APIs is not permitted on the App Store because it can lead to a poor user experience should these APIs change.\nContinuing to use or conceal non-public APIs in future submissions of this app may result in the termination of your Apple Developer account, as well as removal of all associated apps from the App Store.\nNext Steps\nIf you are using third-party libraries, please update to the most recent version of those libraries. If you do not have access to the libraries' source, you may be able to search the compiled binary using the "strings" or "otool" command line tools. The "strings" tool can output a list of the methods that the library calls and "otool -ov" will output the Objective-C class structures and their defined methods. These tools can help you narrow down where the problematic code resides. You could also use the "nm" tool to verify if any third-party libraries are calling these APIs.\nResources\nIf there are no alternatives for providing the functionality your app requires, you can use Feedback Assistant to submit an enhancement request.\n准则2.5.1  - 性能 - 软件要求\n您的应用使用或引用以下非公共API：\n具体来说，这个应用程序包括一个或多个私有API使用，包括但不限于“AVFullScreenViewController，allocWithEntity：，locationServicesEnabled：，allocBatch：withEntity：count：”\nApp Store上不允许使用非公共API，因为如果这些API发生变化，可能会导致糟糕的用户体验。\n在将来提交此应用程序时继续使用或隐藏非公共API可能会导致Apple Developer帐户被终止，以及从App Store中删除所有相关应用程序。\n下一步\n如果您使用的是第三方库，请更新到这些库的最新版本。如果您无权访问库的源，则可以使用“strings”或“otool”命令行工具搜索已编译的二进制文件。 “strings”工具可以输出库调用的方法列表，“otool -ov”将输出Objective-C类结构及其定义的方法。这些工具可以帮助您缩小有问题的代码所在的位置。您还可以使用“nm”工具验证是否有任何第三方库正在调用这些API。\n**备注**\n`locationServicesEnabled`类方法是可以调用的，但是`locationServicesEnabled:`实例方法为私有过期API，不可调用！\nMOB基础工具库：`MOBFoundation`低版本（V3.0.4）使用了上述私有API导致被拒，升级至最新版本（V3.2.4）即可。
-        </markdown-content>
+        
     </blog>
     <blog location="developer-single.html">
         <id>17</id>

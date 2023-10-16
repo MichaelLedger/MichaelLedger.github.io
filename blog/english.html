@@ -312,6 +312,11 @@
                         }
                         if (markdown && markdown.length > 0) {
                             data.content = markdown;
+                        } else {
+                            let readme_file_name = 'english_' + englishId + '.txt'
+                            let readmd_file_path = '../markdowns/english/' + readme_file_name
+                            // quick download
+                            exportMarkdownContent(data.content, readme_file_name);
                         }
 						// var constrols = "<button id=\"down\">↓</button><button id=\"up\">↑</button>";
 						var textHtmlStr = convertMarkdownToHtml(data.content);
@@ -355,6 +360,49 @@
 						break;
 					}
 				}
+            }
+
+            function exportMarkdownContent(data, name) {
+                // dada 表示要转换的字符串数据，type 表示要转换的数据格式
+                const blob = new Blob([data], {
+                    type: "text/plain;charset=utf-8"
+                });
+
+                if (typeof navigator.msSaveBlob === 'function') {
+                    // alert("支持自动保存文件到本地")
+                    // 支持Microsoft Edge和Internet Explorer浏览器
+                    navigator.msSaveBlob(blob, name)
+                } else if (typeof URL == 'function' && typeof HTMLCanvasElement.prototype.toBlob === 'function') {
+                    // alert("支持自动保存文件到本地")
+                    // 支持Chrome、Firefox和Safari浏览器
+
+                    // var urlObj = window.URL || window.webkitURL || window;
+                    // var save_link = document.createElementNS("http://http://www.w3.org/1999/xhtml", "a")
+                    // save_link.href = urlObj.createObjectURL(blob);
+                    // save_link.download = name;
+                    // save_link.click();
+                    // const ev = document.createEvent('MouseEvents');
+                    // ev.initMouseEvent("click", true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+                    // save_link,dispatchEvent(ev);
+
+                    // 根据 blob生成 url链接
+                    const objectURL = URL.createObjectURL(blob)
+                    // 创建一个 a 标签Tag
+                    const aTag = document.createElement('a')
+                    // 设置文件的下载地址
+                    aTag.href = objectURL
+                    // 设置保存后的文件名称
+                    aTag.download = name
+                    // 隐藏标签
+                    aTag.style.display = 'none';
+                    // 给 a 标签添加点击事件,浏览器会弹窗是否下载改文件
+                    aTag.click()
+                    // 释放一个之前已经存在的、通过调用 URL.createObjectURL() 创建的 URL 对象。
+                    // 当你结束使用某个 URL 对象之后，应该通过调用这个方法来让浏览器知道不用在内存中继续保留对这个文件的引用了。
+                    URL.revokeObjectURL(objectURL)
+                } else {
+                    // alert("不支持自动保存文件到本地")
+                }
             }
 
 			function autoPlayMusic() {
