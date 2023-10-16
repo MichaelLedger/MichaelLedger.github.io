@@ -201,7 +201,6 @@
                     // Gitalk 回调地址会自动去除'?'，故改用'#'
                     var englishId = getHashString("id");
 					fetchDetailData("english-content", englishId);
-					autoPlayMusic();
                 }
             });
 		})
@@ -264,6 +263,32 @@
 	<script type="text/javascript">
 			function fetchDetailData(divIdentifier, englishId) {
 				if (!divIdentifier) return;
+                // resset markdown contents from .md files
+                let readme_file_name = 'english_' + englishId + '.md'
+                let readmd_file_path = '../markdowns/english/' + readme_file_name
+                // console.log("readmd_file_path:", readmd_file_path)
+                $.ajax({
+                    async: true, //是否异步
+                    type:"get",
+                    url:readmd_file_path,//这里通过设置url属性来获取markdown
+                    dataType:"text",
+                    timeout:10000,      //设定超时
+                    cache:true,       //是否设置缓存
+                    success:function(markdown){//这里是解析markdown
+                        //console.log('markdown fetched:', markdown)
+                        resetHTMLContent(divIdentifier, englishId, markdown);
+                        autoPlayMusic();
+                    },
+                    error: function(xhr, status, error) {
+                        console.log("[warning] markdowns content is empty：", xhr.status, error);
+                        resetHTMLContent(divIdentifier, englishId, null);
+                        autoPlayMusic();
+                    }
+                });
+			}
+
+            function resetHTMLContent(divIdentifier, englishId, markdown) {
+                if (!divIdentifier) return;
 				for (var i = 0; i < dataList.length; i++) {
 					var data = dataList[i];
 					if (data.id === englishId) {
@@ -285,7 +310,9 @@
                         } else {
                             $("#" + "audio-content").html(audioHtmlStr);
                         }
-                        
+                        if (markdown && markdown.length > 0) {
+                            data.content = markdown;
+                        }
 						// var constrols = "<button id=\"down\">↓</button><button id=\"up\">↑</button>";
 						var textHtmlStr = convertMarkdownToHtml(data.content);
 						// document.all[divIdentifier].innerHTML = content;
@@ -328,7 +355,8 @@
 						break;
 					}
 				}
-			}
+            }
+
 			function autoPlayMusic() {
 				// auto play music
 				var audio = document.getElementById('audiojs');

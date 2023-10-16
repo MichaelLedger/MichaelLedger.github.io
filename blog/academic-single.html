@@ -31,7 +31,6 @@
 	
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
-
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -314,6 +313,30 @@
 	<script type="text/javascript">
 			function fetchDetailData(divIdentifier, englishId) {
 				if (!divIdentifier) return;
+                // resset markdown contents from .md files
+                let readme_file_name = 'academic_' + englishId + '.md'
+                let readmd_file_path = '../markdowns/academic/' + readme_file_name
+                // console.log("readmd_file_path:", readmd_file_path)
+                $.ajax({
+                    async: true, //是否异步
+                    type:"get",
+                    url:readmd_file_path,//这里通过设置url属性来获取markdown
+                    dataType:"text",
+                    timeout:10000,      //设定超时
+                    cache:true,       //是否设置缓存
+                    success:function(markdown){//这里是解析markdown
+                        //console.log('markdown fetched:', markdown)
+                        resetHTMLContent(divIdentifier, englishId, markdown);
+                    },
+                    error: function(xhr, status, error) {
+                        console.log("[warning] markdowns content is empty：", xhr.status, error);
+                        resetHTMLContent(divIdentifier, englishId, null);
+                    }
+                });
+			}
+
+			function resetHTMLContent(divIdentifier, englishId, markdown) {
+				if (!divIdentifier) return;
 				for (var i = 0; i < dataList.length; i++) {
 					var data = dataList[i];
 					if (data.id === englishId) {
@@ -324,7 +347,9 @@
 						} else {
 							audioHtmlStr = "";
 						}
-						
+						if (markdown && markdown.length > 0) {
+                            data.content = markdown;
+                        }
 						var textHtmlStr = convertMarkdownToHtml(data.content);
 						// document.all[divIdentifier].innerHTML = content;
 						// document.getElementById(divIdentifier).innerHTML = content;
@@ -366,9 +391,8 @@
 						break;
 					}
 				}
-				
-
 			}
+
 			function getQueryString(name) {
 			  var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
 			  var r = window.location.search.substr(1).match(reg);
@@ -386,7 +410,7 @@
 			  return null;
 			}
 			function convertMarkdownToHtml(markdownStr){
-			    console.log('before:\n'+ markdownStr);
+			    //console.log('before:\n'+ markdownStr);
 
 			    // 将XML中的/n解析为<br/>
 			    // \s表示space空格,^\s表示以空格开始，\s$表示以空格结束，前后添加空格，避免转码MathJax的特定语法，比如:'\ne'
@@ -419,7 +443,7 @@
 				// let mathStr = "<img class=\"math-block\" src=\"https://math.jianshu.com/math?formula=f(x%2C%20y)%20%3D%20100%20*%20%5Clbrace%5B(x%20%2B%20y)%20*%203%5D%20-%2088%5Crbrace\" alt=\"f(x, y) = 100 * \lbrace[(x + y) * 3] - 88\rbrace\" mathimg=\"1\">";
 				// html = html.concat(mathStr);
 
-			    console.log('after:\n' + html);
+			    //console.log('after:\n' + html);
 			    
 			    return html;
 			}
