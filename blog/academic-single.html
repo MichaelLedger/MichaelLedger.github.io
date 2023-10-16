@@ -201,7 +201,7 @@
                 type:"get",
                 url:"academic.xml",//这里通过设置url属性来获取xml
                 dataType:"xml",
-                timeout:10000,      //设定超时
+                timeout:300000,      //设定超时
                 cache:true,       //是否设置缓存
                 success:function(xml){//这里是解析xml
                     $(xml).find("blog").each(function(i){
@@ -322,7 +322,7 @@
                     type:"get",
                     url:readmd_file_path,//这里通过设置url属性来获取markdown
                     dataType:"text",
-                    timeout:10000,      //设定超时
+                    timeout:300000,      //设定超时
                     cache:true,       //是否设置缓存
                     success:function(markdown){//这里是解析markdown
                         //console.log('markdown fetched:', markdown)

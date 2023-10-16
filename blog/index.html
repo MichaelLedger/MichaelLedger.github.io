@@ -144,7 +144,7 @@
                 type:"GET",
                 url:"english.xml",//这里通过设置url属性来获取xml
                 dataType:"xml",
-                timeout:30000,      //设定超时，单位毫秒(1秒=1000毫秒)
+                timeout:300000,      //设定超时，单位毫秒(1秒=1000毫秒)
                 cache:true,       //是否加载缓存
                 success:function(xml){//这里是解析xml
                     $(xml).find("blog").each(function(i){
