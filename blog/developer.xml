@@ -1,4 +1,9 @@
-<?xml version="1.0" ?><!--以下特殊字符不可使用：--><!--&rsquo;全局替换为'--><!--<br/>换行符全局替换为\n--><blogs>
+<?xml version="1.0" ?>
+<!--以下特殊字符不可使用：-->
+<!-- &rsquo;全局替换为' -->
+<!-- <br/>换行符全局替换为\n -->
+<!-- &全局替换为&amp; -->
+<blogs>
     <blog location="markdown_tools.html">
         <id>1</id>
         <date>November 30, 2018</date>
@@ -157,7 +162,7 @@
     <blog location="developer-single.html">
         <id>17</id>
         <date>October 12, 2023</date>
-        <title>iOS - Optimizing App Launch</title>
+        <title>iOS - App Launch &amp; LLVM</title>
         <description>Slow app launches are frustrating. Learn about the new app launch instrument and discover how to make your app launch fast. Gain insights into what happens during app launch and how to minimize, prioritize, and optimize work at this critical time. Hear tips and tricks from the engineers making iOS apps launch fast.
         </description>
         <cover>developer-images/wallpaper/coding_7.jpg</cover>
