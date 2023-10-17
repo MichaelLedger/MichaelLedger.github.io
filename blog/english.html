@@ -159,6 +159,11 @@
 	<!-- bejson : Markdown convert Html -->
 	<script src="../public/static/bejson/convert/markdown.min.js"></script>
 	<script src="../public/static/bejson/convert/to-markdown.js"></script>
+    <!-- https://github.com/pandao/editor.md.git -->
+    <!-- <link rel="stylesheet" type="text/css" href="../public/markdown-editor/css/editormd.preview.css" />
+    <script src="../public/markdown-editor/editormd.js"></script>
+    <script src="../public/markdown-editor/lib/marked.min.js"></script>
+    <script src="../public/markdown-editor/lib/prettify.min.js"></script> -->
 
 	<script type="text/javascript">
 		var dataList = new Array();
@@ -316,13 +321,18 @@
                             let readme_file_name = 'english_' + englishId + '.txt'
                             let readmd_file_path = '../markdowns/english/' + readme_file_name
                             // quick download
-                            exportMarkdownContent(data.content, readme_file_name);
+                            // exportMarkdownContent(data.content, readme_file_name);
                         }
 						// var constrols = "<button id=\"down\">↓</button><button id=\"up\">↑</button>";
 						var textHtmlStr = convertMarkdownToHtml(data.content);
+                        // var textHtmlStr = "<div id=\"markdown-view\"></div>"
 						// document.all[divIdentifier].innerHTML = content;
 						// document.getElementById(divIdentifier).innerHTML = content;
 						$("#" + "text-content").html(textHtmlStr);// 使用jQuery
+                        // var replaced = data.content.replace(/\\n/g, '\r');//escaped shell caused issue
+                        // editormd.markdownToHTML("markdown-view", {
+                        //     markdown: replaced
+                        // });
 						$("#" + "fh5co-aside").css({"background-image" : "url("+ data.cover + ")"});
 						$("#" + "post-date").html(data.date);
 						$("#" + "post-title").html(data.title);

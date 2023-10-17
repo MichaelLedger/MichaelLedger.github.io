@@ -154,8 +154,13 @@
 	<script src="js/main.js"></script>
 
 	<!-- bejson : Markdown convert Html -->
-	<script src="../public/static/bejson/convert/markdown.min.js"></script>
-	<script src="../public/static/bejson/convert/to-markdown.js"></script>
+	<!-- <script src="../public/static/bejson/convert/markdown.min.js"></script> -->
+	<!-- <script src="../public/static/bejson/convert/to-markdown.js"></script> -->
+    <!-- https://github.com/pandao/editor.md.git -->
+    <link rel="stylesheet" type="text/css" href="../public/markdown-editor/css/editormd.preview.css" />
+    <script src="../public/markdown-editor/editormd.js"></script>
+    <script src="../public/markdown-editor/lib/marked.min.js"></script>
+    <script src="../public/markdown-editor/lib/prettify.min.js"></script>
 
 	<script type="text/javascript">
 		var dataList = new Array();
@@ -295,10 +300,14 @@
 						if (markdown && markdown.length > 0) {
                             data.content = markdown;
                         }
-						var textHtmlStr = convertMarkdownToHtml(data.content);
+						//var textHtmlStr = convertMarkdownToHtml(data.content);
+                        var textHtmlStr = "<div id=\"markdown-view\"></div>"
 						// document.all[divIdentifier].innerHTML = content;
 						// document.getElementById(divIdentifier).innerHTML = content;
 						$("#" + divIdentifier).html(audioHtmlStr + textHtmlStr);// 使用jQuery
+                        editormd.markdownToHTML("markdown-view", {
+                            markdown: data.content
+                        });
 						$("#" + "fh5co-aside").css({"background-image" : "url("+ data.cover + ")"});
 						$("#" + "post-date").html(data.date);
 						$("#" + "post-title").html(data.title);
