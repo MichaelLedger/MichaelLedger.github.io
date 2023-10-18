@@ -86,6 +86,24 @@ App开始启动后，系统内核(XNU)首先加载可执行文件（自身App的
 
 9、这里还有一个很牛逼的优化二进制重排，在链接阶段(编译期间)有这么个优化
 
+## Detect unused methods by Xcode
+Target -> Build Settings
+- Apple Clang - Warning - All languages
+Unused Functions/Labels/Parameters/Values/Variables
+- Static Analysis - Issues - Objective-C
+Unused Ivars
+- Static Analysis - Issues - Unused Code
+Dead Stores
+Redundant Expressions
+Redundant Nested 'if' Conditions
+
+### Treating Warnings as Errors
+Many developers prefer to instruct the compiler to treat warnings as errors as it prohibits a successful build if even a single warning remains unaddressed. To do this, in Xcode, check the corresponding check box in the build settings or include -Werror in your Other C Flags.
+
+**Personally, I don’t use this setting because I find it sucks during development.** Warnings like “unused variable” that are perfectly fine during debugging cause more work than they should if you treat them as errors. That does not mean, however, that I tolerate unaddressed warnings in “real” builds. Activating -Werror only for release builds and on your continuous integration server (if you have one) is a good compromise.
+
+Note that there is also -Werror=foo (lets you only treat specific warnings as errors) and -Wno-error=foo (treats specific warnings as simple warnings instead of errors if -Werror is enabled) for even more fine-grained control.
+
 ## 二进制重排
 
 首先二进制重排Xcode给我们提供了一种方法，xcode中使用的链接器为LD，ld中有个文件叫做order_file,如果有一个order文件，将符号顺序写入在order文件，Xcode就会将按照order中的顺序进行排列。
@@ -675,17 +693,12 @@ a.out, main.native, main都为Mach-O文件，第一种。
 ***
 
 ### 参考资料
-
 [编译原理：LLVM初步介绍](https://juejin.cn/post/6844904004594450440)
-
 [iOS的启动优化](https://blog.csdn.net/lingjunjie/article/details/128386577)
-
 [iOS开发优化的起步之启动优化](https://blog.csdn.net/ZhaiAlan/article/details/104923246)
-
 [iphone - objc - 用于iOS开发的LLVM与GCC](https://code-examples.net/zh-CN/q/460717)
-
 [GCC，LLVM，Clang编译器对比](https://www.cnblogs.com/qoakzmxncb/archive/2013/04/18/3029105.html)
-
 [Clang - Features and Goals](https://clang.llvm.org/features.html#expressivediags)
-
 [iOS利用gcc看底层](https://www.jianshu.com/p/d83b788b5847)
+[How to detect unused methods and #import in Objective-C](https://stackoverflow.com/questions/1456966/how-to-detect-unused-methods-and-import-in-objective-c)
+[Compiler Warnings for Objective-C Developers](https://oleb.net/blog/2013/04/compiler-warnings-for-objective-c-developers/)

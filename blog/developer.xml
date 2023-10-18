@@ -167,4 +167,12 @@
         </description>
         <cover>developer-images/wallpaper/coding_7.jpg</cover>
     </blog>
+    <blog location="developer-single.html">
+        <id>18</id>
+        <date>October 18, 2023</date>
+        <title>Git - How to remove files permanently from git history</title>
+        <description>
+        </description>
+        <cover>developer-images/wallpaper/coding_2.jpg</cover>
+    </blog>
 </blogs>
