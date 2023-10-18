@@ -306,8 +306,13 @@
 						// document.getElementById(divIdentifier).innerHTML = content;
 						$("#" + divIdentifier).html(audioHtmlStr + textHtmlStr);// 使用jQuery
                         editormd.markdownToHTML("markdown-view", {
-                            markdown: data.content
+                            markdown: data.content,
+                            tex: true
                         });
+                        editormd.katexURL = {
+							js  : "../public/markdown-editor/lib/KaTeX/0.3.0/katex.min",  // default: //cdnjs.cloudflare.com/ajax/libs/KaTeX/0.3.0/katex.min
+							css : "../public/markdown-editor/lib/KaTeX/0.3.0/katex.min"   // default: //cdnjs.cloudflare.com/ajax/libs/KaTeX/0.3.0/katex.min
+						};	
 						$("#" + "fh5co-aside").css({"background-image" : "url("+ data.cover + ")"});
 						$("#" + "post-date").html(data.date);
 						$("#" + "post-title").html(data.title);

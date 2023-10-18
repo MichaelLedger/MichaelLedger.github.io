@@ -1,22 +1,24 @@
-<?xml version="1.0" ?><!--以下特殊字符不可使用：--><!--&rsquo;全局替换为'--><!--<br/>换行符全局替换为' \n '--><!--'&'替换为'#38'--><!--LaTex中的'<'替换为'\less';'>'替换为'\greater'--><!--LaTex中的换行'\\'替换为'\\\'--><!--LaTex大括号{array}{lcl}为左对齐;{array}{rcl}、{cases}、{aligned}为右对齐;{array}{ccc}为居中--><blogs>
-<!--    <blog location="academic-single.html">-->
-<!--        <id>0</id>-->
-<!--        <date>August 23, 2019</date>-->
-<!--        <title>MathJax LaTex - 书写数学公式</title>-->
-<!--        <description>-->
-<!--            MathJax是一个JavaScript引擎，用来显示网络上的数学公式。它可以工作于所有流行的浏览器上。-->
-<!--        </description>-->
-<!--        <cover>academic-images/math-formula.jpg</cover>-->
-<!--        <markdown-content>When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are-->
-<!--            $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$-->
-<!--            In equation, we find the value of an interesting integral:-->
-<!--            \begin{equation}-->
-<!--            \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15} \label{eq:sample}-->
-<!--            \end{equation} \n-->
-<!--            $$\[\overbrace {\left( {1,1, \cdots ,1} \right)}^K\]$$-->
-<!--            \n *Latex中希腊字母的输入法* \n ![](academic-images/LaTex_Greek_Letter.jpg)![](academic-images/LaTex_AMS_Greek_Hebrew.png)![](academic-images/LaTex_Mit.jpg)-->
-<!--        </markdown-content>-->
-<!--    </blog>-->
+<?xml version="1.0" ?>
+    <!--以下特殊字符不可使用：--><!--&rsquo;全局替换为'--><!--<br/>换行符全局替换为' \n '--><!--'&'替换为'#38'--><!--LaTex中的'<'替换为'\less';'>'替换为'\greater'--><!--LaTex中的换行'\\'替换为'\\\'--><!--LaTex大括号{array}{lcl}为左对齐;{array}{rcl}、{cases}、{aligned}为右对齐;{array}{ccc}为居中-->
+    <!--    <blog location="academic-single.html">-->
+    <!--        <id>0</id>-->
+    <!--        <date>August 23, 2019</date>-->
+    <!--        <title>MathJax LaTex - 书写数学公式</title>-->
+    <!--        <description>-->
+    <!--            MathJax是一个JavaScript引擎，用来显示网络上的数学公式。它可以工作于所有流行的浏览器上。-->
+    <!--        </description>-->
+    <!--        <cover>academic-images/math-formula.jpg</cover>-->
+    <!--        <markdown-content>When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are-->
+    <!--            $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$-->
+    <!--            In equation, we find the value of an interesting integral:-->
+    <!--            \begin{equation}-->
+    <!--            \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15} \label{eq:sample}-->
+    <!--            \end{equation} \n-->
+    <!--            $$\[\overbrace {\left( {1,1, \cdots ,1} \right)}^K\]$$-->
+    <!--            \n *Latex中希腊字母的输入法* \n ![](academic-images/LaTex_Greek_Letter.jpg)![](academic-images/LaTex_AMS_Greek_Hebrew.png)![](academic-images/LaTex_Mit.jpg)-->
+    <!--        </markdown-content>-->
+    <!--    </blog>-->
+<blogs>
     <blog location="academic-single.html">
         <id>1</id>
         <date>August 24, 2019</date>
@@ -33,7 +35,6 @@
         <description>
         </description>
         <cover>academic-images/caa_mathematics.JPG</cover>
-        
     </blog>
     <blog location="academic-single.html">
         <id>3</id>
@@ -42,7 +43,6 @@
         <description>
         </description>
         <cover>academic-images/caa_mathematics.JPG</cover>
-        
     </blog>
     <blog location="academic-single.html">
         <id>4</id>
@@ -51,7 +51,6 @@
         <description>
         </description>
         <cover>academic-images/caa_mathematics.JPG</cover>
-        
     </blog>
     <blog location="academic-single.html">
         <id>5</id>
@@ -60,7 +59,6 @@
         <description>
         </description>
         <cover>academic-images/caa_financial_mathematics.JPG</cover>
-        
     </blog>
     <blog location="academic-single.html">
         <id>6</id>
@@ -69,7 +67,6 @@
         <description>
         </description>
         <cover>academic-images/caa_acturial_models.JPG</cover>
-        
     </blog>
     <blog location="academic-single.html">
         <id>7</id>
@@ -78,7 +75,6 @@
         <description>
         </description>
         <cover>academic-images/caa_economics.JPG</cover>
-        
     </blog>
     <blog location="academic-single.html">
         <id>8</id>
@@ -87,7 +83,6 @@
         <description>
         </description>
         <cover>academic-images/caa_actural_aspects_life_insurance.JPG</cover>
-        
     </blog>
     <blog location="academic-single.html">
         <id>9</id>
@@ -96,7 +91,6 @@
         <description>
         </description>
         <cover>academic-images/caa_actuarial_aspects_nonlife_insurance.JPG</cover>
-        
     </blog>
     <blog location="academic-single.html">
         <id>10</id>
@@ -105,7 +99,6 @@
         <description>
         </description>
         <cover>academic-images/caa_accounting_finance.JPG</cover>
-        
     </blog>
     <blog location="academic-single.html">
         <id>11</id>
@@ -114,6 +107,5 @@
         <description>
         </description>
         <cover>academic-images/caa_actuarial_management.JPG</cover>
-        
     </blog>
 </blogs>
