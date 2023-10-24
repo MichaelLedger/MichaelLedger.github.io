@@ -18,7 +18,6 @@
         </description>
         <cover>images/calling.jpg</cover>
         <audio>../authentic-english/sound/kouyu/englishpod/200911/B0002pb.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>3</id>
@@ -29,7 +28,6 @@
         </description>
         <cover>images/hotel.jpg</cover>
         <audio>../authentic-english/sound/kouyu/englishpod/200911/C0003pb.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>4</id>
@@ -40,7 +38,6 @@
         </description>
         <cover>images/fist-bumps.jpg</cover>
         <audio>../authentic-english/sound/kouyu/englishpod/200911/C0004pb.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>5</id>
@@ -51,7 +48,6 @@
         </description>
         <cover>images/queue.jpg</cover>
         <audio>../authentic-english/sound/kouyu/englishpod/200911/C0005pb.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>6</id>
@@ -62,7 +58,6 @@
         </description>
         <cover>images/roadtrip.jpg</cover>
         <audio>../authentic-english/sound/kouyu/englishpod/200911/C0006pb.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>7</id>
@@ -73,7 +68,6 @@
         </description>
         <cover>images/computer-stethoscope.jpg</cover>
         <audio>../authentic-english/sound/kouyu/englishpod/200911/C0007pb.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>8</id>
@@ -84,7 +78,6 @@
         </description>
         <cover>images/G20.jpg</cover>
         <audio>../bbc/sound/bbc20181203_0014852xLB.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>9</id>
@@ -95,7 +88,6 @@
         </description>
         <cover>images/yellow-vest-movement.jpg</cover>
         <audio>../bbc/sound/bbc20181204_3542471yYn.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>10</id>
@@ -106,7 +98,6 @@
         </description>
         <cover>images/安德烈斯·曼努埃尔·洛佩斯·奥夫拉多尔.jpg</cover>
         <audio>../bbc/sound/bbc1205_2603183KA2.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>11</id>
@@ -117,7 +108,6 @@
         </description>
         <cover>images/brexit.jpg</cover>
         <audio>../bbc/sound/bbc20181206_2216387HVk.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>12</id>
@@ -128,7 +118,6 @@
         </description>
         <cover>images/fly-a-flag-at-half-mast.jpg</cover>
         <audio>../bbc/sound/bbc20181207_3945526LE6.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>13</id>
@@ -139,7 +128,6 @@
         </description>
         <cover>images/nuclear-missile.jpg</cover>
         <audio>../bbc/sound/bbc1209_3508560Wg5.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>14</id>
@@ -150,7 +138,6 @@
         </description>
         <cover>images/mines.jpg</cover>
         <audio>../bbc/sound/bbc181209_5909215h4F.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>15</id>
@@ -161,7 +148,6 @@
         </description>
         <cover>images/court-sketch.jpg</cover>
         <audio>../bbc/sound/bbc1209_0119272DVx.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>16</id>
@@ -172,7 +158,6 @@
         </description>
         <cover>images/Donald-Trump.jpg</cover>
         <audio>../bbc/sound/bbc20181210_5936360QGP.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>17</id>
@@ -183,7 +168,6 @@
         </description>
         <cover>images/pollution.jpg</cover>
         <audio>../bbc/sound/bbc20181211_0704496Gbq.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>18</id>
@@ -194,7 +178,6 @@
         </description>
         <cover>images/nissan-symbol.jpg</cover>
         <audio>../bbc/sound/bbc1212_2312850BRX.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>19</id>
@@ -205,7 +188,6 @@
         </description>
         <cover>images/brexit2.jpg</cover>
         <audio>../bbc/sound/bbc20181213_5721302yF6.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>20</id>
@@ -216,7 +198,6 @@
         </description>
         <cover>images/starsbourg-terrorist-shooting.jpg</cover>
         <audio>../bbc/sound/bbc1214_3534614MX4.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>21</id>
@@ -227,7 +208,6 @@
         </description>
         <cover>images/horticulture.jpg</cover>
         <audio>../bbc/sound/bbc181216_1238273D7T.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>22</id>
@@ -238,7 +218,6 @@
         </description>
         <cover>images/yemen-ruins-children.png</cover>
         <audio>../bbc/sound/bbc1216_5431545hMR.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>23</id>
@@ -249,7 +228,6 @@
         </description>
         <cover>images/sri-lanka.jpg</cover>
         <audio>../bbc/sound/bbc20181217_0244391RFT.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>24</id>
@@ -260,7 +238,6 @@
         </description>
         <cover>images/pakistani-terrorists.jpg</cover>
         <audio>../bbc/sound/bbc20181218_59273296tg.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>25</id>
@@ -271,7 +248,6 @@
         </description>
         <cover>images/fawn-bambi.jpg</cover>
         <audio>../bbc/sound/bbc1219_4329637Vdw.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>26</id>
@@ -282,7 +258,6 @@
         </description>
         <cover>images/trump-charity.jpg</cover>
         <audio>../bbc/sound/bbc20181220_0417129WMe.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>27</id>
@@ -293,7 +268,6 @@
         </description>
         <cover>images/japan-whaling.jpg</cover>
         <audio>../bbc/sound/bbc1221_2206384pgR.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>28</id>
@@ -304,7 +278,6 @@
         </description>
         <cover>images/trump-vs-uscb.jpg</cover>
         <audio>../bbc/sound/bbc1222_0217428QY7.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>29</id>
@@ -315,7 +288,6 @@
         </description>
         <cover>images/pistol.jpg</cover>
         <audio>../bbc/sound/bbc181223_5445944tpW.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>30</id>
@@ -326,7 +298,6 @@
         </description>
         <cover>images/belgian-prime-minister-charles-michel.jpg</cover>
         <audio>../bbc/sound/bbc1223_2204960hR6.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>31</id>
@@ -337,7 +308,6 @@
         </description>
         <cover>images/merry-christmas-airport.jpg</cover>
         <audio>../bbc/sound/bbc20181224_3654677qrW.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>32</id>
@@ -348,7 +318,6 @@
         </description>
         <cover>images/indonesia-tsunami.jpg</cover>
         <audio>../bbc/sound/bbc20181225_0852289qex.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>33</id>
@@ -359,7 +328,6 @@
         </description>
         <cover>../english-essence/image/kid-jacket-mini-figure.jpg</cover>
         <audio>../english-essence/sound/run-through-the-rain.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>34</id>
@@ -370,7 +338,6 @@
         </description>
         <cover>images/sudan-strike.jpg</cover>
         <audio>../bbc/sound/bbc1226_5522282SDR.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>35</id>
@@ -381,7 +348,6 @@
         </description>
         <cover>images/earthquake-damage.jpg</cover>
         <audio>../bbc/sound/bbc20181227_2931954Svd.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>36</id>
@@ -392,7 +358,6 @@
         </description>
         <cover>images/trump-visit-troops.jpg</cover>
         <audio>../bbc/sound/bbc1228_31491492Nj.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>37</id>
@@ -403,7 +368,6 @@
         </description>
         <cover>images/russia-nuclear-missile.jpg</cover>
         <audio>../bbc/sound/bbc1229_5814166mBT.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>38</id>
@@ -414,7 +378,6 @@
         </description>
         <cover>images/saudi-arabia-minister.jpg</cover>
         <audio>../bbc/sound/bbc1230_1520865pAT.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>39</id>
@@ -425,7 +388,6 @@
         </description>
         <cover>../english-essence/image/pen-letter.jpg</cover>
         <audio>../english-essence/sound/a-special-letter.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>40</id>
@@ -436,7 +398,6 @@
         </description>
         <cover>../english-essence/image/school-earthquake-ruins.jpg</cover>
         <audio>../english-essence/sound/eternal-promise.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>41</id>
@@ -447,7 +408,6 @@
         </description>
         <cover>images/congo-election.jpg</cover>
         <audio>../bbc/sound/bbc0102_2509557LDq.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>42</id>
@@ -458,7 +418,6 @@
         </description>
         <cover>../english-essence/image/a-box-full-of-kisses.jpg</cover>
         <audio>../english-essence/sound/a-box-full-of-kisses.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>43</id>
@@ -469,7 +428,6 @@
         </description>
         <cover>images/new-horizons-probe.jpg</cover>
         <audio>../bbc/sound/bbc20190103_0605747LEa.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>44</id>
@@ -480,7 +438,6 @@
         </description>
         <cover>../english-essence/image/christmas-car.jpg</cover>
         <audio>../english-essence/sound/on-christmas-eve.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>45</id>
@@ -491,7 +448,6 @@
         </description>
         <cover>images/the-white-house-closed.jpg</cover>
         <audio>../bbc/sound/bbc190105_05095853nm.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>46</id>
@@ -502,7 +458,6 @@
         </description>
         <cover>images/change-land-farside-moon.jpg</cover>
         <audio>../bbc/sound/bbc20190105_05095857pt.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>47</id>
@@ -513,7 +468,6 @@
         </description>
         <cover>../english-essence/image/mom-gril-dress.png</cover>
         <audio>../english-essence/sound/not-a-simple-dress.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>48</id>
@@ -524,7 +478,6 @@
         </description>
         <cover>images/apple-stock.png</cover>
         <audio>../bbc/sound/tingvoa.com_BBC07094133vy.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>49</id>
@@ -535,7 +488,6 @@
         </description>
         <cover>images/hungary-protest.jpg</cover>
         <audio>../bbc/sound/tingvoa.com_BBC08094253nr.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>50</id>
@@ -546,7 +498,6 @@
         </description>
         <cover>images/syria-crisis.jpg</cover>
         <audio>../bbc/sound/tingvoa.com_BBC09081645jy.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>51</id>
@@ -557,7 +508,6 @@
         </description>
         <cover>../english-essence/image/father-teach-ride-bicycle.jpg</cover>
         <audio>../english-essence/sound/a-father-love.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>52</id>
@@ -568,7 +518,6 @@
         </description>
         <cover>images/enery-brust.jpg</cover>
         <audio>../bbc/sound/tingvoa.com_BBC12083636hc.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>53</id>
@@ -579,7 +528,6 @@
         </description>
         <cover>../english-essence/image/tesla-key.jpg</cover>
         <audio>../english-essence/sound/the-key-of-a-car.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>54</id>
@@ -590,7 +538,6 @@
         </description>
         <cover>images/FCA.png</cover>
         <audio>../bbc/sound/bbc0113_3559585jJB.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>55</id>
@@ -601,7 +548,6 @@
         </description>
         <cover>images/trump-aid-russia.jpg</cover>
         <audio>../bbc/sound/bbc20190114_3606526RFS.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>56</id>
@@ -612,7 +558,6 @@
         </description>
         <cover>images/south-africa-deer.jpg</cover>
         <audio>../bbc/sound/bbc20190115_1616410ErG.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>57</id>
@@ -623,7 +568,6 @@
         </description>
         <cover>images/crashed-lion-airplane.jpg</cover>
         <audio>../bbc/sound/bbc190116_5057716QLA.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>58</id>
@@ -634,7 +578,6 @@
         </description>
         <cover>images/red-gold-shotgun-shells.jpg</cover>
         <audio>../bbc/sound/bbc20190117_5212103GWt.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>59</id>
@@ -645,7 +588,6 @@
         </description>
         <cover>../english-essence/image/ear-structure.jpg</cover>
         <audio>../english-essence/sound/a-gift-of-love.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>60</id>
@@ -656,7 +598,6 @@
         </description>
         <cover>images/trump-kim-jong-un.jpg</cover>
         <audio>../bbc/sound/bbc0119_02318443ed.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>61</id>
@@ -667,7 +608,6 @@
         </description>
         <cover>images/gov-snow-down.jpg</cover>
         <audio>../bbc/sound/bbc20190121_2346846JsJ.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>62</id>
@@ -678,7 +618,6 @@
         </description>
         <cover>images/pink-pig-figurine.jpg</cover>
         <audio>../bbc/sound/bbc20190122_2712310eEx.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>63</id>
@@ -689,7 +628,6 @@
         </description>
         <cover>images/one-hundred-trillion-dollars-zimbabwe.jpg</cover>
         <audio>../bbc/sound/bbc190123_1215747hQx.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>64</id>
@@ -700,7 +638,6 @@
         </description>
         <cover>images/pakistan-pashtun-leader.jpg</cover>
         <audio>../bbc/sound/bbc20190124_4722372eq2.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>65</id>
@@ -711,7 +648,6 @@
         </description>
         <cover>images/gandhi-sister.jpg</cover>
         <audio>../bbc/sound/bbc190125_5808811NpY.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>66</id>
@@ -722,7 +658,6 @@
         </description>
         <cover>images/venezuela-juan-guaido.jpg</cover>
         <audio>../bbc/sound/bbc0126_3659356afi.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>67</id>
@@ -733,7 +668,6 @@
         </description>
         <cover>images/czech-petra-kvitova.jpg</cover>
         <audio>../bbc/sound/bbc20190128_1039537Atr.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>68</id>
@@ -744,7 +678,6 @@
         </description>
         <cover>images/philippines-bomb-attack.jpg</cover>
         <audio>../bbc/sound/bbc20190129_4440786tPi.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>69</id>
@@ -755,7 +688,6 @@
         </description>
         <cover>images/cuba-tornado.jpg</cover>
         <audio>../bbc/sound/bbc190130_0133609XGE.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>70</id>
@@ -766,7 +698,6 @@
         </description>
         <cover>images/the-white-house-finance-minister.jpg</cover>
         <audio>../bbc/sound/bbc190131_1239118gwQ.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>71</id>
@@ -777,7 +708,6 @@
         </description>
         <cover>images/thai-smog.png</cover>
         <audio>../bbc/sound/bbc20190201_1450235sXb.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>72</id>
@@ -788,7 +718,6 @@
         </description>
         <cover>images/blast-polar-air.jpg</cover>
         <audio>../bbc/sound/bbc0202_2202386q6F.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>73</id>
@@ -799,7 +728,6 @@
         </description>
         <cover>images/new-mid-range-hypersonic-missile.jpg</cover>
         <audio>../bbc/sound/bbc20190211_2115647mNf.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>74</id>
@@ -810,7 +738,6 @@
         </description>
         <cover>../english-essence/image/red-gray-train-miniature.jpg</cover>
         <audio>../english-essence/sound/a-father-and-a-son.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>75</id>
@@ -821,7 +748,6 @@
         </description>
         <cover>images/fire-engulfed-residential-building.jpg</cover>
         <audio>../bbc/sound/bbc20190212_5439651Lnp.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>76</id>
@@ -832,7 +758,6 @@
         </description>
         <cover>images/human-elephant-conflict.jpg</cover>
         <audio>../bbc/sound/bbc190213_30212755Av.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>77</id>
@@ -843,7 +768,6 @@
         </description>
         <cover>images/trump-agreement-border-security.jpg</cover>
         <audio>../bbc/sound/bbc20190214_1318229wyJ.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>78</id>
@@ -854,7 +778,6 @@
         </description>
         <cover>images/biggest-airplane-A380.jpg</cover>
         <audio>../bbc/sound/bbc190215_4414484nPV.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>79</id>
@@ -865,7 +788,6 @@
         </description>
         <cover>images/Mexican-drug-lord.jpg</cover>
         <audio>../bbc/sound/bbc0216_56189999rH.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>80</id>
@@ -876,7 +798,6 @@
         </description>
         <cover>images/bees.jpg</cover>
         <audio>../bbc/sound/bbc0216-2_3536289kPg.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>81</id>
@@ -887,7 +808,6 @@
         </description>
         <cover>images/trump-declare-national-emergency.jpg</cover>
         <audio>../bbc/sound/bbc0217_0428977D5f.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>82</id>
@@ -898,7 +818,6 @@
         </description>
         <cover>images/India-fastest-train.jpg</cover>
         <audio>../bbc/sound/bbc20190218_584946936M.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>83</id>
@@ -909,7 +828,6 @@
         </description>
         <cover>images/grave-Karl-Marx.jpg</cover>
         <audio>../bbc/sound/bbc20190219_2705987xqa.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>84</id>
@@ -920,7 +838,6 @@
         </description>
         <cover>images/Australian-Cyber-Security-Center.jpg</cover>
         <audio>../bbc/sound/bbc190220_09585747Vb.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>85</id>
@@ -931,7 +848,6 @@
         </description>
         <cover>images/Venezuelan-shut-border-Colombia.jpg</cover>
         <audio>../bbc/sound/bbc20190225_44504863WM.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>86</id>
@@ -942,7 +858,6 @@
         </description>
         <cover>images/Dragon-astronaut-capsule.jpg</cover>
         <audio>../bbc/sound/bbc20190304_2006583SPP.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>87</id>
@@ -953,7 +868,6 @@
         </description>
         <cover>images/South-Korea-US-annual-militarty-exercises.jpg</cover>
         <audio>../bbc/sound/bbc20190305_2417793Xsm.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>88</id>
@@ -964,7 +878,6 @@
         </description>
         <cover>images/merge-consulate.jpg</cover>
         <audio>../bbc/sound/bbc190306_0030118rQK.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>89</id>
@@ -975,7 +888,6 @@
         </description>
         <cover>images/India-preferential-trade-US.jpg</cover>
         <audio>../bbc/sound/bbc20190307_3647664Ay2.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>90</id>
@@ -986,7 +898,6 @@
         </description>
         <cover>images/Venezuelan-electricity-blackout.jpg</cover>
         <audio>../bbc/sound/bbc20190311_2857127nen.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>91</id>
@@ -997,7 +908,6 @@
         </description>
         <cover>images/Berlin-rents.jpg</cover>
         <audio>../bbc/sound/bbc20190409_32529954xK.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>92</id>
@@ -1008,7 +918,6 @@
         </description>
         <cover>images/trump-homeland-security-secretary.jpg</cover>
         <audio>../bbc/sound/bbc190410_17169505g2.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>93</id>
@@ -1019,7 +928,6 @@
         </description>
         <cover>images/israelis-genral-election.jpg</cover>
         <audio>../bbc/sound/bbc20190411_3335409ADb.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>94</id>
@@ -1030,7 +938,6 @@
         </description>
         <cover>images/largest-aircraft.jpg</cover>
         <audio>../bbc/sound/bbc0414_1349248pKe.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>95</id>
@@ -1041,7 +948,6 @@
         </description>
         <cover>images/India-observe-massacre.png</cover>
         <audio>../bbc/sound/bbc20190415_0213321BiJ.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>96</id>
@@ -1052,7 +958,6 @@
         </description>
         <cover>images/Notre-Dame-Cathedral-Blaze.jpeg</cover>
         <audio>../bbc/sound/bbc20190418_5531618xkw.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>97</id>
@@ -1063,7 +968,6 @@
         </description>
         <cover>images/muslim-democratic.jpg</cover>
         <audio>../bbc/sound/bbc0420_3426609Kyg.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>98</id>
@@ -1074,7 +978,6 @@
         </description>
         <cover>images/sri-lanka-churches-bomb-attack.jpg</cover>
         <audio>../bbc/sound/bbc190424_24508363PP.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>99</id>
@@ -1085,7 +988,6 @@
         </description>
         <cover>images/Kim-Jong-un-Putin.jpg</cover>
         <audio>../bbc/sound/bbc190426_3920424TXB.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>100</id>
@@ -1096,7 +998,6 @@
         </description>
         <cover>images/USA-RQ-4-drone.jpg</cover>
         <audio>../bbc/sound/bbc20190624_2428753XM6.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>101</id>
@@ -1107,7 +1008,6 @@
         </description>
         <cover>images/us-vs-iran.png</cover>
         <audio>../bbc/sound/bbc190628_0505317vH2.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>102</id>
@@ -1118,7 +1018,6 @@
         </description>
         <cover>../english-essence/image/central-cinema.jpg</cover>
         <audio>../english-essence/sound/a-fib.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>103</id>
@@ -1129,7 +1028,6 @@
         </description>
         <cover>images/Iran-uranium-enrichment.jpg</cover>
         <audio>../bbc/sound/bbc190703_2335699FHB.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>104</id>
@@ -1140,7 +1038,6 @@
         </description>
         <cover>images/Washington-British-Ambassador.jpeg</cover>
         <audio>../bbc/sound/bbc20190709_21306935GX.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>105</id>
@@ -1151,7 +1048,6 @@
         </description>
         <cover>images/Jeffrey-Epstein.jpg</cover>
         <audio>../bbc/sound/bbc20190812_17145537Xt.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>106</id>
@@ -1162,7 +1058,6 @@
         </description>
         <cover>images/polar-bear.jpg</cover>
         <audio>../bbc/sound/bbc0817_1334627msE.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>107</id>
@@ -1173,7 +1068,6 @@
         </description>
         <cover>images/Hong-Kong-Violence.jpeg</cover>
         <audio>../bbc/sound/bbc0901.mp3_1240843bhQ.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>108</id>
@@ -1184,7 +1078,6 @@
         </description>
         <cover>images/silhouette-of-person-standing-on-wood-stump.jpeg</cover>
         <audio>../bbc/sound/bbc0915_1556246Vdr.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>109</id>
@@ -1195,7 +1088,6 @@
         </description>
         <cover>images/saudi-oil-attack.jpg</cover>
         <audio>../bbc/sound/bbc190920_4739691t8w.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>110</id>
@@ -1206,7 +1098,6 @@
         </description>
         <cover>images/thomas-cook-airport-departures.jpeg</cover>
         <audio>../bbc/sound/bbc190927_2203782YSY.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>111</id>
@@ -1217,7 +1108,6 @@
         </description>
         <cover>images/Venice-Tidal-Flooding.jpeg</cover>
         <audio>../bbc/sound/bbc1116_3343539vkE.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>112</id>
@@ -1228,7 +1118,6 @@
         </description>
         <cover>images/Ukrainian-seized-ships.jpeg</cover>
         <audio>../bbc/sound/bbc191120_2758677BG2.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>113</id>
@@ -1239,7 +1128,6 @@
         </description>
         <cover>images/Lebanese-Parliament-Conflict.jpg</cover>
         <audio>../bbc/sound/bbc20191121_5228729GQm.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>114</id>
@@ -1250,7 +1138,6 @@
         </description>
         <cover>images/green-corals-under-water.jpg</cover>
         <audio>../bbc/sound/bbc1209_52217855HM.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>115</id>
@@ -1259,7 +1146,6 @@
         <description/>
         <cover>../image/english/donald-trump/inaugural_address_1.jpg</cover>
         <audio>../audio/english/donald-trump/inaugural_address_1.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>116</id>
@@ -1268,7 +1154,6 @@
         <description/>
         <cover>../image/english/donald-trump/inaugural_address_2.jpg</cover>
         <audio>../audio/english/donald-trump/inaugural_address_2.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>117</id>
@@ -1277,7 +1162,6 @@
         <description/>
         <cover>../image/english/donald-trump/inaugural_address_1.jpg</cover>
         <audio>../audio/english/donald-trump/inaugural_address_3.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>118</id>
@@ -1286,7 +1170,6 @@
         <description/>
         <cover>../image/english/donald-trump/inaugural_address_2.jpg</cover>
         <audio>../audio/english/donald-trump/inaugural_address_4.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>119</id>
@@ -1295,7 +1178,6 @@
         <description/>
         <cover>../image/english/donald-trump/inaugural_address_1.jpg</cover>
         <audio>../audio/english/donald-trump/inaugural_address_5.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>120</id>
@@ -1304,7 +1186,6 @@
         <description/>
         <cover>../image/english/donald-trump/inaugural_address_2.jpg</cover>
         <audio>../audio/english/donald-trump/inaugural_address_6.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>121</id>
@@ -1313,7 +1194,6 @@
         <description/>
         <cover>../image/english/donald-trump/inaugural_address_1.jpg</cover>
         <audio>../audio/english/donald-trump/inaugural_address_7.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>122</id>
@@ -1322,7 +1202,6 @@
         <description/>
         <cover>../image/english/donald-trump/inaugural_address_2.jpg</cover>
         <audio>../audio/english/donald-trump/inaugural_address_8.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>123</id>
@@ -1331,7 +1210,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode1_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>124</id>
@@ -1340,7 +1218,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode1_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>125</id>
@@ -1349,7 +1226,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode2_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>126</id>
@@ -1358,7 +1234,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode2_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>127</id>
@@ -1367,7 +1242,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode3_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>128</id>
@@ -1376,7 +1250,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode3_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>129</id>
@@ -1385,7 +1258,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode4_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>130</id>
@@ -1394,7 +1266,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode4_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>131</id>
@@ -1403,7 +1274,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode5_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>132</id>
@@ -1412,7 +1282,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode5_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>133</id>
@@ -1421,7 +1290,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode6_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>134</id>
@@ -1430,7 +1298,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode6_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>135</id>
@@ -1439,7 +1306,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode7_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>136</id>
@@ -1448,7 +1314,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode7_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>137</id>
@@ -1457,7 +1322,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode8_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>138</id>
@@ -1466,7 +1330,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode8_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>139</id>
@@ -1475,7 +1338,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode9_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>140</id>
@@ -1484,7 +1346,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode9_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>141</id>
@@ -1493,7 +1354,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode10_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>142</id>
@@ -1502,7 +1362,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode10_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>143</id>
@@ -1511,7 +1370,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode11_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>144</id>
@@ -1520,7 +1378,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode11_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>145</id>
@@ -1529,7 +1386,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode12_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>146</id>
@@ -1538,7 +1394,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode12_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>147</id>
@@ -1547,7 +1402,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode13_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>148</id>
@@ -1556,7 +1410,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode13_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>149</id>
@@ -1565,7 +1418,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode14_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>150</id>
@@ -1574,7 +1426,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode14_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>151</id>
@@ -1583,7 +1434,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode15_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>152</id>
@@ -1592,7 +1442,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode15_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>153</id>
@@ -1601,7 +1450,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode16_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>154</id>
@@ -1610,7 +1458,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode16_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>155</id>
@@ -1619,7 +1466,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode17_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>156</id>
@@ -1628,7 +1474,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode17_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>157</id>
@@ -1637,7 +1482,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode18_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>158</id>
@@ -1646,7 +1490,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode18_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>159</id>
@@ -1655,7 +1498,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode19_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>160</id>
@@ -1664,7 +1506,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode19_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>161</id>
@@ -1673,7 +1514,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode20_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>162</id>
@@ -1682,7 +1522,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode20_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>163</id>
@@ -1691,7 +1530,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode21_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>164</id>
@@ -1700,7 +1538,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode21_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>165</id>
@@ -1709,7 +1546,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode22_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>166</id>
@@ -1718,7 +1554,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode22_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>167</id>
@@ -1727,7 +1562,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode23_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>168</id>
@@ -1736,7 +1570,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode23_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>169</id>
@@ -1745,7 +1578,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode24_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>170</id>
@@ -1754,7 +1586,6 @@
         <description/>
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode24_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>171</id>
@@ -1763,7 +1594,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode1_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>172</id>
@@ -1772,7 +1602,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode1_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>173</id>
@@ -1781,7 +1610,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode2_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>174</id>
@@ -1790,7 +1618,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode2_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>175</id>
@@ -1799,7 +1626,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode3_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>176</id>
@@ -1808,7 +1634,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode3_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>177</id>
@@ -1817,7 +1642,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode4_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>178</id>
@@ -1826,7 +1650,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode4_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>179</id>
@@ -1835,7 +1658,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode5_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>180</id>
@@ -1844,7 +1666,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode5_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>181</id>
@@ -1853,7 +1674,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode6_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>182</id>
@@ -1862,7 +1682,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode6_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>183</id>
@@ -1871,7 +1690,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode7_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>184</id>
@@ -1880,7 +1698,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode7_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>185</id>
@@ -1889,7 +1706,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode8_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>186</id>
@@ -1898,7 +1714,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode8_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>187</id>
@@ -1907,7 +1722,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode9_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>188</id>
@@ -1916,7 +1730,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode9_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>189</id>
@@ -1925,7 +1738,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode10_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>190</id>
@@ -1934,7 +1746,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode10_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>191</id>
@@ -1943,7 +1754,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode11_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>192</id>
@@ -1952,7 +1762,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode11_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>193</id>
@@ -1961,7 +1770,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode12_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>194</id>
@@ -1970,7 +1778,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode12_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>195</id>
@@ -1979,7 +1786,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode13_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>196</id>
@@ -1988,7 +1794,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode13_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>197</id>
@@ -1997,7 +1802,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode14_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>198</id>
@@ -2006,7 +1810,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode14_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>199</id>
@@ -2015,7 +1818,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode15_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>200</id>
@@ -2024,7 +1826,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode15_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>201</id>
@@ -2033,7 +1834,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode16_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>202</id>
@@ -2042,7 +1842,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode16_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>203</id>
@@ -2051,7 +1850,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode17_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>204</id>
@@ -2060,7 +1858,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode17_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>205</id>
@@ -2069,7 +1866,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode18_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>206</id>
@@ -2078,7 +1874,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode18_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>207</id>
@@ -2087,7 +1882,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode19_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>208</id>
@@ -2096,7 +1890,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode19_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>209</id>
@@ -2105,7 +1898,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode20_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>210</id>
@@ -2114,7 +1906,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode20_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>211</id>
@@ -2123,7 +1914,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode21_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>212</id>
@@ -2132,7 +1922,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode21_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>213</id>
@@ -2141,7 +1930,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode22_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>214</id>
@@ -2150,7 +1938,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode22_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>215</id>
@@ -2159,7 +1946,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode23_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>216</id>
@@ -2168,7 +1954,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode23_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>217</id>
@@ -2177,7 +1962,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode24_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>218</id>
@@ -2186,7 +1970,6 @@
         <description/>
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode24_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>219</id>
@@ -2195,7 +1978,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode1_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>220</id>
@@ -2204,7 +1986,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode1_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>221</id>
@@ -2213,7 +1994,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode2_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>222</id>
@@ -2222,7 +2002,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode2_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>223</id>
@@ -2231,7 +2010,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode3_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>224</id>
@@ -2240,7 +2018,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode3_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>225</id>
@@ -2249,7 +2026,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode4_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>226</id>
@@ -2258,7 +2034,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode4_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>227</id>
@@ -2267,7 +2042,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode5_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>228</id>
@@ -2276,7 +2050,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode5_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>229</id>
@@ -2285,7 +2058,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode6_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>230</id>
@@ -2294,7 +2066,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode6_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>231</id>
@@ -2303,7 +2074,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode7_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>232</id>
@@ -2312,7 +2082,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode7_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>233</id>
@@ -2321,7 +2090,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode8_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>234</id>
@@ -2330,7 +2098,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode8_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>235</id>
@@ -2339,7 +2106,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode9_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>236</id>
@@ -2348,7 +2114,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode9_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>237</id>
@@ -2357,7 +2122,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode10_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>238</id>
@@ -2366,7 +2130,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode10_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>239</id>
@@ -2375,7 +2138,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode11_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>240</id>
@@ -2384,7 +2146,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode11_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>241</id>
@@ -2393,7 +2154,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode12_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>242</id>
@@ -2402,7 +2162,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode12_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>243</id>
@@ -2411,7 +2170,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode13_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>244</id>
@@ -2420,7 +2178,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode13_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>245</id>
@@ -2429,7 +2186,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode14_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>246</id>
@@ -2438,7 +2194,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode14_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>247</id>
@@ -2447,7 +2202,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode15_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>248</id>
@@ -2456,7 +2210,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode15_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>249</id>
@@ -2465,7 +2218,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode16_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>250</id>
@@ -2474,7 +2226,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode16_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>251</id>
@@ -2483,7 +2234,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode17_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>252</id>
@@ -2492,7 +2242,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode17_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>253</id>
@@ -2501,7 +2250,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode18_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>254</id>
@@ -2510,7 +2258,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode18_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>255</id>
@@ -2519,7 +2266,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode19_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>256</id>
@@ -2528,7 +2274,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode19_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>257</id>
@@ -2537,7 +2282,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode20_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>258</id>
@@ -2546,7 +2290,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode20_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>259</id>
@@ -2555,7 +2298,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode21_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>260</id>
@@ -2564,7 +2306,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode21_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>261</id>
@@ -2573,7 +2314,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode22_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>262</id>
@@ -2582,7 +2322,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode22_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>263</id>
@@ -2591,7 +2330,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode23_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>264</id>
@@ -2600,7 +2338,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode23_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>265</id>
@@ -2609,7 +2346,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode24_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>266</id>
@@ -2618,7 +2354,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode24_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>267</id>
@@ -2627,7 +2362,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode25_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>268</id>
@@ -2636,7 +2370,6 @@
         <description/>
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode25_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>269</id>
@@ -2645,7 +2378,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode1_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>270</id>
@@ -2654,7 +2386,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode1_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>271</id>
@@ -2663,7 +2394,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode2_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>272</id>
@@ -2672,7 +2402,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode2_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>273</id>
@@ -2681,7 +2410,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode3_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>274</id>
@@ -2690,7 +2418,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode3_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>275</id>
@@ -2699,7 +2426,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode4_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>276</id>
@@ -2708,7 +2434,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode4_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>277</id>
@@ -2717,7 +2442,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode5_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>278</id>
@@ -2726,7 +2450,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode5_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>279</id>
@@ -2735,7 +2458,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode6_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>280</id>
@@ -2744,7 +2466,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode6_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>281</id>
@@ -2753,7 +2474,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode7_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>282</id>
@@ -2762,7 +2482,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode7_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>283</id>
@@ -2771,7 +2490,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode8_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>284</id>
@@ -2780,7 +2498,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode8_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>285</id>
@@ -2789,7 +2506,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode9_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>286</id>
@@ -2798,7 +2514,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode9_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>287</id>
@@ -2807,7 +2522,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode10_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>288</id>
@@ -2816,7 +2530,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode10_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>289</id>
@@ -2825,7 +2538,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode11_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>290</id>
@@ -2834,7 +2546,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode11_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>291</id>
@@ -2843,7 +2554,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode12_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>292</id>
@@ -2852,7 +2562,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode12_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>293</id>
@@ -2861,7 +2570,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode13_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>294</id>
@@ -2870,7 +2578,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode13_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>295</id>
@@ -2879,7 +2586,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode14_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>296</id>
@@ -2888,7 +2594,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode14_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>297</id>
@@ -2897,7 +2602,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode15_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>298</id>
@@ -2906,7 +2610,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode15_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>299</id>
@@ -2915,7 +2618,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode16_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>300</id>
@@ -2924,7 +2626,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode16_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>301</id>
@@ -2933,7 +2634,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode17_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>302</id>
@@ -2942,7 +2642,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode17_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>303</id>
@@ -2951,7 +2650,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode18_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>304</id>
@@ -2960,7 +2658,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode18_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>305</id>
@@ -2969,7 +2666,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode19_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>306</id>
@@ -2978,7 +2674,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode19_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>307</id>
@@ -2987,7 +2682,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode20_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>308</id>
@@ -2996,7 +2690,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode20_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>309</id>
@@ -3005,7 +2698,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode21_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>310</id>
@@ -3014,7 +2706,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode21_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>311</id>
@@ -3023,7 +2714,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode22_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>312</id>
@@ -3032,7 +2722,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode22_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>313</id>
@@ -3041,7 +2730,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode23_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>314</id>
@@ -3050,7 +2738,6 @@
         <description/>
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode23_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>315</id>
@@ -3059,7 +2746,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode1_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>316</id>
@@ -3068,7 +2754,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode1_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>317</id>
@@ -3077,7 +2762,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode2_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>318</id>
@@ -3086,7 +2770,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode2_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>319</id>
@@ -3095,7 +2778,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode3_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>320</id>
@@ -3104,7 +2786,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode3_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>321</id>
@@ -3113,7 +2794,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode4_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>322</id>
@@ -3122,7 +2802,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode4_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>323</id>
@@ -3131,7 +2810,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode5_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>324</id>
@@ -3140,7 +2818,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode5_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>325</id>
@@ -3149,7 +2826,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode6_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>326</id>
@@ -3158,7 +2834,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode6_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>327</id>
@@ -3167,7 +2842,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode7_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>328</id>
@@ -3176,7 +2850,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode7_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>329</id>
@@ -3185,7 +2858,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode8_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>330</id>
@@ -3194,7 +2866,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode8_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>331</id>
@@ -3203,7 +2874,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode9_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>332</id>
@@ -3212,7 +2882,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode9_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>333</id>
@@ -3221,7 +2890,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode10_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>334</id>
@@ -3230,7 +2898,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode10_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>335</id>
@@ -3239,7 +2906,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode11_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>336</id>
@@ -3248,7 +2914,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode11_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>337</id>
@@ -3257,7 +2922,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode12_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>338</id>
@@ -3266,7 +2930,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode12_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>339</id>
@@ -3275,7 +2938,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode13_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>340</id>
@@ -3284,7 +2946,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode13_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>341</id>
@@ -3293,7 +2954,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode14_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>342</id>
@@ -3302,7 +2962,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode14_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>343</id>
@@ -3311,7 +2970,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode15_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>344</id>
@@ -3320,7 +2978,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode15_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>345</id>
@@ -3329,7 +2986,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode16_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>346</id>
@@ -3338,7 +2994,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode16_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>347</id>
@@ -3347,7 +3002,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode17_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>348</id>
@@ -3356,7 +3010,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode17_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>349</id>
@@ -3365,7 +3018,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode18_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>350</id>
@@ -3374,7 +3026,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode18_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>351</id>
@@ -3383,7 +3034,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode19_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>352</id>
@@ -3392,7 +3042,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode19_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>353</id>
@@ -3401,7 +3050,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode20_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>354</id>
@@ -3410,7 +3058,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode20_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>355</id>
@@ -3419,7 +3066,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode21_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>356</id>
@@ -3428,7 +3074,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode21_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>357</id>
@@ -3437,7 +3082,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode22_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>358</id>
@@ -3446,7 +3090,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode22_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>359</id>
@@ -3455,7 +3098,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode23_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>360</id>
@@ -3464,7 +3106,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode23_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>361</id>
@@ -3473,7 +3114,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode24_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>362</id>
@@ -3482,7 +3122,6 @@
         <description/>
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode24_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>363</id>
@@ -3491,7 +3130,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode1_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>364</id>
@@ -3500,7 +3138,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode1_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>365</id>
@@ -3509,7 +3146,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode2_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>366</id>
@@ -3518,7 +3154,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode2_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>367</id>
@@ -3527,7 +3162,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode3_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>368</id>
@@ -3536,7 +3170,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode3_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>369</id>
@@ -3545,7 +3178,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode4_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>370</id>
@@ -3554,7 +3186,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode4_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>371</id>
@@ -3563,7 +3194,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode5_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>372</id>
@@ -3572,7 +3202,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode5_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>373</id>
@@ -3581,7 +3210,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode6_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>374</id>
@@ -3590,7 +3218,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode6_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>375</id>
@@ -3599,7 +3226,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode7_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>376</id>
@@ -3608,7 +3234,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode7_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>377</id>
@@ -3617,7 +3242,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode8_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>378</id>
@@ -3626,7 +3250,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode8_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>379</id>
@@ -3635,7 +3258,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode9_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>380</id>
@@ -3644,7 +3266,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode9_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>381</id>
@@ -3653,7 +3274,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode10_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>382</id>
@@ -3662,7 +3282,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode10_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>383</id>
@@ -3671,7 +3290,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode11_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>384</id>
@@ -3680,7 +3298,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode11_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>385</id>
@@ -3689,7 +3306,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode12_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>386</id>
@@ -3698,7 +3314,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode12_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>387</id>
@@ -3707,7 +3322,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode13_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>388</id>
@@ -3716,7 +3330,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode13_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>389</id>
@@ -3725,7 +3338,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode14_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>390</id>
@@ -3734,7 +3346,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode14_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>391</id>
@@ -3743,7 +3354,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode15_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>392</id>
@@ -3752,7 +3362,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode15_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>393</id>
@@ -3761,7 +3370,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode16_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>394</id>
@@ -3770,7 +3378,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode16_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>395</id>
@@ -3779,7 +3386,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode17_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>396</id>
@@ -3788,7 +3394,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode17_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>397</id>
@@ -3797,7 +3402,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode18_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>398</id>
@@ -3806,7 +3410,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode18_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>399</id>
@@ -3815,7 +3418,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode19_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>400</id>
@@ -3824,7 +3426,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode19_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>401</id>
@@ -3833,7 +3434,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode20_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>402</id>
@@ -3842,7 +3442,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode20_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>403</id>
@@ -3851,7 +3450,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode21_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>404</id>
@@ -3860,7 +3458,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode21_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>405</id>
@@ -3869,7 +3466,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode22_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>406</id>
@@ -3878,7 +3474,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode22_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>407</id>
@@ -3887,7 +3482,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode23_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>408</id>
@@ -3896,7 +3490,6 @@
         <description/>
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode23_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>409</id>
@@ -3905,7 +3498,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode1_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>410</id>
@@ -3914,7 +3506,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode1_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>411</id>
@@ -3923,7 +3514,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode2_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>412</id>
@@ -3932,7 +3522,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode2_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>413</id>
@@ -3941,7 +3530,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode3_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>414</id>
@@ -3950,7 +3538,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode3_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>415</id>
@@ -3959,7 +3546,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode4_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>416</id>
@@ -3968,7 +3554,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode4_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>417</id>
@@ -3977,7 +3562,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode5_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>418</id>
@@ -3986,7 +3570,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode5_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>419</id>
@@ -3995,7 +3578,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode6_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>420</id>
@@ -4004,7 +3586,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode6_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>421</id>
@@ -4013,7 +3594,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode7_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>422</id>
@@ -4022,7 +3602,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode7_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>423</id>
@@ -4031,7 +3610,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode8_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>424</id>
@@ -4040,7 +3618,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode8_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>425</id>
@@ -4049,7 +3626,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode9_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>426</id>
@@ -4058,7 +3634,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode9_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>427</id>
@@ -4067,7 +3642,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode10_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>428</id>
@@ -4076,7 +3650,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode10_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>429</id>
@@ -4085,7 +3658,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode11_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>430</id>
@@ -4094,7 +3666,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode11_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>431</id>
@@ -4103,7 +3674,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode12_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>432</id>
@@ -4112,7 +3682,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode12_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>433</id>
@@ -4121,7 +3690,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode13_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>434</id>
@@ -4130,7 +3698,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode13_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>435</id>
@@ -4139,7 +3706,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode14_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>436</id>
@@ -4148,7 +3714,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode14_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>437</id>
@@ -4157,7 +3722,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode15_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>438</id>
@@ -4166,7 +3730,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode15_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>439</id>
@@ -4175,7 +3738,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode16_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>440</id>
@@ -4184,7 +3746,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode16_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>441</id>
@@ -4193,7 +3754,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode17_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>442</id>
@@ -4202,7 +3762,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode17_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>443</id>
@@ -4211,7 +3770,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode18_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>444</id>
@@ -4220,7 +3778,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode18_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>445</id>
@@ -4229,7 +3786,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode19_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>446</id>
@@ -4238,7 +3794,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode19_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>447</id>
@@ -4247,7 +3802,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode20_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>448</id>
@@ -4256,7 +3810,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode20_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>449</id>
@@ -4265,7 +3818,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode21_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>450</id>
@@ -4274,7 +3826,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode21_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>451</id>
@@ -4283,7 +3834,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode22_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>452</id>
@@ -4292,7 +3842,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode22_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>453</id>
@@ -4301,7 +3850,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode23_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>454</id>
@@ -4310,7 +3858,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode23_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>455</id>
@@ -4319,7 +3866,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode24_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>456</id>
@@ -4328,7 +3874,6 @@
         <description/>
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode24_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>457</id>
@@ -4337,7 +3882,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode1_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>458</id>
@@ -4346,7 +3890,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode1_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>459</id>
@@ -4355,7 +3898,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode2_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>460</id>
@@ -4364,7 +3906,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode2_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>461</id>
@@ -4373,7 +3914,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode3_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>462</id>
@@ -4382,7 +3922,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode3_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>463</id>
@@ -4391,7 +3930,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode4_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>464</id>
@@ -4400,7 +3938,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode4_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>465</id>
@@ -4409,7 +3946,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode5_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>466</id>
@@ -4418,7 +3954,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode5_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>467</id>
@@ -4427,7 +3962,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode6_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>468</id>
@@ -4436,7 +3970,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode6_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>469</id>
@@ -4445,7 +3978,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode7_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>470</id>
@@ -4454,7 +3986,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode7_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>471</id>
@@ -4463,7 +3994,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode8_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>472</id>
@@ -4472,7 +4002,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode8_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>473</id>
@@ -4481,7 +4010,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode9_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>474</id>
@@ -4490,7 +4018,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode9_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>475</id>
@@ -4499,7 +4026,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode10_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>476</id>
@@ -4508,7 +4034,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode10_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>477</id>
@@ -4517,7 +4042,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode11_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>478</id>
@@ -4526,7 +4050,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode11_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>479</id>
@@ -4535,7 +4058,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode12_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>480</id>
@@ -4544,7 +4066,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode12_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>481</id>
@@ -4553,7 +4074,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode13_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>482</id>
@@ -4562,7 +4082,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode13_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>483</id>
@@ -4571,7 +4090,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode14_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>484</id>
@@ -4580,7 +4098,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode14_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>485</id>
@@ -4589,7 +4106,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode15_part_one.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>486</id>
@@ -4598,7 +4114,6 @@
         <description/>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode15_part_two.mp3</audio>
-        
     </blog>
     <blog location="english.html">
         <id>487</id>
@@ -4614,20 +4129,34 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode16_part_two.mp3</audio>
     </blog>
-    <!--
     <blog location="english.html">
-        <id>487</id>
-        <date>October 16, 2023</date>
-        <title>Friends S08E16: (Part One)</title>
+        <id>489</id>
+        <date>October 24, 2023</date>
+        <title>Friends S08E17: The One With The Tea Leaves(Part One)</title>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
-        <audio>../audio/english/friends/season8/friends_season8_episode16_part_one.mp3</audio>
+        <audio>../audio/english/friends/season8/friends_season8_episode17_part_one.mp3</audio>
     </blog>
     <blog location="english.html">
-        <id>488</id>
-        <date>October 16, 2023</date>
-        <title>Friends S08E16: (Part Two)</title>
+        <id>490</id>
+        <date>October 24, 2023</date>
+        <title>Friends S08E17: The One With The Tea Leaves(Part Two)</title>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
-        <audio>../audio/english/friends/season8/friends_season8_episode16_part_two.mp3</audio>
+        <audio>../audio/english/friends/season8/friends_season8_episode17_part_two.mp3</audio>
+    </blog>
+    <!--
+    <blog location="english.html">
+        <id>489</id>
+        <date>October 24, 2023</date>
+        <title>Friends S08E17: (Part One)</title>
+        <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
+        <audio>../audio/english/friends/season8/friends_season8_episode17_part_one.mp3</audio>
+    </blog>
+    <blog location="english.html">
+        <id>490</id>
+        <date>October 24, 2023</date>
+        <title>Friends S08E17: (Part Two)</title>
+        <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
+        <audio>../audio/english/friends/season8/friends_season8_episode17_part_two.mp3</audio>
     </blog>
     -->
 </blogs>
