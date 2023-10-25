@@ -175,4 +175,12 @@
         </description>
         <cover>developer-images/wallpaper/coding_2.jpg</cover>
     </blog>
+    <blog location="developer-single.html">
+        <id>19</id>
+        <date>October 25, 2023</date>
+        <title>MacOS 使用 Charles 对 iOS 模拟器进行抓包</title>
+        <description>
+        </description>
+        <cover>developer-images/wallpaper/coding_4.jpg</cover>
+    </blog>
 </blogs>
