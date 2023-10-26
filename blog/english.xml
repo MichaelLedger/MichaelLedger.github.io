@@ -4143,20 +4143,34 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode17_part_two.mp3</audio>
     </blog>
-    <!--
     <blog location="english.html">
-        <id>489</id>
-        <date>October 24, 2023</date>
-        <title>Friends S08E17: (Part One)</title>
+        <id>491</id>
+        <date>October 26, 2023</date>
+        <title>Friends S08E18: The One In Massapequa(Part One)</title>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
-        <audio>../audio/english/friends/season8/friends_season8_episode17_part_one.mp3</audio>
+        <audio>../audio/english/friends/season8/friends_season8_episode18_part_one.mp3</audio>
     </blog>
     <blog location="english.html">
-        <id>490</id>
-        <date>October 24, 2023</date>
-        <title>Friends S08E17: (Part Two)</title>
+        <id>492</id>
+        <date>October 26, 2023</date>
+        <title>Friends S08E18: The One In Massapequa(Part Two)</title>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
-        <audio>../audio/english/friends/season8/friends_season8_episode17_part_two.mp3</audio>
+        <audio>../audio/english/friends/season8/friends_season8_episode18_part_two.mp3</audio>
+    </blog>
+    <!--
+    <blog location="english.html">
+        <id>491</id>
+        <date>October 26, 2023</date>
+        <title>Friends S08E18: (Part One)</title>
+        <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
+        <audio>../audio/english/friends/season8/friends_season8_episode18_part_one.mp3</audio>
+    </blog>
+    <blog location="english.html">
+        <id>492</id>
+        <date>October 26, 2023</date>
+        <title>Friends S08E18: (Part Two)</title>
+        <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
+        <audio>../audio/english/friends/season8/friends_season8_episode18_part_two.mp3</audio>
     </blog>
     -->
 </blogs>
