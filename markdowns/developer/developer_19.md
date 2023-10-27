@@ -28,3 +28,13 @@ Proxy -> SSL Proxying Settings -> SSL Proxying -> Include Add -> Host: https://x
 
 ## 注意事项
 **抓包结束后，请按步骤6回到电脑系统设置页，把网页代理和安全网页代理去掉，否则关掉 Charles 后电脑上不了网。**
+
+**Passkey**
+Charles设置代理真机抓包会导致Passkey系统域名配置校验失败，需要关闭网络代理才能验证通过！
+
+`https://www.xxx.com/.well-known/apple-app-site-association`
+
+```
+"NSLocalizedFailureReason": Application with identifier <Team-ID>.<Bundle-ID> is not associated with domain xxx.com
+ASAuthorizationController credential request failed with error: Error Domain=com.apple.AuthenticationServices.AuthorizationError Code=1004
+```
