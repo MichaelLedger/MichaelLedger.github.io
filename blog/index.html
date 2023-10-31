@@ -149,6 +149,9 @@
                 success:function(xml){//这里是解析xml
                     $(xml).find("blog").each(function(i){
                     	var location = $(this).attr("location");     // 跳转页面地址
+						if (location == null || location.length == 0) {//fallback
+                            location = "english.html"
+                        }
                         var id_value = $(this).children("id").text();   // 唯一标识
                         var date = $(this).children("date").text();  // 日期
                         var title = $(this).children("title").text();  // 标题

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?><!--以下特殊字符不可使用：--><!--&rsquo; 全局替换为 '--><!--<br/> 换行符全局替换为 \n--><!--& 英文缩写全局替换为 and--><blogs>
-    <blog location="english.html">
+    <blog>
         <id>1</id>
         <date>November 27, 2018</date>
         <title>Authentic English - Difficult Customer</title>
@@ -9,7 +9,7 @@
         <cover>images/waitress.jpg</cover>
         <audio>../authentic-english/sound/kouyu/englishpod/200911/B0001pb.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>2</id>
         <date>November 28, 2018</date>
         <title>Authentic English - Calling In Sick</title>
@@ -19,7 +19,7 @@
         <cover>images/calling.jpg</cover>
         <audio>../authentic-english/sound/kouyu/englishpod/200911/B0002pb.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>3</id>
         <date>November 29, 2018</date>
         <title>Authentic English - Hotel Upgrade</title>
@@ -29,7 +29,7 @@
         <cover>images/hotel.jpg</cover>
         <audio>../authentic-english/sound/kouyu/englishpod/200911/C0003pb.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>4</id>
         <date>November 30, 2018</date>
         <title>Authentic English - I need an assistant</title>
@@ -39,7 +39,7 @@
         <cover>images/fist-bumps.jpg</cover>
         <audio>../authentic-english/sound/kouyu/englishpod/200911/C0004pb.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>5</id>
         <date>December 1, 2018</date>
         <title>Authentic English - Cut In Line</title>
@@ -49,7 +49,7 @@
         <cover>images/queue.jpg</cover>
         <audio>../authentic-english/sound/kouyu/englishpod/200911/C0005pb.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>6</id>
         <date>December 2, 2018</date>
         <title>Authentic English - Road Trip</title>
@@ -59,7 +59,7 @@
         <cover>images/roadtrip.jpg</cover>
         <audio>../authentic-english/sound/kouyu/englishpod/200911/C0006pb.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>7</id>
         <date>December 3, 2018</date>
         <title>Authentic English - Computer Virus</title>
@@ -69,7 +69,7 @@
         <cover>images/computer-stethoscope.jpg</cover>
         <audio>../authentic-english/sound/kouyu/englishpod/200911/C0007pb.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>8</id>
         <date>December 4, 2018</date>
         <title>BBC News - G20 Summit is Holding in Buenos Aires</title>
@@ -79,7 +79,7 @@
         <cover>images/G20.jpg</cover>
         <audio>../bbc/sound/bbc20181203_0014852xLB.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>9</id>
         <date>December 5, 2018</date>
         <title>BBC News - Yellow Vest Movement in Paris</title>
@@ -89,7 +89,7 @@
         <cover>images/yellow-vest-movement.jpg</cover>
         <audio>../bbc/sound/bbc20181204_3542471yYn.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>10</id>
         <date>December 6, 2018</date>
         <title>BBC News - Mexico's new President start investigating the disappearance of 43 students</title>
@@ -99,7 +99,7 @@
         <cover>images/安德烈斯·曼努埃尔·洛佩斯·奥夫拉多尔.jpg</cover>
         <audio>../bbc/sound/bbc1205_2603183KA2.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>11</id>
         <date>December 7, 2018</date>
         <title>BBC News - The British Prime Minister Theresa May has opened a crucial five-day debate on Brexit</title>
@@ -109,7 +109,7 @@
         <cover>images/brexit.jpg</cover>
         <audio>../bbc/sound/bbc20181206_2216387HVk.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>12</id>
         <date>December 8, 2018</date>
         <title>BBC News - Warm tributes to the former US President George H. W. Bush at his state funeral in Washington</title>
@@ -119,7 +119,7 @@
         <cover>images/fly-a-flag-at-half-mast.jpg</cover>
         <audio>../bbc/sound/bbc20181207_3945526LE6.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>13</id>
         <date>December 9, 2018</date>
         <title>BBC News - Russia will respond in kind if US pulls out of a cold war nuclear arms control treaty and develops new missiles</title>
@@ -129,7 +129,7 @@
         <cover>images/nuclear-missile.jpg</cover>
         <audio>../bbc/sound/bbc1209_3508560Wg5.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>14</id>
         <date>December 10, 2018</date>
         <title>BBC News - North-eastern Nigeria is littered with thousands of landmines</title>
@@ -139,7 +139,7 @@
         <cover>images/mines.jpg</cover>
         <audio>../bbc/sound/bbc181209_5909215h4F.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>15</id>
         <date>December 10, 2018</date>
         <title>BBC News - The arrest in Canada of a senior executive from the Chinese technology firm Huawei</title>
@@ -149,7 +149,7 @@
         <cover>images/court-sketch.jpg</cover>
         <audio>../bbc/sound/bbc1209_0119272DVx.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>16</id>
         <date>December 11, 2018</date>
         <title>BBC News - A pivotal moment in Donald Trump's presidency</title>
@@ -159,7 +159,7 @@
         <cover>images/Donald-Trump.jpg</cover>
         <audio>../bbc/sound/bbc20181210_5936360QGP.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>17</id>
         <date>December 12, 2018</date>
         <title>BBC News - UNCCC in Poland failed in keeping the global rising temperatures under 1.5℃</title>
@@ -169,7 +169,7 @@
         <cover>images/pollution.jpg</cover>
         <audio>../bbc/sound/bbc20181211_0704496Gbq.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>18</id>
         <date>December 13, 2018</date>
         <title>BBC News - The former Nissan Chairman has been officially charged with underreporting his income</title>
@@ -179,7 +179,7 @@
         <cover>images/nissan-symbol.jpg</cover>
         <audio>../bbc/sound/bbc1212_2312850BRX.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>19</id>
         <date>December 14, 2018</date>
         <title>BBC News - The President of the European Commission has said there's no room whatsoever to renegotiate the Brexit</title>
@@ -189,7 +189,7 @@
         <cover>images/brexit2.jpg</cover>
         <audio>../bbc/sound/bbc20181213_5721302yF6.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>20</id>
         <date>December 15, 2018</date>
         <title>BBC News - The British Prime Minister Theresa May has survived a vote of no confidence in her leadership</title>
@@ -199,7 +199,7 @@
         <cover>images/starsbourg-terrorist-shooting.jpg</cover>
         <audio>../bbc/sound/bbc1214_3534614MX4.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>21</id>
         <date>December 16, 2018</date>
         <title>BBC News - A Syria refugee living in British Villa as Green Fingers</title>
@@ -209,7 +209,7 @@
         <cover>images/horticulture.jpg</cover>
         <audio>../bbc/sound/bbc181216_1238273D7T.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>22</id>
         <date>December 17, 2018</date>
         <title>BBC News - The UN-brokered cease fire in Yemen's main port of Hodeida has been broken</title>
@@ -219,7 +219,7 @@
         <cover>images/yemen-ruins-children.png</cover>
         <audio>../bbc/sound/bbc1216_5431545hMR.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>23</id>
         <date>December 18, 2018</date>
         <title>BBC News - Australia now recognizes West Jerusalem as the capital of Israel</title>
@@ -229,7 +229,7 @@
         <cover>images/sri-lanka.jpg</cover>
         <audio>../bbc/sound/bbc20181217_0244391RFT.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>24</id>
         <date>December 19, 2018</date>
         <title>BBC News - Pakistani has approved death sentences for fifteen terrorists</title>
@@ -239,7 +239,7 @@
         <cover>images/pakistani-terrorists.jpg</cover>
         <audio>../bbc/sound/bbc20181218_59273296tg.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>25</id>
         <date>December 20, 2018</date>
         <title>BBC News - A judge in the US state of Missouri has ordered a convicted deer poacher to watch Bambi</title>
@@ -249,7 +249,7 @@
         <cover>images/fawn-bambi.jpg</cover>
         <audio>../bbc/sound/bbc1219_4329637Vdw.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>26</id>
         <date>December 21, 2018</date>
         <title>BBC News - New York's Attorney General closed the charity established in President Trump's name</title>
@@ -259,7 +259,7 @@
         <cover>images/trump-charity.jpg</cover>
         <audio>../bbc/sound/bbc20181220_0417129WMe.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>27</id>
         <date>December 22, 2018</date>
         <title>BBC News - Japan has decided to withdraw from the IWC in order to resume whaling on a commercial basis</title>
@@ -269,7 +269,7 @@
         <cover>images/japan-whaling.jpg</cover>
         <audio>../bbc/sound/bbc1221_2206384pgR.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>28</id>
         <date>December 23, 2018</date>
         <title>BBC News - The US Central Bank has raised interest rate the fourth time this year up to 2.5%</title>
@@ -279,7 +279,7 @@
         <cover>images/trump-vs-uscb.jpg</cover>
         <audio>../bbc/sound/bbc1222_0217428QY7.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>29</id>
         <date>December 24, 2018</date>
         <title>BBC News - The capacity to survive is an inherent inborn talent or a function of learning certain behavioural tactics?</title>
@@ -289,7 +289,7 @@
         <cover>images/pistol.jpg</cover>
         <audio>../bbc/sound/bbc181223_5445944tpW.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>30</id>
         <date>December 24, 2018</date>
         <title>BBC News - The Belgian Prime Minister Charles Michel has handed his government’s resignation</title>
@@ -299,7 +299,7 @@
         <cover>images/belgian-prime-minister-charles-michel.jpg</cover>
         <audio>../bbc/sound/bbc1223_2204960hR6.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>31</id>
         <date>December 24, 2018</date>
         <title>BBC News - Passengers in Britain second biggest airport are being warned of further disruption because of drones</title>
@@ -309,7 +309,7 @@
         <cover>images/merry-christmas-airport.jpg</cover>
         <audio>../bbc/sound/bbc20181224_3654677qrW.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>32</id>
         <date>December 25, 2018</date>
         <title>BBC News - Indonesia official said at least 43 people were killed when a tsunami struck several beaches around the Sunda Strait</title>
@@ -319,7 +319,7 @@
         <cover>images/indonesia-tsunami.jpg</cover>
         <audio>../bbc/sound/bbc20181225_0852289qex.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>33</id>
         <date>December 26, 2018</date>
         <title>English Essence For Recitation - Run Through the rain</title>
@@ -329,7 +329,7 @@
         <cover>../english-essence/image/kid-jacket-mini-figure.jpg</cover>
         <audio>../english-essence/sound/run-through-the-rain.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>34</id>
         <date>December 27, 2018</date>
         <title>BBC News - Trade unions and professional associations in Sudan have called for a general strike</title>
@@ -339,7 +339,7 @@
         <cover>images/sudan-strike.jpg</cover>
         <audio>../bbc/sound/bbc1226_5522282SDR.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>35</id>
         <date>December 28, 2018</date>
         <title>BBC News - The earthquake in Italy damaged nearby homes and buildings</title>
@@ -349,7 +349,7 @@
         <cover>images/earthquake-damage.jpg</cover>
         <audio>../bbc/sound/bbc20181227_2931954Svd.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>36</id>
         <date>December 29, 2018</date>
         <title>BBC News - President Trump has used a surprise Christmas visit to US troops in Iraq</title>
@@ -359,7 +359,7 @@
         <cover>images/trump-visit-troops.jpg</cover>
         <audio>../bbc/sound/bbc1228_31491492Nj.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>37</id>
         <date>December 30, 2018</date>
         <title>BBC News - Russia says it’s acquired a new type of nuclear capable hypersonic missile</title>
@@ -369,7 +369,7 @@
         <cover>images/russia-nuclear-missile.jpg</cover>
         <audio>../bbc/sound/bbc1229_5814166mBT.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>38</id>
         <date>December 31, 2018</date>
         <title>BBC News - King Salman of Saudi Arabia has replaced his foreign minister Adel al-Jubeir</title>
@@ -379,7 +379,7 @@
         <cover>images/saudi-arabia-minister.jpg</cover>
         <audio>../bbc/sound/bbc1230_1520865pAT.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>39</id>
         <date>January 1, 2019</date>
         <title>English Essence For Recitation - A special letter</title>
@@ -389,7 +389,7 @@
         <cover>../english-essence/image/pen-letter.jpg</cover>
         <audio>../english-essence/sound/a-special-letter.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>40</id>
         <date>January 2, 2019</date>
         <title>English Essence For Recitation - Eternal Promise</title>
@@ -399,7 +399,7 @@
         <cover>../english-essence/image/school-earthquake-ruins.jpg</cover>
         <audio>../english-essence/sound/eternal-promise.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>41</id>
         <date>January 3, 2019</date>
         <title>BBC News - Presidential election polling stations have opened in Congo</title>
@@ -409,7 +409,7 @@
         <cover>images/congo-election.jpg</cover>
         <audio>../bbc/sound/bbc0102_2509557LDq.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>42</id>
         <date>January 3, 2019</date>
         <title>English Essence For Recitation - A box full of kisses</title>
@@ -419,7 +419,7 @@
         <cover>../english-essence/image/a-box-full-of-kisses.jpg</cover>
         <audio>../english-essence/sound/a-box-full-of-kisses.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>43</id>
         <date>January 4, 2019</date>
         <title>BBC News - New Horizons probe has successfully encountered the most distant object in the solar system</title>
@@ -429,7 +429,7 @@
         <cover>images/new-horizons-probe.jpg</cover>
         <audio>../bbc/sound/bbc20190103_0605747LEa.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>44</id>
         <date>January 4, 2019</date>
         <title>English Essence For Recitation - On Christmas Eve</title>
@@ -439,7 +439,7 @@
         <cover>../english-essence/image/christmas-car.jpg</cover>
         <audio>../english-essence/sound/on-christmas-eve.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>45</id>
         <date>January 5, 2019</date>
         <title>BBC News - The budget dispute closed American government departments</title>
@@ -449,7 +449,7 @@
         <cover>images/the-white-house-closed.jpg</cover>
         <audio>../bbc/sound/bbc190105_05095853nm.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>46</id>
         <date>January 5, 2019</date>
         <title>BBC News - Chinese Chang'e-4 probe first lands on the far side of the moon</title>
@@ -459,7 +459,7 @@
         <cover>images/change-land-farside-moon.jpg</cover>
         <audio>../bbc/sound/bbc20190105_05095857pt.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>47</id>
         <date>January 6, 2019</date>
         <title>English Essence For Recitation - Not a Simple Dress</title>
@@ -469,7 +469,7 @@
         <cover>../english-essence/image/mom-gril-dress.png</cover>
         <audio>../english-essence/sound/not-a-simple-dress.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>48</id>
         <date>January 7, 2019</date>
         <title>BBC News - US stock has fallen hit by bad news from Apple and weak manufacturing figures</title>
@@ -479,7 +479,7 @@
         <cover>images/apple-stock.png</cover>
         <audio>../bbc/sound/tingvoa.com_BBC07094133vy.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>49</id>
         <date>January 8, 2019</date>
         <title>BBC News - Opposition demonstrators in Hungary are due to resume protest shortly against Viktor Orban</title>
@@ -489,7 +489,7 @@
         <cover>images/hungary-protest.jpg</cover>
         <audio>../bbc/sound/tingvoa.com_BBC08094253nr.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>50</id>
         <date>January 9, 2019</date>
         <title>BBC News - The planned withdrawal of American troops from Syria is still under debate</title>
@@ -499,7 +499,7 @@
         <cover>images/syria-crisis.jpg</cover>
         <audio>../bbc/sound/tingvoa.com_BBC09081645jy.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>51</id>
         <date>January 10, 2019</date>
         <title>English Essence For Recitation - A Father's Love</title>
@@ -509,7 +509,7 @@
         <cover>../english-essence/image/father-teach-ride-bicycle.jpg</cover>
         <audio>../english-essence/sound/a-father-love.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>52</id>
         <date>January 12, 2019</date>
         <title>BBC News - Mysterious energy bursts from an unknown origin in deep space</title>
@@ -519,7 +519,7 @@
         <cover>images/enery-brust.jpg</cover>
         <audio>../bbc/sound/tingvoa.com_BBC12083636hc.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>53</id>
         <date>January 13, 2019</date>
         <title>English Essence For Recitation - The Key of a Car</title>
@@ -529,7 +529,7 @@
         <cover>../english-essence/image/tesla-key.jpg</cover>
         <audio>../english-essence/sound/the-key-of-a-car.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>54</id>
         <date>January 13, 2019</date>
         <title>BBC News - FCA has agreed to pay more than 600 million dollars to settle claims</title>
@@ -539,7 +539,7 @@
         <cover>images/FCA.png</cover>
         <audio>../bbc/sound/bbc0113_3559585jJB.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>55</id>
         <date>January 14, 2019</date>
         <title>BBC News - The continuing government shutdown in the United States is now in its 22nd day</title>
@@ -549,7 +549,7 @@
         <cover>images/trump-aid-russia.jpg</cover>
         <audio>../bbc/sound/bbc20190114_3606526RFS.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>56</id>
         <date>January 15, 2019</date>
         <title>BBC News - South African President has urged men to unite against violence against women</title>
@@ -559,7 +559,7 @@
         <cover>images/south-africa-deer.jpg</cover>
         <audio>../bbc/sound/bbc20190115_1616410ErG.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>57</id>
         <date>January 16, 2019</date>
         <title>BBC News - The cockpit voice recorder from a Lion airplane that crashed in October has been recovered</title>
@@ -569,7 +569,7 @@
         <cover>images/crashed-lion-airplane.jpg</cover>
         <audio>../bbc/sound/bbc190116_5057716QLA.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>58</id>
         <date>January 17, 2019</date>
         <title>BBC News - Brazil loosed the country's gun laws</title>
@@ -579,7 +579,7 @@
         <cover>images/red-gold-shotgun-shells.jpg</cover>
         <audio>../bbc/sound/bbc20190117_5212103GWt.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>59</id>
         <date>January 21, 2019</date>
         <title>English Essence For Recitation - A Gift of Love</title>
@@ -589,7 +589,7 @@
         <cover>../english-essence/image/ear-structure.jpg</cover>
         <audio>../english-essence/sound/a-gift-of-love.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>60</id>
         <date>January 21, 2019</date>
         <title>BBC News - President Trump will hold a second summit with the North Korean leader Kim Jong Un</title>
@@ -599,7 +599,7 @@
         <cover>images/trump-kim-jong-un.jpg</cover>
         <audio>../bbc/sound/bbc0119_02318443ed.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>61</id>
         <date>January 22, 2019</date>
         <title>BBC News - The partial shutdown of the US government has entered its fifth week</title>
@@ -609,7 +609,7 @@
         <cover>images/gov-snow-down.jpg</cover>
         <audio>../bbc/sound/bbc20190121_2346846JsJ.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>62</id>
         <date>January 23, 2019</date>
         <title>BBC News - India's most senior politician Amit Shah recovered from swine flu</title>
@@ -619,7 +619,7 @@
         <cover>images/pink-pig-figurine.jpg</cover>
         <audio>../bbc/sound/bbc20190122_2712310eEx.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>63</id>
         <date>January 24, 2019</date>
         <title>BBC News - South Africa turned down a request from Zimbabwe for an emergency loan of 1.2 billion dollars</title>
@@ -629,7 +629,7 @@
         <cover>images/one-hundred-trillion-dollars-zimbabwe.jpg</cover>
         <audio>../bbc/sound/bbc190123_1215747hQx.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>64</id>
         <date>January 24, 2019</date>
         <title>BBC News - A leader of an ethnic Pashtun Movement campaigning against enforced disappearances has been arrested</title>
@@ -639,7 +639,7 @@
         <cover>images/pakistan-pashtun-leader.jpg</cover>
         <audio>../bbc/sound/bbc20190124_4722372eq2.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>65</id>
         <date>January 25, 2019</date>
         <title>BBC News - The sister of India's main opposition leader Rahul Gandhi has formally joined politics</title>
@@ -649,7 +649,7 @@
         <cover>images/gandhi-sister.jpg</cover>
         <audio>../bbc/sound/bbc190125_5808811NpY.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>66</id>
         <date>January 27, 2019</date>
         <title>BBC News - The United States has recognized its interim president of Venezuela</title>
@@ -659,7 +659,7 @@
         <cover>images/venezuela-juan-guaido.jpg</cover>
         <audio>../bbc/sound/bbc0126_3659356afi.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>67</id>
         <date>January 28, 2019</date>
         <title>BBC News - The Czech tennis star Petra Kvitova is about to play for a first Grand Slam title</title>
@@ -669,7 +669,7 @@
         <cover>images/czech-petra-kvitova.jpg</cover>
         <audio>../bbc/sound/bbc20190128_1039537Atr.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>68</id>
         <date>January 29, 2019</date>
         <title>BBC News - A bomb attack on a cathedral in the southern Philippines has killed more than twenty people</title>
@@ -679,7 +679,7 @@
         <cover>images/philippines-bomb-attack.jpg</cover>
         <audio>../bbc/sound/bbc20190129_4440786tPi.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>69</id>
         <date>January 30, 2019</date>
         <title>BBC News - A powerful tornado has hit Cuba's capital Havana</title>
@@ -689,7 +689,7 @@
         <cover>images/cuba-tornado.jpg</cover>
         <audio>../bbc/sound/bbc190130_0133609XGE.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>70</id>
         <date>January 31, 2019</date>
         <title>BBC News - Criminal sanctions imposed on Venezuelan owned oil company PDVSA by US</title>
@@ -699,7 +699,7 @@
         <cover>images/the-white-house-finance-minister.jpg</cover>
         <audio>../bbc/sound/bbc190131_1239118gwQ.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>71</id>
         <date>February 1, 2019</date>
         <title>BBC News - More than four hundred schools in the Thai capital Bangkok have been ordered to close</title>
@@ -709,7 +709,7 @@
         <cover>images/thai-smog.png</cover>
         <audio>../bbc/sound/bbc20190201_1450235sXb.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>72</id>
         <date>February 2, 2019</date>
         <title>BBC News - Parts of the United States have been hit by a deadly blast polar air</title>
@@ -719,7 +719,7 @@
         <cover>images/blast-polar-air.jpg</cover>
         <audio>../bbc/sound/bbc0202_2202386q6F.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>73</id>
         <date>February 11, 2019</date>
         <title>BBC News - Russia will follow US to suspend a key Cold War era nuclear weapons treaty</title>
@@ -729,7 +729,7 @@
         <cover>images/new-mid-range-hypersonic-missile.jpg</cover>
         <audio>../bbc/sound/bbc20190211_2115647mNf.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>74</id>
         <date>February 12, 2019</date>
         <title>English Essence For Recitation - A Father and A Son</title>
@@ -739,7 +739,7 @@
         <cover>../english-essence/image/red-gray-train-miniature.jpg</cover>
         <audio>../english-essence/sound/a-father-and-a-son.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>75</id>
         <date>February 13, 2019</date>
         <title>BBC News - A fire that engulfed a residential building in Paris killed eight people</title>
@@ -749,7 +749,7 @@
         <cover>images/fire-engulfed-residential-building.jpg</cover>
         <audio>../bbc/sound/bbc20190212_5439651Lnp.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>76</id>
         <date>February 14, 2019</date>
         <title>BBC News - More than 1700 people have died due to human-elephant conflict in India</title>
@@ -759,7 +759,7 @@
         <cover>images/human-elephant-conflict.jpg</cover>
         <audio>../bbc/sound/bbc190213_30212755Av.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>77</id>
         <date>February 15, 2019</date>
         <title>BBC News - Democrats and Republicans in US reached an agreement in principle on border security</title>
@@ -769,7 +769,7 @@
         <cover>images/trump-agreement-border-security.jpg</cover>
         <audio>../bbc/sound/bbc20190214_1318229wyJ.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>78</id>
         <date>February 16, 2019</date>
         <title>BBC News - The European aerospace firm Airbus will stop making the A380 superjumbo</title>
@@ -779,7 +779,7 @@
         <cover>images/biggest-airplane-A380.jpg</cover>
         <audio>../bbc/sound/bbc190215_4414484nPV.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>79</id>
         <date>February 16, 2019</date>
         <title>BBC News - The notorious Mexican drug lord guilty on all 10 counts at his drug-trafficking trial in New York</title>
@@ -789,7 +789,7 @@
         <cover>images/Mexican-drug-lord.jpg</cover>
         <audio>../bbc/sound/bbc0216_56189999rH.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>80</id>
         <date>February 16, 2019</date>
         <title>BBC News - A petition to bring about laws to protect bees is drawing to a close in the German</title>
@@ -799,7 +799,7 @@
         <cover>images/bees.jpg</cover>
         <audio>../bbc/sound/bbc0216-2_3536289kPg.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>81</id>
         <date>February 17, 2019</date>
         <title>BBC News - President Trump declared a national emergency to fund his border wall</title>
@@ -809,7 +809,7 @@
         <cover>images/trump-declare-national-emergency.jpg</cover>
         <audio>../bbc/sound/bbc0217_0428977D5f.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>82</id>
         <date>February 18, 2019</date>
         <title>BBC News - India's fastest train has broken down a day after it was inaugurated</title>
@@ -819,7 +819,7 @@
         <cover>images/India-fastest-train.jpg</cover>
         <audio>../bbc/sound/bbc20190218_584946936M.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>83</id>
         <date>February 19, 2019</date>
         <title>BBC News - Vandles in London have painted graffiti on the grave of Karl Marx</title>
@@ -829,7 +829,7 @@
         <cover>images/grave-Karl-Marx.jpg</cover>
         <audio>../bbc/sound/bbc20190219_2705987xqa.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>84</id>
         <date>February 20, 2019</date>
         <title>BBC News -  ACSC recently identified a malicious intrusion into the Australian Parliament House computer network</title>
@@ -839,7 +839,7 @@
         <cover>images/Australian-Cyber-Security-Center.jpg</cover>
         <audio>../bbc/sound/bbc190220_09585747Vb.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>85</id>
         <date>February 25, 2019</date>
         <title>BBC News - The Venezuelan has shut part of the border with Colombia</title>
@@ -849,7 +849,7 @@
         <cover>images/Venezuelan-shut-border-Colombia.jpg</cover>
         <audio>../bbc/sound/bbc20190225_44504863WM.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>86</id>
         <date>March 4, 2019</date>
         <title>BBC News - NASA and SpaceX preparing to launch Dragon astronaut capsule</title>
@@ -859,7 +859,7 @@
         <cover>images/Dragon-astronaut-capsule.jpg</cover>
         <audio>../bbc/sound/bbc20190304_2006583SPP.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>87</id>
         <date>March 5, 2019</date>
         <title>BBC News - US and South Korea's annual joint military exercises will be replaced with smaller-scale drills</title>
@@ -869,7 +869,7 @@
         <cover>images/South-Korea-US-annual-militarty-exercises.jpg</cover>
         <audio>../bbc/sound/bbc20190305_2417793Xsm.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>88</id>
         <date>March 6, 2019</date>
         <title>BBC News - US will merge the activities of its consulate in Israel with those of its embassy in a move that's angered Palestinians</title>
@@ -879,7 +879,7 @@
         <cover>images/merge-consulate.jpg</cover>
         <audio>../bbc/sound/bbc190306_0030118rQK.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>89</id>
         <date>March 7, 2019</date>
         <title>BBC News - Trump intended to scrap the program that keep India's preferential trade status with the United States</title>
@@ -889,7 +889,7 @@
         <cover>images/India-preferential-trade-US.jpg</cover>
         <audio>../bbc/sound/bbc20190307_3647664Ay2.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>90</id>
         <date>March 11, 2019</date>
         <title>BBC News - Electricity is gradually being restored in the Venezuelan</title>
@@ -899,7 +899,7 @@
         <cover>images/Venezuelan-electricity-blackout.jpg</cover>
         <audio>../bbc/sound/bbc20190311_2857127nen.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>91</id>
         <date>April 9, 2019</date>
         <title>BBC News - Activists try to protest against soaring rents and dwindling housing stock in Berlin</title>
@@ -909,7 +909,7 @@
         <cover>images/Berlin-rents.jpg</cover>
         <audio>../bbc/sound/bbc20190409_32529954xK.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>92</id>
         <date>April 10, 2019</date>
         <title>BBC News - President Trump has announced that he's replacing his Homeland Security Secretary Kirstjen Nielsen</title>
@@ -919,7 +919,7 @@
         <cover>images/trump-homeland-security-secretary.jpg</cover>
         <audio>../bbc/sound/bbc190410_17169505g2.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>93</id>
         <date>April 11, 2019</date>
         <title>BBC News - Israelis are voting in the country's most closely-fought general election in years</title>
@@ -929,7 +929,7 @@
         <cover>images/israelis-genral-election.jpg</cover>
         <audio>../bbc/sound/bbc20190411_3335409ADb.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>94</id>
         <date>April 14, 2019</date>
         <title>BBC News - The world’s largest aircraft has made its maiden flight in California</title>
@@ -939,7 +939,7 @@
         <cover>images/largest-aircraft.jpg</cover>
         <audio>../bbc/sound/bbc0414_1349248pKe.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>95</id>
         <date>April 15, 2019</date>
         <title>BBC News - India is observing the centenary of a massacre by British troops that seen as one of the darkest incidents of the colonial era</title>
@@ -949,7 +949,7 @@
         <cover>images/India-observe-massacre.png</cover>
         <audio>../bbc/sound/bbc20190415_0213321BiJ.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>96</id>
         <date>April 18, 2019</date>
         <title>BBC News - The blaze that devastated Notre Dame Cathedral overnight was an accident</title>
@@ -959,7 +959,7 @@
         <cover>images/Notre-Dame-Cathedral-Blaze.jpeg</cover>
         <audio>../bbc/sound/bbc20190418_5531618xkw.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>97</id>
         <date>April 22, 2019</date>
         <title>BBC News - The White House has defended Trump from accusations</title>
@@ -969,7 +969,7 @@
         <cover>images/muslim-democratic.jpg</cover>
         <audio>../bbc/sound/bbc0420_3426609Kyg.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>98</id>
         <date>April 24, 2019</date>
         <title>BBC News - The Sri Lankan government has blamed a local Islamic group for the suicide bomb attacks</title>
@@ -979,7 +979,7 @@
         <cover>images/sri-lanka-churches-bomb-attack.jpg</cover>
         <audio>../bbc/sound/bbc190424_24508363PP.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>99</id>
         <date>April 26, 2019</date>
         <title>BBC News - The Russian President Vladimir Putin has held his first meeting with the North Korean leader Kim Jong-un</title>
@@ -989,7 +989,7 @@
         <cover>images/Kim-Jong-un-Putin.jpg</cover>
         <audio>../bbc/sound/bbc190426_3920424TXB.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>100</id>
         <date>June 24, 2019</date>
         <title>BBC News - Iran's Foreign Ministry has praised the military for shooting down an American drone</title>
@@ -999,7 +999,7 @@
         <cover>images/USA-RQ-4-drone.jpg</cover>
         <audio>../bbc/sound/bbc20190624_2428753XM6.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>101</id>
         <date>June 28, 2019</date>
         <title>BBC News - Talks between the US and North Korea could resume</title>
@@ -1009,7 +1009,7 @@
         <cover>images/us-vs-iran.png</cover>
         <audio>../bbc/sound/bbc190628_0505317vH2.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>102</id>
         <date>July 5, 2019</date>
         <title>English Essence For Recitation - A fib</title>
@@ -1019,7 +1019,7 @@
         <cover>../english-essence/image/central-cinema.jpg</cover>
         <audio>../english-essence/sound/a-fib.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>103</id>
         <date>July 8, 2019</date>
         <title>BBC News - Iran has breached the limit on its stockpile of enriched uranium</title>
@@ -1029,7 +1029,7 @@
         <cover>images/Iran-uranium-enrichment.jpg</cover>
         <audio>../bbc/sound/bbc190703_2335699FHB.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>104</id>
         <date>July 15, 2019</date>
         <title>BBC News - Leaked emails from the British ambassador to Washington</title>
@@ -1039,7 +1039,7 @@
         <cover>images/Washington-British-Ambassador.jpeg</cover>
         <audio>../bbc/sound/bbc20190709_21306935GX.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>105</id>
         <date>August 12, 2019</date>
         <title>BBC News - Jeffrey Epstein has been found dead in his jail cell apparently after killing himself</title>
@@ -1049,7 +1049,7 @@
         <cover>images/Jeffrey-Epstein.jpg</cover>
         <audio>../bbc/sound/bbc20190812_17145537Xt.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>106</id>
         <date>August 17, 2019</date>
         <title>BBC News - Tiny particles of plastic are contaminating the Arctic</title>
@@ -1059,7 +1059,7 @@
         <cover>images/polar-bear.jpg</cover>
         <audio>../bbc/sound/bbc0817_1334627msE.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>107</id>
         <date>September 3, 2019</date>
         <title>BBC News - There has been more violence in Hong Kong</title>
@@ -1069,7 +1069,7 @@
         <cover>images/Hong-Kong-Violence.jpeg</cover>
         <audio>../bbc/sound/bbc0901.mp3_1240843bhQ.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>108</id>
         <date>September 16, 2019</date>
         <title>BBC News - The planet is losing an area of forest the size of Britain every year</title>
@@ -1079,7 +1079,7 @@
         <cover>images/silhouette-of-person-standing-on-wood-stump.jpeg</cover>
         <audio>../bbc/sound/bbc0915_1556246Vdr.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>109</id>
         <date>September 20, 2019</date>
         <title>BBC News - Saudis will soon produce evidence revealing Iran's involvement in the attack</title>
@@ -1089,7 +1089,7 @@
         <cover>images/saudi-oil-attack.jpg</cover>
         <audio>../bbc/sound/bbc190920_4739691t8w.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>110</id>
         <date>September 27, 2019</date>
         <title>BBC News - The collapse of the world's oldest travel firm Thomas Cook</title>
@@ -1099,7 +1099,7 @@
         <cover>images/thomas-cook-airport-departures.jpeg</cover>
         <audio>../bbc/sound/bbc190927_2203782YSY.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>111</id>
         <date>November 20, 2019</date>
         <title>BBC News - Italy’s cabinet has declared a state of emergency in Venice following serious tidal flooding in the city</title>
@@ -1109,7 +1109,7 @@
         <cover>images/Venice-Tidal-Flooding.jpeg</cover>
         <audio>../bbc/sound/bbc1116_3343539vkE.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>112</id>
         <date>November 21, 2019</date>
         <title>BBC News - Russia has handed back three Ukrainian ships that it seized a year ago of Crimea</title>
@@ -1119,7 +1119,7 @@
         <cover>images/Ukrainian-seized-ships.jpeg</cover>
         <audio>../bbc/sound/bbc191120_2758677BG2.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>113</id>
         <date>November 22, 2019</date>
         <title>BBC News - Two Western hostages held by Taliban militants for more than three years have been freed</title>
@@ -1129,7 +1129,7 @@
         <cover>images/Lebanese-Parliament-Conflict.jpg</cover>
         <audio>../bbc/sound/bbc20191121_5228729GQm.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>114</id>
         <date>December 11, 2019</date>
         <title>BBC News - climate change and pollution are reducing oxygen in the oceans threatening fish species</title>
@@ -1139,7 +1139,7 @@
         <cover>images/green-corals-under-water.jpg</cover>
         <audio>../bbc/sound/bbc1209_52217855HM.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>115</id>
         <date>August 9, 2020</date>
         <title>American President Donald Trump's Inaugural Address(1)</title>
@@ -1147,7 +1147,7 @@
         <cover>../image/english/donald-trump/inaugural_address_1.jpg</cover>
         <audio>../audio/english/donald-trump/inaugural_address_1.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>116</id>
         <date>August 9, 2020</date>
         <title>American President Donald Trump's Inaugural Address(2)</title>
@@ -1155,7 +1155,7 @@
         <cover>../image/english/donald-trump/inaugural_address_2.jpg</cover>
         <audio>../audio/english/donald-trump/inaugural_address_2.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>117</id>
         <date>August 9, 2020</date>
         <title>American President Donald Trump's Inaugural Address(3)</title>
@@ -1163,7 +1163,7 @@
         <cover>../image/english/donald-trump/inaugural_address_1.jpg</cover>
         <audio>../audio/english/donald-trump/inaugural_address_3.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>118</id>
         <date>August 9, 2020</date>
         <title>American President Donald Trump's Inaugural Address(4)</title>
@@ -1171,7 +1171,7 @@
         <cover>../image/english/donald-trump/inaugural_address_2.jpg</cover>
         <audio>../audio/english/donald-trump/inaugural_address_4.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>119</id>
         <date>August 9, 2020</date>
         <title>American President Donald Trump's Inaugural Address(5)</title>
@@ -1179,7 +1179,7 @@
         <cover>../image/english/donald-trump/inaugural_address_1.jpg</cover>
         <audio>../audio/english/donald-trump/inaugural_address_5.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>120</id>
         <date>August 9, 2020</date>
         <title>American President Donald Trump's Inaugural Address(6)</title>
@@ -1187,7 +1187,7 @@
         <cover>../image/english/donald-trump/inaugural_address_2.jpg</cover>
         <audio>../audio/english/donald-trump/inaugural_address_6.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>121</id>
         <date>August 9, 2020</date>
         <title>American President Donald Trump's Inaugural Address(7)</title>
@@ -1195,7 +1195,7 @@
         <cover>../image/english/donald-trump/inaugural_address_1.jpg</cover>
         <audio>../audio/english/donald-trump/inaugural_address_7.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>122</id>
         <date>August 9, 2020</date>
         <title>American President Donald Trump's Inaugural Address(8)</title>
@@ -1203,7 +1203,7 @@
         <cover>../image/english/donald-trump/inaugural_address_2.jpg</cover>
         <audio>../audio/english/donald-trump/inaugural_address_8.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>123</id>
         <date>August 30, 2020</date>
         <title>Friends S01E01: The One Where Monica Gets a New Roommate(Part One)</title>
@@ -1211,7 +1211,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode1_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>124</id>
         <date>August 30, 2020</date>
         <title>Friends S01E01: The One Where Monica Gets a New Roommate(Part Two)</title>
@@ -1219,7 +1219,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode1_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>125</id>
         <date>August 31, 2020</date>
         <title>Friends S01E02: The One With the Sonogram at the End(Part One)</title>
@@ -1227,7 +1227,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode2_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>126</id>
         <date>August 31, 2020</date>
         <title>Friends S01E02: The One With the Sonogram at the End(Part Two)</title>
@@ -1235,7 +1235,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode2_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>127</id>
         <date>September 4, 2020</date>
         <title>Friends S01E03: The One With The Thumb(Part One)</title>
@@ -1243,7 +1243,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode3_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>128</id>
         <date>September 4, 2020</date>
         <title>Friends S01E03: The One With The Thumb(Part Two)</title>
@@ -1251,7 +1251,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode3_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>129</id>
         <date>September 6, 2020</date>
         <title>Friends S01E04: The One With George Stephanopoulos(Part One)</title>
@@ -1259,7 +1259,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode4_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>130</id>
         <date>September 6, 2020</date>
         <title>Friends S01E04: The One With George Stephanopoulos(Part Two)</title>
@@ -1267,7 +1267,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode4_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>131</id>
         <date>September 7, 2020</date>
         <title>Friends S01E05: The One With East German Laundry Detergent(Part One)</title>
@@ -1275,7 +1275,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode5_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>132</id>
         <date>September 7, 2020</date>
         <title>Friends S01E05: The One With East German Laundry Detergent(Part Two)</title>
@@ -1283,7 +1283,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode5_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>133</id>
         <date>September 8, 2020</date>
         <title>Friends S01E06: The One With the Butt(Part One)</title>
@@ -1291,7 +1291,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode6_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>134</id>
         <date>September 8, 2020</date>
         <title>Friends S01E06: The One With the Butt(Part Two)</title>
@@ -1299,7 +1299,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode6_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>135</id>
         <date>September 9, 2020</date>
         <title>Friends S01E07: The One With the Blackout(Part One)</title>
@@ -1307,7 +1307,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode7_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>136</id>
         <date>September 9, 2020</date>
         <title>Friends S01E07: The One With the Blackout(Part Two)</title>
@@ -1315,7 +1315,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode7_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>137</id>
         <date>September 10, 2020</date>
         <title>Friends S01E08: The One Where Nana Dies Twice(Part One)</title>
@@ -1323,7 +1323,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode8_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>138</id>
         <date>September 10, 2020</date>
         <title>Friends S01E08: The One Where Nana Dies Twice(Part Two)</title>
@@ -1331,7 +1331,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode8_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>139</id>
         <date>September 11, 2020</date>
         <title>Friends S01E09: The One Where Underdog Gets Away(Part One)</title>
@@ -1339,7 +1339,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode9_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>140</id>
         <date>September 11, 2020</date>
         <title>Friends S01E09: The One Where Underdog Gets Away(Part Two)</title>
@@ -1347,7 +1347,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode9_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>141</id>
         <date>September 12, 2020</date>
         <title>Friends S01E10: The One With the Monkey(Part One)</title>
@@ -1355,7 +1355,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode10_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>142</id>
         <date>September 12, 2020</date>
         <title>Friends S01E10: The One With the Monkey(Part Two)</title>
@@ -1363,7 +1363,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode10_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>143</id>
         <date>September 13, 2020</date>
         <title>Friends S01E11: The One With Mrs.Bing(Part One)</title>
@@ -1371,7 +1371,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode11_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>144</id>
         <date>September 13, 2020</date>
         <title>Friends S01E11: The One With Mrs.Bing(Part Two)</title>
@@ -1379,7 +1379,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode11_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>145</id>
         <date>September 14, 2020</date>
         <title>Friends S01E12: The One With the Dozen Lasagnes(Part One)</title>
@@ -1387,7 +1387,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode12_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>146</id>
         <date>September 14, 2020</date>
         <title>Friends S01E12: The One With the Dozen Lasagnes(Part Two)</title>
@@ -1395,7 +1395,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode12_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>147</id>
         <date>September 16, 2020</date>
         <title>Friends S01E13: The One With the Boobies(Part One)</title>
@@ -1403,7 +1403,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode13_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>148</id>
         <date>September 16, 2020</date>
         <title>Friends S01E13: The One With the Boobies(Part Two)</title>
@@ -1411,7 +1411,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode13_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>149</id>
         <date>September 17, 2020</date>
         <title>Friends S01E14: The One With the Candy Hearts(Part One)</title>
@@ -1419,7 +1419,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode14_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>150</id>
         <date>September 17, 2020</date>
         <title>Friends S01E14: The One With the Candy Hearts(Part Two)</title>
@@ -1427,7 +1427,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode14_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>151</id>
         <date>September 18, 2020</date>
         <title>Friends S01E15: The One With the Stoned Guy(Part One)</title>
@@ -1435,7 +1435,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode15_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>152</id>
         <date>September 18, 2020</date>
         <title>Friends S01E15: The One With the Stoned Guy(Part Two)</title>
@@ -1443,7 +1443,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode15_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>153</id>
         <date>September 23, 2020</date>
         <title>Friends S01E16: The One With Two Parts-1(Part One)</title>
@@ -1451,7 +1451,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode16_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>154</id>
         <date>September 23, 2020</date>
         <title>Friends S01E16: The One With Two Parts-1(Part Two)</title>
@@ -1459,7 +1459,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode16_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>155</id>
         <date>October 13, 2020</date>
         <title>Friends S01E17: The One With Two Parts-2(Part One)</title>
@@ -1467,7 +1467,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode17_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>156</id>
         <date>October 13, 2020</date>
         <title>Friends S01E17: The One With Two Parts-2(Part Two)</title>
@@ -1475,7 +1475,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode17_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>157</id>
         <date>October 14, 2020</date>
         <title>Friends S01E18: The One With All The Poker(Part One)</title>
@@ -1483,7 +1483,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode18_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>158</id>
         <date>October 14, 2020</date>
         <title>Friends S01E18: The One With All The Poker(Part Two)</title>
@@ -1491,7 +1491,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode18_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>159</id>
         <date>October 20, 2020</date>
         <title>Friends S01E19: The One Where the Monkey Gets Away(Part One)</title>
@@ -1499,7 +1499,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode19_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>160</id>
         <date>October 20, 2020</date>
         <title>Friends S01E19: The One Where the Monkey Gets Away(Part Two)</title>
@@ -1507,7 +1507,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode19_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>161</id>
         <date>October 20, 2020</date>
         <title>Friends S01E20: The One With the Evil Orthodontist(Part One)</title>
@@ -1515,7 +1515,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode20_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>162</id>
         <date>October 20, 2020</date>
         <title>Friends S01E20: The One With the Evil Orthodontist(Part Two)</title>
@@ -1523,7 +1523,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode20_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>163</id>
         <date>October 20, 2020</date>
         <title>Friends S01E21: The One With The Fake Monica(Part One)</title>
@@ -1531,7 +1531,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode21_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>164</id>
         <date>October 20, 2020</date>
         <title>Friends S01E21: The One With The Fake Monica(Part Two)</title>
@@ -1539,7 +1539,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode21_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>165</id>
         <date>October 20, 2020</date>
         <title>Friends S01E22: The One With the Ick Factor(Part One)</title>
@@ -1547,7 +1547,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode22_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>166</id>
         <date>October 20, 2020</date>
         <title>Friends S01E22: The One With the Ick Factor(Part Two)</title>
@@ -1555,7 +1555,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode22_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>167</id>
         <date>October 20, 2020</date>
         <title>Friends S01E23: The One With the Birth(Part One)</title>
@@ -1563,7 +1563,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode23_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>168</id>
         <date>October 20, 2020</date>
         <title>Friends S01E23: The One With the Birth(Part Two)</title>
@@ -1571,7 +1571,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode23_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>169</id>
         <date>October 20, 2020</date>
         <title>Friends S01E24: The One Where Rachel Finds(Part One)</title>
@@ -1579,7 +1579,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode24_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>170</id>
         <date>October 20, 2020</date>
         <title>Friends S01E24: The One Where Rachel Finds(Part Two)</title>
@@ -1587,7 +1587,7 @@
         <cover>../image/english/friends/season1/friends_season1_cover.jpg</cover>
         <audio>../audio/english/friends/season1/friends_season1_episode24_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>171</id>
         <date>October 29, 2020</date>
         <title>Friends S02E01: The One With Ross' New Girlfriend(Part One)</title>
@@ -1595,7 +1595,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode1_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>172</id>
         <date>October 29, 2020</date>
         <title>Friends S02E01: The One With Ross' New Girlfriend(Part Two)</title>
@@ -1603,7 +1603,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode1_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>173</id>
         <date>November 9, 2020</date>
         <title>Friends S02E02: The One With the Breast Milk(Part One)</title>
@@ -1611,7 +1611,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode2_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>174</id>
         <date>November 9, 2020</date>
         <title>Friends S02E02: The One With the Breast Milk(Part Two)</title>
@@ -1619,7 +1619,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode2_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>175</id>
         <date>November 10, 2020</date>
         <title>Friends S02E03: The One Where Mr.Heckles Dies(Part One)</title>
@@ -1627,7 +1627,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode3_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>176</id>
         <date>November 10, 2020</date>
         <title>Friends S02E03: The One Where Mr.Heckles Dies(Part Two)</title>
@@ -1635,7 +1635,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode3_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>177</id>
         <date>November 12, 2020</date>
         <title>Friends S02E04: The One With Phoebe's Husband(Part One)</title>
@@ -1643,7 +1643,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode4_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>178</id>
         <date>November 12, 2020</date>
         <title>Friends S02E04: The One With Phoebe's Husband(Part Two)</title>
@@ -1651,7 +1651,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode4_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>179</id>
         <date>November 16, 2020</date>
         <title>Friends S02E05: The One With Five Steaks and an Eggplant(Part One)</title>
@@ -1659,7 +1659,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode5_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>180</id>
         <date>November 16, 2020</date>
         <title>Friends S02E05: The One With Five Steaks and an Eggplant(Part Two)</title>
@@ -1667,7 +1667,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode5_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>181</id>
         <date>November 17, 2020</date>
         <title>Friends S02E06: The One With the Baby(Part One)</title>
@@ -1675,7 +1675,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode6_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>182</id>
         <date>November 17, 2020</date>
         <title>Friends S02E06: The One With the Baby(Part Two)</title>
@@ -1683,7 +1683,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode6_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>183</id>
         <date>November 18, 2020</date>
         <title>Friends S02E07: The One Where Ross Finds(Part One)</title>
@@ -1691,7 +1691,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode7_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>184</id>
         <date>November 18, 2020</date>
         <title>Friends S02E07: The One Where Ross Finds(Part Two)</title>
@@ -1699,7 +1699,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode7_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>185</id>
         <date>November 23, 2020</date>
         <title>Friends S02E08: The One With the List(Part One)</title>
@@ -1707,7 +1707,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode8_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>186</id>
         <date>November 23, 2020</date>
         <title>Friends S02E08: The One With the List(Part Two)</title>
@@ -1715,7 +1715,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode8_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>187</id>
         <date>November 24, 2020</date>
         <title>Friends S02E09: The One With Phoebe's Dad(Part One)</title>
@@ -1723,7 +1723,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode9_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>188</id>
         <date>November 24, 2020</date>
         <title>Friends S02E09: The One With Phoebe's Dad(Part Two)</title>
@@ -1731,7 +1731,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode9_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>189</id>
         <date>December 1, 2020</date>
         <title>Friends S02E10: The One With Russ(Part One)</title>
@@ -1739,7 +1739,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode10_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>190</id>
         <date>December 1, 2020</date>
         <title>Friends S02E10: The One With Russ(Part Two)</title>
@@ -1747,7 +1747,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode10_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>191</id>
         <date>December 2, 2020</date>
         <title>Friends S02E11: The One With the Lesbian Wedding(Part One)</title>
@@ -1755,7 +1755,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode11_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>192</id>
         <date>December 2, 2020</date>
         <title>Friends S02E11: The One With the Lesbian Wedding(Part Two)</title>
@@ -1763,7 +1763,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode11_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>193</id>
         <date>December 3, 2020</date>
         <title>Friends S02E12: The One After The Superbowl(Part One)</title>
@@ -1771,7 +1771,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode12_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>194</id>
         <date>December 3, 2020</date>
         <title>Friends S02E12: The One After The Superbowl(Part Two)</title>
@@ -1779,7 +1779,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode12_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>195</id>
         <date>December 7, 2020</date>
         <title>Friends S02E13: The One After The Superbowl-2(Part One)</title>
@@ -1787,7 +1787,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode13_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>196</id>
         <date>December 7, 2020</date>
         <title>Friends S02E13: The One After The Superbowl-2(Part Two)</title>
@@ -1795,7 +1795,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode13_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>197</id>
         <date>December 8, 2020</date>
         <title>Friends S02E14: The One With the Prom Video(Part One)</title>
@@ -1803,7 +1803,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode14_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>198</id>
         <date>December 8, 2020</date>
         <title>Friends S02E14: The One With the Prom Video(Part Two)</title>
@@ -1811,7 +1811,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode14_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>199</id>
         <date>December 10, 2020</date>
         <title>Friends S02E15: The One Where Rachel and Ross(Part One)</title>
@@ -1819,7 +1819,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode15_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>200</id>
         <date>December 10, 2020</date>
         <title>Friends S02E15: The One Where Rachel and Ross(Part Two)</title>
@@ -1827,7 +1827,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode15_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>201</id>
         <date>December 11, 2020</date>
         <title>Friends S02E16: The One Where Joey Moves Out(Part One)</title>
@@ -1835,7 +1835,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode16_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>202</id>
         <date>December 11, 2020</date>
         <title>Friends S02E16: The One Where Joey Moves Out(Part Two)</title>
@@ -1843,7 +1843,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode16_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>203</id>
         <date>December 15, 2020</date>
         <title>Friends S02E17: The One Where Eddie Moves In(Part One)</title>
@@ -1851,7 +1851,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode17_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>204</id>
         <date>December 15, 2020</date>
         <title>Friends S02E17: The One Where Eddie Moves In(Part Two)</title>
@@ -1859,7 +1859,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode17_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>205</id>
         <date>December 17, 2020</date>
         <title>Friends S02E18: The One Where Dr.Remore Dies(Part One)</title>
@@ -1867,7 +1867,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode18_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>206</id>
         <date>December 17, 2020</date>
         <title>Friends S02E18: The One Where Dr.Remore Dies(Part Two)</title>
@@ -1875,7 +1875,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode18_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>207</id>
         <date>December 17, 2020</date>
         <title>Friends S02E19: The One Where Eddie Won't Go(Part One)</title>
@@ -1883,7 +1883,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode19_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>208</id>
         <date>December 17, 2020</date>
         <title>Friends S02E19: The One Where Eddie Won't Go(Part Two)</title>
@@ -1891,7 +1891,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode19_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>209</id>
         <date>December 17, 2020</date>
         <title>Friends S02E20: The One Where Old Yeller Dies(Part One)</title>
@@ -1899,7 +1899,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode20_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>210</id>
         <date>December 17, 2020</date>
         <title>Friends S02E20: The One Where Old Yeller Dies(Part Two)</title>
@@ -1907,7 +1907,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode20_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>211</id>
         <date>December 17, 2020</date>
         <title>Friends S02E21: The One With the Two Bullies(Part One)</title>
@@ -1915,7 +1915,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode21_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>212</id>
         <date>December 17, 2020</date>
         <title>Friends S02E21: The One With the Two Bullies(Part Two)</title>
@@ -1923,7 +1923,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode21_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>213</id>
         <date>December 17, 2020</date>
         <title>Friends S02E22: The One With the Two Parties(Part One)</title>
@@ -1931,7 +1931,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode22_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>214</id>
         <date>December 17, 2020</date>
         <title>Friends S02E22: The One With the Two Parties(Part Two)</title>
@@ -1939,7 +1939,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode22_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>215</id>
         <date>December 17, 2020</date>
         <title>Friends S02E23: The One With the Chicken Pox(Part One)</title>
@@ -1947,7 +1947,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode23_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>216</id>
         <date>December 17, 2020</date>
         <title>Friends S02E23: The One With the Chicken Pox(Part Two)</title>
@@ -1955,7 +1955,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode23_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>217</id>
         <date>December 17, 2020</date>
         <title>Friends S02E24: The One With Barry and Mindy's Wedding(Part One)</title>
@@ -1963,7 +1963,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode24_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>218</id>
         <date>December 17, 2020</date>
         <title>Friends S02E24: The One With Barry and Mindy's Wedding(Part Two)</title>
@@ -1971,7 +1971,7 @@
         <cover>../image/english/friends/season2/friends_season2_cover.jpg</cover>
         <audio>../audio/english/friends/season2/friends_season2_episode24_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>219</id>
         <date>December 17, 2020</date>
         <title>Friends S03E01: The One With The Princess Leia Fantasy(Part One)</title>
@@ -1979,7 +1979,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode1_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>220</id>
         <date>December 17, 2020</date>
         <title>Friends S03E01: The One With The Princess Leia Fantasy(Part Two)</title>
@@ -1987,7 +1987,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode1_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>221</id>
         <date>January 4, 2021</date>
         <title>Friends S03E02: The One Where No-one's Ready(Part One)</title>
@@ -1995,7 +1995,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode2_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>222</id>
         <date>January 4, 2021</date>
         <title>Friends S03E02: The One Where No-one's Ready(Part Two)</title>
@@ -2003,7 +2003,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode2_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>223</id>
         <date>January 5, 2021</date>
         <title>Friends S03E03: The One With the Jam(Part One)</title>
@@ -2011,7 +2011,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode3_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>224</id>
         <date>January 5, 2021</date>
         <title>Friends S03E03: The One With the Jam(Part Two)</title>
@@ -2019,7 +2019,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode3_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>225</id>
         <date>January 8, 2021</date>
         <title>Friends S03E04: The One with the Metaphoric(Part One)</title>
@@ -2027,7 +2027,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode4_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>226</id>
         <date>January 8, 2021</date>
         <title>Friends S03E04: The One with the Metaphoric(Part Two)</title>
@@ -2035,7 +2035,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode4_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>227</id>
         <date>January 8, 2021</date>
         <title>Friends S03E05: The One With Frank Jr(Part One)</title>
@@ -2043,7 +2043,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode5_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>228</id>
         <date>January 8, 2021</date>
         <title>Friends S03E05: The One With Frank Jr(Part Two)</title>
@@ -2051,7 +2051,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode5_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>229</id>
         <date>January 11, 2021</date>
         <title>Friends S03E06: The One With The Flashback(Part One)</title>
@@ -2059,7 +2059,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode6_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>230</id>
         <date>January 11, 2021</date>
         <title>Friends S03E06: The One With The Flashback(Part Two)</title>
@@ -2067,7 +2067,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode6_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>231</id>
     <date>January 12, 2021</date>
         <title>Friends S03E07: The One With the Race Car Bed(Part One)</title>
@@ -2075,7 +2075,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode7_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>232</id>
     <date>January 12, 2021</date>
         <title>Friends S03E07: The One With the Race Car Bed(Part Two)</title>
@@ -2083,7 +2083,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode7_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>233</id>
         <date>January 14, 2021</date>
         <title>Friends S03E08: The One With The Giant Poking Device(Part One)</title>
@@ -2091,7 +2091,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode8_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>234</id>
     <date>January 14, 2021</date>
         <title>Friends S03E08: The One With The Giant Poking Device(Part Two)</title>
@@ -2099,7 +2099,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode8_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>235</id>
     <date>January 18, 2021</date>
         <title>Friends S03E09: The One With The Football(Part One)</title>
@@ -2107,7 +2107,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode9_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>236</id>
     <date>January 18, 2021</date>
         <title>Friends S03E09: The One With The Football(Part Two)</title>
@@ -2115,7 +2115,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode9_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>237</id>
     <date>January 19, 2021</date>
         <title>Friends S03E10: The One Where Rachel Quits(Part One)</title>
@@ -2123,7 +2123,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode10_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>238</id>
     <date>January 19, 2021</date>
         <title>Friends S03E010: The One Where Rachel Quits(Part Two)</title>
@@ -2131,7 +2131,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode10_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>239</id>
     <date>January 21, 2021</date>
         <title>Friends S03E11: The One Where Chandler Can Remember Which Sister(Part One)</title>
@@ -2139,7 +2139,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode11_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>240</id>
     <date>January 21, 2021</date>
         <title>Friends S03E11: The One Where Chandler Can Remember Which Sister(Part Two)</title>
@@ -2147,7 +2147,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode11_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>241</id>
     <date>January 22, 2021</date>
         <title>Friends S03E12: The One With All The Jealousy(Part One)</title>
@@ -2155,7 +2155,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode12_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>242</id>
     <date>January 22, 2021</date>
         <title>Friends S03E12: The One With All The Jealousy(Part Two)</title>
@@ -2163,7 +2163,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode12_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>243</id>
         <date>February 1, 2021</date>
         <title>Friends S03E13: The One Where Monica and Richard Are Friends(Part One)</title>
@@ -2171,7 +2171,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode13_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>244</id>
         <date>February 1, 2021</date>
         <title>Friends S03E13: The One Where Monica and Richard Are Friends(Part Two)</title>
@@ -2179,7 +2179,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode13_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>245</id>
         <date>February 2, 2021</date>
         <title>Friends S03E14: The One With Phoebe Ex-Partner(Part One)</title>
@@ -2187,7 +2187,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode14_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>246</id>
         <date>February 2, 2021</date>
         <title>Friends S03E14: The One With Phoebe Ex-Partner(Part Two)</title>
@@ -2195,7 +2195,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode14_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>247</id>
         <date>February 4, 2021</date>
         <title>Friends S03E15: The One Where Ross and Rachel Take A Break(Part One)</title>
@@ -2203,7 +2203,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode15_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>248</id>
         <date>February 4, 2021</date>
         <title>Friends S03E15: The One Where Ross and Rachel Take A Break(Part Two)</title>
@@ -2211,7 +2211,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode15_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>249</id>
         <date>February 5, 2021</date>
         <title>Friends S03E16: The One The Morning After(Part One)</title>
@@ -2219,7 +2219,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode16_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>250</id>
         <date>February 5, 2021</date>
         <title>Friends S03E16: The One The Morning After(Part Two)</title>
@@ -2227,7 +2227,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode16_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>251</id>
         <date>February 7, 2021</date>
         <title>Friends S03E17: The One Without The Ski Trip(Part One)</title>
@@ -2235,7 +2235,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode17_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>252</id>
         <date>February 7, 2021</date>
         <title>Friends S03E17: The One Without The Ski Trip(Part Two)</title>
@@ -2243,7 +2243,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode17_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>253</id>
         <date>February 8, 2021</date>
         <title>Friends S03E18: The One With The Hypnosis Tape(Part One)</title>
@@ -2251,7 +2251,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode18_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>254</id>
         <date>February 8, 2021</date>
         <title>Friends S03E18: The One With The Hypnosis Tape(Part Two)</title>
@@ -2259,7 +2259,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode18_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>255</id>
         <date>February 22, 2021</date>
         <title>Friends S03E19: The One With The Tiny T-shirt(Part One)</title>
@@ -2267,7 +2267,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode19_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>256</id>
         <date>February 22, 2021</date>
         <title>Friends S03E19: The One With The Tiny T-shirt(Part Two)</title>
@@ -2275,7 +2275,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode19_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>257</id>
         <date>February 23, 2021</date>
         <title>Friends S03E20: The One With The Dollhouse(Part One)</title>
@@ -2283,7 +2283,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode20_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>258</id>
         <date>February 23, 2021</date>
         <title>Friends S03E20: The One With The Dollhouse(Part Two)</title>
@@ -2291,7 +2291,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode20_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>259</id>
         <date>February 24, 2021</date>
         <title>Friends S03E21: The One With A Chick And A Duck(Part One)</title>
@@ -2299,7 +2299,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode21_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>260</id>
         <date>February 24, 2021</date>
         <title>Friends S03E21: The One With A Chick And A Duck(Part Two)</title>
@@ -2307,7 +2307,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode21_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>261</id>
         <date>February 25, 2021</date>
         <title>Friends S03E22: The One With The Screamer(Part One)</title>
@@ -2315,7 +2315,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode22_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>262</id>
         <date>February 25, 2021</date>
         <title>Friends S03E22: The One With The Screamer(Part Two)</title>
@@ -2323,7 +2323,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode22_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>263</id>
         <date>February 26, 2021</date>
         <title>Friends S03E23: The One With Ross's Thing(Part One)</title>
@@ -2331,7 +2331,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode23_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>264</id>
         <date>February 26, 2021</date>
         <title>Friends S03E23: The One With Ross's Thing(Part Two)</title>
@@ -2339,7 +2339,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode23_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>265</id>
         <date>March 1, 2021</date>
         <title>Friends S03E24: The One With The Ultimate Fighting Champion(Part One)</title>
@@ -2347,7 +2347,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode24_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>266</id>
         <date>March 1, 2021</date>
         <title>Friends S03E24: The One With The Ultimate Fighting Champion(Part Two)</title>
@@ -2355,7 +2355,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode24_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>267</id>
         <date>March 1, 2021</date>
         <title>Friends S03E25: The One At The Beach(Part One)</title>
@@ -2363,7 +2363,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode25_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>268</id>
         <date>March 1, 2021</date>
         <title>Friends S03E25: The One At The Beach(Part Two)</title>
@@ -2371,7 +2371,7 @@
         <cover>../image/english/friends/season3/friends_season3_cover.jpg</cover>
         <audio>../audio/english/friends/season3/friends_season3_episode25_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>269</id>
         <date>March 2, 2021</date>
         <title>Friends S04E01: The One With The Jellyfish(Part One)</title>
@@ -2379,7 +2379,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode1_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>270</id>
         <date>March 2, 2021</date>
         <title>Friends S04E01: The One With The Jellyfish(Part Two)</title>
@@ -2387,7 +2387,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode1_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>271</id>
         <date>March 4, 2021</date>
         <title>Friends S04E02: The One With The Cat(Part One)</title>
@@ -2395,7 +2395,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode2_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>272</id>
         <date>March 4, 2021</date>
         <title>Friends S04E02: The One With The Cat(Part Two)</title>
@@ -2403,7 +2403,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode2_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>273</id>
         <date>March 5, 2021</date>
         <title>Friends S04E03: The One With The Cuffs(Part One)</title>
@@ -2411,7 +2411,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode3_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>274</id>
         <date>March 5, 2021</date>
         <title>Friends S04E03: The One With The Cuffs(Part Two)</title>
@@ -2419,7 +2419,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode3_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>275</id>
         <date>March 9, 2021</date>
         <title>Friends S04E04: The One With The Ballroom Dancing(Part One)</title>
@@ -2427,7 +2427,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode4_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>276</id>
         <date>March 9, 2021</date>
         <title>Friends S04E04: The One With The Ballroom Dancing(Part Two)</title>
@@ -2435,7 +2435,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode4_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>277</id>
         <date>March 10, 2021</date>
         <title>Friends S04E05: The One With Joey's New Girlfriend(Part One)</title>
@@ -2443,7 +2443,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode5_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>278</id>
         <date>March 10, 2021</date>
         <title>Friends S04E05: The One With Joey's New Girlfriend(Part Two)</title>
@@ -2451,7 +2451,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode5_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>279</id>
         <date>March 11, 2021</date>
         <title>Friends S04E06: The One With The Dirty Girl(Part One)</title>
@@ -2459,7 +2459,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode6_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>280</id>
         <date>March 11, 2021</date>
         <title>Friends S04E06: The One With The Dirty Girl(Part Two)</title>
@@ -2467,7 +2467,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode6_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>281</id>
         <date>March 15, 2021</date>
         <title>Friends S04E07: The One Where Chandler Crosses the Line(Part One)</title>
@@ -2475,7 +2475,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode7_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>282</id>
         <date>March 15, 2021</date>
         <title>Friends S04E07: The One Where Chandler Crosses the Line(Part Two)</title>
@@ -2483,7 +2483,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode7_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>283</id>
         <date>March 16, 2021</date>
         <title>Friends S04E08: The One With Chandler in a Box(Part One)</title>
@@ -2491,7 +2491,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode8_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>284</id>
         <date>March 16, 2021</date>
         <title>Friends S04E08: The One With Chandler in a Box(Part Two)</title>
@@ -2499,7 +2499,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode8_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>285</id>
         <date>March 17, 2021</date>
         <title>Friends S04E09: The One Where They’re Gonna PARTY(Part One)</title>
@@ -2507,7 +2507,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode9_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>286</id>
         <date>March 17, 2021</date>
         <title>Friends S04E09: The One Where They’re Gonna PARTY(Part Two)</title>
@@ -2515,7 +2515,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode9_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>287</id>
         <date>March 18, 2021</date>
         <title>Friends S04E10: The One With The Girl From Poughkeepsie(Part One)</title>
@@ -2523,7 +2523,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode10_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>288</id>
         <date>March 18, 2021</date>
         <title>Friends S04E10: The One With The Girl From Poughkeepsie(Part Two)</title>
@@ -2531,7 +2531,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode10_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>289</id>
         <date>March 19, 2021</date>
         <title>Friends S04E11: The One With Phoebe's Uterus(Part One)</title>
@@ -2539,7 +2539,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode11_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>290</id>
         <date>March 19, 2021</date>
         <title>Friends S04E11: The One With Phoebe's Uterus(Part Two)</title>
@@ -2547,7 +2547,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode11_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>291</id>
         <date>March 22, 2021</date>
         <title>Friends S04E12: The One With The Embryos(Part One)</title>
@@ -2555,7 +2555,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode12_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>292</id>
         <date>March 22, 2021</date>
         <title>Friends S04E12: The One With The Embryos(Part Two)</title>
@@ -2563,7 +2563,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode12_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>293</id>
         <date>March 23, 2021</date>
         <title>Friends S04E13: The One With Rachel's Crush(Part One)</title>
@@ -2571,7 +2571,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode13_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>294</id>
         <date>March 23, 2021</date>
         <title>Friends S04E13: The One With Rachel's Crush(Part Two)</title>
@@ -2579,7 +2579,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode13_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>295</id>
         <date>March 24, 2021</date>
         <title>Friends S04E14: The One With Joey's Dirty Day(Part One)</title>
@@ -2587,7 +2587,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode14_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>296</id>
         <date>March 24, 2021</date>
         <title>Friends S04E14: The One With Joey's Dirty Day(Part Two)</title>
@@ -2595,7 +2595,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode14_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>297</id>
         <date>March 25, 2021</date>
         <title>Friends S04E15: The One With All The Rugby(Part One)</title>
@@ -2603,7 +2603,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode15_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>298</id>
         <date>March 25, 2021</date>
         <title>Friends S04E15: The One With All The Rugby(Part Two)</title>
@@ -2611,7 +2611,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode15_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>299</id>
         <date>March 26, 2021</date>
         <title>Friends S04E16: The One With The Fake Party(Part One)</title>
@@ -2619,7 +2619,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode16_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>300</id>
         <date>March 26, 2021</date>
         <title>Friends S04E16: The One With The Fake Party(Part Two)</title>
@@ -2627,7 +2627,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode16_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>301</id>
         <date>March 29, 2021</date>
         <title>Friends S04E17: The One With The Free Porn(Part One)</title>
@@ -2635,7 +2635,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode17_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>302</id>
         <date>March 29, 2021</date>
         <title>Friends S04E17: The One With The Free Porn(Part Two)</title>
@@ -2643,7 +2643,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode17_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>303</id>
         <date>April 1, 2021</date>
         <title>Friends S04E18: The One With Rachel's New Dress(Part One)</title>
@@ -2651,7 +2651,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode18_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>304</id>
         <date>April 1, 2021</date>
         <title>Friends S04E18: The One With Rachel's New Dress(Part Two)</title>
@@ -2659,7 +2659,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode18_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>305</id>
         <date>April 6, 2021</date>
         <title>Friends S04E19: The One With All The Haste(Part One)</title>
@@ -2667,7 +2667,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode19_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>306</id>
         <date>April 6, 2021</date>
         <title>Friends S04E19: The One With All The Haste(Part Two)</title>
@@ -2675,7 +2675,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode19_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>307</id>
         <date>April 7, 2021</date>
         <title>Friends S04E20: The One With All the Wedding Dresses(Part One)</title>
@@ -2683,7 +2683,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode20_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>308</id>
         <date>April 7, 2021</date>
         <title>Friends S04E20: The One With All the Wedding Dresses(Part Two)</title>
@@ -2691,7 +2691,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode20_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>309</id>
         <date>April 13, 2021</date>
         <title>Friends S04E21: The One With The Invitation(Part One)</title>
@@ -2699,7 +2699,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode21_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>310</id>
         <date>April 13, 2021</date>
         <title>Friends S04E21: The One With The Invitation(Part Two)</title>
@@ -2707,7 +2707,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode21_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>311</id>
         <date>April 14, 2021</date>
         <title>Friends S04E22: The One With The Worst Best Man Ever(Part One)</title>
@@ -2715,7 +2715,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode22_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>312</id>
         <date>April 14, 2021</date>
         <title>Friends S04E22: The One With The Worst Best Man Ever(Part Two)</title>
@@ -2723,7 +2723,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode22_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>313</id>
         <date>April 21, 2021</date>
         <title>Friends S04E23: The One With Ross's Wedding(Part One)</title>
@@ -2731,7 +2731,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode23_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>314</id>
         <date>April 21, 2021</date>
         <title>Friends S04E23: The One With Ross's Wedding(Part Two)</title>
@@ -2739,7 +2739,7 @@
         <cover>../image/english/friends/season4/friends_season4_cover.jpg</cover>
         <audio>../audio/english/friends/season4/friends_season4_episode23_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>315</id>
         <date>April 27, 2021</date>
         <title>Friends S05E01: The One After Ross Says Rachel(Part One)</title>
@@ -2747,7 +2747,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode1_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>316</id>
         <date>April 27, 2021</date>
         <title>Friends S05E01: The One After Ross Says Rachel(Part Two)</title>
@@ -2755,7 +2755,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode1_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>317</id>
         <date>April 28, 2021</date>
         <title>Friends S05E02: The One With All The Kissing(Part One)</title>
@@ -2763,7 +2763,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode2_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>318</id>
         <date>April 28, 2021</date>
         <title>Friends S05E02: The One With All The Kissing(Part Two)</title>
@@ -2771,7 +2771,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode2_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>319</id>
         <date>May 6, 2021</date>
         <title>Friends S05E03: The One Hundredth(Part One)</title>
@@ -2779,7 +2779,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode3_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>320</id>
         <date>May 6, 2021</date>
         <title>Friends S05E03: The One Hundredth(Part Two)</title>
@@ -2787,7 +2787,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode3_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>321</id>
         <date>May 7, 2021</date>
         <title>Friends S05E04: The One Where Phoebe Hates PBS(Part One)</title>
@@ -2795,7 +2795,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode4_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>322</id>
         <date>May 7, 2021</date>
         <title>Friends S05E04: The One Where Phoebe Hates PBS(Part Two)</title>
@@ -2803,7 +2803,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode4_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>323</id>
         <date>May 19, 2021</date>
         <title>Friends S05E05: The One With All the Kips(Part One)</title>
@@ -2811,7 +2811,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode5_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>324</id>
         <date>May 19, 2021</date>
         <title>Friends S05E05: The One With All the Kips(Part Two)</title>
@@ -2819,7 +2819,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode5_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>325</id>
         <date>May 27, 2021</date>
         <title>Friends S05E06: The One With The Yeti(Part One)</title>
@@ -2827,7 +2827,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode6_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>326</id>
         <date>May 27, 2021</date>
         <title>Friends S05E06: The One With The Yeti(Part Two)</title>
@@ -2835,7 +2835,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode6_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>327</id>
         <date>June 3, 2021</date>
         <title>Friends S05E07: The One Where Ross Moves In(Part One)</title>
@@ -2843,7 +2843,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode7_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>328</id>
         <date>June 3, 2021</date>
         <title>Friends S05E07: The One Where Ross Moves In(Part Two)</title>
@@ -2851,7 +2851,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode7_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>329</id>
         <date>June 4, 2021</date>
         <title>Friends S05E08: The One With The Thanksgiving Flashbacks(Part One)</title>
@@ -2859,7 +2859,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode8_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>330</id>
         <date>June 4, 2021</date>
         <title>Friends S05E08: The One With The Thanksgiving Flashbacks(Part Two)</title>
@@ -2867,7 +2867,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode8_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>331</id>
         <date>June 10, 2021</date>
         <title>Friends S05E09: The One With Ross's Sandwich(Part One)</title>
@@ -2875,7 +2875,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode9_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>332</id>
         <date>June 10, 2021</date>
         <title>Friends S05E09: The One With Ross's Sandwich(Part Two)</title>
@@ -2883,7 +2883,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode9_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>333</id>
         <date>June 11, 2021</date>
         <title>Friends S05E10: The One With The Inappropriate Sister(Part One)</title>
@@ -2891,7 +2891,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode10_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>334</id>
         <date>June 11, 2021</date>
         <title>Friends S05E10: The One With The Inappropriate Sister(Part Two)</title>
@@ -2899,7 +2899,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode10_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>335</id>
         <date>June 18, 2021</date>
         <title>Friends S05E11: The One With All The Resolutions(Part One)</title>
@@ -2907,7 +2907,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode11_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>336</id>
         <date>June 18, 2021</date>
         <title>Friends S05E11: The One With All The Resolutions(Part Two)</title>
@@ -2915,7 +2915,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode11_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>337</id>
         <date>June 23, 2021</date>
         <title>Friends S05E12: The One With Chandler's Work Laugh(Part One)</title>
@@ -2923,7 +2923,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode12_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>338</id>
         <date>June 23, 2021</date>
         <title>Friends S05E12: The One With Chandler's Work Laugh(Part Two)</title>
@@ -2931,7 +2931,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode12_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>339</id>
         <date>June 24, 2021</date>
         <title>Friends S05E13: The One With Joey's Bag(Part One)</title>
@@ -2939,7 +2939,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode13_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>340</id>
         <date>June 24, 2021</date>
         <title>Friends S05E13: The One With Joey's Bag(Part Two)</title>
@@ -2947,7 +2947,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode13_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>341</id>
         <date>July 1, 2021</date>
         <title>Friends S05E14: The One Where Everyone Finds Out(Part One)</title>
@@ -2955,7 +2955,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode14_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>342</id>
         <date>July 1, 2021</date>
         <title>Friends S05E14: The One Where Everyone Finds Out(Part Two)</title>
@@ -2963,7 +2963,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode14_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>343</id>
         <date>July 8, 2021</date>
         <title>Friends S05E15: The One With The Girl Who Hits Joey(Part One)</title>
@@ -2971,7 +2971,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode15_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>344</id>
         <date>July 8, 2021</date>
         <title>Friends S05E15: The One With The Girl Who Hits Joey(Part Two)</title>
@@ -2979,7 +2979,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode15_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>345</id>
         <date>July 21, 2021</date>
         <title>Friends S05E16: The One With A Cop(Part One)</title>
@@ -2987,7 +2987,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode16_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>346</id>
         <date>July 21, 2021</date>
         <title>Friends S05E16: The One With A Cop(Part Two)</title>
@@ -2995,7 +2995,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode16_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>347</id>
         <date>September 6, 2021</date>
         <title>Friends S05E17: The One With Rachel's Inadvertant Kiss(Part One)</title>
@@ -3003,7 +3003,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode17_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>348</id>
         <date>September 6, 2021</date>
         <title>Friends S05E17: The One With Rachel's Inadvertant Kiss(Part Two)</title>
@@ -3011,7 +3011,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode17_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>349</id>
         <date>September 8, 2021</date>
         <title>Friends S05E18: The One Where Rachel Smokes(Part One)</title>
@@ -3019,7 +3019,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode18_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>350</id>
         <date>September 8, 2021</date>
         <title>Friends S05E18: The One Where Rachel Smokes(Part Two)</title>
@@ -3027,7 +3027,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode18_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>351</id>
         <date>October 15, 2021</date>
         <title>Friends S05E19: The One Where Ross Can't Flirt(Part One)</title>
@@ -3035,7 +3035,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode19_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>352</id>
         <date>October 15, 2021</date>
         <title>Friends S05E19: The One Where Ross Can't Flirt(Part Two)</title>
@@ -3043,7 +3043,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode19_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>353</id>
         <date>October 19, 2021</date>
         <title>Friends S05E20: The One With The Ride(Part One)</title>
@@ -3051,7 +3051,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode20_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>354</id>
         <date>October 19, 2021</date>
         <title>Friends S05E20: The One With The Ride(Part Two)</title>
@@ -3059,7 +3059,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode20_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>355</id>
         <date>October 29, 2021</date>
         <title>Friends S05E21: The One With The Ball(Part One)</title>
@@ -3067,7 +3067,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode21_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>356</id>
         <date>October 29, 2021</date>
         <title>Friends S05E21: The One With The Ball(Part Two)</title>
@@ -3075,7 +3075,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode21_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>357</id>
         <date>October 29, 2021</date>
         <title>Friends S05E22: The One With Joey's Big Break(Part One)</title>
@@ -3083,7 +3083,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode22_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>358</id>
         <date>October 29, 2021</date>
         <title>Friends S05E22: The One With Joey's Big Break(Part Two)</title>
@@ -3091,7 +3091,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode22_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>359</id>
         <date>October 29, 2021</date>
         <title>Friends S05E23: The One In Vegas(Part One)</title>
@@ -3099,7 +3099,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode23_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>360</id>
         <date>October 29, 2021</date>
         <title>Friends S05E23: The One In Vegas(Part Two)</title>
@@ -3107,7 +3107,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode23_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>361</id>
         <date>October 29, 2021</date>
         <title>Friends S05E24: The One In Vegas(Part Three)</title>
@@ -3115,7 +3115,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode24_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>362</id>
         <date>October 29, 2021</date>
         <title>Friends S05E24: The One In Vegas(Part Four)</title>
@@ -3123,7 +3123,7 @@
         <cover>../image/english/friends/season5/friends_season5_cover.jpg</cover>
         <audio>../audio/english/friends/season5/friends_season5_episode24_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>363</id>
         <date>November 1, 2021</date>
         <title>Friends S06E01: The One After Vegas(Part One)</title>
@@ -3131,7 +3131,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode1_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>364</id>
         <date>November 1, 2021</date>
         <title>Friends S06E01: The One After Vegas(Part Two)</title>
@@ -3139,7 +3139,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode1_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>365</id>
         <date>November 2, 2021</date>
         <title>Friends S06E02: The One Where Ross Hugs Rachel(Part One)</title>
@@ -3147,7 +3147,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode2_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>366</id>
         <date>November 2, 2021</date>
         <title>Friends S06E02: The One Where Ross Hugs Rachel(Part Two)</title>
@@ -3155,7 +3155,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode2_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>367</id>
         <date>November 3, 2021</date>
         <title>Friends S06E03: The One With Ross’s Denial(Part One)</title>
@@ -3163,7 +3163,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode3_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>368</id>
         <date>November 3, 2021</date>
         <title>Friends S06E03: The One With Ross’s Denial(Part Two)</title>
@@ -3171,7 +3171,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode3_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>369</id>
         <date>November 4, 2021</date>
         <title>Friends S06E04: The One Where Joey Loses His Insur(Part One)</title>
@@ -3179,7 +3179,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode4_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>370</id>
         <date>November 4, 2021</date>
         <title>Friends S06E04: The One Where Joey Loses His Insur(Part Two)</title>
@@ -3187,7 +3187,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode4_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>371</id>
         <date>November 5, 2021</date>
         <title>Friends S06E05: The One With Joey's Porsche(Part One)</title>
@@ -3195,7 +3195,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode5_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>372</id>
         <date>November 5, 2021</date>
         <title>Friends S06E05: The One With Joey's Porsche(Part Two)</title>
@@ -3203,7 +3203,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode5_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>373</id>
         <date>November 6, 2021</date>
         <title>Friends S06E06: The One The Last Night(Part One)</title>
@@ -3211,7 +3211,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode6_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>374</id>
         <date>November 6, 2021</date>
         <title>Friends S06E06: The One The Last Night(Part Two)</title>
@@ -3219,7 +3219,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode6_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>375</id>
         <date>November 7, 2021</date>
         <title>Friends S06E07: The One Where Phoebe Runs(Part One)</title>
@@ -3227,7 +3227,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode7_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>376</id>
         <date>November 7, 2021</date>
         <title>Friends S06E07: The One Where Phoebe Runs(Part Two)</title>
@@ -3235,7 +3235,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode7_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>377</id>
         <date>November 8, 2021</date>
         <title>Friends S06E08: The One With Ross's Teeth(Part One)</title>
@@ -3243,7 +3243,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode8_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>378</id>
         <date>November 8, 2021</date>
         <title>Friends S06E08: The One With Ross's Teeth(Part Two)</title>
@@ -3251,7 +3251,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode8_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>379</id>
         <date>November 9, 2021</date>
         <title>Friends S06E09: The One Where Ross Got High(Part One)</title>
@@ -3259,7 +3259,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode9_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>380</id>
         <date>November 9, 2021</date>
         <title>Friends S06E09: The One Where Ross Got High(Part Two)</title>
@@ -3267,7 +3267,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode9_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>381</id>
         <date>November 10, 2021</date>
         <title>Friends S06E010: The One With The Routinue(Part One)</title>
@@ -3275,7 +3275,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode10_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>382</id>
         <date>November 10, 2021</date>
         <title>Friends S06E010: The One With The Routinue(Part Two)</title>
@@ -3283,7 +3283,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode10_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>383</id>
         <date>November 11, 2021</date>
         <title>Friends S06E011: The One With The Apothecary Table(Part One)</title>
@@ -3291,7 +3291,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode11_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>384</id>
         <date>November 11, 2021</date>
         <title>Friends S06E011: The One With The Apothecary Table(Part Two)</title>
@@ -3299,7 +3299,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode11_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>385</id>
         <date>November 12, 2021</date>
         <title>Friends S06E012: The One With The Apothecary Table(Part Three)</title>
@@ -3307,7 +3307,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode12_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>386</id>
         <date>November 12, 2021</date>
         <title>Friends S06E012: The One With The Apothecary Table(Part Four)</title>
@@ -3315,7 +3315,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode12_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>387</id>
         <date>November 13, 2021</date>
         <title>Friends S06E013: The One With Rachel's Sister(Part One)</title>
@@ -3323,7 +3323,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode13_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>388</id>
         <date>November 13, 2021</date>
         <title>Friends S06E013: The One With Rachel's Sister(Part Two)</title>
@@ -3331,7 +3331,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode13_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>389</id>
         <date>November 14, 2021</date>
         <title>Friends S06E014: The One Where Chandler Can't Cry(Part One)</title>
@@ -3339,7 +3339,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode14_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>390</id>
         <date>November 14, 2021</date>
         <title>Friends S06E014: The One Where Chandler Can't Cry(Part Two)</title>
@@ -3347,7 +3347,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode14_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>391</id>
         <date>November 15, 2021</date>
         <title>Friends S06E015: The One That Could Have Been(Part One)</title>
@@ -3355,7 +3355,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode15_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>392</id>
         <date>November 15, 2021</date>
         <title>Friends S06E015: The One That Could Have Been(Part Two)</title>
@@ -3363,7 +3363,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode15_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>393</id>
         <date>November 16, 2021</date>
         <title>Friends S06E016: The One With The Unagi(Part One)</title>
@@ -3371,7 +3371,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode16_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>394</id>
         <date>November 16, 2021</date>
         <title>Friends S06E016: The One With The Unagi(Part Two)</title>
@@ -3379,7 +3379,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode16_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>395</id>
         <date>December 9, 2021</date>
         <title>Friends S06E017: The One Where Ross Dates A Student(Part One)</title>
@@ -3387,7 +3387,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode17_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>396</id>
         <date>December 9, 2021</date>
         <title>Friends S06E017: The One Where Ross Dates A Student(Part Two)</title>
@@ -3395,7 +3395,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode17_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>397</id>
         <date>December 10, 2021</date>
         <title>Friends S06E018: The One With Joey's Fridge(Part One)</title>
@@ -3403,7 +3403,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode18_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>398</id>
         <date>December 10, 2021</date>
         <title>Friends S06E018: The One With Joey's Fridge(Part Two)</title>
@@ -3411,7 +3411,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode18_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>399</id>
         <date>December 13, 2021</date>
         <title>Friends S06E019: The One With Mac and C.H.E.E.S.E(Part One)</title>
@@ -3419,7 +3419,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode19_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>400</id>
         <date>December 13, 2021</date>
         <title>Friends S06E019: The One With Mac and C.H.E.E.S.E(Part Two)</title>
@@ -3427,7 +3427,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode19_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>401</id>
         <date>December 14, 2021</date>
         <title>Friends S06E020: The One Where Ross Meets Elizabeth's Dad(Part One)</title>
@@ -3435,7 +3435,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode20_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>402</id>
         <date>December 14, 2021</date>
         <title>Friends S06E020: The One Where Ross Meets Elizabeth's Dad(Part Two)</title>
@@ -3443,7 +3443,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode20_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>403</id>
         <date>January 13, 2022</date>
         <title>Friends S06E021: The One Where Paul's The Man(Part One)</title>
@@ -3451,7 +3451,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode21_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>404</id>
         <date>January 13, 2022</date>
         <title>Friends S06E021: The One Where Paul's The Man(Part Two)</title>
@@ -3459,7 +3459,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode21_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>405</id>
         <date>January 13, 2022</date>
         <title>Friends S06E022: The One With The Ring(Part One)</title>
@@ -3467,7 +3467,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode22_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>406</id>
         <date>January 13, 2022</date>
         <title>Friends S06E022: The One With The Ring(Part Two)</title>
@@ -3475,7 +3475,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode22_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>407</id>
         <date>January 13, 2022</date>
         <title>Friends S06E023: The One With The Proposal(Part One)</title>
@@ -3483,7 +3483,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode23_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>408</id>
         <date>January 13, 2022</date>
         <title>Friends S06E023: The One With The Proposal(Part Two)</title>
@@ -3491,7 +3491,7 @@
         <cover>../image/english/friends/season6/friends_season6_cover.jpg</cover>
         <audio>../audio/english/friends/season6/friends_season6_episode23_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>409</id>
         <date>January 14, 2022</date>
         <title>Friends S07E01: The One With Monica's Thunder(Part One)</title>
@@ -3499,7 +3499,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode1_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>410</id>
         <date>January 14, 2022</date>
         <title>Friends S07E01: The One With Monica's Thunder(Part Two)</title>
@@ -3507,7 +3507,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode1_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>411</id>
         <date>January 17, 2022</date>
         <title>Friends S07E02: The One With Rachel's Book(Part One)</title>
@@ -3515,7 +3515,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode2_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>412</id>
         <date>January 17, 2022</date>
         <title>Friends S07E02: The One With Rachel's Book(Part Two)</title>
@@ -3523,7 +3523,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode2_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>413</id>
         <date>January 24, 2022</date>
         <title>Friends S07E03: The One With Phoebe's Cookies(Part One)</title>
@@ -3531,7 +3531,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode3_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>414</id>
         <date>January 24, 2022</date>
         <title>Friends S07E03: The One With Phoebe's Cookies(Part Two)</title>
@@ -3539,7 +3539,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode3_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>415</id>
         <date>January 27, 2022</date>
         <title>Friends S07E04: The One With Rachel's Assistant(Part One)</title>
@@ -3547,7 +3547,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode4_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>416</id>
         <date>January 27, 2022</date>
         <title>Friends S07E04: The One With Rachel's Assistant(Part Two)</title>
@@ -3555,7 +3555,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode4_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>417</id>
         <date>January 29, 2022</date>
         <title>Friends S07E05: The One With The Engagement(Part One)</title>
@@ -3563,7 +3563,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode5_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>418</id>
         <date>January 29, 2022</date>
         <title>Friends S07E05: The One With The Engagement(Part Two)</title>
@@ -3571,7 +3571,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode5_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>419</id>
         <date>February 25, 2022</date>
         <title>Friends S07E06: The One With The Nap Partners(Part One)</title>
@@ -3579,7 +3579,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode6_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>420</id>
         <date>February 25, 2022</date>
         <title>Friends S07E06: The One With The Nap Partners(Part Two)</title>
@@ -3587,7 +3587,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode6_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>421</id>
         <date>February 28, 2022</date>
         <title>Friends S07E07: The One With Ross's Book(Part One)</title>
@@ -3595,7 +3595,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode7_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>422</id>
         <date>February 28, 2022</date>
         <title>Friends S07E07: The One With Ross's Book(Part Two)</title>
@@ -3603,7 +3603,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode7_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>423</id>
         <date>August 4, 2022</date>
         <title>Friends S07E08: The One Where Chandler Doesn't(Part One)</title>
@@ -3611,7 +3611,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode8_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>424</id>
         <date>August 4, 2022</date>
         <title>Friends S07E08: The One Where Chandler Doesn't(Part Two)</title>
@@ -3619,7 +3619,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode8_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>425</id>
         <date>August 16, 2022</date>
         <title>Friends S07E09: The One With All The Candy(Part One)</title>
@@ -3627,7 +3627,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode9_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>426</id>
         <date>August 16, 2022</date>
         <title>Friends S07E09: The One With All The Candy(Part Two)</title>
@@ -3635,7 +3635,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode9_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>427</id>
         <date>August 17, 2022</date>
         <title>Friends S07E10: The One With the Holiday Armadillo(Part One)</title>
@@ -3643,7 +3643,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode10_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>428</id>
         <date>August 17, 2022</date>
         <title>Friends S07E10: The One With the Holiday Armadillo(Part Two)</title>
@@ -3651,7 +3651,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode10_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>429</id>
         <date>August 18, 2022</date>
         <title>Friends S07E11: The One With All The Cheesecakes(Part One)</title>
@@ -3659,7 +3659,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode11_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>430</id>
         <date>August 18, 2022</date>
         <title>Friends S07E11: The One With All The Cheesecakes(Part Two)</title>
@@ -3667,7 +3667,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode11_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>431</id>
         <date>September 1, 2022</date>
         <title>Friends S07E12: The One Where They're Up All Night(Part One)</title>
@@ -3675,7 +3675,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode12_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>432</id>
         <date>September 1, 2022</date>
         <title>Friends S07E12: The One Where They're Up All Night(Part Two)</title>
@@ -3683,7 +3683,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode12_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>433</id>
         <date>September 8, 2022</date>
         <title>Friends S07E13: The One Where Rosita Dies(Part One)</title>
@@ -3691,7 +3691,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode13_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>434</id>
         <date>September 8, 2022</date>
         <title>Friends S07E13: The One Where Rosita Dies(Part Two)</title>
@@ -3699,7 +3699,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode13_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>435</id>
         <date>November 21, 2022</date>
         <title>Friends S07E14: The One Where They All Turn Thirty(Part One)</title>
@@ -3707,7 +3707,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode14_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>436</id>
         <date>September 21, 2022</date>
         <title>Friends S07E14: The One Where They All Turn Thirty(Part Two)</title>
@@ -3715,7 +3715,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode14_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>437</id>
         <date>November 28, 2022</date>
         <title>Friends S07E15: The One With Joey's New Brain(Part One)</title>
@@ -3723,7 +3723,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode15_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>438</id>
         <date>September 28, 2022</date>
         <title>Friends S07E15: The One With Joey's New Brain(Part Two)</title>
@@ -3731,7 +3731,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode15_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>439</id>
         <date>December 5, 2022</date>
         <title>Friends S07E16: The One With The Truth About London(Part One)</title>
@@ -3739,7 +3739,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode16_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>440</id>
         <date>December 5, 2022</date>
         <title>Friends S07E16: The One With The Truth About London(Part Two)</title>
@@ -3747,7 +3747,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode16_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>441</id>
         <date>December 6, 2022</date>
         <title>Friends S07E17: The One With The Cheap Wedding Dress(Part One)</title>
@@ -3755,7 +3755,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode17_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>442</id>
         <date>December 6, 2022</date>
         <title>Friends S07E17: The One With The Cheap Wedding Dress(Part Two)</title>
@@ -3763,7 +3763,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode17_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>443</id>
         <date>December 13, 2022</date>
         <title>Friends S07E18: he One With Joey's Award(Part One)</title>
@@ -3771,7 +3771,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode18_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>444</id>
         <date>December 13, 2022</date>
         <title>Friends S07E18: he One With Joey's Award(Part Two)</title>
@@ -3779,7 +3779,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode18_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>445</id>
         <date>December 13, 2022</date>
         <title>Friends S07E19: The One With Ross and Monica's Cousin(Part One)</title>
@@ -3787,7 +3787,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode19_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>446</id>
         <date>December 13, 2022</date>
         <title>Friends S07E19: The One With Ross and Monica's Cousin(Part Two)</title>
@@ -3795,7 +3795,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode19_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>447</id>
         <date>December 21, 2022</date>
         <title>Friends S07E20: The One With Rachel's Big Kiss(Part One)</title>
@@ -3803,7 +3803,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode20_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>448</id>
         <date>December 21, 2022</date>
         <title>Friends S07E20: The One With Rachel's Big Kiss(Part Two)</title>
@@ -3811,7 +3811,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode20_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>449</id>
         <date>February 2, 2023</date>
         <title>Friends S07E21: The One With The Vows(Part One)</title>
@@ -3819,7 +3819,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode21_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>450</id>
         <date>February 2, 2023</date>
         <title>Friends S07E21: The One With The Vows(Part Two)</title>
@@ -3827,7 +3827,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode21_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>451</id>
         <date>February 7, 2023</date>
         <title>Friends S07E22: The One With Chandler's Dad(Part One)</title>
@@ -3835,7 +3835,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode22_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>452</id>
         <date>February 7, 2023</date>
         <title>Friends S07E22: The One With Chandler's Dad(Part Two)</title>
@@ -3843,7 +3843,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode22_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>453</id>
         <date>February 27, 2023</date>
         <title>Friends S07E23: The One With Chandler and Monica's Wedding(Part One)</title>
@@ -3851,7 +3851,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode23_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>454</id>
         <date>February 27, 2023</date>
         <title>Friends S07E23: The One With Chandler and Monica's Wedding(Part Two)</title>
@@ -3859,7 +3859,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode23_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>455</id>
         <date>February 27, 2023</date>
         <title>Friends S07E24: The One With Monica and Chandler's Wedding(Part Three)</title>
@@ -3867,7 +3867,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode24_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>456</id>
         <date>February 27, 2023</date>
         <title>Friends S07E24: The One With Monica and Chandler's Wedding(Part Four)</title>
@@ -3875,7 +3875,7 @@
         <cover>../image/english/friends/season7/friends_season7_cover.jpg</cover>
         <audio>../audio/english/friends/season7/friends_season7_episode24_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>457</id>
         <date>February 28, 2023</date>
         <title>Friends S08E01: The One After I Do(Part One)</title>
@@ -3883,7 +3883,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode1_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>458</id>
         <date>February 28, 2023</date>
         <title>Friends S08E01: The One After I Do(Part Two)</title>
@@ -3891,7 +3891,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode1_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>459</id>
         <date>March 1, 2023</date>
         <title>Friends S08E02: The One With The Red Sweater(Part One)</title>
@@ -3899,7 +3899,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode2_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>460</id>
         <date>March 1, 2023</date>
         <title>Friends S08E02: The One With The Red Sweater(Part Two)</title>
@@ -3907,7 +3907,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode2_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>461</id>
         <date>March 6, 2023</date>
         <title>Friends S08E03: The One Where Rachel Tells(Part One)</title>
@@ -3915,7 +3915,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode3_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>462</id>
         <date>March 6, 2023</date>
         <title>Friends S08E03: The One Where Rachel Tells(Part Two)</title>
@@ -3923,7 +3923,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode3_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>463</id>
         <date>March 13, 2023</date>
         <title>Friends S08E04: The One With The Videotape(Part One)</title>
@@ -3931,7 +3931,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode4_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>464</id>
         <date>March 13, 2023</date>
         <title>Friends S08E04: The One With The Videotape(Part Two)</title>
@@ -3939,7 +3939,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode4_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>465</id>
         <date>March 14, 2023</date>
         <title>Friends S08E05: The One With Rachel's Date(Part One)</title>
@@ -3947,7 +3947,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode5_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>466</id>
         <date>March 14, 2023</date>
         <title>Friends S08E05: The One With Rachel's Date(Part Two)</title>
@@ -3955,7 +3955,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode5_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>467</id>
         <date>March 30, 2023</date>
         <title>Friends S08E06: The One With The Halloween Party(Part One)</title>
@@ -3963,7 +3963,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode6_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>468</id>
         <date>March 30, 2023</date>
         <title>Friends S08E06: The One With The Halloween Party(Part Two)</title>
@@ -3971,7 +3971,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode6_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>469</id>
         <date>April 12, 2023</date>
         <title>Friends S08E07: The One With The Stain(Part One)</title>
@@ -3979,7 +3979,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode7_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>470</id>
         <date>April 12, 2023</date>
         <title>Friends S08E07: The One With The Stain(Part Two)</title>
@@ -3987,7 +3987,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode7_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>471</id>
         <date>April 13, 2023</date>
         <title>Friends S08E08: The One With The Stripper(Part One)</title>
@@ -3995,7 +3995,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode8_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>472</id>
         <date>April 13, 2023</date>
         <title>Friends S08E08: The One With The Stripper(Part Two)</title>
@@ -4003,7 +4003,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode8_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>473</id>
         <date>April 24, 2023</date>
         <title>Friends S08E09: The One With The Rumor(Part One)</title>
@@ -4011,7 +4011,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode9_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>474</id>
         <date>April 24, 2023</date>
         <title>Friends S08E09: The One With The Rumor(Part Two)</title>
@@ -4019,7 +4019,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode9_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>475</id>
         <date>May 5, 2023</date>
         <title>Friends S08E10: The One With Monica's Boots(Part One)</title>
@@ -4027,7 +4027,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode10_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>476</id>
         <date>May 5, 2023</date>
         <title>Friends S08E10: The One With Monica's Boots(Part Two)</title>
@@ -4035,7 +4035,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode10_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>477</id>
         <date>May 10, 2023</date>
         <title>Friends S08E11: The One With Ross'Big Step Forward(Part One)</title>
@@ -4043,7 +4043,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode11_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>478</id>
         <date>May 10, 2023</date>
         <title>Friends S08E11: The One With Ross'Big Step Forward(Part Two)</title>
@@ -4051,7 +4051,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode11_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>479</id>
         <date>May 18, 2023</date>
         <title>Friends S08E12: The One Where Joey Dates Rachel(Part One)</title>
@@ -4059,7 +4059,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode12_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>480</id>
         <date>May 18, 2023</date>
         <title>Friends S08E12: The One Where Joey Dates Rachel(Part Two)</title>
@@ -4067,7 +4067,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode12_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>481</id>
         <date>June 1, 2023</date>
         <title>Friends S08E13: The One Where Chandler Takes a Bath(Part One)</title>
@@ -4075,7 +4075,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode13_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>482</id>
         <date>June 1, 2023</date>
         <title>Friends S08E13: The One Where Chandler Takes a Bath(Part Two)</title>
@@ -4083,7 +4083,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode13_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>483</id>
         <date>September 20, 2023</date>
         <title>Friends S08E14: The One With The Secret Closet(Part One)</title>
@@ -4091,7 +4091,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode14_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>484</id>
         <date>September 20, 2023</date>
         <title>Friends S08E14: The One With The Secret Closet(Part Two)</title>
@@ -4099,7 +4099,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode14_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>485</id>
         <date>October 12, 2023</date>
         <title>Friends S08E15: The One With The Birthing Video(Part One)</title>
@@ -4107,7 +4107,7 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode15_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>486</id>
         <date>October 12, 2023</date>
         <title>Friends S08E15: The One With The Birthing Video(Part Two)</title>
@@ -4115,76 +4115,90 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode15_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>487</id>
         <date>October 16, 2023</date>
         <title>Friends S08E16: The One Where Joey Tells Rachel(Part One)</title>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode16_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>488</id>
         <date>October 16, 2023</date>
         <title>Friends S08E16: The One Where Joey Tells Rachel(Part Two)</title>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode16_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>489</id>
         <date>October 24, 2023</date>
         <title>Friends S08E17: The One With The Tea Leaves(Part One)</title>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode17_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>490</id>
         <date>October 24, 2023</date>
         <title>Friends S08E17: The One With The Tea Leaves(Part Two)</title>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode17_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>491</id>
         <date>October 26, 2023</date>
         <title>Friends S08E18: The One In Massapequa(Part One)</title>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode18_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>492</id>
         <date>October 26, 2023</date>
         <title>Friends S08E18: The One In Massapequa(Part Two)</title>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode18_part_two.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>493</id>
         <date>October 30, 2023</date>
         <title>Friends S08E19: The One With Joey’s Interview(Part One)</title>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode19_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
+    <blog>
         <id>494</id>
         <date>October 30, 2023</date>
         <title>Friends S08E19: The One With Joey’s Interview(Part Two)</title>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode19_part_two.mp3</audio>
     </blog>
-    <!--
-    <blog location="english.html">
-        <id>493</id>
-        <date>October 30, 2023</date>
-        <title>Friends S08E19: (Part One)</title>
+    <blog>
+        <id>495</id>
+        <date>October 31, 2023</date>
+        <title>Friends S08E20: The One With The Baby Shower(Part One)</title>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
-        <audio>../audio/english/friends/season8/friends_season8_episode19_part_one.mp3</audio>
+        <audio>../audio/english/friends/season8/friends_season8_episode20_part_one.mp3</audio>
     </blog>
-    <blog location="english.html">
-        <id>494</id>
-        <date>October 30, 2023</date>
-        <title>Friends S08E19: (Part Two)</title>
+    <blog>
+        <id>496</id>
+        <date>October 31, 2023</date>
+        <title>Friends S08E20: The One With The Baby Shower(Part Two)</title>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
-        <audio>../audio/english/friends/season8/friends_season8_episode19_part_two.mp3</audio>
+        <audio>../audio/english/friends/season8/friends_season8_episode20_part_two.mp3</audio>
+    </blog>
+    <!--
+    <blog>
+        <id>495</id>
+        <date>October 31, 2023</date>
+        <title>Friends S08E20: (Part One)</title>
+        <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
+        <audio>../audio/english/friends/season8/friends_season8_episode20_part_one.mp3</audio>
+    </blog>
+    <blog>
+        <id>496</id>
+        <date>October 31, 2023</date>
+        <title>Friends S08E20: (Part Two)</title>
+        <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
+        <audio>../audio/english/friends/season8/friends_season8_episode20_part_two.mp3</audio>
     </blog>
     -->
 </blogs>
