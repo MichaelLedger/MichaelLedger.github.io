@@ -4199,20 +4199,34 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode21_part_two.mp3</audio>
     </blog>
-    <!--
     <blog>
-        <id>497</id>
-        <date>November 6, 2023</date>
-        <title>Friends S08E21: (Part One)</title>
+        <id>499</id>
+        <date>November 7, 2023</date>
+        <title>Friends S08E22: The One Where Rachel Is Late(Part One)</title>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
-        <audio>../audio/english/friends/season8/friends_season8_episode21_part_one.mp3</audio>
+        <audio>../audio/english/friends/season8/friends_season8_episode22_part_one.mp3</audio>
     </blog>
     <blog>
-        <id>498</id>
-        <date>November 6, 2023</date>
-        <title>Friends S08E21: (Part Two)</title>
+        <id>500</id>
+        <date>November 7, 2023</date>
+        <title>Friends S08E22: The One Where Rachel Is Late(Part Two)</title>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
-        <audio>../audio/english/friends/season8/friends_season8_episode21_part_two.mp3</audio>
+        <audio>../audio/english/friends/season8/friends_season8_episode22_part_two.mp3</audio>
+    </blog>
+    <!--
+    <blog>
+        <id>499</id>
+        <date>November 7, 2023</date>
+        <title>Friends S08E22: (Part One)</title>
+        <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
+        <audio>../audio/english/friends/season8/friends_season8_episode22_part_one.mp3</audio>
+    </blog>
+    <blog>
+        <id>500</id>
+        <date>November 7, 2023</date>
+        <title>Friends S08E22: (Part Two)</title>
+        <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
+        <audio>../audio/english/friends/season8/friends_season8_episode22_part_two.mp3</audio>
     </blog>
     -->
 </blogs>
