@@ -4213,20 +4213,62 @@
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
         <audio>../audio/english/friends/season8/friends_season8_episode22_part_two.mp3</audio>
     </blog>
-    <!--
     <blog>
-        <id>499</id>
-        <date>November 7, 2023</date>
-        <title>Friends S08E22: (Part One)</title>
+        <id>501</id>
+        <date>November 8, 2023</date>
+        <title>Friends S08E23: The One Where Rachel Has A Baby(Part One)</title>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
-        <audio>../audio/english/friends/season8/friends_season8_episode22_part_one.mp3</audio>
+        <audio>../audio/english/friends/season8/friends_season8_episode23_part_one.mp3</audio>
     </blog>
     <blog>
-        <id>500</id>
-        <date>November 7, 2023</date>
-        <title>Friends S08E22: (Part Two)</title>
+        <id>502</id>
+        <date>November 8, 2023</date>
+        <title>Friends S08E23: The One Where Rachel Has A Baby(Part Two)</title>
         <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
-        <audio>../audio/english/friends/season8/friends_season8_episode22_part_two.mp3</audio>
+        <audio>../audio/english/friends/season8/friends_season8_episode23_part_two.mp3</audio>
+    </blog>
+    <blog>
+        <id>503</id>
+        <date>November 8, 2023</date>
+        <title>Friends S08E24: The One Where Rachel Has A Baby(Part Three)</title>
+        <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
+        <audio>../audio/english/friends/season8/friends_season8_episode24_part_one.mp3</audio>
+    </blog>
+    <blog>
+        <id>504</id>
+        <date>November 8, 2023</date>
+        <title>Friends S08E24: The One Where Rachel Has A Baby(Part Four)</title>
+        <cover>../image/english/friends/season8/friends_season8_cover.jpg</cover>
+        <audio>../audio/english/friends/season8/friends_season8_episode24_part_two.mp3</audio>
+    </blog>
+    <blog>
+        <id>505</id>
+        <date>November 8, 2023</date>
+        <title>Friends S09E01: The One Where No One Proposes(Part One)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_season9_episode1_part_one.mp3</audio>
+    </blog>
+    <blog>
+        <id>506</id>
+        <date>November 8, 2023</date>
+        <title>Friends S09E01: The One Where No One Proposes(Part Two)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_season9_episode1_part_two.mp3</audio>
+    </blog>
+    <!--
+    <blog>
+        <id>505</id>
+        <date>November 8, 2023</date>
+        <title>Friends S09E01: The One Where No One Proposes(Part One)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_season9_episode1_part_one.mp3</audio>
+    </blog>
+    <blog>
+        <id>506</id>
+        <date>November 8, 2023</date>
+        <title>Friends S09E01: The One Where No One Proposes(Part Two)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_season9_episode1_part_two.mp3</audio>
     </blog>
     -->
 </blogs>
