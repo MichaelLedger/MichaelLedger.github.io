@@ -183,4 +183,12 @@
         </description>
         <cover>developer-images/wallpaper/coding_4.jpg</cover>
     </blog>
+    <blog location="developer-single.html">
+        <id>20</id>
+        <date>November 21, 2023</date>
+        <title>WWDC2023 - Dynamic Island 灵动岛开发</title>
+        <description>
+        </description>
+        <cover>developer-images/wallpaper/coding_7.jpg</cover>
+    </blog>
 </blogs>
