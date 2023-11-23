@@ -16,6 +16,31 @@
 
 ## 准备知识
 
+苹果在iOS16.1正式对外开放了灵动岛适配框架-ActivityKit，第三方App可以使用这些ActivityKit完成灵动岛适配工作。
+
+注意，ActivityKit的API目前仅适用于iPhone。
+
+灵动岛使用WidgetKit和SwiftUI完成UI开发工作，ActivityKit在其中扮演创建Activity，请求数据，更新数据，结束Activity的角色。
+
+灵动岛作为实时活动的一部分，需要实时活动权限才能正常展示。和通知权限，相机权限等类似，实时活动权限需要App主动向用户申请，用户也可以在“设置”中主动关闭实时活动权限。
+
+**Live Activity 的限制条件**
+
+1 - 锁屏状态下的 Widget 视图，最大高度 160pt， 如果你的 UI 超过这个限制，会被截断。
+
+2 - 通过推送或者调用 activity.update 的方式更新数据，每次发送的数据总量不能超过 4KB。
+
+3 - 当前版本的 Live Activity 只能在 iPhone 设备上使用， 其他设备不行。我感觉以后可能会改。
+
+4 - 用户可以手动在系统设置中禁止某个 App的 Live Activity 权限。 所以要在调用 Activity.request 之前先判断好我们有没有权限使用它，可以通过 `ActivityAuthorizationInfo.areActivitiesEnabled` 来直接获得， 也可以通过 `ActivityEnablementUpdates` 来持续监听这个属性的改动。 他们同时代表用户是否禁止 Live Activity 权限，以及当前设备是否支持 Live Activity 显示（当前来说，只有 iPhone 设备才支持）。
+```
+// 实时活动是否可用，包括权限是否开启和手机是否支持实时活动
+ActivityAuthorizationInfo().areActivitiesEnabled
+
+// 获取已有的实时活动个数
+Activity<ActivityWidgetAttributes>.activities.count
+```
+
 Live Activities use WidgetKit and share many aspects of their design and implementation with the widgets in your app. If your app supports Live Activities, consider implementing them at the same time you add your widgets. For more information about Live Activities, see Displaying live data with Live Activities.
 
 The widget extension template provides an initial implementation that conforms to the Widget protocol. The widget’s body property determines the type of content that the widget presents. Static widgets use a StaticConfiguration for the body property. Other types of widget configurations include:
@@ -55,6 +80,30 @@ You need to register the application to receive push notifications beforehand.
 }
 ```
 
+**服务端需要使用 `p8` + `jwt` 实现 liveActivity 的推送**
+
+```
+// 推送配置
+TEAM_ID=开发者账号里的TEAM_ID
+AUTH_KEY_ID=p8推送需要的验证秘钥ID
+TOPIC=主程序的Bundle Identifier.push-type.liveactivity
+DEVICE_TOKEN=PushToken
+APNS_HOST_NAME=api.sandbox.push.apple.com
+// APS结构
+{"aps": {
+   "timestamp":1666667682, // 更新的时间
+   "event": "update", // 事件选择更新，也可以进行结束操作
+   "content-state": { // 需要与程序中的数据结构保持一致
+      "nickname": "我来更新"
+   },
+   "alert": { // 通知配置
+      "title": "Track Update",
+      "body": "Tony Stark is now handling the delivery!"
+   }
+}}
+
+```
+
 ## Trace Press
 Clicking on Live Activity is good to open the relay screen, for this you need to implement Deep Link. Set the modifier widgetURL(_:). You can set a different link for each area:
 ```
@@ -64,9 +113,36 @@ DynamicIslandExpandedRegion(.leading) {
 }
 ```
 
-## SceneDelegate Required for Dynamic Island Display Correctly
-
-Resolution: Migrate AppDelegate to SceneDelegate
+## Recommand Migrate AppDelegate to SceneDelegate (Unnecessary)
+`Info.Plist` add configuration as following:
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+        <key>UIApplicationSupportsMultipleScenes</key>
+        <false/>
+        <key>UISceneConfigurations</key>
+        <dict>
+            <key>UIWindowSceneSessionRoleApplication</key>
+            <array>
+                <dict>
+                    <key>UISceneConfigurationName</key>
+                    <string>Default Configuration</string>
+                    <key>UISceneDelegateClassName</key>
+                    <string>SceneDelegate</string>
+                    <!-- ONLY IF YOU HAVE A MAIN STORYBOARD -->
+                    <key>UISceneStoryboardFile</key>
+                    <string>Main</string>
+                </dict>
+            </array>
+        </dict>
+    </dict>
+</dict>
+</plist>
+```
 
 ```
 // AppDelegate.Swift
@@ -91,6 +167,57 @@ class AppDelegate : UIResponder, UIApplicationDelegate {
     }
 }
 ```
+
+```
+//
+//  AppDelegate.m
+//  DynamicIsland-OC-Demo
+//
+//  Created by Gavin Xiang on 2023/11/22.
+//
+
+#import "AppDelegate.h"
+#import "DynamicIsland_OC_Demo-Swift.h"
+
+@interface AppDelegate ()
+
+@end
+
+@implementation AppDelegate
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Override point for customization after application launch.
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (@available(iOS 16.1, *)) {
+            UploadWidgetManager *manager = [UploadWidgetManager shared];
+            [manager start];
+        }
+    });
+    return YES;
+}
+
+#pragma mark - UISceneSession lifecycle
+
+
+- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
+    // Called when a new scene session is being created.
+    // Use this method to select a configuration to create the new scene with.
+    return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
+}
+
+
+- (void)application:(UIApplication *)application didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
+    // Called when the user discards a scene session.
+    // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
+    // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+}
+
+
+@end
+
+```
+
 ```
 // SceneDelegate.swift
 import UIKit
@@ -314,6 +441,92 @@ OptimizationLevelError: not building -Onone
 Target -> Build Settings -> Swift Compiler - Code Generation -> Optimization Level
 Switch `Optimize for spped[-O]` to `No Optimization[-Onone]`
 
+## 踩坑记录
+之前的代码在工程Build Phases里面加了很多自定义的脚本 Run Script，特别是动态库优化之类的脚本譬如 `strip-frameworks.sh`，执行后导致灵动岛UI无法正常显示！！！
+
+> The strip-frameworks.sh script main responsibility is to take care of removing unnecessary slices. This reduces the final package size and is necessary for AppStore deployment because iTunes Connect rejects apps with simulator architectures.
+
+```
+"${PODS_ROOT}/Fabric/run"
+/bin/sh "/${PROJECT_DIR}/scripts/strip-frameworks.sh"
+```
+
+```
+################################################################################
+#
+# Copyright 2015 Realm Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+################################################################################
+
+# This script strips all non-valid architectures from dynamic libraries in
+# the application's `Frameworks` directory.
+#
+# The following environment variables are required:
+#
+# BUILT_PRODUCTS_DIR
+# FRAMEWORKS_FOLDER_PATH
+# VALID_ARCHS
+# EXPANDED_CODE_SIGN_IDENTITY
+
+
+# Signs a framework with the provided identity
+code_sign() {
+  # Use the current code_sign_identitiy
+  echo "Code Signing $1 with Identity ${EXPANDED_CODE_SIGN_IDENTITY_NAME}"
+  echo "/usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements $1"
+  /usr/bin/codesign --force --sign ${EXPANDED_CODE_SIGN_IDENTITY} --preserve-metadata=identifier,entitlements "$1"
+}
+
+# Set working directory to product’s embedded frameworks 
+cd "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}"
+
+if [ "$ACTION" = "install" ]; then
+  echo "Copy .bcsymbolmap files to .xcarchive"
+  find . -name '*.bcsymbolmap' -type f -exec mv {} "${CONFIGURATION_BUILD_DIR}" \;
+else
+  # Delete *.bcsymbolmap files from framework bundle unless archiving
+  find . -name '*.bcsymbolmap' -type f -exec rm -rf "{}" +\;
+fi
+
+echo "Stripping frameworks"
+
+for file in $(find . -type f -perm +111); do
+  # Skip non-dynamic libraries
+  if ! [[ "$(file "$file")" == *"dynamically linked shared library"* ]]; then
+    continue
+  fi
+  # Get architectures for current file
+  archs="$(lipo -info "${file}" | rev | cut -d ':' -f1 | rev)"
+  stripped=""
+  for arch in $archs; do
+    if ! [[ "${VALID_ARCHS}" == *"$arch"* ]]; then
+      # Strip non-valid architectures in-place
+      lipo -remove "$arch" -output "$file" "$file" || exit 1
+      stripped="$stripped $arch"
+    fi
+  done
+  if [[ "$stripped" != "" ]]; then
+    echo "Stripped $file of architectures:$stripped"
+    if [ "${CODE_SIGNING_REQUIRED}" == "YES" ]; then
+      code_sign "${file}"
+    fi
+  fi
+done
+
+```
+
 ## 拓展知识
 #### [SiriKit Intent Definition File](https://developer.apple.com/documentation/sirikit/adding_user_interactivity_with_siri_shortcuts_and_the_shortcuts_app?language=objc)
 You can offer your app’s unique capabilities throughout the system by designing custom intents. You may also want to create a custom intent that provides the same functionality as a system intent, to offer users more flexibility for incorporating that functionality into a multi-step shortcut.
@@ -472,6 +685,7 @@ struct ImageFetcher {
 ```
 
 ## 参考
+[五分钟技术趣谈 | 灵动岛适配指南](https://zhuanlan.zhihu.com/p/598539067?utm_id=0)
 [Displaying live data with Live Activities](https://developer.apple.com/documentation/ActivityKit/displaying-live-data-with-live-activities)
 [10 questions with the Live Activities team](https://developer.apple.com/news/?id=qpqf1gru)
 [iOS16.1 实时活动 （Live Activity）&灵动岛适配](https://blog.csdn.net/qq_38718912/article/details/128150549)
@@ -499,3 +713,4 @@ struct ImageFetcher {
 [@StateObject and @ObservedObject in SwiftUI](https://www.mattmoriarity.com/2020-07-03-stateobject-and-observableobject-in-swiftui/)
 [Live Activity & Dynamic Island](https://sparrowcode.io/en/tutorials/live-activities)
 [AppDelegate and SceneDelegate when supporting iOS 12 and 13](https://stackoverflow.com/questions/58405393/appdelegate-and-scenedelegate-when-supporting-ios-12-and-13)
+[Add a Scene Delegate to your current project](https://dev.to/kevinmaarek/add-a-scene-delegate-to-your-current-project-5on)
