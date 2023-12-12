@@ -191,4 +191,20 @@
         </description>
         <cover>developer-images/wallpaper/coding_7.jpg</cover>
     </blog>
+    <blog location="developer-single.html">
+        <id>21</id>
+        <date>December 12, 2023</date>
+        <title>CASA (Cloud Application Security Assessment)</title>
+        <description>
+        </description>
+        <cover>developer-images/wallpaper/coding_6.jpg</cover>
+    </blog>
+    <blog location="developer-single.html">
+        <id>22</id>
+        <date>December 12, 2023</date>
+        <title>Markdown - 绘制项目目录结构图</title>
+        <description>
+        </description>
+        <cover>developer-images/wallpaper/coding_2.jpg</cover>
+    </blog>
 </blogs>
