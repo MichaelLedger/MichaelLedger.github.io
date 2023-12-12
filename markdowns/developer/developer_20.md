@@ -314,6 +314,8 @@ Xcode15可以直接在Build Settings -> Info.plist Values修改，**实测还是
 Supports Live Activities -> YES
 Supports Frequent Updates of Live Activities -> NO (按需设置)
 
+Xcode Run script Build Phase "run script only when installing" option
+
 封装一个管理器 `UploadWidgetManager` 以供主工程调用
 ```
 @objcMembers
@@ -444,11 +446,53 @@ Switch `Optimize for spped[-O]` to `No Optimization[-Onone]`
 ## 踩坑记录
 之前的代码在工程Build Phases里面加了很多自定义的脚本 Run Script，特别是动态库优化之类的脚本譬如 `strip-frameworks.sh`，执行后导致灵动岛UI无法正常显示！！！
 
+解决办法：
+**Run script:☑️ For install builds only**
+
+With Run script only when installing checked, the script only runs when do **Product Archive**.
+
+### [About Realm Database](https://github.com/realm/realm-swift)
+
+Realm is a mobile database that runs directly inside phones, tablets or wearables. This repository holds the source code for the iOS, macOS, tvOS & watchOS versions of Realm Swift & Realm Objective-C.
+
+[Installation (Swift 1.2)](http://realm.io.s3-website-us-east-1.amazonaws.com/docs/swift/0.94.1/)
+1、Download the latest release of Realm and extract the zip.
+2、Go to your Xcode project’s “General” settings. Drag RealmSwift.framework and Realm.framework from the ios/ or osx/ directory to the “Embedded Binaries” section. Make sure Copy items if needed is selected and click Finish.
+3、In your unit test target’s “Build Settings”, add the parent path to RealmSwift.framework in the “Framework Search Paths” section.
+4、If using Realm in an iOS project, create a new “Run Script Phase” in your app’s target’s “Build Phases” and paste the following snippet in the script text field: bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh" This step is required to work around an App Store submission bug when archiving universal binaries.
+
 > The strip-frameworks.sh script main responsibility is to take care of removing unnecessary slices. This reduces the final package size and is necessary for AppStore deployment because iTunes Connect rejects apps with simulator architectures.
 
 ```
 "${PODS_ROOT}/Fabric/run"
 /bin/sh "/${PROJECT_DIR}/scripts/strip-frameworks.sh"
+```
+
+```
+Input Files
+$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)
+```
+
+```
+// xxx.xcodeproj/project.pbxproj
+67B2B5442B103B1E00993088 /* ShellScript */ = {
+    isa = PBXShellScriptBuildPhase;
+    buildActionMask = 2147483647;
+    files = (
+    );
+    inputFileListPaths = (
+    );
+    inputPaths = (
+        "$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+    );
+    outputFileListPaths = (
+    );
+    outputPaths = (
+    );
+    runOnlyForDeploymentPostprocessing = 0;
+    shellPath = /bin/sh;
+    shellScript = "\"${PODS_ROOT}/Fabric/run\"\n/bin/sh \"/${PROJECT_DIR}/scripts/strip-frameworks.sh\"\n";
+};
 ```
 
 ```
@@ -492,11 +536,22 @@ code_sign() {
 # Set working directory to product’s embedded frameworks 
 cd "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}"
 
+#echo "TEST-Begin"
+#find . -type f -print0 | xargs -0r stat -f '%z/%N'
+#echo "TEST-End"
+
 if [ "$ACTION" = "install" ]; then
   echo "Copy .bcsymbolmap files to .xcarchive"
+#  find . -name '*.bcsymbolmap' -type f -exec sh -c 'printf "%f\n"' \;
+#  find . -name '*.bcsymbolmap' -type f -exec ls -ld {} \; | awk '{ gsub("^.*/","",$9); printf "%s/%s\n", $5, $9; }' \;
+#  find . -name '*.bcsymbolmap' -type f -print0 | xargs -0r stat -f '%z/%N'
   find . -name '*.bcsymbolmap' -type f -exec mv {} "${CONFIGURATION_BUILD_DIR}" \;
 else
   # Delete *.bcsymbolmap files from framework bundle unless archiving
+  echo "Delete *.bcsymbolmap files from framework bundle unless archiving"
+#  find . -name '*.bcsymbolmap' -type f -exec sh -c 'printf "%f\n"' \;
+#  find . -name '*.bcsymbolmap' -type f -exec ls -ld {} \; | awk '{ gsub("^.*/","",$9); printf "%s/%s\n", $5, $9; }' \;
+#  find . -name '*.bcsymbolmap' -type f -print0 | xargs -0r stat -f '%z/%N'
   find . -name '*.bcsymbolmap' -type f -exec rm -rf "{}" +\;
 fi
 
@@ -524,7 +579,6 @@ for file in $(find . -type f -perm +111); do
     fi
   fi
 done
-
 ```
 
 ## 拓展知识
@@ -532,6 +586,17 @@ done
 You can offer your app’s unique capabilities throughout the system by designing custom intents. You may also want to create a custom intent that provides the same functionality as a system intent, to offer users more flexibility for incorporating that functionality into a multi-step shortcut.
 Define custom intents and their parameters in an intents definition file. Xcode uses this file to generate an INIntent subclass and related data types for each of your intents.
 When the user invokes your shortcut with their voice, Siri starts a dialog to collect the additional information needed to complete the shortcut. In the Shortcuts app, the user can make changes to what the shortcut will do when it’s invoked. To get an app that integrates custom intents and parameters, see [Soup Chef: Accelerating App Interactions with Shortcuts](https://developer.apple.com/documentation/sirikit/soup_chef_accelerating_app_interactions_with_shortcuts?language=objc) and download the Soup Chef sample app.
+
+#### Run Script Outputs
+Xcode Version changes:
+
+Xcode 12: View > Navigators > Reports
+Xcode 6: View > Navigators > Show Report Navigator
+Xcode 5: View > Navigators > Show Log Navigator
+Xcode 4: View > Navigators > View Log Navigator
+
+Select your most recent Build from the sidebar on the left.
+Then click All Messages in the tab bar to see the output of your Run Script Build Phase.
 
 #### SwiftUI
 **应用的入口**
@@ -714,3 +779,10 @@ struct ImageFetcher {
 [Live Activity & Dynamic Island](https://sparrowcode.io/en/tutorials/live-activities)
 [AppDelegate and SceneDelegate when supporting iOS 12 and 13](https://stackoverflow.com/questions/58405393/appdelegate-and-scenedelegate-when-supporting-ios-12-and-13)
 [Add a Scene Delegate to your current project](https://dev.to/kevinmaarek/add-a-scene-delegate-to-your-current-project-5on)
+[About Realm Database by MongoDB](https://github.com/realm/realm-swift)
+[Realm Swift V0.94.1 Outdated](http://realm.io.s3-website-us-east-1.amazonaws.com/docs/swift/0.94.1/)
+[Added Run Script phase to Xcode, but nothing happens](https://stackoverflow.com/questions/8589365/added-run-script-phase-to-xcode-but-nothing-happens)
+[Find files and echo content on shell](https://unix.stackexchange.com/questions/338353/find-files-and-echo-content-on-shell)
+[For files in directory, only echo filename (no path)](https://stackoverflow.com/questions/9011233/for-files-in-directory-only-echo-filename-no-path)
+[bash error find: -printf: unknown primary or operator](https://unix.stackexchange.com/questions/272491/bash-error-find-printf-unknown-primary-or-operator/272493#272493)
+[Xcode Run script Build Phase "run script only when installing" option](https://stackoverflow.com/questions/5913199/xcode-run-script-build-phase-run-script-only-when-installing-option)
