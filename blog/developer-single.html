@@ -684,16 +684,16 @@
               //时间根据图片的高度区分
               var time;
               if (document.body.clientWidth > 768) {
-              	time = coverFullDisplayHeight / 50.0;
+              	time = coverFullDisplayHeight / 70.0;
               } else {
-              	time = coverFullDisplayHeight / 25.0;
+              	time = coverFullDisplayHeight / 35.0;
               }
               // console.log('time:' + time);
               var infinite = "";
-              if (coverFullDisplayHeight / coverHeight > 2)
-              {
+            //   if (coverFullDisplayHeight / coverHeight > 2)
+            //   {
                   infinite = "infinite";
-              }
+            //   }
               // console.log('infinite_value:' + infinite);
 
               $("#fh5co-aside").css("-webkit-animation", ""+animationName+" "+time+"s "+infinite+" ease-in-out");
