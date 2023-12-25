@@ -207,4 +207,12 @@
         </description>
         <cover>developer-images/wallpaper/coding_2.jpg</cover>
     </blog>
+    <blog location="developer-single.html">
+        <id>23</id>
+        <date>December 25, 2023</date>
+        <title>Running Node.js Apps via Rancher build-in dockerd while Docker charges</title>
+        <description>
+        </description>
+        <cover>developer-images/wallpaper/coding_4.jpg</cover>
+    </blog>
 </blogs>

@@ -267,7 +267,9 @@ language: EN
 
 - Run the container to scan the codes in Terminal
 
-`nerdctl run -v ~/Documents/CASA/codes:/working-dir ghcr.io/fluidattacks/makes/arm64 m gitlab:fluidattacks/universe@trunk /skims scan ./config.yaml`
+**Rancher Desktop is not running. Please start Rancher Desktop to use nerdctl**
+
+`% nerdctl run -v ~/Documents/CASA/codes:/working-dir ghcr.io/fluidattacks/makes/arm64 m gitlab:fluidattacks/universe@trunk /skims scan ./config.yaml`
 
 - If the result is success, find the result file (`Fluid-Attacks-Results.csv`) at the working-dir
 
