@@ -463,61 +463,16 @@ ucd  |
 ucd  | [PM2] Spawning PM2 daemon with pm2_home=/root/.pm2
 ```
 
-Step4 - Running Node.js Apps with `PM2`: `pm2 start --name 'Canvas' server.js`
+Step4 - Running Node.js Apps with `PM2`
+
+```
+pm2 start app.js --name my-api
+pm2 logs
+pm2 start ecosystem.config.js --only my-api --env dev
+```
 
 `pm2 start app.js -i 3`
-
 *(3 – is the number of clusters you wish to have for your application)*
-
-```
-➜  UCD git:(master) ✗ pm2 start --name 'Canvas' server.js
-[PM2] Starting /Users/gavin/Downloads/UCD/server.js in fork_mode (1 instance)
-[PM2] Done.
-⇆ PM2+ activated | Instance Name: Gavins-MacBook-Pro-M1.local-a7d3 | Dash: https://app.pm2.io/#/r/s2gud6kpk8r7zhp
-┌────┬───────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
-│ id │ name      │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
-├────┼───────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
-│ 0  │ Canvas    │ default     │ N/A     │ fork    │ 19653    │ 0s     │ 0    │ online    │ 0%       │ 2.7mb    │ gav… │ disabled │
-└────┴───────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
-➜  UCD git:(master) ✗ pm2 logs
-[TAILING] Tailing last 15 lines for [all] processes (change the value with --lines option)
-/Users/gavin/.pm2/pm2.log last 15 lines:
-PM2        | 2023-12-25T17:00:14: PM2 log: App [Canvas:1] starting in -fork mode-
-PM2        | 2023-12-25T17:00:14: PM2 log: App [Canvas:1] online
-PM2        | 2023-12-25T17:00:21: PM2 log: Stopping app:app id:0
-PM2        | 2023-12-25T17:00:21: PM2 log: App [app:0] exited with code [0] via signal [SIGINT]
-PM2        | 2023-12-25T17:00:21: PM2 log: pid=71031 msg=process killed
-PM2        | 2023-12-25T17:00:31: PM2 log: Stopping app:Canvas id:1
-PM2        | 2023-12-25T17:00:31: PM2 log: App [Canvas:1] exited with code [0] via signal [SIGINT]
-PM2        | 2023-12-25T17:00:31: PM2 log: pid=18705 msg=process killed
-PM2        | 2023-12-25T17:00:41: PM2 log: App [Canvas:0] starting in -fork mode-
-PM2        | 2023-12-25T17:00:41: PM2 log: App [Canvas:0] online
-PM2        | 2023-12-25T17:01:14: PM2 log: Stopping app:Canvas id:0
-PM2        | 2023-12-25T17:01:14: PM2 log: App [Canvas:0] exited with code [0] via signal [SIGINT]
-PM2        | 2023-12-25T17:01:14: PM2 log: pid=19107 msg=process killed
-PM2        | 2023-12-25T17:01:31: PM2 log: App [Canvas:0] starting in -fork mode-
-PM2        | 2023-12-25T17:01:31: PM2 log: App [Canvas:0] online
-
-/Users/gavin/.pm2/logs/Canvas-error.log last 15 lines:
-/Users/gavin/.pm2/logs/Canvas-out.log last 15 lines:
-0|Canvas   | System=IPS2    time=8    url=/ Index=
-0|Canvas   | *URL: /, Path=/, BaseUrl=, Method=GET
-0|Canvas   | System=IPS2    time=11    url=/ Index=
-0|Canvas   | *URL: /, Path=/, BaseUrl=, Method=GET
-0|Canvas   | System=IPS2    time=4    url=/ Index=
-0|Canvas   | *URL: /, Path=/, BaseUrl=, Method=GET
-0|Canvas   | System=IPS2    time=8    url=/ Index=
-0|Canvas   | Web server started on port 81, pid 69672, env: dev
-0|Canvas   | *URL: /, Path=/, BaseUrl=, Method=GET
-0|Canvas   | System=IPS2    time=7    url=/ Index=
-0|Canvas   | *URL: /, Path=/, BaseUrl=, Method=GET
-0|Canvas   | System=IPS2    time=6    url=/ Index=
-0|Canvas   | *URL: /, Path=/, BaseUrl=, Method=GET
-0|Canvas   | System=IPS2    time=5    url=/ Index=
-0|Canvas   | Web server started on port 81, pid 19653, env: dev
-
-^C
-```
 
 ```
 ➜  UCD git:(master) pm2 monitor
@@ -539,32 +494,34 @@ PM2        | 2023-12-25T17:01:31: PM2 log: App [Canvas:0] online
 ┌────┬───────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
 │ id │ name      │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
 ├────┼───────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
-│ 0  │ Canvas    │ default     │ N/A     │ fork    │ 69672    │ 75s    │ 0    │ online    │ 0%       │ 51.5mb   │ gav… │ disabled │
+│ 0  │ my-api    │ default     │ N/A     │ fork    │ 69672    │ 75s    │ 0    │ online    │ 0%       │ 51.5mb   │ gav… │ disabled │
 └────┴───────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
-➜  UCD git:(master) ✗ pm2 stop Canvas
-[PM2] Applying action stopProcessId on app [Canvas](ids: [ 0 ])
-[PM2] [Canvas](0) ✓
+➜  UCD git:(master) ✗ pm2 stop my-api
+[PM2] Applying action stopProcessId on app [my-api](ids: [ 0 ])
+[PM2] [my-api](0) ✓
 ⇆ PM2+ activated | Instance Name: Gavins-MacBook-Pro-M1.local-a7d3 | Dash: https://app.pm2.io/#/r/s2gud6kpk8r7zhp
 ┌────┬───────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
 │ id │ name      │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
 ├────┼───────────┼─────────────┼─────────┼─────────┼──────────┼────────┼──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
-│ 0  │ Canvas    │ default     │ N/A     │ fork    │ 0        │ 0      │ 0    │ stopped   │ 0%       │ 0b       │ gav… │ disabled │
+│ 0  │ my-api    │ default     │ N/A     │ fork    │ 0        │ 0      │ 0    │ stopped   │ 0%       │ 0b       │ gav… │ disabled │
 └────┴───────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
-➜  UCD git:(master) ✗ pm2 delete Canvas
-[PM2] Applying action deleteProcessId on app [Canvas](ids: [ 0 ])
-[PM2] [Canvas](0) ✓
+➜  UCD git:(master) ✗ pm2 delete my-api
+[PM2] Applying action deleteProcessId on app [my-api](ids: [ 0 ])
+[PM2] [my-api](0) ✓
 ⇆ PM2+ activated | Instance Name: Gavins-MacBook-Pro-M1.local-a7d3 | Dash: https://app.pm2.io/#/r/s2gud6kpk8r7zhp
 ┌────┬───────────┬─────────────┬─────────┬─────────┬──────────┬────────┬──────┬───────────┬──────────┬──────────┬──────────┬──────────┐
 │ id │ name      │ namespace   │ version │ mode    │ pid      │ uptime │ ↺    │ status    │ cpu      │ mem      │ user     │ watching │
 └────┴───────────┴─────────────┴─────────┴─────────┴──────────┴────────┴──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
 ```
+
+
 
 In case you don't want to kill a particular process but pm2 itself using the command below:
 
 ```
 ➜  UCD git:(master) ✗ pm2 kill
 [PM2] Applying action deleteProcessId on app [all](ids: [ 0 ])
-[PM2] [Canvas](0) ✓
+[PM2] [my-api](0) ✓
 [PM2] [v] All Applications Stopped
 [PM2] [v] Agent Stopped
 [PM2] [v] PM2 Daemon Stopped
@@ -607,7 +564,35 @@ Then `http://localhost:81` shows my stuff with no issues whatsoever.
 
 **Resolution**
 
-**The safe resolution is specify a port number for pm2.**
+**The safe resolution is specify a port number in `docker-compose.yml` for pm2.**
+
+Dockerfile
+```
+EXPOSE 80
+```
+
+docker-compose.yml
+
+```
+version: "3"
+
+services:
+  ucd:
+    build: ./
+    image: planetart_ucd:1.1
+    container_name: ucd
+    command: sh -c 'cd /var/www/UCD && npm i && pm2 start ecosystem.config.js && node watch.js'
+    ports:
+      - 8081:80
+    volumes: 
+      - ./:/var/www/UCD
+```
+
+**`ports:- 8081:80` means specify port number '8081' instead of '80'**
+
+your root service location is: `http://localhost:8081`
+
+your specific subpath url looks like: `http://localhost:8081/test/cw-collage.html`
 
 You can use an environment variable. For example:
 
@@ -709,6 +694,94 @@ DingTalk 705 gavin  220u  IPv4 0x83a4fe24cfbc0545      0t0  TCP 10.x.x.xx:50677-
 ```
 Mac OS X includes an Apache web server that can be controlled using apachectl as root. It's usually started via launchd, the corresponding configuration file is /System/Library/LaunchAgents/org.apache.httpd.plist. If it's not this Apache running on port 80, it is probably launchd, Apple's implementation of a daemon manager.
 
+## PM2 - CheatSheet
+
+Here are some commands that are worth knowing. Just try them with a sample application or with your current web application on your development machine:
+
+```
+# Fork mode
+pm2 start app.js --name my-api # Name process
+
+# Cluster mode
+pm2 start app.js -i 0        # Will start maximum processes with LB depending on available CPUs
+pm2 start app.js -i max      # Same as above, but deprecated.
+pm2 scale app +3             # Scales `app` up by 3 workers
+pm2 scale app 2              # Scales `app` up or down to 2 workers total
+
+# Listing
+
+pm2 list               # Display all processes status
+pm2 jlist              # Print process list in raw JSON
+pm2 prettylist         # Print process list in beautified JSON
+
+pm2 describe 0         # Display all information about a specific process
+
+pm2 monit              # Monitor all processes
+
+# Logs
+
+pm2 logs [--raw]       # Display all processes logs in streaming
+pm2 flush              # Empty all log files
+pm2 reloadLogs         # Reload all logs
+
+# Actions
+
+pm2 stop all           # Stop all processes
+pm2 restart all        # Restart all processes
+
+pm2 reload all         # Will 0s downtime reload (for NETWORKED apps)
+
+pm2 stop 0             # Stop specific process id
+pm2 restart 0          # Restart specific process id
+
+pm2 delete 0           # Will remove process from pm2 list
+pm2 delete all         # Will remove all processes from pm2 list
+
+# Misc
+
+pm2 reset <process>    # Reset meta data (restarted time...)
+pm2 updatePM2          # Update in memory pm2
+pm2 ping               # Ensure pm2 daemon has been launched
+pm2 sendSignal SIGUSR2 my-app # Send system signal to script
+pm2 start app.js --no-daemon
+pm2 start app.js --no-vizion
+pm2 start app.js --no-autorestart
+```
+
+**How to update PM2**
+Install the latest pm2 version:
+`npm install pm2@latest -g`
+
+Then update the in-memory PM2 :
+`pm2 update`
+
+## Extensions
+
+[PhpStorm - The Lightning-Smart PHP IDE](https://www.jetbrains.com/phpstorm/)
+
+## Git或者ReadME中的URL包含@等特殊符号导致无法解析
+
+正常使用git clone 的方式
+
+`git clone https：//remote`
+
+使用带用户名密码的方式（可以避免后续每次都要输入用户名密码）
+
+`git clone https://[username]:[password]@/remote`
+
+但有时会出现用户名或密码中含有像@这样的特殊符号，而不能被正常解析
+
+我们需要通过下面方式 `urlencode` 进行重新编码
+```
+String c = URLEncoder.encode("@","utf-8");
+System.out.println(c);
+
+console -> %40
+```
+所有这样就可以知道 `@` 在 url 中需要写成 `%40` 的形式
+
+[在线URLEncode编码工具](https://uutool.cn/urlencode/)
+
 ## Reference
 [Express/Node introduction](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/Introduction)
 [Rancher Desktop - Hello World Example](https://docs.rancherdesktop.io/how-to-guides/hello-world-example/)
@@ -722,3 +795,6 @@ Mac OS X includes an Apache web server that can be controlled using apachectl as
 [No idea what is listening on port 80 in OS X](https://superuser.com/questions/597398/no-idea-what-is-listening-on-port-80-in-os-x)
 [pm2 starts node app correctly , but I am not able to access the app in browser](https://github.com/Unitech/pm2/issues/2555)
 [How to specify a port number for pm2](https://stackoverflow.com/questions/31502351/how-to-specify-a-port-number-for-pm2)
+[Use PM2 To Start and Manage Your Node Apps](https://medium.com/%40mackenzie.sampson/use-pm2-to-manage-your-node-apps-and-keep-them-online-24-7-1a2e43feb2d6)
+[PM2 Process Management Quick Start](https://pm2.keymetrics.io/docs/usage/pm2-doc-single-page/)
+[git clone 带用户名密码的形式但包含@等特殊符号无法正常解析](https://www.cnblogs.com/cxsy/p/7793704.html)
