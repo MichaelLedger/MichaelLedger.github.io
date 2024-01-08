@@ -4255,20 +4255,34 @@
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
         <audio>../audio/english/friends/season9/friends_season9_episode1_part_two.mp3</audio>
     </blog>
-    <!--
     <blog>
-        <id>505</id>
-        <date>November 8, 2023</date>
-        <title>Friends S09E01: The One Where No One Proposes(Part One)</title>
+        <id>507</id>
+        <date>January 8, 2024</date>
+        <title>Friends S09E02: The One Where Emma Cries(Part One)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_season9_episode1_part_one.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_season9_episode2_part_one.mp3</audio>
     </blog>
     <blog>
-        <id>506</id>
-        <date>November 8, 2023</date>
-        <title>Friends S09E01: The One Where No One Proposes(Part Two)</title>
+        <id>508</id>
+        <date>January 8, 2024</date>
+        <title>Friends S09E02: The One Where Emma Cries(Part Two)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_season9_episode1_part_two.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_season9_episode2_part_two.mp3</audio>
+    </blog>
+    <!--
+    <blog>
+        <id>507</id>
+        <date>January 8, 2024</date>
+        <title>Friends S09E02: The One Where Emma Cries(Part One)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_season9_episode2_part_one.mp3</audio>
+    </blog>
+    <blog>
+        <id>508</id>
+        <date>January 8, 2024</date>
+        <title>Friends S09E02: The One Where Emma Cries(Part Two)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_season9_episode2_part_two.mp3</audio>
     </blog>
     -->
 </blogs>
