@@ -1,5 +1,13 @@
 # CASA (Cloud Application Security Assessment)
 
+## Environment
+
+**Rancher Desktop Version**: 1.12.3
+
+**Kubernetes**: 1.28.4
+
+**CE (Container Engine)**: containerd
+
 ## Preface
 
 From: API OAuth Dev Verification `api-oauth-dev-verification-reply+3mlsafi239g8i1d@google.com`
@@ -76,6 +84,17 @@ Refer to the following documentation for more information:
 
 **Important! Once you have addressed the issues above, reply directly to this email to confirm. You must reply to this email after fixing the highlighted issues to continue with the app verification process.**
 
+### Tiers
+
+|Tier|Name|Estimated Lab Hours|Description|
+|:|:|:|:|
+| 3 | Lab Tested - Lab Verified | 60 | During this assessment, the authorized lab will test and validate all CASA requirements. This is a comprehensive assessment that tests the application, the application deployment infrastructure and any user data storage location for compliance with all of CASA requirements (when applicable) |
+| 2 | Lab Tested - Lab Verified | 4 | Tier 2 has a lab tested and validated assurance level where developers can opt-in to contact one of the authorized labs to complete a Tier 2 assessment. See assessment process below. |
+| 2 | Developer Tested - Lab Verified | 1 | During this assessment the application developer scans their application utilizing CASA recommended scanning tools and provides the scan result to the ADA for validation. |
+| 1 | Developer Tested - Developer Verified | 0 | The self assessment tier is not an assurance level, because it is not validated. This tier is used to allow the developer to understand their application readiness for CASA assessment |
+
+**Note: Framework users can decide their risk tolerance by requiring all applications to meet a certain CASA level, or the lowest required level.**
+
  
 *Need to make changes to your verification request?*
 
@@ -119,6 +138,16 @@ If you have not met all the CASA requirements or your submission is unclear, an 
 
 Preferences -> Virtual Machine -> Hardware -> Memory(GB): 8 -> # CPUs: 7
 
+- Switch container engine
+
+Preferences -> Container Engine -> containerd
+
+```
+➜  ~ nerdctl run -v ~/Documents/CASA/codes:/working-dir ghcr.io/fluidattacks/makes/arm64 m gitlab:fluidattacks/universe@trunk /skims scan ./config.yaml
+FATA[0000] cannot access containerd socket "/run/k3s/containerd/containerd.sock" (hint: try running with `--address /var/run/docker/containerd/containerd.sock` to connect to Docker-managed containerd): no such file or directory 
+Error: exit status 1
+```
+
 - Run command to download the latest fluid image:
 
 Rancher Desktop -> Images -> Add Image -> Name of image to pull:
@@ -150,6 +179,23 @@ sast:
 sca:
   include:
     - .
+  exclude:
+    - caches
+    - .idea
+    - .git
+    - .gradle
+    - build
+    - daemon
+    - gradle
+    - py_tools
+    - wrapper
+    - jdks
+    - .tmp
+    - common_libs_android/.git
+    - synergy-lib-android/.git
+    - common_libs_android/.settings
+    - play_assets
+    - misc
 # Note: uncomment this if you want to analyze .apk files.
 # apk:
   # include:
@@ -306,7 +352,7 @@ Switched to branch 'trunk'
 
 |title|cwe|description|cvss|finding|stream|kind|where|snippet|method|
 |:|:|:|:|:|:|:|:|:|:|
-|011. Use of software with known vulnerabilities|CWE-377|Use of activesupport at version 7.0.4.3 with ['GHSA-cr5q-6q9f-rq6q', 'CVE-2023-38037'] in OWASP/fp_ios_freeprints/FreePrints/Gemfile.lock|CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:O/RC:C|https://docs.fluidattacks.com/criteria/vulnerabilities/011| skims|SCA|66|> 66 activesupport (7.0.4.3)|gem.gem_gemfile_lock|
+|011. Use of software with known vulnerabilities|CWE-377|Use of activesupport at version 7.0.4.3 with ['GHSA-cr5q-6q9f-rq6q', 'CVE-2023-38037'] in OWASP/XXX/Gemfile.lock|CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L/E:P/RL:O/RC:C|https://docs.fluidattacks.com/criteria/vulnerabilities/011| skims|SCA|66|> 66 activesupport (7.0.4.3)|gem.gem_gemfile_lock|
 |Summary: 1 vulnerabilities were found in your targets.|||||||||||
 
 Resolution:
