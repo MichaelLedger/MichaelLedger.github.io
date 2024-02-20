@@ -2,6 +2,11 @@
 
 ## Environment
 
+**Network**: External network connection speed affects command execution time!
+
+Recommend Wi-Fi `PAC-SDWAN`: All traffic will go through the United States. If you access resources in China, it will also go around the United States and come back.
+*After the command is executed, switch back to `PAC-WORK`.*
+
 **Rancher Desktop Version**: 1.12.3
 
 **Kubernetes**: 1.28.4
