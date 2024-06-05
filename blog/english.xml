@@ -4269,18 +4269,32 @@
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
         <audio>../audio/english/friends/season9/friends_season9_episode2_part_two.mp3</audio>
     </blog>
+    <blog>
+        <id>509</id>
+        <date>January 17, 2024</date>
+        <title>Friends S09E03: The One With The Pediatrician(Part One)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_season9_episode3_part_one.mp3</audio>
+    </blog>
+    <blog>
+        <id>510</id>
+        <date>January 17, 2024</date>
+        <title>Friends S09E03: The One With The Pediatrician(Part Two)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_season9_episode3_part_two.mp3</audio>
+    </blog>
     <!--
     <blog>
-        <id>507</id>
-        <date>January 8, 2024</date>
-        <title>Friends S09E02: The One Where Emma Cries(Part One)</title>
+        <id>509</id>
+        <date>January 17, 2024</date>
+        <title>Friends S09E03: (Part One)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
         <audio>../audio/english/friends/season9/friends_season9_episode2_part_one.mp3</audio>
     </blog>
     <blog>
-        <id>508</id>
-        <date>January 8, 2024</date>
-        <title>Friends S09E02: The One Where Emma Cries(Part Two)</title>
+        <id>510</id>
+        <date>January 17, 2024</date>
+        <title>Friends S09E03: (Part Two)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
         <audio>../audio/english/friends/season9/friends_season9_episode2_part_two.mp3</audio>
     </blog>
