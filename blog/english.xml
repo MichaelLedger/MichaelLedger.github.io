@@ -4246,57 +4246,71 @@
         <date>November 8, 2023</date>
         <title>Friends S09E01: The One Where No One Proposes(Part One)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_season9_episode1_part_one.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_s09e01_a.mp3</audio>
     </blog>
     <blog>
         <id>506</id>
         <date>November 8, 2023</date>
         <title>Friends S09E01: The One Where No One Proposes(Part Two)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_season9_episode1_part_two.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_s09e01_b.mp3</audio>
     </blog>
     <blog>
         <id>507</id>
         <date>January 8, 2024</date>
         <title>Friends S09E02: The One Where Emma Cries(Part One)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_season9_episode2_part_one.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_s09e02_a.mp3</audio>
     </blog>
     <blog>
         <id>508</id>
         <date>January 8, 2024</date>
         <title>Friends S09E02: The One Where Emma Cries(Part Two)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_season9_episode2_part_two.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_s09e02_b.mp3</audio>
     </blog>
     <blog>
         <id>509</id>
         <date>January 17, 2024</date>
         <title>Friends S09E03: The One With The Pediatrician(Part One)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_season9_episode3_part_one.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_s09e03_a.mp3</audio>
     </blog>
     <blog>
         <id>510</id>
         <date>January 17, 2024</date>
         <title>Friends S09E03: The One With The Pediatrician(Part Two)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_season9_episode3_part_two.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_s09e03_b.mp3</audio>
+    </blog>
+    <blog>
+        <id>511</id>
+        <date>June 19, 2024</date>
+        <title>Friends S09E04: The One With The Sharks(Part One)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_s09e04_a.mp3</audio>
+    </blog>
+    <blog>
+        <id>512</id>
+        <date>June 19, 2024</date>
+        <title>Friends S09E04: The One With The Sharks(Part Two)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_s09e04_b.mp3</audio>
     </blog>
     <!--
     <blog>
-        <id>509</id>
-        <date>January 17, 2024</date>
-        <title>Friends S09E03: (Part One)</title>
+        <id>511</id>
+        <date>June 19, 2024</date>
+        <title>Friends S09E04: (Part One)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_season9_episode2_part_one.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_s09e04_a.mp3</audio>
     </blog>
     <blog>
-        <id>510</id>
-        <date>January 17, 2024</date>
-        <title>Friends S09E03: (Part Two)</title>
+        <id>512</id>
+        <date>June 19, 2024</date>
+        <title>Friends S09E04: (Part Two)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_season9_episode2_part_two.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_s09e04_b.mp3</audio>
     </blog>
     -->
 </blogs>
