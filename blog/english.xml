@@ -4311,20 +4311,34 @@
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
         <audio>../audio/english/friends/season9/friends_s09e05_b.mp3</audio>
     </blog>
-    <!--
     <blog>
-        <id>513</id>
-        <date>June 25, 2024</date>
-        <title>Friends S09E05: (Part One)</title>
+        <id>515</id>
+        <date>June 26, 2024</date>
+        <title>Friends S09E06: The One With The Male Nanny(Part One)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_s09e05_a.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_s09e06_a.mp3</audio>
     </blog>
     <blog>
-        <id>514</id>
-        <date>June 25, 2024</date>
-        <title>Friends S09E05: (Part Two)</title>
+        <id>516</id>
+        <date>June 26, 2024</date>
+        <title>Friends S09E06: The One With The Male Nanny(Part Two)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_s09e05_b.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_s09e06_b.mp3</audio>
+    </blog>
+    <!--
+    <blog>
+        <id>515</id>
+        <date>June 26, 2024</date>
+        <title>Friends S09E06: (Part One)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_s09e06_a.mp3</audio>
+    </blog>
+    <blog>
+        <id>516</id>
+        <date>June 26, 2024</date>
+        <title>Friends S09E06: (Part Two)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_s09e06_b.mp3</audio>
     </blog>
     -->
 </blogs>
