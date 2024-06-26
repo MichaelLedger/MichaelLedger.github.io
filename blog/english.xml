@@ -4297,20 +4297,34 @@
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
         <audio>../audio/english/friends/season9/friends_s09e04_b.mp3</audio>
     </blog>
-    <!--
     <blog>
-        <id>511</id>
-        <date>June 19, 2024</date>
-        <title>Friends S09E04: (Part One)</title>
+        <id>513</id>
+        <date>June 25, 2024</date>
+        <title>Friends S09E05: The One With Phoebe's Birthday Dinner(Part One)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_s09e04_a.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_s09e05_a.mp3</audio>
     </blog>
     <blog>
-        <id>512</id>
-        <date>June 19, 2024</date>
-        <title>Friends S09E04: (Part Two)</title>
+        <id>514</id>
+        <date>June 25, 2024</date>
+        <title>Friends S09E05: The One With Phoebe's Birthday Dinner(Part Two)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_s09e04_b.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_s09e05_b.mp3</audio>
+    </blog>
+    <!--
+    <blog>
+        <id>513</id>
+        <date>June 25, 2024</date>
+        <title>Friends S09E05: (Part One)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_s09e05_a.mp3</audio>
+    </blog>
+    <blog>
+        <id>514</id>
+        <date>June 25, 2024</date>
+        <title>Friends S09E05: (Part Two)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_s09e05_b.mp3</audio>
     </blog>
     -->
 </blogs>
