@@ -4325,20 +4325,34 @@
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
         <audio>../audio/english/friends/season9/friends_s09e06_b.mp3</audio>
     </blog>
-    <!--
     <blog>
-        <id>515</id>
-        <date>June 26, 2024</date>
-        <title>Friends S09E06: (Part One)</title>
+        <id>517</id>
+        <date>July 1, 2024</date>
+        <title>Friends S09E07: The One With Ross's Inappropriate Song(Part One)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_s09e06_a.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_s09e07_a.mp3</audio>
     </blog>
     <blog>
-        <id>516</id>
-        <date>June 26, 2024</date>
-        <title>Friends S09E06: (Part Two)</title>
+        <id>518</id>
+        <date>July 1, 2024</date>
+        <title>Friends S09E07: The One With Ross's Inappropriate Song(Part Two)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_s09e06_b.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_s09e07_b.mp3</audio>
+    </blog>
+    <!--
+    <blog>
+        <id>517</id>
+        <date>July 1, 2024</date>
+        <title>Friends S09E07: (Part One)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_s09e07_a.mp3</audio>
+    </blog>
+    <blog>
+        <id>518</id>
+        <date>July 1, 2024</date>
+        <title>Friends S09E07: (Part Two)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_s09e07_b.mp3</audio>
     </blog>
     -->
 </blogs>

@@ -41,5 +41,9 @@ In this final step you will use [BFG Repo-Cleaner](https://rtyley.github.io/bfg-
 ## [BFG Repo-Cleaner](https://github.com/rtyley/bfg-repo-cleaner)
 Removes large or troublesome blobs like git-filter-branch does, but faster. And written in Scala
 
+## Mine Resolution
+Make sure all stashed blobs are saved in your feature branches and all your local branches are pushed to remote!
+Delete the repo directory completely and re-clone it from latest branch, usually is `master` or `main`, only check out branches which you need to develop on!
+
 ### Reference
 [How to remove files permanently from git history](https://soonsantos.medium.com/how-to-remove-files-permanently-from-git-history-d0916202fdf7)
