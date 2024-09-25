@@ -2465,8 +2465,30 @@
   word-wrap: break-word;
 }
 
-.markdown-body a {
+/* .markdown-body a {
   background: transparent;
+  font-size: 30px;
+} */
+
+ /* font size do not defined in single page */
+.fh5co-post .fh5co-entry > div a {
+  color: #3194d0;
+  text-decoration: none;
+  font-size: 1em;
+}
+.fh5co-post .fh5co-entry > div a:hover {
+  color: #3194d0;
+  font-size: 1.05em;
+}
+@media screen and (max-width: 768px) {
+  .fh5co-post .fh5co-entry > div a {
+    color: #3194d0;
+    font-size: 1em;
+  }
+  .fh5co-post .fh5co-entry > div a:hover {
+    color: #3194d0;
+    font-size: 1.05em;
+  }
 }
 
 .markdown-body a:active,
@@ -2736,6 +2758,7 @@
   font-size: 2.25em;
   line-height: 1.2;
   border-bottom: 1px solid #eee;
+  font-weight: 120;
 }
 
 .markdown-body h1 .anchor {
@@ -2747,6 +2770,7 @@
   font-size: 1.75em;
   line-height: 1.225;
   border-bottom: 1px solid #eee;
+  font-weight: 100;
 }
 
 .markdown-body h2 .anchor {
@@ -2756,6 +2780,7 @@
 .markdown-body h3 {
   font-size: 1.5em;
   line-height: 1.43;
+  font-weight: 80;
 }
 
 .markdown-body h3 .anchor {

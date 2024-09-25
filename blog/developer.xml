@@ -215,4 +215,12 @@
         </description>
         <cover>developer-images/wallpaper/coding_4.jpg</cover>
     </blog>
+    <blog location="developer-single.html">
+        <id>24</id>
+        <date>August 30, 2024</date>
+        <title>Xcode - Improve compile speed and incremental compile for projects mixed with oc &amp; swift</title>
+        <description>
+        </description>
+        <cover>developer-images/wallpaper/coding_3.jpg</cover>
+    </blog>
 </blogs>
