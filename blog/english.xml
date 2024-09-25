@@ -4367,20 +4367,34 @@
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
         <audio>../audio/english/friends/season9/friends_s09e09_b.mp3</audio>
     </blog>
-    <!--
     <blog>
-        <id>521</id>
-        <date>August 9, 2024</date>
-        <title>Friends S09E09: (Part One)</title>
+        <id>523</id>
+        <date>September 25, 2024</date>
+        <title>Friends S09E10: (Part One)The One With Christmas In Tulsa(Part One)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_s09e09_a.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_s09e10_a.mp3</audio>
     </blog>
     <blog>
-        <id>522</id>
-        <date>August 9, 2024</date>
-        <title>Friends S09E09: (Part Two)</title>
+        <id>524</id>
+        <date>September 25, 2024</date>
+        <title>Friends S09E10: (Part Two)The One With Christmas In Tulsa(Part Two)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_s09e09_b.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_s09e10_b.mp3</audio>
+    </blog>
+    <!--
+    <blog>
+        <id>523</id>
+        <date>September 25, 2024</date>
+        <title>Friends S09E10: (Part One)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_s09e10_a.mp3</audio>
+    </blog>
+    <blog>
+        <id>524</id>
+        <date>September 25, 2024</date>
+        <title>Friends S09E10: (Part Two)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_s09e10_b.mp3</audio>
     </blog>
     -->
 </blogs>
