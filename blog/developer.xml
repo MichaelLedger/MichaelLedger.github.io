@@ -165,7 +165,7 @@
         <title>iOS - App Launch &amp; LLVM</title>
         <description>Slow app launches are frustrating. Learn about the new app launch instrument and discover how to make your app launch fast. Gain insights into what happens during app launch and how to minimize, prioritize, and optimize work at this critical time. Hear tips and tricks from the engineers making iOS apps launch fast.
         </description>
-        <cover>developer-images/wallpaper/coding_7.jpg</cover>
+        <cover>developer-images/wallpaper/coding_1.jpg</cover>
     </blog>
     <blog location="developer-single.html">
         <id>18</id>
@@ -181,7 +181,7 @@
         <title>MacOS 使用 Charles 对 iOS 模拟器进行抓包</title>
         <description>
         </description>
-        <cover>developer-images/wallpaper/coding_4.jpg</cover>
+        <cover>developer-images/wallpaper/coding_3.jpg</cover>
     </blog>
     <blog location="developer-single.html">
         <id>20</id>
@@ -189,7 +189,7 @@
         <title>iOS 16.1 - 实时活动 (Live Activity) &amp; 灵动岛 (Dynamic Island) 适配</title>
         <description>
         </description>
-        <cover>developer-images/wallpaper/coding_7.jpg</cover>
+        <cover>developer-images/wallpaper/coding_4.jpg</cover>
     </blog>
     <blog location="developer-single.html">
         <id>21</id>
@@ -197,7 +197,7 @@
         <title>CASA (Cloud Application Security Assessment)</title>
         <description>
         </description>
-        <cover>developer-images/wallpaper/coding_6.jpg</cover>
+        <cover>developer-images/wallpaper/coding_5.jpg</cover>
     </blog>
     <blog location="developer-single.html">
         <id>22</id>
@@ -205,7 +205,7 @@
         <title>Markdown - 绘制项目目录结构图</title>
         <description>
         </description>
-        <cover>developer-images/wallpaper/coding_2.jpg</cover>
+        <cover>developer-images/wallpaper/coding_6.jpg</cover>
     </blog>
     <blog location="developer-single.html">
         <id>23</id>
@@ -213,7 +213,7 @@
         <title>Running Node.js Apps via Rancher build-in dockerd while Docker charges</title>
         <description>
         </description>
-        <cover>developer-images/wallpaper/coding_4.jpg</cover>
+        <cover>developer-images/wallpaper/coding_7.jpg</cover>
     </blog>
     <blog location="developer-single.html">
         <id>24</id>
@@ -221,6 +221,14 @@
         <title>Xcode - Improve compile speed and incremental compile for projects mixed with oc &amp; swift</title>
         <description>
         </description>
-        <cover>developer-images/wallpaper/coding_3.jpg</cover>
+        <cover>developer-images/wallpaper/coding_8.jpg</cover>
+    </blog>
+    <blog location="developer-single.html">
+        <id>25</id>
+        <date>September 26, 2024</date>
+        <title>MacOS - Unable to install ruby 3.x on M1 (Apple Silicon)</title>
+        <description>
+        </description>
+        <cover>developer-images/wallpaper/coding_9.jpg</cover>
     </blog>
 </blogs>
