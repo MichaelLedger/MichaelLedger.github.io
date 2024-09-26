@@ -56,7 +56,18 @@ ca-certificates openssl         openssl@3.3     ruby@3
 libyaml         openssl@3       ruby            ruby@3.3
 ```
 
-`rvm install "ruby-3.3.5"`
+## [Terminal: run `source ~/.bash_profile` every time start new terminal [closed]](https://apple.stackexchange.com/questions/315985/terminal-run-source-bash-profile-every-time-start-new-terminal)
+Need to run `source ~/.zshrc` OR `source ~/.bash_profile` for every new shell in terminal. 
+
+If you are using [oh-my-zsh](https://ohmyz.sh), the default one that will be loaded automatically is `~/.zshrc`. All you need to do is adding the following at the end of `~/.zshrc`:
+
+```
+if [ -f ~/.bash_profile ]; then
+  . ~/.bash_profile
+fi
+```
+
+It works! 🎉🎉🎉
 
 ## Exercises
 
@@ -166,6 +177,34 @@ Ruby `2.3` and `older`, use
 
 ### rbenv not changing ruby version?
 
+To ensure that rbenv is correctly loaded when we start a new shell, I had to edit a couple of files. I added the following line to `.zshenv`:
+
+`export PATH="$HOME/.rbenv/bin:$PATH"`
+
+This adds gem-specific binaries to the PATH so that they are accessible to the shell without fully qualifying them with their path.
+
+Then I added the following lines to `.zshrc`:
+
+```
+source $HOME/.zshenv
+eval "$(rbenv init - zsh)"
+```
+
+This ensures that the previous file is sourced when a new session is started and that rbenv is initialized for Zsh.
+
+At this point, you’ll want to source .zshrc (or simply restart the terminal of your choice like iTerm2, instead):
+
+`$ source ~/.zshrc`
+
+With `rbenv` ready to go, I installed the latest version of Ruby and set it as my global default for this machine.
+
+`$ rbenv global 3.3.5` OR `$ rbenv local 3.3.5`
+
+```
+$ cat ~/.ruby-version 
+3.3.5
+```
+
 Check that PATH contains `$HOME/.rbenv/shim`s and `$HOME/.rbenv/bin`
 `$ env | grep PATH`
 Also check that you have the following in your `~/.bash_profile` if using bash or `~/.zshenv` if using zsh
@@ -202,6 +241,98 @@ Installed ruby-3.0.0 to ~/.rbenv/versions/3.0.0
 ### Update bundler
 1. bundle update --bundler   
 2. bundler --version  (check bundler version)
+
+### [On My Zsh](https://ohmyz.sh)
+
+`Oh My Zsh` is a delightful, open source, community-driven framework for managing your Zsh configuration. It comes bundled with thousands of helpful functions, helpers, plugins, themes, and a few things that make you shout...
+
+`sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+
+### common environment setups
+```
+1. Install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+2. Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+brew install autojump 
+brew install zsh-autosuggestions
+brew install zsh-syntax-highlighting
+
+3. Install rbenv
+brew install rbenv
+echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+
+4. Install tree
+brew install tree
+
+5. Install ruby
+rbenv install 3.3.5
+```
+
+### `.zshrc.pre-oh-my-zsh`
+`% cat ~/.zshrc.pre-oh-my-zsh`
+```
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+```
+
+`rvm install "ruby-3.3.5"`
+
+### Zsh Shell
+
+Now let me see the version of Bash that's shipped with macOS Sonoma 14.5 in Apple M1 Pro.
+
+```
+% sw_vers
+ProductName:        macOS
+ProductVersion:        14.5
+BuildVersion:        23F79
+
+% bash -version
+GNU bash, version 3.2.57(1)-release (arm64-apple-darwin23)
+Copyright (C) 2007 Free Software Foundation, Inc.
+```
+
+*What is Zsh?*
+
+Zsh, read as Z shell is a Unix Shell (Bash is a Unix Shell as well)
+
+Zsh shell is shipped as the default login and interactive shell with Apple macOS since Catalina
+
+It is an extension of sh (Bourne shell)
+
+Zsh is incorporated with most of the features from bash, zsh, tcsh and sh shell along with many new features.
+
+Zsh is also a powerful scripting language.
+
+*History of Zsh?*
+
+The first version of Zsh was written by Paul Falstad in the 1990
+
+The name zsh has been derived from the name of professor Zhong Shao of Yale University.
+
+`~/.zshenv` : Zsh Environment File
+
+`% nano ~/.zshenv`
+
+Adding PATH and other environment variables:
+
+```
+PATH=$PATH:/opt/homebrew/bin
+PROD_ENV_DIR=/usr/bin/mydir
+```
+
+Apply changes:
+
+`% source ~/.zshenv`
+
+Testing:
+```
+% echo $PROD_ENV_DIR
+/usr/bin/mydir
+```
 
 ## Backup `~/.bash_profile` & `~/.zshrc` & `~/.gitconfig`
 `% cat ~/.bash_profile`
@@ -341,9 +472,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-eval "$(rbenv init -)"
-eval "$(rbenv init -)"
-eval "$(rbenv init -)"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -368,6 +496,11 @@ export PATH="/Users/gavinxiang/.rd/bin:$PATH"
 ### rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+### automatically load .bash_profile
+if [ -f ~/.bash_profile ]; then
+  . ~/.bash_profile
+fi
 ```
 
 `% cat ~/.gitconfig`
@@ -433,4 +566,6 @@ eval "$(rbenv init -)"
 [rbenv not changing ruby version](https://stackoverflow.com/questions/10940736/rbenv-not-changing-ruby-version)
 [where is ruby 3.0.0 on rbenv](https://stackoverflow.com/questions/66129103/where-is-ruby-3-0-0-on-rbenv)
 [Unable to install ruby 3.1.x on M1 (Apple Silicon) #1961](https://github.com/rbenv/ruby-build/discussions/1961)
-[Ruby](https://www.ruby-lang.org/en/)
+[onmyzsh - Wiki](https://github.com/ohmyzsh/ohmyzsh/wiki)
+[ProgrammingInstalling rbenv on Zsh (on MacOS)](https://programmingzen.com/installing-rbenv-on-zsh-on-macos/)
+[The Zsh Shell - Mac Tutorial](https://code2care.org/zsh/zsh-shell-mac-tutorial/#google_vignette)
