@@ -6,7 +6,7 @@
 
 This problem occurred because I had used a Time Machine backup from an x86_64 machine. That led to me having the wrong version of several libraries (such as ruby, should be `arm64-darwin23`), and possibly of Homebrew itself.
 ```
-➜ ruby -v
+% ruby -v
 ruby 3.0.0p0 (2020-12-25 revision 95aff21468) [x86_64-darwin20]
 ```
 ## Isssue
@@ -40,18 +40,18 @@ You can inspect the build directory at /var/folders/wk/frkkcch539lc6s2dk6dw9dy80
 
 system openssl path: `/usr/local/Cellar/openssl@3` & `/usr/local/Cellar/libyaml`
 ```
-➜ brew --prefix openssl
+% brew --prefix openssl
 /usr/local/opt/openssl@3
-➜ brew --prefix libyaml
+% brew --prefix libyaml
 /usr/local/opt/libyaml
 ```
 
 Install ruby 3.x using `openssl@3` & `libyaml` opt in **homebrew**, not in system!
 
 ```
-➜  opt git:(stable) pwd
+% opt git:(stable) pwd
 /opt/homebrew/opt
-➜  opt git:(stable) ls
+% opt git:(stable) ls
 ca-certificates openssl         openssl@3.3     ruby@3
 libyaml         openssl@3       ruby            ruby@3.3
 ```
@@ -61,7 +61,7 @@ libyaml         openssl@3       ruby            ruby@3.3
 ## Exercises
 
 ```
-➜ RUBY_CFLAGS="-Wno-error=implicit-function-declaration" RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@3 --with-libyaml-dir=/opt/homebrew/opt/libyaml" rbenv install 3.3.5
+% RUBY_CFLAGS="-Wno-error=implicit-function-declaration" RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@3 --with-libyaml-dir=/opt/homebrew/opt/libyaml" rbenv install 3.3.5
 ==> Downloading ruby-3.3.5.tar.gz...
 -> curl -q -fL -o ruby-3.3.5.tar.gz https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.5.tar.gz
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
@@ -75,20 +75,27 @@ ruby-build: using gmp from homebrew
 ==> Installed ruby-3.3.5 to /Users/gavinxiang/.rbenv/versions/3.3.5
 ```
 
-Using `rbenv` to control multi ruby versions, which will generate `.ruby-version` file at current path.
+**Using `rbenv` to control multi ruby versions, which will generate `.ruby-version` file at current path.**
+
+`echo '### rbenv\nexport PATH="$HOME/.rbenv/bin:$PATH"\neval "$(rbenv init -)"' >> ~/.bash_profile`
+`source ~/.bash_profile`
+
+`echo '### rbenv\nexport PATH="$HOME/.rbenv/bin:$PATH"\neval "$(rbenv init -)"' >> ~/.zshrc`
+`source ~/.zshrc`
+
 ```
-➜ ruby -v
+% ruby -v
 ruby 2.7.5p203 (2021-11-24 revision f69aeb8314) [x86_64-darwin20]
-➜ rbenv local 3.3.5
-➜ cat .ruby-version 
+% rbenv local 3.3.5
+% cat .ruby-version 
 3.3.5
-➜ rbenv versions
+% rbenv versions
   system
   2.3.8
   2.7.5
 * 3.3.5 (set by /Users/gavinxiang/Downloads/synergy-ios/.ruby-version)
-➜ source ~/.bash_profile 
-➜ ruby -v
+% source ~/.bash_profile 
+% ruby -v
 ruby 3.3.5 (2024-09-03 revision ef084cc8f4) [arm64-darwin23]
 ```
 
@@ -96,15 +103,15 @@ ruby 3.3.5 (2024-09-03 revision ef084cc8f4) [arm64-darwin23]
 ### brew --prefix <formula>
 Display the location in the cellar where formula is or would be installed.
 ```
-➜  ~ brew --prefix
+% brew --prefix
 /usr/local
-➜  ~ brew --prefix openssl@3
+% brew --prefix openssl@3
 /usr/local/opt/openssl@3
 ```
 
 ### Find latest stable releases for each Ruby
 ```
-➜ rbenv install -l
+% rbenv install -l
 3.1.6
 3.2.5
 3.3.5
@@ -129,7 +136,7 @@ Run these commands in your terminal:
 `curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash`
 
 ```
-➜  ~ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
+% curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
 Checking for `rbenv' in PATH: /usr/local/bin/rbenv
 Checking for rbenv shims in PATH: found at wrong position
   The directory `/Users/gavinxiang/.rbenv/shims' is present in PATH, but is listed too late.
@@ -168,7 +175,7 @@ eval "$(rbenv init -)"
 ```
 You can just run `echo 'eval "$(rbenv init -)"' >> ~/.bash_profile` to add text at the end of file.
 
-After edited, just run `source ~/.bash_profile` or `source ~/.zshrc` (or just restart it) in your terminal to make it work.
+After edited, just run `source ~/.bash_profile` or `source ~/.zshrc` in your terminal to make it work.
 
 ### Check your Xcode Command Line Tools version
 
@@ -180,8 +187,8 @@ version: 15.3.0.0.1.1708646388
 ### where is ruby 3.0.0 on rbenv
 You need to update the available versions via ruby-build
 ```
-~ git -C ~/.rbenv/plugins/ruby-build pull
-~ rbenv install 3.0.0
+% git -C ~/.rbenv/plugins/ruby-build pull
+% rbenv install 3.0.0
 ...
 Installed ruby-3.0.0 to ~/.rbenv/versions/3.0.0
 ```
@@ -196,9 +203,9 @@ Installed ruby-3.0.0 to ~/.rbenv/versions/3.0.0
 1. bundle update --bundler   
 2. bundler --version  (check bundler version)
 
-## Backup `~/.bash_profile` & `~/.zshrc`
+## Backup `~/.bash_profile` & `~/.zshrc` & `~/.gitconfig`
+`% cat ~/.bash_profile`
 ```
-➜  ~ cat ~/.bash_profile 
 export SYSTEM_VERSION_COMPAT=0
 
 alias ..='cd ..'
@@ -231,8 +238,8 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 ```
 
+`% cat ~/.zshrc`
 ```
-➜  ~ cat ~/.zshrc
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -357,6 +364,65 @@ unset __conda_setup
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/gavinxiang/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+### rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+```
+
+`% cat ~/.gitconfig`
+```
+[core]
+    excludesfile = /Users/gavinxiang/.gitignore_global
+    packedGitLimit = 512m 
+        packedGitWindowSize = 512m
+    compression = 0
+[pack] 
+        deltaCacheSize = 2047m 
+        packSizeLimit = 2047m 
+        windowMemory = 2047m
+[difftool "sourcetree"]
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path = 
+[mergetool "sourcetree"]
+    cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
+[filter "lfs"]
+    required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+[alias]           
+    co=checkout           
+    ci=commit           
+    st=status           
+    pl=pull           
+    ps=push           
+    dt=difftool
+    mt=mergetool           
+    l=log—stat           
+    cp=cherry-pick           
+    ca=commit-a           
+    b=branch
+    sm=submodule
+[user]
+    name = GavinXiang
+    email = gavin.xiang@planetart.cn
+[merge]
+    tool = opendiff
+[diff]
+    tool = opendiff
+[difftool]
+    prompt = false
+[pull]
+    rebase = false
+[commit]
+    template = /Users/gavinxiang/.stCommitMsg
+[http]
+    postBuffer = 524288000
+    version = HTTP/2
+    lowSpeedLimit = 0
+    lowSpeedTime = 999999
 ```
 
 ## Reference
