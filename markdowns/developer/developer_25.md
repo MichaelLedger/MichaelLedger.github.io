@@ -69,6 +69,140 @@ fi
 
 It works! 🎉🎉🎉
 
+### RVM also need install `ruby-3.3.5 [arm64]`
+
+```
+% rvm list
+   ruby-2.7.5 [ x86_64 ]
+=* ruby-3.0.0 [ x86_64 ]
+
+# => - current
+# =* - current && default
+#  * - default
+```
+
+Install RVM
+`$ \curl -sSL https://get.rvm.io | bash`
+
+`% RUBY_CFLAGS="-w" rbenv install 3.3.5`
+
+`% RUBY_CFLAGS="-Wno-error=implicit-function-declaration -Wmacro-redefined" rvm reinstall "ruby-3.3.5" --with-openssl-dir=/opt/homebrew/opt/openssl@3 --with-libyaml-dir=/opt/homebrew/opt/libyaml`
+
+```
+% rvm gemset list
+Warning! PATH is not properly set up, /Users/gavinxiang/.rvm/gems/ruby-3.3.5@global/bin is not at first place.
+         Usually this is caused by shell initialization files. Search for PATH=... entries.
+         You can also re-add RVM to your profile by running: rvm get stable --auto-dotfiles
+         To fix it temporarily in this shell session run: rvm use ruby-3.3.5@global
+         To ignore this error add rvm_silence_path_mismatch_check_flag=1 to your ~/.rvmrc file.
+
+gemsets for ruby-3.3.5 (found in /Users/gavinxiang/.rvm/gems/ruby-3.3.5)
+   (default)
+   chat_app
+=> global
+```
+
+`rvm use ruby-3.3.5@global`
+
+```
+% rvm list
+   ruby-2.7.5 [ x86_64 ]
+   ruby-3.0.0 [ x86_64 ]
+=* ruby-3.3.5 [ arm64 ]
+
+# => - current
+# =* - current && default
+#  * - default
+```
+
+```
+% RUBY_CFLAGS="-Wno-error=implicit-function-declaration -Wmacro-redefined" rvm reinstall "ruby-3.3.5" --with-openssl-dir=/opt/homebrew/opt/openssl@3 --with-libyaml-dir=/opt/homebrew/opt/libyaml
+ruby-3.3.5 - #removing src/ruby-3.3.5 - please wait
+Checking requirements for osx.
+Updating certificates bundle '/usr/local/etc/openssl@3/cert.pem'
+Requirements installation successful.
+Installing Ruby from source to: /Users/gavinxiang/.rvm/rubies/ruby-3.3.5, this may take a while depending on your cpu(s)...
+ruby-3.3.5 - #downloading ruby-3.3.5, this may take a while depending on your connection...
+ruby-3.3.5 - #extracting ruby-3.3.5 to /Users/gavinxiang/.rvm/src/ruby-3.3.5 - please wait
+ruby-3.3.5 - #autogen.sh - please wait
+ruby-3.3.5 - #configuring - please wait
+ruby-3.3.5 - #post-configuration - please wait
+ruby-3.3.5 - #compiling - please wait
+ruby-3.3.5 - #installing - please wait
+ruby-3.3.5 - #making binaries executable - please wait
+Installed rubygems 3.5.16 is newer than 3.0.9 provided with installed ruby, skipping installation, use --force to force installation.
+ruby-3.3.5 - #gemset created /Users/gavinxiang/.rvm/gems/ruby-3.3.5@global
+ruby-3.3.5 - #importing gemset /Users/gavinxiang/.rvm/gemsets/global.gems - please wait
+Error running 'command gem install /Users/gavinxiang/.rvm/gem-cache/gem-wrappers-1.4.0.gem --local --no-document',
+please read /Users/gavinxiang/.rvm/log/1727401643_ruby-3.3.5/gem.install.gem-wrappers->=1.4.0.log
+there was an error installing gem gem-wrappers
+```
+
+Switch current & default ruby version for RVM
+`rvm --ruby-version use 3.3.5`
+`rvm alias create default 3.3.5`
+
+```
+% rvm list
+   ruby-2.7.5 [ x86_64 ]
+   ruby-3.0.0 [ x86_64 ]
+=* ruby-3.3.5 [ arm64 ]
+
+# => - current
+# =* - current && default
+#  * - default
+```
+
+### rvm gemset
+Let’s view the current list of RVM gemsets:
+```
+% rvm gemset create chat_app
+ruby-3.3.5 - #gemset created /Users/gavinxiang/.rvm/gems/ruby-3.3.5@chat_app
+ruby-3.3.5 - #generating chat_app wrappers...................
+Error running 'run_gem_wrappers regenerate',
+please read /Users/gavinxiang/.rvm/log/1727403709_ruby-3.3.5/gemset.wrappers.chat_app.log
+
+% rvm gemset use chat_app
+Using ruby-3.3.5 with gemset chat_app
+
+% rvm gemset list
+gemsets for ruby-3.3.5 (found in /Users/gavinxiang/.rvm/gems/ruby-3.3.5)
+   (default)
+=> chat_app
+   global
+```
+
+`rvm gemset delete <gemset_name>`
+
+### install old ruby with this openssl
+```
+$ rvm pkg install openssl
+$ rvm install 2.3.1 --with-openssl-dir=$HOME/.rvm/usr
+```
+
+### Remark for Ruby version 3+
+When install ruby v3, we may specific openssl location.
+Check your openssl location before installation
+- location A
+```
+$ ls /usr/local/opt | grep openssl
+openssl
+openssl@1.1
+openssl@3
+openssl@3.1
+```
+`$ rvm install ruby-3.1.0 --with-openssl-dir=/usr/local/opt/openssl@3.1`
+
+- location B
+```
+$ ls /opt/homebrew/opt | grep openssl
+openssl
+openssl@1.1
+openssl@3
+openssl@3.1
+```
+`$ rvm install ruby-3.1.0 --with-openssl-dir=/opt/homebrew/opt/openssl@3.1`
+
 ## Exercises
 
 ```
@@ -559,6 +693,7 @@ fi
 ```
 
 ## Reference
+[Install RVM in macOS (step by step)](https://nrogap.medium.com/install-rvm-in-macos-step-by-step-d3b3c236953b)
 [Unable to install any ruby version through rvm on a Mac M1 Silicon Chip](https://stackoverflow.com/questions/73041561/unable-to-install-any-ruby-version-through-rvm-on-a-mac-m1-silicon-chip)
 [Getting a warning when installing homebrew on MacOS Big Sur (M1 chip) [closed]](https://stackoverflow.com/questions/65487249/getting-a-warning-when-installing-homebrew-on-macos-big-sur-m1-chip)
 [The fastest and easiest way to install Ruby on a Mac in 2024](https://www.moncefbelyamani.com/how-to-install-xcode-homebrew-git-rvm-ruby-on-mac/)
@@ -569,3 +704,5 @@ fi
 [onmyzsh - Wiki](https://github.com/ohmyzsh/ohmyzsh/wiki)
 [ProgrammingInstalling rbenv on Zsh (on MacOS)](https://programmingzen.com/installing-rbenv-on-zsh-on-macos/)
 [The Zsh Shell - Mac Tutorial](https://code2care.org/zsh/zsh-shell-mac-tutorial/#google_vignette)
+[How to use RVM as a Ruby Version Manager](https://www.nikitakazakov.com/how-to-ruby-rvm/)
+[Installing Ruby <3.0 on Mac M1](https://www.reddit.com/r/ruby/comments/xkyo92/installing_ruby_30_on_mac_m1/)
