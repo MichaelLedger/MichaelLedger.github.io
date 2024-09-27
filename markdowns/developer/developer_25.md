@@ -35,6 +35,56 @@ You can inspect the build directory at /var/folders/wk/frkkcch539lc6s2dk6dw9dy80
 
 ## Resolution
 
+**At first, you need migrating Homebrew from Intel to M1!**
+
+```
+## Migrating Homebrew from Intel to M1
+
+## You can copy and paste into the Terminal
+
+## Go to home directory
+cd ;
+
+## Create list of installed Intel packages
+brew bundle dump ;
+
+## Install new version of Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" ;
+
+## Update the PATH to point to M1 version first
+eval "$(/opt/homebrew/bin/brew shellenv)" ;
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zshrc ;
+
+## Migrate Intel packages (/usr/local/bin/brew) to M1 (/opt/Homebrew)
+## You may need to enter your sysadmin password
+brew bundle --file Brewfile ;
+
+## Update packages
+brew update ; 
+
+## Upgrade packages
+brew upgrade ;
+
+## Clean up
+brew cleanup ;
+
+## Uninstall old Intel version
+
+# Download uninstall script
+curl -fsSL -o ./uninstall.sh https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh ;
+
+# Run the uninstall specifying the old path
+sudo /bin/bash ./uninstall.sh --path=/usr/local ;
+# Enter password
+# Type Y to uninstall
+
+# Delete uninstall script
+rm uninstall.sh ;
+
+# Final cleanup
+brew cleanup ;
+```
+
 **Install ruby 3.3.5 by rbenv**
 `RUBY_CFLAGS="-Wno-error=implicit-function-declaration" RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@3 --with-libyaml-dir=/opt/homebrew/opt/libyaml" rbenv install 3.3.5`
 
@@ -501,6 +551,7 @@ export PATH="/Users/gavinxiang/.rd/bin:$PATH"
 ### rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
 ```
 
 `% cat ~/.zshrc`
@@ -635,6 +686,7 @@ eval "$(rbenv init -)"
 if [ -f ~/.bash_profile ]; then
   . ~/.bash_profile
 fi
+
 ```
 
 `% cat ~/.gitconfig`
@@ -690,9 +742,11 @@ fi
     version = HTTP/2
     lowSpeedLimit = 0
     lowSpeedTime = 999999
+    
 ```
 
 ## Reference
+[Migrate from Intel (Rosetta2) to ARM brew on M1 #417](https://github.com/orgs/Homebrew/discussions/417)
 [Install RVM in macOS (step by step)](https://nrogap.medium.com/install-rvm-in-macos-step-by-step-d3b3c236953b)
 [Unable to install any ruby version through rvm on a Mac M1 Silicon Chip](https://stackoverflow.com/questions/73041561/unable-to-install-any-ruby-version-through-rvm-on-a-mac-m1-silicon-chip)
 [Getting a warning when installing homebrew on MacOS Big Sur (M1 chip) [closed]](https://stackoverflow.com/questions/65487249/getting-a-warning-when-installing-homebrew-on-macos-big-sur-m1-chip)
