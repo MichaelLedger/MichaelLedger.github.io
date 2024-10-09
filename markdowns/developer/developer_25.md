@@ -85,6 +85,43 @@ rm uninstall.sh ;
 brew cleanup ;
 ```
 
+**Reinstall openssl**
+```
+brew update
+brew install openssl
+echo 'export PATH="/usr/local/opt/openssl/bin:$PATH"' >> ~/.bash_profile
+source ~/.bash_profile
+```
+
+```
+% brew install openssl
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+#=O#-  #     #                                                                                                                                    
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+#=O#-  #     #                                                                                                                                    
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/3/manifests/3.3.2
+Already downloaded: /Users/gavinxiang/Library/Caches/Homebrew/downloads/15a43beab5e5017b1a9fe7584ff44a48195632fd196c23ee0e5e7ecf67e9ef2a--openssl@3-3.3.2.bottle_manifest.json
+==> Fetching openssl@3
+==> Downloading https://ghcr.io/v2/homebrew/core/openssl/3/blobs/sha256:df4760f0256178172f6193d8bb6c4cbeffd78ac646926ad345c5170331c5d55c
+Already downloaded: /Users/gavinxiang/Library/Caches/Homebrew/downloads/a8b376773d0e2bb72b72a290e10195947ba95b9c523c1c7d7b8e7456fe162f73--openssl@3--3.3.2.arm64_sonoma.bottle.tar.gz
+==> Pouring openssl@3--3.3.2.arm64_sonoma.bottle.tar.gz
+==> Caveats
+A CA file has been bootstrapped using certificates from the system
+keychain. To add additional certificates, place .pem files in
+  /opt/homebrew/etc/openssl@3/certs
+
+and run
+  /opt/homebrew/opt/openssl@3/bin/c_rehash
+==> Summary
+🍺  /opt/homebrew/Cellar/openssl@3/3.3.2: 6,984 files, 32.5MB
+==> Running `brew cleanup openssl@3`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+```
+
+A new release of RubyGems is available: 3.5.16 → 3.5.21!
+Run `gem update --system 3.5.21` to update your installation.
+
 **Install ruby 3.3.5 by rbenv**
 `RUBY_CFLAGS="-Wno-error=implicit-function-declaration" RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@3 --with-libyaml-dir=/opt/homebrew/opt/libyaml" rbenv install 3.3.5`
 
@@ -118,6 +155,84 @@ fi
 ```
 
 It works! 🎉🎉🎉
+
+### ERROR: OpenSSL is not available. Install OpenSSL and rebuild Ruby or use non-HTTPS sources (Gem::Exception)
+```
+gem install cocoapods --verbose
+ERROR:  While executing gem ... (Gem::Exception)
+    OpenSSL is not available. Install OpenSSL and rebuild Ruby or use non-HTTPS sources (Gem::Exception)
+```
+
+In that case, consider using non-HTTPS sources temporarily by running:
+`gem sources --remove https://rubygems.org/`
+`gem sources --add http://rubygems.org/`
+
+gem install cocoapodsPlease note that using non-HTTPS sources might pose some security risks, so it's advisable to switch back to HTTPS sources after fixing the OpenSSL issue by running:
+`gem sources --remove http://rubygems.org/`
+`gem sources --add https://rubygems.org/`
+
+These steps should help you resolve the OpenSSL-related error when installing CocoaPods on your Mac
+
+Customer:
+still got the same, even after i used the non-https sources
+
+```
+➜  ~ gem sources
+*** CURRENT SOURCES ***
+
+https://rubygems.org/
+http://rubygems.org/
+```
+
+Resolution: just run `% source ~/.bash_profile` again!
+
+### ERROR: linked to incompatible /Users/gavinxiang/.rbenv/versions/3.3.5/lib/libruby.3.3.dylib - /Users/gavinxiang/.rvm/gems/ruby-3.3.5/gems/bigdecimal-3.1.8/lib/bigdecimal.bundle (LoadError)
+[How to use rbenv after using RVM](https://stackoverflow.com/questions/35777962/how-to-use-rbenv-after-using-rvm)
+> benv is incompatible with RVM. Please make sure to fully uninstall RVM and remove any references to it from your shell initialization files before installing rbenv.
+
+[Choosing a Ruby Version Management Tool: rbenv vs RVM](https://metova.com/choosing-a-ruby-version-management-tool-rbenv-vs-rvm/)
+
+Currently we just keep all these ruby managers to avoiding diff ruby usages for different projects.
+
+Resolution: just run `% source ~/.bash_profile` again!
+
+```
+% pod repo list
+
+master
+- Type: git (remotes/origin/master)
+- URL:  https://github.com/CocoaPods/Specs.git
+- Path: /Users/gavinxiang/.cocoapods/repos/master
+
+planetart-fp_ios_prtrepos
+- Type: git (master)
+- URL:  git@github.com:Planetart/fp_ios_PRTRepos.git
+- Path: /Users/gavinxiang/.cocoapods/repos/planetart-fp_ios_prtrepos
+
+planetart-fp_ios_repos
+- Type: git (master)
+- URL:  git@github.com:Planetart/fp_ios_repos.git
+- Path: /Users/gavinxiang/.cocoapods/repos/planetart-fp_ios_repos
+
+planetart-prt_ios_specs
+- Type: git (main)
+- URL:  git@github.com:Planetart/prt_ios_specs.git
+- Path: /Users/gavinxiang/.cocoapods/repos/planetart-prt_ios_specs
+
+tensorflow
+- Type: git (remotes/origin/HEAD)
+- URL:  https://github.com/tensorflow/tensorflow.git
+- Path: /Users/gavinxiang/.cocoapods/repos/tensorflow
+
+trunk
+- Type: CDN
+- URL:  https://cdn.cocoapods.org/
+- Path: /Users/gavinxiang/.cocoapods/repos/trunk
+
+6 repos
+```
+
+`% pod repo update planetart-fp_ios_prtrepos`
 
 ### RVM also need install `ruby-3.3.5 [arm64]`
 
@@ -518,6 +633,27 @@ Testing:
 /usr/bin/mydir
 ```
 
+## `apt-get` command not found in MacOS
+
+The apt-get command is specific to some varieties of Linux e.g. Ubuntu it is not a command included in OS X which is based on FreeBSD.
+
+There are similar offerings to apt-get for OS X but all of them have to be installed before you can then use them to install packages.
+
+Brew - http://brew.sh
+MacPorts - http://www.macports.org
+Fink - http://www.finkproject.org/
+
+You can also of course do it by hand by installing GIT on a Mac along with the Mac Command Line tools and then GIT cloning the source for a package and compiling it just like it is sometimes necessary with Linux.
+
+GIT - http://git-scm.com/download/mac
+Command Line Tools - http://railsapps.github.io/xcode-command-line-tools.html
+
+## [Ubuntu](https://baike.baidu.com/item/Ubuntu)
+
+Ubuntu(乌班图)是一个以桌面应用为主的Linux发行版操作系统，其名称来自非洲南部祖鲁语或豪萨语的“ubuntu"一词，意思是“人性”“我的存在是因为大家的存在"，是非洲传统的一种价值观。Ubuntu基于Debian发行版和GNOME桌面环境。
+
+作为全球最流行且最有影响力的Linux开源系统之一，Ubuntu自发布以来在应用体验方面：有较大幅度的提升，即使对比Windows、MacOS等操作系统，最新版本的Ubuntu也不逊色。
+
 ## Backup `~/.bash_profile` & `~/.zshrc` & `~/.gitconfig`
 `% cat ~/.bash_profile`
 ```
@@ -552,6 +688,8 @@ export PATH="/Users/gavinxiang/.rd/bin:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+### openssl
+export PATH="/usr/local/opt/openssl/bin:$PATH"
 ```
 
 `% cat ~/.zshrc`
@@ -760,3 +898,6 @@ fi
 [The Zsh Shell - Mac Tutorial](https://code2care.org/zsh/zsh-shell-mac-tutorial/#google_vignette)
 [How to use RVM as a Ruby Version Manager](https://www.nikitakazakov.com/how-to-ruby-rvm/)
 [Installing Ruby <3.0 on Mac M1](https://www.reddit.com/r/ruby/comments/xkyo92/installing_ruby_30_on_mac_m1/)
+[MacOS - sudo apt-get command not found](https://discussions.apple.com/thread/7139106?sortBy=rank)
+[Mac Problems - OpenSSL is not available](https://www.justanswer.com/mac-computers/nvae8-want-install-cocoapods-mac-error-executing.html)
+[How to install latest version of openssl Mac OS X El Capitan](https://stackoverflow.com/questions/35129977/how-to-install-latest-version-of-openssl-mac-os-x-el-capitan)
