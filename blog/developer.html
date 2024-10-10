@@ -197,7 +197,12 @@
 			var content = "";
 			for (var i = 0; i < currentPageData.length; i++) {
 				var data = currentPageData[i];
-				var htmlStr = "<div class=\"fh5co-entry padding\" onclick=\"window.location.href='" + data.location +"'\"><div><span class=\"fh5co-post-date\">" + data.date + "</span><h2><a href=\"" + data.location + "\">" + data.title + "</a></h2><p>" + data.description + "</p></div><img src=\"" + data.cover + "\" alt=\"Picture\"></div>";
+				var htmlStr
+				if (data.location.indexOf("developer-single.html") != -1) {//normal detail page
+					htmlStr = "<div class=\"fh5co-entry padding\" onclick=\"window.location.href='" + data.location +"'\"><div><span class=\"fh5co-post-date\">" + data.date + "</span><h2><a href=\"" + data.location + "\">" + data.title + "</a></h2><p>" + data.description + "</p></div><img src=\"" + data.cover + "\" alt=\"Picture\"></div>";
+				} else {//other links
+					htmlStr = "<div class=\"fh5co-entry padding\" onclick=\"window.open('" + data.location +"', '_blank')\"><div><span class=\"fh5co-post-date\">" + data.date + "</span><h2><a href=\"" + data.location + "\", target=\"_blank\">" + data.title + "</a></h2><p>" + data.description + "</p></div><img src=\"" + data.cover + "\" alt=\"Picture\"></div>";
+				}
 				content = content + htmlStr;
 			}
 			// document.all[divIdentifier].innerHTML = content;
