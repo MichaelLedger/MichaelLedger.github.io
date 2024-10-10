@@ -186,6 +186,12 @@ http://rubygems.org/
 
 Resolution: just run `% source ~/.bash_profile` again!
 
+### mac Bundler::Fetcher::SSLError: Could not load OpenSSL
+
+`% bundle install --verbose`
+
+Resolution: just run `% source ~/.bash_profile` again!
+
 ### ERROR: linked to incompatible /Users/gavinxiang/.rbenv/versions/3.3.5/lib/libruby.3.3.dylib - /Users/gavinxiang/.rvm/gems/ruby-3.3.5/gems/bigdecimal-3.1.8/lib/bigdecimal.bundle (LoadError)
 [How to use rbenv after using RVM](https://stackoverflow.com/questions/35777962/how-to-use-rbenv-after-using-rvm)
 > benv is incompatible with RVM. Please make sure to fully uninstall RVM and remove any references to it from your shell initialization files before installing rbenv.
