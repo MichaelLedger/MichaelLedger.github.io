@@ -234,6 +234,41 @@ trunk
 
 `% pod repo update planetart-fp_ios_prtrepos`
 
+**Please copy the codes in `~/.zshrc` and `~/.bash_profile` at last to resolve these problems!**
+
+```
+Last login: Thu Oct 10 10:53:11 on ttys000
+➜  ~ am
+hub installed
+inputs number:0
+Usage, first param is target project(main, sdk), second param is target branch, third param is source branch
+➜  ~ ruby -v
+ruby 3.3.5 (2024-09-03 revision ef084cc8f4) [arm64-darwin23]
+➜  ~ pod repo list
+
+master
+- Type: git (remotes/origin/master)
+- URL:  https://github.com/CocoaPods/Specs.git
+- Path: /Users/gavinxiang/.cocoapods/repos/master
+
+planetart-fp_ios_repos
+- Type: git (master)
+- URL:  git@github.com:Planetart/fp_ios_repos.git
+- Path: /Users/gavinxiang/.cocoapods/repos/planetart-fp_ios_repos
+
+planetart-prt_ios_specs
+- Type: git (main)
+- URL:  git@github.com:Planetart/prt_ios_specs.git
+- Path: /Users/gavinxiang/.cocoapods/repos/planetart-prt_ios_specs
+
+trunk
+- Type: CDN
+- URL:  https://cdn.cocoapods.org/
+- Path: /Users/gavinxiang/.cocoapods/repos/trunk
+
+4 repos
+```
+
 ### RVM also need install `ruby-3.3.5 [arm64]`
 
 ```
@@ -817,8 +852,10 @@ export PATH="/Users/gavinxiang/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
 ### rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ### automatically load .bash_profile
 if [ -f ~/.bash_profile ]; then
