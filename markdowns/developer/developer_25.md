@@ -122,7 +122,131 @@ Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
 A new release of RubyGems is available: 3.5.16 → 3.5.21!
 Run `gem update --system 3.5.21` to update your installation.
 
+**[Guide to switching to rbenv bliss from RVM hell](https://gist.github.com/akdetrick/7604130)**
+
+**NOTE: Keep rvm & rbenv at the meanwhile will causing many unexpected errors!**
+
+```
+➜  ~ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
+Checking for `rbenv' in PATH: /opt/homebrew/bin/rbenv
+Checking for rbenv shims in PATH: found at wrong position
+  The directory `/Users/gavinxiang/.rbenv/shims' is present in PATH, but is listed too late.
+  The Ruby version found in `/Users/gavinxiang/.rvm/rubies/ruby-3.3.5/bin' will have precedence. Please reorder your PATH.
+
+Checking `rbenv install' support: /opt/homebrew/bin/rbenv-install (ruby-build 20240917)
+Counting installed Ruby versions: 3 versions
+Auditing installed plugins: OK
+```
+
+1) remove RVM from your system
+
+This should get rid of the rvm dir and any installed rubies:
+```
+$ rvm implode
+$ gem uninstall rvm
+$ rm ~/.rvmrc
+$ rm /etc/rvmrc
+$ rm -rf ~/.gem/ruby/<ruby_version>
+```
+
+If you don't, there might be issues with the ruby version not having psych, even though it does, and OpenSSL not existing for that ruby version, because it still thinks you are using RVM.
+
+2) remove any remaining traces of RVM
+Remove anything ~RVM-related~ from your PATH in:
+`.profile`
+`.bash_profile`
+`.bashrc`
+
+3) install rbenv
+
+Using homebrew:
+
+$ brew update
+$ brew install rbenv ruby-build
+
+4) install rubies for rbenv
+
+list all available versions:
+$ rbenv install -l
+
+install a Ruby version:
+$ rbenv install 2.0.0-p247
+Note: if you install a new version of ruby or a new gem and something isn't working, run $ rbenv rehash
+
+5) switching ruby versions in rbenv
+
+There are two easy ways of switching versions.
+
+Specifying the right version of ruby for individual projects
+
+Lots of ruby projects (including sassquatch) include a .ruby-version file. This file tells rbenv which ruby version to use for the directory.
+
+Manually switching rubies
+
+show versions currently installed and indicate current version
+$ rbenv versions
+
+set ruby version for a specific dir
+$ rbenv local 1.9.3-p327
+
+set ruby version globally
+$ rbenv global 1.9.3-p327
+
+6) install the bundler gem
+
+You should install the bundler gem because it's a nice way to manage gem dependencies in a project. For example, here's the [Gemfile in sassquatch](https://github.com/meetup/sassquatch/blob/dev/Gemfile) that bundler uses to manage gem dependencies for the projcet.
+
+$ sudo gem install bundler
+
+7) Heads up - be sure to install these PATH settings in your `.bash_profile` after installing rbenv
+`echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.zshrc`
+`source ~/.zshrc`
+
+8) Doctor double-check
+```
+➜  ~ curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
+Checking for `rbenv' in PATH: /opt/homebrew/bin/rbenv
+Checking for rbenv shims in PATH: OK
+Checking `rbenv install' support: /opt/homebrew/bin/rbenv-install (ruby-build 20240917)
+Counting installed Ruby versions: 3 versions
+Auditing installed plugins: OK
+```
+
+9) never fight with RVM again
+
 **Install ruby 3.3.5 by rbenv**
+
+```
+# bundle install failed logs if using ruby 3.3.5 (old intel archs)
+% arch --arm64 bundle install --verbose
+...
+make: /usr/local/bin/gmkdir: No such file or directory
+make: *** [.sitearchdir.time] Error 1
+make install failed, exit code 2
+```
+
+[gem install nokogiri -v '1.5.11' failed due to make: /usr/local/bin/gmkdir: No such file or directory](https://stackoverflow.com/questions/38241777/gem-install-nokogiri-v-1-5-11-failed-due-to-make-usr-local-bin-gmkdir-no-s)
+The issue is not directly linked with the nokogiri. It is more around the missing libraries in the system. I am using Mac M1 machine and moving data/libraries from Intel to M1 is a pain. So for me after spending hours I fixed the issue. Steps which I followed to fix library issues are:
+    •    Uninstall and install Homebrew
+    •    Update the proper PATH in `.zshrc` or .bachrc file
+    •    install the coreutils `brew install coreutils`
+    •    close the terminal and then run the `bundle install`
+
+**NOTE: Migrate Homebrew from Intel to M1 first 👆!!!**
+
+```
+# check whether homebrew migrated from Intel to M1 (via mkdir path)
+
+% which mkdir
+/bin/mkdir
+
+% ls -ls /bin | grep 'mkdir' | xargs 
+24 -rwxr-xr-x 1 root wheel 101360 5 7 15:01 mkdir
+```
+
+install ruby 3.3.5 by rbenv
+`% rbenv install 3.3.5`
+
 `RUBY_CFLAGS="-Wno-error=implicit-function-declaration" RUBY_CONFIGURE_OPTS="--with-openssl-dir=/opt/homebrew/opt/openssl@3 --with-libyaml-dir=/opt/homebrew/opt/libyaml" rbenv install 3.3.5`
 
 system openssl path: `/usr/local/Cellar/openssl@3` & `/usr/local/Cellar/libyaml`
@@ -852,22 +976,23 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/gavinxiang/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
 
-### rbenv
-#export PATH="$HOME/.rbenv/bin:$PATH"
-#eval "$(rbenv init -)"
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+### rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - zsh)"
+
+#export RBENV_ROOT=$HOME/.rbenv
+#export PATH=$RBENV_ROOT/shims:/versions:$PATH
 
 ### automatically load .bash_profile
 if [ -f ~/.bash_profile ]; then
   . ~/.bash_profile
 fi
-
 ```
 
 `% cat ~/.gitconfig`
@@ -944,3 +1069,4 @@ fi
 [MacOS - sudo apt-get command not found](https://discussions.apple.com/thread/7139106?sortBy=rank)
 [Mac Problems - OpenSSL is not available](https://www.justanswer.com/mac-computers/nvae8-want-install-cocoapods-mac-error-executing.html)
 [How to install latest version of openssl Mac OS X El Capitan](https://stackoverflow.com/questions/35129977/how-to-install-latest-version-of-openssl-mac-os-x-el-capitan)
+[Guide to switching to rbenv bliss from RVM hell](https://gist.github.com/akdetrick/7604130)
