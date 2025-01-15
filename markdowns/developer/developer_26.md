@@ -29,80 +29,208 @@ All codes will be gradually converted to Swift in the future, and the OC library
 
 Xcode Clean -> Cmd + K
 
+**Clean DerivedData before building**
+
 The "-list" option can be used to find the names of the schemes in the workspace.
 
 `xcodebuild -workspace xxx.xcworkspace -list`
 
-To generate timing information using the xcodebuild command-line tool,
-
-pass the `-showBuildTimingSummary` option to the tool.
+To generate timing information using the xcodebuild command-line tool, pass the `-showBuildTimingSummary` option to the tool.
 
 `xcodebuild -workspace XXXX.xcworkspace -scheme <target-name> -showBuildTimingSummary`
 
-*Optimize before*
+**`xcodebuild` generated Build Timing Summary is different every time, so let's using Xcode to buiding.**
+
+If you use Xcode, `Product->Perform Action->Build With Timing Summary`. And see `Build Timing Summary` in the Xcode building log.
+
+**Focus on `ScanDependencies` part cost, it saved 16 seconds after we used `MDBridgingManager` below!!!**
+
+*Optimize before: Total cost 262.6 seconds & ScanDependencies (2496 tasks) | 252.598 seconds*
 ```
+//Xcode
+Showing Recent Messages
+
 Build Timing Summary
 
-ScanDependencies (2496 tasks) | 675.098 seconds
+SwiftCompile (411 tasks) | 657.265 seconds
 
-CompileC (2493 tasks) | 467.794 seconds
+CompileC (2499 tasks) | 382.242 seconds
 
-CompileAssetCatalogVariant (10 tasks) | 97.362 seconds
+ScanDependencies (2496 tasks) | 252.598 seconds
 
-Ld (101 tasks) | 20.580 seconds
+CompileAssetCatalogVariant (10 tasks) | 150.908 seconds
 
-PhaseScriptExecution (23 tasks) | 15.082 seconds
+PhaseScriptExecution (23 tasks) | 86.691 seconds
 
-ValidateEmbeddedBinary (3 tasks) | 7.566 seconds
+CompileXIB (166 tasks) | 69.241 seconds
 
-CopyPNGFile (13 tasks) | 7.471 seconds
+SwiftEmitModule (54 tasks) | 60.158 seconds
 
-SwiftCompile (1 task) | 2.140 seconds
+Ld (103 tasks) | 20.394 seconds
 
-CodeSign (7 tasks) | 1.906 seconds
+CopyPNGFile (13 tasks) | 7.172 seconds
 
-SwiftEmitModule (1 task) | 1.352 seconds
+ValidateEmbeddedBinary (3 tasks) | 6.368 seconds
 
-GenerateTAPI (84 tasks) | 1.180 seconds
+CopyStringsFile (67 tasks) | 2.596 seconds
 
-ProcessInfoPlistFile (153 tasks) | 1.125 seconds
+SwiftDriver (54 tasks) | 2.250 seconds
 
-ProcessPCH (3 tasks) | 0.733 seconds
+GenerateAssetSymbols (1 task) | 1.818 seconds
 
-CopySwiftLibs (1 task) | 0.520 seconds
+CodeSign (8 tasks) | 1.683 seconds
 
-Libtool (10 tasks) | 0.471 seconds
+SwiftGeneratePch (1 task) | 1.606 seconds
 
-CpResource (8 tasks) | 0.240 seconds
+ProcessInfoPlistFile (153 tasks) | 1.362 seconds
 
-SwiftDriver (1 task) | 0.121 seconds
+AppIntentsSSUTraining (48 tasks) | 1.330 seconds
 
-ExtractAppIntentsMetadata (48 tasks) | 0.086 seconds
+GenerateTAPI (84 tasks) | 1.056 seconds
 
-ConstructStubExecutorLinkFileList (2 tasks) | 0.063 seconds
+ProcessPCH (3 tasks) | 1.014 seconds
 
-Copy (5 tasks) | 0.043 seconds
+CpResource (274 tasks) | 0.870 seconds
 
-ProcessProductPackagingDER (4 tasks) | 0.028 seconds
+CpHeader (816 tasks) | 0.853 seconds
 
-LinkAssetCatalog (10 tasks) | 0.025 seconds
+WriteAuxiliaryFile (1991 tasks) | 0.802 seconds
 
-ProcessProductPackaging (4 tasks) | 0.003 seconds
+Touch (153 tasks) | 0.769 seconds
 
-SwiftDriver Compilation (1 task) | 0.002 seconds
+CompileMetalFile (2 tasks) | 0.680 seconds
+
+Copy (324 tasks) | 0.660 seconds
+
+RegisterExecutionPolicyException (153 tasks) | 0.592 seconds
+
+Libtool (10 tasks) | 0.509 seconds
+
+CopySwiftLibs (1 task) | 0.477 seconds
+
+CompileStoryboard (3 tasks) | 0.330 seconds
+
+MetalLink (2 tasks) | 0.191 seconds
+
+ExtractAppIntentsMetadata (48 tasks) | 0.081 seconds
+
+SwiftMergeGeneratedHeaders (54 tasks) | 0.059 seconds
+
+ConstructStubExecutorLinkFileList (2 tasks) | 0.057 seconds
+
+ProcessProductPackagingDER (4 tasks) | 0.036 seconds
+
+CopyPlistFile (11 tasks) | 0.030 seconds
+
+CompileXCStrings (1 task) | 0.028 seconds
+
+LinkAssetCatalog (10 tasks) | 0.021 seconds
+
+LinkStoryboards (1 task) | 0.013 seconds
+
+ProcessProductPackaging (8 tasks) | 0.012 seconds
+
+SwiftDriver Compilation (54 tasks) | 0.003 seconds
 
 Validate (1 task) | 0.001 seconds
 
-SwiftDriver Compilation Requirements (1 task) | 0.000 seconds
+SwiftDriver Compilation Requirements (54 tasks) | 0.001 seconds
 
-warning: Run script build phase 'Run Script' will be run during every build because it does not specify any outputs. To address this issue, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'xxx' from project 'XXX')
-warning: Run script build phase 'Run Script' will be run during every build because it does not specify any outputs. To address this issue, either add output dependencies to the script phase, or configure it to run in every build by unchecking "Based on dependency analysis" in the script phase. (in target 'xxx' from project 'XXX')
-** BUILD SUCCEEDED **
 ```
 
-*optimize after*
+*optimize after for now: Total cost: 306.4 seconds & ScanDependencies (2497 tasks) | 235.958 seconds*
+
 ```
-//TODO...
+//Xcode
+Showing Recent Messages
+
+Build Timing Summary
+
+SwiftCompile (411 tasks) | 664.061 seconds
+
+CompileC (2500 tasks) | 363.420 seconds
+
+PhaseScriptExecution (23 tasks) | 289.402 seconds
+
+ScanDependencies (2497 tasks) | 235.958 seconds
+
+CompileAssetCatalogVariant (10 tasks) | 152.440 seconds
+
+SwiftEmitModule (54 tasks) | 62.942 seconds
+
+CompileXIB (166 tasks) | 60.728 seconds
+
+Ld (103 tasks) | 19.641 seconds
+
+CopyPNGFile (13 tasks) | 7.575 seconds
+
+ValidateEmbeddedBinary (3 tasks) | 6.461 seconds
+
+CopyStringsFile (67 tasks) | 2.653 seconds
+
+GenerateAssetSymbols (1 task) | 2.300 seconds
+
+SwiftGeneratePch (1 task) | 2.099 seconds
+
+SwiftDriver (54 tasks) | 2.008 seconds
+
+CodeSign (8 tasks) | 1.828 seconds
+
+ProcessInfoPlistFile (153 tasks) | 1.413 seconds
+
+AppIntentsSSUTraining (48 tasks) | 1.292 seconds
+
+GenerateTAPI (84 tasks) | 1.033 seconds
+
+WriteAuxiliaryFile (1991 tasks) | 0.925 seconds
+
+CpResource (274 tasks) | 0.924 seconds
+
+CpHeader (816 tasks) | 0.893 seconds
+
+ProcessPCH (3 tasks) | 0.795 seconds
+
+CompileMetalFile (2 tasks) | 0.691 seconds
+
+Copy (324 tasks) | 0.639 seconds
+
+Touch (153 tasks) | 0.587 seconds
+
+CopySwiftLibs (1 task) | 0.568 seconds
+
+RegisterExecutionPolicyException (153 tasks) | 0.562 seconds
+
+Libtool (10 tasks) | 0.497 seconds
+
+CompileStoryboard (3 tasks) | 0.438 seconds
+
+MetalLink (2 tasks) | 0.167 seconds
+
+ExtractAppIntentsMetadata (48 tasks) | 0.088 seconds
+
+SwiftMergeGeneratedHeaders (54 tasks) | 0.066 seconds
+
+ConstructStubExecutorLinkFileList (2 tasks) | 0.066 seconds
+
+ProcessProductPackagingDER (4 tasks) | 0.039 seconds
+
+SwiftDriver Compilation (54 tasks) | 0.031 seconds
+
+CopyPlistFile (11 tasks) | 0.026 seconds
+
+CompileXCStrings (1 task) | 0.021 seconds
+
+LinkAssetCatalog (10 tasks) | 0.021 seconds
+
+ProcessProductPackaging (8 tasks) | 0.019 seconds
+
+LinkStoryboards (1 task) | 0.012 seconds
+
+Validate (1 task) | 0.001 seconds
+
+SwiftDriver Compilation Requirements (54 tasks) | 0.001 seconds
+
+
 ```
 
 ## Obj-C/Swift bridge
@@ -185,6 +313,10 @@ NS_ASSUME_NONNULL_END
 
 ### [Xcode project dependencies graph](https://stackoverflow.com/questions/62903739/xcode-project-dependencies-graph)
 
+**Now is easy to check `Compute target dependency graph -> Target dependency graph` in Xcode build messages.**
+
+Xcode -> View -> Navigators -> Reports (Cmd + 9) then choose Local -> All Messages
+
 💡Module Migration Mayhem
 Moving 10+ custom CocoaPods to Swift Packages is a tricky task — especially so when they are inter-dependent and are all used by three iOS/tvOS app projects. Deciding the order of migration and determining which dependencies will be affected quickly became difficult, so having a graph to show who is dependent on whom sounded like a very good idea.
 There seems to be various dependency graphing tools already available however none of them fulfilled all my requirements. For my purposes, a graphing tool must:
@@ -211,6 +343,7 @@ I chose to use my own tap for this rather than adding it to the main brew tap be
 ## Reference
 [Xcode 11 recompiles too much](https://stackoverflow.com/questions/60854743/xcode-11-recompiles-too-much)
 [What are the differences between xcodebuild, xcrun and swift command line tools?](https://stackoverflow.com/questions/69030618/what-are-the-differences-between-xcodebuild-xcrun-and-swift-command-line-tools)
+[How to enable build timing in Xcode?](https://stackoverflow.com/questions/1027923/how-to-enable-build-timing-in-xcode)
 [Improving the speed of incremental builds](https://developer.apple.com/documentation/xcode/improving-the-speed-of-incremental-builds)
 [Improving build efficiency with good coding practices](https://developer.apple.com/documentation/xcode/improving-build-efficiency-with-good-coding-practices#Minimize-the-number-of-symbols-you-share-between-Swift-and-Objective-C)
 [Creating a multiplatform binary framework bundle](https://developer.apple.com/documentation/xcode/creating-a-multi-platform-binary-framework-bundle)
