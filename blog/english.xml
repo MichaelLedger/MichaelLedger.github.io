@@ -4381,20 +4381,34 @@
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
         <audio>../audio/english/friends/season9/friends_s09e10_b.mp3</audio>
     </blog>
-    <!--
     <blog>
-        <id>523</id>
-        <date>September 25, 2024</date>
-        <title>Friends S09E10: (Part One)</title>
+        <id>525</id>
+        <date>January 15, 2025</date>
+        <title>Friends S09E11: The One Where Rachael Goes Back to Work(Part One)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_s09e10_a.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_s09e11_a.mp3</audio>
     </blog>
     <blog>
-        <id>524</id>
-        <date>September 25, 2024</date>
-        <title>Friends S09E10: (Part Two)</title>
+        <id>526</id>
+        <date>January 15, 2025</date>
+        <title>Friends S09E11: The One Where Rachael Goes Back to Work(Part Two)</title>
         <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
-        <audio>../audio/english/friends/season9/friends_s09e10_b.mp3</audio>
+        <audio>../audio/english/friends/season9/friends_s09e11_b.mp3</audio>
+    </blog>
+    <!--
+    <blog>
+        <id>525</id>
+        <date>January 15, 2025</date>
+        <title>Friends S09E11: (Part One)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_s09e11_a.mp3</audio>
+    </blog>
+    <blog>
+        <id>526</id>
+        <date>January 15, 2025</date>
+        <title>Friends S09E11: (Part Two)</title>
+        <cover>../image/english/friends/season9/friends_season9_cover.jpg</cover>
+        <audio>../audio/english/friends/season9/friends_s09e11_b.mp3</audio>
     </blog>
     -->
 </blogs>
