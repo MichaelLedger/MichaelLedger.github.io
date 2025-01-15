@@ -1,8 +1,6 @@
-# Xcode - Improve compile speed and incremental compile for projects mixed with oc & swift
+# iOS Dependency managers comparison
 
 > dependency priority: Swift Package Manager(SPM) > Carthage > CocoaPods
-
-**iOS Dependency manager**
 
 When you do not use a Dependency manager as a developer you are responsible for:
 
