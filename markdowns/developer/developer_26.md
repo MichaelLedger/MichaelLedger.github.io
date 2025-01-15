@@ -183,6 +183,31 @@ NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_END
 ```
 
+### [Xcode project dependencies graph](https://stackoverflow.com/questions/62903739/xcode-project-dependencies-graph)
+
+💡Module Migration Mayhem
+Moving 10+ custom CocoaPods to Swift Packages is a tricky task — especially so when they are inter-dependent and are all used by three iOS/tvOS app projects. Deciding the order of migration and determining which dependencies will be affected quickly became difficult, so having a graph to show who is dependent on whom sounded like a very good idea.
+There seems to be various dependency graphing tools already available however none of them fulfilled all my requirements. For my purposes, a graphing tool must:
+- Graph at a module-level, not class-level
+- Support private/in-house libraries
+- Show both Swift Packages and CocoaPods in a single graph
+
+If you want to install [`xcgrapher`](https://itnext.io/graphing-xcode-project-dependencies-introducing-xcgrapher-cb99aa0a325e) you’ll need to add my tap first.
+
+```
+$ brew tap maxchuquimia/scripts
+$ brew install xcgrapher
+$ xcgrapher --help
+```
+
+I chose to use my own tap for this rather than adding it to the main brew tap because I’m not really a fan of keeping everything centralized in the way that Homebrew and CocoaPods do (for speed reasons). I personally hope Swift Packages never go this way…
+
+**If you don’t use CocoaPods you’ll also need to install Xcodeproj.**
+
+[Professional architecture review and planning tool for every Swift developer.](https://swiftalyzer.com)
+[Visualize Your iOS App’s Dependency Graph](https://betterprogramming.pub/visualizing-dependency-graph-in-project-71210a5de269)
+[objc-dependency-visualizer](https://github.com/PaulTaykalo/objc-dependency-visualizer)
+
 ## Reference
 [Xcode 11 recompiles too much](https://stackoverflow.com/questions/60854743/xcode-11-recompiles-too-much)
 [What are the differences between xcodebuild, xcrun and swift command line tools?](https://stackoverflow.com/questions/69030618/what-are-the-differences-between-xcodebuild-xcrun-and-swift-command-line-tools)
@@ -192,3 +217,5 @@ NS_ASSUME_NONNULL_END
 [Xcode build time frustration](https://forums.developer.apple.com/forums/thread/763913)
 [Basic understanding of Abstract Syntax Tree (AST)](https://medium.com/jessica_lopez/basic-understanding-of-abstract-syntax-tree-ast-d40ff911c3bf)
 [Six principles in object-oriented programming(OOP)](https://hellolyh.xlog.app/mian-xiang-dui-xiang-bian-cheng-zhong-de-liu-da-yuan-ze)
+[Graphing Xcode project dependencies — Introducing](https://itnext.io/graphing-xcode-project-dependencies-introducing-xcgrapher-cb99aa0a325e)
+[Graphviz - open source graph visualization software](https://graphviz.org)
