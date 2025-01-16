@@ -4,10 +4,17 @@
 Reduce the code contained in the OC & Swift bridge file, abstract the middle layer to reduce dependencies, gradually modularize, delete the code and resources of obsolete&duplicate functions, and optimize the compilation time;
 
 - Step 2. 
-Cocoapods/Carthage is gradually replaced by Swift package manager, and the underlying library that is not frequently changed can be accessed through the binary zip package to further reduce the compilation time;
+Cocoapods/Carthage is gradually replaced by [Swift package manager](https://github.com/swiftlang/swift-package-manager), and the underlying library that is not frequently changed can be accessed through the binary zip package to further reduce the compilation time;
 
 - Step 3. 
 All codes will be gradually converted to Swift in the future, and the OC library will be directly replaced by the Swift library, the bridge file will be removed, the ScanDependencies time will be reduced, and the compilation speed will be greatly improved.
+
+- Step 4. 
+Final solution: Tuist + SPM
+[Scaling iOS at Bumble](https://medium.com/bumble-tech/scaling-ios-at-bumble-239e0fa009f2)
+[Quick start](https://docs.tuist.dev/en/)
+[Migrating from Swift Package Manager to Tuist](https://docs.tuist.dev/en/guides/start/migrate/swift-package#migrating-from-swift-package-manager-to-tuist)
+[Setting up Tuist 4 to your existing project](https://toyboy2.medium.com/setting-tuist-to-your-exist-project-9136882c0d85)
 
 ## [Six principles in object-oriented programming(OOP)](https://hellolyh.xlog.app/mian-xiang-dui-xiang-bian-cheng-zhong-de-liu-da-yuan-ze)
 
@@ -43,212 +50,17 @@ To generate timing information using the xcodebuild command-line tool, pass the 
 
 If you use Xcode, `Product->Perform Action->Build With Timing Summary`. And see `Build Timing Summary` in the Xcode building log.
 
-**Focus on `ScanDependencies` part cost, it saved 16 seconds after we used `MDBridgingManager` below!!!**
-
-*Optimize before: Total cost 262.6 seconds & ScanDependencies (2496 tasks) | 252.598 seconds*
-```
-//Xcode
-Showing Recent Messages
-
-Build Timing Summary
-
-SwiftCompile (411 tasks) | 657.265 seconds
-
-CompileC (2499 tasks) | 382.242 seconds
-
-ScanDependencies (2496 tasks) | 252.598 seconds
-
-CompileAssetCatalogVariant (10 tasks) | 150.908 seconds
-
-PhaseScriptExecution (23 tasks) | 86.691 seconds
-
-CompileXIB (166 tasks) | 69.241 seconds
-
-SwiftEmitModule (54 tasks) | 60.158 seconds
-
-Ld (103 tasks) | 20.394 seconds
-
-CopyPNGFile (13 tasks) | 7.172 seconds
-
-ValidateEmbeddedBinary (3 tasks) | 6.368 seconds
-
-CopyStringsFile (67 tasks) | 2.596 seconds
-
-SwiftDriver (54 tasks) | 2.250 seconds
-
-GenerateAssetSymbols (1 task) | 1.818 seconds
-
-CodeSign (8 tasks) | 1.683 seconds
-
-SwiftGeneratePch (1 task) | 1.606 seconds
-
-ProcessInfoPlistFile (153 tasks) | 1.362 seconds
-
-AppIntentsSSUTraining (48 tasks) | 1.330 seconds
-
-GenerateTAPI (84 tasks) | 1.056 seconds
-
-ProcessPCH (3 tasks) | 1.014 seconds
-
-CpResource (274 tasks) | 0.870 seconds
-
-CpHeader (816 tasks) | 0.853 seconds
-
-WriteAuxiliaryFile (1991 tasks) | 0.802 seconds
-
-Touch (153 tasks) | 0.769 seconds
-
-CompileMetalFile (2 tasks) | 0.680 seconds
-
-Copy (324 tasks) | 0.660 seconds
-
-RegisterExecutionPolicyException (153 tasks) | 0.592 seconds
-
-Libtool (10 tasks) | 0.509 seconds
-
-CopySwiftLibs (1 task) | 0.477 seconds
-
-CompileStoryboard (3 tasks) | 0.330 seconds
-
-MetalLink (2 tasks) | 0.191 seconds
-
-ExtractAppIntentsMetadata (48 tasks) | 0.081 seconds
-
-SwiftMergeGeneratedHeaders (54 tasks) | 0.059 seconds
-
-ConstructStubExecutorLinkFileList (2 tasks) | 0.057 seconds
-
-ProcessProductPackagingDER (4 tasks) | 0.036 seconds
-
-CopyPlistFile (11 tasks) | 0.030 seconds
-
-CompileXCStrings (1 task) | 0.028 seconds
-
-LinkAssetCatalog (10 tasks) | 0.021 seconds
-
-LinkStoryboards (1 task) | 0.013 seconds
-
-ProcessProductPackaging (8 tasks) | 0.012 seconds
-
-SwiftDriver Compilation (54 tasks) | 0.003 seconds
-
-Validate (1 task) | 0.001 seconds
-
-SwiftDriver Compilation Requirements (54 tasks) | 0.001 seconds
-
-```
-
-*optimize after for now: Total cost: 306.4 seconds & ScanDependencies (2497 tasks) | 235.958 seconds*
-
-```
-//Xcode
-Showing Recent Messages
-
-Build Timing Summary
-
-SwiftCompile (411 tasks) | 664.061 seconds
-
-CompileC (2500 tasks) | 363.420 seconds
-
-PhaseScriptExecution (23 tasks) | 289.402 seconds
-
-ScanDependencies (2497 tasks) | 235.958 seconds
-
-CompileAssetCatalogVariant (10 tasks) | 152.440 seconds
-
-SwiftEmitModule (54 tasks) | 62.942 seconds
-
-CompileXIB (166 tasks) | 60.728 seconds
-
-Ld (103 tasks) | 19.641 seconds
-
-CopyPNGFile (13 tasks) | 7.575 seconds
-
-ValidateEmbeddedBinary (3 tasks) | 6.461 seconds
-
-CopyStringsFile (67 tasks) | 2.653 seconds
-
-GenerateAssetSymbols (1 task) | 2.300 seconds
-
-SwiftGeneratePch (1 task) | 2.099 seconds
-
-SwiftDriver (54 tasks) | 2.008 seconds
-
-CodeSign (8 tasks) | 1.828 seconds
-
-ProcessInfoPlistFile (153 tasks) | 1.413 seconds
-
-AppIntentsSSUTraining (48 tasks) | 1.292 seconds
-
-GenerateTAPI (84 tasks) | 1.033 seconds
-
-WriteAuxiliaryFile (1991 tasks) | 0.925 seconds
-
-CpResource (274 tasks) | 0.924 seconds
-
-CpHeader (816 tasks) | 0.893 seconds
-
-ProcessPCH (3 tasks) | 0.795 seconds
-
-CompileMetalFile (2 tasks) | 0.691 seconds
-
-Copy (324 tasks) | 0.639 seconds
-
-Touch (153 tasks) | 0.587 seconds
-
-CopySwiftLibs (1 task) | 0.568 seconds
-
-RegisterExecutionPolicyException (153 tasks) | 0.562 seconds
-
-Libtool (10 tasks) | 0.497 seconds
-
-CompileStoryboard (3 tasks) | 0.438 seconds
-
-MetalLink (2 tasks) | 0.167 seconds
-
-ExtractAppIntentsMetadata (48 tasks) | 0.088 seconds
-
-SwiftMergeGeneratedHeaders (54 tasks) | 0.066 seconds
-
-ConstructStubExecutorLinkFileList (2 tasks) | 0.066 seconds
-
-ProcessProductPackagingDER (4 tasks) | 0.039 seconds
-
-SwiftDriver Compilation (54 tasks) | 0.031 seconds
-
-CopyPlistFile (11 tasks) | 0.026 seconds
-
-CompileXCStrings (1 task) | 0.021 seconds
-
-LinkAssetCatalog (10 tasks) | 0.021 seconds
-
-ProcessProductPackaging (8 tasks) | 0.019 seconds
-
-LinkStoryboards (1 task) | 0.012 seconds
-
-Validate (1 task) | 0.001 seconds
-
-SwiftDriver Compilation Requirements (54 tasks) | 0.001 seconds
-
-
-```
-
-## Obj-C/Swift bridge
-
-1 [REPEATABLE STEP] Build Swift code, which is needed to compile Obj-C code
-2 [REPEATABLE STEP] Build Obj-C code, which is needed to compile Swift code
-3 Repeat 1 & 2 until you have only non-dependable Swift & Obj-C code left
-4 Build Obj-C code
-5 Build Swift code
-
-So the first advice is to lower coupling. Your project parts have to be independent of each other.
-
-Problem with those trees if you're using a Obj-C/Swift bridge, Xcode has to go through more phases than usual:
-Perfect world:
-    1    Builds Obj-C code
-    2    Build Swift code
-
-## Abstract the middle layer to reduce dependencies
+**~~`MDBridgingManager`~~ do not work at all, even worse!!!**
+
+|Status|Total|SwiftCompile|CompileC|ScanDependencies|CompileAssetCatalogVariant|PhaseScriptExecution|CompileXIB|SwiftEmitModule|
+|:|:|:|:|:|:|:|:|:|
+|Cold (Before)|221.3|599.3|372.2|212.1|90.2|239.6|47.7|55.3|
+|Cold (Before)|211.2|598.9|386.1|215.6|95.7|145.4|43.5|53.6|
+|Hot (Before)|22.8|0|0|0|0|12.8|0|0|
+|----|----|----|----|----|----|----|----|----|
+|Cold (After)|222.8|604.6|389.3|224.1|96.0|184.0|51.8|54.9|
+|Cold (After)|215.7|588.5|373.6|214.7|92.4|193.9|55.4|53.9|
+|Hot (After)|24.6|0|0|0|0|13.0|0|0|
 
 ```
 //  Bridging-Header.h
@@ -317,6 +129,8 @@ NS_ASSUME_NONNULL_END
 
 Xcode -> View -> Navigators -> Reports (Cmd + 9) then choose Local -> All Messages
 
+> [`xcgrapher`](https://itnext.io/graphing-xcode-project-dependencies-introducing-xcgrapher-cb99aa0a325e)
+
 💡Module Migration Mayhem
 Moving 10+ custom CocoaPods to Swift Packages is a tricky task — especially so when they are inter-dependent and are all used by three iOS/tvOS app projects. Deciding the order of migration and determining which dependencies will be affected quickly became difficult, so having a graph to show who is dependent on whom sounded like a very good idea.
 There seems to be various dependency graphing tools already available however none of them fulfilled all my requirements. For my purposes, a graphing tool must:
@@ -324,7 +138,7 @@ There seems to be various dependency graphing tools already available however no
 - Support private/in-house libraries
 - Show both Swift Packages and CocoaPods in a single graph
 
-If you want to install [`xcgrapher`](https://itnext.io/graphing-xcode-project-dependencies-introducing-xcgrapher-cb99aa0a325e) you’ll need to add my tap first.
+If you want to install `xcgrapher` you’ll need to add my tap first.
 
 ```
 $ brew tap maxchuquimia/scripts
@@ -334,13 +148,33 @@ $ xcgrapher --help
 
 I chose to use my own tap for this rather than adding it to the main brew tap because I’m not really a fan of keeping everything centralized in the way that Homebrew and CocoaPods do (for speed reasons). I personally hope Swift Packages never go this way…
 
-**If you don’t use CocoaPods you’ll also need to install Xcodeproj.**
+If you don’t use CocoaPods you’ll also need to install Xcodeproj.
 
 [Professional architecture review and planning tool for every Swift developer.](https://swiftalyzer.com)
 [Visualize Your iOS App’s Dependency Graph](https://betterprogramming.pub/visualizing-dependency-graph-in-project-71210a5de269)
 [objc-dependency-visualizer](https://github.com/PaulTaykalo/objc-dependency-visualizer)
 
+## [Tuist](https://tuist.dev)
+
+Scale your Swift App development
+We are an integrated and open core toolchain that extends Apple's official tools with insights, optimizations, and workflows to help you build better apps faster
+
+We often come across developers and organizations that challenge the need for Tuist considering that Swift Package Manager can take a similar project management role. Some venture into a migration to later on realize that their developer experience has degraded signicantly. For instance, the rename of a file might take up to 15 seconds to re-index. 15 seconds!
+
+**Whether Apple will make Swift Package Manager a built-for-scale project manager is uncertain.** However, we are not seeing any signs that it's happening. In fact, we are seeing quite the opposite. They are making Xcode-inspired decisions, like achieving convenience through implicit configurations, which as you might know, is the source of complications at scale. We believe it'd take Apple to go to first principles and revisit some decisions that made sense as a dependency manager but not as a project manager, for example the usage of a compiled language as an interface to define projects.
+
+> **SPM AS JUST A DEPENDENCY MANAGER**
+Tuist treats Swift Package Manager as a dependency manager, and it's a great one. We use it to resolve dependencies and to build them. We don't use it to define projects because it's not designed for that.
+
+[Quick start](https://docs.tuist.dev/en/)
+
+[Migrating from Swift Package Manager to Tuist](https://docs.tuist.dev/en/guides/start/migrate/swift-package#migrating-from-swift-package-manager-to-tuist)
+
+[Setting up Tuist 4 to your existing project](https://toyboy2.medium.com/setting-tuist-to-your-exist-project-9136882c0d85)
+
 ## Reference
+[Scaling iOS at Bumble: Part 2/3 — The Assessment](https://medium.com/bumble-tech/scaling-ios-at-bumble-239e0fa009f2)
+[Swift package manager](https://github.com/swiftlang/swift-package-manager)
 [Xcode 11 recompiles too much](https://stackoverflow.com/questions/60854743/xcode-11-recompiles-too-much)
 [What are the differences between xcodebuild, xcrun and swift command line tools?](https://stackoverflow.com/questions/69030618/what-are-the-differences-between-xcodebuild-xcrun-and-swift-command-line-tools)
 [How to enable build timing in Xcode?](https://stackoverflow.com/questions/1027923/how-to-enable-build-timing-in-xcode)
@@ -352,3 +186,7 @@ I chose to use my own tap for this rather than adding it to the main brew tap be
 [Six principles in object-oriented programming(OOP)](https://hellolyh.xlog.app/mian-xiang-dui-xiang-bian-cheng-zhong-de-liu-da-yuan-ze)
 [Graphing Xcode project dependencies — Introducing](https://itnext.io/graphing-xcode-project-dependencies-introducing-xcgrapher-cb99aa0a325e)
 [Graphviz - open source graph visualization software](https://graphviz.org)
+[Tuist](https://tuist.dev)
+[Quick start](https://docs.tuist.dev/en/)
+[Migrating from Swift Package Manager to Tuist](https://docs.tuist.dev/en/guides/start/migrate/swift-package#migrating-from-swift-package-manager-to-tuist)
+[Setting up Tuist 4 to your existing project](https://toyboy2.medium.com/setting-tuist-to-your-exist-project-9136882c0d85)
