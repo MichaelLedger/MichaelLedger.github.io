@@ -239,4 +239,12 @@
         </description>
         <cover>developer-images/wallpaper/coding_19.jpg</cover>
     </blog>
+    <blog location="developer-single.html">
+        <id>27</id>
+        <date>Feb 12, 2025</date>
+        <title>Swift Package Manager(SPM) Best Practice</title>
+        <description>
+        </description>
+        <cover>developer-images/wallpaper/coding_10.jpg</cover>
+    </blog>
 </blogs>
