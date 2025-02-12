@@ -2757,7 +2757,7 @@
   padding-bottom: 0.3em;
   font-size: 2.25em;
   line-height: 1.2;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
   font-weight: 120;
 }
 
@@ -2769,7 +2769,7 @@
   padding-bottom: 0.3em;
   font-size: 1.75em;
   line-height: 1.225;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
   font-weight: 100;
 }
 
@@ -3496,7 +3496,7 @@ li.L9 {
   font-size: 16px;
   padding: 5px 0 10px 10px;
   line-height: 1;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #ddd;
 }
 .editormd-preview-container .editormd-toc-menu h1 .fa, .editormd-html-preview .editormd-toc-menu h1 .fa {
   padding-left: 10px;

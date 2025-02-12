@@ -13,5 +13,3 @@
  (4) $\Omega = ${ 4, 5, 6, $\cdots$, 10 };  
  (5) $\Omega = ${ d | d $\geqslant$ 0 } ; 
  (6) $\Omega = ${ (x, y, z) | x > 0, y > 0, z > 0, x + y + z = 1 }
-        
-

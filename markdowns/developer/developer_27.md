@@ -18,6 +18,7 @@ Add the following to your Package.swift:
 `.package(url: "https://github.com/mxcl/PromiseKit.git", .upToNextMajor(from: "6.8.4")),`
 
 Next, add `PromiseKit` to your App targets dependencies like so:
+
 ```
 .target(
     name: "App",
@@ -37,11 +38,11 @@ package.dependencies.append(
 ### Manually
 You can just drop `PromiseKit.xcodeproj` into your project and then add `PromiseKit.framework` to your app’s embedded frameworks.
 
-## [Accio](https://github.com/JamitLabs/Accio) - **Deprecated**
+## [Accio](https://github.com/JamitLabs/Accio) - ⚠️Deprecated
 A dependency manager driven by SwiftPM that works for iOS/tvOS/watchOS/macOS projects.
 With the release of Xcode 12 which includes Swift 5.3, we feel like there is no gap left to fill by Accio on the move to SwiftPM anymore, thus we are deprecating support for Accio in those versions, instead please use the built-in SwiftPM feature in Xcode.
 
-## [Tuist](https://docs.tuist.dev/en/)
+## [Tuist](https://docs.tuist.dev/en/) - 🔥Recommend
 [Tuist](https://github.com/tuist/tuist) is a toolchain designed to accelerate and enhance app development. 
 
 ### [Cache](https://docs.tuist.dev/en/guides/quick-start/optimize-workflows)
@@ -141,7 +142,7 @@ to force reload it then recall `bundle exec pod install --verbose`.**
 
 Below shows `FileDownloadManager` not been updated as `MDFileDownloadManager` which defined in Package.swift, which causing Xcode build always failed!
 
-`/Users/gavinxiang/Library/Developer/Xcode/DerivedData/FullBellyIntl-ewvndvrlwnotbadwkgacshfdcrsm/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/Pods-fpus.build/DerivedSources/Pods_fpus_vers.c module map file '/Users/gavinxiang/Library/Developer/Xcode/DerivedData/FullBellyIntl-ewvndvrlwnotbadwkgacshfdcrsm/Build/Intermediates.noindex/GeneratedModuleMaps-iphoneos/FileDownloadManager.modulemap' not found`
+`Library/Developer/Xcode/DerivedData/XXX/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/Pods-fpus.build/DerivedSources/Pods_fpus_vers.c module map file '/Users/gavinxiang/Library/Developer/Xcode/DerivedData/XXX/Build/Intermediates.noindex/GeneratedModuleMaps-iphoneos/FileDownloadManager.modulemap' not found`
 
 `OTHER_CFLAGS = $(inherited) -fmodule-map-file="${GENERATED_MODULEMAP_DIR}/PRTHandwriting.modulemap" -fmodule-map-file="${GENERATED_MODULEMAP_DIR}/FileDownloadManager.modulemap"`
 
@@ -153,7 +154,7 @@ Below shows `FileDownloadManager` not been updated as `MDFileDownloadManager` wh
 {"cLanguageStandard":null,"cxxLanguageStandard":null,"dependencies":[],"name":"MDFileDownloadManager","packageKind":{"root":["/Users/gavinxiang/Downloads/freeprints_ios_3/FreePrints/.spm.pods/packages/.umbrella/.build/checkouts/fp_ios_file_download_manager"]},"pkgConfig":null,"platforms":[],"products":[{"name":"MDFileDownloadManager","settings":[],"targets":["FileDownloadManager"],"type":{"library":["automatic"]}}],"providers":null,"swiftLanguageVersions":null,"targets":[{"dependencies":[],"exclude":[],"name":"FileDownloadManager","packageAccess":true,"path":"Sources/MDFileDownloadManager","resources":[],"settings":[],"type":"regular"}],"toolsVersion":{"_version":"6.0.0"}}%  
 ```
 
-## `swift package resolve` & `swift package update`
+## swift package resolve & swift package update
 
 We need to call `swift package resolve` this will only update the resolved file, while `swift package update` updates the swift file too with latest available updates.
 
@@ -192,7 +193,7 @@ index 40109561..38c0ed2f 100644
 +          "revision": "1d57c6c3d2d291c322f7f0311d13daa41c150f7a",
            "version": null
          }
-       },
+       }
 ```
 
 **⚠️ If using branch to integrate spm mixed with cocoaPods, make sure `xcshareddata/swiftpm/Package.resolved` is in the list of git tracked files.**
@@ -216,8 +217,7 @@ index 216842a7bb..9b90d3d12b 100644
 -        "revision" : "48312b04bc2a016b7438978eda413d670d76f4f8"
 +        "revision" : "6022bd6fc20801d508194e60876b02bc39ba28d3"
        }
-     },
-     {
+     }
 ```
 
 ## `Package.swift` need add `cSettings` if this module may be used by Objective-C
@@ -261,7 +261,7 @@ index 216842a7bb..9b90d3d12b 100644
     end
     project.save
   end
-  
+
   # add spm to pod targets
   # spm dependency rules: (upToNextMajorVersion/ upToNextMinorVersion / exactVersion / versionRange)
   # Xcode will crash when setting duplicate spm dependencies with the same rule, so we set rule as `upToNextMajorVersion` for now.
@@ -353,11 +353,15 @@ SnapKit_3965163F11347F41_PackageProduct.framework
     }
 ```
 
-##  Build service could not create build operation: unknown error while handling message: MsgHandlingError(message: "unable to initiate PIF transfer session (operation in progress?)")
+## unable to initiate PIF transfer session
+
+Build service could not create build operation: unknown error while handling message: MsgHandlingError(message: "unable to initiate PIF transfer session (operation in progress?)")
 
 relaunch Xcode to refetch the remote package dependencies.
 
-## Using Forward Declarations to resolve circular-import-error: Module 'BraintreeCore' not found
+## Module 'XXX' not found
+
+Using Forward Declarations to resolve circular-import-error: Module 'BraintreeCore' not found
 
 If spm module is not found, first check `Link Binary With Libraries`; then if import codes exists in C Header, there must exists circular import error.
 

@@ -408,6 +408,7 @@
 						break;
 					}
 				}
+				addCodeCopyBtn();
 			}
 
 			function getQueryString(name) {
@@ -464,6 +465,169 @@
 			    
 			    return html;
 			}
+	</script>
+
+<style>
+	.notification {
+		position: fixed;
+		top: 50%; /* Center vertically */
+		left: 50%; /* Center horizontally */
+		transform: translate(-50%, -50%); /* Adjust position to truly center */
+		background-color: #FC5185; /* Green */
+		color: white;
+		padding: 10px;
+		border-radius: 5px;
+		display: none; /* Hidden by default */
+		z-index: 1000; /* Sit on top */
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+		font-family: Arial, sans-serif; /* Font style */
+		font-size: 16px; /* Font size */
+		transition: opacity 0.5s ease; /* Smooth transition for fade out */
+		opacity: 1; /* Start fully visible */
+	}
+
+	.custom-alert {
+		position: fixed;
+		/* top: 20px;
+		right: 20px; */
+		top: 50%; /* Center vertically */
+		left: 50%; /* Center horizontally */
+		transform: translate(-50%, -50%); /* Adjust position to truly center */
+		background-color: #FC5185; /* Green */
+		color: white;
+		padding: 10px;
+		border-radius: 5px;
+		display: none; /* Hidden by default */
+		z-index: 1000; /* Sit on top */
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+		font-family: Arial, sans-serif; /* Font style */
+		font-size: 16px; /* Font size */
+		transition: opacity 0.5s ease; /* Smooth transition for fade out */
+		opacity: 1; /* Start fully visible */
+	}
+
+	pre {
+		position: relative; /* Set position relative for absolute positioning of button */
+		padding: 10px;
+		border: 1px solid #ccc; /* Optional: border for the <pre> element */
+		margin-bottom: 20px; /* Space between <pre> elements */
+	}
+
+	.copy-button {
+		position: absolute; /* Position the button absolutely */
+		top: 10px; /* Distance from the top of the <pre> */
+		right: 10px; /* Distance from the right of the <pre> */
+		background-color: #FC5185;/*#007BFF;*/ /* Button color */
+		color: white; /* Button text color */
+		border: none; /* Remove default border */
+		padding: 5px 10px; /* Button padding */
+		border-radius: 5px; /* Rounded corners */
+		cursor: pointer; /* Pointer cursor on hover */
+		z-index: 1001; /* Ensure button is above the <pre> */
+		display: none; /* Hidden by default */
+	}
+
+	pre:hover .copy-button {
+		display: block; /* Show button when hovering over <pre> */
+	}
+
+	/* Always show the copy button on small devices with reduced opacity */
+	@media (max-width: 768px) {
+		.copy-button {
+			display: block !important; /* Always show the button */
+			opacity: 0.4; /* Set opacity for small devices */
+		}
+	}
+
+	.copy-button:hover {
+		background-color: #c7254e; /* Darker blue on hover */
+		opacity: 1.0; /* Full opacity on hover */
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		addCodeCopyBtn();
+	});
+
+	function addCodeCopyBtn() {
+		const preElements = document.querySelectorAll('pre.prettyprint.linenums.prettyprinted');
+		console.log('preElements:', preElements);
+		preElements.forEach(pre => {
+			// Create a copy button
+			const button = document.createElement('button');
+			button.innerText = 'Copy';
+			button.className = 'copy-button'; // Add class for styling
+			button.onclick = () => copyToClipboard(pre);
+
+			// Append the button after the <pre> element
+			//pre.parentNode.insertBefore(button, pre.nextSibling);
+
+			// Append the button to the <pre> element
+			pre.appendChild(button);
+		});
+	}
+
+	function copyToClipboard(preElement) {
+		const textToCopy = getTextWithLineBreaks(preElement);//preElement.textContent;//preElement.innerText;
+
+		navigator.clipboard.writeText(textToCopy).then(() => {
+			//alert('Copied to clipboard!');
+			showNotification('Copied to clipboard!');
+		}).catch(err => {
+			console.error('Failed to copy: ', err);
+		});
+	}
+
+	function getTextWithLineBreaks(element) {
+		let text = '';
+		const childNodes = element.childNodes;
+
+		childNodes.forEach((node, index) => {
+			// console.log('node.tagName:', node.tagName);
+			if (node.nodeType === Node.TEXT_NODE) {
+				text += node.textContent; // Add text content
+				// console.log('node.textContent:', node.textContent);
+			} else if (node.nodeType === Node.ELEMENT_NODE && node.tagName !== 'BUTTON') {
+				text += getTextWithLineBreaks(node); // Recursively get text from child elements
+				// Use innerHTML to preserve spaces and formatting
+				// text += node.innerHTML.replace(/<br\s*\/?>/g, '\n'); // Convert <br> to newlines
+				if (node.tagName === 'LI' || node.tagName === 'OL') {
+					// Only add a newline if it's not the last node (copy btn at last)
+					if (index < childNodes.length - 1) {
+						// console.log('add line break for:', node.tagName);
+						text += '\n'; // Add a line break after list items or ordered lists
+					}
+				}
+			}
+		});
+
+		// Remove the last newline if it exists
+		if (text.endsWith('\n')) {
+			text = text.slice(0, -1); // Remove the last character (newline)
+		}
+
+		return text;//text.trim(); // Trim any leading or trailing whitespace
+	}
+
+	function showNotification(message) {
+		const notification = document.createElement('div');
+		notification.className = 'custom-alert';//'notification';
+		notification.innerText = message;
+		document.body.appendChild(notification);
+		notification.style.display = 'block'; // Show the notification
+		notification.style.opacity = '1'; // Ensure it's fully visible
+
+		// Fade out effect
+		setTimeout(() => {
+			notification.style.opacity = '0'; // Start fading out
+		}, 1000); // Wait 1 second before starting to fade out
+
+		// Remove the notification from the DOM after fading out
+		setTimeout(() => {
+			document.body.removeChild(notification);
+		}, 1500); // Wait 1.5 seconds to allow fade out to complete
+	}
 	</script>
 
 	<script type="text/javascript">
