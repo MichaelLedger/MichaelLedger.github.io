@@ -1220,3 +1220,22 @@ extension Bundle {
 }
 
 ```
+
+Load inner xxx.bundle in package bundle
+```
+public struct PRTAddressSDKBundle {
+    
+    public static let mainBundle: Bundle = {
+#if SWIFT_PACKAGE
+        let bundleURL = Bundle.module.url(forResource: "xxx", withExtension: "bundle")
+        let bundle = Bundle(url: bundleURL!)!
+        return bundle
+#else
+        let path = Bundle(for: Self.self).resourcePath! + "/xxx.bundle"
+        let bundle = Bundle(path: path)
+        return bundle!
+#endif
+    }()
+    
+}
+```
