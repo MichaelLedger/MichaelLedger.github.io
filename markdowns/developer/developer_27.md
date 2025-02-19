@@ -10,6 +10,39 @@ Use Xcode to open `Package.swift`.
 ## Search Scope
 Need switch search scope as `In Project/Workspace and Package Dependencies` to searching in all codes, including package codes.
 
+### Xcode - Add github account with PAT (Personal Access Token)
+xcode -> Settings... -> Accounts -> add GitHub account ➕
+GitHub personal access tokens must have these scopes set:
+```
+☑️ admin:public_key
+☑️ write:discussion
+☑️ repo
+☑️ user
+```
+Clone Using SSH, choose your `github-rsa` file.
+### Jenkins - Private git repos need [PAT (Personal Access Token)](https://github.com/settings/tokens)
+```
+fatal: could not read Username for 'https://github.com':
+terminal prompts disabledskipping cache due to an error:
+Failed to clone repository https://github.com/XXX/xxx.git:
+```
+PAT generate method:
+Github -> Avator -> Settings -> Developer Settings -> Tokens -> Generate new token -> Select scopes same as Xcode package dependencies required.
+
+Copy the github url that the project is located. It should be https://github.com/GITHUB_USER_NAME/Project1.git
+
+> Note: Starting from 13 Aug, 2021, you need to access github via personal access token therefore first you will need to create a personal access token in your github account and then you will access the repo url in this format: https://PERSONAL_ACCESS_TOKEN@github.com/GITHUB_USER_NAME/Project1.git
+
+### ⚠️Access organization repos for PAT
+
+Your personal access token is now authorized to access this organization.
+
+*Add PAT in Jenkins*
+Manage Jenkins -> Credentials -> choose System(Store) + Global(Domain) -> Add Credentials -> Use PAT as password
+
+*Add private git repositories in Jenkins Jobs*
+Job -> Configure -> Source Code Management -> Git Repositories -> Add Repository (URL + Credentials)
+
 ## [PromiseKit installation](https://github.com/mxcl/PromiseKit/blob/master/Documentation/Installation.md)
 
 ### Accio
@@ -1283,34 +1316,6 @@ rm XXX.app.dSYM.zip
 `xcodebuild -workspace XXX.xcworkspace -scheme fpus clean`
 =>
 `xcodebuild -project XXX.xcodeproj -scheme fpus clean`
-### Xcode - Add github account with PAT (Personal Access Token)
-xcode -> Settings... -> Accounts -> add GitHub account ➕
-GitHub personal access tokens must have these scopes set:
-```
-☑️ admin:public_key
-☑️ write:discussion
-☑️ repo
-☑️ user
-```
-Clong Using SSH, choose your `github-rsa` file.
-### Jenkins - Private git repos need [PAT (Personal Access Token)](https://github.com/settings/tokens)
-```
-fatal: could not read Username for 'https://github.com':
-terminal prompts disabledskipping cache due to an error:
-Failed to clone repository https://github.com/XXX/xxx.git:
-```
-PAT generate method:
-Github -> Avator -> Settings -> Developer Settings -> Tokens -> Generate new token -> Select scopes same as Xcode package dependencies required.
-
-Copy the github url that the project is located. It should be https://github.com/GITHUB_USER_NAME/Project1.git
-
-> Note: Starting from 13 Aug, 2021, you need to access github via personal access token therefore first you will need to create a personal access token in your github account and then you will access the repo url in this format: https://PERSONAL_ACCESS_TOKEN@github.com/GITHUB_USER_NAME/Project1.git
-
-*Add PAT in Jenkins*
-Manage Jenkins -> Credentials -> choose System(Store) + Global(Domain) -> Add Credentials -> Use PAT as password
-
-*Add private git repositories in Jenkins Jobs*
-Job -> Configure -> Source Code Management -> Git Repositories -> Add Repository (URL + Credentials)
 
 ## Manually expose headers in target namesake file header for OC package
 ```
