@@ -1312,3 +1312,103 @@ Manage Jenkins -> Credentials -> choose System(Store) + Global(Domain) -> Add Cr
 
 *Add private git repositories in Jenkins Jobs*
 Job -> Configure -> Source Code Management -> Git Repositories -> Add Repository (URL + Credentials)
+
+## Manually expose headers in target namesake file header for OC package
+```
+➜  include git:(add_spm) pwd
+/Users/gavinxiang/Downloads/fp_ios_file_download_manager/Sources/MDFileDownloadManager/include
+➜  include git:(add_spm) ls
+DownloadSessionConfiguration.h  MDFileDownloadManager.h
+MDDownloadConfigModel.h         MDFileDownloadManagerDefine.h
+MDDownloadOperation.h           MDFileDownloadManagerDelegate.h
+MDFileDownloadCache.h           MDFileModel.h
+MDFileDownloadConfig.h          NSString+MDFileDownloaderMD5.h
+```
+
+```
+// swift-tools-version: 6.0
+// The swift-tools-version declares the minimum version of Swift required to build this package.
+
+import PackageDescription
+
+let package = Package(
+    name: "MDFileDownloadManager",
+    products: [
+        // Products define the executables and libraries a package produces, making them visible to other packages.
+        .library(
+            name: "MDFileDownloadManager",
+            targets: ["MDFileDownloadManager"])
+    ],
+    targets: [
+        // Targets are the basic building blocks of a package, defining a module or a test suite.
+        // Targets can depend on other targets in this package and products from dependencies.
+        .target(
+            name: "MDFileDownloadManager",
+            path: "Sources/MDFileDownloadManager",
+            publicHeadersPath: "include"
+        )
+    ]
+)
+```
+
+```
+//
+//  MDFileDownloadManager.h
+//  MDFileDownloadManager
+
+#import <Foundation/Foundation.h>
+#import "MDFileDownloadConfig.h"
+#import "MDDownloadOperation.h"
+```
+
+Although `MDFileDownloadCache.h` is contained in `include` directory, but we cannot use `MDFileDownloadCache` outside of the package, Xcode build failed with error:
+
+`Use of undeclared identifier 'MDFileDownloadCache'`
+
+Resolution:
+Manually expose all `include` headers in target namesake file header `MDFileDownloadManager.h` for OC package like this:
+
+```
+//
+//  MDFileDownloadManager.h
+//  MDFileDownloadManager
+
+#import <Foundation/Foundation.h>
+#import "MDFileDownloadConfig.h"
+#import "MDDownloadOperation.h"
+#import "MDDownloadConfigModel.h"
+#import "DownloadSessionConfiguration.h"
+#import "MDFileDownloadCache.h"
+#import "MDFileDownloadManagerDefine.h"
+#import "MDFileDownloadManagerDelegate.h"
+#import "MDFileModel.h"
+#import "NSString+MDFileDownloaderMD5.h"
+```
+
+Another resolution is rename the target for this package like this (*Not recommended*):
+```
+// swift-tools-version: 6.0
+// The swift-tools-version declares the minimum version of Swift required to build this package.
+
+import PackageDescription
+
+let package = Package(
+    name: "MDFileDownloadManager",
+    products: [
+        // Products define the executables and libraries a package produces, making them visible to other packages.
+        .library(
+            name: "MDFileDownloadManager",
+            targets: ["FileDownloadManager"])
+    ],
+    targets: [
+        // Targets are the basic building blocks of a package, defining a module or a test suite.
+        // Targets can depend on other targets in this package and products from dependencies.
+        .target(
+            name: "FileDownloadManager",
+            path: "Sources/FileDownloadManager",
+            publicHeadersPath: "include"
+        )
+    ]
+)
+
+```
