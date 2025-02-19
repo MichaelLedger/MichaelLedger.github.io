@@ -624,7 +624,7 @@ let package = Package(
 [0m/Volumes/ExDisk/Jenkins-workspace/FPA-000-SPM-Mix-CocoaPods-Feature/FreePrints/Pods/XXXSDK/LoginViewModel.swift:9:8: [31mno such module 'RxRelay'[0m
 ```
 
-You can manullay add lost module in pod target's target dependencies to resolve this archive error. (e.g. add `RxRelay` in XXXSDK's `target dependencies`)
+You can manually add lost module in pod target's target dependencies to resolve this archive error. (e.g. add `RxRelay` in XXXSDK's `target dependencies`)
 
 It's hard to add dependency via shell command because `pod install` will reset all `target dependencies`.
 
