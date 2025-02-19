@@ -1294,6 +1294,16 @@ rm XXX.app.dSYM.zip
 `xcodebuild -workspace XXX.xcworkspace -scheme fpus clean`
 =>
 `xcodebuild -project XXX.xcodeproj -scheme fpus clean`
+### Xcode - Add github account with PAT (Personal Access Token)
+xcode -> Settings... -> Accounts -> add GitHub account ➕
+GitHub personal access tokens must have these scopes set:
+```
+☑️ admin:public_key
+☑️ write:discussion
+☑️ repo
+☑️ user
+```
+Clong Using SSH, choose your `github-rsa` file.
 ### Jenkins - Private git repos need [PAT (Personal Access Token)](https://github.com/settings/tokens)
 ```
 fatal: could not read Username for 'https://github.com':
