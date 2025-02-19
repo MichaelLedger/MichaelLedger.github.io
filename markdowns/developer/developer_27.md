@@ -1092,6 +1092,14 @@ run `bundle exec pod install --no-repo-update --verbose`
 
 [Swift Package Manager for Firebase](https://github.com/firebase/firebase-ios-sdk/blob/main/SwiftPackageManager.md)
 
+### Removing empty `.xcworkspace` & other directories via `git clean -df`
+```
+% git clean -df
+Removing XXX.xcworkspace/
+Removing fastlane/metadata/
+Removing fastlane/screenshots/
+```
+
 ## [Should I git ignore xcodeproject/project.pbxproj file?](https://stackoverflow.com/questions/8026429/should-i-git-ignore-xcodeproject-project-pbxproj-file)
 Update in the light of Swift Package Manager:
 If you're building a project as a **Swift package (SDK: library/framework)** - you should definitely ignore this file as it can be generated using file system as source of truth. You can do that by using the following command:
