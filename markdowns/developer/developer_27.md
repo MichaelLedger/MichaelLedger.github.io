@@ -196,7 +196,9 @@ index 40109561..38c0ed2f 100644
        }
 ```
 
-**⚠️ If using branch to integrate spm mixed with cocoaPods, make sure `xcshareddata/swiftpm/Package.resolved` is in the list of git tracked files.**
+**⚠️ If using branch to integrate spm mixed with cocoaPods, make sure `XXX.xcworkspace/xcshareddata/swiftpm/Package.resolved` is in the list of git tracked files.**
+
+**⚠️ If using branch to integrate spm without cocoaPods, make sure `XXX.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved` is in the list of git tracked files.**
 
 ```
   spm_pkg "MDFileDownloadManager",
