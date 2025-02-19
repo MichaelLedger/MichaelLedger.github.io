@@ -220,19 +220,6 @@ index 216842a7bb..9b90d3d12b 100644
      }
 ```
 
-## `Package.swift` need add `cSettings` if this module may be used by Objective-C
-
-```
-.target(
-    name: "MDFileDownloadManager",
-    path: "Sources/MDFileDownloadManager",
-    publicHeadersPath: "include",
-    cSettings: [
-        .headerSearchPath("include")
-    ]
-)
-```
-
 ## [Using a post_install script to add SPM reps to cocoa pods targets to resolve no such module issues](https://github.com/CocoaPods/CocoaPods/issues/10049#issuecomment-819480131)
 ```
   post_integrate do |installer|
@@ -1416,7 +1403,10 @@ let package = Package(
         .target(
             name: "FileDownloadManager",
             path: "Sources/FileDownloadManager",
-            publicHeadersPath: "include"
+            publicHeadersPath: "include",
+            cSettings: [
+                .headerSearchPath("include")
+            ]
         )
     ]
 )
