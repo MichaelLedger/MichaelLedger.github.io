@@ -187,7 +187,69 @@ Below shows `FileDownloadManager` not been updated as `MDFileDownloadManager` wh
 {"cLanguageStandard":null,"cxxLanguageStandard":null,"dependencies":[],"name":"MDFileDownloadManager","packageKind":{"root":["/Users/gavinxiang/Downloads/freeprints_ios_3/FreePrints/.spm.pods/packages/.umbrella/.build/checkouts/fp_ios_file_download_manager"]},"pkgConfig":null,"platforms":[],"products":[{"name":"MDFileDownloadManager","settings":[],"targets":["FileDownloadManager"],"type":{"library":["automatic"]}}],"providers":null,"swiftLanguageVersions":null,"targets":[{"dependencies":[],"exclude":[],"name":"FileDownloadManager","packageAccess":true,"path":"Sources/MDFileDownloadManager","resources":[],"settings":[],"type":"regular"}],"toolsVersion":{"_version":"6.0.0"}}%  
 ```
 
-## swift package resolve & swift package update
+## `swift package init`
+Create or Navigate to Your Swift Package: If you haven't already created a Swift package, you can do so by running:
+
+`swift package init --type executable`
+
+This command creates a new Swift package in a directory with the specified name.
+
+```
+// swift-tools-version: 6.0
+// The swift-tools-version declares the minimum version of Swift required to build this package.
+
+import PackageDescription
+
+let package = Package(
+    name: "ios_mirror_sdk_archived",
+    defaultLocalization: "en",
+    platforms: [.iOS(.v14)],
+    products: [
+        .library(name: "BBBadgeBarButtonItem", targets: ["BBBadgeBarButtonItem"]),
+        .library(name: "BCMeshTransformView", targets: ["BCMeshTransformView"])
+    ],
+    dependencies: [
+        .package(url: "https://github.com/amplitude/analytics-connector-ios.git", from: "1.3.0"),
+        .package(url: "https://github.com/openid/AppAuth-iOS.git", .upToNextMajor(from: "1.5.0")),
+        .package(url: "https://github.com/google/GTMAppAuth.git", .upToNextMajor(from: "2.0.0")),
+        .package(url: "https://github.com/google/gtm-session-fetcher.git", .upToNextMajor(from: "3.4.0"))
+    ],
+    targets: [
+        // Targets are the basic building blocks of a package, defining a module or a test suite.
+        // Targets can depend on other targets in this package and products from dependencies.
+        .executableTarget(
+            name: "ios_mirror_sdk_archived",
+            path: "Sources/.executable"
+        ),
+        .target(
+            name: "BBBadgeBarButtonItem",
+            path: "Sources/BBBadgeBarButtonItem"
+        ),
+        .target(
+            name: "BCMeshTransformView",
+            path: "Sources/BCMeshTransformView",
+            resources: [
+                .process("Resources")
+            ],
+            cSettings: [
+                .headerSearchPath("include")
+            ],
+            linkerSettings: [
+                .linkedFramework("GLKit"),
+                .linkedLibrary("stdc++"),
+                .linkedFramework("QuartzCore")
+            ]
+        )
+    ],
+    swiftLanguageModes: [.v5]
+)
+```
+
+## `swift package resolve` & `swift package update`
+
+Add Dependencies first: Open the `Package.swift` file in your package directory and add any dependencies you need.
+
+*If package dependencies is empty, `Package.resolved` cannot be generated.*
 
 We need to call `swift package resolve` this will only update the resolved file, while `swift package update` updates the swift file too with latest available updates.
 
