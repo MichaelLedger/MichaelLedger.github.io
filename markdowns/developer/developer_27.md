@@ -1481,3 +1481,90 @@ let package = Package(
 )
 
 ```
+
+## Double-check `Package.resolved` vs `Podfile.lock` by [VSCode](https://code.visualstudio.com) + [Github Copilot](https://code.visualstudio.com/docs/copilot/overview)
+
+Using the Command Palette `Shift + Cmd + X` to open `Extensions` install window in VSCode(Visual Studio Code), then search `github copilot` and install it.
+
+### GitHub Copilot can provide assistance in a variety of scenarios.
+
+- Get code suggestions as you type
+
+- Make large changes across multiple files
+
+- Ask questions about your code
+
+- Refactor and improve your code
+
+- Fix code issues and debugging
+
+- Scaffold a new project or files
+
+- Configure and generate tests
+
+- Generate code documentation
+
+- Improve your productivity in VS Code
+
+### Keyboard shortcuts
+
+Use the following keyboard shortcuts to start a chat conversation with Copilot:
+
+|Shortcut|Description|
+|:-:|:-:|
+|⌃⌘I|Open the Chat view and start a chat conversation with Copilot by using natural language.|
+|⇧⌘I|Open the Copilot Edits view and start a code editing session across multiple files.|
+|⇧⌥⌘L|Open Quick Chat and ask a quick question to Copilot.|
+|⌘I|Start Inline Chat to send a chat request to Copilot directly from the editor. Use natural language or use / commands to give instructions to Copilot.|
+
+### Using VSCode + Github Copilot to quick check the sdks version diff.
+
+Open `XXX.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved` & `Podfile.lock` by VSCode.
+
+```
+User: Finds the difference versions of all sdk in Package.resolved and Podfile.lock and lists all difference sdk and version comparison.
+Workspace: Collecting workspace informationHere is the list of SDKs with different versions in Package.resolved and Podfile.lock:
+```
+
+| SDK | Version in Package.resolved | Version in Podfile.lock |
+| --- | --- | --- |
+| Alamofire | 5.10.2 | 5.4.4 |
+| AppsFlyerFramework | 6.15.3 | 6.15.3 (same) |
+| Braintree | 6.24.0 | 6.24.0 (same) |
+| Clarity | 3.0.5 | 3.0.2 |
+| DeviceKit | 4.9.0 | 5.5.0 |
+| DZNEmptyDataSet | master (9bffa69a83a9fa58a14b3cf43cb6dd8a63774179) | 1.8.1 |
+| FBSDKCoreKit | 17.4.0 | 17.3.0 |
+| FBSDKLoginKit | 17.4.0 | 17.3.0 |
+| FBSDKShareKit | 17.4.0 | 17.3.0 |
+| Firebase | 11.5.0 | 11.5.0 (same) |
+| GoogleAPIClientForREST | 4.1.0 | 3.4.0 |
+| GoogleAppMeasurement | 11.4.0 | 11.5.0 |
+| GoogleDataTransport | 10.1.0 | 10.1.0 (same) |
+| GoogleUtilities | 8.0.2 | 8.0.2 (same) |
+| GTMAppAuth | 2.0.0 | 1.3.1 |
+| GTMSessionFetcher | 3.5.0 | 2.3.0 |
+| GZIP | 1.3.2 | 1.3.2 (same) |
+| IQKeyboardManager | 8.0.0 | 6.5.19 |
+| JXPagingView | 2.1.3 | 2.1.3 (same) |
+| JXSegmentedView | 1.3.3 | 1.3.3 (same) |
+| LookinServer | 1.2.8 | 1.2.6 |
+| lottie-ios | 4.5.1 | 4.4.3 |
+| MJExtension | 3.4.2 | 3.4.0 |
+| MJRefresh | 3.7.9 | 3.7.9 (same) |
+| Moya | 15.0.3 | 15.0.0 |
+| nanopb | 2.30910.0 | 3.30910.0 |
+| PromiseKit | 6.13.0 | 6.13.0 (same) |
+| Promises | 2.4.0 | 2.4.0 (same) |
+| RxGesture | 4.0.4 | 4.0.4 (same) |
+| RxSwift | 6.9.0 | 6.0.0 |
+| SDWebImage | 5.21.0 | 5.20.0 |
+| SDWebImageSVGCoder | 1.8.0 | 1.7.0 |
+| SnapKit | 5.7.1 | 5.0.1 |
+| SwiftyBeaver | 2.1.1 | 2.1.1 (same) |
+| SwiftyDropbox | 9.2.0 | 9.2.0 (same) |
+| SwiftyJSON | 5.0.2 | 5.0.2 (same) |
+| SwiftyRSA | 1.8.0 | 1.7.0 |
+| ZipArchive | 2.6.0 | 2.4.3 |
+
+**Note: Some versions are the same in both files, but they are included for completeness.**
