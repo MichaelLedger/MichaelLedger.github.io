@@ -43,9 +43,33 @@ Manage Jenkins -> Credentials -> choose System(Store) + Global(Domain) -> Add Cr
 *Add private git repositories in Jenkins Jobs*
 Job -> Configure -> Source Code Management -> Git Repositories -> Add Repository (URL + Credentials)
 
+## [Editing a package dependency as a local package](https://developer.apple.com/documentation/xcode/editing-a-package-dependency-as-a-local-package)
+
+> Override a package dependency and edit its content by adding it as a local package.
+
+When you’re using a Swift package as a package dependency in your app, you may want to make edits to it. For example, you may want to contribute a fix for a bug to an open-source package. However, you can’t directly edit the content of a package dependency. To make changes, add the Swift package as a local package to your app’s project. Don’t remove your package dependency; adding a local package overrides the package dependency with the same name. Xcode uses the package dependency again when you remove the local package from your project.
+
+To add the Swift package as local package to your project:
+
+1. Check out your package dependency’s source code from its Git repository.
+
+2. Open your app’s Xcode project or workspace.
+
+3. Choose File > Add Package Dependencies.
+
+4. Click the Add Local button at the bottom of the package selection window.
+
+5. Select the folder that contains your package and click the Add Package button.
+
+6. Choose targets for the Package Products Xcode detects.
+
+Now you can make changes to the local package and verify them by building and running your app. When you’re done editing the local package, push your changes to its remote Git repository. When the changes have made it into the package’s next release, remove the local package from your project, and update the package dependency to the new version.
+
+**NOTE: If the above steps fail at compile time, just drop the source code of your package dependency source code into your project and compile that.**
+
 ## [PromiseKit installation](https://github.com/mxcl/PromiseKit/blob/master/Documentation/Installation.md)
 
-### Accio
+### [Accio](https://github.com/JamitLabs/Accio)
 Add the following to your Package.swift:
 
 `.package(url: "https://github.com/mxcl/PromiseKit.git", .upToNextMajor(from: "6.8.4")),`
