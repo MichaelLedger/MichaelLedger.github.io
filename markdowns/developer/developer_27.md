@@ -296,7 +296,7 @@ index 40109561..38c0ed2f 100644
        },
        {
 @@ -51,7 +51,7 @@
-         "repositoryURL": "https://github.com/Planetart/fp_ios_file_download_manager.git",
+         "repositoryURL": "https://github.com/XXX/fp_ios_file_download_manager.git",
          "state": {
            "branch": "add_spm",
 -          "revision": "e3d0b3fba2353cdce91b4088a77f8eb771fcaaad",
@@ -305,7 +305,7 @@ index 40109561..38c0ed2f 100644
          }
        },
 @@ -87,7 +87,7 @@
-         "repositoryURL": "https://github.com/Planetart/MirrorSDK.git",
+         "repositoryURL": "https://github.com/XXX/MirrorSDK.git",
          "state": {
            "branch": "add_spm",
 -          "revision": "618983d4c237d1dfdd69ab45e45d6a0c131d38b4",
@@ -321,7 +321,7 @@ index 40109561..38c0ed2f 100644
 
 ```
   spm_pkg "MDFileDownloadManager",
-      :git => "https://github.com/Planetart/fp_ios_file_download_manager.git",
+      :git => "https://github.com/XXX/fp_ios_file_download_manager.git",
       :branch => "add_spm",
       :products => ["MDFileDownloadManager"]
 ```
@@ -332,7 +332,7 @@ index 216842a7bb..9b90d3d12b 100644
 --- a/FreePrints/FullBellyIntl.xcworkspace/xcshareddata/swiftpm/Package.resolved
 +++ b/FreePrints/FullBellyIntl.xcworkspace/xcshareddata/swiftpm/Package.resolved
 @@ -178,7 +178,7 @@
-       "location" : "https://github.com/Planetart/fp_ios_file_download_manager.git",
+       "location" : "https://github.com/XXX/fp_ios_file_download_manager.git",
        "state" : {
          "branch" : "add_spm",
 -        "revision" : "48312b04bc2a016b7438978eda413d670d76f4f8"
@@ -1592,3 +1592,68 @@ Workspace: Collecting workspace informationHere is the list of SDKs with differe
 | ZipArchive | 2.6.0 | 2.4.3 |
 
 **Note: Some versions are the same in both files, but they are included for completeness.**
+
+## Build Error: Revision for sdk remoteSourceControl version does not match previously recorded value
+
+```
+Showing All Errors Only
+Revision 81cf2b6b1d0448b6efdb124185519dbd676ee568 for mirrorsdk remoteSourceControl https://github.com/XXX/MirrorSDK.git version 1.0.0 does not match previously recorded value 6b1a63f997ab647d8db724555273570f511c6c4d
+```
+If sdk revision has been changed for specific version, Xcode will build failed with upper error.
+
+Project -> Package Dependencies -> Recently Used -> Remove Package 
+Xcode -> File -> Packages -> Reset Package Caches
+
+The steps above does not work because spm caches the fingerprint for each used sdk.
+
+**Removing  solved the issue.**
+
+```
+% pwd
+/Users/gavinxiang/Library/org.swift.swiftpm/security/fingerprints
+
+% cat mirrorsdk-12edd4d2.json 
+{
+  "version" : 2,
+  "versionFingerprints" : {
+    "1.0.0" : {
+      "sourceControl" : {
+        "sourceCode" : {
+          "contentType" : {
+            "sourceCode" : {
+
+            }
+          },
+          "fingerprint" : "6b1a63f997ab647d8db724555273570f511c6c4d",
+          "origin" : "https://github.com/XXX/MirrorSDK.git"
+        }
+      }
+    }
+  }
+}%
+```
+**Either remove package-related json file from `~/.swiftpm/security/fingerprints` and then rebuild or just modify the fingerprint as expected will resolve it.**
+```
+% rm ~/.swiftpm/security/fingerprints/mirrorsdk-12edd4d2.json
+```
+```
+% cat mirrorsdk-12edd4d2.json
+{
+  "version" : 2,
+  "versionFingerprints" : {
+    "1.0.0" : {
+      "sourceControl" : {
+        "sourceCode" : {
+          "contentType" : {
+            "sourceCode" : {
+
+            }
+          },
+          "fingerprint" : "81cf2b6b1d0448b6efdb124185519dbd676ee568",
+          "origin" : "https://github.com/XXX/MirrorSDK.git"
+        }
+      }
+    }
+  }
+}%  
+```
