@@ -567,12 +567,18 @@ footer {
 }
 .single #fh5co-main-content {
   margin-left: 0;
-  max-width: 960px;
+  /* max-width: 960px; */
+  max-width: 80%;
   margin: 0 auto;
+  text-align: center;
 }
 @media screen and (max-width: 768px) {
   #fh5co-main-content {
     margin-left: 0;
+  }
+  .single #fh5co-main-content {
+    max-width: 100%;
+    text-align: center;
   }
 }
 
@@ -706,12 +712,19 @@ footer {
   }
 }
 .single .fh5co-post .fh5co-entry .post-content img {
-  width: 100%;
+  width: auto;
+  max-width: 60%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (max-width: 768px) {
   .fh5co-post .fh5co-entry > div {
     width: 100%;
     margin-right: 0;
+  }
+  .single .fh5co-post .fh5co-entry .post-content img {
+    max-width: 100%;
   }
 }
 .fh5co-post .fh5co-entry > div a {
