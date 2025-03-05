@@ -205,7 +205,7 @@
         <title>Markdown - 绘制项目目录结构图</title>
         <description>
         </description>
-        <cover>developer-images/wallpaper/coding_6.jpg</cover>
+        <cover>developer-images/wallpaper/coding_18.jpg</cover>
     </blog>
     <blog location="developer-single.html">
         <id>23</id>
@@ -254,5 +254,13 @@
         <description>
         </description>
         <cover>developer-images/wallpaper/coding_13.jpg</cover>
+    </blog>
+    <blog location="developer-single.html">
+        <id>29</id>
+        <date>Mar 5, 2025</date>
+        <title>HotReloading for Swift, Objective-C &amp; C++</title>
+        <description>
+        </description>
+        <cover>developer-images/wallpaper/coding_6.jpg</cover>
     </blog>
 </blogs>
