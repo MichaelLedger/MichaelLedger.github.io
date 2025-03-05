@@ -604,6 +604,35 @@
 <!--        <polygon points="100,0 160,180 10,60 190,60 40,180" style="fill:yellow;stroke:yellow;stroke-width:1;"></polygon>-->
 <!--    </svg>-->
     <script type="text/javascript">
+        var selectAry = [
+            ["chitose"],
+            ["Epsilon2.1", "Epsilon2_1"],
+            ["Gantzert_Felixander", "gf"],
+            ["haru01"],
+            ["haru02"],
+            ["haruto"],
+            ["hibiki"],
+            ["hijiki"],
+            ["izumi"],
+            ["koharu"],
+            ["miku"],
+            ["nico"],
+            ["ni-j"],
+            ["nipsilon"],
+            ["nito"],
+            ["shizuku"],
+            ["tororo"],
+            ["tsumiki"],
+            ["Unitychan"],
+            ["wanko"],
+            ["z16"]
+        ];
+        // let selectId = selectAry[Math.floor(Math.random() * selectAry.length)][0];
+        let selectId = "shizuku"; //"Epsilon2.1";
+        let modalName = selectAry.find((item) => { return item[0].toLowerCase() == selectId.toLowerCase() });
+        modalName = (modalName && modalName[1] ? modalName[1] : selectId).toLowerCase();
+        console.log('[L2Dwidget] modalName:', modalName, 'selectId:', selectId);
+
         L2Dwidget
         .on('*', (name) => {
             /*console.log('%c EVENT ' + '%c -> ' + name, 'background: #222; color: yellow', 'background: #fff; color: #000')*/
@@ -626,7 +655,9 @@
                     // 当触摸到角色头部
                     'tap face': '人家已经不是小孩子了！'
                 }
-            }
+            },
+            "model": { "jsonPath": "https://michaelledger.github.io/plugins/live2d/packages/live2d-widget-model-" + modalName + "/assets/" + selectId + ".model.json" },
+            "mobile": { "show": false, scale: 0.5 }
         });
     </script>
     <div id="live2d-widget" class="live2d-widget-container">
