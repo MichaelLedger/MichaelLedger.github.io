@@ -1,5 +1,13 @@
 # AI Tools for Developers
 
+## [ChatGPT](https://chatgpt.com)
+
+Attachments (**docs or images**) supported in chat.
+
+## [DeepSeek - Into the Unknown](https://chat.deepseek.com)
+
+Attachments (**Text extraction only from docs or images**) supported in chat.
+
 ## VS Code + GitHub Copilot + Claude 3.7 Sonnet Thinking (Preview)
 
 ```
@@ -162,7 +170,6 @@ The GitHub Models agent offers a chat interface to use the capabilities of GitHu
 
 ### [GitBook for GitHub Copilot - copilot ex](https://github.com/marketplace/gitbook-for-github-copilot)
 GitBook Copilot allows you to leverage your GitBook documentation to answer user queries, providing instant responses in your workflow. Available under `@gitbook-copilot`, simply ask questions related to your product, code, or anything else you have documented — and get personalized answers within the context of your code.
-
 
 ## [Model Context Protocol servers](https://github.com/modelcontextprotocol/servers?tab=readme-ov-file)
 
