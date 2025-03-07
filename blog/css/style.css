@@ -67,16 +67,88 @@ a:hover, a:active, a:focus {
 }
 p, ul, ol {
   margin-bottom: 30px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 38px;
 }
 @media screen and (max-width: 768px) {
   p, ul, ol {
     margin-bottom: 30px;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
   }
 }
+
+/* Light bulb style for emphasized text */
+em {
+  position: relative;
+  font-style: normal;
+  display: inline-flex;
+  align-items: center;
+  
+  /* Improved font styling */
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  color: #5a4500; /* Warm dark brown that complements yellow */
+  
+  /* Background and borders */
+  background-color: #fffdf2; /* Lighter warm background */
+  border-radius: 4px;
+  padding: 4px 10px 4px 32px;
+  /* border-left: 2px solid #ffcc00; */
+  
+  /* Alignment */
+  line-height: 1.5;
+  vertical-align: middle;
+  
+  /* Subtle shadow for depth */
+  box-shadow: 0 1px 3px rgba(255, 204, 0, 0.1);
+  
+  /* Smooth transition for hover effect */
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
+
+em:hover {
+  background-color: #fff9e0; /* Slightly darker on hover */
+  box-shadow: 0 2px 5px rgba(255, 204, 0, 0.2);
+}
+
+/* Light bulb icon */
+em::before {
+  content: "💡";
+  position: absolute;
+  left: 8px;
+  font-size: 1.1em;
+  animation: shine 1s infinite alternate;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+/* Shining effect animation */
+@keyframes shine {
+  0% {
+    text-shadow: 0 0 0 transparent;
+    opacity: 0.8;
+  }
+  100% {
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+    opacity: 1;
+  }
+}
+
+blockquote {
+    background: #f8f8f8;
+    border-left: 4px solid #e2e8f0;
+    padding: 1rem;
+    color: #475569;  /* slate blue */
+}
+
+blockquote > p {
+    color: #64748B;  /* lighter slate */
+    margin: 0;
+}
+
 h1, h2, h3, h4, h5, h6, figure {
   color: #000;
   font-family: "Work Sans", Arial, sans-serif;
