@@ -187,13 +187,13 @@ Assume `XXXKit1`,`XXXKit2`,`XXXKit3` depends on `SDWebImage` & `YYYKit1`,`YYYKit
 
 **Add `.spm.pods/` & `.build/` to `.gitignore` when using spm with cocoapods-spm plugin.**
 
-**⚠️ If library target name has been changed, you need manually delete these files:
+⚠️ If library target name has been changed, you need manually delete these files:
 ```
 `<targe_name>.json` in path: `.spm.pods/packages/metadata`
 corresponding checkout in `.spm.pods/packages/.umbrella/.build/checkouts/<repo_name>`
 corresponding basedOn/packageRef/state in `.spm.pods/packages/.umbrella/.build/workspace-state.json`
 ```
-to force reload it then recall `bundle exec pod install --verbose`.**
+to force reload it then recall `bundle exec pod install --verbose`.
 
 **It is recommended to delete the entire folder `.spm.pods` directly. Complex nested dependencies make it difficult to accurately locate the libraries that need to be deleted.**
 
