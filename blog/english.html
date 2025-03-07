@@ -132,7 +132,7 @@
 		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
 	</div>
 
-    <div id="live2d-widget-close" style="position: fixed; bottom: 300px; left:250px; z-index: 999;">
+    <div id="live2d-widget-close" style="position: fixed; bottom: 330px; left:10px; z-index: 999;">
         <span class="close fat thick" style="width: 20px" onclick="closeLive2D()"></span>
     </div>
     <script>
@@ -640,7 +640,7 @@
         .init({
             display: {
                 "position": "left",
-                "hOffset": 40
+                "hOffset": 30
             },
             dialog: {
                 // 开启对话框
@@ -917,7 +917,48 @@
             }
         });
     
+        let cycleInterval;
+        let isAnimating = false;
+
+        function startShowHideCycle() {
+        const closeElement = document.getElementById('live2d-widget-close');
         
+        if (!closeElement) return;
+        
+        if (!isAnimating) {
+            isAnimating = true;
+            
+            function cycle() {
+            // Show for 2 seconds
+            closeElement.style.display = 'block';
+            
+            // After 2 seconds, hide for 10 seconds
+            setTimeout(() => {
+                closeElement.style.display = 'none';
+                
+                // After 10 seconds, start the cycle again
+                setTimeout(() => {
+                if (isAnimating) {
+                    cycle();
+                }
+                }, 5000);
+            }, 5000);
+            }
+            
+            // Start the first cycle
+            cycle();
+        }
+        }
+
+        function stopShowHideCycle() {
+        isAnimating = false;
+        }
+
+        // Start the cycle
+        startShowHideCycle();
+
+        // To stop the cycle later:
+        // stopShowHideCycle();
     </script>
 	</body>
     
