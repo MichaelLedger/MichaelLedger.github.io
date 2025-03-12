@@ -325,10 +325,13 @@ Visual Studio Code has no control over the behavior of third-party extensions, i
 
 At any time, you can drag and drop views and panels into the Primary or Secondary Side Bar. VS Code will remember the layout of views and panels across your sessions.
 
-## Xcode + [GitHub Copilot · Your AI pair programmer](https://github.com/features/copilot) (0.31.105)
+## Xcode + [GitHub Copilot · Your AI pair programmer](https://github.com/features/copilot) (0.32.0)
 
 **Available AI Models**
 - GPT-4o
+- o1 (Preview)
+- o3-mini (Preview)
+- Claude 3.5 Sonnet (Preview)
 - Gemini 2.0 Flash (Preview)
 
 [GitHub Copilot for Xcode](https://github.com/github/CopilotForXcode)
