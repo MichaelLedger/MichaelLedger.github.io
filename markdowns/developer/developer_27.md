@@ -1657,3 +1657,13 @@ The steps above does not work because spm caches the fingerprint for each used s
   }
 }%  
 ```
+
+### Unexpected service error: The Xcode build system has crashed. Build again to continue.
+
+- If clean build & reset package caches does not work, try to remove the `~/Library/Developer/Xcode/DerivedData` folder and then rebuild.
+
+- If the above solution does not work, then you can just remove the entire swift package dependencies and add it again. (It worked for me!)
+
+I'm guessing that corruption of the spm system or Xcode's internal files is causing this issue.
+
+*Redo all your jobs, do not ruin your whole day to locate it!*
