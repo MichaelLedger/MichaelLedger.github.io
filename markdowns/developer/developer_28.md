@@ -1,5 +1,7 @@
 # AI Tools for Developers
 
+## [Community-driven Evaluation for Best LLM and AI chatbots](https://lmarena.ai)
+
 ## [ChatGPT](https://chatgpt.com)
 
 Attachments (**docs or images**) supported in chat.
@@ -7,6 +9,15 @@ Attachments (**docs or images**) supported in chat.
 ## [DeepSeek - Into the Unknown](https://chat.deepseek.com)
 
 Attachments (**Text extraction only from docs or images**) supported in chat.
+
+### Models
+- [DeepSeek-V3](https://huggingface.co/deepseek-ai/DeepSeek-V3)
+
+### News
+- [DeepSeek-V3-0324 Release](https://api-docs.deepseek.com/news/news250325)
+🔹 Major boost in reasoning performance
+🔹 Stronger front-end development skills
+🔹 Smarter tool-use capabilities
 
 ### Deepseek Provider
 
@@ -414,6 +425,9 @@ You can open a conversation thread for each Xcode IDE to keep discussions organi
 - Edit = Direct code modifications
 
 Attached figgma snapshot will generate UISwift codes running on Xcode.
+
+*Cursor Settings -> General -> Privacy mode -> enabled
+If on, none of your code will be stored by us. If off, we may save prompts and collect telemetry data to improve Cursor.*
 
 ### Models
 
