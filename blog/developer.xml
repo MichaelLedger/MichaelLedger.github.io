@@ -263,4 +263,12 @@
         </description>
         <cover>developer-images/wallpaper/coding_6.jpg</cover>
     </blog>
+    <blog location="developer-single.html">
+        <id>30</id>
+        <date>Mar 26, 2025</date>
+        <title>Amplitude - Best Practice</title>
+        <description>
+        </description>
+        <cover>developer-images/wallpaper/coding_17.jpg</cover>
+    </blog>
 </blogs>
