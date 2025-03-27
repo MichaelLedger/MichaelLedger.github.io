@@ -123,10 +123,28 @@ tuist generate
 ```
 And they'll suddenly get a project with the dependencies as binaries.
 
-## [Linking the package only in debug builds](https://augmentedcode.io/2022/05/02/linking-a-swift-package-only-in-debug-builds/)
-App target’s libraries.Then we’ll open build settings and look for “Excluded Source File Names” and configure release builds to ignore “[LookinServer*](https://github.com/QMUI/LookinServer)”.
+## [Linking the package only in debug builds App target’s libraries](https://augmentedcode.io/2022/05/02/linking-a-swift-package-only-in-debug-builds/)
+We’ll open build settings and look for “Excluded Source File Names”.
 
-Build settings configured to ignore the package in release builds.To verify this change, we can make a release build with shift+command+i (Product -> Build For -> Profiling which builds release configuration). If we check the latest build log with command+9 and clicking on the top most build item, scrolling to app target’s linker step, we can see that Xcode did not link “LookinServer”. Exactly what we wanted to achieve.
+Configure release builds to ignore [LookinServer](https://github.com/QMUI/LookinServer) & [FLEX](https://github.com/FLEXTool/FLEX) and so on.
+
+*Be sure to exclude from Release builds or your app will be rejected.* (such as `LookinServer*` & `FLEX*`).
+
+This will exclude `LookinServer.o` & `FLEX.o` files when archiving release package.
+
+```
+We noticed one or more issues with a recent delivery for the following app:
+    •    XXX
+    •    App Apple ID12xxxxxxxx
+    •    Version 4.15.0
+    •    Build 41557
+Please correct the following issues and upload a new binary to App Store Connect.
+ITMS-90338: Non-public API usage - The app references non-public selectors in XXX: _setWidth:. If method names in your source code match the private Apple APIs listed above, altering your method names will help prevent this app from being flagged in future submissions. In addition, note that one or more of the above APIs may be located in a static library that was included with your app. If so, they must be removed. For further information, visit the Technical Support Information at http://developer.apple.com/support/technical/
+```
+
+Build settings configured to ignore the package in release builds.
+
+*To verify this change, we can make a release build with shift+command+i (Product -> Build For -> Profiling which builds release configuration). If we check the latest build log with command+9 and clicking on the top most build item, scrolling to app target’s linker step, we can see that Xcode did not link “LookinServer”. Exactly what we wanted to achieve.*
 
 // Podfile
 `pod 'LookinServer',    '1.2.6',    :configurations => ['Debug']`
@@ -205,10 +223,10 @@ Below shows `FileDownloadManager` not been updated as `MDFileDownloadManager` wh
 
 ```
 ➜  metadata git:(FPA-000-SPM-Mix-CocoaPods-Feature-2) ✗ pwd
-/Users/gavinxiang/Downloads/freeprints_ios_3/FreePrints/.spm.pods/packages/metadata
+/Users/gavinxiang/Downloads/xxx/xxx/.spm.pods/packages/metadata
 
 ➜  metadata git:(FPA-000-SPM-Mix-CocoaPods-Feature-2) ✗ cat MDFileDownloadManager.json 
-{"cLanguageStandard":null,"cxxLanguageStandard":null,"dependencies":[],"name":"MDFileDownloadManager","packageKind":{"root":["/Users/gavinxiang/Downloads/freeprints_ios_3/FreePrints/.spm.pods/packages/.umbrella/.build/checkouts/fp_ios_file_download_manager"]},"pkgConfig":null,"platforms":[],"products":[{"name":"MDFileDownloadManager","settings":[],"targets":["FileDownloadManager"],"type":{"library":["automatic"]}}],"providers":null,"swiftLanguageVersions":null,"targets":[{"dependencies":[],"exclude":[],"name":"FileDownloadManager","packageAccess":true,"path":"Sources/MDFileDownloadManager","resources":[],"settings":[],"type":"regular"}],"toolsVersion":{"_version":"6.0.0"}}%  
+{"cLanguageStandard":null,"cxxLanguageStandard":null,"dependencies":[],"name":"MDFileDownloadManager","packageKind":{"root":["/Users/gavinxiang/Downloads/xxx/xxx/.spm.pods/packages/.umbrella/.build/checkouts/fp_ios_file_download_manager"]},"pkgConfig":null,"platforms":[],"products":[{"name":"MDFileDownloadManager","settings":[],"targets":["FileDownloadManager"],"type":{"library":["automatic"]}}],"providers":null,"swiftLanguageVersions":null,"targets":[{"dependencies":[],"exclude":[],"name":"FileDownloadManager","packageAccess":true,"path":"Sources/MDFileDownloadManager","resources":[],"settings":[],"type":"regular"}],"toolsVersion":{"_version":"6.0.0"}}%  
 ```
 
 ## `swift package init`
@@ -327,10 +345,10 @@ index 40109561..38c0ed2f 100644
 ```
 
 ```
-diff --git a/FreePrints/FullBellyIntl.xcworkspace/xcshareddata/swiftpm/Package.resolved b/FreePrints/FullBellyIntl.xcworkspace/xcshareddata/swiftpm/Package.resolved
+diff --git a/xxx/FullBellyIntl.xcworkspace/xcshareddata/swiftpm/Package.resolved b/xxx/FullBellyIntl.xcworkspace/xcshareddata/swiftpm/Package.resolved
 index 216842a7bb..9b90d3d12b 100644
---- a/FreePrints/FullBellyIntl.xcworkspace/xcshareddata/swiftpm/Package.resolved
-+++ b/FreePrints/FullBellyIntl.xcworkspace/xcshareddata/swiftpm/Package.resolved
+--- a/xxx/FullBellyIntl.xcworkspace/xcshareddata/swiftpm/Package.resolved
++++ b/xxx/FullBellyIntl.xcworkspace/xcshareddata/swiftpm/Package.resolved
 @@ -178,7 +178,7 @@
        "location" : "https://github.com/XXX/fp_ios_file_download_manager.git",
        "state" : {
@@ -707,7 +725,7 @@ let package = Package(
 ### Issue5: Compile is passed but archive failed with module not find in some cocoapods libraray generating process.
 
 ```
-[0m/Volumes/ExDisk/Jenkins-workspace/FPA-000-SPM-Mix-CocoaPods-Feature/FreePrints/Pods/XXXSDK/LoginViewModel.swift:9:8: [31mno such module 'RxRelay'[0m
+[0m/Volumes/ExDisk/Jenkins-workspace/FPA-000-SPM-Mix-CocoaPods-Feature/xxx/Pods/XXXSDK/LoginViewModel.swift:9:8: [31mno such module 'RxRelay'[0m
 ```
 
 You can manually add lost module in pod target's target dependencies to resolve this archive error. (e.g. add `RxRelay` in XXXSDK's `target dependencies`)
