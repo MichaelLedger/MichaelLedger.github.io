@@ -181,7 +181,7 @@ Run `bundle install`
   * cocoapods-spm (0.1.11)
     Summary: CocoaPods plugin to add SPM dependencies to CocoaPods targets
     Homepage: https://github.com/trinhngocthuyen/cocoapods-spm
-    Path: /Users/gavinxiang/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/cocoapods-spm-0.1.11
+    Path: /Users/xxx/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/cocoapods-spm-0.1.11
 ```
 
 // Podfile
@@ -217,16 +217,16 @@ to force reload it then recall `bundle exec pod install --verbose`.
 
 Below shows `FileDownloadManager` not been updated as `MDFileDownloadManager` which defined in Package.swift, which causing Xcode build always failed!
 
-`Library/Developer/Xcode/DerivedData/XXX/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/Pods-fpus.build/DerivedSources/Pods_fpus_vers.c module map file '/Users/gavinxiang/Library/Developer/Xcode/DerivedData/XXX/Build/Intermediates.noindex/GeneratedModuleMaps-iphoneos/FileDownloadManager.modulemap' not found`
+`Library/Developer/Xcode/DerivedData/XXX/Build/Intermediates.noindex/Pods.build/Debug-iphoneos/Pods-fpus.build/DerivedSources/Pods_fpus_vers.c module map file '/Users/xxx/Library/Developer/Xcode/DerivedData/XXX/Build/Intermediates.noindex/GeneratedModuleMaps-iphoneos/FileDownloadManager.modulemap' not found`
 
 `OTHER_CFLAGS = $(inherited) -fmodule-map-file="${GENERATED_MODULEMAP_DIR}/PRTHandwriting.modulemap" -fmodule-map-file="${GENERATED_MODULEMAP_DIR}/FileDownloadManager.modulemap"`
 
 ```
 ➜  metadata git:(FPA-000-SPM-Mix-CocoaPods-Feature-2) ✗ pwd
-/Users/gavinxiang/Downloads/xxx/xxx/.spm.pods/packages/metadata
+/Users/xxx/Downloads/xxx/xxx/.spm.pods/packages/metadata
 
 ➜  metadata git:(FPA-000-SPM-Mix-CocoaPods-Feature-2) ✗ cat MDFileDownloadManager.json 
-{"cLanguageStandard":null,"cxxLanguageStandard":null,"dependencies":[],"name":"MDFileDownloadManager","packageKind":{"root":["/Users/gavinxiang/Downloads/xxx/xxx/.spm.pods/packages/.umbrella/.build/checkouts/fp_ios_file_download_manager"]},"pkgConfig":null,"platforms":[],"products":[{"name":"MDFileDownloadManager","settings":[],"targets":["FileDownloadManager"],"type":{"library":["automatic"]}}],"providers":null,"swiftLanguageVersions":null,"targets":[{"dependencies":[],"exclude":[],"name":"FileDownloadManager","packageAccess":true,"path":"Sources/MDFileDownloadManager","resources":[],"settings":[],"type":"regular"}],"toolsVersion":{"_version":"6.0.0"}}%  
+{"cLanguageStandard":null,"cxxLanguageStandard":null,"dependencies":[],"name":"MDFileDownloadManager","packageKind":{"root":["/Users/xxx/Downloads/xxx/xxx/.spm.pods/packages/.umbrella/.build/checkouts/fp_ios_file_download_manager"]},"pkgConfig":null,"platforms":[],"products":[{"name":"MDFileDownloadManager","settings":[],"targets":["FileDownloadManager"],"type":{"library":["automatic"]}}],"providers":null,"swiftLanguageVersions":null,"targets":[{"dependencies":[],"exclude":[],"name":"FileDownloadManager","packageAccess":true,"path":"Sources/MDFileDownloadManager","resources":[],"settings":[],"type":"regular"}],"toolsVersion":{"_version":"6.0.0"}}%  
 ```
 
 ## `swift package init`
@@ -444,11 +444,11 @@ Run before build project:
 ```
 
 ```
-No such file or directory: '/Users/gavinxiang/Library/Developer/Xcode/DerivedData/XXX-dyjvmrzjyotgnpgeyliwnrbquytk/Build/Products/Debug-iphoneos/PackageFrameworks/RxBlocking-Dynamic.framework/RxBlocking-Dynamic'
+No such file or directory: '/Users/xxx/Library/Developer/Xcode/DerivedData/XXX-dyjvmrzjyotgnpgeyliwnrbquytk/Build/Products/Debug-iphoneos/PackageFrameworks/RxBlocking-Dynamic.framework/RxBlocking-Dynamic'
 ```
 
 ```
-➜  ~ cd /Users/gavinxiang/Library/Developer/Xcode/DerivedData/XXX-dyjvmrzjyotgnpgeyliwnrbquytk/Build/Products/Debug-iphoneos/PackageFrameworks
+➜  ~ cd /Users/xxx/Library/Developer/Xcode/DerivedData/XXX-dyjvmrzjyotgnpgeyliwnrbquytk/Build/Products/Debug-iphoneos/PackageFrameworks
 ➜  PackageFrameworks ls
 RxBlocking-Dynamic.framework
 RxBlocking.framework
@@ -525,7 +525,7 @@ App extension & main project should **manully** add spm depencies & add spm libr
 ```
 [!] Invalid `XXXKit.podspec` file: undefined method `spm_dependency' for an instance of Pod::Specification.
 
- #  from /Users/gavinxiang/Downloads/XXX/XXX.podspec:94
+ #  from /Users/xxx/Downloads/XXX/XXX.podspec:94
  #  -------------------------------------------
  #    s.dependency "Moya", "~> 15.0.0"
  >    s.spm_dependency "SnapKit", "~> 5.0.1"
@@ -560,7 +560,7 @@ but still cannot find moudle
     - ERROR | xcodebuild:  XXXCustomDesignView.swift:9:8: error: no such module 'SDWebImage'
 [!] The `XXXKit.podspec` specification does not validate.
 
-/Users/gavinxiang/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/cocoapods-1.15.2/lib/cocoapods/command/repo/push.rb:156:in `block in validate_podspec_files'
+/Users/xxx/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/cocoapods-1.15.2/lib/cocoapods/command/repo/push.rb:156:in `block in validate_podspec_files'
 ```
 
 because `plugin "cocoapods-spm"` is not in Podfile while lint. [cocoapods-spm2](https://github.com/MichaelLedger/cocoapods-spm.git)
@@ -568,7 +568,7 @@ because `plugin "cocoapods-spm"` is not in Podfile while lint. [cocoapods-spm2](
 [Cocoapod: how to push spec to my private repo without lint?](https://stackoverflow.com/questions/33206886/cocoapod-how-to-push-spec-to-my-private-repo-without-lint)
 
 ```
-$ vim /Users/gavinxiang/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/cocoapods-1.15.2/lib/cocoapods/command/repo/push.rb
+$ vim /Users/xxx/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/cocoapods-1.15.2/lib/cocoapods/command/repo/push.rb
 ```
 
 **force disable `validate_podspec_files` in `run` method in cocoapods `push.rb` works!**:
@@ -590,16 +590,16 @@ $ bundle exec pod repo push mine_repos 'XXXKit.podspec' --sources='https://cdn.c
 
 Updating the `mine_repos' repo
 
-  $ /usr/bin/git -C /Users/gavinxiang/.cocoapods/repos/mine_repos pull
+  $ /usr/bin/git -C /Users/xxx/.cocoapods/repos/mine_repos pull
   Already up to date.
 
 Adding the spec to the `mine_repos' repo
 
-  $ /usr/bin/git -C /Users/gavinxiang/.cocoapods/repos/mine_repos status --porcelain
+  $ /usr/bin/git -C /Users/xxx/.cocoapods/repos/mine_repos status --porcelain
   ?? XXXKit/0.1.62/
  - [Update] XXXKit (0.1.62)
-  $ /usr/bin/git -C /Users/gavinxiang/.cocoapods/repos/mine_repos add XXXKit
-  $ /usr/bin/git -C /Users/gavinxiang/.cocoapods/repos/mine_repos commit --no-verify -m [Update] XXXKit (0.1.62)
+  $ /usr/bin/git -C /Users/xxx/.cocoapods/repos/mine_repos add XXXKit
+  $ /usr/bin/git -C /Users/xxx/.cocoapods/repos/mine_repos commit --no-verify -m [Update] XXXKit (0.1.62)
   [master bd16046] [Update] XXXKit (0.1.62)
    1 file changed, 146 insertions(+)
    create mode 100644 XXXKit/0.1.62/XXXKit.podspec
@@ -1159,7 +1159,7 @@ By choosing the appropriate type of library based on your project’s requiremen
 
 undefined method `name' for an instance of Xcodeproj::Project::Object::XCRemoteSwiftPackageReference
 
-/Users/gavinxiang/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/xcodeproj-1.27.0/lib/xcodeproj/project/object/native_target.rb:254:in `add_dependency'
+/Users/xxx/.rbenv/versions/3.3.5/lib/ruby/gems/3.3.0/gems/xcodeproj-1.27.0/lib/xcodeproj/project/object/native_target.rb:254:in `add_dependency'
 ```
 
 New PBXTargetDependency and add target dependencies.
@@ -1405,6 +1405,89 @@ gym(
     }
 )
 ```
+
+*Skips SPM resolution & Sets a custom path & Prevent auto updates*
+
+[fastlane docs - build_ios_app](https://docs.fastlane.tools/actions/build_ios_app/#parameters)
+
+|Key|Description|Default|
+|:|:|:|
+|workspace|Path to the workspace file||
+|project|Path to the project file||
+|scheme|The project's scheme. Make sure it's marked as Shared||
+|clean|Should the project be cleaned before building it?|false|
+|cloned_source_packages_path|Sets a custom path for Swift Package Manager dependencies||
+|skip_package_dependencies_resolution|Skips resolution of Swift Package Manager dependencies|false|
+|disable_package_automatic_updates|Prevents packages from automatically being resolved to versions other than those recorded in the `Package.resolved` file|false|
+
+[SWIFT PACKAGE MANAGER AND HOW TO CACHE IT WITH CI](https://www.uptech.team/blog/swift-package-manager)
+
+```
+target_name = ENV['TARGET_NAME']
+target_up = target_name.upcase
+target_down = target_name.downcase
+dd_path = "DerivedData/#{target_up}"
+
+spm_cache_path = "SPMSourcePackages"
+skip_spm_resolution = ENV['SKIP_SPM_RESOLUTION'] || false
+
+gym(
+            project: "xxx.xcodeproj",
+            scheme: scheme,
+            export_options: {
+                thinning: "<none>",
+                iCloudContainerEnvironment: "Production",
+                uploadSymbols:  true,
+                compileBitcode: false
+            },
+            export_method: "app-store",
+            configuration: "Release",
+            derived_data_path: dd_path,
+            disable_package_automatic_updates: true,
+            cloned_source_packages_path: spm_cache_path,
+            skip_package_dependencies_resolution: skip_spm_resolution
+        )
+```
+
+*Correspoding modifications in Jenkins*
+
+```
+//default debugging cloned source packages path
+% pwd
+/Users/xxx/Library/Developer/Xcode/DerivedData/<xcodeproj_name>/SourcePackages
+% ls
+artifacts            repositories
+checkouts            workspace-state.json
+```
+
+Set `SKIP_SPM_RESOLUTION` to `true` & invoke `xcodebuild -resolvePackageDependencies -clonedSourcePackagesDirPath SPMSourcePackages` in Jenkins if resolution needed for the first time.
+
+```
+// Build Environment > Inject environment variables to the build process > Properties Content
+TARGET_NAME=US
+FASTLANE_USER=xxx.xxx@xxx.cn
+FASTLANE_XCODEBUILD_SETTINGS_TIMEOUT = 10
+DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer
+BUILD_XCODEPATH=/Applications/Xcode.app
+XCODE_SELECT=/Applications/Xcode.app
+MATCH_PASSWORD=xxx
+DEVICES_PATH=./fastlane/devices.txt
+SUBMODULE_BRANCH_MAPPING={"XXXSDK":"1.0.0"}
+BUILD_NUM=88888
+SKIP_SPM_RESOLUTION=true
+```
+
+```
+//Build Steps > Execute shell
+bundle install
+
+# Warnings Begin：Cannot delete sub module detection script
+fastlane review_submodules
+# Warnings End：
+
+xcodebuild -resolvePackageDependencies -clonedSourcePackagesDirPath SPMSourcePackages
+```
+
 ### upload firebase crashlytics upload debug symbol(dSYM)
 manully copy upload-symbols from FirebaseCrashlytics library at first
 ```
@@ -1424,7 +1507,7 @@ rm XXX.app.dSYM.zip
 ## Manually expose headers in target namesake file header for OC package
 ```
 ➜  include git:(add_spm) pwd
-/Users/gavinxiang/Downloads/fp_ios_file_download_manager/Sources/MDFileDownloadManager/include
+/Users/xxx/Downloads/fp_ios_file_download_manager/Sources/MDFileDownloadManager/include
 ➜  include git:(add_spm) ls
 DownloadSessionConfiguration.h  MDFileDownloadManager.h
 MDDownloadConfigModel.h         MDFileDownloadManagerDefine.h
@@ -1628,7 +1711,7 @@ The steps above does not work because spm caches the fingerprint for each used s
 
 ```
 % pwd
-/Users/gavinxiang/Library/org.swift.swiftpm/security/fingerprints
+/Users/xxx/Library/org.swift.swiftpm/security/fingerprints
 
 % cat mirrorsdk-12edd4d2.json 
 {
