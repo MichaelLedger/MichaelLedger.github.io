@@ -3368,10 +3368,10 @@ li.L9 {
 }
 .editormd-preview-container ol.linenums, .editormd-html-preview ol.linenums {
   color: #999;
-  padding-left: 2.5em;
+  padding-left: 3.5em;
 }
 .editormd-preview-container ol.linenums li, .editormd-html-preview ol.linenums li {
-  list-style-type: decimal;
+  list-style-type: decimal; /*decimal-leading-zero*/
 }
 .editormd-preview-container ol.linenums li code, .editormd-html-preview ol.linenums li code {
   border: none;
