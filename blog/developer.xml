@@ -271,4 +271,12 @@
         </description>
         <cover>developer-images/wallpaper/coding_17.jpg</cover>
     </blog>
+    <blog location="developer-single.html">
+        <id>31</id>
+        <date>Mar 31, 2025</date>
+        <title>Figma MCP Server - Best Practice</title>
+        <description>
+        </description>
+        <cover>developer-images/wallpaper/coding_12.jpg</cover>
+    </blog>
 </blogs>
