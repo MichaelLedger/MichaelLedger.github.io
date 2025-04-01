@@ -1462,6 +1462,12 @@ checkouts            workspace-state.json
 
 Set `SKIP_SPM_RESOLUTION` to `true` & invoke `xcodebuild -resolvePackageDependencies -clonedSourcePackagesDirPath SPMSourcePackages` in Jenkins if resolution needed for the first time.
 
+`error: There is no XCFramework found at '/Volumes/ExDisk/Jenkins-workspace/XXX/XXX/SPMSourcePackages/artifacts/facebook-ios-sdk/FBAEMKit/FBAEMKit.xcframework'.`
+
+*If frameworks corrupted or missing, delete the `SPMSourcePackages` folder and re-run the command.*
+
+`rm -rf SPMSourcePackages/`
+
 ```
 // Build Environment > Inject environment variables to the build process > Properties Content
 TARGET_NAME=US
