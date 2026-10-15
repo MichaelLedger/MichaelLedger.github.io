@@ -1,4 +1,4 @@
-# Device Hub - Simulator Photos Import Tutorial
+# Xcode Device Hub - Simulator Photos Import Tutorial
 
 **Date:** 2026-09-22 18:35 CST  
 **Operator:** Cursor agent (xcrun simctl)
